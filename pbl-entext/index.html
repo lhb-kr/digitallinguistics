@@ -1,1 +1,538 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PBL Interactive Guide — Problem-Based Learning</title>
+<meta name="description" content="An interactive introduction to Problem-Based Learning (PBL) for university students." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: #111827; background: #FAFBFC; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #BFDBFE; }
+  a { text-decoration: none; }
+  @media (max-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .hero-title { font-size: 36px !important; }
+    .nav-links { gap: 0 !important; }
+    .nav-link { padding: 16px 8px !important; font-size: 12px !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+// ========== UPDATE THESE LINKS ==========
+const GOOGLE_FORM_QUIZ_URL = "https://forms.google.com/YOUR_QUIZ_LINK_HERE";
+const SURVEY_URL = "https://forms.google.com/YOUR_SURVEY_LINK_HERE";
+// ========================================
+
+const sections = [
+  { id: "what", label: "What is PBL?" },
+  { id: "process", label: "The Process" },
+  { id: "ifla", label: "IFLA Framework" },
+  { id: "team", label: "Team Learning" },
+  { id: "benefits", label: "Benefits" },
+  { id: "links", label: "Quiz & Survey" },
+];
+
+const comparisonData = [
+  { category: "Starting Point", lecture: "Instructor explains theory", pbl: "A real-world problem is presented" },
+  { category: "Student Role", lecture: "Listen and understand", pbl: "Explore and solve independently" },
+  { category: "Instructor Role", lecture: "Knowledge transmitter", pbl: "Learning facilitator" },
+  { category: "Answers", lecture: "One correct answer", pbl: "Multiple solutions possible" },
+  { category: "Learning Style", lecture: "Individual, passive", pbl: "Team-based, active" },
+];
+
+const principles = [
+  {
+    title: "Ill-Structured Problems", icon: "\u{1F9E9}",
+    desc: "\"Messy\" problems that mirror the real world. No single correct answer \u2014 multiple perspectives must be considered.",
+    example: null
+  },
+  {
+    title: "Student Agency", icon: "\u{1F3AF}",
+    desc: "Learners decide what they already know, what they need to learn, and where to find information. The instructor guides but doesn\u2019t give answers.",
+    example: null
+  },
+  {
+    title: "Collaborative Inquiry", icon: "\u{1F91D}",
+    desc: "Small teams share roles, resources, and reach consensus together. Not simple task division \u2014 genuine team learning.",
+    example: null
+  },
+  {
+    title: "Iterative Cycle", icon: "\u{1F504}",
+    desc: "Not a linear path. Research \u2192 Apply to problem \u2192 Discover gaps \u2192 Research again.",
+    example: null
+  },
+];
+
+const stages = [
+  { num: 1, title: "Class Orientation", color: "#3B82F6", points: ["Introduction to how PBL differs from traditional instruction", "Explanation of the instructor\u2019s facilitator role", "Creating an open atmosphere for idea exchange", "Team building: self-introductions, team naming, Ground Rules"] },
+  { num: 2, title: "Problem Presentation", color: "#2563EB", points: ["Instructor presents a real-world problem", "Motivation through videos, multimedia, real experiences", "Explanation of the final deliverable", "Role assignment & begin writing \uACFC\uC81C\uC218\uD589\uACC4\uD68D\uC11C (IFLA)"] },
+  { num: 3, title: "Follow-up (Iterative)", color: "#1D4ED8", points: ["Synthesize individually studied materials as a team", "Revise Ideas, re-synthesize Facts", "Identify new Learning Issues", "Redesign Action Plans \u2014 repeat over several weeks"] },
+  { num: 4, title: "Solution Presentation", color: "#1E40AF", points: ["Each team presents their completed solution", "Preparation stage & presentation scenario", "Various formats encouraged: videos, performances, exhibitions"] },
+  { num: 5, title: "Review & Evaluation", color: "#1E3A8A", points: ["Generalize learned knowledge into principles", "Self-evaluation with 4 key reflection questions", "Peer evaluation, portfolio, deliverable assessment"] },
+];
+
+const iflaCards = [
+  { letter: "I", title: "Ideas", subtitle: "\uAC00\uC124 \u00B7 \uD574\uACB0\uC548", color: "#3B82F6", lightColor: "#EFF6FF", write: "Causes, effects, hypotheses, and possible solutions", activity: "Brainstorming, forming hypotheses, speculating cause & effect", iteration: "Revise and develop existing ideas" },
+  { letter: "F", title: "Facts", subtitle: "\uC54C\uACE0 \uC788\uB294 \uC0AC\uC2E4", color: "#10B981", lightColor: "#ECFDF5", write: "Prior knowledge, problem-given facts, newly learned info", activity: "Organizing prior knowledge, synthesizing new knowledge", iteration: "Re-synthesize using newly acquired knowledge" },
+  { letter: "L", title: "Learning Issues", subtitle: "\uB354 \uC54C\uC544\uC57C \uD560 \uC0AC\uD56D", color: "#F59E0B", lightColor: "#FFFBEB", write: "Things that need to be known or understood to solve the problem", activity: "Identifying knowledge gaps, specifying learning needs", iteration: "Identify new issues & distribute among team members" },
+  { letter: "A", title: "Action Plans", subtitle: "\uC2E4\uCC9C \uACC4\uD68D", color: "#EF4444", lightColor: "#FEF2F2", write: "Specific action plans needed to solve the problem", activity: "Role assignment, scheduling, selecting resources", iteration: "Redesign previous action plans" },
+];
+
+const hindrances = [
+  "One person dominates the discussion",
+  "Habitually dividing tasks instead of team learning",
+  "Skipping knowledge sharing",
+  "Low participation and engagement",
+  "Dominant or isolated team members",
+  "\"Professor, help us!\" \u2014 only looking to the instructor",
+  "Discussion drifting off-topic",
+  "Free-riding",
+];
+
+const groundRules = [
+  "Be on time for meetings",
+  "Don\u2019t monopolize the discussion",
+  "Actively listen when a teammate is speaking",
+  "Check the online team space daily",
+  "Missing 2+ meetings \u2192 peer evaluation penalties",
+  "Major decisions require \u2265 2/3 approval",
+];
+
+const benefitsData = [
+  { icon: "\u{1F9E0}", title: "Improved Retention", desc: "Learning becomes meaningful when learners determine their own needs. PBL students show higher motivation and better retention, applying knowledge more effectively to real problems." },
+  { icon: "\u{1F4A1}", title: "Problem-Solving Skills", desc: "PBL is effective for tasks requiring higher-order thinking. Metacognition and problem-solving efficiency are mutually reinforced and improved together." },
+  { icon: "\u{1F4DA}", title: "Self-Directed Learning", desc: "Learners develop self-directed abilities by determining their own learning needs and tasks through the problem-solving process." },
+  { icon: "\u{1F465}", title: "Collaborative Learning", desc: "Students improve collaborative skills through taking responsibility for their roles and working toward solutions as a team." },
+];
+
+const competencies = [
+  { type: "Internal", items: ["Problem-solving", "Creative thinking", "Strategic thinking"], color: "#3B82F6" },
+  { type: "External", items: ["Communication", "Presentation skills"], color: "#10B981" },
+  { type: "Relational", items: ["Self-directedness", "Teamwork"], color: "#8B5CF6" },
+];
+
+function useInView(threshold = 0.15) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, visible];
+}
+
+function FadeIn({ children, delay = 0, className = "" }) {
+  const [ref, visible] = useInView();
+  return (
+    <div ref={ref} className={className} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s` }}>
+      {children}
+    </div>
+  );
+}
+
+function Nav({ active }) {
+  return (
+    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E5E7EB" }}>
+      <div style={{ maxWidth: 960, margin: "0 auto", display: "flex", alignItems: "center", padding: "0 24px", height: 56, overflowX: "auto" }}>
+        <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontWeight: 700, fontSize: 18, color: "#1E3A8A", marginRight: 32, whiteSpace: "nowrap", letterSpacing: "-0.02em" }}>PBL Guide</span>
+        <div className="nav-links" style={{ display: "flex", gap: 0 }}>
+          {sections.map(s => (
+            <a key={s.id} href={`#${s.id}`} className="nav-link"
+              onClick={e => { e.preventDefault(); document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" }); }}
+              style={{ padding: "16px 14px", fontSize: 13, fontWeight: active === s.id ? 600 : 400, color: active === s.id ? "#1E40AF" : "#6B7280", textDecoration: "none", borderBottom: active === s.id ? "2px solid #3B82F6" : "2px solid transparent", whiteSpace: "nowrap", transition: "all 0.2s", fontFamily: "'DM Sans', sans-serif" }}>
+              {s.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function SectionTitle({ children, sub }) {
+  return (
+    <div style={{ marginBottom: 40 }}>
+      <h2 style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: 32, fontWeight: 700, color: "#111827", margin: 0, lineHeight: 1.2, letterSpacing: "-0.02em" }}>{children}</h2>
+      {sub && <p style={{ fontSize: 16, color: "#6B7280", marginTop: 8, lineHeight: 1.6 }}>{sub}</p>}
+    </div>
+  );
+}
+
+function PrincipleCard({ p, index }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <FadeIn delay={index * 0.08}>
+      <div onClick={() => setOpen(!open)} style={{ background: "#fff", border: "1px solid #E5E7EB", borderRadius: 12, padding: "20px 24px", cursor: "pointer", transition: "all 0.2s", boxShadow: open ? "0 4px 20px rgba(59,130,246,0.08)" : "none", borderColor: open ? "#93C5FD" : "#E5E7EB" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span style={{ fontSize: 28 }}>{p.icon}</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 600, fontSize: 16, color: "#111827" }}>{p.title}</div>
+            <div style={{ fontSize: 14, color: "#6B7280", marginTop: 2 }}>{p.desc}</div>
+          </div>
+          <span style={{ fontSize: 18, color: "#9CA3AF", transform: open ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.2s" }}>{"\u25BE"}</span>
+        </div>
+        {open && p.example && (
+          <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #F3F4F6" }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#6B7280", marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Example Comparison</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ background: "#FEF2F2", borderRadius: 8, padding: "10px 14px", fontSize: 14 }}>
+                <span style={{ color: "#DC2626", fontWeight: 600 }}>Well-structured:</span> <span style={{ color: "#7F1D1D" }}>{p.example.well}</span>
+              </div>
+              <div style={{ background: "#EFF6FF", borderRadius: 8, padding: "10px 14px", fontSize: 14 }}>
+                <span style={{ color: "#1D4ED8", fontWeight: 600 }}>Ill-structured:</span> <span style={{ color: "#1E3A8A" }}>{p.example.ill}</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </FadeIn>
+  );
+}
+
+function IFLACard({ card, index }) {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <FadeIn delay={index * 0.1}>
+      <div onClick={() => setFlipped(!flipped)} style={{ cursor: "pointer", perspective: 800 }}>
+        <div style={{ position: "relative", minHeight: 220, transition: "transform 0.5s", transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0)" }}>
+          <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", background: card.lightColor, border: `2px solid ${card.color}20`, borderRadius: 16, padding: 24, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            <div style={{ width: 56, height: 56, borderRadius: "50%", background: card.color, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, fontWeight: 800, fontFamily: "'Source Serif 4', Georgia, serif" }}>{card.letter}</div>
+            <div style={{ fontSize: 18, fontWeight: 700, color: card.color }}>{card.title}</div>
+            <div style={{ fontSize: 13, color: "#6B7280" }}>{card.subtitle}</div>
+            <div style={{ fontSize: 12, color: "#9CA3AF", marginTop: 4 }}>Click to see details &rarr;</div>
+          </div>
+          <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)", background: "#fff", border: `2px solid ${card.color}30`, borderRadius: 16, padding: 20, fontSize: 13, color: "#374151", lineHeight: 1.6, overflow: "auto" }}>
+            <div style={{ fontWeight: 700, color: card.color, marginBottom: 8, fontSize: 15 }}>{card.letter} &mdash; {card.title}</div>
+            <div style={{ marginBottom: 8 }}><span style={{ fontWeight: 600, color: "#111827" }}>Write:</span> {card.write}</div>
+            <div style={{ marginBottom: 8 }}><span style={{ fontWeight: 600, color: "#111827" }}>Activity:</span> {card.activity}</div>
+            <div><span style={{ fontWeight: 600, color: "#111827" }}>On iteration:</span> {card.iteration}</div>
+            <div style={{ fontSize: 11, color: "#9CA3AF", marginTop: 12 }}>Click to flip back</div>
+          </div>
+        </div>
+      </div>
+    </FadeIn>
+  );
+}
+
+function App() {
+  const [active, setActive] = useState("what");
+  const [expandedStage, setExpandedStage] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      for (const s of [...sections].reverse()) {
+        const el = document.getElementById(s.id);
+        if (el && el.getBoundingClientRect().top < 150) { setActive(s.id); return; }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div>
+      <Nav active={active} />
+
+      {/* Hero */}
+      <header id="what" style={{ paddingTop: 56 }}>
+        <div style={{ background: "linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)", padding: "80px 24px 72px", textAlign: "center" }}>
+          <FadeIn>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 16 }}>Introduction to</div>
+            <h1 className="hero-title" style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: 48, fontWeight: 700, color: "#fff", margin: "0 0 16px", lineHeight: 1.1, letterSpacing: "-0.03em" }}>Problem-Based Learning</h1>
+            <p style={{ fontSize: 18, color: "#BFDBFE", maxWidth: 560, margin: "0 auto", lineHeight: 1.6 }}>
+              A student-centered approach where complex, real-world problems drive the learning experience.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px" }}>
+          <FadeIn><SectionTitle sub="PBL reverses the traditional 'teach first, test later' model. Students encounter a problem before instruction and that problem becomes the engine of learning.">What is PBL?</SectionTitle></FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div style={{ marginBottom: 48 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 600, color: "#374151", marginBottom: 16 }}>Traditional Class vs. PBL Class</h3>
+              <div style={{ borderRadius: 12, overflow: "hidden", border: "1px solid #E5E7EB" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", background: "#F8FAFC", borderBottom: "1px solid #E5E7EB" }}>
+                  <div style={{ padding: "12px 16px", fontWeight: 600, fontSize: 13, color: "#6B7280" }}></div>
+                  <div style={{ padding: "12px 16px", fontWeight: 600, fontSize: 13, color: "#DC2626", textAlign: "center" }}>Lecture-Based</div>
+                  <div style={{ padding: "12px 16px", fontWeight: 600, fontSize: 13, color: "#1D4ED8", textAlign: "center" }}>PBL</div>
+                </div>
+                {comparisonData.map((row, i) => (
+                  <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderBottom: i < comparisonData.length - 1 ? "1px solid #F3F4F6" : "none", background: i % 2 === 0 ? "#fff" : "#FAFBFC" }}>
+                    <div style={{ padding: "12px 16px", fontWeight: 600, fontSize: 14, color: "#374151" }}>{row.category}</div>
+                    <div style={{ padding: "12px 16px", fontSize: 14, color: "#6B7280", textAlign: "center" }}>{row.lecture}</div>
+                    <div style={{ padding: "12px 16px", fontSize: 14, color: "#1E40AF", textAlign: "center", fontWeight: 500 }}>{row.pbl}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.15}><h3 style={{ fontSize: 18, fontWeight: 600, color: "#374151", marginBottom: 16 }}>4 Core Principles</h3></FadeIn>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 48 }}>
+            {principles.map((p, i) => <PrincipleCard key={i} p={p} index={i} />)}
+          </div>
+
+          <FadeIn>
+            <div style={{ background: "#EFF6FF", borderRadius: 12, padding: 24, marginBottom: 32, borderLeft: "4px solid #3B82F6" }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, color: "#1E40AF", marginBottom: 12 }}>Theoretical Foundation: Constructivism</h3>
+              <p style={{ fontSize: 14, color: "#374151", lineHeight: 1.7, marginBottom: 12 }}>PBL is rooted in the idea that learners actively build their own knowledge rather than passively absorbing it.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {["Prior Knowledge Activation \u2014 brainstorm what you already know", "Elaboration \u2014 explaining to peers strengthens understanding", "Contextualization \u2014 real-problem context improves retention"].map((t, i) => (
+                  <div key={i} style={{ fontSize: 14, color: "#1E40AF", display: "flex", gap: 8, alignItems: "baseline" }}><span style={{ color: "#3B82F6" }}>&bull;</span> {t}</div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div style={{ background: "#F0FDF4", borderRadius: 12, padding: 24, borderLeft: "4px solid #10B981" }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, color: "#065F46", marginBottom: 8 }}>Why PBL Matters in 2026</h3>
+              <p style={{ fontSize: 14, color: "#374151", lineHeight: 1.7 }}>In the age of AI, PBL develops skills machines can't replicate: <strong>critical thinking, empathy, collaboration, and adaptability</strong>. It prepares students for a world where knowing how to find and evaluate answers matters more than memorizing them.</p>
+            </div>
+          </FadeIn>
+        </div>
+      </header>
+
+      {/* Section 2: Process */}
+      <section id="process" style={{ background: "#fff", borderTop: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px" }}>
+          <FadeIn><SectionTitle sub="Based on the Barrows & Myers (1993) model, PBL follows a 5-stage flow.">The PBL Process</SectionTitle></FadeIn>
+          <div style={{ position: "relative", paddingLeft: 32 }}>
+            <div style={{ position: "absolute", left: 15, top: 0, bottom: 0, width: 2, background: "linear-gradient(to bottom, #3B82F6, #1E3A8A)" }} />
+            {stages.map((s, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div style={{ marginBottom: 24, position: "relative" }}>
+                  <div style={{ position: "absolute", left: -25, top: 4, width: 24, height: 24, borderRadius: "50%", background: s.color, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700 }}>{s.num}</div>
+                  <div onClick={() => setExpandedStage(expandedStage === i ? null : i)} style={{ background: "#F8FAFC", border: "1px solid #E5E7EB", borderRadius: 12, padding: "16px 20px", cursor: "pointer", transition: "all 0.2s", borderColor: expandedStage === i ? "#93C5FD" : "#E5E7EB" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div style={{ fontWeight: 600, fontSize: 16, color: "#111827" }}>Stage {s.num}: {s.title}</div>
+                      <span style={{ color: "#9CA3AF", transform: expandedStage === i ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.2s", display: "inline-block" }}>{"\u25BE"}</span>
+                    </div>
+                    {expandedStage === i && (
+                      <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid #E5E7EB" }}>
+                        {s.points.map((p, j) => (
+                          <div key={j} style={{ fontSize: 14, color: "#4B5563", padding: "4px 0", display: "flex", gap: 8, lineHeight: 1.6 }}><span style={{ color: s.color }}>&rarr;</span> {p}</div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn>
+            <div style={{ background: "#F8FAFC", borderRadius: 12, padding: 24, marginTop: 16, textAlign: "center" }}>
+              <div style={{ fontSize: 13, fontWeight: 600, color: "#6B7280", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>Iterative Flow</div>
+              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 500 }}>
+                {["Problem", "\u2192", "Gather", "\u2192", "Re-examine", "\u2192", "Sufficient?"].map((t, i) => (
+                  <span key={i} style={{ color: t === "\u2192" ? "#9CA3AF" : "#1E40AF", background: t === "\u2192" ? "transparent" : "#EFF6FF", padding: t === "\u2192" ? 0 : "6px 12px", borderRadius: 6 }}>{t}</span>
+                ))}
+              </div>
+              <div style={{ marginTop: 8, fontSize: 13, color: "#6B7280" }}>
+                <span style={{ color: "#10B981", fontWeight: 600 }}>Yes</span> &rarr; Solution developed&nbsp;&nbsp;|&nbsp;&nbsp;<span style={{ color: "#EF4444", fontWeight: 600 }}>No</span> &rarr; Back to gathering &hookleftarrow;
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Section 3: IFLA */}
+      <section id="ifla" style={{ background: "#FAFBFC", borderTop: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px" }}>
+          <FadeIn><SectionTitle sub={<span><strong>과제수행계획서</strong> &mdash; The Task Performance Plan is the core weekly document in PBL. Click each card to learn more.</span>}>IFLA Framework</SectionTitle></FadeIn>
+          <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 40 }}>
+            {iflaCards.map((card, i) => <IFLACard key={i} card={card} index={i} />)}
+          </div>
+          <FadeIn>
+            <div style={{ background: "#fff", border: "1px solid #E5E7EB", borderRadius: 12, padding: 24 }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, color: "#374151", marginBottom: 16 }}>How IFLA Iterates</h3>
+              {[
+                { round: "Round 1", items: ["Initial hypotheses", "What we know", "What we don\u2019t", "Who researches what"] },
+                { round: "Round 2+", items: ["Revise hypotheses", "New knowledge added", "New gaps found?", "Redesign plan"] },
+                { round: "Final", items: ["Develop solution", "Prepare presentation"] },
+              ].map((r, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12, alignItems: "flex-start" }}>
+                  <div style={{ background: i === 2 ? "#10B981" : "#3B82F6", color: "#fff", fontSize: 11, fontWeight: 700, padding: "4px 10px", borderRadius: 20, whiteSpace: "nowrap", marginTop: 2 }}>{r.round}</div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {r.items.map((item, j) => (
+                      <span key={j} style={{ fontSize: 13, color: "#4B5563", background: "#F3F4F6", padding: "4px 10px", borderRadius: 6 }}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #F3F4F6" }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "#DC2626", marginBottom: 4 }}>{"\u26A0"} Important Notes</div>
+                <div style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.7 }}>The plan must be written through team discussion. Content studied individually must be taught to teammates. Studying "what we need to learn" is a whole-team task.</div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Section 4: Team Learning */}
+      <section id="team" style={{ background: "#fff", borderTop: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px" }}>
+          <FadeIn><SectionTitle sub="Team learning is the engine of PBL, but it's not the same as dividing tasks.">Team Learning Mindset & Tips</SectionTitle></FadeIn>
+
+          <FadeIn>
+            <div style={{ background: "#FEF2F2", borderRadius: 12, padding: 24, marginBottom: 32, borderLeft: "4px solid #EF4444" }}>
+              <div style={{ fontSize: 16, fontWeight: 600, color: "#991B1B", marginBottom: 8 }}>Team Learning &ne; Task Division</div>
+              <p style={{ fontSize: 14, color: "#7F1D1D", lineHeight: 1.7, fontStyle: "italic" }}>"You do Part 1, I'll do Part 2, let's just combine them" &mdash; This is NOT PBL teamwork!</p>
+              <p style={{ fontSize: 14, color: "#374151", lineHeight: 1.7, marginTop: 8 }}>All team members must participate in <strong>every stage</strong> and discuss together.</p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 32 }}>
+              <div style={{ background: "#FEF2F2", borderRadius: 12, padding: 20, border: "1px solid #FECACA" }}>
+                <div style={{ fontWeight: 700, color: "#DC2626", marginBottom: 12, fontSize: 15 }}>{"\u274C"} Group</div>
+                <div style={{ fontSize: 14, color: "#7F1D1D", lineHeight: 1.8 }}>Collection of individual tasks<br />Only individual responsibility<br />Simple gathering</div>
+              </div>
+              <div style={{ background: "#EFF6FF", borderRadius: 12, padding: 20, border: "1px solid #BFDBFE" }}>
+                <div style={{ fontWeight: 700, color: "#1D4ED8", marginBottom: 12, fontSize: 15 }}>{"\u2705"} Team</div>
+                <div style={{ fontSize: 14, color: "#1E3A8A", lineHeight: 1.8 }}>Shared tasks performed together<br />Individual + shared responsibility<br />Requires <strong>Trust</strong> & <strong>Commitment</strong></div>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <div style={{ background: "#F0FDF4", borderRadius: 12, padding: 24, marginBottom: 32, borderLeft: "4px solid #10B981" }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, color: "#065F46", marginBottom: 12 }}>The Instructor's Role: Facilitator</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {["Provides feedback during team discussions", "Guides discussions toward problem-solving", "Asks probing questions to grasp the problem\u2019s essence", "Delivers mini-lectures for wrap-up & synthesis"].map((t, i) => (
+                  <div key={i} style={{ fontSize: 14, color: "#374151", display: "flex", gap: 8 }}><span style={{ color: "#10B981" }}>&rarr;</span> {t}</div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <h3 style={{ fontSize: 16, fontWeight: 600, color: "#374151", marginBottom: 12 }}>Behaviors That Hinder Team Learning</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
+              {hindrances.map((h, i) => (
+                <span key={i} style={{ background: "#FEF2F2", color: "#991B1B", fontSize: 13, padding: "6px 12px", borderRadius: 20, border: "1px solid #FECACA" }}>{h}</span>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.25}><h3 style={{ fontSize: 18, fontWeight: 600, color: "#374151", marginBottom: 16 }}>Practical Tips</h3></FadeIn>
+
+          <FadeIn delay={0.3}>
+            <div style={{ background: "#F8FAFC", borderRadius: 12, padding: 20, marginBottom: 16, border: "1px solid #E5E7EB" }}>
+              <div style={{ fontWeight: 600, color: "#1E40AF", marginBottom: 8 }}>{"\u{1F4AA}"} Tip 1: Build Your Team Well</div>
+              <div style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.7 }}>Introduce yourself and build rapport. Create a team name. Establish Ground Rules together.</div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.35}>
+            <div style={{ background: "#F8FAFC", borderRadius: 12, padding: 20, marginBottom: 16, border: "1px solid #E5E7EB" }}>
+              <div style={{ fontWeight: 600, color: "#1E40AF", marginBottom: 8 }}>{"\u{1F4CB}"} Tip 2: Ground Rules</div>
+              <div style={{ fontSize: 14, color: "#4B5563", marginBottom: 8 }}>Rules your team creates and commits to following:</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                {groundRules.map((r, i) => (
+                  <span key={i} style={{ background: "#EFF6FF", color: "#1E40AF", fontSize: 12, padding: "4px 10px", borderRadius: 6 }}>{r}</span>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <div style={{ background: "#F8FAFC", borderRadius: 12, padding: 20, border: "1px solid #E5E7EB" }}>
+              <div style={{ fontWeight: 600, color: "#1E40AF", marginBottom: 8 }}>{"\u23F1"} Tip 3: Discussion Matrix</div>
+              <div style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.7 }}>Break topics into sub-agendas. Allocate time per agenda. Post results on sticky notes. End with summary & reflection.</div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Section 5: Benefits */}
+      <section id="benefits" style={{ background: "#FAFBFC", borderTop: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px" }}>
+          <FadeIn><SectionTitle sub="Research-proven effects of Problem-Based Learning.">Benefits of PBL</SectionTitle></FadeIn>
+          <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 40 }}>
+            {benefitsData.map((b, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div style={{ background: "#fff", border: "1px solid #E5E7EB", borderRadius: 12, padding: 24, height: "100%" }}>
+                  <div style={{ fontSize: 32, marginBottom: 12 }}>{b.icon}</div>
+                  <div style={{ fontWeight: 600, fontSize: 16, color: "#111827", marginBottom: 8 }}>{b.title}</div>
+                  <div style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.7 }}>{b.desc}</div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn>
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: "#374151", marginBottom: 16 }}>Competencies Developed</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              {competencies.map((c, i) => (
+                <div key={i} style={{ flex: 1, minWidth: 180, background: "#fff", borderRadius: 12, padding: 20, border: "1px solid #E5E7EB" }}>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: c.color, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>{c.type}</div>
+                  {c.items.map((item, j) => (
+                    <div key={j} style={{ fontSize: 14, color: "#374151", padding: "2px 0" }}>{item}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Section 6: Links */}
+      <section id="links" style={{ background: "linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)", borderTop: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "56px 24px", textAlign: "center" }}>
+          <FadeIn>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 12 }}>Next Steps</div>
+            <h2 style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: 32, fontWeight: 700, color: "#fff", marginBottom: 12, letterSpacing: "-0.02em" }}>Quiz & Survey</h2>
+            <p style={{ fontSize: 16, color: "#BFDBFE", marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>Test your understanding of PBL and share your feedback.</p>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, maxWidth: 480, margin: "0 auto" }}>
+              <a href={"https://forms.gle/tcXfn5NjeAExAHwg9"} target="_blank" rel="noopener noreferrer"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, background: "rgba(255,255,255,0.12)", borderRadius: 16, padding: "32px 24px", textDecoration: "none", border: "1px solid rgba(255,255,255,0.2)", transition: "all 0.2s" }}
+                onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.2)"}
+                onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.12)"}>
+                <span style={{ fontSize: 36 }}>{"\u{1F4DD}"}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>Take the Quiz</span>
+                <span style={{ fontSize: 13, color: "#93C5FD" }}>Google Form &rarr;</span>
+              </a>
+              <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, background: "rgba(255,255,255,0.12)", borderRadius: 16, padding: "32px 24px", textDecoration: "none", border: "1px solid rgba(255,255,255,0.2)", transition: "all 0.2s" }}
+                onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.2)"}
+                onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.12)"}>
+                <span style={{ fontSize: 36 }}>{"\u{1F4CA}"}</span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>Take the Survey</span>
+                <span style={{ fontSize: 13, color: "#93C5FD" }}>Google Form &rarr;</span>
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <footer style={{ background: "#111827", padding: "32px 24px", textAlign: "center" }}>
+        <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.7 }}>Korea University Sejong Campus</p>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
