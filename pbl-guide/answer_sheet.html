@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PBL Quiz — Answer Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: #111827; background: #FAFBFC; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #BFDBFE; }
+
+  .hero {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    padding: 100px 24px 64px;
+    text-align: center;
+  }
+  .hero-sub { font-size: 13px; font-weight: 600; color: #93C5FD; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
+  .hero-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 44px; font-weight: 700; color: #fff; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px; }
+  .hero-desc { font-size: 17px; color: #BFDBFE; max-width: 520px; margin: 0 auto; line-height: 1.6; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+
+  .q-card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .q-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3B82F6, #1E3A8A);
+  }
+  .q-card:hover { box-shadow: 0 8px 32px rgba(59,130,246,0.08); }
+
+  .q-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #3B82F6;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .q-points {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1E40AF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .q-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+  }
+  .option.correct {
+    background: #F0FDF4;
+    color: #065F46;
+    font-weight: 600;
+    border: 1px solid #BBF7D0;
+  }
+  .option.correct .radio {
+    background: #10B981;
+    border-color: #10B981;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  .option.wrong {
+    color: #9CA3AF;
+  }
+
+  .radio {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 2px solid #D1D5DB;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.2s;
+  }
+
+  .checkbox {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    border: 2px solid #D1D5DB;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.2s;
+  }
+  .option.correct .checkbox {
+    background: #10B981;
+    border-color: #10B981;
+    position: relative;
+  }
+  .option.correct .checkbox::after {
+    content: '✓';
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .explanation {
+    margin-top: 16px;
+    padding: 16px 18px;
+    background: #EFF6FF;
+    border-radius: 10px;
+    border-left: 4px solid #3B82F6;
+    font-size: 14px;
+    color: #1E40AF;
+    line-height: 1.7;
+  }
+  .explanation strong { color: #1E3A8A; }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3B82F6;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-bottom: 8px;
+  }
+  .back-link:hover { color: #1E40AF; }
+
+  .score-banner {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  .score-banner .label { font-size: 14px; font-weight: 500; opacity: 0.9; }
+  .score-banner .score { font-family: 'Source Serif 4', Georgia, serif; font-size: 36px; font-weight: 700; }
+
+  footer {
+    background: #111827;
+    padding: 32px 24px;
+    text-align: center;
+    color: #6B7280;
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .hero-title { font-size: 32px !important; }
+    .q-card { padding: 20px 18px 18px; }
+    .q-text { font-size: 16px; }
+    .score-banner { flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  /* fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .q-card:nth-child(1) { animation-delay: 0s; }
+  .q-card:nth-child(2) { animation-delay: 0.05s; }
+  .q-card:nth-child(3) { animation-delay: 0.1s; }
+  .q-card:nth-child(4) { animation-delay: 0.15s; }
+  .q-card:nth-child(5) { animation-delay: 0.2s; }
+  .q-card:nth-child(6) { animation-delay: 0.25s; }
+  .q-card:nth-child(7) { animation-delay: 0.3s; }
+  .q-card:nth-child(8) { animation-delay: 0.35s; }
+  .q-card:nth-child(9) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #E5E7EB;">
+  <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;padding:0 24px;height:56px;">
+    <a href="https://coolmintmild.github.io/pbl-guide/" style="font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:18px;color:#1E3A8A;text-decoration:none;letter-spacing:-0.02em;">PBL Guide</a>
+    <span style="color:#D1D5DB;margin:0 12px;">|</span>
+    <span style="font-size:14px;font-weight:600;color:#3B82F6;">Answer Sheet</span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero" style="padding-top:100px;">
+  <div class="hero-sub">PBL Comprehension Quiz</div>
+  <h1 class="hero-title">Answer Sheet</h1>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+  <a href="https://coolmintmild.github.io/pbl-guide/" class="back-link">← Back to PBL Guide</a>
+
+  <!-- Q1 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">1</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">What is the most distinctive feature of PBL?</div>
+    <div class="option wrong"><div class="radio"></div>The instructor lectures on all content before giving a test</div>
+    <div class="option correct"><div class="radio"></div>A problem is presented before instruction, and students solve it proactively</div>
+    <div class="option wrong"><div class="radio"></div>Individual students solve problems alone</div>
+    <div class="option wrong"><div class="radio"></div>The instructor provides the correct answer to the problem</div>
+    <div class="explanation">
+      <strong>Answer:</strong> PBL reverses the traditional "teach first, test later" model. A real-world problem is presented <em>before</em> instruction, and students work in teams to solve it proactively. In the PBL comparison table, the starting point is "A real-world problem is presented," contrasting with lecture-based classes where the instructor explains theory first.
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">2</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">What is the instructor's role in PBL?</div>
+    <div class="option wrong"><div class="radio"></div>Knowledge transmitter — lectures on all content</div>
+    <div class="option wrong"><div class="radio"></div>Supervisor — controls student behavior</div>
+    <div class="option correct"><div class="radio"></div>Learning facilitator — supports learning through feedback, guidance, and probing questions</div>
+    <div class="option wrong"><div class="radio"></div>Evaluator — only creates exam questions</div>
+    <div class="explanation">
+      <strong>Answer:</strong> In PBL, the instructor's role shifts from "Knowledge transmitter" (lecture-based) to <strong>Learning facilitator</strong>. According to the PBL Guide, the facilitator: provides feedback during team discussions, guides discussions toward problem-solving, asks probing questions to grasp the problem's essence, and delivers mini-lectures for wrap-up & synthesis.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">3</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">Which is NOT one of the four IFLA areas in the Task Performance Plan?</div>
+    <div class="option wrong"><div class="radio"></div>Ideas (Hypotheses/Solutions)</div>
+    <div class="option wrong"><div class="radio"></div>Facts (Known Information)</div>
+    <div class="option correct"><div class="radio"></div>Feedback</div>
+    <div class="option wrong"><div class="radio"></div>Learning Issues (What We Need to Learn)</div>
+    <div class="explanation">
+      <strong>Answer: Feedback</strong> is NOT part of IFLA. The four areas of the Task Performance Plan (과제수행계획서) are: <strong>I</strong> — Ideas (가설 · 해결안), <strong>F</strong> — Facts (알고 있는 사실), <strong>L</strong> — Learning Issues (더 알아야 할 사항), and <strong>A</strong> — Action Plans (실천 계획). These form the core weekly document in PBL and iterate across rounds.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">4</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">Which represents proper PBL teamwork?</div>
+    <div class="option wrong"><div class="radio"></div>"I'll do Ch.1, you do Ch.2, you do Ch.3. Let's just combine them!"</div>
+    <div class="option correct"><div class="radio"></div>"Let's each share what we researched, teach each other, and develop a solution together"</div>
+    <div class="option wrong"><div class="radio"></div>"The team leader will organize everything; the rest just present"</div>
+    <div class="option wrong"><div class="radio"></div>"We don't know, so let's just ask the professor for the answer"</div>
+    <div class="explanation">
+      <strong>Answer:</strong> The PBL Guide emphasizes that <strong>Team Learning ≠ Task Division</strong>. "You do Part 1, I'll do Part 2, let's just combine them" is explicitly called out as NOT PBL teamwork. True PBL teamwork means all members participate in every stage, share what they researched, teach each other, and develop solutions together. A "Team" requires shared tasks, shared responsibility, trust, and commitment — unlike a simple "Group" which is just a collection of individual tasks.
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">5</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">Which is NOT a characteristic of PBL problems?</div>
+    <div class="option wrong"><div class="radio"></div>Ill-structured — no single correct answer, multiple solution paths</div>
+    <div class="option wrong"><div class="radio"></div>Authentic — problems that could occur in the real world</div>
+    <div class="option correct"><div class="radio"></div>Simplicity — easy and straightforward, solvable by anyone immediately</div>
+    <div class="option wrong"><div class="radio"></div>Relevance — problems that learners feel are personally relevant</div>
+    <div class="explanation">
+      <strong>Answer: Simplicity</strong> is NOT a PBL characteristic. The PBL Guide's 4 Core Principles describe PBL problems as: <strong>Ill-Structured</strong> ("messy" problems with no single correct answer), requiring <strong>Student Agency</strong>, driven by <strong>Collaborative Inquiry</strong>, and following an <strong>Iterative Cycle</strong>. Simple, easy problems do not align with PBL's purpose — the problems must be complex enough to require multiple perspectives and research.
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">6</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">What is the correct order of PBL's 5 stages?</div>
+    <div class="option wrong"><div class="radio"></div>Problem presentation → Class orientation → Solution presentation → Follow-up → Evaluation</div>
+    <div class="option correct"><div class="radio"></div>Class orientation → Problem presentation → Follow-up (iterative) → Solution presentation → Review & evaluation</div>
+    <div class="option wrong"><div class="radio"></div>Evaluation → Problem presentation → Class orientation → Solution presentation → Follow-up</div>
+    <div class="option wrong"><div class="radio"></div>Class orientation → Solution presentation → Problem presentation → Evaluation → Follow-up</div>
+    <div class="explanation">
+      <strong>Answer:</strong> Based on the Barrows & Myers (1993) model, PBL follows a 5-stage flow:
+      <strong>Stage 1</strong> Class Orientation (team building, ground rules) →
+      <strong>Stage 2</strong> Problem Presentation (real-world problem, IFLA begins) →
+      <strong>Stage 3</strong> Follow-up / Iterative (synthesize, revise, repeat over several weeks) →
+      <strong>Stage 4</strong> Solution Presentation (teams present completed solutions) →
+      <strong>Stage 5</strong> Review & Evaluation (reflection, self/peer evaluation).
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">7</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">[True/False] "In PBL, once roles are assigned, each member only needs to complete their own role."</div>
+    <div class="option wrong"><div class="radio"></div>True</div>
+    <div class="option correct"><div class="radio"></div>False</div>
+    <div class="explanation">
+      <strong>Answer: False.</strong> Role assignment is possible, but completing your own role doesn't end your responsibility. The PBL Guide states that all team members must participate in <strong>every stage</strong> and discuss together. The IFLA important notes also emphasize: "Content studied individually must be taught to teammates. Studying 'what we need to learn' is a whole-team task."
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">8</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">Which activity corresponds to "Learning Issues" in the Task Performance Plan?</div>
+    <div class="option wrong"><div class="radio"></div>Speculate on the causes and effects of the problem</div>
+    <div class="option wrong"><div class="radio"></div>Organize facts you already know</div>
+    <div class="option correct"><div class="radio"></div>Identify what more you need to know to solve the problem</div>
+    <div class="option wrong"><div class="radio"></div>Create a concrete action plan</div>
+    <div class="explanation">
+      <strong>Answer:</strong> In the IFLA framework, <strong>L — Learning Issues (더 알아야 할 사항)</strong> is about identifying knowledge gaps. The PBL Guide defines it as: "Things that need to be known or understood to solve the problem." The activity involves identifying knowledge gaps and specifying learning needs. The other options correspond to different IFLA areas — Ideas (speculating causes/effects), Facts (organizing prior knowledge), and Action Plans (concrete action plans).
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="q-card fade-in">
+    <div><span class="q-number">9</span><span class="q-points">10 pts</span></div>
+    <div class="q-text">Select ALL research-proven effects of PBL. (Multiple choice)</div>
+    <div class="option correct"><div class="checkbox"></div>Improved information retention</div>
+    <div class="option correct"><div class="checkbox"></div>Enhanced problem-solving skills</div>
+    <div class="option wrong"><div class="checkbox"></div>Automatic test score improvement</div>
+    <div class="option correct"><div class="checkbox"></div>Improved self-directed learning</div>
+    <div class="option correct"><div class="checkbox"></div>Enhanced collaborative learning</div>
+    <div class="explanation">
+      <strong>Answer: All except "Automatic test score improvement."</strong> The PBL Guide's Benefits section lists four research-proven effects:
+      <strong>1) Improved Retention</strong> — learning becomes meaningful when learners determine their own needs;
+      <strong>2) Problem-Solving Skills</strong> — metacognition and problem-solving efficiency are mutually reinforced;
+      <strong>3) Self-Directed Learning</strong> — learners develop self-directed abilities through the problem-solving process;
+      <strong>4) Collaborative Learning</strong> — students improve collaborative skills through shared responsibility.
+      "Automatic test score improvement" is NOT a proven PBL effect.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>PBL Quiz Answer Sheet · Korea University Sejong Campus</p>
+  <p style="margin-top:8px;"><a href="https://coolmintmild.github.io/pbl-guide/" style="color:#93C5FD;text-decoration:none;">← Return to PBL Guide</a></p>
+</footer>
+
+</body>
+</html>
