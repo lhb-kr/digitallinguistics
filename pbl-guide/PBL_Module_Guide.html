@@ -805,7 +805,77 @@
 <!-- CHECKLISTS TAB -->
 <!-- ============================================================ -->
 <div id="tab-checklists" class="tab-content">
+  <!-- Daily Session Routine -->
+  <div class="checklist-section">
+    <div class="checklist-title">Daily Session Routine</div>
+    <div class="checklist-subtitle">Follow this every session during Weeks 1-3. Reset and repeat each day.</div>
+    <div class="progress-bar-wrap" id="progress-daily">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <span class="progress-text">0 / 7</span>
+    </div>
+    <div class="checklist" id="checklist-daily">
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Attendance check-in</div>
+          <div class="check-detail">Must check in at the classroom. No exceptions.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">IFLA Action plan on Padlet</div>
+          <div class="check-detail">Write your action plan and submit the link. (Day 1: full IFLA)</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Start working before consultation</div>
+          <div class="check-detail">Begin your activities. Instructor will come to you.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Instructor consultation</div>
+          <div class="check-detail">At least one meeting per session (in person or Zoom)</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Problem-solving with team</div>
+          <div class="check-detail">Collaborate until goals for the day are met. Team leader decides end time.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Submit progress report on Slack</div>
+          <div class="check-detail">Team summary + individual materials. Notify instructor before leaving.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Self & peer evaluation (Wednesday only)</div>
+          <div class="check-detail">Complete right after Wednesday class. Missing it = score of 0.</div>
+        </div>
+      </div>
+    </div>
+    <button onclick="resetChecklist('daily')" style="margin-top:0.8rem; padding:0.5rem 1.2rem; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:600; color:var(--text-secondary); cursor:pointer; transition:all 0.2s;">
+      &#8634; Reset daily checklist
+    </button>
+  </div>
 
+  <!-- Warnings -->
+  <div class="checklist-warnings">
+    <div class="warning-pill">&#9888; Missing self & peer evaluation = automatic score of 0</div>
+    <div class="warning-pill">&#9888; Absence during PBL = doubled point deduction</div>
+    <div class="warning-pill">&#9888; No progress report = counts as no work done that day</div>
+    <div class="warning-pill">&#9888; Must check in at classroom before relocating</div>
+  </div>
   <!-- Day 1 Setup -->
   <div class="checklist-section">
     <div class="checklist-title">Day 1 Setup</div>
@@ -908,79 +978,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Daily Session Routine -->
-  <div class="checklist-section">
-    <div class="checklist-title">Daily Session Routine</div>
-    <div class="checklist-subtitle">Follow this every session during Weeks 1-3. Reset and repeat each day.</div>
-    <div class="progress-bar-wrap" id="progress-daily">
-      <div class="progress-bar"><div class="progress-fill"></div></div>
-      <span class="progress-text">0 / 7</span>
-    </div>
-    <div class="checklist" id="checklist-daily">
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Attendance check-in</div>
-          <div class="check-detail">Must check in at the classroom. No exceptions.</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">IFLA Action plan on Padlet</div>
-          <div class="check-detail">Write your action plan and submit the link. (Day 1: full IFLA)</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Start working before consultation</div>
-          <div class="check-detail">Begin your activities. Instructor will come to you.</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Instructor consultation</div>
-          <div class="check-detail">At least one meeting per session (in person or Zoom)</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Problem-solving with team</div>
-          <div class="check-detail">Collaborate until goals for the day are met. Team leader decides end time.</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Submit progress report on Slack</div>
-          <div class="check-detail">Team summary + individual materials. Notify instructor before leaving.</div>
-        </div>
-      </div>
-      <div class="check-item" onclick="toggleCheck(this, 'daily')">
-        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
-        <div class="check-content">
-          <div class="check-label">Self & peer evaluation (Wednesday only)</div>
-          <div class="check-detail">Complete right after Wednesday class. Missing it = score of 0.</div>
-        </div>
-      </div>
-    </div>
-    <button onclick="resetChecklist('daily')" style="margin-top:0.8rem; padding:0.5rem 1.2rem; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:600; color:var(--text-secondary); cursor:pointer; transition:all 0.2s;">
-      &#8634; Reset daily checklist
-    </button>
-  </div>
-
-  <!-- Warnings -->
-  <div class="checklist-warnings">
-    <div class="warning-pill">&#9888; Missing self & peer evaluation = automatic score of 0</div>
-    <div class="warning-pill">&#9888; Absence during PBL = doubled point deduction</div>
-    <div class="warning-pill">&#9888; No progress report = counts as no work done that day</div>
-    <div class="warning-pill">&#9888; Must check in at classroom before relocating</div>
-  </div>
-
 </div>
 </div>
 
