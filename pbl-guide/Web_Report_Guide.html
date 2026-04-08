@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Your Interactive Web Page Report</title>
+<style>
+  :root{
+    --bg:#0f172a; --panel:#ffffff; --ink:#0f172a; --muted:#475569;
+    --accent:#2563eb; --accent2:#7c3aed; --soft:#eef2ff; --line:#e2e8f0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink);background:#f8fafc;line-height:1.7;font-size:19px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;
+    flex-wrap:wrap;gap:6px;align-items:center}
+  nav .brand{font-weight:700;margin-right:auto;font-size:15px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;color:transparent}
+  nav a{color:var(--muted);text-decoration:none;font-size:15px;
+    padding:6px 10px;border-radius:6px;transition:.2s}
+  nav a:hover{background:var(--soft);color:var(--accent)}
+  .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+  .hero h1{font-size:clamp(32px,5vw,52px);margin:0 0 16px;line-height:1.1;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;color:transparent}
+  .hero p{font-size:21px;color:var(--muted);max-width:720px;margin:0 auto}
+  .chip{display:inline-block;padding:6px 14px;background:var(--soft);
+    color:var(--accent);border-radius:999px;font-size:13px;font-weight:600;
+    margin-bottom:20px}
+  main{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:36px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  section h2{margin-top:0;font-size:28px;display:flex;align-items:center;gap:12px}
+  .num{display:inline-flex;width:36px;height:36px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;align-items:center;justify-content:center;font-size:15px;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+  .card{padding:18px;border:1px solid var(--line);border-radius:12px;
+    background:#fafbff;transition:.2s}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 20px rgba(37,99,235,.1)}
+  .card .ico{font-size:22px;margin-bottom:8px}
+  .card h4{margin:0 0 4px;font-size:17px}
+  .card p{margin:0;font-size:15px;color:var(--muted)}
+  .steps{counter-reset:step;list-style:none;padding:0;margin:18px 0 0}
+  .steps li{counter-increment:step;padding:14px 14px 14px 56px;position:relative;
+    border-left:3px solid var(--soft);margin-left:18px;color:var(--muted)}
+  .steps li::before{content:counter(step);position:absolute;left:-18px;top:12px;
+    width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+  details{border:1px solid var(--line);border-radius:10px;padding:14px 18px;
+    margin:10px 0;background:#fafbff;cursor:pointer;transition:.2s}
+  details[open]{background:var(--soft);border-color:var(--accent)}
+  details summary{font-weight:600;outline:none}
+  details p{color:var(--muted);margin:10px 0 0}
+  .tabs{display:flex;gap:8px;margin:18px 0 0;flex-wrap:wrap}
+  .tab-btn{padding:11px 20px;border:1px solid var(--line);background:#fff;
+    border-radius:10px;cursor:pointer;font-weight:600;font-size:16px;transition:.2s}
+  .tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .tab-panel{display:none;padding:20px;background:#fafbff;border:1px solid var(--line);
+    border-radius:12px;margin-top:12px}
+  .tab-panel.active{display:block}
+  .codeblk{background:#0f172a;color:#e2e8f0;padding:18px;border-radius:10px;
+    font-family:"SF Mono",Consolas,monospace;font-size:15px;
+    white-space:pre-wrap;line-height:1.55;margin-top:14px;overflow-x:auto}
+  .copy{float:right;background:var(--accent);color:#fff;border:none;padding:6px 12px;
+    border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+  .callout{padding:16px 18px;border-left:4px solid var(--accent);
+    background:var(--soft);border-radius:0 10px 10px 0;margin:14px 0;font-size:16px}
+  .callout.warn{border-color:#f59e0b;background:#fef3c7;color:#78350f}
+  .marker{background:#0f172a;color:#a5f3fc;padding:2px 8px;border-radius:4px;
+    font-family:monospace;font-size:13px}
+  a{color:var(--accent)}
+  footer{text-align:center;padding:30px;color:var(--muted);font-size:13px}
+  @media (max-width:640px){section{padding:24px}.hero{padding:50px 20px 30px}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Interactive Web Page Guide</div>
+    <a href="#what">What</a>
+    <a href="#process">Process</a>
+    <a href="#prepare">Prepare</a>
+    <a href="#report">Report</a>
+    <a href="#assets">Assets</a>
+    <a href="#prompt">Prompt</a>
+    <a href="#iterate">Iterate</a>
+    <a href="#test">Test</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <span class="chip">A Student Guide</span>
+  <h1>Building Your Interactive Web Page Report</h1>
+  <p>Turn your project report into a single self-contained HTML page using an AI chatbot, then publish it on GitHub.</p>
+</div>
+
+<main>
+
+<section id="what">
+  <h2><span class="num">1</span> What You Will Make</h2>
+  <p>You will make one HTML file (<code>index.html</code>) that presents your project, and upload it to GitHub. You will submit the GitHub link as your final work.</p>
+  <h2 style="margin-top:30px"><span class="num">2</span> What the File Should Do</h2>
+  <p>The format is free. Using things like graphs, tables, images, and text, you should present your findings in whatever way works best for your project. There is no fixed structure and no required length. Design the page so that it shows your work effectively.</p>
+</section>
+
+<section id="process">
+  <h2><span class="num">3</span> The Whole Process at a Glance</h2>
+  <ol class="steps">
+    <li>Fill in the <a href="https://kucom.korea.ac.kr/em/69d59de46dd28" target="_blank">report template</a>.</li>
+    <li>Gather your images and any web links.</li>
+    <li>Open an AI chatbot, upload your filled-in report and your image files.</li>
+    <li>Paste the prompt from section 7. The chatbot will give you back one HTML file.</li>
+    <li>Test it in your browser, then upload it to GitHub.</li>
+  </ol>
+</section>
+
+<section id="prepare">
+  <h2><span class="num">4</span> What to Prepare</h2>
+  <div class="grid">
+    <div class="card"><div class="ico">📄</div><h4>Filled Report</h4><p>Using the <a href="https://kucom.korea.ac.kr/em/69d59de46dd28" target="_blank">report template</a>.</p></div>
+    <div class="card"><div class="ico">📊</div><h4>Your Data</h4><p>Numbers, findings, results.</p></div>
+    <div class="card"><div class="ico">🖼️</div><h4>Images & Links</h4><p>Visuals and any web references.</p></div>
+    <div class="card"><div class="ico">💬</div><h4>The Prompt</h4><p>Copy from section 7 below.</p></div>
+  </div>
+</section>
+
+<section id="report">
+  <h2><span class="num">5</span> Your Report</h2>
+  <p>Use the <a href="https://kucom.korea.ac.kr/em/69d59de46dd28" target="_blank">report template</a> provided with this guide. The template gives you a suggested structure for the PBL module, but you do not have to follow that structure exactly. Change the order, rename sections, add or remove parts so the flow matches your own thinking.</p>
+  <div class="callout">
+    <strong>One important rule:</strong> follow how images and links are marked. Anywhere you want an image or a live link to appear in your web page, write a marker inside angle brackets:
+  </div>
+  <p><span class="marker">&lt;image: chart1.png&gt;</span></p>
+  <p><span class="marker">&lt;image: https://example.com/photo.jpg&gt;</span></p>
+  <p><span class="marker">&lt;https://books.google.com/ngrams/graph?content=media+is&amp;year_start=1800&amp;year_end=2022&gt;</span></p>
+  <p>These markers tell the chatbot exactly where each visual goes. You will then upload the actual image files alongside your report when you open the chatbot.</p>
+</section>
+
+<section id="assets">
+  <h2><span class="num">6</span> Data, Images, and Links</h2>
+  <p>Handling images is the trickiest part of this whole process, so read this section carefully. There is a default way that works for everyone, and there are two other ways available depending on your situation.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab(event,'t1')">Default Way</button>
+    <button class="tab-btn" onclick="showTab(event,'t2')">Projects (Paid)</button>
+    <button class="tab-btn" onclick="showTab(event,'t3')">From Screenshots</button>
+  </div>
+  <div id="t1" class="tab-panel active">
+    <p>Open a normal chat with ChatGPT, Claude, or Gemini. Drag your filled-in report file and all of your image files into the same chat at once. The chatbot will read the angle bracket markers in your report and match each filename to the image you uploaded. Ask the chatbot to embed the images directly inside the HTML as base64 so the final file is one self-contained file with no broken links.</p>
+    <p>For a Google Books Ngram Viewer link, you have two choices. You can paste the link inside angle brackets in your report, and the chatbot will wrap it in an iframe so the live chart loads inside your page. Or, take a screen capture of the Ngram chart, save it as an image, and treat it like any other image with an angle bracket marker.</p>
+  </div>
+  <div id="t2" class="tab-panel">
+    <p>If you have a paid ChatGPT or Claude account, you can use Projects. Create a project, upload your report and all your image files into it, and chat inside the project. Everything stays in one workspace so you can keep editing without re-uploading.</p>
+  </div>
+  <div id="t3" class="tab-panel">
+    <p>If you have a chart or a frequency table from your data that exists only as a screenshot, you can ask the chatbot to read the numbers from the screenshot and redraw it as a clean simple graph or a normal HTML table inside your page. This looks much better than a pasted screenshot.</p>
+    <div class="callout warn">The chatbot can misread numbers from a blurry image. Check the redrawn version against your original data before submitting.</div>
+  </div>
+</section>
+
+<section id="prompt">
+  <h2><span class="num">7</span> The Prompt</h2>
+  <p>Open the chatbot, upload your filled-in report and all your image files, then paste one of the prompts below. Choose the version that fits how you want your final page to look.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab(event,'pA')">Version A: Faithful</button>
+    <button class="tab-btn" onclick="showTab(event,'pB')">Version B: Interactive</button>
+  </div>
+
+  <div id="pA" class="tab-panel active">
+    <p><strong>Keep my report as it is.</strong> The chatbot will convert your report into a clean HTML page with your visuals in place. Best for students who already wrote the report the way they want it presented.</p>
+    <div class="codeblk"><button class="copy" onclick="copyText('codeA',event)">Copy</button><span id="codeA">I have uploaded my project report and my image files. Please turn everything into ONE single self-contained HTML file called index.html that I can upload to GitHub. Follow the flow and structure of my report as it is written, and do not invent content I did not give you. Anything written inside angle brackets in my report (for example &lt;image: chart1.png&gt; or &lt;https://books.google.com/ngrams/...&gt;) is an instruction for you: an image marker tells you to place that image at that point in the page, and a link inside angle brackets tells you to embed it as a live iframe at that point. Embed all images as base64 directly inside the HTML so the page is fully self-contained. Use clean, readable styling with simple colors and good spacing. When you are done, give me a html file named index.html that I can download.</span></div>
+  </div>
+
+  <div id="pB" class="tab-panel">
+    <p><strong>Turn my report into a real web page.</strong> The chatbot can change the visual layout, add navigation, hover effects, expandable sections, and other web design elements. It cannot add new content or change your facts.</p>
+    <div class="codeblk"><button class="copy" onclick="copyText('codeB',event)">Copy</button><span id="codeB">I have uploaded my project report and my image files. Please turn everything into one interactive HTML web page called index.html that I can upload to GitHub. The content of my report (the text, the data, the meaning) must stay exactly as I wrote it. Do not add new content, do not invent facts, and do not change my findings. However, you have full freedom over the visual presentation: you may reorganize my report into web-style sections, add a top navigation bar that scrolls to each section, use side-by-side layouts, callout boxes, expandable or tabbed sections, hover effects, and any other interactive web elements that make the page more engaging to read. Make it feel like a real web page, not a printed document. Anything written inside angle brackets in my report (for example &lt;image: chart1.png&gt; or https://books.google.com/ngrams/...) is an instruction for you: an image marker tells you to place that image at that point in the page, and a link inside angle brackets tells you to embed it as a live iframe at that point. Embed all images as base64 directly inside the HTML so the page works on its own with no broken links. Use modern, clean styling with good spacing and a readable color scheme. Make the layout responsive so it works on both phone and laptop. When you are done, give me a file named index.html that I can download.</span></div>
+  </div>
+</section>
+
+<section id="iterate">
+  <h2><span class="num">8</span> Working with the Chatbot Through Iteration</h2>
+  <p>The first version the chatbot gives you will rarely be perfect. The real work is going back and forth with the chatbot to refine the page. Open the result, see what is wrong, and ask the chatbot to fix that specific thing. Keep going until the page is right.</p>
+  <p>Click each common problem below to see how to handle it:</p>
+  <details><summary>Image looks too small or blurry</summary><p>First check the resolution of your original image file. If the original is low quality, replace it with a higher-resolution version. If the original is fine but the chatbot shrunk it, ask the chatbot to display the image at a larger size or at its original resolution.</p></details>
+  <details><summary>Image is broken or not showing at all</summary><p>Tell the chatbot to stop using a local file path or external URL and to re-embed the image as base64 directly inside the HTML.</p></details>
+  <details><summary>Google Books Ngram chart not showing</summary><p>Ask the chatbot to wrap the Ngram link inside an iframe instead of leaving it as plain text or a hyperlink.</p></details>
+  <details><summary>Chart redrawn from a screenshot has wrong numbers</summary><p>Give the chatbot the correct numbers from your original data and ask it to redraw the graph or table.</p></details>
+  <details><summary>Layout looks broken or cramped</summary><p>Ask for a cleaner layout with more spacing. You can also ask for specific colors, fonts, or section orders in plain language.</p></details>
+  <details><summary>Chatbot's response is cut off</summary><p>Ask it to continue the code from where it stopped.</p></details>
+</section>
+
+<section id="test">
+  <h2><span class="num">9</span> Test Your Page Locally</h2>
+  <p>Save the code from the chatbot as a file named <code>index.html</code> on your computer. Double-click the file. It should open in your web browser. Check that all images appear, the text is readable, and any chart or live link looks right. If anything is broken, go back to the chatbot and ask for a fix.</p>
+
+  <h2 style="margin-top:30px"><span class="num">10</span> Upload to GitHub</h2>
+  <p>Detailed steps for uploading your file to GitHub and getting your link will be covered in Week 3.</p>
+</section>
+
+</main>
+
+<footer>Student Guide for Building Your Interactive Web Page Report</footer>
+
+<script>
+function showTab(e,id){
+  const panel=document.getElementById(id);
+  const parent=panel.parentElement;
+  parent.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  e.target.parentElement.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  panel.classList.add('active');
+  e.target.classList.add('active');
+}
+function copyText(id,ev){
+  const t=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(t).then(()=>{
+    ev.target.innerText='Copied!';
+    setTimeout(()=>ev.target.innerText='Copy',1500);
+  });
+}
+</script>
+</body>
+</html>
