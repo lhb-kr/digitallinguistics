@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Website on GitHub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    /* Step navigation dots */
+    .step-nav {
+      position: fixed;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 100;
+    }
+    .step-nav a {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      display: block;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+    .step-nav a.active {
+      background: #0969da;
+      transform: scale(1.4);
+    }
+    .step-nav a:hover {
+      background: #0969da;
+      transform: scale(1.3);
+    }
+
+    /* Container */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Page title */
+    .page-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .page-title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+    .page-title p {
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    /* Step card */
+    .step {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 36px;
+      margin-bottom: 36px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #0969da;
+      background: #dbeafe;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .step h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1a1a2e;
+    }
+
+    .step p {
+      margin-bottom: 14px;
+      color: #333;
+    }
+
+    .step ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .step ol li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .step ol li::marker {
+      color: #0969da;
+      font-weight: 700;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #f0f7ff;
+      border-left: 4px solid #0969da;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 0.92rem;
+      color: #1a1a2e;
+    }
+    .callout strong {
+      color: #0969da;
+    }
+
+    .callout.warning {
+      background: #fff8ed;
+      border-left-color: #e8a317;
+    }
+    .callout.warning strong {
+      color: #b07d10;
+    }
+
+    /* Code block */
+    .code-block {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 18px 0;
+      font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      overflow-x: auto;
+      position: relative;
+    }
+    .code-block .tag { color: #f38ba8; }
+    .code-block .attr { color: #a6e3a1; }
+    .code-block .val { color: #f9e2af; }
+    .code-block .text { color: #cdd6f4; }
+    .code-block .comment { color: #6c7086; font-style: italic; }
+
+    .code-label {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 0.7rem;
+      color: #6c7086;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Inline code */
+    code {
+      background: #eef1f5;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+      font-size: 0.88em;
+      color: #0969da;
+    }
+
+    /* Bold */
+    strong { font-weight: 600; }
+
+    /* Settings list in step 4 */
+    .settings-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+    .settings-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      gap: 8px;
+    }
+    .settings-list li:last-child { border-bottom: none; }
+    .settings-key {
+      font-weight: 600;
+      color: #1a1a2e;
+      min-width: 80px;
+    }
+    .settings-val {
+      color: #555;
+    }
+
+    /* Option cards */
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .option-card {
+      background: #f8f9fa;
+      border: 2px solid #e2e6ea;
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.3s;
+    }
+    .option-card:hover {
+      border-color: #0969da;
+    }
+    .option-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: #1a1a2e;
+    }
+    .option-card ol {
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+    .option-card ol li {
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 0.92rem;
+    }
+    .option-card ol li::marker {
+      color: #0969da;
+      font-weight: 700;
+    }
+    .option-card p {
+      font-size: 0.92rem;
+      color: #333;
+      margin-bottom: 14px;
+    }
+    .option-card .code-block {
+      font-size: 0.78rem;
+      padding: 14px 16px;
+    }
+    .option-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      background: #0969da;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container { padding: 36px 16px 80px; }
+      .step { padding: 28px 22px; }
+      .page-title h1 { font-size: 1.6rem; }
+      .step h2 { font-size: 1.2rem; }
+      .step-nav { right: 12px; gap: 14px; }
+      .step-nav a { width: 10px; height: 10px; }
+      .option-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Side navigation dots -->
+  <nav class="step-nav" aria-label="Step navigation">
+    <a href="#step1" data-step="0" title="Step 1"></a>
+    <a href="#step2" data-step="1" title="Step 2"></a>
+    <a href="#step3" data-step="2" title="Step 3"></a>
+    <a href="#step4" data-step="3" title="Step 4"></a>
+    <a href="#step5" data-step="4" title="Step 5"></a>
+  </nav>
+
+  <div class="container">
+    <div class="page-title">
+      <h1>Create Your Website on GitHub</h1>
+    </div>
+
+    <div class="callout" style="border-left-color: #8b5cf6; margin-bottom: 36px;">
+      <strong style="color: #8b5cf6;">Reference:</strong> You can also check <a href="https://m.blog.naver.com/gmr_archive/223740824060?recommendCode=2&recommendTrackingCode=2" target="_blank" rel="noopener">this guide</a> or <a href="#" target="_blank" rel="noopener">this visual walkthrough</a> for additional help.
+    </div>
+
+    <!-- Step 1 -->
+    <section class="step" id="step1">
+      <span class="step-label">Step 1</span>
+      <h2>Sign Up for a GitHub Account</h2>
+      <p>If you don't have a GitHub account yet, creating one takes just a minute.</p>
+      <ol>
+        <li>Go to <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</li>
+        <li>Click <strong>Sign up</strong> in the top-right corner.</li>
+        <li>Enter your <strong>email address</strong>, create a <strong>password</strong>, and choose a <strong>username</strong>.</li>
+        <li>Complete the CAPTCHA puzzle to prove you are human.</li>
+        <li><strong>Verify your email</strong> by entering the code GitHub sends to your inbox.</li>
+      </ol>
+      <div class="callout">
+        <strong>Important:</strong> Your username becomes part of your website URL. For example, if your username is <code>alex</code>, your site will be <code>alex.github.io</code>. Pick something clean and professional.
+      </div>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="step" id="step2">
+      <span class="step-label">Step 2</span>
+      <h2>Create the Repository</h2>
+      <p>GitHub allows one personal website per account. To set it up, you need a repository with a specific name.</p>
+      <ol>
+        <li>Log in to GitHub and click the <strong>+</strong> icon in the top-right corner, then select <strong>New repository</strong>.</li>
+        <li>For the repository name, type <code>username.github.io</code> (replace <code>username</code> with your actual GitHub username).</li>
+        <li>Set the visibility to <strong>Public</strong>. GitHub Pages is free for public repositories.</li>
+        <li>Check the box that says <strong>Add a README file</strong>.</li>
+        <li>Click <strong>Create repository</strong>.</li>
+      </ol>
+      <div class="callout">
+        <strong>Why this name?</strong> GitHub recognizes the <code>username.github.io</code> pattern and automatically treats it as your personal website repository.
+      </div>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="step" id="step3">
+      <span class="step-label">Step 3</span>
+      <h2>Add Your index.html File</h2>
+      <p>The <code>index.html</code> file is the front door of your website. This is what visitors see first when they open your URL. You have two options:</p>
+
+      <div class="option-grid">
+        <div class="option-card">
+          <span class="option-badge">Option A</span>
+          <h3>Create a new file</h3>
+          <ol>
+            <li>In your repository, click <strong>Add file</strong> and select <strong>Create new file</strong>.</li>
+            <li>In the filename box, type <code>index.html</code>.</li>
+            <li>Paste the HTML code below into the editor:</li>
+          </ol>
+
+          <div class="code-block">
+            <span class="code-label">index.html</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span class="text">My Personal Webpage</span><span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span><span class="text">Hello, World!</span><span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text">Welcome to my new personal site hosted on GitHub.</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+          </div>
+
+          <ol start="4">
+            <li>Scroll down, add a commit message, and click <strong>Commit changes</strong>.</li>
+          </ol>
+        </div>
+
+        <div class="option-card">
+          <span class="option-badge">Option B</span>
+          <h3>Upload your existing file</h3>
+          <p>If you already have an <code>index.html</code> file (for example, one you made for an assignment), you can upload it directly.</p>
+          <ol>
+            <li>In your repository, click <strong>Add file</strong> and select <strong>Upload files</strong>.</li>
+            <li>Drag and drop your <code>index.html</code> file, or click to browse.</li>
+            <li>Add a commit message and click <strong>Commit changes</strong>.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="step" id="step4">
+      <span class="step-label">Step 4</span>
+      <h2>Turn On GitHub Pages</h2>
+      <p>Naming the repository correctly often activates GitHub Pages automatically, but it is a good idea to double-check the settings.</p>
+      <ol>
+        <li>Click the <strong>Settings</strong> tab at the top of your repository page.</li>
+        <li>In the left sidebar, click <strong>Pages</strong> (under "Code and automation").</li>
+        <li>Under <strong>Build and deployment</strong>, confirm these settings:</li>
+      </ol>
+      <ul class="settings-list">
+        <li><span class="settings-key">Source</span> <span class="settings-val">Deploy from a branch</span></li>
+        <li><span class="settings-key">Branch</span> <span class="settings-val"><code>main</code> and folder set to <code>/ (root)</code></span></li>
+      </ul>
+      <ol start="4">
+        <li>Click <strong>Save</strong>.</li>
+      </ol>
+    </section>
+
+    <!-- Step 5 -->
+    <section class="step" id="step5">
+      <span class="step-label">Step 5</span>
+      <h2>See Your Live Website</h2>
+      <p>At the top of the <strong>Pages</strong> settings screen, you will see a message that says your site is live, along with a link like:</p>
+      <p style="text-align:center; margin: 20px 0;">
+        <code style="font-size: 1.05em; padding: 8px 16px; background: #e8f5e9; color: #2e7d32; border-radius: 8px;">https://username.github.io/</code>
+      </p>
+      <p>Click that link and you should see your page.</p>
+      <div class="callout warning">
+        <strong>Don't panic:</strong> It can take 1 to 5 minutes for the site to go live the very first time. If you see a 404 error, wait a moment and refresh the page.
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Fade-in on scroll
+    const steps = document.querySelectorAll('.step');
+    const navDots = document.querySelectorAll('.step-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    steps.forEach(step => observer.observe(step));
+
+    // Active dot tracking
+    const dotObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(steps).indexOf(entry.target);
+          navDots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+      });
+    }, { threshold: 0.4 });
+
+    steps.forEach(step => dotObserver.observe(step));
+
+    // Smooth scroll for dot clicks
+    navDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(dot.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
