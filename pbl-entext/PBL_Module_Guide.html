@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBL Module - Student Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAFAF7;
+    --surface: #FFFFFF;
+    --surface-alt: #F5F3EE;
+    --border: #E8E4DD;
+    --border-strong: #D4CFC6;
+    --text: #2C2A25;
+    --text-secondary: #6B6760;
+    --text-tertiary: #9B9690;
+    --accent: #1A5C3A;
+    --accent-light: #E8F5EE;
+    --accent-hover: #14472D;
+    --warning: #B54708;
+    --warning-bg: #FEF6EE;
+    --warning-border: #F9DBAF;
+    --danger: #B42318;
+    --danger-bg: #FEF3F2;
+    --danger-border: #FECDCA;
+    --check-done: #1A5C3A;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+    --radius: 10px;
+    --radius-lg: 14px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HEADER ===== */
+  .hero {
+    background: linear-gradient(135deg, #1A5C3A 0%, #0F3D26 50%, #1A5C3A 100%);
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23ffffff' stroke-width='.4' opacity='.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    position: relative;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.05rem;
+    position: relative;
+  }
+
+  /* ===== NAV TABS ===== */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .tab-btn {
+    padding: 1rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); }
+  .tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 1rem; right: 1rem;
+    height: 2.5px;
+    background: var(--accent);
+    border-radius: 2px 2px 0 0;
+  }
+
+  /* ===== MAIN CONTAINER ===== */
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ===== REFERENCE GUIDE ===== */
+
+  /* Schedule table */
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .schedule-row:last-child { border-bottom: none; }
+  .schedule-row:hover { background: var(--surface-alt); }
+  .schedule-row.header {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .schedule-row > div {
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .schedule-row > div:not(:last-child) {
+    border-right: 1px solid var(--border);
+  }
+  .schedule-row.header > div:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .week-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+  .deadline-highlight {
+    font-weight: 600;
+    color: var(--danger);
+  }
+
+  /* Daily workflow mini */
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    background: var(--accent-light);
+    border-radius: var(--radius-lg);
+    border: 1px solid #C6E7D4;
+  }
+  .flow-chip {
+    padding: 0.35rem 0.75rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .flow-arrow {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .flow-note {
+    width: 100%;
+    font-size: 0.78rem;
+    color: var(--accent-hover);
+    margin-top: 0.3rem;
+    padding-left: 0.2rem;
+  }
+
+  /* Expandable sections */
+  .section-group { margin-bottom: 0.6rem; }
+  .section-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .section-header:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  .section-header.open {
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom-color: transparent;
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .section-num {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+  .section-header.open .section-num {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  .section-title {
+    flex: 1;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .section-chevron {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .section-header.open .section-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  .section-body {
+    display: none;
+    padding: 1.5rem 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    animation: slideDown 0.25s ease;
+  }
+  .section-body.open { display: block; }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-body h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 1.4rem 0 0.5rem;
+  }
+  .section-body h3:first-child { margin-top: 0; }
+  .section-body p {
+    margin-bottom: 0.8rem;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  .section-body ul, .section-body ol {
+    margin: 0.5rem 0 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  .section-body li { margin-bottom: 0.35rem; }
+
+  .callout {
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+  .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .callout.warning {
+    background: var(--warning-bg);
+    border: 1px solid var(--warning-border);
+    color: var(--warning);
+  }
+  .callout.danger {
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border);
+    color: var(--danger);
+  }
+  .callout.info {
+    background: var(--accent-light);
+    border: 1px solid #C6E7D4;
+    color: var(--accent-hover);
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
+  .tool-card {
+    padding: 1rem;
+    background: var(--surface-alt);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  .tool-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--accent);
+  }
+  .tool-card p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+  }
+
+  .leader-duties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin: 0.8rem 0;
+  }
+  .duty-item {
+    padding: 0.7rem 0.9rem;
+    background: var(--accent-light);
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent-hover);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .duty-item .icon { font-size: 1rem; }
+
+  /* ===== CHECKLISTS ===== */
+  .checklist-section {
+    margin-bottom: 2.5rem;
+  }
+  .checklist-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+  .checklist-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+  }
+  .checklist {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.85rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-item:hover { background: var(--surface-alt); }
+  .check-item.checked { background: var(--accent-light); }
+  .check-item.checked .check-label { text-decoration: line-through; color: var(--text-tertiary); }
+  .check-item.checked .check-detail { color: var(--text-tertiary); }
+
+  .checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border-strong);
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    margin-top: 1px;
+  }
+  .check-item.checked .checkbox {
+    background: var(--check-done);
+    border-color: var(--check-done);
+  }
+  .checkbox svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .check-item.checked .checkbox svg { opacity: 1; }
+
+  .check-content { flex: 1; min-width: 0; }
+  .check-label {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .check-detail {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
+    transition: color 0.2s;
+  }
+
+  .progress-bar-wrap {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+  .progress-text {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
+  .checklist-warnings {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .warning-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--danger);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.8rem; }
+    .tab-btn { padding: 0.8rem 1rem; font-size: 0.85rem; }
+    .container { padding: 1.2rem 1rem 3rem; }
+    .schedule-row { grid-template-columns: 70px 1fr 1fr; font-size: 0.85rem; }
+    .schedule-row > div { padding: 0.6rem 0.6rem; }
+    .tools-grid, .leader-duties { grid-template-columns: 1fr; }
+    .flow-steps { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+    .flow-arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>PBL Module</h1>
+  <p>Student Reference Guide & Checklists</p>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="reference">Reference Guide</button>
+  <button class="tab-btn" data-tab="checklists">Checklists</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- REFERENCE GUIDE TAB -->
+<!-- ============================================================ -->
+<div class="container">
+<div id="tab-reference" class="tab-content active">
+
+  <!-- Schedule -->
+  <h2 style="font-family:'Fraunces',serif; font-size:1.3rem; margin-bottom:0.8rem; color:var(--text);">Schedule at a Glance</h2>
+  <div class="schedule-grid">
+    <div class="schedule-row header">
+      <div>Week</div><div>Activity</div><div>Key Deadline</div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 1</span></div>
+      <div>PBL begins. Day 1 team setup; Day 2 full IFLA &amp; problem-solving begins</div>
+      <div>Progress reports each session</div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 2</span></div>
+      <div>Problem-solving continues</div>
+      <div>Progress reports each session</div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 3</span></div>
+      <div>Problem-solving continues</div>
+      <div>Progress reports each session</div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 4</span></div>
+      <div>Submit first draft report</div>
+      <div><span class="deadline-highlight">First draft due: May 28, 3 PM</span></div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 5</span></div>
+      <div>Evaluation period (no in-person class)</div>
+      <div>Evaluate other teams' reports</div>
+    </div>
+    <div class="schedule-row">
+      <div><span class="week-label">Week 6</span></div>
+      <div>Final draft + final exam Q&amp;A</div>
+      <div><span class="deadline-highlight">Final report due: June 11, 3 PM</span></div>
+    </div>
+  </div>
+
+  <!-- Daily Flow -->
+  <h2 style="font-family:'Fraunces',serif; font-size:1.3rem; margin-bottom:0.8rem; color:var(--text);">Daily Workflow</h2>
+  <div class="flow-steps">
+    <span class="flow-chip">1. Attendance</span>
+    <span class="flow-arrow">&#8594;</span>
+    <span class="flow-chip">2. IFLA Chart</span>
+    <span class="flow-arrow">&#8594;</span>
+    <span class="flow-chip">3. Consultation</span>
+    <span class="flow-arrow">&#8594;</span>
+    <span class="flow-chip">4. Problem-Solving</span>
+    <span class="flow-arrow">&#8594;</span>
+    <span class="flow-chip">5. Progress Report</span>
+    <span class="flow-arrow">&#8594;</span>
+    <span class="flow-chip">6. Peer Eval*</span>
+    <div class="flow-note">* Self & peer evaluation is completed on the second day (Thursday) of each week only.</div>
+  </div>
+
+  <!-- Expandable Sections -->
+  <h2 style="font-family:'Fraunces',serif; font-size:1.3rem; margin-bottom:0.8rem; color:var(--text);">Detailed Guide</h2>
+
+  <!-- 1. Module Overview -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">1</span>
+      <span class="section-title">Module Overview</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <p>The PBL (Problem-Based Learning) module runs for <strong>six weeks</strong>.</p>
+      <h3>Weekly Plan</h3>
+      <ul>
+        <li><strong>Weeks 1 to 3:</strong> Team problem-solving.</li>
+        <li><strong>Week 4:</strong> Submit the first draft.</li>
+        <li><strong>Week 5:</strong> Read and review other teams' reports. No in-person class.</li>
+        <li><strong>Week 6:</strong> Write the final draft. Final exam Q&amp;A.</li>
+      </ul>
+      <h3>About the First Draft</h3>
+      <p>The first draft is almost the final version. The instructor reads it, gives feedback, and shares it with all students for peer review.</p>
+      <h3>About the Week 5 Review</h3>
+      <p>The Week 5 review counts as attendance. If you miss it, you are absent and get 0 for that part.</p>
+      <h3>Report Deadlines</h3>
+      <div class="callout danger">
+        <span class="callout-icon">&#9200;</span>
+        <span><strong>First draft:</strong> May 28, 3:00 PM. &nbsp;|&nbsp; <strong>Final report:</strong> June 11, 3:00 PM.</span>
+      </div>
+      <h3>Your Final Report</h3>
+      <p>You will make an <strong>interactive web page</strong> and upload it to GitHub. Submit the GitHub link. The instructor will show you how later.</p>
+    </div>
+  </div>
+
+  <!-- 2. Attendance Rules -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">2</span>
+      <span class="section-title">Attendance Rules</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <h3>Check In Every Session</h3>
+      <p>Come to the classroom and check in at the start of every class. If you do not check in, you are absent for that day. Work done somewhere else does not count.</p>
+      <h3>You Choose Your End Time</h3>
+      <p>After you check in, your team decides when to finish. You do not need to stay the whole class time. If your work is going well, you can finish early.</p>
+      <p>Before you leave, post the progress report on Slack and tell the instructor.</p>
+      <h3>Penalty Is Doubled</h3>
+      <div class="callout danger">
+        <span class="callout-icon">&#9888;</span>
+        <span>Missing class hurts your team. During the PBL module, the points you lose for absence are <strong>doubled</strong>.</span>
+      </div>
+      <h3>You Can Work in Other Places</h3>
+      <p>After you check in, your team can move to another room or any other place (for example, a cafe). Tell the instructor where you go, or set up a Zoom meeting. You still need to meet with the instructor that day.</p>
+    </div>
+  </div>
+
+  <!-- 3. IFLA Chart -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">3</span>
+      <span class="section-title">IFLA Chart</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <h3>What Is the IFLA Chart?</h3>
+      <p>A structured brainstorming and planning framework with four sections:</p>
+      <ol>
+        <li><strong>Ideas:</strong> Brainstorm everything related to the problem. All ideas welcome.</li>
+        <li><strong>Facts:</strong> Things from the brainstorm that you already know and do not need to research further.</li>
+        <li><strong>Learning Issues:</strong> Things you identified that you do not know and need to study or research.</li>
+        <li><strong>Action:</strong> The concrete plan for how you will address the learning issues and move forward.</li>
+      </ol>
+      <h3>When and How to Submit</h3>
+      <ul>
+        <li><strong>Week 1 Day 2 (first IFLA session):</strong> Complete all four sections (I, F, L, A).</li>
+        <li><strong>From the next session onward:</strong> Only the Action plan section is required.</li>
+        <li>Write your chart on <strong>Padlet</strong> and submit the link. The instructor will review it and give feedback.</li>
+      </ul>
+      <div class="callout warning">
+        <span class="callout-icon">&#9888;</span>
+        <span><strong>Important:</strong> Do not begin other activities until the IFLA chart is complete. Finish it first, then start your work.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Progress Report -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">4</span>
+      <span class="section-title">Progress Report</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <h3>Purpose</h3>
+      <p>Submitted every session. The instructor uses it to track progress, confirm individual contributions, and provide feedback. Incorporate that feedback into your continued work.</p>
+      <h3>Components</h3>
+      <p><strong>Team Summary (one per team):</strong> A brief, free-format summary of what the team planned, accomplished, and intends to do next. If you want specific feedback on something, emphasize it here.</p>
+      <p><strong>Individual Materials (one per person):</strong> Each member submits their own work. No required format. Post a summary, upload raw materials, attach files, or anything that shows what you have been working on.</p>
+      <h3>Format Expectations</h3>
+      <p>Do not spend time polishing the report's appearance. The priority is <strong>clarity</strong>: the instructor needs to see what progress was made and what each person contributed.</p>
+      <div class="callout danger">
+        <span class="callout-icon">&#9888;</span>
+        <span>Failing to post your progress report on Slack will be treated as if you did not do the work for that day.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Slack Setup -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">5</span>
+      <span class="section-title">Slack Setup</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <p>All progress reports are submitted through Slack. Here is what you need to do:</p>
+      <ol>
+        <li>Create a Slack account (if you do not already have one).</li>
+        <li>The team leader creates a workspace named with your <strong>team name</strong>.</li>
+        <li>Create a channel called <strong>"Progress Report."</strong></li>
+        <li>Invite all team members to the workspace.</li>
+        <li>Invite the instructor using: <strong>j-lee@korea.ac.kr</strong></li>
+      </ol>
+      <p>You may also use Slack as a general collaboration tool. How you use it beyond the Progress Report channel is up to you.</p>
+      <div class="callout info">
+        <span class="callout-icon">&#128161;</span>
+        <span>Slack is a collaboration tool used by many companies. Getting experience with it now is part of the learning goals of this course.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Self & Peer Evaluation -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">6</span>
+      <span class="section-title">Self & Peer Evaluation</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <p>At the end of each week (after the <strong>Thursday</strong> session), every team member must complete a self and peer evaluation. Results are partially reflected in your PBL module activity score.</p>
+      <p>Your team's ground rules (set on Day 1) serve as the evaluation criteria.</p>
+      <div class="callout danger">
+        <span class="callout-icon">&#128680;</span>
+        <span><strong>If you do not complete the evaluation by the deadline, your peer evaluation score is automatically 0.</strong> Complete it right after Thursday's class. Do not forget.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Day 1 Special Tasks -->
+  <div class="section-group">
+    <button class="section-header" onclick="toggleSection(this)">
+      <span class="section-num">7</span>
+      <span class="section-title">Day 1 Special Tasks</span>
+      <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </button>
+    <div class="section-body">
+      <p>The first session includes several one-time setup tasks in addition to the regular workflow.</p>
+      <h3>Self-Introductions</h3>
+      <p>Get to know your teammates. No specific prompts. Just do it naturally.</p>
+      <h3>Choose a Team Leader</h3>
+      <p>The team leader has four assigned responsibilities:</p>
+      <div class="leader-duties">
+        <div class="duty-item"><span class="icon">&#128483;</span> Run meetings smoothly</div>
+        <div class="duty-item"><span class="icon">&#128222;</span> Collect contact info</div>
+        <div class="duty-item"><span class="icon">&#128203;</span> Confirm summary submitted</div>
+        <div class="duty-item"><span class="icon">&#128337;</span> Decide daily end time</div>
+      </div>
+      <p>Additional responsibilities can be assigned by the team. The team leader receives <strong>bonus points</strong> in the instructor's PBL activity evaluation.</p>
+      <h3>Set a Team Name</h3>
+      <p>Choose a creative name. This will also be used for your Slack workspace.</p>
+      <h3>Establish Ground Rules (3-5)</h3>
+      <p>Create ground rules within your team. These will later be used as evaluation criteria for self and peer evaluations. Post them on Slack.</p>
+      <h3>Set Up Slack</h3>
+      <p>Complete the full setup as described in Section 5. The team leader takes the lead.</p>
+    </div>
+  </div>
+
+  <!-- Tools Quick Reference -->
+  <h2 style="font-family:'Fraunces',serif; font-size:1.3rem; margin:2rem 0 0.8rem; color:var(--text);">Tools Quick Reference</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <h4>Padlet</h4>
+      <p>Submit IFLA charts. Write your chart and post the link.</p>
+    </div>
+    <div class="tool-card">
+      <h4>Slack</h4>
+      <p>Progress reports & team collaboration. Create workspace with team name.</p>
+    </div>
+    <div class="tool-card">
+      <h4>GitHub</h4>
+      <p>Final report submission. Upload interactive web page and submit link.</p>
+    </div>
+    <div class="tool-card">
+      <h4>LMS</h4>
+      <p>PBL problem, team assignments, and detailed instructions.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- CHECKLISTS TAB -->
+<!-- ============================================================ -->
+<div id="tab-checklists" class="tab-content">
+  <!-- Day 1 Setup -->
+  <div class="checklist-section">
+    <div class="checklist-title">Day 1 Setup</div>
+    <div class="checklist-subtitle">One-time tasks for the first session. No IFLA chart on Day 1; the full IFLA is done on Week 1 Day 2.</div>
+    <div class="progress-bar-wrap" id="progress-setup">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <span class="progress-text">0 / 11</span>
+    </div>
+    <div class="checklist" id="checklist-setup">
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Self-introductions</div>
+          <div class="check-detail">Get to know your team members. No prompts; just do it naturally.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Choose a team leader</div>
+          <div class="check-detail">Runs meetings, collects contact info, confirms team summary submitted, decides daily end time.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Set team name</div>
+          <div class="check-detail">Be creative. This will also be your Slack workspace name.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Create ground rules (3 to 5) and post on Slack</div>
+          <div class="check-detail">These become your self & peer evaluation criteria.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Create Slack account</div>
+          <div class="check-detail">All team members sign up.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Create Slack workspace</div>
+          <div class="check-detail">Team leader creates it, named after your team.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Create "Progress Report" channel</div>
+          <div class="check-detail">On your Slack workspace.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Invite all team members to Slack</div>
+          <div class="check-detail">Everyone should be in the workspace.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Invite instructor to Slack</div>
+          <div class="check-detail">Email: j-lee@korea.ac.kr</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Briefly discuss the problem with the team</div>
+          <div class="check-detail">Quick first look at the PBL problem. Full problem-solving begins on Day 2.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'setup')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Brief check-in with instructor before leaving</div>
+          <div class="check-detail">Talk briefly about what your team did today.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Daily Session Routine -->
+  <div class="checklist-section">
+    <div class="checklist-title">Daily Session Routine</div>
+    <div class="checklist-subtitle">Follow this every session during Weeks 1-3. Reset and repeat each day.</div>
+    <div class="progress-bar-wrap" id="progress-daily">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <span class="progress-text">0 / 7</span>
+    </div>
+    <div class="checklist" id="checklist-daily">
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Attendance check-in</div>
+          <div class="check-detail">Must check in at the classroom. No exceptions.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">IFLA chart on Padlet</div>
+          <div class="check-detail">Week 1 Day 2: full IFLA (Ideas, Facts, Learning Issues, Action). After that: Action plan only.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Start your work before the instructor meeting</div>
+          <div class="check-detail">Begin your team activities. The instructor will come to you.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Meet with the instructor</div>
+          <div class="check-detail">At least one meeting per class (in person or by Zoom).</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Problem-solving with team</div>
+          <div class="check-detail">Collaborate until goals for the day are met. Team leader decides end time.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Submit progress report on Slack</div>
+          <div class="check-detail"><b>Team summary + individual materials.</b> Notify instructor before leaving.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this, 'daily')">
+        <div class="checkbox"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></div>
+        <div class="check-content">
+          <div class="check-label">Self & peer evaluation (Thursday only)</div>
+          <div class="check-detail">Complete right after Thursday class. Missing it = score of 0.</div>
+        </div>
+      </div>
+    </div>
+    <button onclick="resetChecklist('daily')" style="margin-top:0.8rem; padding:0.5rem 1.2rem; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:600; color:var(--text-secondary); cursor:pointer; transition:all 0.2s;">
+      &#8634; Reset daily checklist
+    </button>
+  </div>
+
+  <!-- Warnings -->
+  <div class="checklist-warnings">
+    <div class="warning-pill">&#9888; Missing self & peer evaluation = automatic score of 0</div>
+    <div class="warning-pill">&#9888; Absence during PBL = doubled point deduction</div>
+    <div class="warning-pill">&#9888; No progress report = counts as no work done that day</div>
+    <div class="warning-pill">&#9888; Must check in at classroom before relocating</div>
+    <div></div>
+  </div>
+ 
+  </div>
+</div>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Expandable sections
+  function toggleSection(header) {
+    const body = header.nextElementSibling;
+    const isOpen = header.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.section-header.open').forEach(h => {
+      h.classList.remove('open');
+      h.nextElementSibling.classList.remove('open');
+    });
+    // Toggle current
+    if (!isOpen) {
+      header.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+
+  // Checklist toggle
+  function toggleCheck(item, group) {
+    item.classList.toggle('checked');
+    updateProgress(group);
+  }
+
+  function updateProgress(group) {
+    const list = document.getElementById('checklist-' + group);
+    const total = list.querySelectorAll('.check-item').length;
+    const done = list.querySelectorAll('.check-item.checked').length;
+    const wrap = document.getElementById('progress-' + group);
+    wrap.querySelector('.progress-fill').style.width = (done / total * 100) + '%';
+    wrap.querySelector('.progress-text').textContent = done + ' / ' + total;
+  }
+
+  function resetChecklist(group) {
+    const list = document.getElementById('checklist-' + group);
+    list.querySelectorAll('.check-item.checked').forEach(item => item.classList.remove('checked'));
+    updateProgress(group);
+  }
+</script>
+</body>
+</html>
+script>
+</body>
+</html>
