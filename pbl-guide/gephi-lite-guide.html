@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Gephi Lite for Drama Network Analysis</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #20242a;
+      --muted: #626a73;
+      --line: #d9dee5;
+      --teal: #087f7a;
+      --coral: #c94f38;
+      --gold: #b7791f;
+      --green: #3f7d20;
+      --violet: #6650a4;
+      --soft-teal: #e7f5f3;
+      --soft-coral: #fff0eb;
+      --soft-gold: #fff6de;
+      --soft-violet: #f1eefb;
+      --shadow: 0 18px 45px rgba(28, 35, 45, 0.08);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 24px 18px;
+      background: #ffffff;
+      border-right: 1px solid var(--line);
+      overflow: auto;
+    }
+
+    .brand {
+      margin: 0 0 18px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .nav-label {
+      margin: 22px 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: grid;
+      gap: 4px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: #303740;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a:hover {
+      background: var(--soft-teal);
+      text-decoration: none;
+    }
+
+    .resource-links {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .resource-links a {
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fbfcfe;
+      font-size: 14px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 28px;
+      align-items: stretch;
+      padding: 36px clamp(18px, 4vw, 56px) 28px;
+      background: #eef3f6;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--coral);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      max-width: 760px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 0 22px;
+      color: #3f474f;
+      font-size: 18px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #0b6f6b;
+      background: var(--teal);
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: #ffffff;
+      color: #2c333a;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      filter: brightness(0.96);
+    }
+
+    .network-panel {
+      position: relative;
+      min-height: 320px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .network-panel header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    #networkPreview {
+      width: 100%;
+      height: 260px;
+      display: block;
+    }
+
+    .content {
+      padding: 30px clamp(18px, 4vw, 56px) 56px;
+    }
+
+    section {
+      margin: 0 0 36px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .section-lede {
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(9, minmax(112px, 1fr));
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+
+    .step {
+      min-height: 98px;
+      padding: 12px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .step-number {
+      display: block;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .step-title {
+      display: block;
+      margin-top: 4px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .step-note {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .notice {
+      padding: 14px 16px;
+      border-left: 5px solid var(--gold);
+      background: var(--soft-gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .card.accent-teal {
+      border-top: 5px solid var(--teal);
+    }
+
+    .card.accent-coral {
+      border-top: 5px solid var(--coral);
+    }
+
+    .card.accent-green {
+      border-top: 5px solid var(--green);
+    }
+
+    .card.accent-violet {
+      border-top: 5px solid var(--violet);
+    }
+
+    .card.accent-gold {
+      border-top: 5px solid var(--gold);
+    }
+
+    .mini-list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .mini-list li {
+      margin: 5px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 0 6px 6px 0;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: #f2f4f7;
+      color: #434b54;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .setting-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: table;
+    }
+
+    .setting-table th,
+    .setting-table td {
+      padding: 12px 13px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .setting-table th {
+      background: #f0f3f7;
+      color: #343b44;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .setting-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .compact {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .recipe {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .recipe-panel {
+      padding: 18px;
+      border-radius: var(--radius);
+      background: #102629;
+      color: #ffffff;
+    }
+
+    .recipe-panel h3,
+    .recipe-panel p {
+      color: #ffffff;
+    }
+
+    .recipe-list {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .recipe-list li {
+      margin: 7px 0;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    details + details {
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 13px 15px;
+      font-weight: 850;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--teal);
+      font-weight: 900;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    .details-body {
+      padding: 0 15px 15px;
+      color: #3b434b;
+    }
+
+    .metric-card {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .metric-card header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .metric-card h3 {
+      margin: 0;
+    }
+
+    .output {
+      color: var(--teal);
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .metric-parts {
+      display: grid;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .part-label {
+      display: block;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    code,
+    pre {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    }
+
+    pre {
+      overflow: auto;
+      margin: 0;
+      padding: 13px;
+      border-radius: var(--radius);
+      background: #182024;
+      color: #f2f7f7;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .intro,
+      .recipe,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .intro {
+        padding-top: 24px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .nav {
+        grid-template-columns: 1fr;
+      }
+
+      .setting-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <p class="brand">Gephi Lite Student Guide</p>
+      <p class="nav-label">Page sections</p>
+      <nav class="nav" aria-label="Guide sections">
+        <a href="#workflow">Workflow</a>
+        <a href="#data">Load Data</a>
+        <a href="#interface">Interface</a>
+        <a href="#appearance">Appearance</a>
+        <a href="#layout">Layout</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#filters">Filters</a>
+        <a href="#raw-data">Raw Data</a>
+      </nav>
+      <p class="nav-label">Open tools</p>
+      <div class="resource-links">
+        <a href="https://lite.gephi.org/" target="_blank" rel="noreferrer">Gephi Lite</a>
+        <a href="https://dracor.org/" target="_blank" rel="noreferrer">DraCor</a>
+        <a href="https://gephi.org/quickstart/" target="_blank" rel="noreferrer">Gephi Quickstart</a>
+      </div>
+    </aside>
+
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">Drama network analysis</p>
+          <h1>Using Gephi Lite to Read Character Networks</h1>
+          <p class="intro-text">
+            This guide teaches the practical order of work: bring in a network, calculate useful metrics,
+            arrange the graph, simplify it carefully, and explain what the visualization suggests.
+          </p>
+          <div class="button-row">
+            <a class="button" href="https://lite.gephi.org/" target="_blank" rel="noreferrer">Open Gephi Lite</a>
+            <a class="button secondary" href="https://dracor.org/" target="_blank" rel="noreferrer">Find DraCor Data</a>
+          </div>
+        </div>
+        <div class="network-panel" aria-label="Example network visualization">
+          <header>
+            <span>Example network</span>
+            <span>nodes, edges, communities</span>
+          </header>
+          <canvas id="networkPreview" width="620" height="360"></canvas>
+        </div>
+      </div>
+
+      <div class="content">
+        <section id="workflow">
+          <h2>Recommended Working Order</h2>
+          <p class="section-lede">
+            Follow this order when you are working independently. You can loop back when the graph changes.
+          </p>
+          <div class="workflow" aria-label="Recommended workflow">
+            <div class="step"><span class="step-number">01</span><span class="step-title">Load data</span><span class="step-note">DraCor or a saved file</span></div>
+            <div class="step"><span class="step-number">02</span><span class="step-title">Inspect</span><span class="step-note">Check nodes and edges</span></div>
+            <div class="step"><span class="step-number">03</span><span class="step-title">Compute metrics</span><span class="step-note">Degree, Louvain, betweenness</span></div>
+            <div class="step"><span class="step-number">04</span><span class="step-title">Style graph</span><span class="step-note">Size, color, labels</span></div>
+            <div class="step"><span class="step-number">05</span><span class="step-title">Run layout</span><span class="step-note">Use ForceAtlas2</span></div>
+            <div class="step"><span class="step-number">06</span><span class="step-title">Filter</span><span class="step-note">Hide minor nodes or weak edges</span></div>
+            <div class="step"><span class="step-number">07</span><span class="step-title">Recompute</span><span class="step-note">If the visible graph changed</span></div>
+            <div class="step"><span class="step-number">08</span><span class="step-title">Export or save</span><span class="step-note">PNG, GEXF, or JSON</span></div>
+            <div class="step"><span class="step-number">09</span><span class="step-title">Interpret</span><span class="step-note">Explain the pattern</span></div>
+          </div>
+          <div class="notice" style="margin-top: 14px;">
+            If you filter or delete nodes before analysis, compute the metrics again. Gephi Lite computes metrics
+            on the graph you are currently working with, so the results can change after filtering.
+          </div>
+        </section>
+
+        <section id="data">
+          <h2>Load Data</h2>
+          <div class="grid-2">
+            <article class="card accent-teal">
+              <h3>Path A: From DraCor</h3>
+              <ol class="mini-list">
+                <li>Go to <a href="https://dracor.org/" target="_blank" rel="noreferrer">DraCor</a>.</li>
+                <li>Choose a corpus.</li>
+                <li>Open a play or work page.</li>
+                <li>Open the <strong>Tools</strong> area.</li>
+                <li>Click <strong>Gephi Lite</strong>.</li>
+              </ol>
+            </article>
+            <article class="card accent-coral">
+              <h3>Path B: Open a Saved File</h3>
+              <p>Use this when you continue earlier work.</p>
+              <span class="tag">.json workspace</span>
+              <span class="tag">.gexf graph</span>
+              <span class="tag">.graphml graph</span>
+              <p class="compact">
+                A Gephi Lite JSON workspace is best for continuing a project because it keeps more of the working state.
+                GEXF is useful for exchanging graph data with desktop Gephi.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="interface">
+          <h2>Quick Interface Tour</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Graph View</h3>
+              <p>Move around the visualization, select nodes, inspect connections, and remove nodes only when you are sure they should not remain in the dataset.</p>
+            </article>
+            <article class="card">
+              <h3>Data View</h3>
+              <p>Check the node and edge tables. Metrics appear here as new columns after you compute them.</p>
+            </article>
+            <article class="card">
+              <h3>Side Panels</h3>
+              <p>Use Appearance, Metrics, Layout, and Filters to transform the graph from raw data into an interpretable visualization.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="appearance">
+          <h2>Appearance</h2>
+          <p class="section-lede">
+            Appearance does not calculate new information. It uses existing attributes or computed metrics to make patterns visible.
+          </p>
+          <table class="setting-table">
+            <thead>
+              <tr>
+                <th>Visual choice</th>
+                <th>Good first choice</th>
+                <th>Why it helps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Node size</td>
+                <td><code>degree</code></td>
+                <td>Larger nodes show characters with more connections.</td>
+              </tr>
+              <tr>
+                <td>Node color</td>
+                <td><code>modularityClass</code></td>
+                <td>Colors show communities found by Louvain community detection.</td>
+              </tr>
+              <tr>
+                <td>Labels</td>
+                <td>Show fewer labels first</td>
+                <td>Too many labels can make the graph harder to read.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="layout">
+          <h2>Layout: ForceAtlas2</h2>
+          <p class="section-lede">
+            Layout changes where nodes appear on the screen. It does not change the underlying data.
+            In Gephi Lite, the main layout to teach first is <strong>ForceAtlas2</strong>.
+          </p>
+
+          <div class="recipe">
+            <div class="recipe-panel">
+              <h3>Use This Setup First</h3>
+              <p>For most DraCor character networks, start here before experimenting.</p>
+              <ol class="recipe-list">
+                <li>Compute <strong>Degree</strong> and <strong>Louvain</strong> first.</li>
+                <li>Set node size by <code>degree</code>.</li>
+                <li>Open <strong>Layout</strong> and choose <strong>ForceAtlas2</strong>.</li>
+                <li>Turn on <strong>Adjust sizes?</strong>.</li>
+                <li>Set <strong>Scaling ratio</strong> to <code>30</code>.</li>
+                <li>Keep <strong>Gravity</strong> at <code>1</code>.</li>
+                <li>Keep <strong>Edge weight influence</strong> at <code>1</code> if edge weight means co-occurrence strength. Use <code>0</code> if you are unsure.</li>
+                <li>Run the layout, then stop it when the graph stabilizes.</li>
+              </ol>
+            </div>
+            <div>
+              <table class="setting-table">
+                <thead>
+                  <tr>
+                    <th>Real Gephi Lite setting</th>
+                    <th>Student-friendly recommendation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Adjust sizes?</td><td>Turn on after node size is set.</td></tr>
+                  <tr><td>barnesHutOptimize</td><td>Leave off for small graphs. Turn on if the network is large or slow.</td></tr>
+                  <tr><td>barnesHutTheta</td><td>Leave at <code>0.5</code>. Only adjust when Barnes-Hut is on.</td></tr>
+                  <tr><td>Edge weight influence</td><td>Use <code>1</code> for weighted co-occurrence. Use <code>0</code> to ignore weights.</td></tr>
+                  <tr><td>Gravity</td><td>Start at <code>1</code>.</td></tr>
+                  <tr><td>linLog mode</td><td>Leave off first. Turn on when you want clearer community separation.</td></tr>
+                  <tr><td>Out bound attraction distribution</td><td>Usually leave off for drama co-occurrence networks.</td></tr>
+                  <tr><td>Scaling ratio</td><td>Start around <code>30</code>. Increase if the graph is crowded.</td></tr>
+                  <tr><td>Slow down?</td><td>Start at <code>1</code>. Increase if nodes move too violently.</td></tr>
+                  <tr><td>Strong gravity mode?</td><td>Leave off. Use only when disconnected parts drift too far away.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 24px;">If the graph looks wrong, change this</h3>
+          <table class="setting-table">
+            <thead>
+              <tr>
+                <th>Problem you see</th>
+                <th>Try this setting</th>
+                <th>Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The graph is too crowded.</td>
+                <td>Increase <strong>Scaling ratio</strong> to <code>50</code> or higher.</td>
+                <td>It spreads nodes farther apart.</td>
+              </tr>
+              <tr>
+                <td>Large nodes overlap.</td>
+                <td>Turn on <strong>Adjust sizes?</strong>.</td>
+                <td>The layout considers node size while positioning nodes.</td>
+              </tr>
+              <tr>
+                <td>Communities are hard to see.</td>
+                <td>Turn on <strong>linLog mode</strong>.</td>
+                <td>It often separates clusters more clearly.</td>
+              </tr>
+              <tr>
+                <td>Disconnected groups fly far away.</td>
+                <td>Increase <strong>Gravity</strong>, or carefully try <strong>Strong gravity mode?</strong>.</td>
+                <td>Gravity pulls the graph toward the center.</td>
+              </tr>
+              <tr>
+                <td>The layout is slow.</td>
+                <td>Turn on <strong>barnesHutOptimize</strong>.</td>
+                <td>It uses an approximation that is faster on larger graphs.</td>
+              </tr>
+              <tr>
+                <td>The graph shakes too much.</td>
+                <td>Increase <strong>Slow down?</strong> to <code>2</code> or <code>3</code>.</td>
+                <td>It dampens movement while the layout runs.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 style="margin-top: 24px;">Open the setting explanations</h3>
+          <details>
+            <summary>Adjust sizes?</summary>
+            <div class="details-body">
+              Uses node size during layout. Turn it on after you have sized nodes by a metric such as degree,
+              otherwise large nodes may overlap.
+            </div>
+          </details>
+          <details>
+            <summary>barnesHutOptimize and barnesHutTheta</summary>
+            <div class="details-body">
+              Barnes-Hut makes repulsion faster on larger graphs. <code>barnesHutTheta</code> controls the approximation.
+              The default <code>0.5</code> is a good balance; higher values can be faster but less precise.
+            </div>
+          </details>
+          <details>
+            <summary>Edge weight influence</summary>
+            <div class="details-body">
+              Controls how strongly edge weights affect attraction. Use <code>1</code> when weight means strength or frequency.
+              Use <code>0</code> when you want every edge to count equally.
+            </div>
+          </details>
+          <details>
+            <summary>Gravity and Strong gravity mode?</summary>
+            <div class="details-body">
+              Gravity pulls nodes toward the center. Increase it if components drift away. Strong gravity is more forceful,
+              so use it carefully because it can compress the graph.
+            </div>
+          </details>
+          <details>
+            <summary>linLog mode</summary>
+            <div class="details-body">
+              LinLog mode changes the force model so communities often become more visually separated. It is useful
+              after a first layout pass when your goal is to compare clusters.
+            </div>
+          </details>
+          <details>
+            <summary>Scaling ratio and Slow down?</summary>
+            <div class="details-body">
+              Scaling ratio is the main spacing control. Increase it to spread a crowded graph. Slow down reduces
+              movement speed and can help when the layout is unstable.
+            </div>
+          </details>
+        </section>
+
+        <section id="metrics">
+          <h2>Metrics</h2>
+          <p class="section-lede">
+            Metrics add new columns to the node or edge data. After computing a metric, use its output in Appearance
+            or Filters. Start with <strong>Degree</strong>, <strong>Louvain community detection</strong>, and
+            <strong>Betweenness centrality</strong>.
+          </p>
+
+          <div class="notice" style="margin-bottom: 16px;">
+            Recommended student sequence: compute <strong>Degree</strong>, compute <strong>Louvain community detection</strong>,
+            compute <strong>Betweenness centrality</strong>, then style the graph with size by <code>degree</code> and
+            color by <code>modularityClass</code>.
+          </div>
+
+          <h3>Node Metrics</h3>
+          <div class="grid-2">
+            <article class="metric-card">
+              <header>
+                <h3>Degree</h3>
+                <span class="output">output: degree</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>The number of connections a node has. In a character network, a high-degree character is connected to many other characters.</p>
+                <p><span class="part-label">Settings</span><strong>Type of degree</strong>: use <strong>Degree</strong> for ordinary undirected co-occurrence networks. Use incoming or outgoing degree only for directed networks. <strong>Edge weight attribute</strong>: choose a numeric weight if you want weighted degree.</p>
+                <p><span class="part-label">How to use it</span>Use <code>degree</code> for node size or to filter minor nodes.</p>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <header>
+                <h3>Louvain Community Detection</h3>
+                <span class="output">output: modularityClass</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Finds groups of nodes that are more densely connected to each other than to the rest of the graph.</p>
+                <p><span class="part-label">Settings</span><strong>Fast local moves</strong>: keep on. <strong>Random walk</strong>: keep on for exploration. <strong>Resolution</strong>: default is <code>1</code>; increase for more, smaller communities; decrease for fewer, larger communities. <strong>Edge weight attribute</strong>: choose weight if edge strength should matter.</p>
+                <p><span class="part-label">How to use it</span>Use <code>modularityClass</code> for node color. Treat communities as a clue for interpretation, not as automatic proof of social groups.</p>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <header>
+                <h3>Betweenness Centrality</h3>
+                <span class="output">output: betweennessCentrality</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Shows which nodes often sit on paths between other nodes. In a character network, a high value can point to a bridge character connecting groups.</p>
+                <p><span class="part-label">Settings</span><strong>Normalize output?</strong>: keep on for easier comparison. <strong>Edge weight attribute</strong>: for a first analysis, leave blank unless you know how your weights should affect path calculation.</p>
+                <p><span class="part-label">How to use it</span>Use it to discuss characters who connect otherwise separate parts of the network.</p>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <header>
+                <h3>PageRank</h3>
+                <span class="output">output: pagerank</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Scores nodes by considering not only how many connections they have, but also how important their neighbors are.</p>
+                <p><span class="part-label">Settings</span><strong>Alpha</strong>: keep <code>0.85</code>. <strong>Max iterations</strong>: keep <code>100</code>. <strong>Tolerance</strong>: keep <code>1e-6</code>. Use edge weight only when weights should affect importance.</p>
+                <p><span class="part-label">How to use it</span>Use it as an optional comparison with degree. It is especially useful for directed link or influence networks.</p>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <header>
+                <h3>HITS</h3>
+                <span class="output">outputs: hubs, authorities</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Separates nodes into hubs and authorities. A hub points to many important nodes; an authority is pointed to by important hubs.</p>
+                <p><span class="part-label">Settings</span><strong>Normalize output?</strong>: keep on. <strong>Max iterations</strong>: keep <code>100</code>. <strong>Tolerance</strong>: keep the default. Use edge weight only if the directed relation has meaningful weights.</p>
+                <p><span class="part-label">How to use it</span>Use mainly for directed networks. It is usually not the first metric for simple drama co-occurrence networks.</p>
+              </div>
+            </article>
+          </div>
+
+          <h3 style="margin-top: 24px;">Edge Metrics</h3>
+          <div class="grid-2">
+            <article class="metric-card">
+              <header>
+                <h3>Disparity</h3>
+                <span class="output">output: disparity</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Highlights edges that are unusually important relative to the weighted connections around a node.</p>
+                <p><span class="part-label">Settings</span>Choose an <strong>Edge weight attribute</strong>. This metric is most useful when the graph has meaningful numeric edge weights.</p>
+                <p><span class="part-label">How to use it</span>Use it to filter or inspect unusually strong relationships.</p>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <header>
+                <h3>Simmelian Strength</h3>
+                <span class="output">output: simmelianStrength</span>
+              </header>
+              <div class="metric-parts">
+                <p><span class="part-label">What it means</span>Measures how strongly an edge is embedded in triangles. If two characters share many mutual connections, their edge can have higher Simmelian strength.</p>
+                <p><span class="part-label">Settings</span>No settings in Gephi Lite.</p>
+                <p><span class="part-label">How to use it</span>Use it to identify relationships inside tightly connected groups.</p>
+              </div>
+            </article>
+          </div>
+
+          <h3 style="margin-top: 24px;">Mixed Metric</h3>
+          <article class="metric-card">
+            <header>
+              <h3>Louvain Edges Ambiguity</h3>
+              <span class="output">outputs: coMembershipScore, bridgeNessEdgeScore, ambiguityScore, sourceCommunityId, meanAmbiguityScore</span>
+            </header>
+            <div class="metric-parts">
+              <p><span class="part-label">What it means</span>Runs Louvain many times and checks whether edges consistently stay inside the same community. It helps you see where community boundaries are unstable.</p>
+              <p><span class="part-label">Settings</span><strong>Louvain runs</strong>: default is <code>50</code>. More runs can be more stable but slower. <strong>Resolution</strong>: same idea as Louvain; higher gives more communities. <strong>Edge weight attribute</strong>: select weight only if weighted communities are meaningful.</p>
+              <p><span class="part-label">How to use it</span>Use after you already understand degree, Louvain, and betweenness. It is useful when you want to question whether the detected communities are stable.</p>
+            </div>
+          </article>
+        </section>
+
+        <section id="filters">
+          <h2>Filters and Node Removal</h2>
+          <p class="section-lede">
+            Filtering hides parts of the graph while you explore. Deleting changes the dataset. Start with filters,
+            then delete only when you are sure a node should not be part of the final analysis.
+          </p>
+          <div class="grid-3">
+            <article class="card accent-teal">
+              <h3>Degree Filter</h3>
+              <p>Hide nodes with very few connections, for example nodes with degree lower than <code>2</code>.</p>
+            </article>
+            <article class="card accent-gold">
+              <h3>Edge Weight Filter</h3>
+              <p>Hide weak relationships when the edge weight represents frequency or strength.</p>
+            </article>
+            <article class="card accent-violet">
+              <h3>Attribute Filter</h3>
+              <p>Focus on a category such as role, group, act, gender, or any attribute available in the data.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="export">
+          <h2>Export, Save, and Interpret</h2>
+          <table class="setting-table">
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Use it when</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Export PNG</td>
+                <td>You need an image for a report or presentation.</td>
+              </tr>
+              <tr>
+                <td>Export GEXF</td>
+                <td>You want to keep or exchange the graph data.</td>
+              </tr>
+              <tr>
+                <td>Save JSON workspace</td>
+                <td>You want to continue the same Gephi Lite project later.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="raw-data">
+          <h2>Optional: If You Need Raw Data</h2>
+          <p class="section-lede">
+            If DraCor does not provide the exact network you need, you can start from an edge list. Gephi Lite opens
+            graph files such as GEXF or GraphML, so a spreadsheet usually needs to be converted first.
+          </p>
+          <div class="grid-2">
+            <div>
+              <pre><code>source,target,weight
+Hamlet,Ophelia,5
+Hamlet,Claudius,8
+Ophelia,Polonius,3</code></pre>
+            </div>
+            <article class="card accent-green">
+              <h3>How to read this table</h3>
+              <p><code>source</code> and <code>target</code> are the two connected nodes. <code>weight</code> is the strength or frequency of the relationship.</p>
+              <p>Convert the table to a graph format with a tool such as <a href="https://medialab.github.io/table2net/" target="_blank" rel="noreferrer">Table2Net</a> or desktop Gephi, then open the graph in Gephi Lite.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="additional-note">
+          <h2>Additional Note</h2>
+          <p class="footer-note">
+            Gephi Lite is the browser-based version of Gephi. For larger projects or more advanced functions,
+            students can also use the desktop version of Gephi, which has more tools and export options.
+          </p>
+          <p class="footer-note">
+            Sources used for this guide: Gephi Lite live interface, Gephi Lite source code, and the official
+            <a href="https://gephi.org/quickstart/" target="_blank" rel="noreferrer">Gephi quickstart</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("networkPreview");
+    const ctx = canvas.getContext("2d");
+    const nodes = [
+      { x: 110, y: 170, r: 20, c: "#087f7a", label: "A" },
+      { x: 190, y: 120, r: 13, c: "#087f7a", label: "B" },
+      { x: 210, y: 230, r: 11, c: "#087f7a", label: "C" },
+      { x: 325, y: 170, r: 25, c: "#c94f38", label: "D" },
+      { x: 420, y: 105, r: 15, c: "#c94f38", label: "E" },
+      { x: 455, y: 220, r: 14, c: "#c94f38", label: "F" },
+      { x: 540, y: 170, r: 11, c: "#6650a4", label: "G" },
+      { x: 365, y: 285, r: 10, c: "#b7791f", label: "H" }
+    ];
+    const edges = [
+      [0, 1], [0, 2], [1, 2], [0, 3], [2, 3], [3, 4], [3, 5], [4, 5], [5, 6], [3, 7], [2, 7]
+    ];
+
+    function drawNetwork() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      edges.forEach(([a, b], index) => {
+        const from = nodes[a];
+        const to = nodes[b];
+        ctx.beginPath();
+        ctx.moveTo(from.x, from.y);
+        ctx.lineTo(to.x, to.y);
+        ctx.lineWidth = index === 3 || index === 4 ? 3 : 1.5;
+        ctx.strokeStyle = index === 3 || index === 4 ? "rgba(32,36,42,0.45)" : "rgba(32,36,42,0.18)";
+        ctx.stroke();
+      });
+
+      nodes.forEach((node) => {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = node.c;
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "#ffffff";
+        ctx.stroke();
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "700 13px Inter, system-ui, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(node.label, node.x, node.y);
+      });
+    }
+
+    drawNetwork();
+  </script>
+</body>
+</html>
