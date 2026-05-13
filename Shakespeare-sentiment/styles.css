@@ -150,7 +150,7 @@ input[type="range"] {
 
 .segmented {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 4px;
   padding: 4px;
   border: 1px solid var(--line);
@@ -188,6 +188,55 @@ input[type="range"] {
 .slot-list {
   display: grid;
   gap: 10px;
+}
+
+.picker-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.count-pill {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 22px;
+  margin-left: 4px;
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: #28564f;
+  font-size: 0.78rem;
+}
+
+.check-list {
+  display: grid;
+  gap: 6px;
+  max-height: 330px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.check-row {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.check-row input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.check-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .slot-row {
@@ -250,6 +299,11 @@ input[type="range"] {
   gap: 14px;
 }
 
+.overlay-layout {
+  display: grid;
+  gap: 14px;
+}
+
 .support-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -267,6 +321,10 @@ input[type="range"] {
 
 .chart-card-large .canvas-wrap {
   height: 420px;
+}
+
+.overlay-layout .chart-card-large .canvas-wrap {
+  height: 480px;
 }
 
 .chart-header {
@@ -417,6 +475,7 @@ canvas {
   }
 
   .chart-card-large .canvas-wrap,
+  .overlay-layout .chart-card-large .canvas-wrap,
   .canvas-wrap {
     height: 280px;
   }
