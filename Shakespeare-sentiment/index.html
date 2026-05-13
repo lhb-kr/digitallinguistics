@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shakespeare Sentiment Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="control-panel" aria-label="Graph controls">
+        <header class="brand">
+          <h1>Shakespeare Sentiment Explorer</h1>
+          <div id="dataStatus" class="status-line">Loading data</div>
+          <a class="guide-link" href="quick_guide.html" target="_blank" rel="noopener">Quick Guide</a>
+        </header>
+
+        <section class="control-section">
+          <h2>View</h2>
+          <div class="segmented" role="group" aria-label="View mode">
+            <button id="viewDashboard" class="segmented-button is-active" type="button" data-view="dashboard">Dashboard</button>
+            <button id="viewSingle" class="segmented-button" type="button" data-view="single">Single Play</button>
+          </div>
+        </section>
+
+        <section id="singlePicker" class="control-section is-hidden">
+          <h2>Play</h2>
+          <label class="field-label" for="singlePlay">Selected play</label>
+          <select id="singlePlay"></select>
+        </section>
+
+        <section id="dashboardPicker" class="control-section">
+          <h2>Dashboard Plays</h2>
+          <div id="dashboardSlots" class="slot-list"></div>
+        </section>
+
+        <section class="control-section">
+          <h2>Shared Settings</h2>
+          <label class="field-label" for="granularity">Granularity</label>
+          <select id="granularity">
+            <option value="sentences">Sentence</option>
+            <option value="units">Line / Speech</option>
+            <option value="scenes">Scene</option>
+          </select>
+
+          <label class="field-label" for="sentiment">Sentiment</label>
+          <select id="sentiment">
+            <option value="vader">VADER</option>
+            <option value="dl">Deep Learning</option>
+            <option value="both">Both</option>
+          </select>
+
+          <label class="field-label" for="smoothing">Smoothing</label>
+          <select id="smoothing">
+            <option value="lowess">LOWESS</option>
+            <option value="moving">Moving Average</option>
+            <option value="raw">Raw</option>
+          </select>
+
+          <label class="field-label" for="windowSize">Window <span id="windowValue">20</span></label>
+          <input id="windowSize" type="range" min="3" max="500" value="20" step="1">
+
+          <label class="toggle-row" for="stageDirections">
+            <input id="stageDirections" type="checkbox">
+            <span>Include stage directions</span>
+          </label>
+
+          <label class="field-label" for="xAxis">X-axis</label>
+          <select id="xAxis">
+            <option value="index">Index</option>
+            <option value="progress">Play progress</option>
+          </select>
+
+          <label class="field-label" for="yScale">Y-axis scale</label>
+          <select id="yScale">
+            <option value="auto">Auto zoom</option>
+            <option value="fixed">Fixed -1 to +1</option>
+          </select>
+        </section>
+
+        <section id="singleFilters" class="control-section is-hidden">
+          <h2>Single Filters</h2>
+          <label class="field-label" for="speakerFilter">Speaker</label>
+          <select id="speakerFilter"></select>
+
+          <label class="field-label" for="actFilter">Act</label>
+          <select id="actFilter"></select>
+
+          <label class="field-label" for="sceneFilter">Scene</label>
+          <select id="sceneFilter"></select>
+
+          <label class="field-label" for="speakerSort">Speaker chart</label>
+          <select id="speakerSort">
+            <option value="count">Most lines</option>
+            <option value="positive">Most positive</option>
+            <option value="negative">Most negative</option>
+          </select>
+
+          <label class="field-label" for="speakerMin">Min count <span id="speakerMinValue">10</span></label>
+          <input id="speakerMin" type="range" min="1" max="50" value="10" step="1">
+        </section>
+
+        <section class="control-section">
+          <h2>Downloads</h2>
+          <button id="downloadFiltered" class="command-button" type="button">Download Filtered CSV</button>
+          <button id="downloadPublic" class="command-button" type="button">Download Play CSV</button>
+          <button id="downloadSceneSummary" class="command-button" type="button">Download Scene CSV</button>
+          <button id="downloadAllSummary" class="command-button" type="button">Download All Summary CSV</button>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <section id="dashboardView" class="view-panel">
+          <div id="dashboardGrid" class="dashboard-grid"></div>
+        </section>
+
+        <section id="singleView" class="view-panel is-hidden">
+          <div class="single-layout">
+            <article class="chart-card chart-card-large">
+              <header class="chart-header">
+                <div>
+                  <h2 id="mainChartTitle">Sentiment Arc</h2>
+                  <p id="mainChartMeta" class="chart-meta"></p>
+                </div>
+                <button id="downloadMainPng" class="small-button" type="button">PNG</button>
+              </header>
+              <div class="canvas-wrap">
+                <canvas id="mainChart"></canvas>
+                <div id="mainTooltip" class="tooltip" role="status"></div>
+              </div>
+            </article>
+
+            <div class="support-grid">
+              <article class="chart-card">
+                <header class="chart-header">
+                  <div>
+                    <h2>Scenes</h2>
+                    <p class="chart-meta">Average sentiment</p>
+                  </div>
+                  <button id="downloadScenePng" class="small-button" type="button">PNG</button>
+                </header>
+                <div class="canvas-wrap">
+                  <canvas id="sceneChart"></canvas>
+                  <div id="sceneTooltip" class="tooltip" role="status"></div>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <header class="chart-header">
+                  <div>
+                    <h2>Act / Scene</h2>
+                    <p class="chart-meta">Heatmap</p>
+                  </div>
+                  <button id="downloadHeatmapPng" class="small-button" type="button">PNG</button>
+                </header>
+                <div class="canvas-wrap">
+                  <canvas id="heatmapChart"></canvas>
+                  <div id="heatmapTooltip" class="tooltip" role="status"></div>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <header class="chart-header">
+                  <div>
+                    <h2>Speakers</h2>
+                    <p class="chart-meta">Average sentiment</p>
+                  </div>
+                  <button id="downloadSpeakerPng" class="small-button" type="button">PNG</button>
+                </header>
+                <div class="canvas-wrap">
+                  <canvas id="speakerChart"></canvas>
+                  <div id="speakerTooltip" class="tooltip" role="status"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <aside id="contextPanel" class="context-panel">
+          <div class="context-eyebrow">Selection</div>
+          <h2 id="contextTitle">No graph point selected</h2>
+          <div id="contextMeta" class="context-meta"></div>
+          <p id="contextText" class="context-text">Click a curve, bar, or heatmap cell to inspect the original text or aggregate.</p>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
