@@ -18,8 +18,9 @@
         <section class="control-section">
           <h2>View</h2>
           <div class="segmented" role="group" aria-label="View mode">
-            <button id="viewDashboard" class="segmented-button is-active" type="button" data-view="dashboard">Dashboard</button>
-            <button id="viewSingle" class="segmented-button" type="button" data-view="single">Single Play</button>
+            <button id="viewDashboard" class="segmented-button is-active" type="button" data-view="dashboard">Multiple</button>
+            <button id="viewOverlay" class="segmented-button" type="button" data-view="overlay">Overlay</button>
+            <button id="viewSingle" class="segmented-button" type="button" data-view="single">Single</button>
           </div>
         </section>
 
@@ -30,8 +31,18 @@
         </section>
 
         <section id="dashboardPicker" class="control-section">
-          <h2>Dashboard Plays</h2>
+          <h2>Multiple Plays</h2>
           <div id="dashboardSlots" class="slot-list"></div>
+        </section>
+
+        <section id="overlayPicker" class="control-section is-hidden">
+          <h2>Overlay Plays <span id="overlayCount" class="count-pill">0</span></h2>
+          <div class="picker-actions">
+            <button id="overlayFromDashboard" class="small-button" type="button">Multiple</button>
+            <button id="overlayAll" class="small-button" type="button">All</button>
+          </div>
+          <div id="overlayChecks" class="check-list"></div>
+          <button id="overlayClear" class="command-button" type="button">Clear Selection</button>
         </section>
 
         <section class="control-section">
@@ -64,12 +75,6 @@
             <input id="stageDirections" type="checkbox">
             <span>Include stage directions</span>
           </label>
-
-          <label class="field-label" for="xAxis">X-axis</label>
-          <select id="xAxis">
-            <option value="index">Index</option>
-            <option value="progress">Play progress</option>
-          </select>
 
           <label class="field-label" for="yScale">Y-axis scale</label>
           <select id="yScale">
@@ -173,6 +178,24 @@
                 </div>
               </article>
             </div>
+          </div>
+        </section>
+
+        <section id="overlayView" class="view-panel is-hidden">
+          <div class="overlay-layout">
+            <article class="chart-card chart-card-large">
+              <header class="chart-header">
+                <div>
+                  <h2 id="overlayChartTitle">Overlay</h2>
+                  <p id="overlayChartMeta" class="chart-meta"></p>
+                </div>
+                <button id="downloadOverlayPng" class="small-button" type="button">PNG</button>
+              </header>
+              <div class="canvas-wrap">
+                <canvas id="overlayChart"></canvas>
+                <div id="overlayTooltip" class="tooltip" role="status"></div>
+              </div>
+            </article>
           </div>
         </section>
 
