@@ -6,7 +6,7 @@ const state = {
   playIndex: [],
   cache: new Map(),
   singlePlay: "hamlet",
-  dashboardPlays: ["hamlet", "macbeth", "king-lear", "romeo-and-juliet"],
+  dashboardPlays: ["hamlet", "macbeth", "king-lear", "othello"],
   renderToken: 0,
 };
 
