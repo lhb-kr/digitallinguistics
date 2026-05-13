@@ -1,0 +1,2416 @@
+play_id,play_title,section,act,scene,scene_index_in_play,unit_index_in_play,type,speaker_original,speaker_normalized,original_text,vader_score,dl_score
+the-tempest,The Tempest,main,1,1,1,1,stage_direction,,,Loud sounds of a storm with thunder and lightning. A ship’s MASTER and BOATSWAIN enter.,0.0,0.06077
+the-tempest,The Tempest,main,1,1,1,2,speech,MASTER,MASTER,Boatswain!,0.0,0.57529
+the-tempest,The Tempest,main,1,1,1,3,speech,BOATSWAIN,BOATSWAIN,"Here, master. What cheer?",0.0,0.13728
+the-tempest,The Tempest,main,1,1,1,4,speech,MASTER,MASTER,"Good, speak to th' mariners. Fall to ’t yarely, or we
+run ourselves aground. Bestir, bestir.",0.4926,0.46015
+the-tempest,The Tempest,main,1,1,1,5,stage_direction,,,The MASTER exits.,0.0,0.01349
+the-tempest,The Tempest,main,1,1,1,6,stage_direction,,,SAILORS enter.,0.0,0.11918
+the-tempest,The Tempest,main,1,1,1,7,speech,BOATSWAIN,BOATSWAIN,"Heigh, my hearts! Cheerly, cheerly, my hearts! Yare!
+Yare!
+Take in the topsail. Tend to th' master’s whistle.
+Blow, till thou burst thy wind, if room enough!",0.8302,0.78506
+the-tempest,The Tempest,main,1,1,1,8,stage_direction,,,"ALONSO, SEBASTIAN, ANTONIO, FERDINAND, GONZALO, and others enter.",0.0,0.06889
+the-tempest,The Tempest,main,1,1,1,9,speech,ALONSO,ALONSO,"Good Boatswain, have care. Where’s the Master?
+Play the men.",0.5848,0.17774
+the-tempest,The Tempest,main,1,1,1,10,speech,BOATSWAIN,BOATSWAIN,"I pray now, keep below.",0.3182,0.05447
+the-tempest,The Tempest,main,1,1,1,11,speech,ANTONIO,ANTONIO,"Where is the Master, Boatswain?",0.0,-0.00173
+the-tempest,The Tempest,main,1,1,1,12,speech,BOATSWAIN,BOATSWAIN,"Do you not hear him? You mar our labor. Keep your
+cabins.
+You do assist the storm.",0.296,0.11703
+the-tempest,The Tempest,main,1,1,1,13,speech,GONZALO,GONZALO,"Nay, good, be patient.",0.7579,0.57635
+the-tempest,The Tempest,main,1,1,1,14,speech,BOATSWAIN,BOATSWAIN,"When the sea is. Hence! What cares these roarers for
+the name of king? To cabin, silence! Trouble us not.",0.3147,0.62341
+the-tempest,The Tempest,main,1,1,1,15,speech,GONZALO,GONZALO,"Good, yet remember whom thou hast aboard.",0.6369,0.48759
+the-tempest,The Tempest,main,1,1,1,16,speech,BOATSWAIN,BOATSWAIN,"None that I more love than myself. You are a councilor.
+If you can command these elements to silence and work
+the peace of the present, we will not hand a rope more.
+Use your authority. If you cannot, give thanks you have
+lived so long and make yourself ready in your cabin for
+the mischance of the hour, if it so hap.— Cheerly, good
+hearts!— Out of our way, I say.",-0.2481,0.31223
+the-tempest,The Tempest,main,1,1,1,17,stage_direction,,,The BOATSWAIN exits.,0.0,0.01449
+the-tempest,The Tempest,main,1,1,1,18,speech,GONZALO,GONZALO,"I have great comfort from this fellow. Methinks he hath
+no drowning mark upon him. His complexion is perfect
+gallows. Stand fast, good Fate, to his hanging. Make the
+rope of his destiny our cable, for our own doth little
+advantage. If he be not born to be hanged, our case is
+miserable.",0.9117,-0.38406
+the-tempest,The Tempest,main,1,1,1,19,stage_direction,,,GONZALO exits with the other men of the royal court.,0.0,-0.00099
+the-tempest,The Tempest,main,1,1,1,20,stage_direction,,,The BOATSWAIN enters.,0.0,0.02799
+the-tempest,The Tempest,main,1,1,1,21,speech,BOATSWAIN,BOATSWAIN,"Down with the topmast! Yare, lower, lower! Bring her to
+try wi' th' main course.",-0.4912,0.5891
+the-tempest,The Tempest,main,1,1,1,22,stage_direction,,,A shout offstage.,0.0,-0.01087
+the-tempest,The Tempest,main,1,1,1,23,speech,BOATSWAIN,BOATSWAIN,"A plague upon this howling! They are louder than the
+weather or our office.",-0.7177,-0.77141
+the-tempest,The Tempest,main,1,1,1,24,stage_direction,,,"SEBASTIAN, ANTONIO, and GONZALO enter.",0.0,0.13165
+the-tempest,The Tempest,main,1,1,1,25,speech,BOATSWAIN,BOATSWAIN,"Yet again?
+What do you here? Shall we give o'er and drown?
+Have you a mind to sink?",-0.6868,-0.08368
+the-tempest,The Tempest,main,1,1,1,26,speech,SEBASTIAN,SEBASTIAN,"A pox o' your throat, you bawling, blasphemous,
+incharitable dog!",-0.8395,-0.07029
+the-tempest,The Tempest,main,1,1,1,27,speech,BOATSWAIN,BOATSWAIN,"Work you, then.",0.0,-0.05883
+the-tempest,The Tempest,main,1,1,1,28,speech,ANTONIO,ANTONIO,"Hang, cur! Hang, you whoreson insolent noisemaker! We
+are less afraid to be drowned than thou art.",-0.6229,0.17215
+the-tempest,The Tempest,main,1,1,1,29,speech,GONZALO,GONZALO,"I’ll warrant him for drowning though the ship were no
+stronger than a nutshell and as leaky as an unstanched
+wench.",0.6121,-0.71644
+the-tempest,The Tempest,main,1,1,1,30,speech,BOATSWAIN,BOATSWAIN,"Lay her a-hold, a-hold! Set her two courses off to sea
+again.
+Lay her off!",0.0,0.57057
+the-tempest,The Tempest,main,1,1,1,31,stage_direction,,,Wet SAILORS enter,0.0,0.03125
+the-tempest,The Tempest,main,1,1,1,32,speech,MARINERS,MARINERS,"All lost! To prayers, to prayers, all lost!",-0.7249,0.79391
+the-tempest,The Tempest,main,1,1,1,33,stage_direction,,,The SAILORS exit.,0.0,0.00667
+the-tempest,The Tempest,main,1,1,1,34,speech,BOATSWAIN,BOATSWAIN,"What, must our mouths be cold?",-0.5719,-0.30344
+the-tempest,The Tempest,main,1,1,1,35,speech,GONZALO,GONZALO,"The king and prince at prayers. Let’s assist them, for
+our case is as theirs.",0.7184,0.29494
+the-tempest,The Tempest,main,1,1,1,36,speech,SEBASTIAN,SEBASTIAN,I’m out of patience.,-0.3182,-0.73027
+the-tempest,The Tempest,main,1,1,1,37,speech,ANTONIO,ANTONIO,"We are merely cheated of our lives by drunkards. This
+wide-chopped rascal—would thou mightst lie drowning the
+washing of ten tides!",-0.2714,0.41038
+the-tempest,The Tempest,main,1,1,1,38,speech,GONZALO,GONZALO,"He’ll be hanged yet, though every drop of water swear
+against it and gape at widest to glut him.",-0.8074,-0.4678
+the-tempest,The Tempest,main,1,1,1,39,speech,VOICES,VOICES,"[within] Mercy on us! We split, we split! Farewell, my
+wife and children! Farewell, brother! We split, we
+split, we split!",0.6973,0.32041
+the-tempest,The Tempest,main,1,1,1,40,speech,ANTONIO,ANTONIO,Let’s all sink wi' th' king.,0.0,0.01655
+the-tempest,The Tempest,main,1,1,1,41,speech,SEBASTIAN,SEBASTIAN,Let’s take leave of him.,0.0,0.25577
+the-tempest,The Tempest,main,1,1,1,42,stage_direction,,,ANTONIO and SEBASTIAN exit.,0.0,0.02579
+the-tempest,The Tempest,main,1,1,1,43,speech,GONZALO,GONZALO,"Now would I give a thousand furlongs of sea for an acre
+of barren ground: long heath, brown furze, anything.
+The wills above be done, but I would fain die a dry
+death.",-0.8555,-0.7719
+the-tempest,The Tempest,main,1,1,1,44,stage_direction,,,They exit.,0.0,-0.13698
+the-tempest,The Tempest,main,1,2,2,45,stage_direction,,,PROSPERO and MIRANDA enter.,0.0,0.13906
+the-tempest,The Tempest,main,1,2,2,46,speech,MIRANDA,MIRANDA,"If by your art, my dearest father, you have
+Put the wild waters in this roar, allay them.
+The sky, it seems, would pour down stinking pitch,
+But that the sea, mounting to th' welkin’s cheek,
+Dashes the fire out. Oh, I have suffered
+With those that I saw suffer. A brave vessel
+Who had, no doubt, some noble creature in her
+Dashed all to pieces. Oh, the cry did knock
+Against my very heart! Poor souls, they perished.
+Had I been any god of power, I would
+Have sunk the sea within the earth or ere
+It should the good ship so have swallowed and
+The fraughting souls within her.",0.1516,-0.84873
+the-tempest,The Tempest,main,1,2,2,47,speech,PROSPERO,PROSPERO,"Be collected.
+No more amazement. Tell your piteous heart
+There’s no harm done.",0.861,-0.70326
+the-tempest,The Tempest,main,1,2,2,48,speech,MIRANDA,MIRANDA,"Oh, woe the day!",-0.5255,-0.8295
+the-tempest,The Tempest,main,1,2,2,49,speech,PROSPERO,PROSPERO,"No harm.
+I have done nothing but in care of thee,
+Of thee, my dear one—thee my daughter, who
+Art ignorant of what thou art, naught knowing
+Of whence I am, nor that I am more better
+Than Prospero, master of a full poor cell
+And thy no greater father.",0.3291,-0.86077
+the-tempest,The Tempest,main,1,2,2,50,speech,MIRANDA,MIRANDA,"More to know
+Did never meddle with my thoughts.",0.0,-0.39143
+the-tempest,The Tempest,main,1,2,2,51,speech,PROSPERO,PROSPERO,"'Tis time
+I should inform thee farther. Lend thy hand
+And pluck my magic garment from me.",0.8126,0.30081
+the-tempest,The Tempest,main,1,2,2,52,speech,PROSPERO,PROSPERO,"Lie
+there, my art. Wipe thou thine eyes. Have comfort.
+The direful spectacle of the wrack, which touched
+The very virtue of compassion in thee,
+I have with such provision in mine art
+So safely ordered that there is no soul—
+No, not so much perdition as an hair
+Betid to any creature in the vessel—
+Which thou heard’st cry, which thou sawst sink. Sit
+down.
+For thou must now know farther.",0.4572,0.77421
+the-tempest,The Tempest,main,1,2,2,53,speech,MIRANDA,MIRANDA,"You have often
+Begun to tell me what I am, but stopped
+And left me to a bootless inquisition,
+Concluding, “Stay. Not yet.”",-0.4215,-0.2533
+the-tempest,The Tempest,main,1,2,2,54,speech,PROSPERO,PROSPERO,"The hour’s now come.
+The very minute bids thee ope thine ear.
+Obey and be attentive. Canst thou remember
+A time before we came unto this cell?
+I do not think thou canst, for then thou wast not
+Out three years old.",-0.1027,0.50284
+the-tempest,The Tempest,main,1,2,2,55,speech,MIRANDA,MIRANDA,"Certainly, sir, I can.",0.0,0.47692
+the-tempest,The Tempest,main,1,2,2,56,speech,PROSPERO,PROSPERO,"By what? By any other house or person?
+Of anything the image tell me that
+Hath kept with thy remembrance.",0.0,-0.01044
+the-tempest,The Tempest,main,1,2,2,57,speech,MIRANDA,MIRANDA,"'Tis far off,
+And rather like a dream than an assurance
+That my remembrance warrants. Had I not
+Four or five women once that tended me?",0.861,-0.55191
+the-tempest,The Tempest,main,1,2,2,58,speech,PROSPERO,PROSPERO,"Thou hadst, and more, Miranda. But how is it
+That this lives in thy mind? What seest thou else
+In the dark backward and abysm of time?
+If thou rememberest aught ere thou camest here,
+How thou camest here thou mayst.",-0.4329,-0.01575
+the-tempest,The Tempest,main,1,2,2,59,speech,MIRANDA,MIRANDA,But that I do not.,0.0,-0.40323
+the-tempest,The Tempest,main,1,2,2,60,speech,PROSPERO,PROSPERO,"Twelve year since, Miranda, twelve year since,
+Thy father was the Duke of Milan and
+A prince of power.",0.6249,0.46714
+the-tempest,The Tempest,main,1,2,2,61,speech,MIRANDA,MIRANDA,"Sir, are not you my father?",0.0,0.05711
+the-tempest,The Tempest,main,1,2,2,62,speech,PROSPERO,PROSPERO,"Thy mother was a piece of virtue and
+She said thou wast my daughter. And thy father
+Was Duke of Milan, and thou his only heir
+And princess no worse issued.",0.8481,0.56352
+the-tempest,The Tempest,main,1,2,2,63,speech,MIRANDA,MIRANDA,"Oh, the heavens!
+What foul play had we that we came from thence?
+Or blessèd was ’t we did?",0.7936,0.09796
+the-tempest,The Tempest,main,1,2,2,64,speech,PROSPERO,PROSPERO,"Both, both, my girl.
+By foul play, as thou sayst, were we heaved thence,
+But blessedly holp hither.",0.836,0.11129
+the-tempest,The Tempest,main,1,2,2,65,speech,MIRANDA,MIRANDA,"Oh, my heart bleeds
+To think o' th' teen that I have turned you to,
+Which is from my remembrance! Please you, farther.",0.5707,0.32168
+the-tempest,The Tempest,main,1,2,2,66,speech,PROSPERO,PROSPERO,"My brother and thy uncle, called Antonio—
+I pray thee, mark me (that a brother should
+Be so perfidious!)— he whom next thyself
+Of all the world I loved and to him put
+The manage of my state, as at that time
+Through all the signories it was the first,
+And Prospero the prime duke, being so reputed
+In dignity, and for the liberal arts
+Without a parallel. Those being all my study,
+The government I cast upon my brother
+And to my state grew stranger, being transported
+And rapt in secret studies. Thy false uncle—
+Dost thou attend me?",0.9322,0.55861
+the-tempest,The Tempest,main,1,2,2,67,speech,MIRANDA,MIRANDA,"Sir, most heedfully.",0.0,0.48268
+the-tempest,The Tempest,main,1,2,2,68,speech,PROSPERO,PROSPERO,"Being once perfected how to grant suits,
+How to deny them, who t' advance and who
+To trash for overtopping, new created
+The creatures that were mine, I say —or changed 'em,
+Or else new formed 'em—having both the key
+Of officer and office, set all hearts i' th' state
+To what tune pleased his ear, that now he was
+The ivy which had hid my princely trunk,
+And sucked my verdure out on ’t. Thou attend’st not.",0.6249,0.44398
+the-tempest,The Tempest,main,1,2,2,69,speech,MIRANDA,MIRANDA,"O, good sir, I do.",0.4404,0.68544
+the-tempest,The Tempest,main,1,2,2,70,speech,PROSPERO,PROSPERO,"I pray thee, mark me.
+I, thus neglecting worldly ends, all dedicated
+To closeness and the bettering of my mind
+With that which, but by being so retired,
+O'erprized all popular rate, in my false brother
+Awaked an evil nature. And my trust,
+Like a good parent, did beget of him
+A falsehood in its contrary as great
+As my trust was, which had indeed no limit,
+A confidence sans bound. He being thus lorded,
+Not only with what my revenue yielded
+But what my power might else exact, like one
+Who having into truth, by telling of it,
+Made such a sinner of his memory
+To credit his own lie— he did believe
+He was indeed the duke, out o' th' substitution
+And executing th' outward face of royalty,
+With all prerogative: Hence his ambition growing—
+Dost thou hear?",0.9869,-0.27743
+the-tempest,The Tempest,main,1,2,2,71,speech,MIRANDA,MIRANDA,"Your tale, sir, would cure deafness.",0.0,-0.70468
+the-tempest,The Tempest,main,1,2,2,72,speech,PROSPERO,PROSPERO,"To have no screen between this part he played
+And him he played it for, he needs will be
+Absolute Milan. Me, poor man, my library
+Was dukedom large enough. Of temporal royalties
+He thinks me now incapable, confederates—
+So dry he was for sway—wi' th' King of Naples
+To give him annual tribute, do him homage,
+Subject his coronet to his crown and bend
+The dukedom yet unbowed— alas, poor Milan!—
+To most ignoble stooping.",-0.8221,-0.59792
+the-tempest,The Tempest,main,1,2,2,73,speech,MIRANDA,MIRANDA,"Oh, the heavens!",0.3382,0.74517
+the-tempest,The Tempest,main,1,2,2,74,speech,PROSPERO,PROSPERO,"Mark his condition and the event. Then tell me
+If this might be a brother.",0.0,-0.22411
+the-tempest,The Tempest,main,1,2,2,75,speech,MIRANDA,MIRANDA,"I should sin
+To think but nobly of my grandmother.
+Good wombs have borne bad sons.",-0.2846,-0.3497
+the-tempest,The Tempest,main,1,2,2,76,speech,PROSPERO,PROSPERO,"Now the condition.
+The King of Naples, being an enemy
+To me inveterate, hearkens my brother’s suit,
+Which was that he, in lieu o' th' premises
+Of homage and I know not how much tribute,
+Should presently extirpate me and mine
+Out of the dukedom, and confer fair Milan
+With all the honors on my brother. Whereon,
+A treacherous army levied, one midnight
+Fated to th' purpose did Antonio open
+The gates of Milan, and, i' th' dead of darkness,
+The ministers for th' purpose hurried thence
+Me and thy crying self.",-0.6249,-0.10541
+the-tempest,The Tempest,main,1,2,2,77,speech,MIRANDA,MIRANDA,"Alack, for pity!
+I, not remembering how I cried out then,
+Will cry it o'er again. It is a hint
+That wrings mine eyes to ’t.",-0.8871,-0.23121
+the-tempest,The Tempest,main,1,2,2,78,speech,PROSPERO,PROSPERO,"Hear a little further
+And then I’ll bring thee to the present business
+Which now ’s upon ’s, without the which this story
+Were most impertinent.",0.0,0.41784
+the-tempest,The Tempest,main,1,2,2,79,speech,MIRANDA,MIRANDA,"Wherefore did they not
+That hour destroy us?",-0.6908,-0.11214
+the-tempest,The Tempest,main,1,2,2,80,speech,PROSPERO,PROSPERO,"Well demanded, wench.
+My tale provokes that question. Dear, they durst not,
+So dear the love my people bore me, nor set
+A mark so bloody on the business, but
+With colors fairer painted their foul ends.
+In few, they hurried us aboard a bark,
+Bore us some leagues to sea, where they prepared
+A rotten carcass of a butt, not rigged,
+Nor tackle, sail, nor mast. The very rats
+Instinctively had quit it. There they hoist us
+To cry to th' sea that roared to us, to sigh
+To th' winds whose pity, sighing back again,
+Did us but loving wrong.",-0.7907,-0.77762
+the-tempest,The Tempest,main,1,2,2,81,speech,MIRANDA,MIRANDA,"Alack, what trouble
+Was I then to you!",-0.2924,0.29623
+the-tempest,The Tempest,main,1,2,2,82,speech,PROSPERO,PROSPERO,"Oh, a cherubim
+Thou wast that did preserve me. Thou didst smile
+Infusèd with a fortitude from heaven,
+When I have decked the sea with drops full salt,
+Under my burthen groaned; which raised in me
+An undergoing stomach to bear up
+Against what should ensue.",0.9118,0.74858
+the-tempest,The Tempest,main,1,2,2,83,speech,MIRANDA,MIRANDA,How came we ashore?,0.0,-0.00873
+the-tempest,The Tempest,main,1,2,2,84,speech,PROSPERO,PROSPERO,"By providence divine.
+Some food we had and some fresh water that
+A noble Neapolitan, Gonzalo,
+Out of his charity, who being then appointed
+Master of this design, did give us, with
+Rich garments, linens, stuffs, and necessaries,
+Which since have steaded much. So, of his gentleness,
+Knowing I loved my books, he furnished me
+From mine own library with volumes that
+I prize above my dukedom.",0.9776,0.41676
+the-tempest,The Tempest,main,1,2,2,85,speech,MIRANDA,MIRANDA,"Would I might
+But ever see that man!",0.0,-0.42965
+the-tempest,The Tempest,main,1,2,2,86,speech,PROSPERO,PROSPERO,"Now I arise.
+[stands and puts on his mantle]
+Sit still, and hear the last of our sea-sorrow.
+Here in this island we arrived, and here
+Have I, thy schoolmaster, made thee more profit
+Than other princesses can that have more time
+For vainer hours and tutors not so careful.",-0.0306,0.4659
+the-tempest,The Tempest,main,1,2,2,87,speech,MIRANDA,MIRANDA,"Heavens thank you for ’t! And now, I pray you, sir—
+For still ’tis beating in my mind—your reason
+For raising this sea storm?",0.8016,0.31072
+the-tempest,The Tempest,main,1,2,2,88,speech,PROSPERO,PROSPERO,"Know thus far forth:
+By accident most strange, bountiful Fortune
+(Now my dear lady) hath mine enemies
+Brought to this shore. And by my prescience
+I find my zenith doth depend upon
+A most auspicious star, whose influence
+If now I court not but omit, my fortunes
+Will ever after droop. Here cease more questions.
+Thou art inclined to sleep. 'Tis a good dullness,
+And give it way. I know thou canst not choose.",0.8599,0.47866
+the-tempest,The Tempest,main,1,2,2,89,stage_direction,,,MIRANDA falls asleep.,0.0,-0.43119
+the-tempest,The Tempest,main,1,2,2,90,speech,PROSPERO,PROSPERO,"Come
+away, servant, come. I am ready now.
+Approach, my Ariel, come.",0.3612,0.66853
+the-tempest,The Tempest,main,1,2,2,91,stage_direction,,,ARIEL enters.,0.0,0.01215
+the-tempest,The Tempest,main,1,2,2,92,speech,ARIEL,ARIEL,"All hail, great master! Grave sir, hail! I come
+To answer thy best pleasure, be ’t to fly,
+To swim, to dive into the fire, to ride
+On the curled clouds. To thy strong bidding, task
+Ariel and all his quality.",0.9285,0.78111
+the-tempest,The Tempest,main,1,2,2,93,speech,PROSPERO,PROSPERO,"Hast thou, spirit,
+Performed to point the tempest that I bade thee?",0.4019,0.13168
+the-tempest,The Tempest,main,1,2,2,94,speech,ARIEL,ARIEL,"To every article.
+I boarded the king’s ship. Now on the beak,
+Now in the waist, the deck, in every cabin,
+I flamed amazement. Sometime I’d divide,
+And burn in many places. On the topmast,
+The yards, and bowsprit would I flame distinctly,
+Then meet and join. Jove’s lightning, the precursors
+O' th' dreadful thunderclaps, more momentary
+And sight-outrunning were not. The fire and cracks
+Of sulfurous roaring the most mighty Neptune
+Seem to besiege and make his bold waves tremble,
+Yea, his dread trident shake.",-0.9136,-0.3864
+the-tempest,The Tempest,main,1,2,2,95,speech,PROSPERO,PROSPERO,"My brave spirit!
+Who was so firm, so constant, that this coil
+Would not infect his reason?",0.9015,0.79283
+the-tempest,The Tempest,main,1,2,2,96,speech,ARIEL,ARIEL,"Not a soul
+But felt a fever of the mad and played
+Some tricks of desperation. All but mariners
+Plunged in the foaming brine and quit the vessel,
+Then all afire with me. The king’s son, Ferdinand,
+With hair up-staring—then, like reeds, not hair—
+Was the first man that leaped, cried, “Hell is empty
+And all the devils are here.”",-0.4389,-0.60558
+the-tempest,The Tempest,main,1,2,2,97,speech,PROSPERO,PROSPERO,"Why, that’s my spirit!
+But was not this nigh shore?",0.2942,0.22353
+the-tempest,The Tempest,main,1,2,2,98,speech,ARIEL,ARIEL,"Close by, my master.",0.0,0.68654
+the-tempest,The Tempest,main,1,2,2,99,speech,PROSPERO,PROSPERO,"But are they, Ariel, safe?",0.5927,0.61385
+the-tempest,The Tempest,main,1,2,2,100,speech,ARIEL,ARIEL,"Not a hair perished.
+On their sustaining garments not a blemish,
+But fresher than before. And, as thou badest me,
+In troops I have dispersed them 'bout the isle.
+The king’s son have I landed by himself,
+Whom I left cooling of the air with sighs
+In an odd angle of the isle, and sitting,
+His arms in this sad knot.",-0.1531,0.41568
+the-tempest,The Tempest,main,1,2,2,101,speech,PROSPERO,PROSPERO,"Of the king’s ship,
+The mariners, say how thou hast disposed,
+And all the rest o' th' fleet.",0.0,0.03032
+the-tempest,The Tempest,main,1,2,2,102,speech,ARIEL,ARIEL,"Safely in harbor
+Is the king’s ship. In the deep nook where once
+Thou called’st me up at midnight to fetch dew
+From the still-vexed Bermoothes, there she’s hid.
+The mariners all under hatches stowed,
+Who, with a charm joined to their suffered labor,
+I have left asleep. And for the rest o' th' fleet,
+Which I dispersed, they all have met again
+And are upon the Mediterranean float,
+Bound sadly home for Naples,
+Supposing that they saw the king’s ship wracked
+And his great person perish.",-0.3182,-0.23713
+the-tempest,The Tempest,main,1,2,2,103,speech,PROSPERO,PROSPERO,"Ariel, thy charge
+Exactly is performed. But there’s more work.
+What is the time o' th' day?",0.0,0.04412
+the-tempest,The Tempest,main,1,2,2,104,speech,ARIEL,ARIEL,Past the mid season.,0.0,0.29261
+the-tempest,The Tempest,main,1,2,2,105,speech,PROSPERO,PROSPERO,"At least two glasses. The time ’twixt six and now
+Must by us both be spent most preciously.",0.5574,-0.31885
+the-tempest,The Tempest,main,1,2,2,106,speech,ARIEL,ARIEL,"Is there more toil? Since thou dost give me pains,
+Let me remember thee what thou hast promised,
+Which is not yet performed me.",0.3506,-0.39193
+the-tempest,The Tempest,main,1,2,2,107,speech,PROSPERO,PROSPERO,"How now? Moody?
+What is ’t thou canst demand?",-0.466,-0.13421
+the-tempest,The Tempest,main,1,2,2,108,speech,ARIEL,ARIEL,My liberty.,0.6369,0.66203
+the-tempest,The Tempest,main,1,2,2,109,speech,PROSPERO,PROSPERO,Before the time be out? No more!,-0.3595,-0.35539
+the-tempest,The Tempest,main,1,2,2,110,speech,ARIEL,ARIEL,"I prithee,
+Remember I have done thee worthy service,
+Told thee no lies, made thee no mistakings, served
+Without or grudge or grumblings. Thou didst promise
+To bate me a full year.",0.8736,0.32795
+the-tempest,The Tempest,main,1,2,2,111,speech,PROSPERO,PROSPERO,"Dost thou forget
+From what a torment I did free thee?",-0.4767,-0.52978
+the-tempest,The Tempest,main,1,2,2,112,speech,ARIEL,ARIEL,No.,0.0,-0.42519
+the-tempest,The Tempest,main,1,2,2,113,speech,PROSPERO,PROSPERO,"Thou dost, and think’st it much to tread the ooze
+Of the salt deep,
+To run upon the sharp wind of the north,
+To do me business in the veins o' th' earth
+When it is baked with frost.",-0.0772,-0.53617
+the-tempest,The Tempest,main,1,2,2,114,speech,ARIEL,ARIEL,"I do not, sir.",0.0,-0.5132
+the-tempest,The Tempest,main,1,2,2,115,speech,PROSPERO,PROSPERO,"Thou liest, malignant thing! Hast thou forgot
+The foul witch Sycorax, who with age and envy
+Was grown into a hoop? Hast thou forgot her?",-0.952,-0.50627
+the-tempest,The Tempest,main,1,2,2,116,speech,ARIEL,ARIEL,"No, sir.",0.0,-0.37996
+the-tempest,The Tempest,main,1,2,2,117,speech,PROSPERO,PROSPERO,Thou hast. Where was she born? Speak. Tell me.,0.0,0.01109
+the-tempest,The Tempest,main,1,2,2,118,speech,ARIEL,ARIEL,"Sir, in Argier.",0.0,0.28078
+the-tempest,The Tempest,main,1,2,2,119,speech,PROSPERO,PROSPERO,"Oh, was she so? I must
+Once in a month recount what thou hast been,
+Which thou forget’st. This damned witch Sycorax,
+For mischiefs manifold and sorceries terrible
+To enter human hearing, from Argier,
+Thou know’st, was banished. For one thing she did
+They would not take her life. Is not this true?",-0.9013,-0.79285
+the-tempest,The Tempest,main,1,2,2,120,speech,ARIEL,ARIEL,"Ay, sir.",0.4019,0.45258
+the-tempest,The Tempest,main,1,2,2,121,speech,PROSPERO,PROSPERO,"This blue-eyed hag was hither brought with child
+And here was left by th' sailors. Thou, my slave,
+As thou report’st thyself, wast then her servant.
+And, for thou wast a spirit too delicate
+To act her earthy and abhorred commands,
+Refusing her grand hests, she did confine thee,
+By help of her more potent ministers
+And in her most unmitigable rage,
+Into a cloven pine, within which rift
+Imprisoned thou didst painfully remain
+A dozen years; within which space she died
+And left thee there, where thou didst vent thy groans
+As fast as mill wheels strike. Then was this island—
+Save for the son that she did litter here,
+A freckled whelp hag-born—not honored with
+A human shape.",-0.9665,-0.68868
+the-tempest,The Tempest,main,1,2,2,122,speech,ARIEL,ARIEL,"Yes, Caliban, her son.",0.4019,0.61704
+the-tempest,The Tempest,main,1,2,2,123,speech,PROSPERO,PROSPERO,"Dull thing, I say so. He, that Caliban
+Whom now I keep in service. Thou best know’st
+What torment I did find thee in. Thy groans
+Did make wolves howl and penetrate the breasts
+Of ever angry bears. It was a torment
+To lay upon the damned, which Sycorax
+Could not again undo. It was mine art,
+When I arrived and heard thee, that made gape
+The pine and let thee out.",-0.9559,-0.04431
+the-tempest,The Tempest,main,1,2,2,124,speech,ARIEL,ARIEL,"I thank thee, master.",0.3612,0.585
+the-tempest,The Tempest,main,1,2,2,125,speech,PROSPERO,PROSPERO,"If thou more murmur’st, I will rend an oak
+And peg thee in his knotty entrails till
+Thou hast howled away twelve winters.",-0.3612,-0.02293
+the-tempest,The Tempest,main,1,2,2,126,speech,ARIEL,ARIEL,"Pardon, master.
+I will be correspondent to command
+And do my spiriting gently.",0.6369,0.10104
+the-tempest,The Tempest,main,1,2,2,127,speech,PROSPERO,PROSPERO,"Do so, and after two days
+I will discharge thee.",0.6369,0.32884
+the-tempest,The Tempest,main,1,2,2,128,speech,ARIEL,ARIEL,"That’s my noble master!
+What shall I do? Say, what? What shall I do?",0.5903,0.50452
+the-tempest,The Tempest,main,1,2,2,129,speech,PROSPERO,PROSPERO,"Go make thyself like a nymph o' th' sea. Be subject
+To no sight but thine and mine, invisible
+To every eyeball else. Go take this shape
+And hither come in ’t. Go hence with diligence.",0.4588,0.44082
+the-tempest,The Tempest,main,1,2,2,130,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,1,2,2,131,speech,PROSPERO,PROSPERO,"[to MIRANDA]
+Awake, dear heart, awake! Thou hast slept well.
+Awake!",0.6114,0.74454
+the-tempest,The Tempest,main,1,2,2,132,speech,MIRANDA,MIRANDA,"[waking] The strangeness of your story put
+Heaviness in me.",0.0,-0.55209
+the-tempest,The Tempest,main,1,2,2,133,speech,PROSPERO,PROSPERO,"Shake it off. Come on.
+We’ll visit Caliban, my slave who never
+Yields us kind answer.",-0.4646,-0.21283
+the-tempest,The Tempest,main,1,2,2,134,speech,MIRANDA,MIRANDA,"'Tis a villain, sir,
+I do not love to look on.",-0.25,-0.63135
+the-tempest,The Tempest,main,1,2,2,135,speech,PROSPERO,PROSPERO,"But as ’tis,
+We cannot miss him. He does make our fire,
+Fetch in our wood, and serves in offices
+That profit us. What, ho! Slave! Caliban!
+Thou earth, thou! Speak.",0.3871,0.59274
+the-tempest,The Tempest,main,1,2,2,136,speech,CALIBAN,CALIBAN,[within] There’s wood enough within.,0.0,0.06675
+the-tempest,The Tempest,main,1,2,2,137,speech,PROSPERO,PROSPERO,"Come forth, I say! There’s other business for thee.
+Come, thou tortoise! When?",0.0,0.51688
+the-tempest,The Tempest,main,1,2,2,138,stage_direction,,,"ARIEL enters, in the form of a water nymph.",0.0,0.01736
+the-tempest,The Tempest,main,1,2,2,139,speech,PROSPERO,PROSPERO,"Fine apparition! My quaint Ariel,
+Hark in thine ear. [whispers to ARIEL]",0.8016,0.54459
+the-tempest,The Tempest,main,1,2,2,140,speech,ARIEL,ARIEL,My lord it shall be done.,0.0,0.42492
+the-tempest,The Tempest,main,1,2,2,141,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,1,2,2,142,speech,PROSPERO,PROSPERO,"[to CALIBAN] Thou poisonous slave, got by the devil
+himself
+Upon thy wicked dam, come forth!",-0.8908,0.47275
+the-tempest,The Tempest,main,1,2,2,143,stage_direction,,,CALIBAN enters.,0.0,0.01301
+the-tempest,The Tempest,main,1,2,2,144,speech,CALIBAN,CALIBAN,"As wicked dew as e'er my mother brushed
+With raven’s feather from unwholesome fen
+Drop on you both! A southwest blow on ye
+And blister you all o'er!",-0.6988,0.25115
+the-tempest,The Tempest,main,1,2,2,145,speech,PROSPERO,PROSPERO,"For this, be sure, tonight thou shalt have cramps,
+Side-stitches that shall pen thy breath up. Urchins
+Shall, forth at vast of night that they may work,
+All exercise on thee. Thou shalt be pinched
+As thick as honeycomb, each pinch more stinging
+Than bees that made 'em.",-0.5267,-0.73736
+the-tempest,The Tempest,main,1,2,2,146,speech,CALIBAN,CALIBAN,"I must eat my dinner.
+This island’s mine, by Sycorax my mother,
+Which thou takest from me. When thou camest first,
+Thou strok’st me and made much of me, wouldst give me
+Water with berries in ’t, and teach me how
+To name the bigger light, and how the less,
+That burn by day and night. And then I loved thee
+And showed thee all the qualities o' th' isle,
+The fresh springs, brine pits, barren place and
+fertile.
+Cursed be I that did so! All the charms
+Of Sycorax, toads, beetles, bats, light on you!
+For I am all the subjects that you have,
+Which first was mine own king. And here you sty me
+In this hard rock, whiles you do keep from me
+The rest o' th' island.",0.8241,0.62945
+the-tempest,The Tempest,main,1,2,2,147,speech,PROSPERO,PROSPERO,"Thou most lying slave,
+Whom stripes may move, not kindness! I have used thee,
+Filth as thou art, with human care, and lodged thee
+In mine own cell till thou didst seek to violate
+The honor of my child.",-0.8771,-0.73694
+the-tempest,The Tempest,main,1,2,2,148,speech,CALIBAN,CALIBAN,"Oh ho, oh ho! Would ’t had been done!
+Thou didst prevent me. I had peopled else
+This isle with Calibans.",0.3365,0.53667
+the-tempest,The Tempest,main,1,2,2,149,speech,MIRANDA,MIRANDA,"Abhorrèd slave,
+Which any print of goodness wilt not take,
+Being capable of all ill! I pitied thee,
+Took pains to make thee speak, taught thee each hour
+One thing or other. When thou didst not, savage,
+Know thine own meaning, but wouldst gabble like
+A thing most brutish, I endowed thy purposes
+With words that made them known. But thy vile race,
+Though thou didst learn, had that in ’t which good
+natures
+Could not abide to be with. Therefore wast thou
+Deservedly confined into this rock,
+Who hadst deserved more than a prison.",-0.8788,0.08479
+the-tempest,The Tempest,main,1,2,2,150,speech,CALIBAN,CALIBAN,"You taught me language, and my profit on ’t
+Is I know how to curse. The red plague rid you
+For learning me your language!",-0.7263,0.45199
+the-tempest,The Tempest,main,1,2,2,151,speech,PROSPERO,PROSPERO,"Hag-seed, hence!
+Fetch us in fuel. And be quick, thou 'rt best,
+To answer other business. Shrug’st thou, malice?
+If thou neglect’st or dost unwillingly
+What I command, I’ll rack thee with old cramps,
+Fill all thy bones with aches, make thee roar
+That beasts shall tremble at thy din.",-0.9508,-0.71089
+the-tempest,The Tempest,main,1,2,2,152,speech,CALIBAN,CALIBAN,"No, pray thee.
+[aside] I must obey. His art is of such power,
+It would control my dam’s god, Setebos,
+And make a vassal of him.",0.4051,0.84185
+the-tempest,The Tempest,main,1,2,2,153,speech,PROSPERO,PROSPERO,"So, slave, hence!",0.3382,0.21973
+the-tempest,The Tempest,main,1,2,2,154,stage_direction,,,CALIBAN exits.,0.0,0.00784
+the-tempest,The Tempest,main,1,2,2,155,stage_direction,,,"FERDINAND enters with ARIEL, who is invisible and is playing music and singing.",0.2023,0.05328
+the-tempest,The Tempest,main,1,2,2,156,speech,ARIEL,ARIEL,"[sings]
+Come unto these yellow sands,
+And then take hands.
+Curtsied when you have, and kissed
+The wild waves whist.
+Foot it featly here and there,
+And, sweet sprites, bear
+The burden. Hark, hark!",0.4574,0.52781
+the-tempest,The Tempest,main,1,2,2,157,speech,SPIRITS,SPIRITS,"[dispersedly, within] Bow-wow.",0.0,0.00747
+the-tempest,The Tempest,main,1,2,2,158,speech,ARIEL,ARIEL,The watchdogs bark.,0.0,-0.37007
+the-tempest,The Tempest,main,1,2,2,159,speech,SPIRITS,SPIRITS,(within) Bow-wow.,0.0,0.53726
+the-tempest,The Tempest,main,1,2,2,160,speech,ARIEL,ARIEL,"Hark, hark! I hear
+The strain of strutting chanticleer
+Cry “Cock-a-diddle-dow.”",-0.4574,-0.03283
+the-tempest,The Tempest,main,1,2,2,161,speech,FERDINAND,FERDINAND,"Where should this music be? I' th' air or th' earth?
+It sounds no more, and sure, it waits upon
+Some god o' th' island. Sitting on a bank,
+Weeping again the king my father’s wrack,
+This music crept by me upon the waters,
+Allaying both their fury and my passion
+With its sweet air. Thence I have followed it,
+Or it hath drawn me rather. But ’tis gone.
+No, it begins again.",-0.264,0.3837
+the-tempest,The Tempest,main,1,2,2,162,speech,ARIEL,ARIEL,"[sings]
+Full fathom five thy father lies.
+Of his bones are coral made.
+Those are pearls that were his eyes.
+Nothing of him that doth fade,
+But doth suffer a sea-change
+Into something rich and strange.
+Sea nymphs hourly ring his knell.",-0.5994,0.44556
+the-tempest,The Tempest,main,1,2,2,163,speech,SPIRITS,SPIRITS,[within] Ding-dong.,0.0,0.0552
+the-tempest,The Tempest,main,1,2,2,164,speech,ARIEL,ARIEL,"Hark, now I hear them.",0.0,0.04233
+the-tempest,The Tempest,main,1,2,2,165,speech,SPIRITS,SPIRITS,"[within] Ding-dong, bell.",0.0,0.11817
+the-tempest,The Tempest,main,1,2,2,166,speech,FERDINAND,FERDINAND,"The ditty does remember my drowned father.
+This is no mortal business, nor no sound
+That the earth owes. I hear it now above me.",-0.1779,-0.4129
+the-tempest,The Tempest,main,1,2,2,167,speech,PROSPERO,PROSPERO,"[to MIRANDA] The fringèd curtains of thine eye advance
+And say what thou seest yond.",0.0,0.07523
+the-tempest,The Tempest,main,1,2,2,168,speech,MIRANDA,MIRANDA,"What is ’t? A spirit?
+Lord, how it looks about! Believe me, sir,
+It carries a brave form. But ’tis a spirit.",0.4682,0.79992
+the-tempest,The Tempest,main,1,2,2,169,speech,PROSPERO,PROSPERO,"No, wench! It eats and sleeps and hath such senses
+As we have, such. This gallant which thou seest
+Was in the wrack. And, but he’s something stained
+With grief that’s beauty’s canker, thou mightst call
+him
+A goodly person. He hath lost his fellows
+And strays about to find 'em.",0.6476,-0.33649
+the-tempest,The Tempest,main,1,2,2,170,speech,MIRANDA,MIRANDA,"I might call him
+A thing divine, for nothing natural
+I ever saw so noble.",0.7155,0.20792
+the-tempest,The Tempest,main,1,2,2,171,speech,PROSPERO,PROSPERO,"[aside] It goes on, I see,
+As my soul prompts it. Spirit, fine spirit! I’ll free
+thee
+Within two days for this.",0.9292,0.78921
+the-tempest,The Tempest,main,1,2,2,172,speech,FERDINAND,FERDINAND,"[seeing MIRANDA] Most sure, the goddess
+On whom these airs attend! Vouchsafe my prayer
+May know if you remain upon this island,
+And that you will some good instruction give
+How I may bear me here. My prime request,
+Which I do last pronounce, is, O you wonder!
+If you be maid or no.",0.8263,0.7748
+the-tempest,The Tempest,main,1,2,2,173,speech,MIRANDA,MIRANDA,"No wonder, sir,
+But certainly a maid.",0.4019,-0.2933
+the-tempest,The Tempest,main,1,2,2,174,speech,FERDINAND,FERDINAND,"My language! Heavens,
+I am the best of them that speak this speech,
+Were I but where ’tis spoken.",0.3382,0.83178
+the-tempest,The Tempest,main,1,2,2,175,speech,PROSPERO,PROSPERO,"How? The best?
+What wert thou if the King of Naples heard thee?",0.0,-0.07952
+the-tempest,The Tempest,main,1,2,2,176,speech,FERDINAND,FERDINAND,"A single thing, as I am now, that wonders
+To hear thee speak of Naples. He does hear me,
+And that he does I weep. Myself am Naples,
+Who with mine eyes, never since at ebb, beheld
+The king my father wracked.",-0.6597,0.72823
+the-tempest,The Tempest,main,1,2,2,177,speech,MIRANDA,MIRANDA,"Alack, for mercy!",-0.5093,-0.69692
+the-tempest,The Tempest,main,1,2,2,178,speech,FERDINAND,FERDINAND,"Yes, faith, and all his lords, the Duke of Milan
+And his brave son being twain.",0.6705,-0.04864
+the-tempest,The Tempest,main,1,2,2,179,speech,PROSPERO,PROSPERO,"[aside] The Duke of Milan
+And his more braver daughter could control thee
+If now ’twere fit to do ’t! At the first sight
+They have changed eyes. Delicate Ariel,
+I’ll set thee free for this.
+[to FERDINAND]
+A word, good sir.
+I fear you have done yourself some wrong. A word.",0.8805,0.75785
+the-tempest,The Tempest,main,1,2,2,180,speech,MIRANDA,MIRANDA,"[ aside] Why speaks my father so ungently? This
+Is the third man that e'er I saw, the first
+That e'er I sighed for. Pity move my father
+To be inclined my way!",0.3971,0.82085
+the-tempest,The Tempest,main,1,2,2,181,speech,FERDINAND,FERDINAND,"[to MIRANDA]
+Oh, if a virgin,
+And your affection not gone forth, I’ll make you
+The queen of Naples.",0.6369,0.70044
+the-tempest,The Tempest,main,1,2,2,182,speech,PROSPERO,PROSPERO,"Soft, sir! One word more.
+[ aside]
+They are both in either’s powers, but this swift
+business
+I must uneasy make lest too light winning
+Make the prize light.
+[To FERDINAND]
+One word more. I charge thee
+That thou attend me. Thou dost here usurp
+The name thou owest not, and hast put thyself
+Upon this island as a spy to win it
+From me, the lord on ’t.",0.8877,0.39623
+the-tempest,The Tempest,main,1,2,2,183,speech,FERDINAND,FERDINAND,"No, as I am a man!",0.5093,0.56129
+the-tempest,The Tempest,main,1,2,2,184,speech,MIRANDA,MIRANDA,"There’s nothing ill can dwell in such a temple.
+If the ill spirit have so fair a house,
+Good things will strive to dwell with ’t.",0.7711,-0.47286
+the-tempest,The Tempest,main,1,2,2,185,speech,PROSPERO,PROSPERO,"[to FERDINAND] Follow me.
+[to MIRANDA] Speak not you for him. He’s a traitor.
+[to FERDINAND] Come,
+I’ll manacle thy neck and feet together.
+Seawater shalt thou drink. Thy food shall be
+The fresh-brook muscles, withered roots, and husks
+Wherein the acorn cradled. Follow.",-0.0772,-0.84295
+the-tempest,The Tempest,main,1,2,2,186,speech,FERDINAND,FERDINAND,"No.
+I will resist such entertainment till
+Mine enemy has more power.",-0.6187,-0.29335
+the-tempest,The Tempest,main,1,2,2,187,speech,MIRANDA,MIRANDA,"O dear father,
+Make not too rash a trial of him, for
+He’s gentle and not fearful.",0.2914,-0.19219
+the-tempest,The Tempest,main,1,2,2,188,speech,PROSPERO,PROSPERO,"What, I say?
+My foot my tutor?— Put thy sword up, traitor,
+Who makest a show but darest not strike, thy conscience
+Is so possessed with guilt. Come from thy ward,
+For I can here disarm thee with this stick
+And make thy weapon drop.",-0.7514,-0.57444
+the-tempest,The Tempest,main,1,2,2,189,speech,MIRANDA,MIRANDA,"Beseech you, father.",0.0,0.75842
+the-tempest,The Tempest,main,1,2,2,190,speech,PROSPERO,PROSPERO,Hence! Hang not on my garments.,0.0,-0.49532
+the-tempest,The Tempest,main,1,2,2,191,speech,MIRANDA,MIRANDA,"Sir, have pity,
+I’ll be his surety.",0.4215,-0.43004
+the-tempest,The Tempest,main,1,2,2,192,speech,PROSPERO,PROSPERO,"Silence! One word more
+Shall make me chide thee, if not hate thee. What,
+An advocate for an imposter? Hush,
+Thou think’st there is no more such shapes as he,
+Having seen but him and Caliban. Foolish wench,
+To th' most of men this is a Caliban
+And they to him are angels.",-0.2091,-0.47267
+the-tempest,The Tempest,main,1,2,2,193,speech,MIRANDA,MIRANDA,"My affections
+Are then most humble. I have no ambition
+To see a goodlier man.",0.7532,-0.49665
+the-tempest,The Tempest,main,1,2,2,194,speech,PROSPERO,PROSPERO,"[to FERDINAND] Come on. Obey.
+Thy nerves are in their infancy again
+And have no vigor in them.",-0.2363,-0.0118
+the-tempest,The Tempest,main,1,2,2,195,speech,FERDINAND,FERDINAND,"So they are.
+My spirits, as in a dream, are all bound up.
+My father’s loss, the weakness which I feel,
+The wrack of all my friends, nor this man’s threats,
+To whom I am subdued, are but light to me,
+Might I but through my prison once a day
+Behold this maid. All corners else o' th' earth
+Let liberty make use of. Space enough
+Have I in such a prison.",-0.6369,-0.7802
+the-tempest,The Tempest,main,1,2,2,196,speech,PROSPERO,PROSPERO,"[aside] It works!
+[to FERDINAND] Come on.
+[aside] Thou hast done well, fine Ariel!
+[to FERDINAND] Follow me.
+[to ARIEL] Hark what thou else shalt do me.",0.3382,0.64133
+the-tempest,The Tempest,main,1,2,2,197,speech,MIRANDA,MIRANDA,"[to FERDINAND] Be of comfort.
+My father’s of a better nature, sir,
+Than he appears by speech. This is unwonted
+Which now came from him.",0.854,0.48598
+the-tempest,The Tempest,main,1,2,2,198,speech,PROSPERO,PROSPERO,"[to ARIEL] Thou shalt be free
+As mountain winds. But then exactly do
+All points of my command.",0.2846,0.44002
+the-tempest,The Tempest,main,1,2,2,199,speech,ARIEL,ARIEL,To th' syllable.,0.0,-0.3068
+the-tempest,The Tempest,main,1,2,2,200,speech,PROSPERO,PROSPERO,"[to FERDINAND] Come, follow.
+[to MIRANDA] Speak not for him.",0.0,-0.246
+the-tempest,The Tempest,main,1,2,2,201,stage_direction,,,They exit.,0.0,-0.13698
+the-tempest,The Tempest,main,2,1,3,202,stage_direction,,,"ALONSO, SEBASTIAN, ANTONIO, GONZALO, ADRIAN, FRANCISCO, and others enter.",0.0,0.04725
+the-tempest,The Tempest,main,2,1,3,203,speech,GONZALO,GONZALO,"[to ALONSO]
+Beseech you, sir, be merry. You have cause,
+So have we all, of joy, for our escape
+Is much beyond our loss. Our hint of woe
+Is common. Every day some sailor’s wife,
+The masters of some merchant, and the merchant
+Have just our theme of woe. But for the miracle—
+I mean our preservation—few in millions
+Can speak like us. Then wisely, good sir, weigh
+Our sorrow with our comfort.",0.9063,-0.45147
+the-tempest,The Tempest,main,2,1,3,204,speech,ALONSO,ALONSO,"Prithee, peace.",0.3182,0.06283
+the-tempest,The Tempest,main,2,1,3,205,speech,SEBASTIAN,SEBASTIAN,[to ANTONIO] He receives comfort like cold porridge.,0.8519,-0.20979
+the-tempest,The Tempest,main,2,1,3,206,speech,ANTONIO,ANTONIO,[to SEBASTIAN] The visitor will not give him o'er so.,-0.296,-0.53565
+the-tempest,The Tempest,main,2,1,3,207,speech,SEBASTIAN,SEBASTIAN,"Look he’s winding up the watch of his wit. By and by it
+will strike.",0.5719,-0.4131
+the-tempest,The Tempest,main,2,1,3,208,speech,GONZALO,GONZALO,[to ALONSO] Sir—,0.0,0.51564
+the-tempest,The Tempest,main,2,1,3,209,speech,SEBASTIAN,SEBASTIAN,[to ANTONIO] One. Tell.,-0.3612,0.02596
+the-tempest,The Tempest,main,2,1,3,210,speech,GONZALO,GONZALO,"When every grief is entertained that’s offered,
+Comes to th' entertainer—",0.2023,-0.00128
+the-tempest,The Tempest,main,2,1,3,211,speech,SEBASTIAN,SEBASTIAN,A dollar.,0.0,-0.00349
+the-tempest,The Tempest,main,2,1,3,212,speech,GONZALO,GONZALO,"Dolor comes to him, indeed. You have spoken truer than
+you purposed.",0.6124,0.51237
+the-tempest,The Tempest,main,2,1,3,213,speech,SEBASTIAN,SEBASTIAN,You have taken it wiselier than I meant you should.,-0.2484,-0.43757
+the-tempest,The Tempest,main,2,1,3,214,speech,GONZALO,GONZALO,"[to ALONSO] Therefore, my lord—",0.0,0.72665
+the-tempest,The Tempest,main,2,1,3,215,speech,ANTONIO,ANTONIO,"[to SEBASTIAN] Fie, what a spendthrift is he of his
+tongue!",0.5093,0.57471
+the-tempest,The Tempest,main,2,1,3,216,speech,ALONSO,ALONSO,"[to GONZALO] I prithee, spare.",0.0258,0.15624
+the-tempest,The Tempest,main,2,1,3,217,speech,GONZALO,GONZALO,"Well, I have done. But yet—",0.1406,0.27177
+the-tempest,The Tempest,main,2,1,3,218,speech,SEBASTIAN,SEBASTIAN,[to ANTONIO] He will be talking.,0.0,-0.17739
+the-tempest,The Tempest,main,2,1,3,219,speech,ANTONIO,ANTONIO,"Which, of he or Adrian, for a good wager, first begins
+to crow?",0.4404,-0.32859
+the-tempest,The Tempest,main,2,1,3,220,speech,SEBASTIAN,SEBASTIAN,The old cock.,0.0,-0.07902
+the-tempest,The Tempest,main,2,1,3,221,speech,ANTONIO,ANTONIO,The cockerel.,0.0,0.0505
+the-tempest,The Tempest,main,2,1,3,222,speech,SEBASTIAN,SEBASTIAN,Done. The wager?,0.5859,0.00629
+the-tempest,The Tempest,main,2,1,3,223,speech,ANTONIO,ANTONIO,A laughter.,0.7579,0.4554
+the-tempest,The Tempest,main,2,1,3,224,speech,SEBASTIAN,SEBASTIAN,A match!,0.0,0.50176
+the-tempest,The Tempest,main,2,1,3,225,speech,ADRIAN,ADRIAN,Though this island seem to be desert—,0.0,-0.63513
+the-tempest,The Tempest,main,2,1,3,226,speech,ANTONIO,ANTONIO,"[to SEBASTIAN] Ha, ha, ha!",0.0,0.54035
+the-tempest,The Tempest,main,2,1,3,227,speech,SEBASTIAN,SEBASTIAN,So you’re paid.,0.5106,0.47148
+the-tempest,The Tempest,main,2,1,3,228,speech,ADRIAN,ADRIAN,Uninhabitable and almost inaccessible—,0.0,-0.82503
+the-tempest,The Tempest,main,2,1,3,229,speech,SEBASTIAN,SEBASTIAN,Yet—,0.0,-0.2364
+the-tempest,The Tempest,main,2,1,3,230,speech,ADRIAN,ADRIAN,Yet—,0.0,-0.12403
+the-tempest,The Tempest,main,2,1,3,231,speech,ANTONIO,ANTONIO,He could not miss ’t.,0.0,-0.55347
+the-tempest,The Tempest,main,2,1,3,232,speech,ADRIAN,ADRIAN,"It must needs be of subtle, tender, and delicate
+temperance.",0.4404,0.16088
+the-tempest,The Tempest,main,2,1,3,233,speech,ANTONIO,ANTONIO,Temperance was a delicate wench.,0.0,0.40329
+the-tempest,The Tempest,main,2,1,3,234,speech,SEBASTIAN,SEBASTIAN,"Ay, and a subtle, as he most learnedly delivered.",0.7133,0.3004
+the-tempest,The Tempest,main,2,1,3,235,speech,ADRIAN,ADRIAN,The air breathes upon us here most sweetly.,0.7783,0.45207
+the-tempest,The Tempest,main,2,1,3,236,speech,SEBASTIAN,SEBASTIAN,"As if it had lungs, and rotten ones.",0.0,-0.36256
+the-tempest,The Tempest,main,2,1,3,237,speech,ANTONIO,ANTONIO,Or as ’twere perfumed by a fen.,0.0,-0.29947
+the-tempest,The Tempest,main,2,1,3,238,speech,GONZALO,GONZALO,Here is everything advantageous to life.,0.4404,0.45614
+the-tempest,The Tempest,main,2,1,3,239,speech,ANTONIO,ANTONIO,True. Save means to live.,0.4215,0.22035
+the-tempest,The Tempest,main,2,1,3,240,speech,SEBASTIAN,SEBASTIAN,"Of that there’s none, or little.",0.0,-0.45428
+the-tempest,The Tempest,main,2,1,3,241,speech,GONZALO,GONZALO,How lush and lusty the grass looks! How green!,0.8467,0.6917
+the-tempest,The Tempest,main,2,1,3,242,speech,ANTONIO,ANTONIO,The ground indeed is tawny.,0.0,-0.37751
+the-tempest,The Tempest,main,2,1,3,243,speech,SEBASTIAN,SEBASTIAN,With an eye of green in ’t.,0.0,-0.01312
+the-tempest,The Tempest,main,2,1,3,244,speech,ANTONIO,ANTONIO,He misses not much.,-0.1531,-0.46531
+the-tempest,The Tempest,main,2,1,3,245,speech,SEBASTIAN,SEBASTIAN,"No, he doth but mistake the truth totally.",0.1027,-0.54905
+the-tempest,The Tempest,main,2,1,3,246,speech,GONZALO,GONZALO,"But the rarity of it is—which is indeed almost beyond
+credit—",0.1586,-0.51402
+the-tempest,The Tempest,main,2,1,3,247,speech,SEBASTIAN,SEBASTIAN,As many vouched rarities are.,0.2716,0.05698
+the-tempest,The Tempest,main,2,1,3,248,speech,GONZALO,GONZALO,"That our garments, being, as they were, drenched in the
+sea, hold notwithstanding their freshness and glosses,
+being rather new-dyed than stained with salt water.",0.6124,-0.12922
+the-tempest,The Tempest,main,2,1,3,249,speech,ANTONIO,ANTONIO,"If but one of his pockets could speak, would it not say
+he lies?",-0.5106,-0.09207
+the-tempest,The Tempest,main,2,1,3,250,speech,SEBASTIAN,SEBASTIAN,"Ay, or very falsely pocket up his report.",0.25,-0.11891
+the-tempest,The Tempest,main,2,1,3,251,speech,GONZALO,GONZALO,"Methinks our garments are now as fresh as when we put
+them on first in Afric, at the marriage of the king’s
+fair daughter Claribel to the King of Tunis.",0.7351,-0.01211
+the-tempest,The Tempest,main,2,1,3,252,speech,SEBASTIAN,SEBASTIAN,"'Twas a sweet marriage, and we prosper well in our
+return.",0.8316,0.51817
+the-tempest,The Tempest,main,2,1,3,253,speech,ADRIAN,ADRIAN,"Tunis was never graced before with such a paragon to
+their queen.",0.8176,0.64668
+the-tempest,The Tempest,main,2,1,3,254,speech,GONZALO,GONZALO,Not since widow Dido’s time.,0.0,-0.45493
+the-tempest,The Tempest,main,2,1,3,255,speech,ANTONIO,ANTONIO,"Widow! A pox o' that! How came that “widow” in? Widow
+Dido!",-0.7562,0.74215
+the-tempest,The Tempest,main,2,1,3,256,speech,SEBASTIAN,SEBASTIAN,"What if he had said “widower Aeneas” too? Good Lord,
+how you take it!",0.4404,0.0137
+the-tempest,The Tempest,main,2,1,3,257,speech,ADRIAN,ADRIAN,"“Widow Dido” said you? You make me study of that. She
+was of Carthage, not of Tunis.",0.0,-0.18149
+the-tempest,The Tempest,main,2,1,3,258,speech,GONZALO,GONZALO,"This Tunis, sir, was Carthage.",0.0,-0.0481
+the-tempest,The Tempest,main,2,1,3,259,speech,ADRIAN,ADRIAN,Carthage?,0.0,-0.0191
+the-tempest,The Tempest,main,2,1,3,260,speech,GONZALO,GONZALO,"I assure you, Carthage.",0.3182,0.17837
+the-tempest,The Tempest,main,2,1,3,261,speech,SEBASTIAN,SEBASTIAN,"His word is more than the miraculous harp. He hath
+raised the wall and houses too.",0.7096,0.03894
+the-tempest,The Tempest,main,2,1,3,262,speech,ANTONIO,ANTONIO,What impossible matter will he make easy next?,0.0,-0.13656
+the-tempest,The Tempest,main,2,1,3,263,speech,SEBASTIAN,SEBASTIAN,"I think he will carry this island home in his pocket
+and give it his son for an apple.",0.0,0.1248
+the-tempest,The Tempest,main,2,1,3,264,speech,ANTONIO,ANTONIO,"And sowing the kernels of it in the sea, bring forth
+more islands.",0.0,-0.01956
+the-tempest,The Tempest,main,2,1,3,265,speech,GONZALO,GONZALO,Ay.,0.4019,0.2542
+the-tempest,The Tempest,main,2,1,3,266,speech,ANTONIO,ANTONIO,"Why, in good time.",0.5267,-0.07252
+the-tempest,The Tempest,main,2,1,3,267,speech,GONZALO,GONZALO,"[to ALONSO] Sir, we were talking that our garments seem
+now as fresh as when we were at Tunis at the marriage
+of your daughter, who is now queen.",0.4019,-0.40132
+the-tempest,The Tempest,main,2,1,3,268,speech,ANTONIO,ANTONIO,And the rarest that e'er came there.,0.5984,0.66268
+the-tempest,The Tempest,main,2,1,3,269,speech,SEBASTIAN,SEBASTIAN,"Bate, I beseech you, widow Dido.",0.0,-0.00718
+the-tempest,The Tempest,main,2,1,3,270,speech,ANTONIO,ANTONIO,"Oh, widow Dido? Ay, widow Dido.",0.0,-0.01633
+the-tempest,The Tempest,main,2,1,3,271,speech,GONZALO,GONZALO,"Is not, sir, my doublet as fresh as the first day I
+wore it? I mean, in a sort.",0.4019,0.29687
+the-tempest,The Tempest,main,2,1,3,272,speech,ANTONIO,ANTONIO,That “sort” was well fished for.,0.4404,0.42859
+the-tempest,The Tempest,main,2,1,3,273,speech,GONZALO,GONZALO,When I wore it at your daughter’s marriage?,0.0,-0.03602
+the-tempest,The Tempest,main,2,1,3,274,speech,ALONSO,ALONSO,"You cram these words into mine ears against
+The stomach of my sense. Would I had never
+Married my daughter there! For, coming thence,
+My son is lost and, in my rate, she too,
+Who is so far from Italy removed
+I ne'er again shall see her. O thou mine heir
+Of Naples and of Milan, what strange fish
+Hath made his meal on thee?",-0.69,-0.61193
+the-tempest,The Tempest,main,2,1,3,275,speech,FRANCISCO,FRANCISCO,"Sir, he may live.
+I saw him beat the surges under him,
+And ride upon their backs. He trod the water,
+Whose enmity he flung aside, and breasted
+The surge most swoll'n that met him. His bold head
+'Bove the contentious waves he kept, and oared
+Himself with his good arms in lusty stroke
+To th' shore, that o'er his wave-worn basis bowed,
+As stooping to relieve him. I not doubt
+He came alive to land.",0.8661,0.52382
+the-tempest,The Tempest,main,2,1,3,276,speech,ALONSO,ALONSO,"No, no, he’s gone.",-0.6486,-0.71477
+the-tempest,The Tempest,main,2,1,3,277,speech,SEBASTIAN,SEBASTIAN,"Sir, you may thank yourself for this great loss,
+That would not bless our Europe with your daughter,
+But rather loose her to an African,
+Where she at least is banished from your eye,
+Who hath cause to wet the grief on ’t.",0.6678,-0.55129
+the-tempest,The Tempest,main,2,1,3,278,speech,ALONSO,ALONSO,"Prithee, peace.",0.3182,0.06283
+the-tempest,The Tempest,main,2,1,3,279,speech,SEBASTIAN,SEBASTIAN,"You were kneeled to and importuned otherwise
+By all of us, and the fair soul herself
+Weighed between loathness and obedience, at
+Which end o' th' beam should bow. We have lost your
+son,
+I fear, forever. Milan and Naples have
+More widows in them of this business' making
+Than we bring men to comfort them.
+The fault’s your own.",-0.7717,-0.84777
+the-tempest,The Tempest,main,2,1,3,280,speech,ALONSO,ALONSO,So is the dearest o' th' loss.,-0.0516,-0.15863
+the-tempest,The Tempest,main,2,1,3,281,speech,GONZALO,GONZALO,"My lord Sebastian,
+The truth you speak doth lack some gentleness
+And time to speak it in. You rub the sore
+When you should bring the plaster.",-0.5517,-0.87197
+the-tempest,The Tempest,main,2,1,3,282,speech,SEBASTIAN,SEBASTIAN,Very well.,0.0,0.0531
+the-tempest,The Tempest,main,2,1,3,283,speech,ANTONIO,ANTONIO,And most chirurgeonly.,0.0,0.62248
+the-tempest,The Tempest,main,2,1,3,284,speech,GONZALO,GONZALO,"[to ALONSO] It is foul weather in us all, good sir,
+When you are cloudy.",0.4404,-0.0981
+the-tempest,The Tempest,main,2,1,3,285,speech,SEBASTIAN,SEBASTIAN,Foul weather?,0.0,-0.02845
+the-tempest,The Tempest,main,2,1,3,286,speech,ANTONIO,ANTONIO,Very foul.,0.0,-0.04393
+the-tempest,The Tempest,main,2,1,3,287,speech,GONZALO,GONZALO,"Had I plantation of this isle, my lord—",0.0,0.0053
+the-tempest,The Tempest,main,2,1,3,288,speech,ANTONIO,ANTONIO,He’d sow ’t with nettle seed.,-0.4215,-0.60775
+the-tempest,The Tempest,main,2,1,3,289,speech,SEBASTIAN,SEBASTIAN,"Or docks, or mallows.",0.0,-0.0201
+the-tempest,The Tempest,main,2,1,3,290,speech,GONZALO,GONZALO,"And were the king on ’t, what would I do?",0.3612,-0.00498
+the-tempest,The Tempest,main,2,1,3,291,speech,SEBASTIAN,SEBASTIAN,'Scape being drunk for want of wine.,-0.34,-0.50041
+the-tempest,The Tempest,main,2,1,3,292,speech,GONZALO,GONZALO,"I' th' commonwealth I would by contraries
+Execute all things. For no kind of traffic
+Would I admit. No name of magistrate.
+Letters should not be known. Riches, poverty,
+And use of service—none. Contract, succession,
+Bourn, bound of land, tilth, vineyard—none.
+No use of metal, corn, or wine, or oil.
+No occupation. All men idle, all.
+And women too, but innocent and pure.
+No sovereignty—",-0.6367,-0.71108
+the-tempest,The Tempest,main,2,1,3,293,speech,SEBASTIAN,SEBASTIAN,Yet he would be king on ’t.,-0.296,-0.46127
+the-tempest,The Tempest,main,2,1,3,294,speech,ANTONIO,ANTONIO,"The latter end of his commonwealth forgets the
+beginning.",0.0,-0.3261
+the-tempest,The Tempest,main,2,1,3,295,speech,GONZALO,GONZALO,"All things in common nature should produce
+Without sweat or endeavor. Treason, felony,
+Sword, pike, knife, gun, or need of any engine,
+Would I not have. But nature should bring forth
+Of its own kind all foison, all abundance,
+To feed my innocent people.",0.4114,-0.15213
+the-tempest,The Tempest,main,2,1,3,296,speech,SEBASTIAN,SEBASTIAN,No marrying ’mong his subjects?,-0.296,-0.04389
+the-tempest,The Tempest,main,2,1,3,297,speech,ANTONIO,ANTONIO,"None, man. All idle. Whores and knaves.",-0.6124,-0.83257
+the-tempest,The Tempest,main,2,1,3,298,speech,GONZALO,GONZALO,"I would with such perfection govern, sir,
+T' excel the Golden Age.",0.8244,0.72399
+the-tempest,The Tempest,main,2,1,3,299,speech,SEBASTIAN,SEBASTIAN,'Save his majesty!,0.6114,0.73501
+the-tempest,The Tempest,main,2,1,3,300,speech,ANTONIO,ANTONIO,Long live Gonzalo!,0.0,0.51092
+the-tempest,The Tempest,main,2,1,3,301,speech,GONZALO,GONZALO,"[to ALONSO] And—do you mark me, sir?",0.0,0.31284
+the-tempest,The Tempest,main,2,1,3,302,speech,ALONSO,ALONSO,"Prithee, no more. Thou dost talk nothing to me.",-0.4215,-0.65557
+the-tempest,The Tempest,main,2,1,3,303,speech,GONZALO,GONZALO,"I do well believe your highness, and did it to minister
+occasion to these gentlemen, who are of such sensible
+and nimble lungs that they always use to laugh at
+nothing.",0.8126,0.43111
+the-tempest,The Tempest,main,2,1,3,304,speech,ANTONIO,ANTONIO,'Twas you we laughed at.,0.4939,0.33036
+the-tempest,The Tempest,main,2,1,3,305,speech,GONZALO,GONZALO,"Who in this kind of merry fooling am nothing to you. So
+you may continue and laugh at nothing still.",0.8179,-0.12235
+the-tempest,The Tempest,main,2,1,3,306,speech,ANTONIO,ANTONIO,What a blow was there given!,-0.5562,-0.88294
+the-tempest,The Tempest,main,2,1,3,307,speech,SEBASTIAN,SEBASTIAN,An it had not fallen flat-long.,-0.5423,-0.49449
+the-tempest,The Tempest,main,2,1,3,308,speech,GONZALO,GONZALO,"You are gentlemen of brave mettle. You would lift the
+moon out of her sphere if she would continue in it five
+weeks without changing.",0.6369,0.44853
+the-tempest,The Tempest,main,2,1,3,309,stage_direction,,,"ARIEL enters, invisible, playing solemn music.",0.128,0.02553
+the-tempest,The Tempest,main,2,1,3,310,speech,SEBASTIAN,SEBASTIAN,"We would so, and then go a-batfowling.",0.34,-0.05051
+the-tempest,The Tempest,main,2,1,3,311,speech,ANTONIO,ANTONIO,"[to GONZALO] Nay, good my lord, be not angry.",0.2263,0.76576
+the-tempest,The Tempest,main,2,1,3,312,speech,GONZALO,GONZALO,"No, I warrant you. I will not adventure my discretion
+so weakly. Will you laugh me asleep, for I am very
+heavy?",0.3828,-0.73876
+the-tempest,The Tempest,main,2,1,3,313,speech,ANTONIO,ANTONIO,"Go sleep, and hear us.",0.5574,0.31246
+the-tempest,The Tempest,main,2,1,3,314,speech,ALONSO,ALONSO,"What, all so soon asleep? I wish mine eyes
+Would with themselves shut up my thoughts. I find
+They are inclined to do so.",0.1935,-0.74805
+the-tempest,The Tempest,main,2,1,3,315,speech,SEBASTIAN,SEBASTIAN,"Please you, sir,
+Do not omit the heavy offer of it.
+It seldom visits sorrow. When it doth,
+It is a comforter.",0.0145,-0.05381
+the-tempest,The Tempest,main,2,1,3,316,speech,ANTONIO,ANTONIO,"We two, my lord,
+Will guard your person while you take your rest
+And watch your safety.",0.6369,0.58074
+the-tempest,The Tempest,main,2,1,3,317,stage_direction,,,Thank you. Wondrous heavy. [falls asleep],-0.1761,-0.47465
+the-tempest,The Tempest,main,2,1,3,318,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,2,1,3,319,speech,SEBASTIAN,SEBASTIAN,What a strange drowsiness possesses them!,-0.7291,-0.13358
+the-tempest,The Tempest,main,2,1,3,320,speech,ANTONIO,ANTONIO,It is the quality o' th' climate.,0.0,0.35606
+the-tempest,The Tempest,main,2,1,3,321,speech,SEBASTIAN,SEBASTIAN,"Why
+Doth it not then our eyelids sink? I find not
+Myself disposed to sleep.",0.2584,-0.40281
+the-tempest,The Tempest,main,2,1,3,322,speech,ANTONIO,ANTONIO,"Nor I. My spirits are nimble.
+They fell together all, as by consent.
+They dropped, as by a thunderstroke. What might,
+Worthy Sebastian, O, what might—? No more.—
+And yet methinks I see it in thy face,
+What thou shouldst be. Th' occasion speaks thee, and
+My strong imagination sees a crown
+Dropping upon thy head.",0.7906,-0.42317
+the-tempest,The Tempest,main,2,1,3,323,speech,SEBASTIAN,SEBASTIAN,"What, art thou waking?",0.0,-0.01359
+the-tempest,The Tempest,main,2,1,3,324,speech,ANTONIO,ANTONIO,Do you not hear me speak?,0.0,-0.03846
+the-tempest,The Tempest,main,2,1,3,325,speech,SEBASTIAN,SEBASTIAN,"I do, and surely
+It is a sleepy language, and thou speak’st
+Out of thy sleep. What is it thou didst say?
+This is a strange repose, to be asleep
+With eyes wide open, standing, speaking, moving,
+And yet so fast asleep.",0.8109,0.18911
+the-tempest,The Tempest,main,2,1,3,326,speech,ANTONIO,ANTONIO,"Noble Sebastian,
+Thou let’st thy fortune sleep—die, rather—wink’st
+Whiles thou art waking.",0.8176,0.31644
+the-tempest,The Tempest,main,2,1,3,327,speech,SEBASTIAN,SEBASTIAN,"Thou dost snore distinctly.
+There’s meaning in thy snores.",0.1779,-0.10318
+the-tempest,The Tempest,main,2,1,3,328,speech,ANTONIO,ANTONIO,"I am more serious than my custom. You
+Must be so too if heed me, which to do
+Trebles thee o'er.",0.2975,-0.35746
+the-tempest,The Tempest,main,2,1,3,329,speech,SEBASTIAN,SEBASTIAN,"Well, I am standing water.",0.3612,-0.52676
+the-tempest,The Tempest,main,2,1,3,330,speech,ANTONIO,ANTONIO,I’ll teach you how to flow.,0.0,0.10766
+the-tempest,The Tempest,main,2,1,3,331,speech,SEBASTIAN,SEBASTIAN,"Do so. To ebb
+Hereditary sloth instructs me.",-0.3612,-0.31255
+the-tempest,The Tempest,main,2,1,3,332,speech,ANTONIO,ANTONIO,"Oh,
+If you but knew how you the purpose cherish
+Whiles thus you mock it! How, in stripping it,
+You more invest it! Ebbing men indeed
+Most often do so near the bottom run
+By their own fear or sloth.",0.8099,0.53748
+the-tempest,The Tempest,main,2,1,3,333,speech,SEBASTIAN,SEBASTIAN,"Prithee, say on.
+The setting of thine eye and cheek proclaim
+A matter from thee, and a birth indeed
+Which throes thee much to yield.",0.4588,0.24865
+the-tempest,The Tempest,main,2,1,3,334,speech,ANTONIO,ANTONIO,"Thus, sir:
+Although this lord of weak remembrance—this,
+Who shall be of as little memory
+When he is earthed— hath here almost persuade
+(For he’s a spirit of persuasion only,
+Professes to persuade) the king his son’s alive,
+'Tis as impossible that he’s undrowned
+And he that sleeps here swims.",0.6367,-0.49289
+the-tempest,The Tempest,main,2,1,3,335,speech,SEBASTIAN,SEBASTIAN,"I have no hope
+That he’s undrowned.",0.2249,-0.38486
+the-tempest,The Tempest,main,2,1,3,336,speech,ANTONIO,ANTONIO,"Oh, out of that “no hope”
+What great hope have you! No hope that way is
+Another way so high a hope that even
+Ambition cannot pierce a wink beyond,
+But doubt discovery there. Will you grant with me
+That Ferdinand is drowned?",0.8492,0.26864
+the-tempest,The Tempest,main,2,1,3,337,speech,SEBASTIAN,SEBASTIAN,He’s gone.,-0.6486,-0.68661
+the-tempest,The Tempest,main,2,1,3,338,speech,ANTONIO,ANTONIO,"Then, tell me,
+Who’s the next heir of Naples?",0.0,0.00468
+the-tempest,The Tempest,main,2,1,3,339,speech,SEBASTIAN,SEBASTIAN,Claribel.,0.0,0.3321
+the-tempest,The Tempest,main,2,1,3,340,speech,ANTONIO,ANTONIO,"She that is Queen of Tunis; she that dwells
+Ten leagues beyond man’s life; she that from Naples
+Can have no note, unless the sun were post—
+The man i' th' moon’s too slow— till newborn chins
+Be rough and razorable; she that from whom
+We all were sea-swallowed, though some cast again,
+And by that destiny to perform an act
+Whereof what’s past is prologue, what to come
+In yours and my discharge.",0.0,-0.29586
+the-tempest,The Tempest,main,2,1,3,341,speech,SEBASTIAN,SEBASTIAN,"What stuff is this? How say you?
+'Tis true, my brother’s daughter’s Queen of Tunis,
+So is she heir of Naples, ’twixt which regions
+There is some space.",0.8541,-0.21365
+the-tempest,The Tempest,main,2,1,3,342,speech,ANTONIO,ANTONIO,"A space whose every cubit
+Seems to cry out, “How shall that Claribel
+Measure us back to Naples? Keep in Tunis,
+And let Sebastian wake.” Say this were death
+That now hath seized them. Why, they were no worse
+Than now they are. There be that can rule Naples
+As well as he that sleeps, lords that can prate
+As amply and unnecessarily
+As this Gonzalo. I myself could make
+A chough of as deep chat. Oh, that you bore
+The mind that I do, what a sleep were this
+For your advancement! Do you understand me?",-0.3736,-0.81357
+the-tempest,The Tempest,main,2,1,3,343,speech,SEBASTIAN,SEBASTIAN,Methinks I do.,0.0,0.26801
+the-tempest,The Tempest,main,2,1,3,344,speech,ANTONIO,ANTONIO,"And how does your content
+Tender your own good fortune?",0.5719,-0.12526
+the-tempest,The Tempest,main,2,1,3,345,speech,SEBASTIAN,SEBASTIAN,"I remember
+You did supplant your brother Prospero.",0.0,-0.21542
+the-tempest,The Tempest,main,2,1,3,346,speech,ANTONIO,ANTONIO,"True.
+And look how well my garments sit upon me,
+Much feater than before. My brother’s servants
+Were then my fellows. Now they are my men.",0.7783,0.52556
+the-tempest,The Tempest,main,2,1,3,347,speech,SEBASTIAN,SEBASTIAN,"But, for your conscience?",-0.5719,-0.20347
+the-tempest,The Tempest,main,2,1,3,348,speech,ANTONIO,ANTONIO,"Ay, sir. Where lies that? If ’twere a kibe,
+'Twould put me to my slipper. But I feel not
+This deity in my bosom. Twenty consciences,
+That stand ’twixt me and Milan, candied be they
+And melt ere they molest! Here lies your brother,
+No better than the earth he lies upon,
+If he were that which now he’s like, that’s dead;
+Whom I, with this obedient steel, three inches of it,
+Can lay to bed for ever; whiles you, doing thus,
+To the perpetual wink for aye might put
+This ancient morsel, this Sir Prudence, who
+Should not upbraid our course. For all the rest,
+They’ll take suggestion as a cat laps milk.
+They’ll tell the clock to any business that
+We say befits the hour.",0.5583,-0.32579
+the-tempest,The Tempest,main,2,1,3,349,speech,SEBASTIAN,SEBASTIAN,"Thy case, dear friend,
+Shall be my precedent. As thou got’st Milan,
+I’ll come by Naples. Draw thy sword. One stroke
+Shall free thee from the tribute which thou payest.
+And I the king shall love thee.",0.9246,0.49738
+the-tempest,The Tempest,main,2,1,3,350,speech,ANTONIO,ANTONIO,"Draw together.
+And when I rear my hand, do you the like,
+To fall it on Gonzalo.",-0.6908,0.01006
+the-tempest,The Tempest,main,2,1,3,351,speech,SEBASTIAN,SEBASTIAN,"O, but one word.
+[speaks quietly to ANTONIO]",0.0,0.13153
+the-tempest,The Tempest,main,2,1,3,352,stage_direction,,,"ARIEL enters, invisible, playing music and singing.",0.2023,0.03974
+the-tempest,The Tempest,main,2,1,3,353,speech,ARIEL,ARIEL,"[to GONZALO] My master through his art foresees the
+danger
+That you, his friend, are, and sends me forth—
+For else his project dies—to keep them living.
+[sings in GONZALO’s ear]
+While you here do snoring lie,
+Open-eyed conspiracy
+His time doth take.
+If of life you keep a care,
+Shake off slumber and beware.
+Awake! Awake!",-0.5684,0.78053
+the-tempest,The Tempest,main,2,1,3,354,speech,ANTONIO,ANTONIO,Then let us both be sudden.,0.0,0.22478
+the-tempest,The Tempest,main,2,1,3,355,speech,GONZALO,GONZALO,"[waking and seeing them]
+Now, good angels preserve the king!",0.4389,0.62674
+the-tempest,The Tempest,main,2,1,3,356,speech,ALONSO,ALONSO,"[waking] Why, how now? Ho, awake!",-0.7178,-0.44228
+the-tempest,The Tempest,main,2,1,3,357,speech,GONZALO,GONZALO,What’s the matter?,0.0,-0.02599
+the-tempest,The Tempest,main,2,1,3,358,speech,SEBASTIAN,SEBASTIAN,"Whiles we stood here securing your repose,
+Even now, we heard a hollow burst of bellowing
+Like bulls, or rather lions. Did ’t not wake you?
+It struck mine ear most terribly.",-0.128,-0.7511
+the-tempest,The Tempest,main,2,1,3,359,speech,ALONSO,ALONSO,I heard nothing.,0.0,-0.41734
+the-tempest,The Tempest,main,2,1,3,360,speech,ANTONIO,ANTONIO,"Oh, ’twas a din to fright a monster’s ear,
+To make an earthquake! Sure, it was the roar
+Of a whole herd of lions.",0.2003,-0.36244
+the-tempest,The Tempest,main,2,1,3,361,speech,ALONSO,ALONSO,"Heard you this, Gonzalo?",0.0,-0.03076
+the-tempest,The Tempest,main,2,1,3,362,speech,GONZALO,GONZALO,"Upon mine honor, sir, I heard a humming,
+And that a strange one too, which did awake me.
+I shaked you, sir, and cried. As mine eyes opened,
+I saw their weapons drawn. There was a noise,
+That’s verily. 'Tis best we stand upon our guard,
+Or that we quit this place. Let’s draw our weapons.",0.4588,0.42101
+the-tempest,The Tempest,main,2,1,3,363,speech,ALONSO,ALONSO,"Lead off this ground, and let’s make further search
+For my poor son.",-0.5209,-0.10121
+the-tempest,The Tempest,main,2,1,3,364,speech,GONZALO,GONZALO,"Heavens keep him from these beasts!
+For he is, sure, i' th' island.",0.7184,0.31193
+the-tempest,The Tempest,main,2,1,3,365,speech,ALONSO,ALONSO,Lead away.,0.0,0.38449
+the-tempest,The Tempest,main,2,1,3,366,speech,ARIEL,ARIEL,"[aside] Prospero my lord shall know what I have done.
+So, King, go safely on to seek thy son.",0.4215,0.6787
+the-tempest,The Tempest,main,2,1,3,367,stage_direction,,,They exit.,0.0,-0.27456
+the-tempest,The Tempest,main,2,2,4,368,stage_direction,,,"CALIBAN enters, carrying a load of wood. There is a sound of thunder.",0.0,0.00298
+the-tempest,The Tempest,main,2,2,4,369,speech,CALIBAN,CALIBAN,"All the infections that the sun sucks up
+From bogs, fens, flats, on Prosper fall and make him
+By inchmeal a disease! His spirits hear me
+And yet I needs must curse. But they’ll nor pinch,
+Fright me with urchin-shows, pitch me i' th' mire,
+Nor lead me like a firebrand in the dark
+Out of my way, unless he bid 'em. But
+For every trifle are they set upon me,
+Sometime like apes that mow and chatter at me,
+And after bite me, then like hedgehogs which
+Lie tumbling in my barefoot way and mount
+Their pricks at my footfall. Sometime am I
+All wound with adders who with cloven tongues
+Do hiss me into madness.",-0.9785,-0.23432
+the-tempest,The Tempest,main,2,2,4,370,stage_direction,,,TRINCULO enters.,0.0,0.009
+the-tempest,The Tempest,main,2,2,4,371,speech,CALIBAN,CALIBAN,"Lo, now, lo!
+Here comes a spirit of his, and to torment me
+For bringing wood in slowly. I’ll fall flat.
+Perchance he will not mind me. [lies down, covered by
+his gaberdine]",-0.7574,-0.57594
+the-tempest,The Tempest,main,2,2,4,372,speech,TRINCULO,TRINCULO,"Here’s neither bush nor shrub to bear off any weather
+at all. And another storm brewing, I hear it sing i' th'
+wind. Yond same black cloud, yond huge one, looks like
+a foul bombard that would shed his liquor. If it should
+thunder as it did before, I know not where to hide my
+head. Yond same cloud cannot choose but fall by
+pailfuls. [sees CALIBAN] What have we here? A man or a
+fish? Dead or alive? A fish. He smells like a fish, a
+very ancient and fish-like smell, a kind of
+not-of-the-newest poor-john. A strange fish! Were I in
+England now, as once I was, and had but this fish
+painted, not a holiday fool there but would give a piece
+of silver. There would this monster make a man. Any
+strange beast there makes a man. When they will not give
+a doit to relieve a lame beggar, they will lay out ten
+to see a dead Indian. Legged like a man and his fins
+like arms! Warm, o' my troth. I do now let loose my
+opinion, hold it no longer: this is no fish, but an
+islander that hath lately suffered by a thunderbolt.",-0.4261,-0.54525
+the-tempest,The Tempest,main,2,2,4,373,stage_direction,,,Thunder.,0.0,0.12111
+the-tempest,The Tempest,main,2,2,4,374,speech,TRINCULO,TRINCULO,"Alas,
+the storm is come again! My best way is to creep under
+his gaberdine. T here is no other shelter hereabouts.
+Misery acquaints a man with strange bedfellows. I will
+here shroud till the dregs of the storm be past. [crawls
+under gaberdine]",0.4199,0.55998
+the-tempest,The Tempest,main,2,2,4,375,stage_direction,,,"STEPHANO enters, singing.",0.0,0.16619
+the-tempest,The Tempest,main,2,2,4,376,stage_direction,,,"[sings]
+I shall no more to sea, to sea,
+Here shall I die ashore—
+This is a very scurvy tune to sing at a man’s funeral.
+Well, here’s my comfort. [drinks, sings]
+The master, the swabber, the boatswain, and I,
+The gunner and his mate
+Loved Mall, Meg, and Marian, and Margery,
+But none of us cared for Kate.
+For she had a tongue with a tang,
+Would cry to a sailor, “Go hang!”
+She loved not the savor of tar nor of pitch,
+Yet a tailor might scratch her where'ershe did itch.
+Then to sea, boys, and let her go hang!
+This is a scurvy tune too. But here’s my comfort.
+[drinks]",-0.6807,-0.26781
+the-tempest,The Tempest,main,2,2,4,377,speech,CALIBAN,CALIBAN,Do not torment me. Oh!,-0.5707,-0.7056
+the-tempest,The Tempest,main,2,2,4,378,speech,STEPHANO,STEPHANO,"What’s the matter? Have we devils here? Do you put
+tricks upon ’s with savages and men of Ind, ha? I have
+not ’scaped drowning to be afeard now of your four legs.
+Or it hath been said, “As proper a man as ever went on
+four legs cannot make him give ground,” and it shall be
+said so again while Stephano breathes at' nostrils.",-0.6055,-0.539
+the-tempest,The Tempest,main,2,2,4,379,speech,CALIBAN,CALIBAN,The spirit torments me. Oh!,-0.5562,-0.85526
+the-tempest,The Tempest,main,2,2,4,380,speech,STEPHANO,STEPHANO,"This is some monster of the isle with four legs who
+hath got, as I take it, an ague. Where the devil should
+he learn our language? I will give him some relief if it
+be but for that. If I can recover him and keep him tame
+and get to Naples with him, he’s a present for any
+emperor that ever trod on neat’s leather.",0.6249,-0.42849
+the-tempest,The Tempest,main,2,2,4,381,speech,CALIBAN,CALIBAN,"Do not torment me, prithee. I’ll bring my wood home
+faster.",-0.2732,-0.50379
+the-tempest,The Tempest,main,2,2,4,382,speech,STEPHANO,STEPHANO,"He’s in his fit now and does not talk after the wisest.
+He shall taste of my bottle. If he have never drunk
+wine afore, it will go near to remove his fit. If I can
+recover him and keep him tame, I will not take too much
+for him. He shall pay for him that hath him, and that
+soundly.",0.8416,-0.49925
+the-tempest,The Tempest,main,2,2,4,383,speech,CALIBAN,CALIBAN,"Thou dost me yet but little hurt. Thou wilt anon, I
+know it by thy trembling. Now Prosper works upon thee.",-0.7096,0.61507
+the-tempest,The Tempest,main,2,2,4,384,speech,STEPHANO,STEPHANO,"[trying to give CALIBAN drink]
+Come on your ways. Open your mouth. Here is that which
+will give language to you, cat. Open your mouth. This
+will shake your shaking, I can tell you, and that
+soundly. You cannot tell who’s your friend. Open your
+chaps again.",0.8349,0.51632
+the-tempest,The Tempest,main,2,2,4,385,speech,TRINCULO,TRINCULO,"I should know that voice. It should be—But he is
+drowned, and these are devils. Oh, defend me!",-0.636,-0.36636
+the-tempest,The Tempest,main,2,2,4,386,speech,STEPHANO,STEPHANO,"Four legs and two voices—a most delicate monster.His
+forward voice now is to speak well of his friend. His
+backward voice is to utter foul speeches and to detract.
+If all the wine in my bottle will recover him, I will
+help his ague. Come. [CALIBAN drinks] Amen! I will pour
+some in thy other mouth.",0.3595,-0.53054
+the-tempest,The Tempest,main,2,2,4,387,speech,TRINCULO,TRINCULO,Stephano!,0.0,0.65465
+the-tempest,The Tempest,main,2,2,4,388,speech,STEPHANO,STEPHANO,"Doth thy other mouth call me? Mercy, mercy! This is a
+devil, and no monster. I will leave him. I have no long
+spoon.",-0.7644,0.48064
+the-tempest,The Tempest,main,2,2,4,389,speech,TRINCULO,TRINCULO,"Stephano! If thou beest Stephano, touch me and speak to
+me. For I am Trinculo—be not afeard—thy good friend
+Trinculo.",0.75,0.76229
+the-tempest,The Tempest,main,2,2,4,390,speech,STEPHANO,STEPHANO,"If thou beest Trinculo, come forth. I’ll pull thee by
+the lesser legs. If any be Trinculo’s legs, these are
+they. [pulls TRINCULO out from under the gaberdine] Thou
+art very Trinculo indeed! How camest thou to be the
+siege of this mooncalf? Can he vent Trinculos?",0.0,0.05367
+the-tempest,The Tempest,main,2,2,4,391,speech,TRINCULO,TRINCULO,"I took him to be killed with a thunderstroke. But art
+thou not drowned, Stephano? I hope now thou art not
+drowned. Is the storm overblown? I hid me under the dead
+mooncalf’s gaberdine for fear of the storm. And art
+thou living, Stephano? O Stephano, two Neapolitans
+’scaped! [dances STEPHANO about]",0.2734,-0.82829
+the-tempest,The Tempest,main,2,2,4,392,speech,STEPHANO,STEPHANO,"Prithee, do not turn me about. My stomach is not
+constant.",0.0299,-0.50956
+the-tempest,The Tempest,main,2,2,4,393,speech,CALIBAN,CALIBAN,"[aside] These be fine things, an if they be not
+sprites. That’s a brave god and bears celestial liquor.
+I will kneel to him.",0.875,0.65212
+the-tempest,The Tempest,main,2,2,4,394,speech,STEPHANO,STEPHANO,"[to TRINCULO] How didst thou ’scape? How camest thou
+hither? Swear by this bottle how thou camest hither. I
+escaped upon a butt of sack which the sailors heaved
+o'erboard, by this bottle, which I made of the bark of a
+tree with mine own hands since I was cast ashore.",0.6072,-0.24217
+the-tempest,The Tempest,main,2,2,4,395,speech,CALIBAN,CALIBAN,"[To STEPHANO] I’ll swear upon that bottle to be thy
+true subject, for the liquor is not earthly.",0.7351,0.47084
+the-tempest,The Tempest,main,2,2,4,396,speech,STEPHANO,STEPHANO,[to TRINCULO] Here. Swear then how thou escapedst.,-0.4767,0.00746
+the-tempest,The Tempest,main,2,2,4,397,speech,TRINCULO,TRINCULO,"Swum ashore, man, like a duck. I can swim like a duck,
+I’ll be sworn.",0.5859,-0.15547
+the-tempest,The Tempest,main,2,2,4,398,speech,STEPHANO,STEPHANO,"Here, kiss the book. Though thou canst swim like a
+duck, thou art made like a goose.",0.7845,0.07412
+the-tempest,The Tempest,main,2,2,4,399,speech,TRINCULO,TRINCULO,"O Stephano, hast any more of this?",0.0,-0.19699
+the-tempest,The Tempest,main,2,2,4,400,speech,STEPHANO,STEPHANO,"The whole butt, man. My cellar is in a rock by th'
+seaside where my wine is hid.—How now, mooncalf? How
+does thine ague?",0.0,-0.48099
+the-tempest,The Tempest,main,2,2,4,401,speech,CALIBAN,CALIBAN,Hast thou not dropped from heaven?,0.5106,0.0888
+the-tempest,The Tempest,main,2,2,4,402,speech,STEPHANO,STEPHANO,"Out o' th' moon, I do assure thee. I was the man i’ the
+moon when time was.",0.3182,0.41304
+the-tempest,The Tempest,main,2,2,4,403,speech,CALIBAN,CALIBAN,"I have seen thee in her and I do adore thee. My
+mistress showed me thee and thy dog and thy bush.",0.743,0.4605
+the-tempest,The Tempest,main,2,2,4,404,speech,STEPHANO,STEPHANO,"Come, swear to that, kiss the book. I will furnish it
+anon with new contents, swear.",0.8225,0.52075
+the-tempest,The Tempest,main,2,2,4,405,speech,TRINCULO,TRINCULO,"By this good light, this is a very shallow monster. I
+afeard of him! A very weak monster. The man i' th' moon!
+A most poor credulous monster.— Well drawn, monster, in
+good sooth!",0.6562,0.74998
+the-tempest,The Tempest,main,2,2,4,406,speech,CALIBAN,CALIBAN,"[to STEPHANO] I’ll show thee every fertile inch o' th'
+island.
+And I will kiss thy foot. I prithee, be my god.",0.8442,0.74794
+the-tempest,The Tempest,main,2,2,4,407,speech,TRINCULO,TRINCULO,"By this light, a most perfidious and drunken monster.
+When ’s god’s asleep, he’ll rob his bottle.",-0.765,-0.50656
+the-tempest,The Tempest,main,2,2,4,408,speech,CALIBAN,CALIBAN,"[to STEPHANO] I’ll kiss thy foot. I’ll swear myself thy
+subject.",0.7096,0.56642
+the-tempest,The Tempest,main,2,2,4,409,speech,STEPHANO,STEPHANO,"Come on then. Down, and swear.",-0.0516,-0.0108
+the-tempest,The Tempest,main,2,2,4,410,speech,TRINCULO,TRINCULO,"I shall laugh myself to death at this puppy-headed
+monster.
+A most scurvy monster. I could find in my heart to beat
+him—",0.4215,-0.88165
+the-tempest,The Tempest,main,2,2,4,411,speech,STEPHANO,STEPHANO,"[To CALIBAN] Come, kiss.",0.4215,0.60825
+the-tempest,The Tempest,main,2,2,4,412,speech,TRINCULO,TRINCULO,"But that the poor monster’s in drink. An abominable
+monster!",-0.6996,-0.73856
+the-tempest,The Tempest,main,2,2,4,413,speech,CALIBAN,CALIBAN,"I’ll show thee the best springs. I’ll pluck thee
+berries.
+I’ll fish for thee and get thee wood enough.
+A plague upon the tyrant that I serve!
+I’ll bear him no more sticks, but follow thee,
+Thou wondrous man.",0.4389,0.75864
+the-tempest,The Tempest,main,2,2,4,414,speech,TRINCULO,TRINCULO,"A most ridiculous monster, to make a wonder of a poor
+drunkard.",-0.4939,-0.85733
+the-tempest,The Tempest,main,2,2,4,415,speech,CALIBAN,CALIBAN,"[to STEPHANO] I prithee, let me bring thee where crabs
+grow.
+And I with my long nails will dig thee pignuts,
+Show thee a jay’s nest, and instruct thee how
+To snare the nimble marmoset. I’ll bring thee
+To clustering filberts, and sometimes I’ll get thee
+Young scamels from the rock. Wilt thou go with me?",0.3182,0.10381
+the-tempest,The Tempest,main,2,2,4,416,speech,STEPHANO,STEPHANO,"I prithee now, lead the way without any more talking.
+Trinculo, the king and all our company else being
+drowned, we will inherit here. Here, bear my bottle.
+Fellow Trinculo, we’ll fill him by and by again.",0.5423,0.33006
+the-tempest,The Tempest,main,2,2,4,417,speech,CALIBAN,CALIBAN,"[sings drunkenly]
+Farewell, master! Farewell, farewell.",0.0,0.80222
+the-tempest,The Tempest,main,2,2,4,418,speech,TRINCULO,TRINCULO,"A howling monster, a drunken monster.",0.0,-0.43856
+the-tempest,The Tempest,main,2,2,4,419,speech,CALIBAN,CALIBAN,"[sings]
+No more dams I’ll make for fish,
+Nor fetch in firing
+At requiring,
+Nor scrape trencher, nor wash dish.
+'Ban, 'Ban, Ca-Caliban
+Has a new master. Get a new man.
+Freedom, high-day! High-day, freedom! Freedom,
+high-day, freedom!",0.9744,0.8434
+the-tempest,The Tempest,main,2,2,4,420,speech,STEPHANO,STEPHANO,O brave monster! Lead the way.,0.6239,0.71634
+the-tempest,The Tempest,main,2,2,4,421,stage_direction,,,They exit.,0.0,-0.27456
+the-tempest,The Tempest,main,3,1,5,422,stage_direction,,,"FERDINAND enters, carrying a log.",0.0,0.01812
+the-tempest,The Tempest,main,3,1,5,423,speech,FERDINAND,FERDINAND,"There be some sports are painful, and their labor
+Delight in them sets off. Some kinds of baseness
+Are nobly undergone. And most poor matters
+Point to rich ends. This my mean task
+Would be as heavy to me as odious, but
+The mistress which I serve quickens what’s dead
+And makes my labors pleasures. Oh, she is
+Ten times more gentle than her father’s crabbed,
+And he’s composed of harshness. I must remove
+Some thousands of these logs and pile them up,
+Upon a sore injunction. My sweet mistress
+Weeps when she sees me work, and says such baseness
+Had never like executor. I forget,
+But these sweet thoughts do even refresh my labors,
+Most busiest when I do it.",0.9231,-0.6378
+the-tempest,The Tempest,main,3,1,5,424,stage_direction,,,"MIRANDA enters, followed by PROSPERO who remains unseen by the others.",0.0,0.01255
+the-tempest,The Tempest,main,3,1,5,425,speech,MIRANDA,MIRANDA,"Alas now, pray you,
+Work not so hard. I would the lightning had
+Burnt up those logs that you are enjoined to pile!
+Pray, set it down and rest you. When this burns,
+'Twill weep for having wearied you. My father
+Is hard at study. Pray now, rest yourself.
+He’s safe for these three hours.",0.6684,-0.71848
+the-tempest,The Tempest,main,3,1,5,426,speech,FERDINAND,FERDINAND,"O most dear mistress,
+The sun will set before I shall discharge
+What I must strive to do.",0.3818,0.73218
+the-tempest,The Tempest,main,3,1,5,427,speech,MIRANDA,MIRANDA,"If you’ll sit down,
+I’ll bear your logs the while. Pray, give me that.
+I’ll carry it to the pile.",0.3182,0.00139
+the-tempest,The Tempest,main,3,1,5,428,speech,FERDINAND,FERDINAND,"No, precious creature.
+I had rather crack my sinews, break my back,
+Than you should such dishonor undergo
+While I sit lazy by.",0.8176,-0.75675
+the-tempest,The Tempest,main,3,1,5,429,speech,MIRANDA,MIRANDA,"It would become me
+As well as it does you, and I should do it
+With much more ease, for my good will is to it
+And yours it is against.",0.4767,-0.36095
+the-tempest,The Tempest,main,3,1,5,430,speech,PROSPERO,PROSPERO,"[aside] Poor worm, thou art infected!
+This visitation shows it.",0.3244,0.39838
+the-tempest,The Tempest,main,3,1,5,431,speech,MIRANDA,MIRANDA,You look wearily.,-0.4404,-0.10692
+the-tempest,The Tempest,main,3,1,5,432,speech,FERDINAND,FERDINAND,"No, noble mistress. 'Tis fresh morning with me
+When you are by at night. I do beseech you—
+Chiefly that I might set it in my prayers—
+What is your name?",0.8225,0.71892
+the-tempest,The Tempest,main,3,1,5,433,speech,MIRANDA,MIRANDA,"Miranda. O my father,
+I have broke your hest to say so!",-0.5255,0.05153
+the-tempest,The Tempest,main,3,1,5,434,speech,FERDINAND,FERDINAND,"Admired Miranda!
+Indeed the top of admiration, worth
+What’s dearest to th' world! Full many a lady
+I have eyed with best regard and many a time
+Th' harmony of their tongues hath into bondage
+Brought my too diligent ear. For several virtues
+Have I liked several women. Never any
+With so full soul but some defect in her
+Did quarrel with the noblest grace she owed
+And put it to the foil. But you, O you,
+So perfect and so peerless, are created
+Of every creature’s best.",0.9832,0.77564
+the-tempest,The Tempest,main,3,1,5,435,speech,MIRANDA,MIRANDA,"I do not know
+One of my sex, no woman’s face remember—
+Save, from my glass, mine own. Nor have I seen
+More that I may call men than you, good friend,
+And my dear father. How features are abroad
+I am skill-less of, but, by my modesty,
+The jewel in my dower, I would not wish
+Any companion in the world but you,
+Nor can imagination form a shape
+Besides yourself to like of. But I prattle
+Something too wildly, and my father’s precepts
+I therein do forget.",0.9033,-0.80643
+the-tempest,The Tempest,main,3,1,5,436,speech,FERDINAND,FERDINAND,"I am in my condition
+A prince, Miranda—I do think, a king;
+I would, not so!—and would no more endure
+This wooden slavery than to suffer
+The flesh-fly blow my mouth. Hear my soul speak.
+The very instant that I saw you did
+My heart fly to your service, there resides
+To make me slave to it, and for your sake
+Am I this patient log-man.",0.8552,0.1368
+the-tempest,The Tempest,main,3,1,5,437,speech,MIRANDA,MIRANDA,Do you love me?,0.6369,-0.02528
+the-tempest,The Tempest,main,3,1,5,438,speech,FERDINAND,FERDINAND,"O heaven, O earth, bear witness to this sound
+And crown what I profess with kind event
+If I speak true! If hollowly, invert
+What best is boded me to mischief! I
+Beyond all limit of what else i' th' world
+Do love, prize, honor you.",0.9509,0.34517
+the-tempest,The Tempest,main,3,1,5,439,speech,MIRANDA,MIRANDA,"I am a fool
+To weep at what I am glad of.",-0.3182,0.24218
+the-tempest,The Tempest,main,3,1,5,440,speech,PROSPERO,PROSPERO,"[aside] Fair encounter
+Of two most rare affections! Heavens rain grace
+On that which breeds between 'em!",0.9717,0.80035
+the-tempest,The Tempest,main,3,1,5,441,speech,FERDINAND,FERDINAND,Wherefore weep you?,-0.4767,-0.02099
+the-tempest,The Tempest,main,3,1,5,442,speech,MIRANDA,MIRANDA,"At mine unworthiness, that dare not offer
+What I desire to give, and much less take
+What I shall die to want. But this is trifling,
+And all the more it seeks to hide itself
+The bigger bulk it shows. Hence, bashful cunning,
+And prompt me, plain and holy innocence!
+I am your wife if you will marry me.
+If not, I’ll die your maid. To be your fellow
+You may deny me, but I’ll be your servant
+Whether you will or no.",-0.8685,-0.81705
+the-tempest,The Tempest,main,3,1,5,443,speech,FERDINAND,FERDINAND,"My mistress, dearest, and I thus humble ever.",0.802,0.76664
+the-tempest,The Tempest,main,3,1,5,444,speech,MIRANDA,MIRANDA,"My husband, then?",0.0,-0.03034
+the-tempest,The Tempest,main,3,1,5,445,speech,FERDINAND,FERDINAND,"Ay, with a heart as willing
+As bondage e'er of freedom. Here’s my hand.",0.9501,0.58963
+the-tempest,The Tempest,main,3,1,5,446,speech,MIRANDA,MIRANDA,"And mine, with my heart in ’t. And now farewell
+Till half an hour hence.",0.8126,0.56065
+the-tempest,The Tempest,main,3,1,5,447,speech,FERDINAND,FERDINAND,A thousand thousand!,0.0,0.19129
+the-tempest,The Tempest,main,3,1,5,448,stage_direction,,,"MIRANDA and FERDINAND exit, in opposite directions.",0.0,0.00457
+the-tempest,The Tempest,main,3,1,5,449,speech,PROSPERO,PROSPERO,"So glad of this as they I cannot be,
+Who are surprised withal. But my rejoicing
+At nothing can be more. I’ll to my book,
+For yet ere supper-time must I perform
+Much business appertaining.",0.9455,-0.38359
+the-tempest,The Tempest,main,3,1,5,450,stage_direction,,,He exits.,0.0,0.01202
+the-tempest,The Tempest,main,3,2,6,451,stage_direction,,,"CALIBAN, STEPHANO, and TRINCULO enter.",0.0,0.0755
+the-tempest,The Tempest,main,3,2,6,452,speech,STEPHANO,STEPHANO,"Tell not me. When the butt is out, we will drink water.
+Not a drop before. Therefore bear up and board
+'em.—Servant- monster, drink to me.",-0.4678,-0.60397
+the-tempest,The Tempest,main,3,2,6,453,speech,TRINCULO,TRINCULO,"“Servant-monster?” The folly of this island. They say
+there’s but five upon this isle. We are three of them.
+If th' other two be brained like us, the state totters.",-0.8268,-0.8243
+the-tempest,The Tempest,main,3,2,6,454,speech,STEPHANO,STEPHANO,"Drink, servant-monster, when I bid thee. Thy eyes are
+almost set in thy head.",0.0,-0.35732
+the-tempest,The Tempest,main,3,2,6,455,speech,TRINCULO,TRINCULO,"Where should they be set else? He were a brave monster
+indeed, if they were set in his tail.",0.5965,-0.3168
+the-tempest,The Tempest,main,3,2,6,456,speech,STEPHANO,STEPHANO,"My man-monster hath drowned his tongue in sack. For my
+part, the sea cannot drown me. I swam, ere I could
+recover the shore, five and thirty leagues off and on.
+By this light, thou shalt be my lieutenant, monster, or
+my standard.",-0.8932,-0.58266
+the-tempest,The Tempest,main,3,2,6,457,speech,TRINCULO,TRINCULO,"Your lieutenant, if you list. He’s no standard.",0.4472,-0.37563
+the-tempest,The Tempest,main,3,2,6,458,speech,STEPHANO,STEPHANO,"We’ll not run, Monsieur Monster.",0.0,-0.47006
+the-tempest,The Tempest,main,3,2,6,459,speech,TRINCULO,TRINCULO,"Nor go neither. But you’ll lie like dogs, and yet say
+nothing neither.",0.3612,-0.66109
+the-tempest,The Tempest,main,3,2,6,460,speech,STEPHANO,STEPHANO,"Mooncalf, speak once in thy life, if thou beest a good
+mooncalf.",0.6705,0.36954
+the-tempest,The Tempest,main,3,2,6,461,speech,CALIBAN,CALIBAN,"How does thy honor? Let me lick thy shoe.
+[indicates TRINCULO] I’ll not serve him. He’s not
+valiant.",-0.4168,-0.82338
+the-tempest,The Tempest,main,3,2,6,462,speech,TRINCULO,TRINCULO,"[to CALIBAN] Thou liest, most ignorant monster. I am in
+case to justle a constable. Why, thou deboshed fish,
+thou, was there ever man a coward that hath drunk so
+much sack as I today? Wilt thou tell a monstrous lie,
+being but half a fish and half a monster?",-0.8856,-0.731
+the-tempest,The Tempest,main,3,2,6,463,speech,CALIBAN,CALIBAN,"[to STEPHANO]
+Lo, how he mocks me! Wilt thou let him, my lord?",0.5562,0.71951
+the-tempest,The Tempest,main,3,2,6,464,speech,TRINCULO,TRINCULO,"“Lord,” quoth he? That a monster should be such a
+natural!",-0.5562,0.28796
+the-tempest,The Tempest,main,3,2,6,465,speech,CALIBAN,CALIBAN,"[to STEPHANO]
+Lo, lo, again! Bite him to death, I prithee.",-0.68,0.60165
+the-tempest,The Tempest,main,3,2,6,466,speech,STEPHANO,STEPHANO,"Trinculo, keep a good tongue in your head. If you prove
+a mutineer, the next tree. The poor monster’s my
+subject and he shall not suffer indignity.",-0.4981,-0.80357
+the-tempest,The Tempest,main,3,2,6,467,speech,CALIBAN,CALIBAN,"I thank my noble lord. Wilt thou be pleased to hearken
+once again to the suit I made to thee?",0.6705,0.59129
+the-tempest,The Tempest,main,3,2,6,468,speech,STEPHANO,STEPHANO,"Marry, will I. Kneel and repeat it. I will stand, and
+so shall
+Trinculo.",0.0,0.32014
+the-tempest,The Tempest,main,3,2,6,469,stage_direction,,,"ARIEL enters, invisible.",0.0,-0.03309
+the-tempest,The Tempest,main,3,2,6,470,speech,CALIBAN,CALIBAN,"[kneeling] As I told thee before, I am subject to a
+tyrant, a sorcerer that by his cunning hath cheated me
+of the island.",-0.7096,0.38401
+the-tempest,The Tempest,main,3,2,6,471,speech,ARIEL,ARIEL,Thou liest.,0.0,0.13987
+the-tempest,The Tempest,main,3,2,6,472,speech,CALIBAN,CALIBAN,"[to TRINCULO] Thou liest, thou jesting monkey, thou! I
+would my valiant master would destroy thee. I do not
+lie.",-0.5562,0.41833
+the-tempest,The Tempest,main,3,2,6,473,speech,STEPHANO,STEPHANO,"Trinculo, if you trouble him any more in ’s tale, by
+this hand, I will supplant some of your teeth.",0.1531,-0.2758
+the-tempest,The Tempest,main,3,2,6,474,speech,TRINCULO,TRINCULO,"Why, I said nothing.",0.0,-0.4649
+the-tempest,The Tempest,main,3,2,6,475,speech,STEPHANO,STEPHANO,"Mum, then, and no more. Proceed.",-0.296,0.12992
+the-tempest,The Tempest,main,3,2,6,476,speech,CALIBAN,CALIBAN,"I say, by sorcery he got this isle.
+From me he got it. If thy greatness will
+Revenge it on him—for I know thou darest,
+But this thing dare not—",0.0,-0.40807
+the-tempest,The Tempest,main,3,2,6,477,speech,STEPHANO,STEPHANO,That’s most certain.,0.0,-0.1757
+the-tempest,The Tempest,main,3,2,6,478,speech,CALIBAN,CALIBAN,Thou shalt be lord of it and I’ll serve thee.,0.0,0.58781
+the-tempest,The Tempest,main,3,2,6,479,speech,STEPHANO,STEPHANO,"How now shall this be compassed?
+Canst thou bring me to th' party?",0.504,-0.01081
+the-tempest,The Tempest,main,3,2,6,480,speech,CALIBAN,CALIBAN,"Yea, yea, my lord. I’ll yield him thee asleep,
+Where thou mayst knock a nail into his head.",0.6597,0.04787
+the-tempest,The Tempest,main,3,2,6,481,speech,ARIEL,ARIEL,Thou liest. Thou canst not.,0.0,-0.60941
+the-tempest,The Tempest,main,3,2,6,482,speech,CALIBAN,CALIBAN,"What a pied ninny’s this! Thou scurvy patch!
+I do beseech thy greatness, give him blows
+And take his bottle from him. When that’s gone,
+He shall drink naught but brine, for I’ll not show him
+Where the quick freshes are.",-0.428,-0.56877
+the-tempest,The Tempest,main,3,2,6,483,speech,STEPHANO,STEPHANO,"Trinculo, run into no further danger. Interrupt the
+monster one word further, and, by this hand, I’ll turn
+my mercy out o' doors and make a stockfish of thee.",-0.4019,-0.2152
+the-tempest,The Tempest,main,3,2,6,484,speech,TRINCULO,TRINCULO,"Why, what did I? I did nothing. I’ll go farther off.",0.0,-0.51478
+the-tempest,The Tempest,main,3,2,6,485,speech,STEPHANO,STEPHANO,Didst thou not say he lied?,-0.3818,-0.14773
+the-tempest,The Tempest,main,3,2,6,486,speech,ARIEL,ARIEL,Thou liest.,0.0,0.13987
+the-tempest,The Tempest,main,3,2,6,487,speech,STEPHANO,STEPHANO,"[to TRINCULO] Do I so? Take thou that.
+[beatsTRINCULO]
+As you like this, give me the lie another time.",-0.5106,0.0751
+the-tempest,The Tempest,main,3,2,6,488,speech,TRINCULO,TRINCULO,"I did not give the lie. Out o' your wits and hearing
+too? A pox o' your bottle! This can sack and drinking
+do. A murrain on your monster, and the devil take your
+fingers!",-0.9183,-0.73902
+the-tempest,The Tempest,main,3,2,6,489,speech,CALIBAN,CALIBAN,"Ha, ha, ha!",0.0,0.25821
+the-tempest,The Tempest,main,3,2,6,490,speech,STEPHANO,STEPHANO,"Now, forward with your tale.—Prithee, stand farther
+off.",0.3182,0.3695
+the-tempest,The Tempest,main,3,2,6,491,speech,CALIBAN,CALIBAN,"Beat him enough. After a little time,
+I’ll beat him too.",0.0,0.33912
+the-tempest,The Tempest,main,3,2,6,492,speech,STEPHANO,STEPHANO,"Stand farther.—Come, proceed.",0.0,0.29511
+the-tempest,The Tempest,main,3,2,6,493,speech,CALIBAN,CALIBAN,"Why, as I told thee, ’tis a custom with him,
+I' th' afternoon to sleep. There thou mayst brain him,
+Having first seized his books; or with a log
+Batter his skull; or paunch him with a stake;
+Or cut his weasand with thy knife. Remember
+First to possess his books, for without them
+He’s but a sot, as I am, nor hath not
+One spirit to command. They all do hate him
+As rootedly as I. Burn but his books.
+He has brave utensils—for so he calls them—
+Which when he has a house, he’ll deck withal.
+And that most deeply to consider is
+The beauty of his daughter. He himself
+Calls her a nonpareil. I never saw a woman,
+But only Sycorax my dam and she.
+But she as far surpasseth Sycorax
+As great’st does least.",0.927,-0.13002
+the-tempest,The Tempest,main,3,2,6,494,speech,STEPHANO,STEPHANO,Is it so brave a lass?,0.6204,-0.17091
+the-tempest,The Tempest,main,3,2,6,495,speech,CALIBAN,CALIBAN,"Ay, lord. She will become thy bed, I warrant.
+And bring thee forth brave brood.",0.9118,0.63018
+the-tempest,The Tempest,main,3,2,6,496,speech,STEPHANO,STEPHANO,"Monster, I will kill this man. His daughter and I will
+be king and queen—save our graces!—and Trinculo and
+thyself shall be viceroys. Dost thou like the plot,
+Trinculo?",-0.2244,0.7972
+the-tempest,The Tempest,main,3,2,6,497,speech,TRINCULO,TRINCULO,Excellent.,0.5719,0.73711
+the-tempest,The Tempest,main,3,2,6,498,speech,STEPHANO,STEPHANO,"Give me thy hand. I am sorry I beat thee. But while
+thou livest, keep a good tongue in thy head.",0.2382,0.41038
+the-tempest,The Tempest,main,3,2,6,499,speech,CALIBAN,CALIBAN,"Within this half hour will he be asleep. Wilt thou
+destroy him then?",-0.6908,-0.3962
+the-tempest,The Tempest,main,3,2,6,500,speech,STEPHANO,STEPHANO,"Ay, on mine honor.",0.6908,0.50489
+the-tempest,The Tempest,main,3,2,6,501,speech,ARIEL,ARIEL,[aside] This will I tell my master.,0.0,0.41952
+the-tempest,The Tempest,main,3,2,6,502,speech,CALIBAN,CALIBAN,"Thou makest me merry. I am full of pleasure.
+Let us be jocund. Will you troll the catch
+You taught me but whilere?",0.872,0.48142
+the-tempest,The Tempest,main,3,2,6,503,speech,STEPHANO,STEPHANO,"At thy request, monster, I will do reason, any reason.
+Come on, Trinculo, let us sing.
+[sings]
+Flout 'em and scout 'em,
+And scout 'em and flout 'em.
+Thought is free.",-0.7579,0.67403
+the-tempest,The Tempest,main,3,2,6,504,speech,CALIBAN,CALIBAN,That’s not the tune.,0.0,-0.49103
+the-tempest,The Tempest,main,3,2,6,505,stage_direction,,,ARIEL plays the tune on a small drum and a flute.,0.25,0.00711
+the-tempest,The Tempest,main,3,2,6,506,speech,STEPHANO,STEPHANO,What is this same?,0.0,-0.0508
+the-tempest,The Tempest,main,3,2,6,507,speech,TRINCULO,TRINCULO,"This is the tune of our catch, played by the picture of
+Nobody.",0.34,0.28399
+the-tempest,The Tempest,main,3,2,6,508,speech,STEPHANO,STEPHANO,"If thou beest a man, show thyself in thy likeness. If
+thou beest a devil, take ’t as thou list.",-0.8481,0.01193
+the-tempest,The Tempest,main,3,2,6,509,speech,TRINCULO,TRINCULO,"O, forgive me my sins!",-0.2942,0.72983
+the-tempest,The Tempest,main,3,2,6,510,speech,STEPHANO,STEPHANO,"He that dies pays all debts.—I defy thee!—Mercy upon
+us!",-0.5093,0.78247
+the-tempest,The Tempest,main,3,2,6,511,speech,CALIBAN,CALIBAN,Art thou afeard?,-0.4404,-0.02907
+the-tempest,The Tempest,main,3,2,6,512,speech,STEPHANO,STEPHANO,"No, monster, not I.",0.0,-0.55728
+the-tempest,The Tempest,main,3,2,6,513,speech,CALIBAN,CALIBAN,"Be not afeard. The isle is full of noises,
+Sounds, and sweet airs that give delight and hurt not.
+Sometimes a thousand twangling instruments
+Will hum about mine ears, and sometime voices
+That, if I then had waked after long sleep,
+Will make me sleep again. And then, in dreaming,
+The clouds methought would open and show riches
+Ready to drop upon me, that when I waked
+I cried to dream again.",0.9369,0.66298
+the-tempest,The Tempest,main,3,2,6,514,speech,STEPHANO,STEPHANO,"This will prove a brave kingdom to me, where I shall
+have my music for nothing.",0.8591,0.74477
+the-tempest,The Tempest,main,3,2,6,515,speech,CALIBAN,CALIBAN,When Prospero is destroyed.,-0.6908,0.03175
+the-tempest,The Tempest,main,3,2,6,516,speech,STEPHANO,STEPHANO,That shall be by and by. I remember the story.,0.0,0.05581
+the-tempest,The Tempest,main,3,2,6,517,speech,TRINCULO,TRINCULO,"The sound is going away. Let’s follow it, and after do
+our work.",0.0,0.44761
+the-tempest,The Tempest,main,3,2,6,518,speech,STEPHANO,STEPHANO,"Lead, monster; we’ll follow. I would I could see this
+taborer. He lays it on.",0.7089,0.62308
+the-tempest,The Tempest,main,3,2,6,519,speech,TRINCULO,TRINCULO,"Wilt come? I’ll follow, Stephano.",0.0,0.18472
+the-tempest,The Tempest,main,3,2,6,520,stage_direction,,,They all exit.,0.0,-0.27456
+the-tempest,The Tempest,main,3,3,7,521,stage_direction,,,"ALONSO, SEBASTIAN, ANTONIO, GONZALO, ADRIAN, FRANCISCO, and others enter.",0.0,0.04725
+the-tempest,The Tempest,main,3,3,7,522,speech,GONZALO,GONZALO,"[to ALONSO] By 'r lakin, I can go no further, sir.
+My old bones ache. Here’s a maze trod indeed
+Through forthrights and meanders. By your patience,
+I needs must rest me.",-0.0,-0.6811
+the-tempest,The Tempest,main,3,3,7,523,speech,ALONSO,ALONSO,"Old lord, I cannot blame thee,
+Who am myself attached with weariness
+To th' dulling of my spirits. Sit down and rest.
+Even here I will put off my hope and keep it
+No longer for my flatterer. He is drowned
+Whom thus we stray to find, and the sea mocks
+Our frustrate search on land. Well, let him go.",-0.8534,-0.74539
+the-tempest,The Tempest,main,3,3,7,524,speech,ANTONIO,ANTONIO,"[aside to SEBASTIAN] I am right glad that he’s so out
+of hope.
+Do not, for one repulse, forego the purpose
+That you resolved t' effect.",0.3462,-0.7597
+the-tempest,The Tempest,main,3,3,7,525,speech,SEBASTIAN,SEBASTIAN,"[aside to ANTONIO] The next advantage
+Will we take throughly.",0.4215,-0.09049
+the-tempest,The Tempest,main,3,3,7,526,speech,ANTONIO,ANTONIO,"[aside to SEBASTIAN] Let it be tonight,
+For now they are oppressed with travel. They
+Will not, nor cannot, use such vigilance
+As when they are fresh.",-0.3165,-0.37589
+the-tempest,The Tempest,main,3,3,7,527,stage_direction,,,Solemn and strange music plays.,-0.0258,0.10194
+the-tempest,The Tempest,main,3,3,7,528,stage_direction,,,"PROSPERO enters above the stage, invisible.",0.0,0.01496
+the-tempest,The Tempest,main,3,3,7,529,speech,SEBASTIAN,SEBASTIAN,"[aside to ANTONIO] I say, tonight. No more.",0.2732,0.13034
+the-tempest,The Tempest,main,3,3,7,530,speech,ALONSO,ALONSO,"What harmony is this? My good friends, hark!",0.7424,0.31553
+the-tempest,The Tempest,main,3,3,7,531,speech,GONZALO,GONZALO,Marvelous sweet music!,0.9622,0.56235
+the-tempest,The Tempest,main,3,3,7,532,speech,ALONSO,ALONSO,"Give us kind keepers, heavens! What were these?",0.7345,0.76507
+the-tempest,The Tempest,main,3,3,7,533,speech,SEBASTIAN,SEBASTIAN,"A living drollery. Now I will believe
+That there are unicorns, that in Arabia
+There is one tree, the phoenix' throne, one phoenix
+At this hour reigning there.",0.0,0.00933
+the-tempest,The Tempest,main,3,3,7,534,speech,ANTONIO,ANTONIO,"I’ll believe both
+And what does else want credit, come to me,
+And I’ll be sworn ’tis true. Travelers ne'er did lie,
+Though fools at home condemn 'em.",0.3468,-0.67525
+the-tempest,The Tempest,main,3,3,7,535,speech,GONZALO,GONZALO,"If in Naples
+I should report this now, would they believe me?
+If I should say, I saw such islanders—
+For, certes, these are people of the island—
+Who, though they are of monstrous shape, yet note,
+Their manners are more gentle-kind than of
+Our human generation you shall find
+Many—nay, almost any.",0.8409,-0.41151
+the-tempest,The Tempest,main,3,3,7,536,speech,PROSPERO,PROSPERO,"[aside] Honest lord,
+Thou hast said well, for some of you there present
+Are worse than devils.",-0.1779,-0.21663
+the-tempest,The Tempest,main,3,3,7,537,speech,ALONSO,ALONSO,"I cannot too much muse
+Such shapes, such gesture, and such sound, expressing,
+Although they want the use of tongue, a kind
+Of excellent dumb discourse.",-0.296,0.37038
+the-tempest,The Tempest,main,3,3,7,538,speech,PROSPERO,PROSPERO,[aside] Praise in departing.,-0.4449,-0.53803
+the-tempest,The Tempest,main,3,3,7,539,speech,FRANCISCO,FRANCISCO,They vanished strangely.,-0.4019,-0.31476
+the-tempest,The Tempest,main,3,3,7,540,speech,SEBASTIAN,SEBASTIAN,"No matter, since
+They have left their viands behind, for we have
+stomachs.
+Will ’t please you taste of what is here?",0.3455,-0.55365
+the-tempest,The Tempest,main,3,3,7,541,speech,ALONSO,ALONSO,Not I.,0.0,-0.50498
+the-tempest,The Tempest,main,3,3,7,542,speech,GONZALO,GONZALO,"Faith, sir, you need not fear. When we were boys,
+Who would believe that there were mountaineers
+Dewlapped like bulls, whose throats had hanging at 'em
+Wallets of flesh, or that there were such men
+Whose heads stood in their breasts?—which now we find
+Each putter-out of five for one will bring us
+Good warrant of.",0.6472,-0.73785
+the-tempest,The Tempest,main,3,3,7,543,speech,ALONSO,ALONSO,"I will stand to and feed,
+Although my last. No matter, since I feel
+The best is past. Brother, my lord the duke,
+Stand to and do as we.",0.7579,0.15231
+the-tempest,The Tempest,main,3,3,7,544,stage_direction,,,"ARIEL enters in the form of a harpy. ARIEL flaps his wings on the table, and by means of some kind of device on stage, the food disappears from the table.",-0.34,-0.15125
+the-tempest,The Tempest,main,3,3,7,545,speech,ARIEL,ARIEL,"[to ALONSO, ANTONIO, and SEBASTIAN]
+You are three men of sin, whom Destiny,
+That hath to instrument this lower world
+And what is in ’t, the never-surfeited sea
+Hath caused to belch up you— and on this island
+Where man doth not inhabit, you ’mongst men
+Being most unfit to live. I have made you mad,
+And even with suchlike valor men hang and drown
+Their proper selves.
+[ALONSO, SEBASTIAN, and ANTONIO draw their swords]
+You fools, I and my fellows
+Are ministers of fate. The elements
+Of whom your swords are tempered may as well
+Wound the loud winds or with bemocked-at stabs
+Kill the still-closing waters as diminish
+One dowl that’s in my plume. My fellow ministers
+Are like invulnerable. If you could hurt,
+Your swords are now too massy for your strengths
+And will not be uplifted. But remember—
+For that’s my business to you—that you three
+From Milan did supplant good Prospero,
+Exposed unto the sea, which hath requit it,
+Him and his innocent child. For which foul deed
+The powers—delaying, not forgetting—have
+Incensed the seas and shores, yea, all the creatures,
+Against your peace. Thee of thy son, Alonso,
+They have bereft, and do pronounce by me
+Lingering perdition, worse than any death
+Can be at once, shall step by step attend
+You and your ways; whose wraths to guard you from—
+Which here, in this most desolate isle, else falls
+Upon your heads—is nothing but hearts' sorrow
+And a clear life ensuing.",-0.9575,0.06629
+the-tempest,The Tempest,main,3,3,7,546,stage_direction,,,"As quiet music plays, the shapes enter again and dance, making mocking gestures and nasty faces, they carry out the banquet table.",-0.6486,0.08182
+the-tempest,The Tempest,main,3,3,7,547,speech,PROSPERO,PROSPERO,"[aside] Bravely the figure of this harpy hast thou
+Performed, my Ariel. A grace it had, devouring.
+Of my instruction hast thou nothing bated
+In what thou hadst to say. So with good life
+And observation strange, my meaner ministers
+Their several kinds have done. My high charms work
+And these mine enemies are all knit up
+In their distractions. They now are in my power,
+And in these fits I leave them while I visit
+Young Ferdinand, whom they suppose is drowned,
+And his and mine loved darling.",0.9383,0.53959
+the-tempest,The Tempest,main,3,3,7,548,stage_direction,,,PROSPERO exits from his place above the stage.,0.0,-0.03484
+the-tempest,The Tempest,main,3,3,7,549,speech,GONZALO,GONZALO,"[to ALONSO] I' th' name of something holy, sir, why
+stand you
+In this strange stare?",-0.296,-0.0246
+the-tempest,The Tempest,main,3,3,7,550,speech,ALONSO,ALONSO,"Oh, it is monstrous, monstrous.
+Methought the billows spoke and told me of it,
+The winds did sing it to me, and the thunder,
+That deep and dreadful organ pipe, pronounced
+The name of Prosper. It did bass my trespass.
+Therefore my son i' th' ooze is bedded, and
+I’ll seek him deeper than e'er plummet sounded
+And with him there lie mudded.",-0.8779,-0.7805
+the-tempest,The Tempest,main,3,3,7,551,stage_direction,,,ALONSO exits.,0.0,0.03499
+the-tempest,The Tempest,main,3,3,7,552,speech,SEBASTIAN,SEBASTIAN,"But one fiend at a time,
+I’ll fight their legions o'er.",-0.743,-0.04411
+the-tempest,The Tempest,main,3,3,7,553,speech,ANTONIO,ANTONIO,I’ll be thy second.,0.4019,0.35104
+the-tempest,The Tempest,main,3,3,7,554,stage_direction,,,SEBASTIAN and ANTONIO exit.,0.0,0.03196
+the-tempest,The Tempest,main,3,3,7,555,speech,GONZALO,GONZALO,"All three of them are desperate. Their great guilt,
+Like poison given to work a great time after,
+Now 'gins to bite the spirits. I do beseech you
+That are of suppler joints, follow them swiftly
+And hinder them from what this ecstasy
+May now provoke them to.",-0.4633,-0.78455
+the-tempest,The Tempest,main,3,3,7,556,speech,ADRIAN,ADRIAN,"Follow, I pray you.",0.3182,0.35008
+the-tempest,The Tempest,main,3,3,7,557,stage_direction,,,They all exit.,0.0,-0.27456
+the-tempest,The Tempest,main,4,1,8,558,stage_direction,,,"PROSPERO, FERDINAND, and MIRANDA enter.",0.0,0.11212
+the-tempest,The Tempest,main,4,1,8,559,speech,PROSPERO,PROSPERO,"[to FERDINAND] If I have too austerely punished you,
+Your compensation makes amends, for I
+Have given you here a third of mine own life—
+Or that for which I live— who once again
+I tender to thy hand. All thy vexations
+Were but my trials of thy love and thou
+Hast strangely stood the test. Here, afore heaven,
+I ratify this my rich gift. O Ferdinand,
+Do not smile at me that I boast of her,
+For thou shalt find she will outstrip all praise
+And make it halt behind her.",0.98,0.85713
+the-tempest,The Tempest,main,4,1,8,560,speech,FERDINAND,FERDINAND,"I do believe it
+Against an oracle.",0.0,-0.06937
+the-tempest,The Tempest,main,4,1,8,561,speech,PROSPERO,PROSPERO,"Then as my gift and thine own acquisition
+Worthily purchased, take my daughter. But
+If thou dost break her virgin knot before
+All sanctimonious ceremonies may
+With full and holy rite be ministered,
+No sweet aspersion shall the heavens let fall
+To make this contract grow, but barren hate,
+Sour-eyed disdain, and discord shall bestrew
+The union of your bed with weeds so loathly
+That you shall hate it both. Therefore take heed,
+As Hymen’s lamps shall light you.",-0.8995,-0.81314
+the-tempest,The Tempest,main,4,1,8,562,speech,FERDINAND,FERDINAND,"As I hope
+For quiet days, fair issue, and long life,
+With such love as ’tis now, the murkiest den,
+The most opportune place, the strong’st suggestion,
+Our worser genius can shall never melt
+Mine honor into lust to take away
+The edge of that day’s celebration
+When I shall think, or Phoebus' steeds are foundered,
+Or night kept chained below.",0.9645,0.07383
+the-tempest,The Tempest,main,4,1,8,563,speech,PROSPERO,PROSPERO,"Fairly spoke.
+Sit then and talk with her. She is thine own.
+What, Ariel! My industrious servant, Ariel!",0.3987,0.56967
+the-tempest,The Tempest,main,4,1,8,564,stage_direction,,,ARIEL enters.,0.0,0.01215
+the-tempest,The Tempest,main,4,1,8,565,speech,ARIEL,ARIEL,What would my potent master? Here I am.,0.3612,-0.14645
+the-tempest,The Tempest,main,4,1,8,566,speech,PROSPERO,PROSPERO,"Thou and thy meaner fellows your last service
+Did worthily perform, and I must use you
+In such another trick. Go bring the rabble,
+O'er whom I give thee power, here to this place.
+Incite them to quick motion, for I must
+Bestow upon the eyes of this young couple
+Some vanity of mine art. It is my promise,
+And they expect it from me.",0.8402,0.49572
+the-tempest,The Tempest,main,4,1,8,567,speech,ARIEL,ARIEL,Presently?,0.0,-0.31937
+the-tempest,The Tempest,main,4,1,8,568,speech,PROSPERO,PROSPERO,"Ay, with a twink.",0.4019,0.08417
+the-tempest,The Tempest,main,4,1,8,569,speech,ARIEL,ARIEL,"Before you can say “Come” and “Go,”
+And breathe twice and cry “So, so!”
+Each one, tripping on his toe,
+Will be here with mop and mow.
+Do you love me, master, no?",0.7142,0.70103
+the-tempest,The Tempest,main,4,1,8,570,speech,PROSPERO,PROSPERO,"Dearly my delicate Ariel. Do not approach
+Till thou dost hear me call.",0.765,0.63154
+the-tempest,The Tempest,main,4,1,8,571,speech,ARIEL,ARIEL,"Well, I conceive.",0.4019,0.33196
+the-tempest,The Tempest,main,4,1,8,572,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,4,1,8,573,speech,PROSPERO,PROSPERO,"[to FERDINAND] Look thou be true. Do not give dalliance
+Too much the rein. The strongest oaths are straw
+To th' fire i' th' blood. Be more abstemious,
+Or else, goodnight your vow.",0.8402,-0.18202
+the-tempest,The Tempest,main,4,1,8,574,speech,FERDINAND,FERDINAND,"I warrant you, sir,
+The white cold virgin snow upon my heart
+Abates the ardor of my liver.",0.9287,0.75341
+the-tempest,The Tempest,main,4,1,8,575,speech,PROSPERO,PROSPERO,"Well.
+Now come, my Ariel! Bring a corollary,
+Rather than want a spirit. Appear and pertly!—
+No tongue. All eyes! Be silent.",0.8213,0.46886
+the-tempest,The Tempest,main,4,1,8,576,stage_direction,,,Soft music plays.,0.25,0.18929
+the-tempest,The Tempest,main,4,1,8,577,stage_direction,,,IRIS enters.,0.0,0.01056
+the-tempest,The Tempest,main,4,1,8,578,speech,IRIS,IRIS,"Ceres, most bounteous lady, thy rich leas
+Of wheat, rye, barley, vetches, oats, and peas;
+Thy turfy mountains, where live nibbling sheep,
+And flat meads thatched with stover, them to keep;
+Thy banks with pionèd and twillèd brims,
+Which spongy April at thy hest betrims
+To make cold nymphs chaste crowns; and thy broom
+groves,
+Whose shadow the dismissèd bachelor loves,
+Being lass-lorn; thy pole-clipped vineyard;
+And thy sea-marge, sterile and rocky hard,
+Where thou thyself dost air— the Queen o' th' Sky,
+Whose watery arch and messenger am I,
+Bids thee leave these, and with her sovereign grace,
+Here on this grass plot, in this very place,
+To come and sport. Her peacocks fly amain.",0.5423,0.23297
+the-tempest,The Tempest,main,4,1,8,579,speech,IRIS,IRIS,"Approach, rich Ceres, her to entertain.",0.7096,0.53287
+the-tempest,The Tempest,main,4,1,8,580,stage_direction,,,CERES enters.,0.0,0.00911
+the-tempest,The Tempest,main,4,1,8,581,speech,CERES,CERES,"Hail, many-colored messenger, that ne'er
+Dost disobey the wife of Jupiter;
+Who with thy saffron wings upon my flowers
+Diffusest honey drops, refreshing showers;
+And with each end of thy blue bow dost crown
+My bosky acres and my unshrubbed down,
+Rich scarf to my proud earth. Why hath thy queen
+Summoned me hither to this short-grassed green?",0.8074,0.7768
+the-tempest,The Tempest,main,4,1,8,582,speech,IRIS,IRIS,"A contract of true love to celebrate,
+And some donation freely to estate
+On the blessed lovers.",0.9678,0.08094
+the-tempest,The Tempest,main,4,1,8,583,speech,CERES,CERES,"Tell me, heavenly bow,
+If Venus or her son, as thou dost know,
+Do now attend the queen? Since they did plot
+The means that dusky Dis my daughter got,
+Her and her blind boy’s scandaled company
+I have forsworn.",-0.2263,-0.17379
+the-tempest,The Tempest,main,4,1,8,584,speech,IRIS,IRIS,"Of her society
+Be not afraid. I met her deity
+Cutting the clouds towards Paphos, and her son
+Dove-drawn with her. Here thought they to have done
+Some wanton charm upon this man and maid,
+Whose vows are that no bed-right shall be paid
+Till Hymen’s torch be lighted—but in vain.
+Mars’s hot minion is returned again.
+Her waspish-headed son has broke his arrows,
+Swears he will shoot no more, but play with sparrows
+And be a boy right out.",0.4653,-0.72753
+the-tempest,The Tempest,main,4,1,8,585,speech,CERES,CERES,"Highest queen of state,
+Great Juno, comes. I know her by her gait.",0.8155,0.60024
+the-tempest,The Tempest,main,4,1,8,586,speech,JUNO,JUNO,"How does my bounteous sister? Go with me
+To bless this twain that they may prosperous be,
+And honored in their issue.",0.9274,0.77788
+the-tempest,The Tempest,main,4,1,8,587,stage_direction,,,They sing.,0.0,0.34006
+the-tempest,The Tempest,main,4,1,8,588,speech,JUNO,JUNO,"Honor, riches, marriage, blessing,
+Long continuance, and increasing,
+Hourly joys be still upon you.
+Juno sings her blessings on you.",0.9545,0.76292
+the-tempest,The Tempest,main,4,1,8,589,speech,CERES,CERES,"Earth’s increase, foison plenty,
+Barns and garners never empty,
+Vines and clustering bunches growing,
+Plants with goodly burden bowing—
+Spring come to you at the farthest
+In the very end of harvest.
+Scarcity and want shall shun you.
+Ceres' blessing so is on you.",0.2732,0.53944
+the-tempest,The Tempest,main,4,1,8,590,speech,FERDINAND,FERDINAND,"This is a most majestic vision, and
+Harmonious charmingly. May I be bold
+To think these spirits?",0.4588,0.81373
+the-tempest,The Tempest,main,4,1,8,591,speech,PROSPERO,PROSPERO,"Spirits, which by mine art
+I have from their confines called to enact
+My present fancies.",0.0,0.53083
+the-tempest,The Tempest,main,4,1,8,592,speech,FERDINAND,FERDINAND,"Let me live here ever.
+So rare a wondered father and a wife
+Makes this place paradise.",0.836,0.48496
+the-tempest,The Tempest,main,4,1,8,593,speech,PROSPERO,PROSPERO,"Sweet now, silence.
+Juno and Ceres whisper seriously.
+There’s something else to do. Hush and be mute,
+Or else our spell is marred.",0.1027,-0.43595
+the-tempest,The Tempest,main,4,1,8,594,speech,IRIS,IRIS,"You nymphs, called Naiads of the windring brooks,
+With your sedged crowns and ever-harmless looks,
+Leave your crisp channels and on this green land
+Answer your summons, Juno does command.
+Come, temperate nymphs, and help to celebrate
+A contract of true love. Be not too late.",0.9606,0.67161
+the-tempest,The Tempest,main,4,1,8,595,stage_direction,,,Several NYMPHS enter.,0.0,0.05859
+the-tempest,The Tempest,main,4,1,8,596,speech,IRIS,IRIS,"You
+sunburnt sicklemen of August weary,
+Come hither from the furrow and be merry.
+Make holiday. Your rye-straw hats put on,
+And these fresh nymphs encounter every one
+In country footing.",0.6249,0.52564
+the-tempest,The Tempest,main,4,1,8,597,stage_direction,,,"Several farmers enter, dressed appropriately. They join the nymphs in a graceful dance. At the end of the dance PROSPERO suddenly is startled and speaks.",0.5423,0.16129
+the-tempest,The Tempest,main,4,1,8,598,speech,PROSPERO,PROSPERO,"I had forgot that foul conspiracy
+Of the beast Caliban and his confederates
+Against my life. The minute of their plot
+Is almost come.— Well done. Avoid, no more!",-0.9788,-0.73271
+the-tempest,The Tempest,main,4,1,8,599,speech,FERDINAND,FERDINAND,"[to MIRANDA] This is strange. Your father’s in some
+passion
+That works him strongly.",0.0276,-0.39809
+the-tempest,The Tempest,main,4,1,8,600,speech,MIRANDA,MIRANDA,"Never till this day
+Saw I him touched with anger so distempered.",-0.7561,-0.68852
+the-tempest,The Tempest,main,4,1,8,601,speech,PROSPERO,PROSPERO,"[to FERDINAND] You do look, my son, in a moved sort,
+As if you were dismayed. Be cheerful, sir.
+Our revels now are ended. These our actors,
+As I foretold you, were all spirits and
+Are melted into air, into thin air.
+And like the baseless fabric of this vision,
+The cloud-capped towers, the gorgeous palaces,
+The solemn temples, the great globe itself,
+Ye all which it inherit, shall dissolve,
+And like this insubstantial pageant faded,
+Leave not a rack behind. We are such stuff
+As dreams are made on, and our little life
+Is rounded with a sleep. Sir, I am vexed.
+Bear with my weakness. My old brain is troubled.
+Be not disturbed with my infirmity.
+If you be pleased, retire into my cell
+And there repose. A turn or two I’ll walk
+To still my beating mind.",0.0463,0.47911
+the-tempest,The Tempest,main,4,1,8,602,speech,"FERDINAND, MIRANDA",FERDINAND MIRANDA,We wish your peace.,0.7506,0.09235
+the-tempest,The Tempest,main,4,1,8,603,stage_direction,,,FERDINAND and MIRANDA exit.,0.0,0.01794
+the-tempest,The Tempest,main,4,1,8,604,speech,PROSPERO,PROSPERO,"Come with a thought. I thank thee, Ariel. Come.",0.3612,0.67413
+the-tempest,The Tempest,main,4,1,8,605,stage_direction,,,ARIEL enters.,0.0,0.01215
+the-tempest,The Tempest,main,4,1,8,606,speech,ARIEL,ARIEL,Thy thoughts I cleave to. What’s thy pleasure?,0.0772,0.10407
+the-tempest,The Tempest,main,4,1,8,607,speech,PROSPERO,PROSPERO,"Spirit,
+We must prepare to meet with Caliban.",0.1779,0.3014
+the-tempest,The Tempest,main,4,1,8,608,speech,ARIEL,ARIEL,"Ay, my commander. When I presented Ceres,
+I thought to have told thee of it, but I feared
+Lest I might anger thee.",-0.5574,-0.11308
+the-tempest,The Tempest,main,4,1,8,609,speech,PROSPERO,PROSPERO,"Say again, where didst thou leave these varlets?",-0.6808,-0.00027
+the-tempest,The Tempest,main,4,1,8,610,speech,ARIEL,ARIEL,"I told you, sir, they were red-hot with drinking,
+So full of valor that they smote the air
+For breathing in their faces, beat the ground
+For kissing of their feet; yet always bending
+Towards their project. Then I beat my tabor,
+At which, like unbacked colts, they pricked their ears,
+Advanced their eyelids, lifted up their noses
+As they smelt music. So I charmed their ears
+That, calflike, they my lowing followed through
+Toothed briers, sharp furzes, pricking gorse, and
+thorns,
+Which entered their frail shins. At last I left them
+I' th' filthy-mantled pool beyond your cell,
+There dancing up to th' chins, that the foul lake
+O'erstunk their feet.",0.383,-0.32546
+the-tempest,The Tempest,main,4,1,8,611,speech,PROSPERO,PROSPERO,"This was well done, my bird.
+Thy shape invisible retain thou still.
+The trumpery in my house, go bring it hither
+For stale to catch these thieves.",0.1796,0.47835
+the-tempest,The Tempest,main,4,1,8,612,speech,ARIEL,ARIEL,"I go, I go.",0.0,0.14932
+the-tempest,The Tempest,main,4,1,8,613,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,4,1,8,614,speech,PROSPERO,PROSPERO,"A devil, a born devil on whose nature
+Nurture can never stick, on whom my pains,
+Humanely taken, all, all lost, quite lost.
+And as with age his body uglier grows,
+So his mind cankers. I will plague them all,
+Even to roaring.",-0.961,-0.8768
+the-tempest,The Tempest,main,4,1,8,615,stage_direction,,,"ARIEL enters, carrying sparkling clothes.",0.296,0.03158
+the-tempest,The Tempest,main,4,1,8,616,speech,PROSPERO,PROSPERO,"Come, hang them on this line.",0.0,0.07699
+the-tempest,The Tempest,main,4,1,8,617,stage_direction,,,"CALIBAN, STEPHANO, and TRINCULO enter. They all are wet.",0.0,-0.0611
+the-tempest,The Tempest,main,4,1,8,618,speech,CALIBAN,CALIBAN,"Pray you, tread softly, that the blind mole may not
+hear a foot fall. We now are near his cell.",0.5511,-0.18947
+the-tempest,The Tempest,main,4,1,8,619,speech,STEPHANO,STEPHANO,"Monster, your fairy, which you say is a harmless fairy,
+has done little better than played the jack with us.",-0.3724,-0.48715
+the-tempest,The Tempest,main,4,1,8,620,speech,TRINCULO,TRINCULO,"Monster, I do smell all horse piss, at which my nose is
+in great indignation.",-0.4936,-0.49198
+the-tempest,The Tempest,main,4,1,8,621,speech,STEPHANO,STEPHANO,"So is mine. Do you hear, monster? If I should take a
+displeasure against you, look you—",-0.4215,-0.26476
+the-tempest,The Tempest,main,4,1,8,622,speech,TRINCULO,TRINCULO,Thou wert but a lost monster.,-0.3182,-0.60949
+the-tempest,The Tempest,main,4,1,8,623,speech,CALIBAN,CALIBAN,"Good my lord, give me thy favor still.
+Be patient, for the prize I’ll bring thee to
+Shall hoodwink this mischance. Therefore speak softly.
+All’s hushed as midnight yet.",0.8267,-0.47743
+the-tempest,The Tempest,main,4,1,8,624,speech,TRINCULO,TRINCULO,"Ay, but to lose our bottles in the pool—",-0.7874,-0.393
+the-tempest,The Tempest,main,4,1,8,625,speech,STEPHANO,STEPHANO,"There is not only disgrace and dishonor in that,
+monster, but an infinite loss.",-0.8807,-0.59893
+the-tempest,The Tempest,main,4,1,8,626,speech,TRINCULO,TRINCULO,"That’s more to me than my wetting. Yet this is your
+harmless fairy, monster.",-0.4939,-0.72632
+the-tempest,The Tempest,main,4,1,8,627,speech,STEPHANO,STEPHANO,"I will fetch off my bottle, though I be o'er ears for
+my labor.",0.0,-0.47336
+the-tempest,The Tempest,main,4,1,8,628,speech,CALIBAN,CALIBAN,"Prithee, my king, be quiet. Seest thou here,
+This is the mouth o' th' cell. No noise, and enter.
+Do that good mischief which may make this island
+Thine own for ever, and I, thy Caliban,
+For aye thy foot-licker.",0.5574,0.68602
+the-tempest,The Tempest,main,4,1,8,629,speech,STEPHANO,STEPHANO,Give me thy hand. I do begin to have bloody thoughts.,0.5423,0.00238
+the-tempest,The Tempest,main,4,1,8,630,speech,TRINCULO,TRINCULO,"[seeing the apparel]
+O King Stephano! O peer, O worthy Stephano, look what a
+wardrobe here is for thee!",0.5399,0.81243
+the-tempest,The Tempest,main,4,1,8,631,speech,CALIBAN,CALIBAN,"Let it alone, thou fool. It is but trash.",-0.6597,-0.80409
+the-tempest,The Tempest,main,4,1,8,632,speech,TRINCULO,TRINCULO,"Oh, ho, monster, we know what belongs to a frippery.—
+[puts on a gown] O King Stephano!",0.4926,0.65033
+the-tempest,The Tempest,main,4,1,8,633,speech,STEPHANO,STEPHANO,"Put off that gown, Trinculo. By this hand, I’ll have
+that gown.",0.4588,0.6407
+the-tempest,The Tempest,main,4,1,8,634,speech,TRINCULO,TRINCULO,Thy grace shall have it.,0.4215,0.66718
+the-tempest,The Tempest,main,4,1,8,635,speech,CALIBAN,CALIBAN,"The dropsy drown this fool! What do you mean
+To dote thus on such luggage? Let’s alone,
+And do the murder first. If he awake,
+From toe to crown he’ll fill our skins with pinches,
+Make us strange stuff.",-0.9441,-0.8651
+the-tempest,The Tempest,main,4,1,8,636,speech,STEPHANO,STEPHANO,"Be you quiet, monster.—Mistress line, is not this my
+jerkin? Now is the jerkin under the line.—Now, jerkin,
+you are like to lose your hair and prove a bald jerkin.",0.4588,-0.36769
+the-tempest,The Tempest,main,4,1,8,637,speech,TRINCULO,TRINCULO,"Do, do. We steal by line and level, an ’t like your
+grace.",0.4404,0.44556
+the-tempest,The Tempest,main,4,1,8,638,speech,STEPHANO,STEPHANO,"I thank thee for that jest. Here’s a garment for ’t.
+Wit shall not go unrewarded while I am king of this
+country. “Steal by line and level” is an excellent pass
+of pate. There’s another garment for ’t.",0.9372,0.09271
+the-tempest,The Tempest,main,4,1,8,639,speech,TRINCULO,TRINCULO,"Monster, come, put some lime upon your fingers, and
+away with the rest.",0.0,-0.01105
+the-tempest,The Tempest,main,4,1,8,640,speech,CALIBAN,CALIBAN,"I will have none on ’t. We shall lose our time,
+And all be turned to barnacles or to apes
+With foreheads villainous low.",0.0258,-0.52513
+the-tempest,The Tempest,main,4,1,8,641,speech,STEPHANO,STEPHANO,"Monster, lay to your fingers. Help to bear this away
+where my hogshead of wine is, or I’ll turn you out of my
+kingdom. Go to, carry this.",0.4019,0.17253
+the-tempest,The Tempest,main,4,1,8,642,speech,TRINCULO,TRINCULO,And this.,0.0,-0.24
+the-tempest,The Tempest,main,4,1,8,643,speech,STEPHANO,STEPHANO,"Ay, and this.",0.4019,0.26665
+the-tempest,The Tempest,main,4,1,8,644,stage_direction,,,"The sound of hunters comes from offstage. Various spirits enter in the form of hunting dogs, which chase STEPHANO, TRINCULO, and CALIBAN around. PROSPERO and ARIEL enter and urge the dogs on.",0.0,0.00883
+the-tempest,The Tempest,main,4,1,8,645,speech,PROSPERO,PROSPERO,"Hey, Mountain, hey!",0.0,0.56214
+the-tempest,The Tempest,main,4,1,8,646,speech,ARIEL,ARIEL,"Silver. There it goes, Silver!",0.0,0.73269
+the-tempest,The Tempest,main,4,1,8,647,speech,PROSPERO,PROSPERO,"Fury, Fury! There, Tyrant, there. Hark, hark!",-0.8395,0.69462
+the-tempest,The Tempest,main,4,1,8,648,stage_direction,,,"The spirits chase CALIBAN, STEPHANO, and TRINCULO offstage.",0.0,0.06539
+the-tempest,The Tempest,main,4,1,8,649,speech,PROSPERO,PROSPERO,"Go charge my goblins that they grind their joints
+With dry convulsions, shorten up their sinews
+With agèd cramps, and more pinch-spotted make them
+Than pard or cat o' mountain.",-0.1779,-0.00909
+the-tempest,The Tempest,main,4,1,8,650,speech,ARIEL,ARIEL,"Hark, they roar.",-0.5106,-0.32915
+the-tempest,The Tempest,main,4,1,8,651,speech,PROSPERO,PROSPERO,"Let them be hunted soundly. At this hour
+Lie at my mercy all mine enemies.
+Shortly shall all my labors end, and thou
+Shalt have the air at freedom. For a little
+Follow, and do me service.",0.4404,-0.04352
+the-tempest,The Tempest,main,4,1,8,652,stage_direction,,,They exit.,0.0,-0.13698
+the-tempest,The Tempest,main,5,1,9,653,stage_direction,,,"PROSPERO enters wearing his magic robes, with ARIEL.",0.0,0.15444
+the-tempest,The Tempest,main,5,1,9,654,speech,PROSPERO,PROSPERO,"Now does my project gather to a head.
+My charms crack not, my spirits obey, and time
+Goes upright with his carriage. How’s the day?",0.0,-0.17415
+the-tempest,The Tempest,main,5,1,9,655,speech,ARIEL,ARIEL,"On the sixth hour, at which time, my lord,
+You said our work should cease.",0.0,0.21848
+the-tempest,The Tempest,main,5,1,9,656,speech,PROSPERO,PROSPERO,"I did say so
+When first I raised the tempest. Say, my spirit,
+How fares the king and ’s followers?",0.4019,0.05279
+the-tempest,The Tempest,main,5,1,9,657,speech,ARIEL,ARIEL,"Confined together
+In the same fashion as you gave in charge,
+Just as you left them, all prisoners, sir,
+In the line grove which weather-fends your cell.
+They cannot budge till your release. The king,
+His brother, and yours, abide all three distracted,
+And the remainder mourning over them,
+Brimful of sorrow and dismay. But chiefly
+Him that you termed, sir, “the good old Lord Gonzalo,”
+His tears run down his beard like winter’s drops
+From eaves of reeds. Your charm so strongly works 'em
+That if you now beheld them, your affections
+Would become tender.",-0.9567,-0.64466
+the-tempest,The Tempest,main,5,1,9,658,speech,PROSPERO,PROSPERO,"Dost thou think so, spirit?",0.1779,0.05744
+the-tempest,The Tempest,main,5,1,9,659,speech,ARIEL,ARIEL,"Mine would, sir, were I human.",0.0,-0.03359
+the-tempest,The Tempest,main,5,1,9,660,speech,PROSPERO,PROSPERO,"And mine shall.
+Hast thou, which art but air, a touch, a feeling
+Of their afflictions, and shall not myself,
+One of their kind, that relish all as sharply
+Passion as they, be kindlier moved than thou art?
+Though with their high wrongs I am struck to th' quick,
+Yet with my nobler reason 'gainst my fury
+Do I take part. The rarer action is
+In virtue than in vengeance. They being penitent,
+The sole drift of my purpose doth extend
+Not a frown further. Go release them, Ariel.
+My charms I’ll break, their senses I’ll restore,
+And they shall be themselves.",-0.6705,0.33412
+the-tempest,The Tempest,main,5,1,9,661,speech,ARIEL,ARIEL,"I’ll fetch them, sir.",0.0,0.2551
+the-tempest,The Tempest,main,5,1,9,662,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,5,1,9,663,speech,PROSPERO,PROSPERO,"[tracing a circle on the ground]
+Ye elves of hills, brooks, standing lakes, and groves,
+And ye that on the sands with printless foot
+Do chase the ebbing Neptune and do fly him
+When he comes back; you demi-puppets that
+By moonshine do the green sour ringlets make,
+Whereof the ewe not bites; and you whose pastime
+Is to make midnight mushrooms, that rejoice
+To hear the solemn curfew; by whose aid,
+Weak masters though ye be, I have bedimmed
+The noontide sun, called forth the mutinous winds,
+And ’twixt the green sea and the azured vault
+Set roaring war—to th' dread rattling thunder
+Have I given fire, and rifted Jove’s stout oak
+With his own bolt; the strong-based promontory
+Have I made shake, and by the spurs plucked up
+The pine and cedar; graves at my command
+Have waked their sleepers, oped, and let 'em forth
+By my so potent art. But this rough magic
+I here abjure, and when I have required
+Some heavenly music, which even now I do,
+To work mine end upon their senses that
+This airy charm is for, I’ll break my staff,
+Bury it certain fathoms in the earth,
+And deeper than did ever plummet sound
+I’ll drown my book.",0.4215,0.71949
+the-tempest,The Tempest,main,5,1,9,664,stage_direction,,,Solemn music plays.,0.1779,0.16584
+the-tempest,The Tempest,main,5,1,9,665,stage_direction,,,"ARIEL enters, followed by ALONSO who is acting as if he is crazy and is tended to by GONZALO. SEBASTIAN and ANTONIO enter, also seeming crazy, and are tended to by ADRIAN and FRANCISCO. They all enter the circle that PROSPERO has drawn and stand still, under a spell. PROSPERO watches them, and then speaks.",-0.5859,0.02911
+the-tempest,The Tempest,main,5,1,9,666,speech,PROSPERO,PROSPERO,"A solemn air and the best comforter
+To an unsettled fancy cure thy brains,
+Now useless, boiled within thy skull. There stand,
+For you are spell-stopped.
+Holy Gonzalo, honorable man,
+Mine eyes, ev'n sociable to the show of thine,
+Fall fellowly drops. The charm dissolves apace,
+And as the morning steals upon the night,
+Melting the darkness, so their rising senses
+Begin to chase the ignorant fumes that mantle
+Their clearer reason. O good Gonzalo,
+My true preserver and a loyal sir
+To him you follow’st, I will pay thy graces
+Home both in word and deed. Most cruelly
+Didst thou, Alonso, use me and my daughter.
+Thy brother was a furtherer in the act.
+Thou art pinched for ’t now, Sebastian. Flesh and
+blood,
+You brother mine, that entertained ambition,
+Expelled remorse and nature, whom, with Sebastian,
+Whose inward pinches therefore are most strong,
+Would here have killed your king—I do forgive thee,
+Unnatural though thou art. Their understanding
+Begins to swell, and the approaching tide
+Will shortly fill the reasonable shore
+That now lies foul and muddy. Not one of them
+That yet looks on me, or would know me. Ariel,
+Fetch me the hat and rapier in my cell.
+I will discase me, and myself present
+As I was sometime Milan. Quickly, spirit.
+Thou shalt ere long be free.",0.9078,0.41339
+the-tempest,The Tempest,main,5,1,9,667,speech,ARIEL,ARIEL,"[sings and helps to attire PROSPERO]
+Where the bee sucks, there suck I.
+In a cowslip’s bell I lie.
+There I couch when owls do cry.
+On the bat’s back I do fly
+After summer merrily.
+Merrily, merrily shall I live now
+Under the blossom that hangs on the bough.",0.9169,0.44013
+the-tempest,The Tempest,main,5,1,9,668,speech,PROSPERO,PROSPERO,"Why, that’s my dainty Ariel. I shall miss thee,
+But yet thou shalt have freedom.—So, so, so.—
+To the king’s ship, invisible as thou art.
+There shalt thou find the mariners asleep
+Under the hatches. The Master and the Boatswain
+Being awake, enforce them to this place,
+And presently, I prithee.",0.9643,0.45301
+the-tempest,The Tempest,main,5,1,9,669,speech,ARIEL,ARIEL,"I drink the air before me, and return
+Or ere your pulse twice beat.",0.6369,0.00953
+the-tempest,The Tempest,main,5,1,9,670,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,5,1,9,671,speech,GONZALO,GONZALO,"All torment, trouble, wonder, and amazement
+Inhabits here. Some heavenly power guide us
+Out of this fearful country!",-0.4528,-0.10533
+the-tempest,The Tempest,main,5,1,9,672,stage_direction,,,"[to ALONSO] Behold, sir King,
+The wrongèd Duke of Milan, Prospero.
+For more assurance that a living prince
+Does now speak to thee, I embrace thy body.
+And to thee and thy company I bid
+A hearty welcome. [embraces ALONSO]",0.9186,0.78106
+the-tempest,The Tempest,main,5,1,9,673,speech,ALONSO,ALONSO,"Whe'er thou beest he or no,
+Or some enchanted trifle to abuse me,
+As late I have been, I not know. Thy pulse
+Beats as of flesh and blood. And since I saw thee,
+Th' affliction of my mind amends, with which
+I fear a madness held me. This must crave—
+An if this be at all—a most strange story.
+Thy dukedom I resign and do entreat
+Thou pardon me my wrongs. But how should Prospero
+Be living and be here?",0.6858,0.71433
+the-tempest,The Tempest,main,5,1,9,674,speech,PROSPERO,PROSPERO,"[to GONZALO] First, noble friend,
+Let me embrace thine age, whose honor cannot
+Be measured or confined.",0.9509,0.71572
+the-tempest,The Tempest,main,5,1,9,675,speech,GONZALO,GONZALO,"Whether this be
+Or be not, I’ll not swear.",0.0,-0.05615
+the-tempest,The Tempest,main,5,1,9,676,speech,PROSPERO,PROSPERO,"You do yet taste
+Some subtleties o' th' isle, that will not let you
+Believe things certain. Welcome, my friends all.
+[aside to SEBASTIAN and ANTONIO]
+But you, my brace of lords, were I so minded,
+I here could pluck his highness' frown upon you
+And justify you traitors. At this time
+I will tell no tales.",-0.5423,-0.79049
+the-tempest,The Tempest,main,5,1,9,677,speech,SEBASTIAN,SEBASTIAN,The devil speaks in him.,-0.6597,0.33038
+the-tempest,The Tempest,main,5,1,9,678,speech,PROSPERO,PROSPERO,"No.— [to ANTONIO]
+For you, most wicked sir, whom to call brother
+Would even infect my mouth, I do forgive
+Thy rankest fault, all of them, a nd require
+My dukedom of thee, which perforce, I know,
+Thou must restore.",-0.735,0.76505
+the-tempest,The Tempest,main,5,1,9,679,speech,ALONSO,ALONSO,"If thou beest Prospero,
+Give us particulars of thy preservation,
+How thou hast met us here, whom three hours since
+Were wracked upon this shore, where I have lost—
+How sharp the point of this remembrance is!
+My dear son Ferdinand.",0.1511,-0.73066
+the-tempest,The Tempest,main,5,1,9,680,speech,PROSPERO,PROSPERO,"I am woe for ’t, sir.",-0.0772,-0.12446
+the-tempest,The Tempest,main,5,1,9,681,speech,ALONSO,ALONSO,"Irreparable is the loss, and patience
+Says it is past her cure.",-0.6808,-0.5252
+the-tempest,The Tempest,main,5,1,9,682,speech,PROSPERO,PROSPERO,"I rather think
+You have not sought her help, of whose soft grace
+For the like loss I have her sovereign aid,
+And rest myself content.",0.3182,-0.47965
+the-tempest,The Tempest,main,5,1,9,683,speech,ALONSO,ALONSO,You the like loss?,0.0516,-0.61924
+the-tempest,The Tempest,main,5,1,9,684,speech,PROSPERO,PROSPERO,"As great to me as late. And, supportable
+To make the dear loss, have I means much weaker
+Than you may call to comfort you, for I
+Have lost my daughter.",0.6621,-0.31622
+the-tempest,The Tempest,main,5,1,9,685,speech,ALONSO,ALONSO,"A daughter?
+O heavens, that they were living both in Naples,
+The king and queen there! That they were, I wish
+Myself were mudded in that oozy bed
+Where my son lies.—When did you lose your daughter?",0.4122,0.11727
+the-tempest,The Tempest,main,5,1,9,686,speech,PROSPERO,PROSPERO,"In this last tempest. I perceive these lords
+At this encounter do so much admire
+That they devour their reason and scarce think
+Their eyes do offices of truth, their words
+Are natural breath. But howsoev'r you have
+Been justled from your senses, know for certain
+That I am Prospero and that very duke
+Which was thrust forth of Milan, who most strangely
+Upon this shore where you were wracked, was landed,
+To be the lord on ’t. No more yet of this,
+For ’tis a chronicle of day by day,
+Not a relation for a breakfast, nor
+Befitting this first meeting.
+[to ALONSO] Welcome, sir.
+This cell’s my court. Here have I few attendants
+And subjects none abroad. Pray you, look in.
+My dukedom since you have given me again,
+I will requite you with as good a thing,
+At least bring forth a wonder to content ye
+As much as me my dukedom.",0.9461,-0.42717
+the-tempest,The Tempest,main,5,1,9,687,speech,MIRANDA,MIRANDA,"[to FERDINAND] Sweet lord, you play me false.",-0.1531,0.62156
+the-tempest,The Tempest,main,5,1,9,688,speech,FERDINAND,FERDINAND,"No, my dearest love,
+I would not for the world.",0.8316,-0.85881
+the-tempest,The Tempest,main,5,1,9,689,speech,MIRANDA,MIRANDA,"Yes, for a score of kingdoms you should wrangle,
+And I would call it fair play.",0.8519,0.18457
+the-tempest,The Tempest,main,5,1,9,690,speech,ALONSO,ALONSO,"If this prove
+A vision of the Island, one dear son
+Shall I twice lose.",-0.0258,-0.49153
+the-tempest,The Tempest,main,5,1,9,691,speech,SEBASTIAN,SEBASTIAN,A most high miracle!,0.6581,0.8664
+the-tempest,The Tempest,main,5,1,9,692,speech,FERDINAND,FERDINAND,"[seeing ALONSO and kneeling]
+Though the seas threaten, they are merciful.
+I have cursed them without cause.",-0.8481,-0.47766
+the-tempest,The Tempest,main,5,1,9,693,speech,ALONSO,ALONSO,"Now all the blessings
+Of a glad father, compass thee about.
+Arise, and say how thou camest here.",0.802,0.48741
+the-tempest,The Tempest,main,5,1,9,694,speech,MIRANDA,MIRANDA,"Oh, wonder!
+How many goodly creatures are there here!
+How beauteous mankind is! O brave new world,
+That has such people in ’t!",0.9629,0.83957
+the-tempest,The Tempest,main,5,1,9,695,speech,PROSPERO,PROSPERO,'Tis new to thee.,0.0,0.45575
+the-tempest,The Tempest,main,5,1,9,696,speech,ALONSO,ALONSO,"[to FERDINAND]
+What is this maid with whom thou wast at play?
+Your eld’st acquaintance cannot be three hours.
+Is she the goddess that hath severed us
+And brought us thus together?",0.2869,-0.03535
+the-tempest,The Tempest,main,5,1,9,697,speech,FERDINAND,FERDINAND,"Sir, she is mortal.
+But by immortal providence, she’s mine.
+I chose her when I could not ask my father
+For his advice, nor thought I had one. She
+Is daughter to this famous Duke of Milan,
+Of whom so often I have heard renown
+But never saw before, of whom I have
+Received a second life. And second father
+This lady makes him to me.",0.7469,0.51279
+the-tempest,The Tempest,main,5,1,9,698,speech,ALONSO,ALONSO,"I am hers.
+But oh, how oddly will it sound that I
+Must ask my child forgiveness!",0.1882,0.63975
+the-tempest,The Tempest,main,5,1,9,699,speech,PROSPERO,PROSPERO,"There, sir, stop.
+Let us not burden our remembrances with
+A heaviness that’s gone.",-0.4215,-0.47383
+the-tempest,The Tempest,main,5,1,9,700,speech,GONZALO,GONZALO,"I have inly wept,
+Or should have spoke ere this. Look down, you gods,
+And on this couple drop a blessèd crown,
+For it is you that have chalked forth the way
+Which brought us hither.",0.5267,0.79363
+the-tempest,The Tempest,main,5,1,9,701,speech,ALONSO,ALONSO,"I say, amen, Gonzalo.",0.4019,0.18335
+the-tempest,The Tempest,main,5,1,9,702,speech,GONZALO,GONZALO,"Was Milan thrust from Milan, that his issue
+Should become kings of Naples? O, rejoice
+Beyond a common joy, and set it down
+With gold on lasting pillars. In one voyage
+Did Claribel her husband find at Tunis;
+And Ferdinand, her brother, found a wife
+Where he himself was lost; Prospero, his dukedom
+In a poor isle; and all of us, ourselves
+When no man was his own.",0.8176,-0.16292
+the-tempest,The Tempest,main,5,1,9,703,speech,ALONSO,ALONSO,"[to FERDINAND and MIRANDA] Give me your hands.
+Let grief and sorrow still embrace his heart
+That doth not wish you joy.",-0.7737,0.76403
+the-tempest,The Tempest,main,5,1,9,704,speech,GONZALO,GONZALO,Be it so. Amen.,0.0,0.62454
+the-tempest,The Tempest,main,5,1,9,705,stage_direction,,,"ARIEL enters, with the MASTER and BOATSWAIN following behind, amazed.",0.4939,0.52362
+the-tempest,The Tempest,main,5,1,9,706,speech,GONZALO,GONZALO,"Oh, look, sir, look, sir! Here is more of us.
+I prophesied if a gallows were on land,
+This fellow could not drown.
+[To BOATSWAIN] Now, blasphemy,
+That swear’st grace o'erboard, not an oath on shore?
+Hast thou no mouth by land? What is the news?",0.3716,-0.01028
+the-tempest,The Tempest,main,5,1,9,707,speech,BOATSWAIN,BOATSWAIN,"The best news is that we have safely found
+Our king and company. The next, our ship—
+Which, but three glasses since, we gave out split—
+Is tight and yare and bravely rigged as when
+We first put out to sea.",0.9313,0.40594
+the-tempest,The Tempest,main,5,1,9,708,speech,ARIEL,ARIEL,"[aside to PROSPERO] Sir, all this service
+Have I done since I went.",0.0,0.69232
+the-tempest,The Tempest,main,5,1,9,709,speech,PROSPERO,PROSPERO,[aside to ARIEL] My tricksy spirit!,0.2481,0.83329
+the-tempest,The Tempest,main,5,1,9,710,speech,ALONSO,ALONSO,"These are not natural events. They strengthen
+From strange to stranger.—
+[to BOATSWAIN] Say, how came you hither?",-0.2755,-0.47511
+the-tempest,The Tempest,main,5,1,9,711,speech,BOATSWAIN,BOATSWAIN,"If I did think, sir, I were well awake,
+I’d strive to tell you. We were dead of sleep
+And—how, we know not—all clapped under hatches,
+Where but even now with strange and several noises
+Of roaring, shrieking, howling, jingling chains,
+And more diversity of sounds, all horrible,
+We were awaked, straightway at liberty,
+Where we, in all her trim, freshly beheld
+Our royal, good, and gallant ship, our Master
+Capering to eye her. On a trice, so please you,
+Even in a dream were we divided from them
+And were brought moping hither.",0.6714,-0.60924
+the-tempest,The Tempest,main,5,1,9,712,speech,ARIEL,ARIEL,[aside to PROSPERO] Was ’t well done?,0.2732,0.09876
+the-tempest,The Tempest,main,5,1,9,713,speech,PROSPERO,PROSPERO,"[aside to ARIEL] Bravely, my diligence. Thou shalt be
+free.",0.8834,0.82877
+the-tempest,The Tempest,main,5,1,9,714,speech,ALONSO,ALONSO,"This is as strange a maze as e'er men trod,
+And there is in this business more than nature
+Was ever conduct of. Some oracle
+Must rectify our knowledge.",0.5106,-0.47615
+the-tempest,The Tempest,main,5,1,9,715,speech,PROSPERO,PROSPERO,"Sir, my liege,
+Do not infest your mind with beating on
+The strangeness of this business. At picked leisure
+Which shall be shortly, single I’ll resolve you—
+Which to you shall seem probable—of every
+These happened accidents. Till when, be cheerful
+And think of each thing well.
+[aside to ARIEL] Come hither, spirit.
+Set Caliban and his companions free.
+Untie the spell.",0.765,0.71744
+the-tempest,The Tempest,main,5,1,9,716,stage_direction,,,ARIEL exits.,0.0,-0.0076
+the-tempest,The Tempest,main,5,1,9,717,speech,PROSPERO,PROSPERO,"How
+fares my gracious sir?
+There are yet missing of your company
+Some few odd lads that you remember not.",-0.3182,-0.4602
+the-tempest,The Tempest,main,5,1,9,718,stage_direction,,,"ARIEL enters, pushing in CALIBAN, STEPHANO, and TRINCULO wearing their stolen clothes.",-0.4939,0.01614
+the-tempest,The Tempest,main,5,1,9,719,speech,STEPHANO,STEPHANO,"Every man shift for all the rest and let no man take
+care for himself, for all is but fortune. Coraggio,
+bully-monster, coraggio!",0.9134,0.33567
+the-tempest,The Tempest,main,5,1,9,720,speech,TRINCULO,TRINCULO,"If these be true spies which I wear in my head, here’s
+a goodly sight.",0.802,0.64964
+the-tempest,The Tempest,main,5,1,9,721,speech,CALIBAN,CALIBAN,"O Setebos, these be brave spirits indeed!
+How fine my master is! I am afraid
+He will chastise me.",0.7333,0.87255
+the-tempest,The Tempest,main,5,1,9,722,speech,SEBASTIAN,SEBASTIAN,"Ha, ha!
+What things are these, my lord Antonio?
+Will money buy 'em?",0.0,-0.03415
+the-tempest,The Tempest,main,5,1,9,723,speech,ANTONIO,ANTONIO,"Very like. One of them
+Is a plain fish, and no doubt marketable.",0.5994,-0.18759
+the-tempest,The Tempest,main,5,1,9,724,speech,PROSPERO,PROSPERO,"Mark but the badges of these men, my lords,
+Then say if they be true.
+[indicates CALIBAN] This misshapen knave,
+His mother was a witch, and one so strong
+That could control the moon, make flows and ebbs,
+And deal in her command without her power.
+These three have robbed me, and this demi-devil—
+For he’s a bastard one—had plotted with them
+To take my life. Two of these fellows you
+Must know and own. This thing of darkness I
+Acknowledge mine.",-0.6071,-0.76026
+the-tempest,The Tempest,main,5,1,9,725,speech,CALIBAN,CALIBAN,I shall be pinched to death.,-0.8316,-0.75406
+the-tempest,The Tempest,main,5,1,9,726,speech,ALONSO,ALONSO,"Is not this Stephano, my drunken butler?",0.0,-0.3893
+the-tempest,The Tempest,main,5,1,9,727,speech,SEBASTIAN,SEBASTIAN,He is drunk now. Where had he wine?,-0.34,-0.14746
+the-tempest,The Tempest,main,5,1,9,728,speech,ALONSO,ALONSO,"And Trinculo is reeling ripe. Where should they
+Find this grand liquor that hath gilded 'em?—
+How camest thou in this pickle?",-0.7851,-0.54287
+the-tempest,The Tempest,main,5,1,9,729,speech,TRINCULO,TRINCULO,"I have been in such a pickle since I saw you last that,
+I fear me, will never out of my bones. I shall not fear
+flyblowing.",0.0731,0.71963
+the-tempest,The Tempest,main,5,1,9,730,speech,SEBASTIAN,SEBASTIAN,"Why, how now, Stephano?",0.2732,0.22453
+the-tempest,The Tempest,main,5,1,9,731,speech,STEPHANO,STEPHANO,"O, touch me not. I am not Stephano, but a cramp.",-0.2023,-0.68323
+the-tempest,The Tempest,main,5,1,9,732,speech,PROSPERO,PROSPERO,"You’d be king o' th' isle, sirrah?",0.0,-0.25089
+the-tempest,The Tempest,main,5,1,9,733,speech,STEPHANO,STEPHANO,I should have been a sore one then.,-0.4404,-0.73611
+the-tempest,The Tempest,main,5,1,9,734,speech,ALONSO,ALONSO,"[indicating CALIBAN]
+This is a strange thing as e'er I looked on.",0.0,0.62734
+the-tempest,The Tempest,main,5,1,9,735,speech,PROSPERO,PROSPERO,"He is as disproportioned in his manners
+As in his shape.— [to CALIBAN] Go, sirrah, to my cell.
+Take with you your companions. As you look
+To have my pardon, trim it handsomely.",0.6705,0.2451
+the-tempest,The Tempest,main,5,1,9,736,speech,CALIBAN,CALIBAN,"Ay, that I will. And I’ll be wise hereafter
+And seek for grace. What a thrice-double ass
+Was I, to take this drunkard for a god
+And worship this dull fool!",0.7777,0.5903
+the-tempest,The Tempest,main,5,1,9,737,speech,PROSPERO,PROSPERO,"Go to, away.",0.0,0.13882
+the-tempest,The Tempest,main,5,1,9,738,speech,ALONSO,ALONSO,"[to STEPHANO and TRINCULO]
+Hence, and bestow your luggage where you found it.",0.0,0.30684
+the-tempest,The Tempest,main,5,1,9,739,speech,SEBASTIAN,SEBASTIAN,"Or stole it, rather.",0.0,-0.05687
+the-tempest,The Tempest,main,5,1,9,740,stage_direction,,,"CALIBAN, STEPHANO, and TRINCULO exit.",0.0,0.01939
+the-tempest,The Tempest,main,5,1,9,741,speech,PROSPERO,PROSPERO,"Sir, I invite your highness and your train
+To my poor cell, where you shall take your rest
+For this one night, which—part of it—I’ll waste
+With such discourse as, I not doubt, shall make it
+Go quick away: the story of my life
+And the particular accidents gone by
+Since I came to this isle. And in the morn
+I’ll bring you to your ship and so to Naples,
+Where I have hope to see the nuptial
+Of these our dear-belovèd solemnized,
+And thence retire me to my Milan, where
+Every third thought shall be my grave.",0.4404,0.50347
+the-tempest,The Tempest,main,5,1,9,742,speech,ALONSO,ALONSO,"I long
+To hear the story of your life, which must
+Take the ear strangely.",0.0,0.47098
+the-tempest,The Tempest,main,5,1,9,743,speech,PROSPERO,PROSPERO,"I’ll deliver all,
+And promise you calm seas, auspicious gales,
+And sail so expeditious that shall catch
+Your royal fleet far off.— [aside to ARIEL] My Ariel,
+chick,
+That is thy charge. Then to the elements
+Be free, and fare thou well!— Please you, draw near.",0.937,0.80557
+the-tempest,The Tempest,main,5,1,9,744,stage_direction,,,They all exit.,0.0,-0.27456
+the-tempest,The Tempest,main,5,,10,745,stage_direction,,,PROSPERO speaks.,0.0,0.07579
+the-tempest,The Tempest,main,5,,10,746,speech,PROSPERO,PROSPERO,"Now my charms are all o'erthrown,
+And what strength I have’s mine own,
+Which is most faint. Now, ’tis true,
+I must be here confined by you,
+Or sent to Naples. Let me not,
+Since I have my dukedom got
+And pardoned the deceiver, dwell
+In this bare island by your spell,
+But release me from my bands
+With the help of your good hands.
+Gentle breath of yours my sails
+Must fill, or else my project fails,
+Which was to please. Now I want
+Spirits to enforce, art to enchant,
+And my ending is despair,
+Unless I be relieved by prayer,
+Which pierces so that it assaults
+Mercy itself and frees all faults.
+As you from crimes would pardoned be,
+Let your indulgence set me free.",0.9679,-0.7055
+the-tempest,The Tempest,main,5,,10,747,stage_direction,,,He exits.,0.0,0.01202

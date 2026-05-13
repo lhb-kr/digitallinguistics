@@ -1,0 +1,14 @@
+play_id,play_title,section,act,scene,act_scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+the-taming-of-the-shrew,The Taming of the Shrew,prologue,0,1,Prologue,1,96,217,2454,17,0.12966,0.0,0.02037,0.01003,0.39013,0.37928
+the-taming-of-the-shrew,The Taming of the Shrew,main,1,1,1.1,2,76,193,2250,10,0.17681,0.0,0.04328,0.00678,0.39956,0.37804
+the-taming-of-the-shrew,The Taming of the Shrew,main,1,2,1.2,3,92,202,2449,5,0.14882,0.0,0.03703,-0.00114,0.39695,0.37101
+the-taming-of-the-shrew,The Taming of the Shrew,main,2,1,2.1,4,158,338,3783,17,0.10786,0.0,0.01318,-0.00641,0.37921,0.36901
+the-taming-of-the-shrew,The Taming of the Shrew,main,3,1,3.1,5,35,65,840,4,0.04872,0.0,0.0275,0.01965,0.36684,0.36136
+the-taming-of-the-shrew,The Taming of the Shrew,main,3,2,3.2,6,96,184,2189,11,0.06358,0.0,-0.02898,-0.02485,0.35294,0.37051
+the-taming-of-the-shrew,The Taming of the Shrew,main,4,1,4.1,7,87,188,1816,16,0.0082,0.0,-0.02349,-0.013,0.34739,0.38446
+the-taming-of-the-shrew,The Taming of the Shrew,main,4,2,4.2,8,55,106,1099,7,0.16278,0.0,0.10822,0.04793,0.37296,0.40433
+the-taming-of-the-shrew,The Taming of the Shrew,main,4,3,4.3,9,84,182,1743,7,0.02364,0.0,-0.03033,-0.01047,0.38485,0.39486
+the-taming-of-the-shrew,The Taming of the Shrew,main,4,4,4.4,10,43,89,904,7,0.16735,0.0,0.12354,0.07406,0.32148,0.31647
+the-taming-of-the-shrew,The Taming of the Shrew,main,4,5,4.5,11,31,64,775,4,0.26103,0.2841,0.19113,0.20952,0.42525,0.3392
+the-taming-of-the-shrew,The Taming of the Shrew,main,5,1,5.1,12,93,158,1223,17,0.00095,0.0,0.00088,0.00621,0.38852,0.42418
+the-taming-of-the-shrew,The Taming of the Shrew,main,5,2,5.2,13,108,177,1732,12,0.10772,0.0,-0.00526,0.01168,0.37169,0.41259

@@ -1,0 +1,24 @@
+play_id,play_title,section,act,scene,act_scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,1,1,1.1,1,138,240,2448,0,0.13565,0.0,0.04665,0.00356,0.37079,0.37032
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,1,2,1.2,2,3,9,84,0,0.145,0.0,0.04536,0.01335,0.17862,0.25672
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,1,3,1.3,3,46,95,940,0,0.05559,0.0,0.05815,0.06012,0.40112,0.36466
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,1,4,1.4,4,66,145,1441,0,0.08413,0.0,0.10495,0.04395,0.37784,0.38654
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,2,1,2.1,5,77,185,2113,0,0.09399,0.0,-0.02974,-0.01599,0.37894,0.37864
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,2,2,2.2,6,85,216,2759,0,0.15237,0.0,0.05618,0.04596,0.41578,0.41145
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,2,3,2.3,7,46,83,745,0,0.11391,0.0,0.09834,0.08385,0.44836,0.43154
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,3,1,3.1,8,49,95,997,0,0.14177,0.0,0.14886,0.17674,0.41294,0.39717
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,3,2,3.2,9,32,75,748,0,0.16496,0.0,0.05046,0.04017,0.32818,0.3814
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,3,3,3.3,10,98,203,1958,0,0.08108,0.0,-0.00069,-0.00304,0.38369,0.41385
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,3,4,3.4,11,47,95,976,0,0.22385,0.2732,0.04997,0.04103,0.36474,0.41262
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,3,5,3.5,12,45,111,1311,0,0.00177,0.0,-0.04841,-0.02073,0.3598,0.38611
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,1,4.1,13,49,77,498,0,0.0278,0.0,0.02217,-0.00426,0.31012,0.33163
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,2,4.2,14,91,194,1850,0,2e-05,0.0,-0.01467,-0.01067,0.3482,0.37111
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,3,4.3,15,4,12,107,0,0.02207,0.0,-0.00413,0.04082,0.19416,0.29608
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,4,4.4,16,27,57,828,0,0.0481,0.0,-0.07101,-0.03505,0.34705,0.38396
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,5,4.5,17,47,103,1006,0,0.0779,0.0,0.01389,-0.0063,0.35949,0.34905
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,4,6,4.6,18,8,29,474,0,0.24558,0.2732,0.07201,0.04787,0.27474,0.30469
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,5,1,5.1,19,6,24,299,0,0.03258,0.0,0.16183,0.20492,0.25633,0.35393
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,5,2,5.2,20,4,12,143,0,0.03887,0.0,-0.04826,-0.04863,0.39918,0.25112
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,5,3,5.3,21,11,17,191,0,-0.00605,0.0,-0.03221,0.01424,0.45412,0.3067
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,5,4,5.4,22,1,3,35,0,0.1998,0.0,0.17186,0.10899,0.34606,0.33859
+the-merry-wives-of-windsor,The Merry Wives of Windsor,main,5,5,5.5,23,75,189,2232,0,0.01352,0.0,-0.0406,-0.02244,0.41473,0.39243

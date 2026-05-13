@@ -1,0 +1,15 @@
+play_id,play_title,section,act,scene,act_scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+titus-andronicus,Titus Andronicus,main,1,1,1.1,1,138,274,3919,33,0.14669,0.0,0.11428,0.03946,0.47717,0.44488
+titus-andronicus,Titus Andronicus,main,2,1,2.1,2,31,76,1040,3,0.08902,0.0,0.00681,-0.01571,0.42367,0.41048
+titus-andronicus,Titus Andronicus,main,2,2,2.2,3,12,17,245,4,0.24091,0.3612,-0.02921,0.04906,0.3143,0.33796
+titus-andronicus,Titus Andronicus,main,2,3,2.3,4,92,177,2363,15,-0.10974,0.0,-0.16532,-0.14927,0.47749,0.43343
+titus-andronicus,Titus Andronicus,main,2,4,2.4,5,12,32,497,4,-0.08275,0.0,-0.11067,-0.0633,0.47697,0.38322
+titus-andronicus,Titus Andronicus,main,3,1,3.1,6,73,176,2567,14,0.0006,0.0,-0.04694,-0.00511,0.4987,0.44148
+titus-andronicus,Titus Andronicus,main,3,2,3.2,7,17,48,684,2,-0.25801,-0.2943,-0.15713,-0.09836,0.41809,0.45657
+titus-andronicus,Titus Andronicus,main,4,1,4.1,8,36,89,1219,4,0.03855,0.0,0.03778,0.05524,0.41301,0.42576
+titus-andronicus,Titus Andronicus,main,4,2,4.2,9,67,134,1741,6,-0.0304,0.0,0.07096,0.01645,0.44763,0.41192
+titus-andronicus,Titus Andronicus,main,4,3,4.3,10,34,96,1060,3,0.06771,0.0,0.07428,0.02607,0.3662,0.3947
+titus-andronicus,Titus Andronicus,main,4,4,4.4,11,29,66,875,7,0.05346,0.0,0.02474,-0.00052,0.45974,0.35749
+titus-andronicus,Titus Andronicus,main,5,1,5.1,12,41,81,1388,5,0.05997,0.0,-0.01193,0.00875,0.48154,0.41219
+titus-andronicus,Titus Andronicus,main,5,2,5.2,13,53,136,1859,12,-0.20618,0.0,0.03002,0.00286,0.48015,0.39867
+titus-andronicus,Titus Andronicus,main,5,3,5.3,14,54,141,1850,14,-0.01592,0.0,-0.01929,0.00151,0.51064,0.44233

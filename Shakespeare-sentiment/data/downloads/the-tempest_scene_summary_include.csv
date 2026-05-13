@@ -1,0 +1,11 @@
+play_id,play_title,section,act,scene,act_scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+the-tempest,The Tempest,main,1,1,1.1,1,44,95,772,14,-0.00576,0.0,0.05135,0.01349,0.35581,0.406
+the-tempest,The Tempest,main,1,2,1.2,2,157,427,5346,10,0.04121,0.0,-0.02069,-0.01717,0.3893,0.42678
+the-tempest,The Tempest,main,2,1,2.1,3,166,304,3192,7,0.09172,0.0,-0.05538,-0.03339,0.36313,0.39
+the-tempest,The Tempest,main,2,2,2.2,4,54,178,1983,11,0.02153,0.0,-0.0081,0.0032,0.41322,0.41902
+the-tempest,The Tempest,main,3,1,3.1,5,29,78,1036,4,0.26015,0.3182,-0.03217,-0.02411,0.43872,0.43277
+the-tempest,The Tempest,main,3,2,3.2,6,70,154,1439,4,-0.00778,0.0,-0.01649,-0.00238,0.40389,0.40474
+the-tempest,The Tempest,main,3,3,3.3,7,37,91,1331,11,0.02224,0.0,-0.03033,-0.00722,0.43954,0.37399
+the-tempest,The Tempest,main,4,1,4.1,8,95,236,2589,22,0.08536,0.0,0.05084,0.05131,0.41632,0.40133
+the-tempest,The Tempest,main,5,1,5.1,9,92,226,3267,16,0.10096,0.0,0.05034,0.01469,0.42467,0.43297
+the-tempest,The Tempest,main,5,,5.Prologue,10,3,10,166,2,0.25666,0.0009,-0.27305,-0.35047,0.36782,0.4216
