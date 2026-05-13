@@ -1,0 +1,24 @@
+play_id,play_title,section,act,scene,act_scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+all-s-well-that-ends-well,All's Well That Ends Well,main,1,1,1.1,1,71,171,2090,8,0.12947,0.0,-0.03157,-0.0503,0.45741,0.43179
+all-s-well-that-ends-well,All's Well That Ends Well,main,1,2,1.2,2,21,56,730,5,0.18976,0.2023,-0.00727,-0.01426,0.39923,0.3935
+all-s-well-that-ends-well,All's Well That Ends Well,main,1,3,1.3,3,69,175,2244,5,0.20719,0.0772,0.02693,-0.0157,0.43194,0.44132
+all-s-well-that-ends-well,All's Well That Ends Well,main,2,1,2.1,4,73,157,1972,13,0.18415,0.0,0.07785,0.07177,0.41885,0.39164
+all-s-well-that-ends-well,All's Well That Ends Well,main,2,2,2.2,5,31,49,684,2,0.13143,0.0,0.0274,0.00199,0.3367,0.3459
+all-s-well-that-ends-well,All's Well That Ends Well,main,2,3,2.3,6,119,263,2689,10,0.10598,0.0,0.05256,0.01161,0.41391,0.39847
+all-s-well-that-ends-well,All's Well That Ends Well,main,2,4,2.4,7,29,52,515,4,0.17992,0.0,0.05167,0.01216,0.3283,0.38453
+all-s-well-that-ends-well,All's Well That Ends Well,main,2,5,2.5,8,49,85,798,6,0.06146,0.0,0.00405,0.00105,0.33307,0.3891
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,1,3.1,9,9,19,230,4,0.06603,0.0,-0.04211,-0.09736,0.49302,0.40138
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,2,3.2,10,50,108,1164,7,-0.02637,0.0,-0.10252,-0.02569,0.39052,0.40736
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,3,3.3,11,6,10,117,3,0.22462,0.0,0.20179,0.14411,0.47798,0.40796
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,4,3.4,12,7,33,412,2,0.04135,0.0,-0.12012,-0.15453,0.44249,0.36687
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,5,3.5,13,59,107,908,8,0.09788,0.0,0.0098,0.00479,0.36851,0.38354
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,6,3.6,14,44,82,1047,5,0.03573,0.0,-0.13035,-0.1268,0.44189,0.37546
+all-s-well-that-ends-well,All's Well That Ends Well,main,3,7,3.7,15,11,29,427,2,0.12289,0.0,-0.03757,-0.01023,0.42027,0.36298
+all-s-well-that-ends-well,All's Well That Ends Well,main,4,1,4.1,16,48,86,814,6,-0.02725,0.0,-0.05376,-0.02757,0.30894,0.35446
+all-s-well-that-ends-well,All's Well That Ends Well,main,4,2,4.2,17,23,62,709,3,0.16914,0.0,-0.07495,-0.00103,0.43467,0.46296
+all-s-well-that-ends-well,All's Well That Ends Well,main,4,3,4.3,18,131,267,3241,7,0.05289,0.0,-0.05828,-0.02084,0.36904,0.34337
+all-s-well-that-ends-well,All's Well That Ends Well,main,4,4,4.4,19,7,25,351,2,0.17613,0.1531,-0.05737,-0.13698,0.46768,0.40107
+all-s-well-that-ends-well,All's Well That Ends Well,main,4,5,4.5,20,42,79,945,4,0.09906,0.0,-0.03106,-0.02012,0.39086,0.35979
+all-s-well-that-ends-well,All's Well That Ends Well,main,5,1,5.1,21,20,30,324,3,0.20496,0.0,0.03443,0.07349,0.33686,0.34806
+all-s-well-that-ends-well,All's Well That Ends Well,main,5,2,5.2,22,24,57,505,5,0.06878,0.0,0.02976,0.01437,0.2974,0.42426
+all-s-well-that-ends-well,All's Well That Ends Well,main,5,3,5.3,23,132,288,3191,14,0.10165,0.0,-0.03279,-0.00757,0.36745,0.40334
