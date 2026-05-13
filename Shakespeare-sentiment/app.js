@@ -1,5 +1,6 @@
 const DATA_ROOT = "./data";
 const DASHBOARD_SIZE = 4;
+const OVERLAY_GRID_POINTS = 500;
 
 const state = {
   view: "dashboard",
@@ -7,11 +8,13 @@ const state = {
   cache: new Map(),
   singlePlay: "hamlet",
   dashboardPlays: ["hamlet", "macbeth", "king-lear", "othello"],
+  overlayPlays: ["hamlet", "macbeth", "king-lear", "othello"],
   renderToken: 0,
 };
 
 const charts = {
   dashboard: [],
+  overlay: null,
   main: null,
   scenes: null,
   heatmap: null,
@@ -31,6 +34,7 @@ async function init() {
     await loadPlayIndex();
     populatePlaySelectors();
     buildDashboardSlots();
+    buildOverlayChecks();
     await renderAll();
     el.dataStatus.textContent = `Loaded ${state.playIndex.length} plays`;
   } catch (error) {
@@ -48,17 +52,23 @@ function bindElements() {
     "dataStatus",
     "viewDashboard",
     "viewSingle",
+    "viewOverlay",
     "singlePicker",
     "dashboardPicker",
+    "overlayPicker",
     "singlePlay",
     "dashboardSlots",
+    "overlayChecks",
+    "overlayCount",
+    "overlayFromDashboard",
+    "overlayAll",
+    "overlayClear",
     "granularity",
     "sentiment",
     "smoothing",
     "windowSize",
     "windowValue",
     "stageDirections",
-    "xAxis",
     "yScale",
     "singleFilters",
     "speakerFilter",
@@ -69,7 +79,12 @@ function bindElements() {
     "speakerMinValue",
     "dashboardView",
     "singleView",
+    "overlayView",
     "dashboardGrid",
+    "overlayChartTitle",
+    "overlayChartMeta",
+    "overlayChart",
+    "overlayTooltip",
     "mainChartTitle",
     "mainChartMeta",
     "mainChart",
@@ -84,6 +99,7 @@ function bindElements() {
     "contextMeta",
     "contextText",
     "downloadMainPng",
+    "downloadOverlayPng",
     "downloadScenePng",
     "downloadHeatmapPng",
     "downloadSpeakerPng",
@@ -98,7 +114,7 @@ function bindElements() {
 }
 
 function bindControls() {
-  [el.viewDashboard, el.viewSingle].forEach((button) => {
+  [el.viewDashboard, el.viewOverlay, el.viewSingle].forEach((button) => {
     button.addEventListener("click", () => {
       state.view = button.dataset.view;
       renderAll();
@@ -111,7 +127,6 @@ function bindControls() {
     el.sentiment,
     el.smoothing,
     el.stageDirections,
-    el.xAxis,
     el.yScale,
     el.speakerFilter,
     el.actFilter,
@@ -134,7 +149,18 @@ function bindControls() {
     renderAll();
   });
 
+  el.overlayFromDashboard.addEventListener("click", () => {
+    setOverlayPlays(state.dashboardPlays);
+  });
+  el.overlayAll.addEventListener("click", () => {
+    setOverlayPlays(state.playIndex.map((play) => play.playId));
+  });
+  el.overlayClear.addEventListener("click", () => {
+    setOverlayPlays([]);
+  });
+
   el.downloadMainPng.addEventListener("click", () => charts.main.download("sentiment-arc.png"));
+  el.downloadOverlayPng.addEventListener("click", () => charts.overlay.download("overlay-compare.png"));
   el.downloadScenePng.addEventListener("click", () => charts.scenes.download("scene-sentiment.png"));
   el.downloadHeatmapPng.addEventListener("click", () => charts.heatmap.download("act-scene-heatmap.png"));
   el.downloadSpeakerPng.addEventListener("click", () => charts.speakers.download("speaker-sentiment.png"));
@@ -145,6 +171,7 @@ function bindControls() {
 }
 
 function initCharts() {
+  charts.overlay = new OverlayChart(el.overlayChart, el.overlayTooltip, setContextFromOverlay);
   charts.main = new CurveChart(el.mainChart, el.mainTooltip, setContextFromItem);
   charts.scenes = new BarChart(el.sceneChart, el.sceneTooltip, setContextFromItem, "vertical");
   charts.heatmap = new HeatmapChart(el.heatmapChart, el.heatmapTooltip, setContextFromItem);
@@ -160,6 +187,10 @@ async function loadPlayIndex() {
     if (ids.has(playId)) return playId;
     return state.playIndex[index]?.playId || state.playIndex[0].playId;
   });
+  state.overlayPlays = state.overlayPlays.filter((playId) => ids.has(playId));
+  if (!state.overlayPlays.length) {
+    state.overlayPlays = state.dashboardPlays.filter((playId) => ids.has(playId));
+  }
   if (!ids.has(state.singlePlay)) {
     state.singlePlay = state.dashboardPlays[0] || state.playIndex[0].playId;
   }
@@ -230,6 +261,45 @@ function buildDashboardSlots() {
   }
 }
 
+function buildOverlayChecks() {
+  el.overlayChecks.innerHTML = "";
+  const selected = new Set(state.overlayPlays);
+  state.playIndex.forEach((play) => {
+    const label = document.createElement("label");
+    label.className = "check-row";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = play.playId;
+    checkbox.checked = selected.has(play.playId);
+    const text = document.createElement("span");
+    text.textContent = play.playTitle;
+    label.append(checkbox, text);
+    el.overlayChecks.appendChild(label);
+
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        state.overlayPlays = unique([...state.overlayPlays, play.playId]);
+      } else {
+        state.overlayPlays = state.overlayPlays.filter((playId) => playId !== play.playId);
+      }
+      updateOverlayCount();
+      renderAll();
+    });
+  });
+  updateOverlayCount();
+}
+
+function setOverlayPlays(playIds) {
+  const validIds = new Set(state.playIndex.map((play) => play.playId));
+  state.overlayPlays = unique(playIds).filter((playId) => validIds.has(playId));
+  buildOverlayChecks();
+  renderAll();
+}
+
+function updateOverlayCount() {
+  el.overlayCount.textContent = String(state.overlayPlays.length);
+}
+
 function fillPlaySelect(select, selectedId) {
   select.innerHTML = "";
   state.playIndex.forEach((play) => {
@@ -259,18 +329,23 @@ async function renderAll() {
 
   if (state.view === "dashboard") {
     await renderDashboard(settings, token);
-  } else {
+  } else if (state.view === "single") {
     await renderSingle(settings, token);
+  } else {
+    await renderOverlay(settings, token);
   }
 }
 
 function updateViewState() {
   el.viewDashboard.classList.toggle("is-active", state.view === "dashboard");
   el.viewSingle.classList.toggle("is-active", state.view === "single");
+  el.viewOverlay.classList.toggle("is-active", state.view === "overlay");
   el.dashboardView.classList.toggle("is-hidden", state.view !== "dashboard");
   el.singleView.classList.toggle("is-hidden", state.view !== "single");
+  el.overlayView.classList.toggle("is-hidden", state.view !== "overlay");
   el.dashboardPicker.classList.toggle("is-hidden", state.view !== "dashboard");
   el.singlePicker.classList.toggle("is-hidden", state.view !== "single");
+  el.overlayPicker.classList.toggle("is-hidden", state.view !== "overlay");
   el.singleFilters.classList.toggle("is-hidden", state.view !== "single");
 }
 
@@ -281,7 +356,7 @@ function readSettings() {
     smoothing: el.smoothing.value,
     windowSize: Number(el.windowSize.value),
     includeStage: el.stageDirections.checked,
-    xAxis: el.xAxis.value,
+    xAxis: "progress",
     yScale: el.yScale.value,
   };
 }
@@ -312,6 +387,38 @@ async function renderDashboard(settings, token) {
       play,
       kind: "curve",
     });
+  });
+}
+
+async function renderOverlay(settings, token) {
+  const playIds = state.overlayPlays.filter((playId) => (
+    state.playIndex.some((play) => play.playId === playId)
+  ));
+  const plays = await Promise.all(playIds.map((playId) => getPlay(playId)));
+  if (token !== state.renderToken) return;
+
+  const overlaySettings = { ...settings, xAxis: "progress" };
+  const datasets = plays
+    .map((play) => ({
+      play,
+      rows: getRows(play, overlaySettings, {}),
+    }))
+    .filter((dataset) => dataset.rows.length > 1);
+  const overlayData = buildOverlayData(datasets, overlaySettings);
+  const count = datasets.length;
+  const meta = count
+    ? `${scoreLabel(settings)} · ${smoothingLabel(overlaySettings)} · normalized progress · ${count} plays · ${OVERLAY_GRID_POINTS} points`
+    : "Select plays to compare";
+
+  el.overlayChartTitle.textContent = "Overlay";
+  el.overlayChartMeta.textContent = meta;
+  charts.overlay.setData({
+    title: "Overlay",
+    meta,
+    ...overlayData,
+    settings: overlaySettings,
+    playCount: count,
+    kind: "overlay",
   });
 }
 
@@ -478,6 +585,207 @@ function buildSpeakerRows(rows, settings) {
   });
 
   return result.slice(0, 16);
+}
+
+function buildOverlayData(datasets, settings) {
+  const fields = settings.sentiment === "both" ? ["vader", "dl"] : [settings.sentiment];
+  const curves = {};
+  const averages = {};
+
+  fields.forEach((field) => {
+    curves[field] = datasets.map((dataset) => {
+      const raw = dataset.rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+      const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
+      return {
+        playId: dataset.play.metadata.playId,
+        playTitle: dataset.play.metadata.playTitle,
+        rows: dataset.rows,
+        values: resampleValues(smoothed, OVERLAY_GRID_POINTS),
+      };
+    });
+    averages[field] = averageCurves(curves[field].map((curve) => curve.values));
+  });
+
+  return { fields, curves, averages, gridPoints: OVERLAY_GRID_POINTS };
+}
+
+function resampleValues(values, targetLength) {
+  if (!values.length) return [];
+  if (targetLength <= 1) return [values[0]];
+  if (values.length === 1) return Array.from({ length: targetLength }, () => values[0]);
+  return Array.from({ length: targetLength }, (_, index) => {
+    const source = (index / (targetLength - 1)) * (values.length - 1);
+    const left = Math.floor(source);
+    const right = Math.min(values.length - 1, left + 1);
+    const ratio = source - left;
+    return values[left] + (values[right] - values[left]) * ratio;
+  });
+}
+
+function averageCurves(curves) {
+  if (!curves.length) return [];
+  const length = Math.max(...curves.map((curve) => curve.length));
+  return Array.from({ length }, (_, index) => {
+    let total = 0;
+    let count = 0;
+    curves.forEach((curve) => {
+      const value = Number(curve[index]);
+      if (Number.isFinite(value)) {
+        total += value;
+        count += 1;
+      }
+    });
+    return count ? total / count : 0;
+  });
+}
+
+class OverlayChart {
+  constructor(canvas, tooltip, onSelect) {
+    this.canvas = canvas;
+    this.tooltip = tooltip;
+    this.ctx = canvas.getContext("2d");
+    this.onSelect = onSelect;
+    this.payload = null;
+    this.primary = [];
+    this.bounds = null;
+    this.scale = null;
+
+    this.canvas.addEventListener("mousemove", (event) => this.handleMove(event));
+    this.canvas.addEventListener("mouseleave", () => this.hideTooltip());
+    this.canvas.addEventListener("click", (event) => this.handleClick(event));
+  }
+
+  setData(payload) {
+    this.payload = payload;
+    this.draw();
+  }
+
+  draw() {
+    const rect = this.canvas.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const dpr = window.devicePixelRatio || 1;
+    this.canvas.width = Math.round(rect.width * dpr);
+    this.canvas.height = Math.round(rect.height * dpr);
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const width = rect.width;
+    const height = rect.height;
+    const plot = { left: 48, top: 52, right: width - 20, bottom: height - 42 };
+    this.bounds = plot;
+    this.primary = [];
+
+    drawPanelBackground(this.ctx, width, height);
+    drawTitle(this.ctx, this.payload?.title || "", this.payload?.meta || "", 14, 20);
+
+    if (!this.payload || !this.payload.playCount) {
+      drawEmpty(this.ctx, width, height, "Select plays");
+      return;
+    }
+
+    const values = [];
+    this.payload.fields.forEach((field) => {
+      this.payload.curves[field].forEach((curve) => values.push(...curve.values));
+      values.push(...this.payload.averages[field]);
+    });
+    const [yMin, yMax] = scoreDomainFromValues(values, this.payload.settings, false);
+    const scale = {
+      x: (value) => map(value, 0, 100, plot.left, plot.right),
+      y: (value) => map(value, yMin, yMax, plot.bottom, plot.top),
+      yMin,
+      yMax,
+    };
+    this.scale = scale;
+    const colors = { dl: "#0f766e", vader: "#b84a3a" };
+
+    drawGrid(this.ctx, plot, scale);
+    drawProgressAxis(this.ctx, plot, scale);
+
+    const backgroundAlpha = clamp(0.55 / Math.sqrt(Math.max(1, this.payload.playCount)), 0.08, 0.26);
+    this.payload.fields.forEach((field, fieldIndex) => {
+      const alpha = fieldIndex ? backgroundAlpha * 0.72 : backgroundAlpha;
+      const color = `rgba(70, 77, 75, ${alpha})`;
+      this.payload.curves[field].forEach((curve) => {
+        drawLine(this.ctx, gridSeries(curve.values, scale), color, plot, 1.2);
+      });
+    });
+
+    this.payload.fields.forEach((field) => {
+      const series = gridSeries(this.payload.averages[field], scale);
+      if (!this.primary.length) this.primary = series;
+      drawLine(this.ctx, series, colors[field], plot, 3);
+    });
+
+    drawOverlayLegend(this.ctx, this.payload.fields, colors, plot.right - 150, 18);
+  }
+
+  handleMove(event) {
+    const item = this.nearestItem(event);
+    if (!item) {
+      this.hideTooltip();
+      return;
+    }
+    showTooltip(this.tooltip, event, overlayTooltipHtml(this.payload, item));
+  }
+
+  handleClick(event) {
+    const item = this.nearestItem(event);
+    if (item) this.onSelect(this.payload, item);
+  }
+
+  nearestItem(event) {
+    if (!this.primary.length || !this.bounds || !this.scale || !this.payload) return null;
+    const rect = this.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    if (x < this.bounds.left - 24 || x > this.bounds.right + 24) return null;
+
+    const progress = clamp(map(x, this.bounds.left, this.bounds.right, 0, 100), 0, 100);
+    const length = this.payload.gridPoints || this.primary.length;
+    const index = clamp(Math.round((progress / 100) * (length - 1)), 0, length - 1);
+    const averagePoint = this.primary[index] || this.primary[0];
+    return {
+      ...averagePoint,
+      index,
+      progress,
+      closest: this.closestCurveAt(x, y, index),
+    };
+  }
+
+  closestCurveAt(x, y, centerIndex) {
+    let best = null;
+    let bestDistance = Infinity;
+    this.payload.fields.forEach((field) => {
+      this.payload.curves[field].forEach((curve) => {
+        const start = Math.max(0, centerIndex - 2);
+        const end = Math.min(curve.values.length - 1, centerIndex + 2);
+        for (let index = start; index <= end; index += 1) {
+          const value = curve.values[index];
+          const progress = curve.values.length <= 1 ? 0 : (index / (curve.values.length - 1)) * 100;
+          const px = this.scale.x(progress);
+          const py = this.scale.y(value);
+          const distance = Math.hypot(px - x, (py - y) * 1.25);
+          if (distance < bestDistance) {
+            bestDistance = distance;
+            best = {
+              playTitle: curve.playTitle,
+              field,
+              value,
+              progress,
+            };
+          }
+        }
+      });
+    });
+    return bestDistance <= 34 ? best : null;
+  }
+
+  hideTooltip() {
+    this.tooltip.style.display = "none";
+  }
+
+  download(filename) {
+    downloadCanvas(this.canvas, filename);
+  }
 }
 
 class CurveChart {
@@ -886,6 +1194,20 @@ function buildSeriesFromValues(rows, values, settings, scale) {
   return sampleSeries(series, 1200);
 }
 
+function gridSeries(values, scale) {
+  if (!values.length) return [];
+  return values.map((value, index) => {
+    const progress = values.length <= 1 ? 0 : (index / (values.length - 1)) * 100;
+    return {
+      index,
+      progress,
+      value,
+      px: scale.x(progress),
+      py: scale.y(value),
+    };
+  });
+}
+
 function smoothValues(values, method, windowSize) {
   if (method === "raw" || values.length < 3) return values.slice();
   if (method === "lowess") return lowessValues(values, windowSize);
@@ -1075,6 +1397,17 @@ function drawGrid(ctx, plot, scale) {
   ctx.stroke();
 }
 
+function drawProgressAxis(ctx, plot, scale) {
+  ctx.save();
+  ctx.fillStyle = "#62706c";
+  ctx.font = "10px sans-serif";
+  ctx.textAlign = "center";
+  [0, 25, 50, 75, 100].forEach((tick) => {
+    ctx.fillText(`${tick}%`, scale.x(tick), plot.bottom + 18);
+  });
+  ctx.restore();
+}
+
 function makeTicks(min, max) {
   const ticks = [];
   const count = 5;
@@ -1110,11 +1443,11 @@ function drawBoundaries(ctx, rows, plot, scale, settings) {
   ctx.lineWidth = 1;
 }
 
-function drawLine(ctx, series, color, plot) {
+function drawLine(ctx, series, color, plot, lineWidth = 2) {
   if (!series.length) return;
   ctx.save();
   ctx.strokeStyle = color;
-  ctx.lineWidth = 2;
+  ctx.lineWidth = lineWidth;
   ctx.beginPath();
   series.forEach((point, index) => {
     if (index === 0) ctx.moveTo(point.px, clamp(point.py, plot.top, plot.bottom));
@@ -1140,6 +1473,35 @@ function drawLegend(ctx, fields, colors, x, y) {
     ctx.fillStyle = "#33403d";
     ctx.font = "12px sans-serif";
     ctx.fillText(field === "dl" ? "DL" : "VADER", x + 28, yy);
+  });
+  ctx.restore();
+}
+
+function drawOverlayLegend(ctx, fields, colors, x, y) {
+  ctx.save();
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
+  ctx.strokeStyle = "rgba(70, 77, 75, 0.34)";
+  ctx.lineWidth = 1.2;
+  ctx.beginPath();
+  ctx.moveTo(x, y - 4);
+  ctx.lineTo(x + 22, y - 4);
+  ctx.stroke();
+  ctx.fillStyle = "#33403d";
+  ctx.font = "12px sans-serif";
+  ctx.fillText("Selected plays", x + 28, y);
+
+  fields.forEach((field, index) => {
+    const yy = y + 18 + index * 18;
+    ctx.strokeStyle = colors[field];
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(x, yy - 4);
+    ctx.lineTo(x + 22, yy - 4);
+    ctx.stroke();
+    ctx.fillStyle = "#33403d";
+    ctx.font = "12px sans-serif";
+    ctx.fillText(`Average ${field === "dl" ? "DL" : "VADER"}`, x + 28, yy);
   });
   ctx.restore();
 }
@@ -1180,10 +1542,13 @@ function settingsLabel(settings, count) {
     scenes: "Scene",
   }[settings.granularity];
   const stage = settings.includeStage ? "with stage directions" : "spoken text";
-  const smoothNames = { raw: "Raw", moving: "Moving", lowess: "LOWESS", smooth: "Smooth" };
-  const smooth = settings.smoothing === "raw" ? "Raw" : `${smoothNames[settings.smoothing]} ${settings.windowSize}`;
   const scale = settings.yScale === "auto" ? "auto y-axis" : "fixed y-axis";
-  return `${granularity} · ${scoreLabel(settings)} · ${smooth} · ${scale} · ${stage} · ${count} rows`;
+  return `${granularity} · ${scoreLabel(settings)} · ${smoothingLabel(settings)} · ${scale} · ${stage} · ${count} rows`;
+}
+
+function smoothingLabel(settings) {
+  const smoothNames = { raw: "Raw", moving: "Moving", lowess: "LOWESS", smooth: "Smooth" };
+  return settings.smoothing === "raw" ? "Raw" : `${smoothNames[settings.smoothing]} ${settings.windowSize}`;
 }
 
 function tooltipHtml(playTitle, row) {
@@ -1197,6 +1562,33 @@ function tooltipHtml(playTitle, row) {
     ${text}
     <span>VADER ${formatScore(row.vader)} · DL ${formatScore(row.dl)}</span>
   `;
+}
+
+function overlayTooltipHtml(payload, item) {
+  const scores = payload.fields
+    .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+    .join(" · ");
+  const closest = item.closest
+    ? `<span>Closest play: ${escapeHtml(item.closest.playTitle)} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}</span>`
+    : "";
+  return `
+    <strong>Average curve</strong>
+    <span>${formatPercent(item.progress)} progress · ${payload.playCount} plays</span>
+    <p>${scores}</p>
+    ${closest}
+  `;
+}
+
+function setContextFromOverlay(payload, item) {
+  const scores = payload.fields
+    .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+    .join(" · ");
+  const closest = item.closest
+    ? `\nClosest play curve: ${item.closest.playTitle} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}`
+    : "";
+  el.contextTitle.textContent = `Overlay · ${formatPercent(item.progress)}`;
+  el.contextMeta.textContent = `${payload.playCount} plays · ${payload.gridPoints} normalized points`;
+  el.contextText.textContent = `Average sentiment at this play position:\n${scores}${closest}`;
 }
 
 function setContextFromItem(play, row, kind) {
@@ -1320,11 +1712,13 @@ function downloadUrl(url, filename) {
 function renderVisibleCharts() {
   if (state.view === "dashboard") {
     charts.dashboard.forEach((chart) => chart.draw());
-  } else {
+  } else if (state.view === "single") {
     charts.main.draw();
     charts.scenes.draw();
     charts.heatmap.draw();
     charts.speakers.draw();
+  } else {
+    charts.overlay.draw();
   }
 }
 
@@ -1417,6 +1811,12 @@ function formatScore(value) {
   const number = Number(value);
   if (!Number.isFinite(number)) return "0.000";
   return number.toFixed(3);
+}
+
+function formatPercent(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "0%";
+  return `${number.toFixed(1)}%`;
 }
 
 function csvEscape(value) {
