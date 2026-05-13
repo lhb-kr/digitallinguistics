@@ -1,4 +1,4 @@
-const DATA_ROOT = "../data/results/website_data";
+const DATA_ROOT = "../data";
 const DASHBOARD_SIZE = 4;
 
 const state = {
