@@ -36,13 +36,20 @@
         </section>
 
         <section id="overlayPicker" class="control-section is-hidden">
-          <h2>Overlay Plays <span id="overlayCount" class="count-pill">0</span></h2>
+          <h2>Selected Plays <span id="overlayCount" class="count-pill">0</span></h2>
           <div class="picker-actions">
-            <button id="overlayFromDashboard" class="small-button" type="button">Multiple</button>
             <button id="overlayAll" class="small-button" type="button">All</button>
+            <button id="overlayClear" class="small-button" type="button">Clear</button>
           </div>
           <div id="overlayChecks" class="check-list"></div>
-          <button id="overlayClear" class="command-button" type="button">Clear Selection</button>
+
+          <div class="comparison-picker">
+            <h2>Comparison Play</h2>
+            <div class="comparison-row">
+              <select id="overlayComparison" aria-label="Comparison play"></select>
+              <button id="overlayComparisonClear" class="small-button" type="button">Clear</button>
+            </div>
+          </div>
         </section>
 
         <section class="control-section">
@@ -50,7 +57,7 @@
           <label class="field-label" for="granularity">Granularity</label>
           <select id="granularity">
             <option value="sentences">Sentence</option>
-            <option value="units">Line / Speech</option>
+            <option value="units" selected>Line / Speech</option>
             <option value="scenes">Scene</option>
           </select>
 
@@ -68,8 +75,8 @@
             <option value="raw">Raw</option>
           </select>
 
-          <label class="field-label" for="windowSize">Window <span id="windowValue">20</span></label>
-          <input id="windowSize" type="range" min="3" max="500" value="20" step="1">
+          <label class="field-label" for="windowSize">Window <span id="windowValue">200</span></label>
+          <input id="windowSize" type="range" min="3" max="500" value="200" step="1">
 
           <label class="toggle-row" for="stageDirections">
             <input id="stageDirections" type="checkbox">

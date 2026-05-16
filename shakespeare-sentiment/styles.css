@@ -239,6 +239,22 @@ input[type="range"] {
   white-space: nowrap;
 }
 
+.comparison-picker {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.comparison-picker h2 {
+  margin-top: 0;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px;
+}
+
 .slot-row {
   display: grid;
   grid-template-columns: 28px 1fr;

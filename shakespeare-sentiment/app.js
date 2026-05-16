@@ -9,6 +9,8 @@ const state = {
   singlePlay: "hamlet",
   dashboardPlays: ["hamlet", "macbeth", "king-lear", "othello"],
   overlayPlays: ["hamlet", "macbeth", "king-lear", "othello"],
+  overlayComparisonPlay: "",
+  referencePlaysTouched: false,
   renderToken: 0,
 };
 
@@ -60,9 +62,10 @@ function bindElements() {
     "dashboardSlots",
     "overlayChecks",
     "overlayCount",
-    "overlayFromDashboard",
     "overlayAll",
     "overlayClear",
+    "overlayComparison",
+    "overlayComparisonClear",
     "granularity",
     "sentiment",
     "smoothing",
@@ -132,9 +135,11 @@ function bindControls() {
     el.actFilter,
     el.sceneFilter,
     el.speakerSort,
+    el.overlayComparison,
   ].forEach((control) => {
     control.addEventListener("change", () => {
       if (control === el.singlePlay) state.singlePlay = control.value;
+      if (control === el.overlayComparison) state.overlayComparisonPlay = control.value;
       renderAll();
     });
   });
@@ -149,14 +154,16 @@ function bindControls() {
     renderAll();
   });
 
-  el.overlayFromDashboard.addEventListener("click", () => {
-    setOverlayPlays(state.dashboardPlays);
-  });
   el.overlayAll.addEventListener("click", () => {
     setOverlayPlays(state.playIndex.map((play) => play.playId));
   });
   el.overlayClear.addEventListener("click", () => {
     setOverlayPlays([]);
+  });
+  el.overlayComparisonClear.addEventListener("click", () => {
+    state.overlayComparisonPlay = "";
+    el.overlayComparison.value = "";
+    renderAll();
   });
 
   el.downloadMainPng.addEventListener("click", () => charts.main.download("sentiment-arc.png"));
@@ -187,9 +194,14 @@ async function loadPlayIndex() {
     if (ids.has(playId)) return playId;
     return state.playIndex[index]?.playId || state.playIndex[0].playId;
   });
-  state.overlayPlays = state.overlayPlays.filter((playId) => ids.has(playId));
+  state.overlayPlays = state.referencePlaysTouched
+    ? state.overlayPlays.filter((playId) => ids.has(playId))
+    : unique(state.dashboardPlays).filter((playId) => ids.has(playId));
   if (!state.overlayPlays.length) {
     state.overlayPlays = state.dashboardPlays.filter((playId) => ids.has(playId));
+  }
+  if (!ids.has(state.overlayComparisonPlay)) {
+    state.overlayComparisonPlay = "";
   }
   if (!ids.has(state.singlePlay)) {
     state.singlePlay = state.dashboardPlays[0] || state.playIndex[0].playId;
@@ -198,6 +210,7 @@ async function loadPlayIndex() {
 
 function populatePlaySelectors() {
   fillPlaySelect(el.singlePlay, state.singlePlay);
+  fillOptionalPlaySelect(el.overlayComparison, state.overlayComparisonPlay);
 }
 
 function buildDashboardSlots() {
@@ -250,6 +263,9 @@ function buildDashboardSlots() {
       state.dashboardPlays[index] = playId;
       select.value = playId;
       cardSelect.value = playId;
+      if (!state.referencePlaysTouched) {
+        syncReferencePlaysFromDashboard();
+      }
       renderAll();
     };
     select.addEventListener("change", () => setSlotPlay(select.value));
@@ -277,6 +293,7 @@ function buildOverlayChecks() {
     el.overlayChecks.appendChild(label);
 
     checkbox.addEventListener("change", () => {
+      state.referencePlaysTouched = true;
       if (checkbox.checked) {
         state.overlayPlays = unique([...state.overlayPlays, play.playId]);
       } else {
@@ -289,11 +306,18 @@ function buildOverlayChecks() {
   updateOverlayCount();
 }
 
-function setOverlayPlays(playIds) {
+function setOverlayPlays(playIds, markTouched = true) {
+  if (markTouched) state.referencePlaysTouched = true;
   const validIds = new Set(state.playIndex.map((play) => play.playId));
   state.overlayPlays = unique(playIds).filter((playId) => validIds.has(playId));
   buildOverlayChecks();
   renderAll();
+}
+
+function syncReferencePlaysFromDashboard() {
+  const validIds = new Set(state.playIndex.map((play) => play.playId));
+  state.overlayPlays = unique(state.dashboardPlays).filter((playId) => validIds.has(playId));
+  buildOverlayChecks();
 }
 
 function updateOverlayCount() {
@@ -302,6 +326,22 @@ function updateOverlayCount() {
 
 function fillPlaySelect(select, selectedId) {
   select.innerHTML = "";
+  fillPlayOptions(select, selectedId);
+}
+
+function fillOptionalPlaySelect(select, selectedId) {
+  select.innerHTML = "";
+  const empty = document.createElement("option");
+  empty.value = "";
+  empty.textContent = "";
+  empty.hidden = true;
+  empty.selected = !selectedId;
+  select.appendChild(empty);
+  fillPlayOptions(select, selectedId);
+  if (!selectedId) select.value = "";
+}
+
+function fillPlayOptions(select, selectedId) {
   state.playIndex.forEach((play) => {
     const option = document.createElement("option");
     option.value = play.playId;
@@ -391,10 +431,15 @@ async function renderDashboard(settings, token) {
 }
 
 async function renderOverlay(settings, token) {
+  const validIds = new Set(state.playIndex.map((play) => play.playId));
   const playIds = state.overlayPlays.filter((playId) => (
-    state.playIndex.some((play) => play.playId === playId)
+    validIds.has(playId)
   ));
-  const plays = await Promise.all(playIds.map((playId) => getPlay(playId)));
+  const comparisonPlayId = validIds.has(state.overlayComparisonPlay) ? state.overlayComparisonPlay : "";
+  const [plays, comparisonPlay] = await Promise.all([
+    Promise.all(playIds.map((playId) => getPlay(playId))),
+    comparisonPlayId ? getPlay(comparisonPlayId) : Promise.resolve(null),
+  ]);
   if (token !== state.renderToken) return;
 
   const overlaySettings = { ...settings, xAxis: "progress" };
@@ -404,11 +449,22 @@ async function renderOverlay(settings, token) {
       rows: getRows(play, overlaySettings, {}),
     }))
     .filter((dataset) => dataset.rows.length > 1);
-  const overlayData = buildOverlayData(datasets, overlaySettings);
+  const comparisonDataset = comparisonPlay
+    ? {
+        play: comparisonPlay,
+        rows: getRows(comparisonPlay, overlaySettings, {}),
+      }
+    : null;
+  const overlayData = buildOverlayData(
+    datasets,
+    overlaySettings,
+    comparisonDataset?.rows.length > 1 ? comparisonDataset : null,
+  );
   const count = datasets.length;
-  const meta = count
-    ? `${scoreLabel(settings)} · ${smoothingLabel(overlaySettings)} · normalized progress · ${count} plays · ${OVERLAY_GRID_POINTS} points`
-    : "Select plays to compare";
+  const comparisonMeta = overlayData.comparison ? ` · comparison: ${overlayData.comparison.playTitle}` : "";
+  const meta = count || overlayData.comparison
+    ? `${scoreLabel(settings)} · ${smoothingLabel(overlaySettings)} · normalized progress · ${count} selected plays${comparisonMeta} · ${OVERLAY_GRID_POINTS} points`
+    : "Select plays or a comparison play";
 
   el.overlayChartTitle.textContent = "Overlay";
   el.overlayChartMeta.textContent = meta;
@@ -587,10 +643,17 @@ function buildSpeakerRows(rows, settings) {
   return result.slice(0, 16);
 }
 
-function buildOverlayData(datasets, settings) {
+function buildOverlayData(datasets, settings, comparisonDataset = null) {
   const fields = settings.sentiment === "both" ? ["vader", "dl"] : [settings.sentiment];
   const curves = {};
   const averages = {};
+  const comparison = comparisonDataset
+    ? {
+        playId: comparisonDataset.play.metadata.playId,
+        playTitle: comparisonDataset.play.metadata.playTitle,
+        curves: {},
+      }
+    : null;
 
   fields.forEach((field) => {
     curves[field] = datasets.map((dataset) => {
@@ -604,9 +667,19 @@ function buildOverlayData(datasets, settings) {
       };
     });
     averages[field] = averageCurves(curves[field].map((curve) => curve.values));
+    if (comparison) {
+      const raw = comparisonDataset.rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+      const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
+      comparison.curves[field] = {
+        playId: comparison.playId,
+        playTitle: comparison.playTitle,
+        rows: comparisonDataset.rows,
+        values: resampleValues(smoothed, OVERLAY_GRID_POINTS),
+      };
+    }
   });
 
-  return { fields, curves, averages, gridPoints: OVERLAY_GRID_POINTS };
+  return { fields, curves, averages, comparison, gridPoints: OVERLAY_GRID_POINTS };
 }
 
 function resampleValues(values, targetLength) {
@@ -677,8 +750,8 @@ class OverlayChart {
     drawPanelBackground(this.ctx, width, height);
     drawTitle(this.ctx, this.payload?.title || "", this.payload?.meta || "", 14, 20);
 
-    if (!this.payload || !this.payload.playCount) {
-      drawEmpty(this.ctx, width, height, "Select plays");
+    if (!this.payload || (!this.payload.playCount && !this.payload.comparison)) {
+      drawEmpty(this.ctx, width, height, "Select plays or a comparison play");
       return;
     }
 
@@ -686,8 +759,11 @@ class OverlayChart {
     this.payload.fields.forEach((field) => {
       this.payload.curves[field].forEach((curve) => values.push(...curve.values));
       values.push(...this.payload.averages[field]);
+      if (this.payload.comparison?.curves[field]) {
+        values.push(...this.payload.comparison.curves[field].values);
+      }
     });
-    const [yMin, yMax] = scoreDomainFromValues(values, this.payload.settings, false);
+    const [yMin, yMax] = scoreDomainFromValues(values, this.payload.settings, true);
     const scale = {
       x: (value) => map(value, 0, 100, plot.left, plot.right),
       y: (value) => map(value, yMin, yMax, plot.bottom, plot.top),
@@ -696,26 +772,40 @@ class OverlayChart {
     };
     this.scale = scale;
     const colors = { dl: "#0f766e", vader: "#b84a3a" };
+    const comparisonColors = { dl: "#a16207", vader: "#274c77" };
 
     drawGrid(this.ctx, plot, scale);
+    drawZeroBaseline(this.ctx, plot, scale);
     drawProgressAxis(this.ctx, plot, scale);
 
     const backgroundAlpha = clamp(0.55 / Math.sqrt(Math.max(1, this.payload.playCount)), 0.08, 0.26);
-    this.payload.fields.forEach((field, fieldIndex) => {
-      const alpha = fieldIndex ? backgroundAlpha * 0.72 : backgroundAlpha;
-      const color = `rgba(70, 77, 75, ${alpha})`;
-      this.payload.curves[field].forEach((curve) => {
-        drawLine(this.ctx, gridSeries(curve.values, scale), color, plot, 1.2);
+    if (this.payload.playCount) {
+      this.payload.fields.forEach((field, fieldIndex) => {
+        const alpha = fieldIndex ? backgroundAlpha * 0.72 : backgroundAlpha;
+        const color = `rgba(70, 77, 75, ${alpha})`;
+        this.payload.curves[field].forEach((curve) => {
+          drawLine(this.ctx, gridSeries(curve.values, scale), color, plot, 1.2);
+        });
       });
-    });
 
-    this.payload.fields.forEach((field) => {
-      const series = gridSeries(this.payload.averages[field], scale);
-      if (!this.primary.length) this.primary = series;
-      drawLine(this.ctx, series, colors[field], plot, 3);
-    });
+      this.payload.fields.forEach((field) => {
+        const series = gridSeries(this.payload.averages[field], scale);
+        if (!this.primary.length) this.primary = series;
+        drawLine(this.ctx, series, colors[field], plot, 3);
+      });
+    }
 
-    drawOverlayLegend(this.ctx, this.payload.fields, colors, plot.right - 150, 18);
+    if (this.payload.comparison) {
+      this.payload.fields.forEach((field) => {
+        const comparisonCurve = this.payload.comparison.curves[field];
+        if (!comparisonCurve) return;
+        const series = gridSeries(comparisonCurve.values, scale);
+        if (!this.primary.length) this.primary = series;
+        drawLine(this.ctx, series, comparisonColors[field], plot, 3.2);
+      });
+    }
+
+    drawOverlayLegend(this.ctx, this.payload, colors, comparisonColors, Math.max(plot.left + 12, plot.right - 178), 18);
   }
 
   handleMove(event) {
@@ -754,27 +844,35 @@ class OverlayChart {
   closestCurveAt(x, y, centerIndex) {
     let best = null;
     let bestDistance = Infinity;
+    const considerCurve = (curve, field, role) => {
+      const start = Math.max(0, centerIndex - 2);
+      const end = Math.min(curve.values.length - 1, centerIndex + 2);
+      for (let index = start; index <= end; index += 1) {
+        const value = curve.values[index];
+        const progress = curve.values.length <= 1 ? 0 : (index / (curve.values.length - 1)) * 100;
+        const px = this.scale.x(progress);
+        const py = this.scale.y(value);
+        const distance = Math.hypot(px - x, (py - y) * 1.25);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          best = {
+            playTitle: curve.playTitle,
+            field,
+            role,
+            value,
+            progress,
+          };
+        }
+      }
+    };
     this.payload.fields.forEach((field) => {
       this.payload.curves[field].forEach((curve) => {
-        const start = Math.max(0, centerIndex - 2);
-        const end = Math.min(curve.values.length - 1, centerIndex + 2);
-        for (let index = start; index <= end; index += 1) {
-          const value = curve.values[index];
-          const progress = curve.values.length <= 1 ? 0 : (index / (curve.values.length - 1)) * 100;
-          const px = this.scale.x(progress);
-          const py = this.scale.y(value);
-          const distance = Math.hypot(px - x, (py - y) * 1.25);
-          if (distance < bestDistance) {
-            bestDistance = distance;
-            best = {
-              playTitle: curve.playTitle,
-              field,
-              value,
-              progress,
-            };
-          }
-        }
+        considerCurve(curve, field, "Selected");
       });
+      const comparisonCurve = this.payload.comparison?.curves[field];
+      if (comparisonCurve) {
+        considerCurve(comparisonCurve, field, "Comparison");
+      }
     });
     return bestDistance <= 34 ? best : null;
   }
@@ -840,9 +938,10 @@ class CurveChart {
       const raw = rows.map((row) => scoreFor(row, { ...this.payload.settings, sentiment: field }));
       smoothedValues[field] = smoothValues(raw, this.payload.settings.smoothing, this.payload.settings.windowSize);
     });
-    const yDomain = scoreDomainFromValues(Object.values(smoothedValues).flat(), this.payload.settings, false);
+    const yDomain = scoreDomainFromValues(Object.values(smoothedValues).flat(), this.payload.settings, true);
     const scale = createScale(rows, plot, this.payload.settings, false, yDomain);
     drawGrid(this.ctx, plot, scale);
+    drawZeroBaseline(this.ctx, plot, scale);
     drawBoundaries(this.ctx, rows, plot, scale, this.payload.settings);
 
     fields.forEach((field) => {
@@ -948,6 +1047,7 @@ class BarChart {
       yMax,
     };
     drawGrid(this.ctx, plot, scale);
+    drawZeroBaseline(this.ctx, plot, scale);
     const step = (plot.right - plot.left) / rows.length;
     const paired = this.payload.settings.sentiment === "both";
     const colorDomain = colorDomainForRows(rows, this.payload.settings);
@@ -988,14 +1088,13 @@ class BarChart {
     const rows = this.payload.rows.slice(0, 16);
     const plot = { left: 108, top: 50, right: width - 20, bottom: height - 22 };
     const [xMin, xMax] = scoreDomain(rows, this.payload.settings, true);
-    const zero = map(0, xMin, xMax, plot.left, plot.right);
+    const scale = {
+      x: (value) => map(value, xMin, xMax, plot.left, plot.right),
+    };
+    const zero = scale.x(0);
     const paired = this.payload.settings.sentiment === "both";
     const colorDomain = colorDomainForRows(rows, this.payload.settings);
-    this.ctx.strokeStyle = "#b8c3bd";
-    this.ctx.beginPath();
-    this.ctx.moveTo(zero, plot.top);
-    this.ctx.lineTo(zero, plot.bottom);
-    this.ctx.stroke();
+    drawZeroBaseline(this.ctx, plot, scale, "vertical");
 
     const step = (plot.bottom - plot.top) / rows.length;
     rows.forEach((row, index) => {
@@ -1397,6 +1496,28 @@ function drawGrid(ctx, plot, scale) {
   ctx.stroke();
 }
 
+function drawZeroBaseline(ctx, plot, scale, orientation = "horizontal") {
+  const position = orientation === "vertical" ? scale.x?.(0) : scale.y?.(0);
+  if (!Number.isFinite(position)) return;
+  if (orientation === "vertical" && (position < plot.left || position > plot.right)) return;
+  if (orientation !== "vertical" && (position < plot.top || position > plot.bottom)) return;
+
+  ctx.save();
+  ctx.strokeStyle = "rgba(24, 33, 31, 0.46)";
+  ctx.lineWidth = 1.2;
+  ctx.setLineDash([5, 4]);
+  ctx.beginPath();
+  if (orientation === "vertical") {
+    ctx.moveTo(position, plot.top);
+    ctx.lineTo(position, plot.bottom);
+  } else {
+    ctx.moveTo(plot.left, position);
+    ctx.lineTo(plot.right, position);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
 function drawProgressAxis(ctx, plot, scale) {
   ctx.save();
   ctx.fillStyle = "#62706c";
@@ -1477,32 +1598,37 @@ function drawLegend(ctx, fields, colors, x, y) {
   ctx.restore();
 }
 
-function drawOverlayLegend(ctx, fields, colors, x, y) {
+function drawOverlayLegend(ctx, payload, referenceColors, comparisonColors, x, y) {
   ctx.save();
   ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
-  ctx.strokeStyle = "rgba(70, 77, 75, 0.34)";
-  ctx.lineWidth = 1.2;
-  ctx.beginPath();
-  ctx.moveTo(x, y - 4);
-  ctx.lineTo(x + 22, y - 4);
-  ctx.stroke();
-  ctx.fillStyle = "#33403d";
-  ctx.font = "12px sans-serif";
-  ctx.fillText("Selected plays", x + 28, y);
-
-  fields.forEach((field, index) => {
-    const yy = y + 18 + index * 18;
-    ctx.strokeStyle = colors[field];
-    ctx.lineWidth = 3;
+  let row = 0;
+  const drawLegendLine = (color, label, lineWidth = 3) => {
+    const yy = y + row * 18;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
     ctx.beginPath();
     ctx.moveTo(x, yy - 4);
     ctx.lineTo(x + 22, yy - 4);
     ctx.stroke();
     ctx.fillStyle = "#33403d";
     ctx.font = "12px sans-serif";
-    ctx.fillText(`Average ${field === "dl" ? "DL" : "VADER"}`, x + 28, yy);
-  });
+    ctx.fillText(label, x + 28, yy);
+    row += 1;
+  };
+
+  if (payload.playCount) {
+    drawLegendLine("rgba(70, 77, 75, 0.34)", "Selected plays", 1.2);
+    payload.fields.forEach((field) => {
+      drawLegendLine(referenceColors[field], `Selected avg ${field === "dl" ? "DL" : "VADER"}`);
+    });
+  }
+
+  if (payload.comparison) {
+    payload.fields.forEach((field) => {
+      drawLegendLine(comparisonColors[field], `Comparison ${field === "dl" ? "DL" : "VADER"}`, 3.2);
+    });
+  }
   ctx.restore();
 }
 
@@ -1565,30 +1691,48 @@ function tooltipHtml(playTitle, row) {
 }
 
 function overlayTooltipHtml(payload, item) {
-  const scores = payload.fields
-    .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
-    .join(" · ");
+  const referenceScores = payload.playCount
+    ? payload.fields
+        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+        .join(" · ")
+    : "";
+  const comparisonScores = payload.comparison
+    ? payload.fields
+        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
+        .join(" · ")
+    : "";
   const closest = item.closest
-    ? `<span>Closest play: ${escapeHtml(item.closest.playTitle)} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}</span>`
+    ? `<span>Closest curve: ${escapeHtml(item.closest.playTitle)} · ${item.closest.role} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}</span>`
     : "";
   return `
-    <strong>Average curve</strong>
-    <span>${formatPercent(item.progress)} progress · ${payload.playCount} plays</span>
-    <p>${scores}</p>
+    <strong>Overlay comparison</strong>
+    <span>${formatPercent(item.progress)} progress · ${payload.playCount} selected plays</span>
+    ${referenceScores ? `<p>Selected average: ${referenceScores}</p>` : ""}
+    ${comparisonScores ? `<p>${escapeHtml(payload.comparison.playTitle)}: ${comparisonScores}</p>` : ""}
     ${closest}
   `;
 }
 
 function setContextFromOverlay(payload, item) {
-  const scores = payload.fields
-    .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
-    .join(" · ");
+  const scores = payload.playCount
+    ? payload.fields
+        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+        .join(" · ")
+    : "";
+  const comparison = payload.comparison
+    ? payload.fields
+        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
+        .join(" · ")
+    : "";
   const closest = item.closest
-    ? `\nClosest play curve: ${item.closest.playTitle} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}`
+    ? `\nClosest curve: ${item.closest.playTitle} · ${item.closest.role} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}`
     : "";
   el.contextTitle.textContent = `Overlay · ${formatPercent(item.progress)}`;
-  el.contextMeta.textContent = `${payload.playCount} plays · ${payload.gridPoints} normalized points`;
-  el.contextText.textContent = `Average sentiment at this play position:\n${scores}${closest}`;
+  el.contextMeta.textContent = `${payload.playCount} selected plays · ${payload.gridPoints} normalized points`;
+  const lines = [];
+  if (scores) lines.push(`Selected average: ${scores}`);
+  if (comparison) lines.push(`${payload.comparison.playTitle}: ${comparison}`);
+  el.contextText.textContent = `${lines.join("\n")}${closest}`;
 }
 
 function setContextFromItem(play, row, kind) {
