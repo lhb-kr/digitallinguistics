@@ -1,0 +1,19 @@
+play_id,play_title,section,act,scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+julius-caesar,Julius Caesar,main,1,1,1,22,59,681,4,0.02149,0.0,-0.03032,-0.01613,0.37452,0.33773
+julius-caesar,Julius Caesar,main,1,2,2,99,242,2806,18,0.07132,0.0,-0.08377,-0.04772,0.36867,0.35487
+julius-caesar,Julius Caesar,main,1,3,3,45,119,1436,8,-0.04192,0.0,-0.07908,-0.01965,0.37858,0.3706
+julius-caesar,Julius Caesar,main,2,1,4,106,276,3148,19,0.03567,0.0,-0.05873,-0.03979,0.36826,0.36755
+julius-caesar,Julius Caesar,main,2,2,5,47,108,1170,11,0.03473,0.0,-0.02131,-0.0105,0.41421,0.34404
+julius-caesar,Julius Caesar,main,2,3,6,3,18,143,2,0.10235,0.0,-0.07991,-0.01094,0.33192,0.35964
+julius-caesar,Julius Caesar,main,2,4,7,23,47,437,4,0.11456,0.0,0.00868,-0.00623,0.32164,0.34439
+julius-caesar,Julius Caesar,main,3,1,8,103,236,2775,14,0.01373,0.0,-0.02559,0.00085,0.41963,0.36915
+julius-caesar,Julius Caesar,main,3,2,9,102,275,2430,12,0.01601,0.0,0.04241,0.03243,0.38029,0.39401
+julius-caesar,Julius Caesar,main,3,3,10,27,44,281,2,0.03383,0.0,0.02812,-0.00076,0.28162,0.35703
+julius-caesar,Julius Caesar,main,4,1,11,17,38,482,3,-0.03217,0.0,-0.07755,-0.00039,0.36017,0.31737
+julius-caesar,Julius Caesar,main,4,2,12,26,50,448,5,0.06993,0.0,0.00982,0.00523,0.32855,0.31324
+julius-caesar,Julius Caesar,main,4,3,13,171,327,2801,15,-0.01226,0.0,-0.06422,-0.03493,0.3802,0.38971
+julius-caesar,Julius Caesar,main,5,1,14,48,110,1134,6,-0.0182,0.0,0.01774,-0.0002,0.34778,0.34258
+julius-caesar,Julius Caesar,main,5,2,15,5,10,59,4,-0.21395,-0.11315,0.1189,0.09531,0.25226,0.30802
+julius-caesar,Julius Caesar,main,5,3,16,47,117,1056,12,-0.06023,0.0,0.08121,0.03935,0.34172,0.4004
+julius-caesar,Julius Caesar,main,5,4,17,17,45,320,6,-0.04196,0.0,0.14404,0.1184,0.4186,0.35089
+julius-caesar,Julius Caesar,main,5,5,18,44,87,784,7,0.03262,0.0,0.13068,0.12773,0.39288,0.37812

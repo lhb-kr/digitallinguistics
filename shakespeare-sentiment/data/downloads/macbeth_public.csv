@@ -1,0 +1,2512 @@
+play_id,play_title,section,act,scene,scene_index_in_play,unit_index_in_play,type,speaker_original,speaker_normalized,original_text,vader_score,dl_score
+macbeth,Macbeth,main,1,1,1,1,stage_direction,,,Thunder and lightning. Three WITCHES enter.,0.0,0.55044
+macbeth,Macbeth,main,1,1,1,2,speech,FIRST WITCH,FIRST WITCH,"When shall we three meet again?
+In thunder, lightning, or in rain?",0.0,-0.00904
+macbeth,Macbeth,main,1,1,1,3,speech,SECOND WITCH,SECOND WITCH,"When the hurly-burly’s done,
+When the battle’s lost and won.",0.34,-0.02716
+macbeth,Macbeth,main,1,1,1,4,speech,THIRD WITCH,THIRD WITCH,That will be ere the set of sun.,0.0,0.00322
+macbeth,Macbeth,main,1,1,1,5,speech,FIRST WITCH,FIRST WITCH,Where the place?,0.0,-0.03098
+macbeth,Macbeth,main,1,1,1,6,speech,SECOND WITCH,SECOND WITCH,Upon the heath.,0.0,-0.00712
+macbeth,Macbeth,main,1,1,1,7,speech,THIRD WITCH,THIRD WITCH,There to meet with Macbeth.,0.0,0.02783
+macbeth,Macbeth,main,1,1,1,8,speech,FIRST WITCH,FIRST WITCH,"I come, Graymalkin!",0.0,0.62378
+macbeth,Macbeth,main,1,1,1,9,speech,SECOND WITCH,SECOND WITCH,Paddock calls.,0.0,0.10585
+macbeth,Macbeth,main,1,1,1,10,speech,THIRD WITCH,THIRD WITCH,Anon.,0.0,0.22123
+macbeth,Macbeth,main,1,1,1,11,speech,ALL,ALL,"Fair is foul, and foul is fair
+Hover through the fog and filthy air.",0.5574,-0.19817
+macbeth,Macbeth,main,1,1,1,12,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,1,2,2,13,stage_direction,,,"A trumpet and the sounds of fighting offstage. KING DUNCAN enters with his sons MALCOLM and DONALBAIN, along with the Duke of LENNOX and a number of attendants. They meet a wounded CAPTAIN.",-0.296,0.00182
+macbeth,Macbeth,main,1,2,2,14,speech,DUNCAN,DUNCAN,"What bloody man is that? He can report,
+As seemeth by his plight, of the revolt
+The newest state.",-0.4404,-0.20057
+macbeth,Macbeth,main,1,2,2,15,speech,MALCOLM,MALCOLM,"This is the sergeant
+Who like a good and hardy soldier fought
+‘Gainst my captivity. Hail, brave friend!
+Say to the king the knowledge of the broil
+As thou didst leave it.",0.7177,0.58781
+macbeth,Macbeth,main,1,2,2,16,speech,CAPTAIN,CAPTAIN,"Doubtful it stood,
+As two spent swimmers that do cling together
+And choke their art. The merciless Macdonwald—
+Worthy to be a rebel, for to that
+The multiplying villanies of nature
+Do swarm upon him— from the Western Isles
+Of kerns and gallowglasses is supplied,
+And fortune, on his damnèd quarrel smiling,
+Showed like a rebel’s whore. But all’s too weak,
+For brave Macbeth—well he deserves that name—
+Disdaining fortune, with his brandished steel,
+Which smoked with bloody execution,
+Like valor’s minion carved out his passage
+Till he faced the slave;
+Which ne’er shook hands, nor bade farewell to him,
+Till he unseamed him from the nave to th’ chops,
+And fixed his head upon our battlements.",0.7039,-0.13494
+macbeth,Macbeth,main,1,2,2,17,speech,DUNCAN,DUNCAN,O valiant cousin! Worthy gentleman!,0.7955,0.71239
+macbeth,Macbeth,main,1,2,2,18,speech,CAPTAIN,CAPTAIN,"As whence the sun ‘gins his reflection
+Shipwracking storms and direful thunders break,
+So from that spring whence comfort seemed to come
+Discomfort swells. Mark, King of Scotland, mark:
+No sooner justice had, with valor armed,
+Compelled these skipping kerns to trust their heels,
+But the Norweyan lord, surveying vantage,
+With furbished arms and new supplies of men,
+Began a fresh assault.",-0.9555,-0.16813
+macbeth,Macbeth,main,1,2,2,19,speech,DUNCAN,DUNCAN,"Dismayed not this our captains, Macbeth and Banquo?",-0.4019,-0.09975
+macbeth,Macbeth,main,1,2,2,20,speech,CAPTAIN,CAPTAIN,"Yes, as sparrows eagles, or the hare the lion.
+If I say sooth, I must report they were
+As cannons overcharged with double cracks,
+So they doubly redoubled strokes upon the foe.
+Except they meant to bathe in reeking wounds,
+Or memorize another Golgotha,
+I cannot tell—
+But I am faint, my gashes cry for help.",-0.9153,-0.50277
+macbeth,Macbeth,main,1,2,2,21,speech,DUNCAN,DUNCAN,"So well thy words become thee as thy wounds;
+They smack of honor both. Go get him surgeons.",0.0,0.27701
+macbeth,Macbeth,main,1,2,2,22,stage_direction,,,Attendants help the CAPTAIN to exit.,0.4019,0.02016
+macbeth,Macbeth,main,1,2,2,23,stage_direction,,,ROSS and ANGUS enter.,0.0,0.04153
+macbeth,Macbeth,main,1,2,2,24,speech,DUNCAN,DUNCAN,Who comes here?,0.0,-0.01499
+macbeth,Macbeth,main,1,2,2,25,speech,MALCOLM,MALCOLM,The worthy thane of Ross.,0.4404,0.44308
+macbeth,Macbeth,main,1,2,2,26,speech,LENNOX,LENNOX,"What a haste looks through his eyes! So should he look
+That seems to speak things strange.",0.4199,0.70934
+macbeth,Macbeth,main,1,2,2,27,speech,ROSS,ROSS,God save the king.,0.6486,0.55572
+macbeth,Macbeth,main,1,2,2,28,speech,DUNCAN,DUNCAN,"Whence cam’st thou, worthy thane?",0.5574,0.09877
+macbeth,Macbeth,main,1,2,2,29,speech,ROSS,ROSS,"From Fife, great king,
+Where the Norweyan banners flout the sky
+And fan our people cold.
+Norway himself, with terrible numbers,
+Assisted by that most disloyal traitor,
+The thane of Cawdor, began a dismal conflict,
+Till that Bellona’s bridegroom, lapped in proof,
+Confronted him with self-comparisons,
+Point against point, rebellious arm ‘gainst arm,
+Curbing his lavish spirit; and to conclude,
+The victory fell on us.",-0.6249,-0.08235
+macbeth,Macbeth,main,1,2,2,30,speech,DUNCAN,DUNCAN,Great happiness!,0.8398,0.43865
+macbeth,Macbeth,main,1,2,2,31,speech,ROSS,ROSS,"That now
+Sweno, the Norways’ king, craves composition.
+Nor would we deign him burial of his men
+Till he disbursed at Saint Colme’s Inch
+Ten thousand dollars to our general use.",0.3182,-0.32988
+macbeth,Macbeth,main,1,2,2,32,speech,DUNCAN,DUNCAN,"No more that thane of Cawdor shall deceive
+Our bosom interest: go pronounce his present death,
+And with his former title greet Macbeth.",0.3089,0.31127
+macbeth,Macbeth,main,1,2,2,33,speech,ROSS,ROSS,I’ll see it done.,0.0,0.03474
+macbeth,Macbeth,main,1,2,2,34,speech,DUNCAN,DUNCAN,"What he hath lost, noble Macbeth hath won.",0.6597,0.26462
+macbeth,Macbeth,main,1,2,2,35,stage_direction,,,They all exit.,0.0,-0.27456
+macbeth,Macbeth,main,1,3,3,36,stage_direction,,,The sound of thunder. The three WITCHES enter.,0.0,0.18969
+macbeth,Macbeth,main,1,3,3,37,speech,FIRST WITCH,FIRST WITCH,"Where hast thou been, sister?",0.0,-0.04257
+macbeth,Macbeth,main,1,3,3,38,speech,SECOND WITCH,SECOND WITCH,Killing swine.,-0.6597,-0.11837
+macbeth,Macbeth,main,1,3,3,39,speech,THIRD WITCH,THIRD WITCH,"Sister, where thou?",0.0,-0.04419
+macbeth,Macbeth,main,1,3,3,40,speech,FIRST WITCH,FIRST WITCH,"A sailor’s wife had chestnuts in her lap,
+And munched, and munched, and munched. “Give me,”
+quoth I.
+“Aroint thee, witch!” the rump-fed runnion cries.
+Her husband’s to Aleppo gone, master o’ th’ Tiger;
+But in a sieve I’ll thither sail,
+And like a rat without a tail,
+I’ll do, I’ll do, and I’ll do.",-0.5707,-0.13453
+macbeth,Macbeth,main,1,3,3,41,speech,SECOND WITCH,SECOND WITCH,I’ll give thee a wind.,0.0,0.11479
+macbeth,Macbeth,main,1,3,3,42,speech,FIRST WITCH,FIRST WITCH,Thou ‘rt kind.,0.5709,0.34635
+macbeth,Macbeth,main,1,3,3,43,speech,THIRD WITCH,THIRD WITCH,And I another.,0.0,0.23348
+macbeth,Macbeth,main,1,3,3,44,speech,FIRST WITCH,FIRST WITCH,"I myself have all the other,
+And the very ports they blow,
+All the quarters that they know
+I’ th’ shipman’s card.
+I’ll drain him dry as hay.
+Sleep shall neither night nor day
+Hang upon his penthouse lid.
+He shall live a man forbid.
+Weary sev’nnights nine times nine
+Shall he dwindle, peak and pine.
+Though his bark cannot be lost,
+Yet it shall be tempest-tossed.
+Look what I have.",-0.8591,-0.58454
+macbeth,Macbeth,main,1,3,3,45,speech,SECOND WITCH,SECOND WITCH,"Show me, show me.",0.0,0.4367
+macbeth,Macbeth,main,1,3,3,46,speech,FIRST WITCH,FIRST WITCH,"Here I have a pilot’s thumb,
+Wrecked as homeward he did come.",0.0,-0.02549
+macbeth,Macbeth,main,1,3,3,47,stage_direction,,,A drum sounds offstage.,0.0,-0.28186
+macbeth,Macbeth,main,1,3,3,48,speech,THIRD WITCH,THIRD WITCH,"A drum, a drum!
+Macbeth doth come.",0.0,0.25659
+macbeth,Macbeth,main,1,3,3,49,speech,ALL,ALL,"[dancing together in a circle]
+The weird sisters, hand in hand,
+Posters of the sea and land,
+Thus do go about, about,
+Thrice to thine and thrice to mine
+And thrice again, to make up nine.
+Peace! The charm’s wound up.",0.8619,0.37986
+macbeth,Macbeth,main,1,3,3,50,stage_direction,,,MACBETH and BANQUO enter.,0.0,0.11428
+macbeth,Macbeth,main,1,3,3,51,speech,MACBETH,MACBETH,So foul and fair a day I have not seen.,0.1531,-0.12124
+macbeth,Macbeth,main,1,3,3,52,speech,BANQUO,BANQUO,"How far is ’t called to Forres? —What are these
+So withered and so wild in their attire,
+That look not like th’ inhabitants o’ th’ Earth,
+And yet are on ’t? —Live you? Or are you aught
+That man may question? You seem to understand me,
+By each at once her choppy finger laying
+Upon her skinny lips. You should be women,
+And yet your beards forbid me to interpret
+That you are so.",0.644,-0.23907
+macbeth,Macbeth,main,1,3,3,53,speech,MACBETH,MACBETH,"Speak, if you can: what are you?",0.0,0.00459
+macbeth,Macbeth,main,1,3,3,54,speech,FIRST WITCH,FIRST WITCH,"All hail, Macbeth! Hail to thee, thane of Glamis!",0.2924,0.77164
+macbeth,Macbeth,main,1,3,3,55,speech,SECOND WITCH,SECOND WITCH,"All hail, Macbeth! Hail to thee, thane of Cawdor!",0.2924,0.77169
+macbeth,Macbeth,main,1,3,3,56,speech,THIRD WITCH,THIRD WITCH,"All hail, Macbeth, that shalt be king hereafter!",0.1511,0.76965
+macbeth,Macbeth,main,1,3,3,57,speech,BANQUO,BANQUO,"Good sir, why do you start and seem to fear
+Things that do sound so fair [to the WITCHES] I’ th’
+name of truth,
+are ye fantastical, or that indeed
+Which outwardly ye show? ? My noble partner
+You greet with present grace and great prediction
+Of noble having and of royal hope,
+That he seems rapt withal. To me you speak not.
+If you can look into the seeds of time
+And say which grain will grow and which will not,
+Speak, then, to me, who neither beg nor fear
+Your favors nor your hate.",0.9806,-0.08694
+macbeth,Macbeth,main,1,3,3,58,speech,FIRST WITCH,FIRST WITCH,Hail!,0.1511,0.37943
+macbeth,Macbeth,main,1,3,3,59,speech,SECOND WITCH,SECOND WITCH,Hail!,0.1511,0.37943
+macbeth,Macbeth,main,1,3,3,60,speech,THIRD WITCH,THIRD WITCH,Hail!,0.1511,0.37943
+macbeth,Macbeth,main,1,3,3,61,speech,FIRST WITCH,FIRST WITCH,Lesser than Macbeth and greater.,0.5023,-0.08241
+macbeth,Macbeth,main,1,3,3,62,speech,SECOND WITCH,SECOND WITCH,"Not so happy, yet much happier.",0.7866,-0.42822
+macbeth,Macbeth,main,1,3,3,63,speech,THIRD WITCH,THIRD WITCH,"Thou shalt get kings, though thou be none.
+So all hail, Macbeth and Banquo!",0.2193,0.28505
+macbeth,Macbeth,main,1,3,3,64,speech,FIRST WITCH,FIRST WITCH,"Banquo and Macbeth, all hail!",0.1511,0.5263
+macbeth,Macbeth,main,1,3,3,65,speech,MACBETH,MACBETH,"Stay, you imperfect speakers, tell me more.
+By Sinel’s death I know I am thane of Glamis.
+But how of Cawdor? The thane of Cawdor lives,
+A prosperous gentleman, and to be king
+Stands not within the prospect of belief,
+No more than to be Cawdor. Say from whence
+You owe this strange intelligence, or why
+Upon this blasted heath you stop our way
+With such prophetic greeting. Speak, I charge you.",0.6599,0.56357
+macbeth,Macbeth,main,1,3,3,66,speech,BANQUO,BANQUO,"The earth hath bubbles, as the water has,
+And these are of them. Whither are they vanished?",0.3612,-0.12925
+macbeth,Macbeth,main,1,3,3,67,speech,MACBETH,MACBETH,"Into the air, and what seemed corporal
+Melted, as breath into the wind. Would they had stayed.",0.8122,0.32418
+macbeth,Macbeth,main,1,3,3,68,speech,BANQUO,BANQUO,"Were such things here as we do speak about?
+Or have we eaten on the insane root
+That takes the reason prisoner?",0.0,-0.05763
+macbeth,Macbeth,main,1,3,3,69,speech,MACBETH,MACBETH,Your children shall be kings.,0.0,0.55365
+macbeth,Macbeth,main,1,3,3,70,speech,BANQUO,BANQUO,You shall be king.,0.0,0.68432
+macbeth,Macbeth,main,1,3,3,71,speech,MACBETH,MACBETH,And thane of Cawdor too: went it not so?,0.0,-0.1031
+macbeth,Macbeth,main,1,3,3,72,speech,BANQUO,BANQUO,To the selfsame tune and words. Who’s here?,0.0,-0.0465
+macbeth,Macbeth,main,1,3,3,73,stage_direction,,,ROSS and ANGUS enter.,0.0,0.04153
+macbeth,Macbeth,main,1,3,3,74,speech,ROSS,ROSS,"The king hath happily received, Macbeth,
+The news of thy success, and when he reads
+Thy personal venture in the rebels’ fight,
+His wonders and his praises do contend
+Which should be thine or his. Silenced with that,
+In viewing o’er the rest o’ the selfsame day,
+He finds thee in the stout Norweyan ranks,
+Nothing afeard of what thyself didst make,
+Strange images of death. As thick as tale
+Can post with post, and every one did bear
+Thy praises in his kingdom’s great defense,
+And poured them down before him.",0.4767,0.42262
+macbeth,Macbeth,main,1,3,3,75,speech,ANGUS,ANGUS,"We are sent
+To give thee from our royal master thanks,
+Only to herald thee into his sight,
+Not pay thee.",0.765,-0.11002
+macbeth,Macbeth,main,1,3,3,76,speech,ROSS,ROSS,"And, for an earnest of a greater honor,
+He bade me, from him, call thee thane of Cawdor:
+In which addition, hail, most worthy thane,
+For it is thine.",0.7778,0.47241
+macbeth,Macbeth,main,1,3,3,77,speech,BANQUO,BANQUO,"What, can the devil speak true?",-0.5362,-0.0395
+macbeth,Macbeth,main,1,3,3,78,speech,MACBETH,MACBETH,"The thane of Cawdor lives. Why do you dress me
+In borrowed robes?",0.296,0.38055
+macbeth,Macbeth,main,1,3,3,79,speech,ANGUS,ANGUS,"Who was the thane lives yet,
+But under heavy judgment bears that life
+Which he deserves to lose. Whether he was combined
+With those of Norway, or did line the rebel
+With hidden help and vantage, or that with both
+He labored in his country’s wrack, I know not;
+But treasons capital, confessed and proved,
+Have overthrown him.",-0.9865,-0.64849
+macbeth,Macbeth,main,1,3,3,80,speech,MACBETH,MACBETH,"[aside] Glamis, and thane of Cawdor!
+The greatest is behind. [to ROSS and ANGUS] Thanks for
+your pains.
+[aside to BANQUO] Do you not hope your children shall
+be kings,
+When those that gave the thane of Cawdor to me
+Promised no less to them?",0.69,0.84557
+macbeth,Macbeth,main,1,3,3,81,speech,BANQUO,BANQUO,"That, trusted home,
+Might yet enkindle you unto the crown,
+Besides the thane of Cawdor. But ’tis strange.
+And oftentimes, to win us to our harm,
+The instruments of darkness tell us truths,
+Win us with honest trifles, to betray ’s
+In deepest consequence.
+[to ROSS and ANGUS] Cousins, a word, I pray you.",-0.822,0.46692
+macbeth,Macbeth,main,1,3,3,82,stage_direction,,,"ROSS, ANGUS, and BANQUO move off to one side.",0.0,-0.00626
+macbeth,Macbeth,main,1,3,3,83,speech,MACBETH,MACBETH,"[aside] Two truths are told,
+As happy prologues to the swelling act
+Of the imperial theme. [to ROSS and ANGUS] I thank you,
+gentlemen.
+[aside] This supernatural soliciting
+Cannot be ill, cannot be good. If ill,
+Why hath it given me earnest of success,
+Commencing in a truth? I am thane of Cawdor.
+If good, why do I yield to that suggestion
+Whose horrid image doth unfix my hair
+And make my seated heart knock at my ribs,
+Against the use of nature? Present fears
+Are less than horrible imaginings.
+My thought, whose murder yet is but fantastical,
+Shakes so my single state of man
+That function is smothered in surmise,
+And nothing is but what is not.",-0.7436,0.1915
+macbeth,Macbeth,main,1,3,3,84,speech,BANQUO,BANQUO,Look how our partner’s rapt.,0.4939,0.10525
+macbeth,Macbeth,main,1,3,3,85,speech,MACBETH,MACBETH,"[aside] If chance will have me king, why, chance may
+crown me
+Without my stir.",0.2732,-0.08757
+macbeth,Macbeth,main,1,3,3,86,speech,BANQUO,BANQUO,"New honors come upon him,
+Like our strange garments, cleave not to their mold
+But with the aid of use.",0.5994,-0.45881
+macbeth,Macbeth,main,1,3,3,87,speech,MACBETH,MACBETH,"[aside] Come what come may,
+Time and the hour runs through the roughest day.",-0.0191,-0.0064
+macbeth,Macbeth,main,1,3,3,88,speech,BANQUO,BANQUO,"Worthy Macbeth, we stay upon your leisure.",0.6597,0.51815
+macbeth,Macbeth,main,1,3,3,89,speech,MACBETH,MACBETH,"Give me your favor. My dull brain was wrought
+With things forgotten. Kind gentlemen, your pains
+Are registered where every day I turn
+The leaf to read them. Let us toward the king.
+[aside to BANQUO] Think upon what hath chanced, and, at
+more time,
+The interim having weighed it, let us speak
+Our free hearts each to other.",0.7003,-0.17401
+macbeth,Macbeth,main,1,3,3,90,speech,BANQUO,BANQUO,Very gladly.,0.34,0.47092
+macbeth,Macbeth,main,1,3,3,91,speech,MACBETH,MACBETH,"Till then, enough. [to ROSS and ANGUS] Come, friends.",0.4767,0.35403
+macbeth,Macbeth,main,1,3,3,92,stage_direction,,,They all exit.,0.0,-0.27456
+macbeth,Macbeth,main,1,4,4,93,stage_direction,,,"Trumpets sound. KING DUNCAN, LENNOX, MALCOLM, DONALBAIN, and their attendants enter.",0.0,0.07576
+macbeth,Macbeth,main,1,4,4,94,speech,DUNCAN,DUNCAN,"Is execution done on Cawdor? Are not
+Those in commission yet returned?",0.0,-0.00745
+macbeth,Macbeth,main,1,4,4,95,speech,MALCOLM,MALCOLM,"My liege,
+They are not yet come back. But I have spoke
+With one that saw him die, who did report
+That very frankly he confessed his treasons,
+Implored your highness’ pardon, and set forth
+A deep repentance. Nothing in his life
+Became him like the leaving it. He died
+As one that had been studied in his death
+To throw away the dearest thing he owed
+As ’twere a careless trifle.",-0.8852,-0.736
+macbeth,Macbeth,main,1,4,4,96,speech,DUNCAN,DUNCAN,"There’s no art
+To find the mind’s construction in the face.
+He was a gentleman on whom I built
+An absolute trust.",0.4767,-0.33323
+macbeth,Macbeth,main,1,4,4,97,stage_direction,,,"MACBETH, BANQUO, ROSS, and ANGUS enter.",0.0,0.07604
+macbeth,Macbeth,main,1,4,4,98,speech,DUNCAN,DUNCAN,"[to MACBETH]
+O worthiest cousin,
+The sin of my ingratitude even now
+Was heavy on me. Thou art so far before
+That swiftest wing of recompense is slow
+To overtake thee. Would thou hadst less deserved,
+That the proportion both of thanks and payment
+Might have been mine! Only I have left to say,
+More is thy due than more than all can pay.",0.8551,0.63767
+macbeth,Macbeth,main,1,4,4,99,speech,MACBETH,MACBETH,"The service and the loyalty I owe
+In doing it pays itself. Your highness’ part
+Is to receive our duties, and our duties
+Are to your throne and state children and servants,
+Which do but what they should, by doing everything
+Safe toward your love and honor.",0.9509,0.54525
+macbeth,Macbeth,main,1,4,4,100,speech,DUNCAN,DUNCAN,"Welcome hither.
+I have begun to plant thee, and will labor
+To make thee full of growing. [to BANQUO] Noble
+Banquo,
+That hast no less deserved, nor must be known
+No less to have done so, let me infold thee
+And hold thee to my heart.",0.9705,0.58594
+macbeth,Macbeth,main,1,4,4,101,speech,BANQUO,BANQUO,"There, if I grow,
+The harvest is your own.",0.6249,-0.03384
+macbeth,Macbeth,main,1,4,4,102,speech,DUNCAN,DUNCAN,"My plenteous joys,
+Wanton in fullness, seek to hide themselves
+In drops of sorrow. Sons, kinsmen, thanes,
+And you whose places are the nearest, know
+We will establish our estate upon
+Our eldest, Malcolm, whom we name hereafter
+The prince of Cumberland; which honor must
+Not unaccompanied invest him only,
+But signs of nobleness, like stars, shall shine
+On all deservers. [to MACBETH] From hence to Inverness,
+And bind us further to you.",0.8483,0.80475
+macbeth,Macbeth,main,1,4,4,103,speech,MACBETH,MACBETH,"The rest is labor which is not used for you:
+I’ll be myself the harbinger and make joyful
+The hearing of my wife with your approach.
+So humbly take my leave.",0.4195,-0.54597
+macbeth,Macbeth,main,1,4,4,104,speech,DUNCAN,DUNCAN,My worthy Cawdor!,0.5093,0.78394
+macbeth,Macbeth,main,1,4,4,105,speech,MACBETH,MACBETH,"[aside] The prince of Cumberland! That is a step
+On which I must fall down, or else o’erleap,
+For in my way it lies. Stars, hide your fires;
+Let not light see my black and deep desires.
+The eye wink at the hand, yet let that be
+Which the eye fears, when it is done, to see.",-0.7879,0.49755
+macbeth,Macbeth,main,1,4,4,106,stage_direction,,,MACBETH exits.,0.0,0.01462
+macbeth,Macbeth,main,1,4,4,107,speech,DUNCAN,DUNCAN,"True, worthy Banquo. He is full so valiant,
+And in his commendations I am fed;
+It is a banquet to me.—Let’s after him,
+Whose care is gone before to bid us welcome:
+It is a peerless kinsman.",0.9286,0.72738
+macbeth,Macbeth,main,1,4,4,108,stage_direction,,,Trumpets sound. They exit.,0.0,0.14401
+macbeth,Macbeth,main,1,5,5,109,stage_direction,,,"LADY MACBETH enters, reading a letter.",0.0,0.01002
+macbeth,Macbeth,main,1,5,5,110,speech,LADY MACBETH,LADY MACBETH,"[reading] “They met me in the day of success, and I
+have learned by the perfectest report they have more in
+them than mortal knowledge. When I burned in desire to
+question them further, they made themselves air, into
+which they vanished. Whiles I stood rapt in the wonder
+of it came missives from the king, who all-hailed me
+‘Thane of Cawdor,’ by which title, before, these weird
+sisters saluted me, and referred me to the coming on of
+time with ‘Hail, king that shalt be!’ This have I
+thought good to deliver thee, my dearest partner of
+greatness, that thou might’st not lose the dues of
+rejoicing, by being ignorant of what greatness is
+promised thee. Lay it to thy heart, and farewell.”
+Glamis thou art, and Cawdor; and shalt be
+What thou art promised. Yet do I fear thy nature;
+It is too full o’ th’ milk of human kindness
+To catch the nearest way: thou wouldst be great,
+Art not without ambition, but without
+The illness should attend it. What thou wouldst
+highly,
+That wouldst thou holily; wouldst not play false,
+And yet wouldst wrongly win. Thou’ld’st have, great
+Glamis,
+That which cries, “Thus thou must do,” if thou have it,
+And that which rather thou dost fear to do,
+Than wishest should be undone. Hie thee hither,
+That I may pour my spirits in thine ear
+And chastise with the valor of my tongue
+All that impedes thee from the golden round,
+Which fate and metaphysical aid doth seem
+To have thee crowned withal.",0.9267,0.48297
+macbeth,Macbeth,main,1,5,5,111,stage_direction,,,A SERVANT enters.,0.0,0.01004
+macbeth,Macbeth,main,1,5,5,112,speech,LADY MACBETH,LADY MACBETH,What is your tidings?,0.0,-0.02066
+macbeth,Macbeth,main,1,5,5,113,speech,SERVANT,SERVANT,The king comes here tonight.,0.0,0.48575
+macbeth,Macbeth,main,1,5,5,114,speech,LADY MACBETH,LADY MACBETH,"Thou ‘rt mad to say it.
+Is not thy master with him, who, were ’t so,
+Would have informed for preparation?",0.1926,-0.44265
+macbeth,Macbeth,main,1,5,5,115,speech,SERVANT,SERVANT,"So please you, it is true: our thane is coming.
+One of my fellows had the speed of him,
+Who, almost dead for breath, had scarcely more
+Than would make up his message.",0.6542,-0.01627
+macbeth,Macbeth,main,1,5,5,116,speech,LADY MACBETH,LADY MACBETH,"Give him tending.
+He brings great news.",0.8074,0.48769
+macbeth,Macbeth,main,1,5,5,117,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,1,5,5,118,speech,LADY MACBETH,LADY MACBETH,"The raven himself is hoarse
+That croaks the fatal entrance of Duncan
+Under my battlements. Come, you spirits
+That tend on mortal thoughts, unsex me here,
+And fill me from the crown to the toe top-full
+Of direst cruelty. Make thick my blood.
+Stop up the access and passage to remorse,
+That no compunctious visitings of nature
+Shake my fell purpose, nor keep peace between
+The effect and it! Come to my woman’s breasts,
+And take my milk for gall, you murd’ring ministers,
+Wherever in your sightless substances
+You wait on nature’s mischief. Come, thick night,
+And pall thee in the dunnest smoke of hell,
+That my keen knife see not the wound it makes,
+Nor heaven peep through the blanket of the dark
+To cry “Hold, hold!”",-0.9928,-0.31423
+macbeth,Macbeth,main,1,5,5,119,stage_direction,,,MACBETH enters.,0.0,0.01361
+macbeth,Macbeth,main,1,5,5,120,speech,LADY MACBETH,LADY MACBETH,"Great Glamis, worthy Cawdor,
+Greater than both, by the all-hail hereafter,
+Thy letters have transported me beyond
+This ignorant present, and I feel now
+The future in the instant.",0.8625,0.81461
+macbeth,Macbeth,main,1,5,5,121,speech,MACBETH,MACBETH,"My dearest love,
+Duncan comes here tonight.",0.8316,-0.37955
+macbeth,Macbeth,main,1,5,5,122,speech,LADY MACBETH,LADY MACBETH,And when goes hence?,-0.0516,-0.04003
+macbeth,Macbeth,main,1,5,5,123,speech,MACBETH,MACBETH,"Tomorrow, as he purposes.",0.0,0.07562
+macbeth,Macbeth,main,1,5,5,124,speech,LADY MACBETH,LADY MACBETH,"O, never
+Shall sun that morrow see!
+Your face, my thane, is as a book where men
+May read strange matters. To beguile the time,
+Look like the time. Bear welcome in your eye,
+Your hand, your tongue. Look like th’ innocent flower,
+But be the serpent under ’t. He that’s coming
+Must be provided for; and you shall put
+This night’s great business into my dispatch,
+Which shall to all our nights and days to come
+Give solely sovereign sway and masterdom.",0.6542,0.24202
+macbeth,Macbeth,main,1,5,5,125,speech,MACBETH,MACBETH,We will speak further.,0.0,0.03409
+macbeth,Macbeth,main,1,5,5,126,speech,LADY MACBETH,LADY MACBETH,"Only look up clear.
+To alter favor ever is to fear.
+Leave all the rest to me.",-0.128,0.3151
+macbeth,Macbeth,main,1,5,5,127,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,1,6,6,128,stage_direction,,,"Torches light the stage. The sound of oboes playing. DUNCAN enters, along with MALCOLM, DONALBAIN, BANQUO, LENNOX, MACDUFF, ROSS, ANGUS, and their attendants.",0.2023,0.04339
+macbeth,Macbeth,main,1,6,6,129,speech,DUNCAN,DUNCAN,"This castle hath a pleasant seat. The air
+Nimbly and sweetly recommends itself
+Unto our gentle senses.",0.9274,0.46799
+macbeth,Macbeth,main,1,6,6,130,speech,BANQUO,BANQUO,"This guest of summer,
+The temple-haunting martlet, does approve,
+By his loved mansionry, that the heaven’s breath
+Smells wooingly here. No jutty, frieze,
+Buttress, nor coign of vantage, but this bird
+Hath made his pendant bed and procreant cradle.
+Where they most breed and haunt, I have observed,
+The air is delicate.",0.8399,0.41505
+macbeth,Macbeth,main,1,6,6,131,stage_direction,,,LADY MACBETH enters.,0.0,0.01706
+macbeth,Macbeth,main,1,6,6,132,speech,DUNCAN,DUNCAN,"See, see, our honored hostess!
+The love that follows us sometime is our trouble,
+Which still we thank as love. Herein I teach you
+How you shall bid God ‘ild us for your pains,
+And thank us for your trouble.",0.963,0.70953
+macbeth,Macbeth,main,1,6,6,133,speech,LADY MACBETH,LADY MACBETH,"All our service,
+In every point twice done and then done double,
+Were poor and single business to contend
+Against those honors deep and broad wherewith
+Your majesty loads our house. For those of old,
+And the late dignities heaped up to them,
+We rest your hermits.",0.8934,-0.65041
+macbeth,Macbeth,main,1,6,6,134,speech,DUNCAN,DUNCAN,"Where’s the thane of Cawdor?
+We coursed him at the heels and had a purpose
+To be his purveyor; but he rides well,
+And his great love, sharp as his spur, hath holp him
+To his home before us. Fair and noble hostess,
+We are your guest tonight.",0.9825,0.483
+macbeth,Macbeth,main,1,6,6,135,speech,LADY MACBETH,LADY MACBETH,"Your servants ever
+Have theirs, themselves, and what is theirs in compt ,
+To make their audit at your highness’ pleasure,
+Still to return your own.",0.6908,0.65692
+macbeth,Macbeth,main,1,6,6,136,speech,DUNCAN,DUNCAN,"Give me your hand.
+Conduct me to mine host. We love him highly
+And shall continue our graces towards him.
+By your leave, hostess.",0.9371,0.39903
+macbeth,Macbeth,main,1,6,6,137,stage_direction,,,They all exit.,0.0,-0.27456
+macbeth,Macbeth,main,1,7,7,138,stage_direction,,,"The sound of oboes playing. Torches light the stage. A butler enters, as do a number of servants carrying utensils and dishes of food. Then MACBETH enters.",0.2732,0.01987
+macbeth,Macbeth,main,1,7,7,139,speech,MACBETH,MACBETH,"If it were done when ’tis done, then ’twere well
+It were done quickly. If the assassination
+Could trammel up the consequence, and catch
+With his surcease success; that but this blow
+Might be the be-all and the end-all here,
+But here, upon this bank and shoal of time,
+We’d jump the life to come. But in these cases
+We still have judgment here, that we but teach
+Bloody instructions, which, being taught, return
+To plague th’ inventor: this even-handed justice
+Commends the ingredients of our poisoned chalice
+To our own lips. He’s here in double trust:
+First, as I am his kinsman and his subject,
+Strong both against the deed; then, as his host,
+Who should against his murderer shut the door,
+Not bear the knife myself. Besides, this Duncan
+Hath borne his faculties so meek, hath been
+So clear in his great office, that his virtues
+Will plead like angels, trumpet-tongued, against
+The deep damnation of his taking-off;
+And pity, like a naked newborn babe,
+Striding the blast, or heaven’s cherubim, horsed
+Upon the sightless couriers of the air,
+Shall blow the horrid deed in every eye,
+That tears shall drown the wind. I have no spur
+To prick the sides of my intent, but only
+Vaulting ambition, which o’erleaps itself
+And falls on th’ other.",-0.9795,-0.69315
+macbeth,Macbeth,main,1,7,7,140,stage_direction,,,LADY MACBETH enters.,0.0,0.01706
+macbeth,Macbeth,main,1,7,7,141,speech,MACBETH,MACBETH,How now! What news?,0.0,-0.01955
+macbeth,Macbeth,main,1,7,7,142,speech,LADY MACBETH,LADY MACBETH,He has almost supped. Why have you left the chamber?,0.0,-0.16388
+macbeth,Macbeth,main,1,7,7,143,speech,MACBETH,MACBETH,Hath he asked for me?,0.0,-0.02559
+macbeth,Macbeth,main,1,7,7,144,speech,LADY MACBETH,LADY MACBETH,Know you not he has?,0.0,-0.0751
+macbeth,Macbeth,main,1,7,7,145,speech,MACBETH,MACBETH,"We will proceed no further in this business.
+He hath honored me of late, and I have bought
+Golden opinions from all sorts of people,
+Which would be worn now in their newest gloss,
+Not cast aside so soon.",0.8271,0.49787
+macbeth,Macbeth,main,1,7,7,146,speech,LADY MACBETH,LADY MACBETH,"Was the hope drunk
+Wherein you dressed yourself? Hath it slept since?
+And wakes it now, to look so green and pale
+At what it did so freely? From this time
+Such I account thy love. Art thou afeard
+To be the same in thine own act and valor
+As thou art in desire? Wouldst thou have that
+Which thou esteem’st the ornament of life,
+And live a coward in thine own esteem,
+Letting “I dare not” wait upon “I would, ”
+Like the poor cat i’ th’ adage?",-0.3998,-0.75139
+macbeth,Macbeth,main,1,7,7,147,speech,MACBETH,MACBETH,"Prithee, peace:
+I dare do all that may become a man;
+Who dares do more is none.",-0.3595,-0.62279
+macbeth,Macbeth,main,1,7,7,148,speech,LADY MACBETH,LADY MACBETH,"What beast was ’t, then,
+That made you break this enterprise to me?
+When you durst do it, then you were a man;
+And to be more than what you were, you would
+Be so much more the man. Nor time nor place
+Did then adhere, and yet you would make both.
+They have made themselves, and that their fitness now
+Does unmake you. I have given suck, and know
+How tender ’tis to love the babe that milks me.
+I would, while it was smiling in my face,
+Have plucked my nipple from his boneless gums
+And dashed the brains out, had I so sworn as you
+Have done to this.",0.9753,-0.0187
+macbeth,Macbeth,main,1,7,7,149,speech,MACBETH,MACBETH,If we should fail?,-0.6956,0.03943
+macbeth,Macbeth,main,1,7,7,150,speech,LADY MACBETH,LADY MACBETH,"We fail?
+But screw your courage to the sticking-place,
+And we’ll not fail. When Duncan is asleep—
+Whereto the rather shall his day’s hard journey
+Soundly invite him—his two chamberlains
+Will I with wine and wassail so convince
+That memory, the warder of the brain,
+Shall be a fume, and the receipt of reason
+A limbeck only: when in swinish sleep
+Their drenchèd natures lie as in a death,
+What cannot you and I perform upon
+The unguarded Duncan? What not put upon
+His spongy officers, who shall bear the guilt
+Of our great quell?",-0.9718,-0.84071
+macbeth,Macbeth,main,1,7,7,151,speech,MACBETH,MACBETH,"Bring forth men-children only,
+For thy undaunted mettle should compose
+Nothing but males. Will it not be received,
+When we have marked with blood those sleepy two
+Of his own chamber and used their very daggers,
+That they have done ’t?",0.7906,-0.66061
+macbeth,Macbeth,main,1,7,7,152,speech,LADY MACBETH,LADY MACBETH,"Who dares receive it other,
+As we shall make our griefs and clamor roar
+Upon his death?",-0.7964,-0.70785
+macbeth,Macbeth,main,1,7,7,153,speech,MACBETH,MACBETH,"I am settled, and bend up
+Each corporal agent to this terrible feat.
+Away, and mock the time with fairest show.
+False face must hide what the false heart doth know.",0.9095,-0.80076
+macbeth,Macbeth,main,1,7,7,154,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,2,1,8,155,stage_direction,,,"BANQUO enters with FLEANCE, who carries a torch.",0.0,0.01118
+macbeth,Macbeth,main,2,1,8,156,speech,BANQUO,BANQUO,"How goes the night, boy?",0.0,-0.01626
+macbeth,Macbeth,main,2,1,8,157,speech,FLEANCE,FLEANCE,The moon is down. I have not heard the clock.,-0.128,0.13953
+macbeth,Macbeth,main,2,1,8,158,speech,BANQUO,BANQUO,And she goes down at twelve.,0.0,0.00489
+macbeth,Macbeth,main,2,1,8,159,speech,FLEANCE,FLEANCE,"I take ’t ’tis later, sir.",0.0,0.15473
+macbeth,Macbeth,main,2,1,8,160,speech,BANQUO,BANQUO,"Hold, take my sword. There’s husbandry in heaven;
+Their candles are all out. Take thee that too.
+A heavy summons lies like lead upon me,
+And yet I would not sleep. Merciful powers,
+Restrain in me the cursèd thoughts that nature
+Gives way to in repose.",0.4118,0.42626
+macbeth,Macbeth,main,2,1,8,161,stage_direction,,,"MACBETH enters with a SERVANT, who carries a torch.",0.0,0.00756
+macbeth,Macbeth,main,2,1,8,162,speech,BANQUO,BANQUO,Give me my sword. Who’s there?,0.0,0.3168
+macbeth,Macbeth,main,2,1,8,163,speech,MACBETH,MACBETH,A friend.,0.4939,0.10784
+macbeth,Macbeth,main,2,1,8,164,speech,BANQUO,BANQUO,"What, sir, not yet at rest? The king’s a-bed.
+He hath been in unusual pleasure, and
+Sent forth great largess to your offices.
+This diamond he greets your wife withal,
+By the name of most kind hostess, and shut up
+In measureless content.",0.9396,0.57225
+macbeth,Macbeth,main,2,1,8,165,speech,MACBETH,MACBETH,"Being unprepared,
+Our will became the servant to defect,
+Which else should free have wrought.",0.3612,-0.4679
+macbeth,Macbeth,main,2,1,8,166,speech,BANQUO,BANQUO,"All’s well.
+I dreamt last night of the three weird sisters:
+To you they have showed some truth.",0.5859,0.36537
+macbeth,Macbeth,main,2,1,8,167,speech,MACBETH,MACBETH,"I think not of them.
+Yet, when we can entreat an hour to serve,
+We would spend it in some words upon that business,
+If you would grant the time.",0.5023,-0.47034
+macbeth,Macbeth,main,2,1,8,168,speech,BANQUO,BANQUO,At your kind’st leisure.,0.3612,0.00612
+macbeth,Macbeth,main,2,1,8,169,speech,MACBETH,MACBETH,"If you shall cleave to my consent, when ’tis,
+It shall make honor for you.",0.7178,-0.38346
+macbeth,Macbeth,main,2,1,8,170,speech,BANQUO,BANQUO,"So I lose none
+In seeking to augment it, but still keep
+My bosom franchised and allegiance clear,
+I shall be counselled.",0.7579,-0.25609
+macbeth,Macbeth,main,2,1,8,171,speech,MACBETH,MACBETH,Good repose the while!,0.2732,0.0109
+macbeth,Macbeth,main,2,1,8,172,speech,BANQUO,BANQUO,"Thanks, sir: the like to you!",0.4926,0.49417
+macbeth,Macbeth,main,2,1,8,173,stage_direction,,,BANQUO and FLEANCE exit.,0.0,0.01978
+macbeth,Macbeth,main,2,1,8,174,speech,MACBETH,MACBETH,"[to the SERVANT] Go bid thy mistress, when my drink is
+ready,
+She strike upon the bell. Get thee to bed.",0.25,-0.00166
+macbeth,Macbeth,main,2,1,8,175,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,2,1,8,176,speech,MACBETH,MACBETH,"Is this a dagger which I see before me,
+The handle toward my hand? Come, let me clutch thee.
+I have thee not, and yet I see thee still.
+Art thou not, fatal vision, sensible
+To feeling as to sight? Or art thou but
+A dagger of the mind, a false creation,
+Proceeding from the heat-oppressèd brain?
+I see thee yet, in form as palpable
+As this which now I draw.
+Thou marshall’st me the way that I was going,
+And such an instrument I was to use.
+Mine eyes are made the fools o’ th’ other senses,
+Or else worth all the rest. I see thee still,
+And on thy blade and dudgeon gouts of blood,
+Which was not so before. There’s no such thing.
+It is the bloody business which informs
+Thus to mine eyes. Now o’er the one half-world
+Nature seems dead, and wicked dreams abuse
+The curtained sleep. Witchcraft celebrates
+Pale Hecate’s offerings, and withered murder,
+Alarumed by his sentinel, the wolf,
+Whose howl’s his watch, thus with his stealthy pace,
+With Tarquin’s ravishing strides, towards his design
+Moves like a ghost. Thou sure and firm-set earth,
+Hear not my steps, which way they walk, for fear
+Thy very stones prate of my whereabout,
+And take the present horror from the time,
+Which now suits with it. Whiles I threat, he lives.
+Words to the heat of deeds too cold breath gives.",-0.9297,-0.79629
+macbeth,Macbeth,main,2,1,8,177,speech,MACBETH,MACBETH,"I go, and it is done. The bell invites me.
+Hear it not, Duncan, for it is a knell
+That summons thee to heaven or to hell.",0.1531,0.53367
+macbeth,Macbeth,main,2,1,8,178,stage_direction,,,MACBETH exits.,0.0,0.01462
+macbeth,Macbeth,main,2,2,9,179,stage_direction,,,LADY MACBETH enters.,0.0,0.01706
+macbeth,Macbeth,main,2,2,9,180,speech,LADY MACBETH,LADY MACBETH,"That which hath made them drunk hath made me bold.
+What hath quenched them hath given me fire.
+Hark! Peace! It was the owl that shrieked, the fatal
+bellman,
+Which gives the stern’st good-night. He is about it.
+The doors are open, and the surfeited grooms
+Do mock their charge with snores. I have drugged their
+possets,
+That death and nature do contend about them,
+Whether they live or die.",-0.9785,0.09623
+macbeth,Macbeth,main,2,2,9,181,speech,MACBETH,MACBETH,"[within] Who’s there? What, ho!",0.0,-0.00437
+macbeth,Macbeth,main,2,2,9,182,speech,LADY MACBETH,LADY MACBETH,"Alack, I am afraid they have awaked,
+And ’tis not done. Th’ attempt and not the deed
+Confounds us. Hark! I laid their daggers ready;
+He could not miss ‘em. Had he not resembled
+My father as he slept, I had done ’t.",-0.9418,-0.8299
+macbeth,Macbeth,main,2,2,9,183,stage_direction,,,"MACBETH enters, holding bloody daggers.",-0.4404,0.03818
+macbeth,Macbeth,main,2,2,9,184,speech,LADY MACBETH,LADY MACBETH,My husband!,0.0,0.76442
+macbeth,Macbeth,main,2,2,9,185,speech,MACBETH,MACBETH,I have done the deed. Didst thou not hear a noise?,0.0,0.02197
+macbeth,Macbeth,main,2,2,9,186,speech,LADY MACBETH,LADY MACBETH,"I heard the owl scream and the crickets cry.
+Did not you speak?",-0.7003,-0.0208
+macbeth,Macbeth,main,2,2,9,187,speech,MACBETH,MACBETH,When?,0.0,-0.06713
+macbeth,Macbeth,main,2,2,9,188,speech,LADY MACBETH,LADY MACBETH,Now.,0.0,0.24446
+macbeth,Macbeth,main,2,2,9,189,speech,MACBETH,MACBETH,As I descended?,0.0,-0.0614
+macbeth,Macbeth,main,2,2,9,190,speech,LADY MACBETH,LADY MACBETH,Ay.,0.4019,0.28617
+macbeth,Macbeth,main,2,2,9,191,speech,MACBETH,MACBETH,Hark! Who lies i’ th’ second chamber?,0.0,0.08368
+macbeth,Macbeth,main,2,2,9,192,speech,LADY MACBETH,LADY MACBETH,Donalbain.,0.0,-0.00548
+macbeth,Macbeth,main,2,2,9,193,speech,MACBETH,MACBETH,[looking at his hands] This is a sorry sight.,-0.0772,-0.69114
+macbeth,Macbeth,main,2,2,9,194,speech,LADY MACBETH,LADY MACBETH,"A foolish thought, to say a sorry sight.",-0.2732,-0.64587
+macbeth,Macbeth,main,2,2,9,195,speech,MACBETH,MACBETH,"There’s one did laugh in ’s sleep, and one cried.
+“Murder!”
+That they did wake each other. I stood and heard them.
+But they did say their prayers, and addressed them
+Again to sleep.",0.126,-0.79298
+macbeth,Macbeth,main,2,2,9,196,speech,LADY MACBETH,LADY MACBETH,There are two lodged together.,0.0,-0.14189
+macbeth,Macbeth,main,2,2,9,197,speech,MACBETH,MACBETH,"One cried, “God bless us!” and “Amen” the other,
+As they had seen me with these hangman’s hands.
+List’ning their fear I could not say “Amen,”
+When they did say “God bless us!”",-0.1984,0.36902
+macbeth,Macbeth,main,2,2,9,198,speech,LADY MACBETH,LADY MACBETH,Consider it not so deeply.,0.0,-0.48315
+macbeth,Macbeth,main,2,2,9,199,speech,MACBETH,MACBETH,"But wherefore could not I pronounce “Amen?”
+I had most need of blessing, and “Amen”
+Stuck in my throat.",0.4215,-0.69693
+macbeth,Macbeth,main,2,2,9,200,speech,LADY MACBETH,LADY MACBETH,"These deeds must not be thought
+After these ways. So, it will make us mad.",-0.34,-0.51159
+macbeth,Macbeth,main,2,2,9,201,speech,MACBETH,MACBETH,"Methought I heard a voice cry, “Sleep no more!
+Macbeth does murder sleep”—the innocent sleep,
+Sleep that knits up the raveled sleave of care,
+The death of each day’s life, sore labor’s bath,
+Balm of hurt minds, great nature’s second course,
+Chief nourisher in life’s feast.",-0.9448,0.85053
+macbeth,Macbeth,main,2,2,9,202,speech,LADY MACBETH,LADY MACBETH,What do you mean?,0.0,-0.01713
+macbeth,Macbeth,main,2,2,9,203,speech,MACBETH,MACBETH,"Still it cried, “Sleep no more!” to all the house.
+“Glamis hath murdered sleep, and therefore Cawdor
+Shall sleep no more. Macbeth shall sleep no more.”",-0.9381,0.06694
+macbeth,Macbeth,main,2,2,9,204,speech,LADY MACBETH,LADY MACBETH,"Who was it that thus cried? Why, worthy thane,
+You do unbend your noble strength to think
+So brainsickly of things. Go get some water,
+And wash this filthy witness from your hand.
+Why did you bring these daggers from the place?
+They must lie there. Go carry them and smear
+The sleepy grooms with blood.",-0.7372,-0.88464
+macbeth,Macbeth,main,2,2,9,205,speech,MACBETH,MACBETH,"I’ll go no more:
+I am afraid to think what I have done;
+Look on ’t again I dare not.",0.0,-0.66688
+macbeth,Macbeth,main,2,2,9,206,speech,LADY MACBETH,LADY MACBETH,"Infirm of purpose!
+Give me the daggers. The sleeping and the dead
+Are but as pictures. ‘Tis the eye of childhood
+That fears a painted devil. If he do bleed,
+I’ll gild the faces of the grooms withal,
+For it must seem their guilt.",-0.9459,-0.86391
+macbeth,Macbeth,main,2,2,9,207,stage_direction,,,LADY MACBETH exits.,0.0,0.01359
+macbeth,Macbeth,main,2,2,9,208,speech,LADY MACBETH,LADY MACBETH,A knock sounds offstage.,0.0,-0.05592
+macbeth,Macbeth,main,2,2,9,209,speech,MACBETH,MACBETH,"Whence is that knocking?
+How is ’t with me when every noise appals me?
+What hands are here? Ha! They pluck out mine eyes.
+Will all great Neptune’s ocean wash this blood
+Clean from my hand? No, this my hand will rather
+The multitudinous seas incarnadine,
+Making the green one red.",-0.8382,-0.78393
+macbeth,Macbeth,main,2,2,9,210,stage_direction,,,LADY MACBETH enters.,0.0,0.01706
+macbeth,Macbeth,main,2,2,9,211,speech,LADY MACBETH,LADY MACBETH,"My hands are of your color, but I shame
+To wear a heart so white.",0.0,-0.27387
+macbeth,Macbeth,main,2,2,9,212,speech,LADY MACBETH,LADY MACBETH,"I hear a knocking
+At the south entry. Retire we to our chamber.
+A little water clears us of this deed.
+How easy is it, then! Your constancy
+Hath left you unattended.",0.7904,0.32575
+macbeth,Macbeth,main,2,2,9,213,speech,LADY MACBETH,LADY MACBETH,"Hark! More knocking.
+Get on your nightgown, lest occasion call us
+And show us to be watchers. Be not lost
+So poorly in your thoughts.",0.126,-0.67649
+macbeth,Macbeth,main,2,2,9,214,speech,MACBETH,MACBETH,"To know my deed, ’twere best not know myself.",-0.2263,-0.10707
+macbeth,Macbeth,main,2,2,9,215,speech,MACBETH,MACBETH,Wake Duncan with thy knocking. I would thou couldst.,0.4019,0.10079
+macbeth,Macbeth,main,2,2,9,216,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,2,3,10,217,stage_direction,,,A knock sounds offstage. A porter enters.,0.0,-0.02703
+macbeth,Macbeth,main,2,3,10,218,speech,PORTER,PORTER,"Here’s a knocking indeed! If a man were porter of
+hell-gate, he should have old turning the key.",-0.5562,-0.41143
+macbeth,Macbeth,main,2,3,10,219,speech,PORTER,PORTER,"Knock, knock, knock! Who’s there, i’ th’ name of
+Beelzebub? Here’s a farmer that hanged himself on the
+expectation of plenty. Come in time, have napkins enough
+about you, here you’ll sweat for ’t.",-0.8172,-0.65124
+macbeth,Macbeth,main,2,3,10,220,speech,PORTER,PORTER,"Knock, knock! Who’s there, in th’ other devil’s name?
+Faith, here’s an equivocator that could swear in both
+the scales against either scale, who committed treason
+enough for God’s sake, yet could not equivocate to
+heaven. O, come in, equivocator.",0.6049,-0.18987
+macbeth,Macbeth,main,2,3,10,221,speech,PORTER,PORTER,"Knock, knock, knock! Who’s there? Faith, here’s an
+English tailor come hither for stealing out of a French
+hose. Come in, tailor. Here you may roast your goose.",-0.7088,0.00513
+macbeth,Macbeth,main,2,3,10,222,speech,PORTER,PORTER,"Knock, knock! Never at quiet. What are you? But this
+place is too cold for hell. I’ll devil-porter it no
+further. I had thought to have let in some of all
+professions that go the primrose way to the everlasting
+bonfire.",-0.8673,-0.78623
+macbeth,Macbeth,main,2,3,10,223,speech,PORTER,PORTER,"Anon, anon! I pray you, remember the porter.",0.1984,0.53537
+macbeth,Macbeth,main,2,3,10,224,stage_direction,,,MACDUFF and LENNOX enter.,0.0,0.02694
+macbeth,Macbeth,main,2,3,10,225,speech,MACDUFF,MACDUFF,"Was it so late, friend, ere you went to bed,
+That you do lie so late?",0.4939,-0.36433
+macbeth,Macbeth,main,2,3,10,226,speech,PORTER,PORTER,"‘Faith sir, we were carousing till the second cock. And
+drink, sir, is a great provoker of three things.",0.3182,0.00599
+macbeth,Macbeth,main,2,3,10,227,speech,MACDUFF,MACDUFF,What three things does drink especially provoke?,0.0,-0.0041
+macbeth,Macbeth,main,2,3,10,228,speech,PORTER,PORTER,"Marry, sir, nose-painting, sleep, and urine. Lechery,
+sir, it provokes and unprovokes. It provokes the desire,
+but it takes away the performance. Therefore, much
+drink may be said to be an equivocator with lechery. It
+makes him, and it mars him; it sets him on, and it takes
+him off; it persuades him, and disheartens him; makes
+him stand to and not stand to; in conclusion,
+equivocates him in a sleep, and, giving him the lie,
+leaves him.",0.7906,-0.30603
+macbeth,Macbeth,main,2,3,10,229,speech,MACDUFF,MACDUFF,I believe drink gave thee the lie last night.,0.0,0.12052
+macbeth,Macbeth,main,2,3,10,230,speech,PORTER,PORTER,"That it did, sir, i’ th’ very throat on me; but I
+requited him for his lie, and, I think, being too strong
+for him, though he took up my legs sometime, yet I made
+a shift to cast him.",-0.5267,-0.39547
+macbeth,Macbeth,main,2,3,10,231,speech,MACDUFF,MACDUFF,Is thy master stirring?,0.0,-0.08409
+macbeth,Macbeth,main,2,3,10,232,stage_direction,,,MACBETH enters.,0.0,0.01361
+macbeth,Macbeth,main,2,3,10,233,speech,MACDUFF,MACDUFF,Our knocking has awaked him. Here he comes.,0.0,0.27256
+macbeth,Macbeth,main,2,3,10,234,speech,LENNOX,LENNOX,"Good morrow, noble sir.",0.7096,0.17445
+macbeth,Macbeth,main,2,3,10,235,speech,MACBETH,MACBETH,"Good morrow, both.",0.4404,0.15096
+macbeth,Macbeth,main,2,3,10,236,speech,MACDUFF,MACDUFF,"Is the king stirring, worthy thane?",0.4588,-0.16851
+macbeth,Macbeth,main,2,3,10,237,speech,MACBETH,MACBETH,Not yet.,0.0,-0.45431
+macbeth,Macbeth,main,2,3,10,238,speech,MACDUFF,MACDUFF,"He did command me to call timely on him.
+I have almost slipped the hour.",0.0,0.23335
+macbeth,Macbeth,main,2,3,10,239,speech,MACBETH,MACBETH,I’ll bring you to him.,0.0,0.35685
+macbeth,Macbeth,main,2,3,10,240,speech,MACDUFF,MACDUFF,"I know this is a joyful trouble to you,
+But yet ’tis one.",0.3818,-0.42449
+macbeth,Macbeth,main,2,3,10,241,speech,MACBETH,MACBETH,"The labor we delight in physics pain.
+This is the door.",-0.0258,0.00612
+macbeth,Macbeth,main,2,3,10,242,speech,MACDUFF,MACDUFF,"I’ll make so bold to call,
+For ’tis my limited service.",0.0,0.28566
+macbeth,Macbeth,main,2,3,10,243,stage_direction,,,MACDUFF exits.,0.0,-0.00775
+macbeth,Macbeth,main,2,3,10,244,speech,LENNOX,LENNOX,Goes the king hence today?,0.0,-0.01741
+macbeth,Macbeth,main,2,3,10,245,speech,MACBETH,MACBETH,He does. He did appoint so.,0.6369,0.533
+macbeth,Macbeth,main,2,3,10,246,speech,LENNOX,LENNOX,"The night has been unruly. Where we lay,
+Our chimneys were blown down and, as they say,
+Lamentings heard i’ th’ air, strange screams of death,
+And prophesying with accents terrible
+Of dire combustion and confused events
+New hatched to the woeful time. The obscure bird
+Clamored the livelong night. Some say the Earth
+Was feverous and did shake.",-0.9776,-0.73893
+macbeth,Macbeth,main,2,3,10,247,speech,MACBETH,MACBETH,‘Twas a rough night.,0.0,-0.59559
+macbeth,Macbeth,main,2,3,10,248,speech,LENNOX,LENNOX,"My young remembrance cannot parallel
+A fellow to it.",0.0,0.00264
+macbeth,Macbeth,main,2,3,10,249,speech,MACDUFF,MACDUFF,"O horror, horror, horror!
+Tongue nor heart cannot conceive nor name thee!",-0.8168,-0.78718
+macbeth,Macbeth,main,2,3,10,250,speech,MACBETH AND LENNOX,MACBETH AND LENNOX,What’s the matter?,0.0258,-0.016
+macbeth,Macbeth,main,2,3,10,251,speech,MACDUFF,MACDUFF,"Confusion now hath made his masterpiece.
+Most sacrilegious murder hath broke ope
+The Lord’s anointed temple, and stole thence
+The life o’ th’ building!",-0.9403,-0.81722
+macbeth,Macbeth,main,2,3,10,252,speech,MACBETH,MACBETH,What is ’t you say? “The life?”,0.0,-0.07344
+macbeth,Macbeth,main,2,3,10,253,speech,LENNOX,LENNOX,Mean you his majesty?,0.0,-0.0037
+macbeth,Macbeth,main,2,3,10,254,speech,MACDUFF,MACDUFF,"Approach the chamber, and destroy your sight
+With a new Gorgon. Do not bid me speak.
+See, and then speak yourselves.",-0.4588,-0.08716
+macbeth,Macbeth,main,2,3,10,255,stage_direction,,,MACBETH and LENNOX exit.,0.0,0.01951
+macbeth,Macbeth,main,2,3,10,256,speech,MACDUFF,MACDUFF,"Awake, awake!
+Ring the alarum bell. Murder and treason!
+Banquo and Donalbain! Malcolm! Awake!
+Shake off this downy sleep, death’s counterfeit,
+And look on death itself! Up, up, and see
+The great doom’s image! Malcolm! Banquo!
+As from your graves rise up, and walk like sprites,
+To countenance this horror! Ring the bell.",-0.9813,-0.14047
+macbeth,Macbeth,main,2,3,10,257,stage_direction,,,A bell rings. LADY MACBETH enters.,0.0,0.00922
+macbeth,Macbeth,main,2,3,10,258,speech,LADY MACBETH,LADY MACBETH,"What’s the business,
+That such a hideous trumpet calls to parley
+The sleepers of the house? Speak, speak!",-0.555,-0.60579
+macbeth,Macbeth,main,2,3,10,259,speech,MACDUFF,MACDUFF,"O gentle lady,
+‘Tis not for you to hear what I can speak:
+The repetition, in a woman’s ear,
+Would murder as it fell.",-0.4767,-0.72359
+macbeth,Macbeth,main,2,3,10,260,stage_direction,,,BANQUO enters.,0.0,0.01629
+macbeth,Macbeth,main,2,3,10,261,speech,MACDUFF,MACDUFF,"O Banquo, Banquo,
+Our royal master’s murdered!",-0.69,-0.55157
+macbeth,Macbeth,main,2,3,10,262,speech,LADY MACBETH,LADY MACBETH,"Woe, alas!
+What, in our house?",0.0,-0.63971
+macbeth,Macbeth,main,2,3,10,263,speech,BANQUO,BANQUO,"Too cruel any where.
+Dear Duff, I prithee, contradict thyself,
+And say it is not so.",0.3239,-0.11231
+macbeth,Macbeth,main,2,3,10,264,stage_direction,,,"MACBETH and LENNOX reenter, with ROSS.",0.0,0.13472
+macbeth,Macbeth,main,2,3,10,265,speech,MACBETH,MACBETH,"Had I but died an hour before this chance,
+I had lived a blessèd time, for from this instant
+There’s nothing serious in mortality.
+All is but toys. Renown and grace is dead.
+The wine of life is drawn, and the mere lees
+Is left this vault to brag of.",-0.743,-0.8812
+macbeth,Macbeth,main,2,3,10,266,stage_direction,,,MALCOLM and DONALBAIN enter.,0.0,0.10968
+macbeth,Macbeth,main,2,3,10,267,speech,DONALBAIN,DONALBAIN,What is amiss?,-0.4767,-0.07284
+macbeth,Macbeth,main,2,3,10,268,speech,MACBETH,MACBETH,"You are, and do not know ’t.
+The spring, the head, the fountain of your blood
+Is stopped; the very source of it is stopped.",-0.3291,-0.48333
+macbeth,Macbeth,main,2,3,10,269,speech,MACDUFF,MACDUFF,Your royal father’s murdered.,-0.6597,-0.76853
+macbeth,Macbeth,main,2,3,10,270,speech,MALCOLM,MALCOLM,"Oh, by whom?",0.0,-0.33324
+macbeth,Macbeth,main,2,3,10,271,speech,LENNOX,LENNOX,"Those of his chamber, as it seemed, had done ’t.
+Their hands and faces were all badged with blood.
+So were their daggers, which unwiped we found
+Upon their pillows. They stared, and were distracted.
+No man’s life was to be trusted with them.",-0.2732,-0.45732
+macbeth,Macbeth,main,2,3,10,272,speech,MACBETH,MACBETH,"Oh, yet I do repent me of my fury,
+That I did kill them.",-0.9042,-0.56198
+macbeth,Macbeth,main,2,3,10,273,speech,MACDUFF,MACDUFF,Wherefore did you so?,0.0,-0.03466
+macbeth,Macbeth,main,2,3,10,274,speech,MACBETH,MACBETH,"Who can be wise, amazed, temp’rate, and furious,
+Loyal and neutral, in a moment? No man.
+Th’ expedition of my violent love
+Outrun the pauser, reason. Here lay Duncan,
+His silver skin laced with his golden blood,
+And his gashed stabs looked like a breach in nature
+For ruin’s wasteful entrance; there, the murderers,
+Steeped in the colors of their trade, their daggers
+Unmannerly breeched with gore. Who could refrain,
+That had a heart to love, and in that heart
+Courage to make ’s love known?",-0.2406,-0.76923
+macbeth,Macbeth,main,2,3,10,275,speech,LADY MACBETH,LADY MACBETH,"Help me hence, ho!",0.0,0.67475
+macbeth,Macbeth,main,2,3,10,276,speech,MACDUFF,MACDUFF,Look to the lady.,0.0,0.19556
+macbeth,Macbeth,main,2,3,10,277,speech,MALCOLM,MALCOLM,"[aside to DONALBAIN] Why do we hold our tongues,
+That most may claim this argument for ours?",-0.4019,-0.63053
+macbeth,Macbeth,main,2,3,10,278,speech,DONALBAIN,DONALBAIN,"[aside to MALCOLM] What should be spoken here, where
+our fate,
+Hid in an auger-hole, may rush and seize us?
+Let’s away. Our tears are not yet brewed.",-0.7514,-0.54898
+macbeth,Macbeth,main,2,3,10,279,speech,MALCOLM,MALCOLM,"[aside to DONALBAIN] Nor our strong sorrow
+Upon the foot of motion.",-0.4939,-0.1872
+macbeth,Macbeth,main,2,3,10,280,speech,BANQUO,BANQUO,Look to the lady.,0.0,0.22083
+macbeth,Macbeth,main,2,3,10,281,stage_direction,,,LADY MACBETH is carried out.,0.0,0.02297
+macbeth,Macbeth,main,2,3,10,282,speech,BANQUO,BANQUO,"And when we have our naked frailties hid,
+That suffer in exposure, let us meet
+And question this most bloody piece of work,
+To know it further. Fears and scruples shake us.
+In the great hand of God I stand, and thence
+Against the undivulged pretense I fight
+Of treasonous malice.",-0.9732,-0.15086
+macbeth,Macbeth,main,2,3,10,283,speech,MACDUFF,MACDUFF,And so do I.,0.0,-0.20933
+macbeth,Macbeth,main,2,3,10,284,speech,ALL,ALL,So all.,0.0,0.46046
+macbeth,Macbeth,main,2,3,10,285,speech,MACBETH,MACBETH,"Let’s briefly put on manly readiness,
+And meet i’ th’ hall together.",0.4939,0.24985
+macbeth,Macbeth,main,2,3,10,286,speech,ALL,ALL,Well contented.,0.2732,-0.05478
+macbeth,Macbeth,main,2,3,10,287,stage_direction,,,Everyone exits but MALCOLM and DONALBAIN.,0.0,-0.0953
+macbeth,Macbeth,main,2,3,10,288,speech,MALCOLM,MALCOLM,"What will you do? Let’s not consort with them.
+To show an unfelt sorrow is an office
+Which the false man does easy. I’ll to England.",-0.6945,-0.62698
+macbeth,Macbeth,main,2,3,10,289,speech,DONALBAIN,DONALBAIN,"To Ireland, I. Our separated fortune
+Shall keep us both the safer. Where we are,
+There’s daggers in men’s smiles. The near in blood,
+The nearer bloody.",-0.3968,-0.3631
+macbeth,Macbeth,main,2,3,10,290,speech,MALCOLM,MALCOLM,"This murderous shaft that’s shot
+Hath not yet lighted, and our safest way
+Is to avoid the aim. Therefore, to horse,
+And let us not be dainty of leave-taking,
+But shift away. There’s warrant in that theft
+Which steals itself when there’s no mercy left.",-0.3826,-0.60647
+macbeth,Macbeth,main,2,3,10,291,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,2,4,11,292,stage_direction,,,ROSS and an OLD MAN enter.,0.0,0.03108
+macbeth,Macbeth,main,2,4,11,293,speech,OLD MAN,OLD MAN,"Threescore and ten I can remember well,
+Within the volume of which time I have seen
+Hours dreadful and things strange, but this sore night
+Hath trifled former knowings.",0.2263,-0.50096
+macbeth,Macbeth,main,2,4,11,294,speech,ROSS,ROSS,"Ha, good father,
+Thou seest the heavens, as troubled with man’s act,
+Threatens his bloody stage. By th’ clock ’tis day,
+And yet dark night strangles the travelling lamp.
+Is ’t night’s predominance or the day’s shame
+That darkness does the face of Earth entomb
+When living light should kiss it?",-0.2602,-0.12404
+macbeth,Macbeth,main,2,4,11,295,speech,OLD MAN,OLD MAN,"‘Tis unnatural,
+Even like the deed that’s done. On Tuesday last,
+A falcon, tow’ring in her pride of place,
+Was by a mousing owl hawked at and killed.",-0.8625,-0.28936
+macbeth,Macbeth,main,2,4,11,296,speech,ROSS,ROSS,"And Duncan’s horses—a thing most strange and certain—
+Beauteous and swift, the minions of their race,
+Turned wild in nature, broke their stalls, flung out,
+Contending ‘gainst obedience, as they would
+Make war with mankind.",0.25,-0.58587
+macbeth,Macbeth,main,2,4,11,297,speech,OLD MAN,OLD MAN,‘Tis said they eat each other.,0.0,-0.02842
+macbeth,Macbeth,main,2,4,11,298,speech,ROSS,ROSS,"They did so, to th’ amazement of mine eyes
+That looked upon ’t. Here comes the good Macduff.",0.6705,0.53275
+macbeth,Macbeth,main,2,4,11,299,stage_direction,,,MACDUFF enters.,0.0,0.00743
+macbeth,Macbeth,main,2,4,11,300,speech,ROSS,ROSS,"How goes the world, sir, now?",0.0,-0.04916
+macbeth,Macbeth,main,2,4,11,301,speech,MACDUFF,MACDUFF,"Why, see you not?",0.0,-0.01344
+macbeth,Macbeth,main,2,4,11,302,speech,ROSS,ROSS,Is ’t known who did this more than bloody deed?,-0.698,-0.20142
+macbeth,Macbeth,main,2,4,11,303,speech,MACDUFF,MACDUFF,Those that Macbeth hath slain.,-0.6705,-0.22906
+macbeth,Macbeth,main,2,4,11,304,speech,ROSS,ROSS,"Alas, the day!
+What good could they pretend?",0.4926,-0.90067
+macbeth,Macbeth,main,2,4,11,305,speech,MACDUFF,MACDUFF,"They were suborned.
+Malcolm and Donalbain, the king’s two sons,
+Are stol’n away and fled, which puts upon them
+Suspicion of the deed.",-0.34,-0.59074
+macbeth,Macbeth,main,2,4,11,306,speech,ROSS,ROSS,"‘Gainst nature still!
+Thriftless ambition, that will raven up
+Thine own lives’ means! Then ’tis most like
+The sovereignty will fall upon Macbeth.",-0.7418,-0.80162
+macbeth,Macbeth,main,2,4,11,307,speech,MACDUFF,MACDUFF,"He is already named and gone to Scone
+To be invested.",0.0,0.21184
+macbeth,Macbeth,main,2,4,11,308,speech,ROSS,ROSS,Where is Duncan’s body?,0.0,-0.00485
+macbeth,Macbeth,main,2,4,11,309,speech,MACDUFF,MACDUFF,"Carried to Colmekill,
+The sacred storehouse of his predecessors,
+And guardian of their bones.",0.0,0.03916
+macbeth,Macbeth,main,2,4,11,310,speech,ROSS,ROSS,Will you to Scone?,0.0,0.00586
+macbeth,Macbeth,main,2,4,11,311,speech,MACDUFF,MACDUFF,"No, cousin, I’ll to Fife.",0.0,-0.06023
+macbeth,Macbeth,main,2,4,11,312,speech,ROSS,ROSS,"Well, I will thither.",0.2732,0.29519
+macbeth,Macbeth,main,2,4,11,313,speech,MACDUFF,MACDUFF,"Well, may you see things well done there. Adieu,
+Lest our old robes sit easier than our new!",0.636,0.29453
+macbeth,Macbeth,main,2,4,11,314,speech,ROSS,ROSS,"Farewell, father.",0.0,0.59353
+macbeth,Macbeth,main,2,4,11,315,speech,OLD MAN,OLD MAN,"God’s benison go with you and with those
+That would make good of bad and friends of foes.",0.4199,0.71585
+macbeth,Macbeth,main,2,4,11,316,stage_direction,,,All exit.,0.0,-0.27456
+macbeth,Macbeth,main,3,1,12,317,stage_direction,,,BANQUO enters.,0.0,0.01629
+macbeth,Macbeth,main,3,1,12,318,speech,BANQUO,BANQUO,"Thou hast it now: king, Cawdor, Glamis, all,
+As the weird women promised, and I fear
+Thou played’st most foully for ’t. Yet it was said
+It should not stand in thy posterity,
+But that myself should be the root and father
+Of many kings. If there come truth from them—
+As upon thee, Macbeth, their speeches shine—
+Why, by the verities on thee made good,
+May they not be my oracles as well,
+And set me up in hope? But hush, no more.",0.9473,-0.06769
+macbeth,Macbeth,main,3,1,12,319,stage_direction,,,"A trumpet sounds. MACBETH enters dressed as king, and LADY MACBETH enters dressed as queen, together with LENNOX, ROSS, LORDS, LADIES, and attendants.",0.0,0.03104
+macbeth,Macbeth,main,3,1,12,320,speech,MACBETH,MACBETH,Here’s our chief guest.,0.2716,0.13059
+macbeth,Macbeth,main,3,1,12,321,speech,LADY MACBETH,LADY MACBETH,"If he had been forgotten,
+It had been as a gap in our great feast,
+And all-thing unbecoming.",-0.0772,-0.55205
+macbeth,Macbeth,main,3,1,12,322,speech,MACBETH,MACBETH,"Tonight we hold a solemn supper, sir,
+And I’ll request your presence.",0.0,0.23667
+macbeth,Macbeth,main,3,1,12,323,speech,BANQUO,BANQUO,"Let your highness
+Command upon me, to the which my duties
+Are with a most indissoluble tie
+Forever knit.",0.0,-0.09953
+macbeth,Macbeth,main,3,1,12,324,speech,MACBETH,MACBETH,Ride you this afternoon?,0.0,-0.01024
+macbeth,Macbeth,main,3,1,12,325,speech,BANQUO,BANQUO,"Ay, my good lord.",0.6808,0.64184
+macbeth,Macbeth,main,3,1,12,326,speech,MACBETH,MACBETH,"We should have else desired your good advice—
+Which still hath been both grave and prosperous—
+In this day’s council, but we’ll take tomorrow.
+Is ’t far you ride?",0.2617,0.00897
+macbeth,Macbeth,main,3,1,12,327,speech,BANQUO,BANQUO,"As far, my lord, as will fill up the time
+‘Twixt this and supper. Go not my horse the better,
+I must become a borrower of the night
+For a dark hour or twain.",0.0,0.1444
+macbeth,Macbeth,main,3,1,12,328,speech,MACBETH,MACBETH,Fail not our feast.,0.1139,-0.04195
+macbeth,Macbeth,main,3,1,12,329,speech,BANQUO,BANQUO,"My lord, I will not.",0.0,-0.00747
+macbeth,Macbeth,main,3,1,12,330,speech,MACBETH,MACBETH,"We hear our bloody cousins are bestowed
+In England and in Ireland, not confessing
+Their cruel parricide, filling their hearers
+With strange invention. But of that tomorrow,
+When therewithal we shall have cause of state
+Craving us jointly. Hie you to horse. Adieu,
+Till your return at night. Goes Fleance with you?",-0.6059,-0.22173
+macbeth,Macbeth,main,3,1,12,331,speech,BANQUO,BANQUO,"Ay, my good lord. Our time does call upon ’s.",0.6808,0.66556
+macbeth,Macbeth,main,3,1,12,332,speech,MACBETH,MACBETH,"I wish your horses swift and sure of foot,
+And so I do commend you to their backs.
+Farewell.",0.6808,0.57037
+macbeth,Macbeth,main,3,1,12,333,stage_direction,,,BANQUO exits.,0.0,0.00888
+macbeth,Macbeth,main,3,1,12,334,speech,MACBETH,MACBETH,"Let every man be master of his time
+Till seven at night. To make society
+The sweeter welcome, we will keep ourself
+Till suppertime alone. While then, God be with you!",0.5974,0.49319
+macbeth,Macbeth,main,3,1,12,335,stage_direction,,,Everyone exits except MACBETH and a SERVANT.,0.0,-0.00801
+macbeth,Macbeth,main,3,1,12,336,speech,MACBETH,MACBETH,"Sirrah, a word with you. Attend those men
+Our pleasure?",0.0,0.05198
+macbeth,Macbeth,main,3,1,12,337,speech,SERVANT,SERVANT,"They are, my lord, without the palace gate.",0.0,0.5354
+macbeth,Macbeth,main,3,1,12,338,speech,MACBETH,MACBETH,Bring them before us.,0.0,0.31234
+macbeth,Macbeth,main,3,1,12,339,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,3,1,12,340,speech,MACBETH,MACBETH,"To be thus is nothing,
+But to be safely thus. Our fears in Banquo
+Stick deep, and in his royalty of nature
+Reigns that which would be feared. ‘Tis much he dares,
+And to that dauntless temper of his mind
+He hath a wisdom that doth guide his valor
+To act in safety. There is none but he
+Whose being I do fear, and under him
+My genius is rebuked, as it is said
+Mark Antony’s was by Caesar. He chid the sisters
+When first they put the name of king upon me
+And bade them speak to him. Then, prophetlike,
+They hailed him father to a line of kings.
+Upon my head they placed a fruitless crown
+And put a barren scepter in my grip,
+Thence to be wrenched with an unlineal hand,
+No son of mine succeeding. If ’t be so,
+For Banquo’s issue have I filed my mind;
+For them the gracious Duncan have I murdered;
+Put rancors in the vessel of my peace
+Only for them; and mine eternal jewel
+Given to the common enemy of man,
+To make them kings, the seed of Banquo kings!
+Rather than so, come fate into the list,
+And champion me to th’ utterance. Who’s there?",-0.7263,-0.24495
+macbeth,Macbeth,main,3,1,12,341,stage_direction,,,The SERVANT enters along with two MURDERERS.,-0.7213,0.011
+macbeth,Macbeth,main,3,1,12,342,speech,MACBETH,MACBETH,Now go to the door and stay there till we call.,0.0,0.26349
+macbeth,Macbeth,main,3,1,12,343,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,3,1,12,344,speech,MACBETH,MACBETH,Was it not yesterday we spoke together?,0.0,-0.19322
+macbeth,Macbeth,main,3,1,12,345,speech,FIRST MURDERER,FIRST MURDERER,"It was, so please your highness.",0.0,0.54775
+macbeth,Macbeth,main,3,1,12,346,speech,MACBETH,MACBETH,"Well then, now
+Have you considered of my speeches? Know
+That it was he, in the times past, which held you
+So under fortune, which you thought had been
+Our innocent self. This I made good to you
+In our last conference, passed in probation with you,
+How you were borne in hand, how crossed, the
+instruments,
+Who wrought with them, and all things else that might
+To half a soul and to a notion crazed
+Say, “Thus did Banquo.”",-0.8537,-0.80956
+macbeth,Macbeth,main,3,1,12,347,speech,FIRST MURDERER,FIRST MURDERER,You made it known to us.,0.0,0.47831
+macbeth,Macbeth,main,3,1,12,348,speech,MACBETH,MACBETH,"I did so, and went further, which is now
+Our point of second meeting. Do you find
+Your patience so predominant in your nature
+That you can let this go? Are you so gospeled
+To pray for this good man and for his issue,
+Whose heavy hand hath bowed you to the grave
+And beggared yours forever?",-0.5137,-0.68323
+macbeth,Macbeth,main,3,1,12,349,speech,FIRST MURDERER,FIRST MURDERER,"We are men, my liege.",0.0,0.71127
+macbeth,Macbeth,main,3,1,12,350,speech,MACBETH,MACBETH,"Ay, in the catalogue ye go for men,
+As hounds and greyhounds, mongrels, spaniels, curs,
+Shoughs, water-rugs, and demi-wolves are clept
+All by the name of dogs. The valued file
+Distinguishes the swift, the slow, the subtle,
+The housekeeper, the hunter, every one
+According to the gift which bounteous nature
+Hath in him closed, whereby he does receive
+Particular addition, from the bill
+That writes them all alike. And so of men.
+Now, if you have a station in the file,
+Not i’ th’ worst rank of manhood, say ’t,
+And I will put that business in your bosoms,
+Whose execution takes your enemy off,
+Grapples you to the heart and love of us,
+Who wear our health but sickly in his life,
+Which in his death were perfect.",-0.7003,0.0502
+macbeth,Macbeth,main,3,1,12,351,speech,SECOND MURDERER,SECOND MURDERER,"I am one, my liege,
+Whom the vile blows and buffets of the world
+Have so incensed that I am reckless what
+I do to spite the world.",-0.2596,0.11785
+macbeth,Macbeth,main,3,1,12,352,speech,FIRST MURDERER,FIRST MURDERER,"And I another
+So weary with disasters, tugged with fortune,
+That I would set my life on any chance,
+To mend it or be rid on ’t.",-0.5581,-0.7463
+macbeth,Macbeth,main,3,1,12,353,speech,MACBETH,MACBETH,"Both of you
+Know Banquo was your enemy.",-0.5423,0.1738
+macbeth,Macbeth,main,3,1,12,354,speech,BOTH MURDERERS,BOTH MURDERERS,"True, my lord.",0.4019,0.70214
+macbeth,Macbeth,main,3,1,12,355,speech,MACBETH,MACBETH,"So is he mine; and in such bloody distance
+That every minute of his being thrusts
+Against my near’st of life. And though I could
+With barefaced power sweep him from my sight
+And bid my will avouch it, yet I must not,
+For certain friends that are both his and mine,
+Whose loves I may not drop, but wail his fall
+Who I myself struck down. And thence it is,
+That I to your assistance do make love,
+Masking the business from the common eye
+For sundry weighty reasons.",-0.9136,-0.35384
+macbeth,Macbeth,main,3,1,12,356,speech,SECOND MURDERER,SECOND MURDERER,"We shall, my lord,
+Perform what you command us.",0.0,0.43296
+macbeth,Macbeth,main,3,1,12,357,speech,FIRST MURDERER,FIRST MURDERER,Though our lives—,0.0,-0.31067
+macbeth,Macbeth,main,3,1,12,358,speech,MACBETH,MACBETH,"Your spirits shine through you. Within this hour at
+most
+I will advise you where to plant yourselves,
+Acquaint you with the perfect spy o’ th’ time,
+The moment on ’t; for ’t must be done tonight,
+And something from the palace; always thought
+That I require a clearness. And with him—
+To leave no rubs nor botches in the work—
+Fleance, his son, that keeps him company,
+Whose absence is no less material to me
+Than is his father’s, must embrace the fate
+Of that dark hour. Resolve yourselves apart.
+I’ll come to you anon.",-0.7184,0.53395
+macbeth,Macbeth,main,3,1,12,359,speech,BOTH MURDERERS,BOTH MURDERERS,"We are resolved, my lord.",0.0,0.67323
+macbeth,Macbeth,main,3,1,12,360,speech,MACBETH,MACBETH,I’ll call upon you straight. Abide within.,0.0,0.14393
+macbeth,Macbeth,main,3,1,12,361,stage_direction,,,The MURDERERS exit.,-0.7213,0.01
+macbeth,Macbeth,main,3,1,12,362,speech,MACBETH,MACBETH,"It is concluded. Banquo, thy soul’s flight,
+If it find heaven, must find it out tonight.",-0.3182,0.02509
+macbeth,Macbeth,main,3,1,12,363,stage_direction,,,He exits.,0.0,0.01202
+macbeth,Macbeth,main,3,2,13,364,stage_direction,,,LADY MACBETH and a SERVANT enter.,0.0,0.06967
+macbeth,Macbeth,main,3,2,13,365,speech,LADY MACBETH,LADY MACBETH,Is Banquo gone from court?,0.0,-0.02908
+macbeth,Macbeth,main,3,2,13,366,speech,SERVANT,SERVANT,"Ay, madam, but returns again tonight.",0.2144,-0.11665
+macbeth,Macbeth,main,3,2,13,367,speech,LADY MACBETH,LADY MACBETH,"Say to the king I would attend his leisure
+For a few words.",0.3612,0.11931
+macbeth,Macbeth,main,3,2,13,368,speech,SERVANT,SERVANT,"Madam, I will.",0.0,0.50163
+macbeth,Macbeth,main,3,2,13,369,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,3,2,13,370,speech,LADY MACBETH,LADY MACBETH,"Naught’s had, all’s spent,
+Where our desire is got without content.
+‘Tis safer to be that which we destroy
+Than by destruction dwell in doubtful joy.",-0.9616,-0.61852
+macbeth,Macbeth,main,3,2,13,371,stage_direction,,,MACBETH enters.,0.0,0.01361
+macbeth,Macbeth,main,3,2,13,372,speech,LADY MACBETH,LADY MACBETH,"How now, my lord! Why do you keep alone,
+Of sorriest fancies your companions making,
+Using those thoughts which should indeed have died
+With them they think on? Things without all remedy
+Should be without regard. What’s done is done.",-0.8796,-0.85279
+macbeth,Macbeth,main,3,2,13,373,speech,MACBETH,MACBETH,"We have scorched the snake, not killed it.
+She’ll close and be herself whilst our poor malice
+Remains in danger of her former tooth.
+But let the frame of things disjoint, both the worlds
+suffer,
+Ere we will eat our meal in fear, and sleep
+In the affliction of these terrible dreams
+That shake us nightly. Better be with the dead,
+Whom we, to gain our peace, have sent to peace,
+Than on the torture of the mind to lie
+In restless ecstasy. Duncan is in his grave.
+After life’s fitful fever he sleeps well.
+Treason has done his worst; nor steel nor poison,
+Malice domestic, foreign levy, nothing
+Can touch him further.",-0.9518,-0.5143
+macbeth,Macbeth,main,3,2,13,374,speech,LADY MACBETH,LADY MACBETH,"Come on, gentle my lord,
+Sleek o’er your rugged looks. Be bright and jovial
+Among your guests tonight.",0.8658,0.56474
+macbeth,Macbeth,main,3,2,13,375,speech,MACBETH,MACBETH,"So shall I, love,
+And so, I pray, be you. Let your remembrance
+Apply to Banquo; present him eminence,
+Both with eye and tongue: unsafe the while that we
+Must lave our honors in these flattering streams,
+And make our faces vizards to our hearts,
+Disguising what they are.",0.9413,0.60513
+macbeth,Macbeth,main,3,2,13,376,speech,LADY MACBETH,LADY MACBETH,You must leave this.,0.0772,-0.25534
+macbeth,Macbeth,main,3,2,13,377,speech,MACBETH,MACBETH,"Oh, full of scorpions is my mind, dear wife!
+Thou know’st that Banquo, and his Fleance, lives.",0.6988,0.69416
+macbeth,Macbeth,main,3,2,13,378,speech,LADY MACBETH,LADY MACBETH,But in them nature’s copy’s not eterne.,0.0,-0.52981
+macbeth,Macbeth,main,3,2,13,379,speech,MACBETH,MACBETH,"There’s comfort yet; they are assailable.
+Then be thou jocund. Ere the bat hath flown
+His cloistered flight, ere to black Hecate’s summons
+The shard-borne beetle with his drowsy hums
+Hath rung night’s yawning peal, there shall be done
+A deed of dreadful note.",-0.4062,-0.69569
+macbeth,Macbeth,main,3,2,13,380,speech,LADY MACBETH,LADY MACBETH,What’s to be done?,0.0,-0.00619
+macbeth,Macbeth,main,3,2,13,381,speech,MACBETH,MACBETH,"Be innocent of the knowledge, dearest chuck,
+Till thou applaud the deed. Come, seeling night,
+Scarf up the tender eye of pitiful day
+And with thy bloody and invisible hand
+Cancel and tear to pieces that great bond
+Which keeps me pale. Light thickens, and the crow
+Makes wing to th’ rooky wood.
+Good things of day begin to droop and drowse;
+Whiles night’s black agents to their preys do rouse.
+Thou marvel’st at my words: but hold thee still.
+Things bad begun make strong themselves by ill.
+So, prithee, go with me.",-0.0873,-0.82524
+macbeth,Macbeth,main,3,2,13,382,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,3,3,14,383,stage_direction,,,Three MURDERERS enter.,-0.7213,0.00976
+macbeth,Macbeth,main,3,3,14,384,speech,FIRST MURDERER,FIRST MURDERER,But who did bid thee join with us?,0.4215,-0.00995
+macbeth,Macbeth,main,3,3,14,385,speech,THIRD MURDERER,THIRD MURDERER,Macbeth.,0.0,0.01615
+macbeth,Macbeth,main,3,3,14,386,speech,SECOND MURDERER,SECOND MURDERER,"He needs not our mistrust, since he delivers
+Our offices and what we have to do
+To the direction just.",0.5106,0.20381
+macbeth,Macbeth,main,3,3,14,387,speech,FIRST MURDERER,FIRST MURDERER,"Then stand with us.
+The west yet glimmers with some streaks of day.
+Now spurs the lated traveler apace
+To gain the timely inn, and near approaches
+The subject of our watch.",0.0258,-0.25375
+macbeth,Macbeth,main,3,3,14,388,speech,THIRD MURDERER,THIRD MURDERER,"Hark, I hear horses.",0.0,0.33937
+macbeth,Macbeth,main,3,3,14,389,speech,BANQUO,BANQUO,"[within] Give us a light there, ho!",0.0,0.42372
+macbeth,Macbeth,main,3,3,14,390,speech,SECOND MURDERER,SECOND MURDERER,"Then ’tis he: the rest
+That are within the note of expectation
+Already are i’ th’ court.",0.0,-0.26446
+macbeth,Macbeth,main,3,3,14,391,speech,FIRST MURDERER,FIRST MURDERER,His horses go about.,0.0,0.11308
+macbeth,Macbeth,main,3,3,14,392,speech,THIRD MURDERER,THIRD MURDERER,"Almost a mile; but he does usually—
+So all men do—from hence to the palace gate
+Make it their walk.",0.5023,-0.27897
+macbeth,Macbeth,main,3,3,14,393,stage_direction,,,BANQUO and FLEANCE enter with a torch.,0.0,0.02342
+macbeth,Macbeth,main,3,3,14,394,speech,SECOND MURDERER,SECOND MURDERER,"A light, a light!",0.0,0.7141
+macbeth,Macbeth,main,3,3,14,395,speech,THIRD MURDERER,THIRD MURDERER,‘Tis he.,0.0,0.2337
+macbeth,Macbeth,main,3,3,14,396,speech,FIRST MURDERER,FIRST MURDERER,Stand to ’t.,0.3612,0.39061
+macbeth,Macbeth,main,3,3,14,397,speech,BANQUO,BANQUO,It will be rain tonight.,0.0,0.03952
+macbeth,Macbeth,main,3,3,14,398,speech,FIRST MURDERER,FIRST MURDERER,Let it come down.,-0.9536,-0.05365
+macbeth,Macbeth,main,3,3,14,399,speech,BANQUO,BANQUO,"O treachery! Fly, good Fleance, fly, fly, fly!
+Thou may ’st revenge —O slave!",-0.8753,-0.58223
+macbeth,Macbeth,main,3,3,14,400,speech,THIRD MURDERER,THIRD MURDERER,Who did strike out the light?,0.0,-0.00991
+macbeth,Macbeth,main,3,3,14,401,speech,FIRSTMURDERER,FIRSTMURDERER,Was ’t not the way?,0.0,-0.18953
+macbeth,Macbeth,main,3,3,14,402,speech,THIRD MURDERER,THIRD MURDERER,There’s but one down. The son is fled.,0.0,-0.66546
+macbeth,Macbeth,main,3,3,14,403,speech,SECOND MURDERER,SECOND MURDERER,We have lost best half of our affair.,-0.5106,-0.48145
+macbeth,Macbeth,main,3,3,14,404,speech,FIRST MURDERER,FIRST MURDERER,"Well, let’s away and say how much is done.",0.2732,0.04629
+macbeth,Macbeth,main,3,3,14,405,stage_direction,,,They exit.,0.0,-0.27456
+macbeth,Macbeth,main,3,4,15,406,stage_direction,,,"A banquet. MACBETH enters with LADY MACBETH, ROSS, LENNOX, LORDS, and their attendants.",0.0,0.02927
+macbeth,Macbeth,main,3,4,15,407,speech,MACBETH,MACBETH,"You know your own degrees; sit down. At first
+And last, the hearty welcome.",0.4404,0.08134
+macbeth,Macbeth,main,3,4,15,408,speech,LORDS,LORDS,Thanks to your majesty.,0.3612,0.57062
+macbeth,Macbeth,main,3,4,15,409,speech,MACBETH,MACBETH,"Ourself will mingle with society
+And play the humble host.
+Our hostess keeps her state, but in best time
+We will require her welcome.",0.85,0.48339
+macbeth,Macbeth,main,3,4,15,410,speech,LADY MACBETH,LADY MACBETH,"Pronounce it for me, sir, to all our friends,
+For my heart speaks they are welcome.",0.8039,0.62617
+macbeth,Macbeth,main,3,4,15,411,speech,MACBETH,MACBETH,"See, they encounter thee with their hearts’ thanks.
+Both sides are even. Here I’ll sit i’ th’ midst.
+Be large in mirth. Anon we’ll drink a measure
+The table round.
+[aside to FIRST MURDERER] There’s blood upon thy face.",0.5813,0.42729
+macbeth,Macbeth,main,3,4,15,412,speech,FIRST MURDERER,FIRST MURDERER,‘Tis Banquo’s then.,0.0,-0.02131
+macbeth,Macbeth,main,3,4,15,413,speech,MACBETH,MACBETH,"‘Tis better thee without than he within.
+Is he dispatched?",-0.34,0.31296
+macbeth,Macbeth,main,3,4,15,414,speech,FIRST MURDERER,FIRST MURDERER,"My lord, his throat is cut. That I did for him.",-0.2732,0.49697
+macbeth,Macbeth,main,3,4,15,415,speech,MACBETH,MACBETH,"Thou art the best o’ th’ cutthroats:
+Yet he’s good that did the like for Fleance.
+If thou didst it, thou art the nonpareil.",0.5859,-0.31831
+macbeth,Macbeth,main,3,4,15,416,speech,FIRST MURDERER,FIRST MURDERER,"Most royal sir, Fleance is ’scaped.",0.0,-0.05658
+macbeth,Macbeth,main,3,4,15,417,speech,MACBETH,MACBETH,"Then comes my fit again. I had else been perfect,
+Whole as the marble, founded as the rock,
+As broad and general as the casing air.
+But now I am cabined, cribbed, confined, bound in
+To saucy doubts and fears.—But Banquo’s safe?",-0.8735,0.41935
+macbeth,Macbeth,main,3,4,15,418,speech,FIRST MURDERER,FIRST MURDERER,"Ay, my good lord. Safe in a ditch he bides,
+With twenty trenchèd gashes on his head,
+The least a death to nature.",-0.5423,-0.13865
+macbeth,Macbeth,main,3,4,15,419,speech,MACBETH,MACBETH,"Thanks for that.
+There the grown serpent lies. The worm that’s fled
+Hath nature that in time will venom breed;
+No teeth for th’ present. Get thee gone. Tomorrow
+We’ll hear ourselves again.",-0.6249,-0.24196
+macbeth,Macbeth,main,3,4,15,420,stage_direction,,,The FIRST MURDERER exits.,-0.7456,0.01326
+macbeth,Macbeth,main,3,4,15,421,speech,LADY MACBETH,LADY MACBETH,"My royal lord,
+You do not give the cheer. The feast is sold
+That is not often vouched, while ’tis a-making,
+‘Tis given with welcome. To feed were best at home;
+From thence, the sauce to meat is ceremony;
+Meeting were bare without it.",-0.0124,-0.50663
+macbeth,Macbeth,main,3,4,15,422,speech,MACBETH,MACBETH,"Sweet remembrancer!
+Now, good digestion wait on appetite,
+And health on both!",0.9611,0.47073
+macbeth,Macbeth,main,3,4,15,423,speech,LENNOX,LENNOX,May ’t please your highness sit.,0.3182,0.45924
+macbeth,Macbeth,main,3,4,15,424,stage_direction,,,The GHOST OF BANQUO enters and sits in MACBETH’s place.,-0.4648,0.02335
+macbeth,Macbeth,main,3,4,15,425,speech,MACBETH,MACBETH,"Here had we now our country’s honor roofed,
+Were the graced person of our Banquo present,
+Who may I rather challenge for unkindness
+Than pity for mischance.",0.4374,-0.23946
+macbeth,Macbeth,main,3,4,15,426,speech,ROSS,ROSS,"His absence, sir,
+Lays blame upon his promise. Please ’t your highness
+To grace us with your royal company?",0.5719,-0.82663
+macbeth,Macbeth,main,3,4,15,427,speech,MACBETH,MACBETH,The table’s full.,0.0,0.15165
+macbeth,Macbeth,main,3,4,15,428,speech,LENNOX,LENNOX,"Here is a place reserved, sir.",0.4215,0.44008
+macbeth,Macbeth,main,3,4,15,429,speech,MACBETH,MACBETH,Where?,0.0,-0.10612
+macbeth,Macbeth,main,3,4,15,430,speech,LENNOX,LENNOX,"Here, my good lord. What is ’t that moves your
+highness?",-0.4084,0.76939
+macbeth,Macbeth,main,3,4,15,431,speech,MACBETH,MACBETH,Which of you have done this?,-0.4648,0.02631
+macbeth,Macbeth,main,3,4,15,432,speech,LORDS,LORDS,"What, my good lord?",0.4404,-0.26491
+macbeth,Macbeth,main,3,4,15,433,speech,MACBETH,MACBETH,"[to GHOST] Thou canst not say I did it. Never shake
+Thy gory locks at me.",-0.7672,-0.72014
+macbeth,Macbeth,main,3,4,15,434,speech,ROSS,ROSS,"Gentlemen, rise. His highness is not well.",-0.2057,-0.06312
+macbeth,Macbeth,main,3,4,15,435,speech,LADY MACBETH,LADY MACBETH,"Sit, worthy friends. My lord is often thus
+And hath been from his youth. Pray you, keep seat.
+The fit is momentary; upon a thought
+He will again be well. If much you note him,
+You shall offend him and extend his passion.
+Feed and regard him not. [aside to MACBETH] Are you a
+man?",0.8957,-0.45178
+macbeth,Macbeth,main,3,4,15,436,speech,MACBETH,MACBETH,"Ay, and a bold one, that dare look on that
+Which might appall the devil.",-0.1779,0.15344
+macbeth,Macbeth,main,3,4,15,437,speech,LADY MACBETH,LADY MACBETH,"O proper stuff!
+This is the very painting of your fear.
+This is the air-drawn dagger which you said
+Led you to Duncan. Oh, these flaws and starts,
+Impostors to true fear, would well become
+A woman’s story at a winter’s fire,
+Authorized by her grandam. Shame itself!
+Why do you make such faces? When all’s done,
+You look but on a stool.",-0.868,-0.70426
+macbeth,Macbeth,main,3,4,15,438,speech,MACBETH,MACBETH,"Prithee, see there! Behold! Look! Lo! How say you?
+Why, what care I? If thou canst nod, speak too.
+If charnel houses and our graves must send
+Those that we bury back, our monuments
+Shall be the maws of kites.",-0.8785,-0.15621
+macbeth,Macbeth,main,3,4,15,439,speech,LADY MACBETH,LADY MACBETH,"What, quite unmanned in folly?",-0.7184,-0.55503
+macbeth,Macbeth,main,3,4,15,440,speech,MACBETH,MACBETH,"If I stand here, I saw him.",0.3182,0.04654
+macbeth,Macbeth,main,3,4,15,441,speech,LADY MACBETH,LADY MACBETH,"Fie, for shame!",-0.7494,0.41927
+macbeth,Macbeth,main,3,4,15,442,speech,MACBETH,MACBETH,"Blood hath been shed ere now, i’ th’ olden time,
+Ere humane statute purged the gentle weal;
+Ay, and since too, murders have been performed
+Too terrible for the ear. The time has been
+That, when the brains were out, the man would die,
+And there an end. But now they rise again
+With twenty mortal murders on their crowns
+And push us from our stools. This is more strange
+Than such a murder is.",-0.9737,-0.50138
+macbeth,Macbeth,main,3,4,15,443,speech,LADY MACBETH,LADY MACBETH,"My worthy lord,
+Your noble friends do lack you.",0.7964,-0.79939
+macbeth,Macbeth,main,3,4,15,444,speech,MACBETH,MACBETH,"I do forget.
+Do not muse at me, my most worthy friends.
+I have a strange infirmity, which is nothing
+To those that know me. Come, love and health to all.
+Then I’ll sit down. Give me some wine. Fill full.",0.8505,0.35622
+macbeth,Macbeth,main,3,4,15,445,stage_direction,,,The GHOST OF BANQUO enters.,-0.4648,0.02167
+macbeth,Macbeth,main,3,4,15,446,speech,MACBETH,MACBETH,"I drink to the general joy o’ th’ whole table,
+And to our dear friend Banquo, whom we miss;
+Would he were here! To all and him we thirst,
+And all to all.",0.8999,0.76276
+macbeth,Macbeth,main,3,4,15,447,speech,LORDS,LORDS,"Our duties, and the pledge.",0.0,0.12816
+macbeth,Macbeth,main,3,4,15,448,speech,MACBETH,MACBETH,"[seeing the GHOST] Avaunt, and quit my sight! Let the
+earth hide thee.
+Thy bones are marrowless, thy blood is cold.
+Thou hast no speculation in those eyes
+Which thou dost glare with!",-0.8912,-0.45511
+macbeth,Macbeth,main,3,4,15,449,speech,LADY MACBETH,LADY MACBETH,"Think of this, good peers,
+But as a thing of custom. ‘Tis no other;
+Only it spoils the pleasure of the time.",0.8324,-0.68508
+macbeth,Macbeth,main,3,4,15,450,speech,MACBETH,MACBETH,"What man dare, I dare.
+Approach thou like the rugged Russian bear,
+The armed rhinoceros, or th’ Hyrcan tiger;
+Take any shape but that, and my firm nerves
+Shall never tremble. Or be alive again,
+And dare me to the desert with thy sword.
+If trembling I inhabit then, protest me
+The baby of a girl. Hence, horrible shadow!
+Unreal mockery, hence!",-0.9775,-0.87065
+macbeth,Macbeth,main,3,4,15,451,speech,MACBETH,MACBETH,"Why so, being gone,
+I am a man again. Pray you sit still.",0.3182,0.03731
+macbeth,Macbeth,main,3,4,15,452,speech,LADY MACBETH,LADY MACBETH,"You have displaced the mirth, broke the good meeting,
+With most admired disorder.",0.4588,-0.66595
+macbeth,Macbeth,main,3,4,15,453,speech,MACBETH,MACBETH,"Can such things be,
+And overcome us like a summer’s cloud,
+Without our special wonder? You make me strange
+Even to the disposition that I owe,
+When now I think you can behold such sights,
+And keep the natural ruby of your cheeks,
+When mine is blanched with fear.",0.25,-0.76964
+macbeth,Macbeth,main,3,4,15,454,speech,ROSS,ROSS,"What sights, my lord?",0.0,-0.01971
+macbeth,Macbeth,main,3,4,15,455,speech,LADY MACBETH,LADY MACBETH,"I pray you, speak not. He grows worse and worse.
+Question enrages him. At once, good night.
+Stand not upon the order of your going,
+But go at once.",-0.3182,-0.67811
+macbeth,Macbeth,main,3,4,15,456,speech,LENNOX,LENNOX,"Good night, and better health
+Attend his majesty!",0.8398,0.2835
+macbeth,Macbeth,main,3,4,15,457,speech,LADY MACBETH,LADY MACBETH,A kind good night to all!,0.7644,0.46789
+macbeth,Macbeth,main,3,4,15,458,stage_direction,,,Everyone leaves except MACBETH and LADY MACBETH.,0.0,-0.00632
+macbeth,Macbeth,main,3,4,15,459,speech,MACBETH,MACBETH,"It will have blood, they say. Blood will have blood.
+Stones have been known to move, and trees to speak.
+Augurs and understood relations have
+By magot pies and choughs and rooks brought forth
+The secret’st man of blood. —What is the night?",-0.7251,-0.03955
+macbeth,Macbeth,main,3,4,15,460,speech,LADY MACBETH,LADY MACBETH,"Almost at odds with morning, which is which.",0.0,-0.03114
+macbeth,Macbeth,main,3,4,15,461,speech,MACBETH,MACBETH,"How say’st thou that Macduff denies his person
+At our great bidding?",0.0,-0.40615
+macbeth,Macbeth,main,3,4,15,462,speech,LADY MACBETH,LADY MACBETH,"Did you send to him, sir?",0.0,-0.10697
+macbeth,Macbeth,main,3,4,15,463,speech,MACBETH,MACBETH,"I hear it by the way; but I will send.
+There’s not a one of them but in his house
+I keep a servant fee’d. I will tomorrow—
+And betimes I will—to the weird sisters.
+More shall they speak, for now I am bent to know,
+By the worst means, the worst. For mine own good,
+All causes shall give way. I am in blood
+Stepped in so far that, should I wade no more,
+Returning were as tedious as go o’er.
+Strange things I have in head, that will to hand,
+Which must be acted ere they may be scanned.",-0.394,0.0287
+macbeth,Macbeth,main,3,4,15,464,speech,LADY MACBETH,LADY MACBETH,"You lack the season of all natures, sleep.",0.0516,-0.46922
+macbeth,Macbeth,main,3,4,15,465,speech,MACBETH,MACBETH,"Come, we’ll to sleep. My strange and self-abuse
+Is the initiate fear that wants hard use.
+We are yet but young in deed.",-0.3818,-0.64056
+macbeth,Macbeth,main,3,4,15,466,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,3,5,16,467,stage_direction,,,"Thunder. The three WITCHES enter, meeting HECATE.",0.0,0.29276
+macbeth,Macbeth,main,3,5,16,468,speech,FIRST WITCH,FIRST WITCH,"Why, how now, Hecate! You look angerly.",-0.5106,-0.05682
+macbeth,Macbeth,main,3,5,16,469,speech,HECATE,HECATE,"Have I not reason, beldams as you are?
+Saucy and overbold, how did you dare
+To trade and traffic with Macbeth
+In riddles and affairs of death,
+And I, the mistress of your charms,
+The close contriver of all harms,
+Was never called to bear my part,
+Or show the glory of our art?
+And, which is worse, all you have done
+Hath been but for a wayward son,
+Spiteful and wrathful, who, as others do,
+Loves for his own ends, not for you.
+But make amends now. Get you gone,
+And at the pit of Acheron
+Meet me i’ th’ morning. Thither he
+Will come to know his destiny.
+Your vessels and your spells provide,
+Your charms and everything beside.
+I am for the air. This night I’ll spend
+Unto a dismal and a fatal end.
+Great business must be wrought ere noon.
+Upon the corner of the moon
+There hangs a vap’rous drop profound.
+I’ll catch it ere it come to ground.
+And that distilled by magic sleights
+Shall raise such artificial sprites
+As by the strength of their illusion
+Shall draw him on to his confusion.
+He shall spurn fate, scorn death, and bear
+His hopes ‘bove wisdom, grace, and fear.
+And you all know, security
+Is mortals’ chiefest enemy.",-0.8046,-0.67868
+macbeth,Macbeth,main,3,5,16,470,stage_direction,,,"A song play offstage with the lyrics: “Come away, come away.”",0.34,0.00753
+macbeth,Macbeth,main,3,5,16,471,speech,HECATE,HECATE,"Hark! I am called. My little spirit, see,
+Sits in a foggy cloud and stays for me.",0.1776,-0.4542
+macbeth,Macbeth,main,3,5,16,472,stage_direction,,,HECATE exits.,0.0,0.02173
+macbeth,Macbeth,main,3,5,16,473,speech,FIRST WITCH,FIRST WITCH,"Come, let’s make haste; she’ll soon be back again.",0.0,0.13353
+macbeth,Macbeth,main,3,5,16,474,stage_direction,,,They all exit.,0.0,-0.27456
+macbeth,Macbeth,main,3,6,17,475,stage_direction,,,LENNOX and another LORD enter.,0.0,0.02189
+macbeth,Macbeth,main,3,6,17,476,speech,LENNOX,LENNOX,"My former speeches have but hit your thoughts,
+Which can interpret farther. Only I say
+Things have been strangely borne. The gracious Duncan
+Was pitied of Macbeth. Marry, he was dead.
+And the right-valiant Banquo walked too late,
+Whom, you may say, if ’t please you, Fleance killed,
+For Fleance fled. Men must not walk too late.
+Who cannot want the thought how monstrous
+It was for Malcolm and for Donalbain
+To kill their gracious father? Damnèd fact!
+How it did grieve Macbeth! Did he not straight
+In pious rage the two delinquents tear
+That were the slaves of drink and thralls of sleep?
+Was not that nobly done? Ay, and wisely too,
+For ’twould have angered any heart alive
+To hear the men deny ’t. So that, I say,
+He has borne all things well. And I do think
+That had he Duncan’s sons under his key—
+As, an’t please heaven, he shall not—they should find
+What ’twere to kill a father. So should Fleance.
+But, peace! For from broad words, and ‘cause he failed
+His presence at the tyrant’s feast, I hear
+Macduff lives in disgrace. Sir, can you tell
+Where he bestows himself?",-0.9577,-0.68389
+macbeth,Macbeth,main,3,6,17,477,speech,LORD,LORD,"The son of Duncan—
+From whom this tyrant holds the due of birth—
+Lives in the English court and is received
+Of the most pious Edward with such grace
+That the malevolence of fortune nothing
+Takes from his high respect. Thither Macduff
+Is gone to pray the holy king upon his aid
+To wake Northumberland and warlike Siward ,
+That by the help of these—with Him above
+To ratify the work—we may again
+Give to our tables meat, sleep to our nights,
+Free from our feasts and banquets bloody knives,
+Do faithful homage and receive free honors.
+All which we pine for now. And this report
+Hath so exasperated the king that he
+Prepares for some attempt of war.",0.9352,0.56234
+macbeth,Macbeth,main,3,6,17,478,speech,LENNOX,LENNOX,Sent he to Macduff?,0.0,-0.023
+macbeth,Macbeth,main,3,6,17,479,speech,LORD,LORD,"He did, and with an absolute “Sir, not I,”
+The cloudy messenger turns me his back,
+And hums, as who should say “You’ll rue the time
+That clogs me with this answer.”",-0.5719,-0.55211
+macbeth,Macbeth,main,3,6,17,480,speech,LENNOX,LENNOX,"And that well might
+Advise him to a caution, t’ hold what distance
+His wisdom can provide. Some holy angel
+Fly to the court of England and unfold
+His message ere he come, that a swift blessing
+May soon return to this our suffering country
+Under a hand accursed!",-0.5411,-0.4613
+macbeth,Macbeth,main,3,6,17,481,speech,LORD,LORD,I’ll send my prayers with him.,0.0,0.00725
+macbeth,Macbeth,main,3,6,17,482,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,4,1,18,483,stage_direction,,,"A cavern. In the middle, a boiling cauldron. Thunder. The three WITCHES enter.",0.0,0.01278
+macbeth,Macbeth,main,4,1,18,484,speech,FIRST WITCH,FIRST WITCH,Thrice the brinded cat hath mewed.,0.0,-0.02517
+macbeth,Macbeth,main,4,1,18,485,speech,SECOND WITCH,SECOND WITCH,"Thrice, and once the hedge-pig whined.",-0.2263,-0.18512
+macbeth,Macbeth,main,4,1,18,486,speech,THIRD WITCH,THIRD WITCH,"Harpier cries, “‘Tis time, ’tis time.”",-0.3164,0.49278
+macbeth,Macbeth,main,4,1,18,487,speech,FIRST WITCH,FIRST WITCH,"Round about the cauldron go,
+In the poisoned entrails throw.
+Toad, that under cold stone
+Days and nights has thirty-one
+Sweltered venom sleeping got,
+Boil thou first i’ th’ charmèd pot.",-0.4939,-0.52609
+macbeth,Macbeth,main,4,1,18,488,speech,ALL,ALL,"Double, double toil and trouble,
+Fire burn, and cauldron bubble.",-0.6249,-0.02854
+macbeth,Macbeth,main,4,1,18,489,speech,SECOND WITCH,SECOND WITCH,"Fillet of a fenny snake,
+In the cauldron boil and bake.
+Eye of newt and toe of frog,
+Wool of bat and tongue of dog,
+Adder’s fork and blind-worm’s sting,
+Lizard’s leg and owlet’s wing,
+For a charm of powerful trouble,
+Like a hell-broth boil and bubble.",-0.0772,-0.13826
+macbeth,Macbeth,main,4,1,18,490,speech,ALL,ALL,"Double, double toil and trouble,
+Fire burn and cauldron bubble.",-0.6249,-0.02777
+macbeth,Macbeth,main,4,1,18,491,speech,THIRD WITCH,THIRD WITCH,"Scale of dragon, tooth of wolf,
+Witches’ mummy, maw and gulf
+Of the ravined salt-sea shark,
+Root of hemlock digged i’ th’ dark,
+Liver of blaspheming Jew,
+Gall of goat and slips of yew
+Slivered in the moon’s eclipse,
+Nose of Turk and Tartar’s lips,
+Finger of birth-strangled babe
+Ditch-delivered by a drab,
+Make the gruel thick and slab.
+Add thereto a tiger’s chaudron,
+For the ingredients of our cauldron.",-0.7184,-0.13079
+macbeth,Macbeth,main,4,1,18,492,speech,ALL,ALL,"Double, double toil and trouble,
+Fire burn and cauldron bubble.",-0.6249,-0.02777
+macbeth,Macbeth,main,4,1,18,493,speech,SECOND WITCH,SECOND WITCH,"Cool it with a baboon’s blood,
+Then the charm is firm and good.",0.6124,0.02562
+macbeth,Macbeth,main,4,1,18,494,stage_direction,,,HECATE enters with three other WITCHES.,0.0,0.01131
+macbeth,Macbeth,main,4,1,18,495,speech,HECATE,HECATE,"Oh well done! I commend your pains,
+And every one shall share i’ th’ gains .
+And now about the cauldron sing,
+Like elves and fairies in a ring,
+Enchanting all that you put in.",0.9151,0.6391
+macbeth,Macbeth,main,4,1,18,496,stage_direction,,,Music plays. The six WITCHES sing a song called “Black Spirits.” HECATE exits.,0.25,0.06003
+macbeth,Macbeth,main,4,1,18,497,speech,SECOND WITCH,SECOND WITCH,"By the pricking of my thumbs,
+Something wicked this way comes.
+Open, locks,
+Whoever knocks.",-0.5267,0.05135
+macbeth,Macbeth,main,4,1,18,498,stage_direction,,,MACBETH enters.,0.0,0.01361
+macbeth,Macbeth,main,4,1,18,499,speech,MACBETH,MACBETH,"How now, you secret, black, and midnight hags?
+What is ’t you do?",0.0,-0.04812
+macbeth,Macbeth,main,4,1,18,500,speech,ALL,ALL,A deed without a name.,-0.296,-0.73826
+macbeth,Macbeth,main,4,1,18,501,speech,MACBETH,MACBETH,"I conjure you by that which you profess—
+Howe’er you come to know it—answer me.
+Though you untie the winds and let them fight
+Against the churches, though the yeasty waves
+Confound and swallow navigation up,
+Though bladed corn be lodged and trees blown down,
+Though castles topple on their warders’ heads,
+Though palaces and pyramids do slope
+Their heads to their foundations, though the treasure
+Of nature’s germens tumble all together,
+Even till destruction sicken, answer me
+To what I ask you.",-0.9294,-0.0071
+macbeth,Macbeth,main,4,1,18,502,speech,FIRST WITCH,FIRST WITCH,Speak.,0.0,0.05193
+macbeth,Macbeth,main,4,1,18,503,speech,SECOND WITCH,SECOND WITCH,Demand.,-0.128,0.17217
+macbeth,Macbeth,main,4,1,18,504,speech,THIRD WITCH,THIRD WITCH,We’ll answer.,0.0,0.06806
+macbeth,Macbeth,main,4,1,18,505,speech,FIRST WITCH,FIRST WITCH,"Say, if th’ hadst rather hear it from our mouths,
+Or from our masters’.",0.0,-0.00895
+macbeth,Macbeth,main,4,1,18,506,speech,MACBETH,MACBETH,Call ‘em. Let me see ‘em.,0.0,0.291
+macbeth,Macbeth,main,4,1,18,507,speech,FIRST WITCH,FIRST WITCH,"Pour in sow’s blood, that hath eaten
+Her nine farrow; grease that’s sweaten
+From the murderer’s gibbet throw
+Into the flame.",-0.8519,-0.07606
+macbeth,Macbeth,main,4,1,18,508,speech,ALL,ALL,"Come, high or low;
+Thyself and office deftly show!",-0.1027,0.03167
+macbeth,Macbeth,main,4,1,18,509,stage_direction,,,"Thunder. The FIRST APPARITION appears, in the form of a head wearing a helmet.",0.0,0.02712
+macbeth,Macbeth,main,4,1,18,510,speech,MACBETH,MACBETH,"Tell me, thou unknown power—",0.0,-0.29435
+macbeth,Macbeth,main,4,1,18,511,speech,FIRST WITCH,FIRST WITCH,"He knows thy thought.
+Hear his speech but say thou nought.",0.0,0.1376
+macbeth,Macbeth,main,4,1,18,512,speech,FIRST APPARITION,FIRST APPARITION,"Macbeth! Macbeth! Macbeth! Beware Macduff.
+Beware the thane of Fife. Dismiss me. Enough.",0.0,0.60787
+macbeth,Macbeth,main,4,1,18,513,speech,MACBETH,MACBETH,"Whate’er thou art, for thy good caution, thanks.
+Thou hast harped my fear aright. But one word more—",0.2023,0.00245
+macbeth,Macbeth,main,4,1,18,514,speech,FIRST WITCH,FIRST WITCH,"He will not be commanded. Here’s another
+More potent than the first.",0.3818,-0.5258
+macbeth,Macbeth,main,4,1,18,515,stage_direction,,,"Thunder. The SECOND APPARITION appears, in the form of a bloody child.",-0.4404,0.12889
+macbeth,Macbeth,main,4,1,18,516,speech,SECOND APPARITION,SECOND APPARITION,Macbeth! Macbeth! Macbeth!—,0.0,0.71486
+macbeth,Macbeth,main,4,1,18,517,speech,MACBETH,MACBETH,"Had I three ears, I’d hear thee.",0.0,-0.02333
+macbeth,Macbeth,main,4,1,18,518,speech,SECOND APPARITION,SECOND APPARITION,"Be bloody, bold, and resolute. Laugh to scorn
+The power of man, for none of woman born
+Shall harm Macbeth.",-0.6369,0.56366
+macbeth,Macbeth,main,4,1,18,519,speech,MACBETH,MACBETH,"Then live, Macduff. What need I fear of thee?
+But yet I’ll make assurance double sure,
+And take a bond of fate. Thou shalt not live,
+That I may tell pale-hearted fear it lies,
+And sleep in spite of thunder.",-0.9186,0.65827
+macbeth,Macbeth,main,4,1,18,520,stage_direction,,,"Thunder. The THIRD APPARITION appears, in the form of a child wearing a crown and holding a tree in his hand.",0.4939,0.05513
+macbeth,Macbeth,main,4,1,18,521,speech,MACBETH,MACBETH,"What is this
+That rises like the issue of a king,
+And wears upon his baby-brow the round
+And top of sovereignty?",0.5228,-0.02323
+macbeth,Macbeth,main,4,1,18,522,speech,ALL,ALL,Listen but speak not to ’t.,0.0,-0.4071
+macbeth,Macbeth,main,4,1,18,523,speech,THIRD APPARITION,THIRD APPARITION,"Be lion-mettled, proud, and take no care
+Who chafes, who frets, or where conspirers are.
+Macbeth shall never vanquished be until
+Great Birnam Wood to high Dunsinane Hill
+Shall come against him.",0.5472,0.74784
+macbeth,Macbeth,main,4,1,18,524,speech,MACBETH,MACBETH,"That will never be.
+Who can impress the forest, bid the tree
+Unfix his earthbound root? Sweet bodements! Good!
+Rebellious dead, rise never till the wood
+Of Birnam rise, and our high-placed Macbeth
+Shall live the lease of nature, pay his breath
+To time and mortal custom. Yet my heart
+Throbs to know one thing. Tell me, if your art
+Can tell so much: shall Banquo’s issue ever
+Reign in this kingdom?",0.7746,0.83389
+macbeth,Macbeth,main,4,1,18,525,speech,ALL,ALL,Seek to know no more.,0.0,-0.44868
+macbeth,Macbeth,main,4,1,18,526,speech,MACBETH,MACBETH,"I will be satisfied. Deny me this,
+And an eternal curse fall on you! Let me know.
+Why sinks that cauldron? And what noise is this?",-0.643,-0.31436
+macbeth,Macbeth,main,4,1,18,527,stage_direction,,,Oboes play music for a ceremonial procession.,0.34,0.01118
+macbeth,Macbeth,main,4,1,18,528,speech,FIRST WITCH,FIRST WITCH,Show.,0.0,0.1134
+macbeth,Macbeth,main,4,1,18,529,speech,SECOND WITCH,SECOND WITCH,Show.,0.0,0.1134
+macbeth,Macbeth,main,4,1,18,530,speech,THIRD WITCH,THIRD WITCH,Show.,0.0,0.1134
+macbeth,Macbeth,main,4,1,18,531,speech,ALL,ALL,"Show his eyes and grieve his heart.
+Come like shadows; so depart!",0.8835,0.6068
+macbeth,Macbeth,main,4,1,18,532,speech,MACBETH,MACBETH,"Thou art too like the spirit of Banquo. Down!
+Thy crown does sear mine eyeballs. And thy hair,
+Thou other gold-bound brow, is like the first.
+A third is like the former. —Filthy hags!
+Why do you show me this? A fourth? Start, eyes!
+What, will the line stretch out to th’ crack of doom?
+Another yet? A seventh? I’ll see no more.
+And yet the eighth appears, who bears a glass
+Which shows me many more, and some I see
+That twofold balls and treble scepters carry.
+Horrible sight! Now I see ’tis true;
+For the blood-boltered Banquo smiles upon me
+And points at them for his.",0.6935,0.23415
+macbeth,Macbeth,main,4,1,18,533,speech,MACBETH,MACBETH,"What, is this so?",0.5588,-0.24353
+macbeth,Macbeth,main,4,1,18,534,speech,FIRST WITCH,FIRST WITCH,"Ay, sir, all this is so. But why
+Stands Macbeth thus amazedly?
+Come, sisters, cheer we up his sprites,
+And show the best of our delights.
+I’ll charm th’ air to give a sound,
+While you perform your antic round.
+That this great king may kindly say,
+Our duties did his welcome pay.",0.9799,0.60886
+macbeth,Macbeth,main,4,1,18,535,stage_direction,,,Music plays. The WITCHES dance and then vanish.,0.25,0.16206
+macbeth,Macbeth,main,4,1,18,536,speech,MACBETH,MACBETH,"Where are they? Gone? Let this pernicious hour
+Stand aye accursèd in the calendar!
+Come in, without there.",-0.7847,-0.71621
+macbeth,Macbeth,main,4,1,18,537,stage_direction,,,LENNOX enters.,0.0,0.01079
+macbeth,Macbeth,main,4,1,18,538,speech,LENNOX,LENNOX,What’s your grace’s will?,0.4215,-0.00366
+macbeth,Macbeth,main,4,1,18,539,speech,MACBETH,MACBETH,Saw you the weird sisters?,-0.1779,-0.02721
+macbeth,Macbeth,main,4,1,18,540,speech,LENNOX,LENNOX,"No, my lord.",0.0,-0.58973
+macbeth,Macbeth,main,4,1,18,541,speech,MACBETH,MACBETH,Came they not by you?,0.0,-0.35862
+macbeth,Macbeth,main,4,1,18,542,speech,LENNOX,LENNOX,"No, indeed, my lord.",0.0,0.07208
+macbeth,Macbeth,main,4,1,18,543,speech,MACBETH,MACBETH,"Infected be the air whereon they ride,
+And damned all those that trust them! I did hear
+The galloping of horse. Who was ’t came by?",-0.4389,-0.78544
+macbeth,Macbeth,main,4,1,18,544,speech,LENNOX,LENNOX,"‘Tis two or three, my lord, that bring you word
+Macduff is fled to England.",0.0,0.09571
+macbeth,Macbeth,main,4,1,18,545,speech,MACBETH,MACBETH,Fled to England?,0.0,-0.0968
+macbeth,Macbeth,main,4,1,18,546,speech,LENNOX,LENNOX,"Ay, my good lord.",0.6808,0.64184
+macbeth,Macbeth,main,4,1,18,547,speech,MACBETH,MACBETH,"Time, thou anticipat’st my dread exploits.
+The flighty purpose never is o’ertook
+Unless the deed go with it. From this moment
+The very firstlings of my heart shall be
+The firstlings of my hand. And even now,
+To crown my thoughts with acts, be it thought and
+done:
+The castle of Macduff I will surprise,
+Seize upon Fife, give to th’ edge o’ th’ sword
+His wife, his babes, and all unfortunate souls
+That trace him in his line. No boasting like a fool.
+This deed I’ll do before this purpose cool.
+But no more sights! —Where are these gentlemen?
+Come, bring me where they are.",-0.962,0.62692
+macbeth,Macbeth,main,4,1,18,548,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,4,2,19,549,stage_direction,,,"LADY MACDUFF, her SON, and ROSS enter.",0.0,0.43235
+macbeth,Macbeth,main,4,2,19,550,speech,LADY MACDUFF,LADY MACDUFF,What had he done to make him fly the land?,0.0,-0.01553
+macbeth,Macbeth,main,4,2,19,551,speech,ROSS,ROSS,"You must have patience, madam.",0.0,0.30143
+macbeth,Macbeth,main,4,2,19,552,speech,LADY MACDUFF,LADY MACDUFF,"He had none.
+His flight was madness. When our actions do not,
+Our fears do make us traitors.",-0.8519,-0.64172
+macbeth,Macbeth,main,4,2,19,553,speech,ROSS,ROSS,"You know not
+Whether it was his wisdom or his fear.",0.0516,-0.03379
+macbeth,Macbeth,main,4,2,19,554,speech,LADY MACDUFF,LADY MACDUFF,"Wisdom! To leave his wife, to leave his babes,
+His mansion and his titles in a place
+From whence himself does fly? He loves us not;
+He wants the natural touch. For the poor wren,
+The most diminutive of birds, will fight,
+Her young ones in her nest, against the owl.
+All is the fear and nothing is the love,
+As little is the wisdom, where the flight
+So runs against all reason.",0.9521,-0.69546
+macbeth,Macbeth,main,4,2,19,555,speech,ROSS,ROSS,"My dearest coz,
+I pray you school yourself. But for your husband,
+He is noble, wise, judicious, and best knows
+The fits o’ th’ season. I dare not speak much further;
+But cruel are the times when we are traitors
+And do not know ourselves; when we hold rumor
+From what we fear, yet know not what we fear,
+But float upon a wild and violent sea
+Each way and none. I take my leave of you.
+Shall not be long but I’ll be here again.
+Things at the worst will cease, or else climb upward
+To what they were before.—My pretty cousin,
+Blessing upon you.",0.7369,-0.52457
+macbeth,Macbeth,main,4,2,19,556,speech,LADY MACDUFF,LADY MACDUFF,"Fathered he is, and yet he’s fatherless.",0.0,-0.2667
+macbeth,Macbeth,main,4,2,19,557,speech,ROSS,ROSS,"I am so much a fool, should I stay longer
+It would be my disgrace and your discomfort.
+I take my leave at once.",-0.8271,-0.82432
+macbeth,Macbeth,main,4,2,19,558,stage_direction,,,ROSS exits.,0.0,-0.00373
+macbeth,Macbeth,main,4,2,19,559,speech,LADY MACDUFF,LADY MACDUFF,"Sirrah, your father’s dead.
+And what will you do now? How will you live?",-0.6868,-0.75373
+macbeth,Macbeth,main,4,2,19,560,speech,SON,SON,"As birds do, Mother.",0.0,0.33737
+macbeth,Macbeth,main,4,2,19,561,speech,LADY MACDUFF,LADY MACDUFF,"What, with worms and flies?",0.0,-0.03349
+macbeth,Macbeth,main,4,2,19,562,speech,SON,SON,"With what I get, I mean, and so do they.",0.3612,0.16035
+macbeth,Macbeth,main,4,2,19,563,speech,LADY MACDUFF,LADY MACDUFF,"Poor bird! Thou ’dst never fear the net nor lime,
+The pitfall nor the gin.",-0.7712,-0.59835
+macbeth,Macbeth,main,4,2,19,564,speech,SON,SON,"Why should I, mother? Poor birds they are not set for.
+My father is not dead, for all your saying.",-0.4646,-0.49095
+macbeth,Macbeth,main,4,2,19,565,speech,LADY MACDUFF,LADY MACDUFF,"Yes, he is dead. How wilt thou do for a father?",-0.3818,-0.76681
+macbeth,Macbeth,main,4,2,19,566,speech,SON,SON,"Nay, how will you do for a husband?",0.0,-0.16392
+macbeth,Macbeth,main,4,2,19,567,speech,LADY MACDUFF,LADY MACDUFF,"Why, I can buy me twenty at any market.",0.2732,0.21518
+macbeth,Macbeth,main,4,2,19,568,speech,SON,SON,Then you’ll buy ‘em to sell again.,0.0,-0.22145
+macbeth,Macbeth,main,4,2,19,569,speech,LADY MACDUFF,LADY MACDUFF,"Thou speak’st with all thy wit; and yet, i’ faith,
+With wit enough for thee.",0.0,0.3259
+macbeth,Macbeth,main,4,2,19,570,speech,SON,SON,"Was my father a traitor, Mother?",0.0,-0.74975
+macbeth,Macbeth,main,4,2,19,571,speech,LADY MACDUFF,LADY MACDUFF,"Ay, that he was.",0.4019,0.1487
+macbeth,Macbeth,main,4,2,19,572,speech,SON,SON,What is a traitor?,0.0,-0.04034
+macbeth,Macbeth,main,4,2,19,573,speech,LADY MACDUFF,LADY MACDUFF,"Why, one that swears and lies.",0.3182,0.12706
+macbeth,Macbeth,main,4,2,19,574,speech,SON,SON,And be all traitors that do so?,0.0,-0.02878
+macbeth,Macbeth,main,4,2,19,575,speech,LADY MACDUFF,LADY MACDUFF,"Every one that does so is a traitor and must be
+hanged.",0.0,-0.3982
+macbeth,Macbeth,main,4,2,19,576,speech,SON,SON,And must they all be hanged that swear and lie?,0.3818,-0.03927
+macbeth,Macbeth,main,4,2,19,577,speech,LADY MACDUFF,LADY MACDUFF,Every one.,0.0,0.29579
+macbeth,Macbeth,main,4,2,19,578,speech,SON,SON,Who must hang them?,0.0,-0.01502
+macbeth,Macbeth,main,4,2,19,579,speech,LADY MACDUFF,LADY MACDUFF,"Why, the honest men.",0.5106,-0.24142
+macbeth,Macbeth,main,4,2,19,580,speech,SON,SON,"Then the liars and swearers are fools, for there are
+liars and swearers enough to beat the honest men and
+hang up them.",-0.8658,0.02198
+macbeth,Macbeth,main,4,2,19,581,speech,LADY MACDUFF,LADY MACDUFF,"Now, God help thee, poor monkey! But how wilt thou do
+for a father?",0.3466,0.78738
+macbeth,Macbeth,main,4,2,19,582,speech,SON,SON,"If he were dead, you’d weep for him. If you would not,
+it were a good sign that I should quickly have a new
+father.",-0.802,0.4678
+macbeth,Macbeth,main,4,2,19,583,speech,LADY MACDUFF,LADY MACDUFF,"Poor prattler, how thou talk’st!",-0.5255,0.44851
+macbeth,Macbeth,main,4,2,19,584,stage_direction,,,A MESSENGER enters.,0.0,0.02267
+macbeth,Macbeth,main,4,2,19,585,speech,MESSENGER,MESSENGER,"Bless you, fair dame! I am not to you known,
+Though in your state of honor I am perfect.
+I doubt some danger does approach you nearly.
+If you will take a homely man’s advice,
+Be not found here. Hence with your little ones.
+To fright you thus methinks I am too savage;
+To do worse to you were fell cruelty,
+Which is too nigh your person. Heaven preserve you!
+I dare abide no longer.",-0.831,0.13181
+macbeth,Macbeth,main,4,2,19,586,stage_direction,,,The MESSENGER exits.,0.0,0.03743
+macbeth,Macbeth,main,4,2,19,587,speech,LADY MACDUFF,LADY MACDUFF,"Whither should I fly?
+I have done no harm. But I remember now
+I am in this earthly world, where to do harm
+Is often laudable, to do good sometime
+Accounted dangerous folly. Why then, alas,
+Do I put up that womanly defense,
+To say I have done no harm?",-0.1494,-0.77368
+macbeth,Macbeth,main,4,2,19,588,stage_direction,,,The MURDERERS enter.,-0.7213,0.0554
+macbeth,Macbeth,main,4,2,19,589,speech,LADY MACDUFF,LADY MACDUFF,What are these faces?,-0.5106,-0.18761
+macbeth,Macbeth,main,4,2,19,590,speech,FIRST MURDERER,FIRST MURDERER,Where is your husband?,0.0,-0.01913
+macbeth,Macbeth,main,4,2,19,591,speech,LADY MACDUFF,LADY MACDUFF,"I hope, in no place so unsanctified
+Where such as thou mayst find him.",0.6597,-0.83718
+macbeth,Macbeth,main,4,2,19,592,speech,FIRST MURDERER,FIRST MURDERER,He’s a traitor.,0.0,-0.60089
+macbeth,Macbeth,main,4,2,19,593,speech,SON,SON,"Thou liest, thou shag-ear’d villain!",-0.5983,0.57543
+macbeth,Macbeth,main,4,2,19,594,speech,FIRST MURDERER,FIRST MURDERER,"[stabbing him] What, you egg?
+Young fry of treachery!",0.0,0.03729
+macbeth,Macbeth,main,4,2,19,595,speech,SON,SON,"He has killed me, mother.
+Run away, I pray you!",-0.974,-0.7347
+macbeth,Macbeth,main,4,3,20,596,stage_direction,,,MALCOLM and MACDUFF enter.,0.0,0.02607
+macbeth,Macbeth,main,4,3,20,597,speech,MALCOLM,MALCOLM,"Let us seek out some desolate shade and there
+Weep our sad bosoms empty.",0.296,-0.02986
+macbeth,Macbeth,main,4,3,20,598,speech,MACDUFF,MACDUFF,"Let us rather
+Hold fast the mortal sword and, like good men,
+Bestride our downfall’n birthdom. Each new morn
+New widows howl, new orphans cry, new sorrows
+Strike heaven on the face, that it resounds
+As if it felt with Scotland and yelled out
+Like syllable of dolor.",0.046,-0.25687
+macbeth,Macbeth,main,4,3,20,599,speech,MALCOLM,MALCOLM,"What I believe I’ll wail;
+What know believe, and what I can redress,
+As I shall find the time to friend, I will.
+What you have spoke, it may be so perchance.
+This tyrant, whose sole name blisters our tongues,
+Was once thought honest. You have loved him well.
+He hath not touched you yet. I am young, but something
+You may deserve of him through me, and wisdom
+To offer up a weak, poor, innocent lamb
+T’ appease an angry god.",0.8871,-0.68179
+macbeth,Macbeth,main,4,3,20,600,speech,MACDUFF,MACDUFF,I am not treacherous.,0.0,-0.30715
+macbeth,Macbeth,main,4,3,20,601,speech,MALCOLM,MALCOLM,"But Macbeth is.
+A good and virtuous nature may recoil
+In an imperial charge. But I shall crave your pardon.
+That which you are, my thoughts cannot transpose.
+Angels are bright still, though the brightest fell.
+Though all things foul would wear the brows of grace,
+Yet grace must still look so.",0.9861,0.35293
+macbeth,Macbeth,main,4,3,20,602,speech,MACDUFF,MACDUFF,I have lost my hopes.,0.128,-0.69923
+macbeth,Macbeth,main,4,3,20,603,speech,MALCOLM,MALCOLM,"Perchance even there where I did find my doubts.
+Why in that rawness left you wife and child,
+Those precious motives, those strong knots of love,
+Without leave-taking? I pray you,
+Let not my jealousies be your dishonors,
+But mine own safeties. You may be rightly just,
+Whatever I shall think.",0.9139,-0.84978
+macbeth,Macbeth,main,4,3,20,604,speech,MACDUFF,MACDUFF,"Bleed, bleed, poor country!
+Great tyranny, lay thou thy basis sure,
+For goodness dare not check thee. Wear thou thy wrongs;
+The title is affeered.—Fare thee well, lord.
+I would not be the villain that thou think’st
+For the whole space that’s in the tyrant’s grasp,
+And the rich East to boot.",0.5399,0.73185
+macbeth,Macbeth,main,4,3,20,605,speech,MALCOLM,MALCOLM,"Be not offended.
+I speak not as in absolute fear of you.
+I think our country sinks beneath the yoke.
+It weeps, it bleeds, and each new day a gash
+Is added to her wounds. I think withal
+There would be hands uplifted in my right;
+And here from gracious England have I offer
+Of goodly thousands. But, for all this,
+When I shall tread upon the tyrant’s head,
+Or wear it on my sword, yet my poor country
+Shall have more vices than it had before,
+More suffer, and more sundry ways than ever,
+By him that shall succeed.",-0.9032,-0.79008
+macbeth,Macbeth,main,4,3,20,606,speech,MACDUFF,MACDUFF,What should he be?,0.0,-0.12206
+macbeth,Macbeth,main,4,3,20,607,speech,MALCOLM,MALCOLM,"It is myself I mean, in whom I know
+All the particulars of vice so grafted
+That, when they shall be opened, black Macbeth
+Will seem as pure as snow, and the poor state
+Esteem him as a lamb, being compared
+With my confineless harms.",-0.9228,0.74834
+macbeth,Macbeth,main,4,3,20,608,speech,MACDUFF,MACDUFF,"Not in the legions
+Of horrid hell can come a devil more damned
+In evils to top Macbeth.",-0.2695,-0.40171
+macbeth,Macbeth,main,4,3,20,609,speech,MALCOLM,MALCOLM,"I grant him bloody,
+Luxurious, avaricious, false, deceitful,
+Sudden, malicious, smacking of every sin
+That has a name. But there’s no bottom, none,
+In my voluptuousness. Your wives, your daughters,
+Your matrons, and your maids could not fill up
+The cistern of my lust, and my desire
+All continent impediments would o’erbear
+That did oppose my will. Better Macbeth
+Than such an one to reign.",-0.5057,-0.84581
+macbeth,Macbeth,main,4,3,20,610,speech,MACDUFF,MACDUFF,"Boundless intemperance
+In nature is a tyranny. It hath been
+The untimely emptying of the happy throne
+And fall of many kings. But fear not yet
+To take upon you what is yours. You may
+Convey your pleasures in a spacious plenty
+And yet seem cold; the time you may so hoodwink.
+We have willing dames enough. There cannot be
+That vulture in you to devour so many
+As will to greatness dedicate themselves,
+Finding it so inclined.",0.977,0.17203
+macbeth,Macbeth,main,4,3,20,611,speech,MALCOLM,MALCOLM,"With this there grows
+In my most ill-composed affection such
+A stanchless avarice that, were I king,
+I should cut off the nobles for their lands,
+Desire his jewels and this other’s house.
+And my more-having would be as a sauce
+To make me hunger more, that I should forge
+Quarrels unjust against the good and loyal,
+Destroying them for wealth.",0.4877,-0.44201
+macbeth,Macbeth,main,4,3,20,612,speech,MACDUFF,MACDUFF,"This avarice
+Sticks deeper, grows with more pernicious root
+Than summer-seeming lust, and it hath been
+The sword of our slain kings. Yet do not fear;
+Scotland hath foisons to fill up your will,
+Of your mere own. All these are portable,
+With other graces weighed.",0.0387,-0.64289
+macbeth,Macbeth,main,4,3,20,613,speech,MALCOLM,MALCOLM,"But I have none. The king-becoming graces,
+As justice, verity, temperance, stableness,
+Bounty, perseverance, mercy, lowliness,
+Devotion, patience, courage, fortitude,
+I have no relish of them but abound
+In the division of each several crime,
+Acting it many ways. Nay, had I power, I should
+Pour the sweet milk of concord into hell,
+Uproar the universal peace, confound
+All unity on earth.",0.9744,0.43228
+macbeth,Macbeth,main,4,3,20,614,speech,MACDUFF,MACDUFF,"O Scotland, Scotland!",0.0,0.70315
+macbeth,Macbeth,main,4,3,20,615,speech,MALCOLM,MALCOLM,"If such a one be fit to govern, speak.
+I am as I have spoken.",0.6124,-0.01144
+macbeth,Macbeth,main,4,3,20,616,speech,MACDUFF,MACDUFF,"Fit to govern?
+No, not to live. —O nation miserable,
+With an untitled tyrant bloody-sceptered,
+When shalt thou see thy wholesome days again,
+Since that the truest issue of thy throne
+By his own interdiction stands accursed,
+And does blaspheme his breed? —Thy royal father
+Was a most sainted king. The queen that bore thee,
+Oftener upon her knees than on her feet,
+Died every day she lived. Fare thee well!
+These evils thou repeat’st upon thyself
+Have banished me from Scotland. —O my breast,
+Thy hope ends here!",-0.5207,-0.8574
+macbeth,Macbeth,main,4,3,20,617,speech,MALCOLM,MALCOLM,"Macduff, this noble passion,
+Child of integrity, hath from my soul
+Wiped the black scruples, reconciled my thoughts
+To thy good truth and honor. Devilish Macbeth
+By many of these trains hath sought to win me
+Into his power, and modest wisdom plucks me
+From overcredulous haste. But God above
+Deal between thee and me, for even now
+I put myself to thy direction and
+Unspeak mine own detraction, here abjure
+The taints and blames I laid upon myself,
+For strangers to my nature. I am yet
+Unknown to woman, never was forsworn,
+Scarcely have coveted what was mine own,
+At no time broke my faith, would not betray
+The devil to his fellow, and delight
+No less in truth than life. My first false speaking
+Was this upon myself. What I am truly,
+Is thine and my poor country’s to command.
+Whither indeed, before thy here-approach,
+Old Siward, with ten thousand warlike men,
+Already at a point, was setting forth.
+Now we’ll together, and the chance of goodness
+Be like our warranted quarrel! Why are you silent?",0.9793,-0.52212
+macbeth,Macbeth,main,4,3,20,618,speech,MACDUFF,MACDUFF,"Such welcome and unwelcome things at once
+‘Tis hard to reconcile.",-0.1027,-0.48616
+macbeth,Macbeth,main,4,3,20,619,stage_direction,,,A DOCTOR enters.,0.0,0.00711
+macbeth,Macbeth,main,4,3,20,620,speech,MALCOLM,MALCOLM,"Well, more anon.—Comes the king forth, I pray you?",0.2732,0.30167
+macbeth,Macbeth,main,4,3,20,621,speech,DOCTOR,DOCTOR,"Ay, sir; there are a crew of wretched souls
+That stay his cure. Their malady convinces
+The great assay of art, but at his touch—
+Such sanctity hath heaven given his hand—
+They presently amend.",-0.2846,-0.54121
+macbeth,Macbeth,main,4,3,20,622,speech,MALCOLM,MALCOLM,"I thank you, doctor.",0.3612,0.47798
+macbeth,Macbeth,main,4,3,20,623,stage_direction,,,The DOCTOR exits.,0.0,0.00969
+macbeth,Macbeth,main,4,3,20,624,speech,MACDUFF,MACDUFF,What’s the disease he means?,0.0,-0.02322
+macbeth,Macbeth,main,4,3,20,625,speech,MALCOLM,MALCOLM,"‘Tis called the evil.
+A most miraculous work in this good king,
+Which often since my here-remain in England
+I have seen him do. How he solicits heaven,
+Himself best knows, but strangely visited people,
+All swoll’n and ulcerous, pitiful to the eye,
+The mere despair of surgery, he cures,
+Hanging a golden stamp about their necks,
+Put on with holy prayers. And, ’tis spoken,
+To the succeeding royalty he leaves
+The healing benediction. With this strange virtue,
+He hath a heavenly gift of prophecy,
+And sundry blessings hang about his throne,
+That speak him full of grace.",0.9425,0.04208
+macbeth,Macbeth,main,4,3,20,626,stage_direction,,,ROSS enters.,0.0,0.00964
+macbeth,Macbeth,main,4,3,20,627,speech,MACDUFF,MACDUFF,"See, who comes here?",0.0,0.00929
+macbeth,Macbeth,main,4,3,20,628,speech,MALCOLM,MALCOLM,"My countryman, but yet I know him not.",0.1901,-0.39359
+macbeth,Macbeth,main,4,3,20,629,speech,MACDUFF,MACDUFF,"My ever-gentle cousin, welcome hither.",0.7184,0.62458
+macbeth,Macbeth,main,4,3,20,630,speech,MALCOLM,MALCOLM,"I know him now.—Good God, betimes remove
+The means that makes us strangers!",0.6114,0.68899
+macbeth,Macbeth,main,4,3,20,631,speech,ROSS,ROSS,"Sir, amen.",0.0,0.30765
+macbeth,Macbeth,main,4,3,20,632,speech,MACDUFF,MACDUFF,Stands Scotland where it did?,0.0,-0.00527
+macbeth,Macbeth,main,4,3,20,633,speech,ROSS,ROSS,"Alas, poor country!
+Almost afraid to know itself. It cannot
+Be called our mother, but our grave, where nothing,
+But who knows nothing, is once seen to smile;
+Where sighs and groans and shrieks that rend the air
+Are made, not marked; where violent sorrow seems
+A modern ecstasy. The dead man’s knell
+Is there scarce asked for who, and good men’s lives
+Expire before the flowers in their caps,
+Dying or ere they sicken.",-0.9891,-0.84726
+macbeth,Macbeth,main,4,3,20,634,speech,MACDUFF,MACDUFF,"Oh, relation
+Too nice and yet too true!",0.4753,-0.41568
+macbeth,Macbeth,main,4,3,20,635,speech,MALCOLM,MALCOLM,What’s the newest grief?,-0.5423,-0.05474
+macbeth,Macbeth,main,4,3,20,636,speech,ROSS,ROSS,"That of an hour’s age doth hiss the speaker.
+Each minute teems a new one.",-0.7906,-0.03922
+macbeth,Macbeth,main,4,3,20,637,speech,MACDUFF,MACDUFF,How does my wife?,0.0,-0.02937
+macbeth,Macbeth,main,4,3,20,638,speech,ROSS,ROSS,"Why, well.",0.2732,0.44125
+macbeth,Macbeth,main,4,3,20,639,speech,MACDUFF,MACDUFF,And all my children?,0.0,-0.49584
+macbeth,Macbeth,main,4,3,20,640,speech,ROSS,ROSS,Well too.,0.2732,0.20557
+macbeth,Macbeth,main,4,3,20,641,speech,MACDUFF,MACDUFF,The tyrant has not battered at their peace?,0.0,-0.34677
+macbeth,Macbeth,main,4,3,20,642,speech,ROSS,ROSS,"No, they were well at peace when I did leave ‘em.",0.5423,-0.13544
+macbeth,Macbeth,main,4,3,20,643,speech,MACDUFF,MACDUFF,Be not a niggard of your speech. How goes ’t?,0.0,-0.5087
+macbeth,Macbeth,main,4,3,20,644,speech,ROSS,ROSS,"When I came hither to transport the tidings,
+Which I have heavily borne, there ran a rumor
+Of many worthy fellows that were out;
+Which was to my belief witnessed the rather
+For that I saw the tyrant’s power afoot.
+Now is the time of help. Your eye in Scotland
+Would create soldiers, make our women fight,
+To doff their dire distresses.",0.7675,0.45343
+macbeth,Macbeth,main,4,3,20,645,speech,MALCOLM,MALCOLM,"Be ’t their comfort
+We are coming thither. Gracious England hath
+Lent us good Siward and ten thousand men;
+An older and a better soldier none
+That Christendom gives out.",0.8578,0.25264
+macbeth,Macbeth,main,4,3,20,646,speech,ROSS,ROSS,"Would I could answer
+This comfort with the like. But I have words
+That would be howled out in the desert air,
+Where hearing should not latch them.",0.6108,-0.70146
+macbeth,Macbeth,main,4,3,20,647,speech,MACDUFF,MACDUFF,"What concern they?
+The general cause, or is it a fee-grief
+Due to some single breast?",-0.5514,-0.21022
+macbeth,Macbeth,main,4,3,20,648,speech,ROSS,ROSS,"No mind that’s honest
+But in it shares some woe, though the main part
+Pertains to you alone.",-0.6429,-0.54994
+macbeth,Macbeth,main,4,3,20,649,speech,MACDUFF,MACDUFF,"If it be mine,
+Keep it not from me. Quickly let me have it.",0.0,-0.50975
+macbeth,Macbeth,main,4,3,20,650,speech,ROSS,ROSS,"Let not your ears despise my tongue forever,
+Which shall possess them with the heaviest sound
+That ever yet they heard.",-0.7003,-0.45558
+macbeth,Macbeth,main,4,3,20,651,speech,MACDUFF,MACDUFF,Hum! I guess at it.,0.0,0.44154
+macbeth,Macbeth,main,4,3,20,652,speech,ROSS,ROSS,"Your castle is surprised, your wife and babes
+Savagely slaughtered. To relate the manner,
+Were, on the quarry of these murdered deer
+To add the death of you.",-0.9169,-0.8472
+macbeth,Macbeth,main,4,3,20,653,speech,MALCOLM,MALCOLM,"Merciful heaven!
+What, man! Ne’er pull your hat upon your brows.
+Give sorrow words. The grief that does not speak
+Whispers the o’erfraught heart and bids it break.",-0.6114,0.82301
+macbeth,Macbeth,main,4,3,20,654,speech,MACDUFF,MACDUFF,My children too?,0.0,-0.41728
+macbeth,Macbeth,main,4,3,20,655,speech,ROSS,ROSS,"Wife, children, servants, all that could be found.",0.0,0.61856
+macbeth,Macbeth,main,4,3,20,656,speech,MACDUFF,MACDUFF,"And I must be from thence!
+My wife killed too?",-0.6996,-0.69655
+macbeth,Macbeth,main,4,3,20,657,speech,ROSS,ROSS,I have said.,0.0,-0.1372
+macbeth,Macbeth,main,4,3,20,658,speech,MALCOLM,MALCOLM,"Be comforted.
+Let’s make us med’cines of our great revenge,
+To cure this deadly grief.",-0.6705,-0.47353
+macbeth,Macbeth,main,4,3,20,659,speech,MACDUFF,MACDUFF,"He has no children. All my pretty ones?
+Did you say all? O hell-kite! All?
+What, all my pretty chickens and their dam
+At one fell swoop?",-0.9072,-0.89955
+macbeth,Macbeth,main,4,3,20,660,speech,MALCOLM,MALCOLM,Dispute it like a man.,-0.0258,0.06863
+macbeth,Macbeth,main,4,3,20,661,speech,MACDUFF,MACDUFF,"I shall do so,
+But I must also feel it as a man.
+I cannot but remember such things were
+That were most precious to me. Did heaven look on,
+And would not take their part? Sinful Macduff,
+They were all struck for thee! Naught that I am,
+Not for their own demerits, but for mine,
+Fell slaughter on their souls. Heaven rest them now.",-0.116,-0.85302
+macbeth,Macbeth,main,4,3,20,662,speech,MALCOLM,MALCOLM,"Be this the whetstone of your sword. Let grief
+Convert to anger. Blunt not the heart, enrage it.",-0.743,-0.83566
+macbeth,Macbeth,main,4,3,20,663,speech,MACDUFF,MACDUFF,"Oh, I could play the woman with mine eyes
+And braggart with my tongue! But, gentle heavens,
+Cut short all intermission. Front to front
+Bring thou this fiend of Scotland and myself.
+Within my sword’s length set him; if he ’scape,
+Heaven forgive him too.",0.629,0.77612
+macbeth,Macbeth,main,4,3,20,664,speech,MALCOLM,MALCOLM,"This tune goes manly.
+Come, go we to the king. Our power is ready;
+Our lack is nothing but our leave. Macbeth
+Is ripe for shaking, and the powers above
+Put on their instruments. Receive what cheer you may.
+The night is long that never finds the day.",0.8402,0.59401
+macbeth,Macbeth,main,4,3,20,665,stage_direction,,,ALL exit.,0.0,-0.27456
+macbeth,Macbeth,main,5,1,21,666,stage_direction,,,A DOCTOR and a waiting GENTLEWOMAN enter.,0.0,0.01569
+macbeth,Macbeth,main,5,1,21,667,speech,DOCTOR,DOCTOR,"I have two nights watched with you but can perceive no
+truth in your report. When was it she last walked?",0.0,-0.06632
+macbeth,Macbeth,main,5,1,21,668,speech,GENTLEWOMAN,GENTLEWOMAN,"Since his majesty went into the field, I have seen her
+rise from her bed, throw her nightgown upon her, unlock
+her closet, take forth paper, fold it, write upon ’t,
+read it, afterwards seal it, and again return to bed;
+yet all this while in a most fast sleep.",-0.5994,-0.1215
+macbeth,Macbeth,main,5,1,21,669,speech,DOCTOR,DOCTOR,"A great perturbation in nature, to receive at once the
+benefit of sleep, and do the effects of watching. In
+this slumbery agitation, besides her walking and other
+actual performances, what, at any time, have you heard
+her say?",0.0,-0.45658
+macbeth,Macbeth,main,5,1,21,670,speech,GENTLEWOMAN,GENTLEWOMAN,"That, sir, which I will not report after her.",0.2144,-0.56219
+macbeth,Macbeth,main,5,1,21,671,speech,DOCTOR,DOCTOR,"You may to me, and ’tis most meet you should.",0.0,0.30954
+macbeth,Macbeth,main,5,1,21,672,speech,GENTLEWOMAN,GENTLEWOMAN,"Neither to you nor any one, having no witness to
+confirm my speech.",0.0,-0.01886
+macbeth,Macbeth,main,5,1,21,673,stage_direction,,,"LADY MACBETH enters, holding a candle.",0.0,0.01039
+macbeth,Macbeth,main,5,1,21,674,speech,GENTLEWOMAN,GENTLEWOMAN,"Lo you, here she comes. This is her very guise; and,
+upon my life, fast asleep. Observe her, stand close.",-0.126,0.63017
+macbeth,Macbeth,main,5,1,21,675,speech,DOCTOR,DOCTOR,How came she by that light?,0.0,-0.01858
+macbeth,Macbeth,main,5,1,21,676,speech,GENTLEWOMAN,GENTLEWOMAN,"Why, it stood by her. She has light by her continually.
+‘Tis her command.",0.0,0.20254
+macbeth,Macbeth,main,5,1,21,677,speech,DOCTOR,DOCTOR,You see her eyes are open.,0.0,0.38241
+macbeth,Macbeth,main,5,1,21,678,speech,GENTLEWOMAN,GENTLEWOMAN,"Ay, but their sense is shut.",0.2144,-0.41707
+macbeth,Macbeth,main,5,1,21,679,speech,DOCTOR,DOCTOR,"What is it she does now? Look, how she rubs her hands.",0.0,-0.44107
+macbeth,Macbeth,main,5,1,21,680,speech,GENTLEWOMAN,GENTLEWOMAN,"It is an accustomed action with her to seem thus
+washing her hands. I have known her continue in this a
+quarter of an hour.",0.0,0.41193
+macbeth,Macbeth,main,5,1,21,681,speech,LADY MACBETH,LADY MACBETH,Yet here’s a spot.,0.0,-0.3709
+macbeth,Macbeth,main,5,1,21,682,speech,DOCTOR,DOCTOR,"Hark! She speaks. I will set down what comes from her,
+to satisfy my remembrance the more strongly.",0.0,0.45576
+macbeth,Macbeth,main,5,1,21,683,speech,LADY MACBETH,LADY MACBETH,"Out, damned spot! Out, I say! —One, two. Why, then,
+’tis time to do ’t. Hell is murky! —Fie, my lord, fie! A
+soldier, and afeard? What need we fear who knows it,
+when none can call our power to account?— Yet who would
+have thought the old man to have had so much blood in
+him.",-0.9023,0.11247
+macbeth,Macbeth,main,5,1,21,684,speech,DOCTOR,DOCTOR,Do you mark that?,0.0,-0.03687
+macbeth,Macbeth,main,5,1,21,685,speech,LADY MACBETH,LADY MACBETH,"The thane of Fife had a wife. Where is she now?—What,
+will these hands ne’er be clean?—No more o’ that, my
+lord, no more o’ that. You mar all with this starting.",-0.8227,-0.83389
+macbeth,Macbeth,main,5,1,21,686,speech,DOCTOR,DOCTOR,"Go to, go to. You have known what you should not.",0.0,-0.15795
+macbeth,Macbeth,main,5,1,21,687,speech,GENTLEWOMAN,GENTLEWOMAN,"She has spoke what she should not, I am sure of that.
+Heaven knows what she has known.",0.6808,-0.15095
+macbeth,Macbeth,main,5,1,21,688,speech,LADY MACBETH,LADY MACBETH,"Here’s the smell of the blood still. All the perfumes
+of Arabia will not sweeten this little hand. Oh, Oh, Oh!",0.4937,-0.44259
+macbeth,Macbeth,main,5,1,21,689,speech,DOCTOR,DOCTOR,What a sigh is there! The heart is sorely charged.,0.2942,-0.78441
+macbeth,Macbeth,main,5,1,21,690,speech,GENTLEWOMAN,GENTLEWOMAN,"I would not have such a heart in my bosom for the
+dignity of the whole body.",0.7906,-0.42456
+macbeth,Macbeth,main,5,1,21,691,speech,DOCTOR,DOCTOR,"Well, well, well.",0.6486,0.37907
+macbeth,Macbeth,main,5,1,21,692,speech,GENTLEWOMAN,GENTLEWOMAN,"Pray God it be, sir.",0.6996,0.54267
+macbeth,Macbeth,main,5,1,21,693,speech,DOCTOR,DOCTOR,"This disease is beyond my practice. Yet I have known
+those which have walked in their sleep who have died
+holily in their beds.",-0.1719,-0.46655
+macbeth,Macbeth,main,5,1,21,694,speech,LADY MACBETH,LADY MACBETH,"Wash your hands. Put on your nightgown. Look not so
+pale.—I tell you yet again, Banquo’s buried; he cannot
+come out on ’s grave.",-0.3818,-0.84323
+macbeth,Macbeth,main,5,1,21,695,speech,DOCTOR,DOCTOR,Even so?,0.4215,-0.0502
+macbeth,Macbeth,main,5,1,21,696,speech,LADY MACBETH,LADY MACBETH,"To bed, to bed. There’s knocking at the gate. Come,
+come, come, come. Give me your hand. What’s done cannot
+be undone.—To bed, to bed, to bed!",0.5411,0.21424
+macbeth,Macbeth,main,5,1,21,697,stage_direction,,,LADY MACBETH exits.,0.0,0.01359
+macbeth,Macbeth,main,5,1,21,698,speech,DOCTOR,DOCTOR,Will she go now to bed?,0.0,-0.06291
+macbeth,Macbeth,main,5,1,21,699,speech,GENTLEWOMAN,GENTLEWOMAN,Directly.,0.0,0.06989
+macbeth,Macbeth,main,5,1,21,700,speech,DOCTOR,DOCTOR,"Foul whisp’rings are abroad. Unnatural deeds
+Do breed unnatural troubles. Infected minds
+To their deaf pillows will discharge their secrets.
+More needs she the divine than the physician.
+God, God forgive us all! Look after her,
+Remove from her the means of all annoyance,
+And still keep eyes upon her. So, good night.
+My mind she has mated, and amazed my sight.
+I think, but dare not speak.",-0.6756,0.5579
+macbeth,Macbeth,main,5,1,21,701,speech,GENTLEWOMAN,GENTLEWOMAN,"Good night, good doctor.",0.7003,0.45912
+macbeth,Macbeth,main,5,1,21,702,stage_direction,,,They exit.,0.0,-0.13698
+macbeth,Macbeth,main,5,2,22,703,stage_direction,,,"MENTEITH, CAITHNESS, ANGUS, LENNOX, and soldiers enter along with a drummer and flag.",0.0,0.05734
+macbeth,Macbeth,main,5,2,22,704,speech,MENTEITH,MENTEITH,"The English power is near, led on by Malcolm,
+His uncle Siward and the good Macduff.
+Revenges burn in them, for their dear causes
+Would to the bleeding and the grim alarm
+Excite the mortified man.",-0.8442,-0.37911
+macbeth,Macbeth,main,5,2,22,705,speech,ANGUS,ANGUS,"Near Birnam Wood
+Shall we well meet them; that way are they coming.",0.0,0.36582
+macbeth,Macbeth,main,5,2,22,706,speech,CAITHNESS,CAITHNESS,Who knows if Donalbain be with his brother?,0.0,-0.03217
+macbeth,Macbeth,main,5,2,22,707,speech,LENNOX,LENNOX,"For certain, sir, he is not. I have a file
+Of all the gentry. There is Siward’s son,
+And many unrough youths that even now
+Protest their first of manhood.",0.5994,0.2486
+macbeth,Macbeth,main,5,2,22,708,speech,MENTEITH,MENTEITH,What does the tyrant?,0.0,-0.01379
+macbeth,Macbeth,main,5,2,22,709,speech,CAITHNESS,CAITHNESS,"Great Dunsinane he strongly fortifies.
+Some say he’s mad, others that lesser hate him
+Do call it valiant fury. But, for certain,
+He cannot buckle his distempered cause
+Within the belt of rule.",-0.7152,0.4265
+macbeth,Macbeth,main,5,2,22,710,speech,ANGUS,ANGUS,"Now does he feel
+His secret murders sticking on his hands.
+Now minutely revolts upbraid his faith-breach.
+Those he commands move only in command,
+Nothing in love. Now does he feel his title
+Hang loose about him, like a giant’s robe
+Upon a dwarfish thief.",-0.7506,-0.54327
+macbeth,Macbeth,main,5,2,22,711,speech,MENTEITH,MENTEITH,"Who then shall blame
+His pestered senses to recoil and start,
+When all that is within him does condemn
+Itself for being there?",-0.7717,-0.18791
+macbeth,Macbeth,main,5,2,22,712,speech,CAITHNESS,CAITHNESS,"Well, march we on,
+To give obedience where ’tis truly owed.
+Meet we the medicine of the sickly weal,
+And with him pour we in our country’s purge
+Each drop of us.",0.6369,0.48478
+macbeth,Macbeth,main,5,2,22,713,speech,LENNOX,LENNOX,"Or so much as it needs,
+To dew the sovereign flower and drown the weeds.
+Make we our march towards Birnam.",-0.5719,-0.17293
+macbeth,Macbeth,main,5,2,22,714,stage_direction,,,"They exit, marching.",0.0,0.01889
+macbeth,Macbeth,main,5,3,23,715,stage_direction,,,"MACBETH, a DOCTOR, and attendants enter.",0.0,0.07387
+macbeth,Macbeth,main,5,3,23,716,speech,MACBETH,MACBETH,"Bring me no more reports. Let them fly all.
+Till Birnam Wood remove to Dunsinane
+I cannot taint with fear. What’s the boy Malcolm?
+Was he not born of woman? The spirits that know
+All mortal consequences have pronounced me thus:
+“Fear not, Macbeth. No man that’s born of woman
+Shall e’er have power upon thee.” Then fly, false
+thanes,
+And mingle with the English epicures.
+The mind I sway by and the heart I bear
+Shall never sag with doubt nor shake with fear.",0.6786,-0.24973
+macbeth,Macbeth,main,5,3,23,717,stage_direction,,,A SERVANT enters.,0.0,0.01004
+macbeth,Macbeth,main,5,3,23,718,speech,MACBETH,MACBETH,"The devil damn thee black, thou cream-faced loon!
+Where got’st thou that goose look?",-0.8883,0.33402
+macbeth,Macbeth,main,5,3,23,719,speech,SERVANT,SERVANT,There is ten thousand—,0.0,-0.06881
+macbeth,Macbeth,main,5,3,23,720,speech,MACBETH,MACBETH,"Geese, villain?",-0.4404,-0.02708
+macbeth,Macbeth,main,5,3,23,721,speech,SERVANT,SERVANT,"Soldiers, sir.",0.0,0.29142
+macbeth,Macbeth,main,5,3,23,722,speech,MACBETH,MACBETH,"Go, prick thy face and over-red thy fear,
+Thou lily-livered boy. What soldiers, patch?
+Death of thy soul! Those linen cheeks of thine
+Are counselors to fear. What soldiers, whey-face?",-0.8783,-0.57275
+macbeth,Macbeth,main,5,3,23,723,speech,SERVANT,SERVANT,"The English force, so please you.",0.0,0.24955
+macbeth,Macbeth,main,5,3,23,724,speech,MACBETH,MACBETH,Take thy face hence.,0.0,0.07356
+macbeth,Macbeth,main,5,3,23,725,stage_direction,,,The SERVANT exits.,0.0,0.0105
+macbeth,Macbeth,main,5,3,23,726,speech,MACBETH,MACBETH,"Seyton!—I am sick at heart,
+When I behold—Seyton, I say!— This push
+Will cheer me ever, or disseat me now.
+I have lived long enough. My way of life
+Is fall’n into the sere, the yellow leaf,
+And that which should accompany old age,
+As honor, love, obedience, troops of friends,
+I must not look to have, but, in their stead,
+Curses, not loud but deep, mouth-honor, breath
+Which the poor heart would fain deny and dare not.
+Seyton!",0.9083,0.82791
+macbeth,Macbeth,main,5,3,23,727,stage_direction,,,SEYTON enters.,0.0,0.01343
+macbeth,Macbeth,main,5,3,23,728,speech,SEYTON,SEYTON,What’s your gracious pleasure?,0.6705,-0.00019
+macbeth,Macbeth,main,5,3,23,729,speech,MACBETH,MACBETH,What news more?,0.0,-0.06225
+macbeth,Macbeth,main,5,3,23,730,speech,SEYTON,SEYTON,"All is confirmed, my lord, which was reported.",0.0,0.57546
+macbeth,Macbeth,main,5,3,23,731,speech,MACBETH,MACBETH,"I’ll fight till from my bones my flesh be hacked.
+Give me my armor.",-0.3818,-0.04615
+macbeth,Macbeth,main,5,3,23,732,speech,SEYTON,SEYTON,‘Tis not needed yet.,0.0,-0.46413
+macbeth,Macbeth,main,5,3,23,733,speech,MACBETH,MACBETH,"I’ll put it on.
+Send out more horses. Skirr the country round.
+Hang those that talk of fear. Give me mine armor.
+How does your patient, doctor?",-0.4939,-0.3268
+macbeth,Macbeth,main,5,3,23,734,speech,DOCTOR,DOCTOR,"Not so sick, my lord,
+As she is troubled with thick-coming fancies
+That keep her from her rest.",-0.202,-0.50663
+macbeth,Macbeth,main,5,3,23,735,speech,MACBETH,MACBETH,"Cure her of that.
+Canst thou not minister to a mind diseased,
+Pluck from the memory a rooted sorrow,
+Raze out the written troubles of the brain
+And with some sweet oblivious antidote
+Cleanse the stuffed bosom of that perilous stuff
+Which weighs upon the heart?",0.0,-0.59876
+macbeth,Macbeth,main,5,3,23,736,speech,DOCTOR,DOCTOR,"Therein the patient
+Must minister to himself.",0.4228,0.11068
+macbeth,Macbeth,main,5,3,23,737,speech,MACBETH,MACBETH,"Throw physic to the dogs; I’ll none of it.
+Come, put mine armor on. Give me my staff.
+Seyton, send out.— Doctor, the thanes fly from me.
+Come, sir, dispatch.— If thou couldst, doctor, cast
+The water of my land, find her disease,
+And purge it to a sound and pristine health,
+I would applaud thee to the very echo,
+That should applaud again.— Pull ’t off, I say.—
+What rhubarb, senna, or what purgative drug,
+Would scour these English hence? Hear’st thou of them?",0.6868,0.39312
+macbeth,Macbeth,main,5,3,23,738,speech,DOCTOR,DOCTOR,"Ay, my good lord. Your royal preparation
+Makes us hear something.",0.4939,0.53402
+macbeth,Macbeth,main,5,3,23,739,speech,MACBETH,MACBETH,"Bring it after me.
+I will not be afraid of death and bane,
+Till Birnam Forest come to Dunsinane.",-0.8225,0.32908
+macbeth,Macbeth,main,5,3,23,740,speech,DOCTOR,DOCTOR,"(aside) Were I from Dunsinane away and clear,
+Profit again should hardly draw me here.",0.2732,-0.63432
+macbeth,Macbeth,main,5,3,23,741,stage_direction,,,They exit.,0.0,-0.27456
+macbeth,Macbeth,main,5,4,24,742,stage_direction,,,"MALCOLM, Old SIWARD, YOUNG SIWARD, MACDUFF, MENTEITH, CAITHNESS, ANGUS, LENNOX, ROSS, and SOLDIERS enter marching, with a drummer and flag.",0.0,0.02907
+macbeth,Macbeth,main,5,4,24,743,speech,MALCOLM,MALCOLM,"Cousins, I hope the days are near at hand
+That chambers will be safe.",0.7003,-0.26561
+macbeth,Macbeth,main,5,4,24,744,speech,MENTEITH,MENTEITH,We doubt it nothing.,-0.3612,-0.40987
+macbeth,Macbeth,main,5,4,24,745,speech,SIWARD,SIWARD,What wood is this before us?,0.0,-0.02804
+macbeth,Macbeth,main,5,4,24,746,speech,MENTEITH,MENTEITH,The wood of Birnam.,0.0,0.0283
+macbeth,Macbeth,main,5,4,24,747,speech,MALCOLM,MALCOLM,"Let every soldier hew him down a bough
+And bear ’t before him. Thereby shall we shadow
+The numbers of our host and make discovery
+Err in report of us.",-0.296,-0.01125
+macbeth,Macbeth,main,5,4,24,748,speech,SOLDIERS,SOLDIERS,It shall be done.,0.0,0.18877
+macbeth,Macbeth,main,5,4,24,749,speech,SIWARD,SIWARD,"We learn no other but the confident tyrant
+Keeps still in Dunsinane and will endure
+Our setting down before ’t.",0.0,-0.39198
+macbeth,Macbeth,main,5,4,24,750,speech,MALCOLM,MALCOLM,"‘Tis his main hope:
+For, where there is advantage to be given,
+Both more and less have given him the revolt,
+And none serve with him but constrainèd things
+Whose hearts are absent too.",0.2732,-0.74665
+macbeth,Macbeth,main,5,4,24,751,speech,MACDUFF,MACDUFF,"Let our just censures
+Attend the true event, and put we on
+Industrious soldiership.",0.3612,-0.47608
+macbeth,Macbeth,main,5,4,24,752,speech,SIWARD,SIWARD,"The time approaches
+That will with due decision make us know
+What we shall say we have and what we owe.
+Thoughts speculative their unsure hopes relate,
+But certain issue strokes must arbitrate.
+Towards which, advance the war.",-0.7868,-0.53705
+macbeth,Macbeth,main,5,4,24,753,stage_direction,,,"They exit, marching.",0.0,0.01889
+macbeth,Macbeth,main,5,5,25,754,stage_direction,,,"MACBETH, SEYTON, and SOLDIERS enter, with a drummer and flag.",0.0,0.1253
+macbeth,Macbeth,main,5,5,25,755,speech,MACBETH,MACBETH,"Hang out our banners on the outward walls.
+The cry is still “They come!” Our castle’s strength
+Will laugh a siege to scorn. Here let them lie
+Till famine and the ague eat them up.
+Were they not forced with those that should be ours,
+We might have met them dareful, beard to beard,
+And beat them backward home.",-0.7345,0.04141
+macbeth,Macbeth,main,5,5,25,756,speech,MACBETH,MACBETH,What is that noise?,0.0,-0.07186
+macbeth,Macbeth,main,5,5,25,757,speech,SEYTON,SEYTON,"It is the cry of women, my good lord.",-0.0516,0.69446
+macbeth,Macbeth,main,5,5,25,758,stage_direction,,,SEYTON exits.,0.0,0.00297
+macbeth,Macbeth,main,5,5,25,759,speech,MACBETH,MACBETH,"I have almost forgot the taste of fears.
+The time has been my senses would have cooled
+To hear a night-shriek, and my fell of hair
+Would at a dismal treatise rouse and stir
+As life were in ’t. I have supped full with horrors.
+Direness, familiar to my slaughterous thoughts
+Cannot once start me.",-0.9483,-0.80871
+macbeth,Macbeth,main,5,5,25,760,stage_direction,,,SEYTON comes back in.,0.0,0.04098
+macbeth,Macbeth,main,5,5,25,761,speech,MACBETH,MACBETH,Wherefore was that cry?,-0.4767,-0.33844
+macbeth,Macbeth,main,5,5,25,762,speech,SEYTON,SEYTON,"The queen, my lord, is dead.",-0.6486,-0.8582
+macbeth,Macbeth,main,5,5,25,763,speech,MACBETH,MACBETH,"She should have died hereafter.
+There would have been a time for such a word.
+Tomorrow, and tomorrow, and tomorrow,
+Creeps in this petty pace from day to day
+To the last syllable of recorded time,
+And all our yesterdays have lighted fools
+The way to dusty death. Out, out, brief candle!
+Life’s but a walking shadow, a poor player
+That struts and frets his hour upon the stage
+And then is heard no more. It is a tale
+Told by an idiot, full of sound and fury,
+Signifying nothing.",-0.9552,-0.76503
+macbeth,Macbeth,main,5,5,25,764,stage_direction,,,A MESSENGER enters.,0.0,0.02267
+macbeth,Macbeth,main,5,5,25,765,speech,MACBETH,MACBETH,"Thou comest to use
+Thy tongue; thy story quickly.",0.0,0.41977
+macbeth,Macbeth,main,5,5,25,766,speech,MESSENGER,MESSENGER,"Gracious my lord,
+I should report that which I say I saw,
+But know not how to do ’t.",0.3506,-0.80901
+macbeth,Macbeth,main,5,5,25,767,speech,MACBETH,MACBETH,"Well, say, sir.",0.2732,0.2183
+macbeth,Macbeth,main,5,5,25,768,speech,MESSENGER,MESSENGER,"As I did stand my watch upon the hill,
+I looked toward Birnam, and anon methought
+The wood began to move.",0.0,-0.00969
+macbeth,Macbeth,main,5,5,25,769,speech,MACBETH,MACBETH,Liar and slave!,-0.8016,0.64363
+macbeth,Macbeth,main,5,5,25,770,speech,MESSENGER,MESSENGER,"Let me endure your wrath, if ’t be not so.
+Within this three mile may you see it coming;
+I say, a moving grove.",-0.4464,-0.17078
+macbeth,Macbeth,main,5,5,25,771,speech,MACBETH,MACBETH,"If thou speak’st false,
+Upon the next tree shall thou hang alive
+Till famine cling thee. If thy speech be sooth,
+I care not if thou dost for me as much.
+I pull in resolution and begin
+To doubt th’ equivocation of the fiend
+That lies like truth. “Fear not, till Birnam wood
+Do come to Dunsinane”; and now a wood
+Comes toward Dunsinane. —Arm, arm, and out!—
+If this which he avouches does appear,
+There is nor flying hence nor tarrying here.
+I ‘gin to be aweary of the sun,
+And wish th’ estate o’ th’ world were now undone.—
+Ring the alarum-bell!—Blow, wind! Come, wrack!
+At least we’ll die with harness on our back.",-0.9711,-0.84923
+macbeth,Macbeth,main,5,5,25,772,stage_direction,,,They exit.,0.0,-0.27456
+macbeth,Macbeth,main,5,6,26,773,stage_direction,,,"MALCOLM, Old SIWARD, MACDUFF, and their army enter with a drummer and flag and carrying branches.",0.0,0.10505
+macbeth,Macbeth,main,5,6,26,774,speech,MALCOLM,MALCOLM,"Now near enough. Your leafy screens throw down,
+And show like those you are.— You, worthy uncle,
+Shall, with my cousin, your right-noble son,
+Lead our first battle. Worthy Macduff and we
+Shall take upon ’s what else remains to do,
+According to our order.",0.6369,0.5546
+macbeth,Macbeth,main,5,6,26,775,speech,SIWARD,SIWARD,"Fare you well.
+Do we but find the tyrant’s power tonight,
+Let us be beaten if we cannot fight.",-0.2302,-0.49268
+macbeth,Macbeth,main,5,6,26,776,speech,MACDUFF,MACDUFF,"Make all our trumpets speak; give them all breath,
+Those clamorous harbingers of blood and death.",-0.7269,0.13347
+macbeth,Macbeth,main,5,6,26,777,stage_direction,,,They exit.,0.0,-0.27456
+macbeth,Macbeth,main,5,7,27,778,stage_direction,,,Trumpets. MACBETH enters.,0.0,0.02423
+macbeth,Macbeth,main,5,7,27,779,speech,MACBETH,MACBETH,"They have tied me to a stake. I cannot fly,
+But, bearlike, I must fight the course. What’s he
+That was not born of woman? Such a one
+Am I to fear, or none.",-0.6705,-0.4621
+macbeth,Macbeth,main,5,7,27,780,stage_direction,,,YOUNG SIWARD enters.,0.0,0.02162
+macbeth,Macbeth,main,5,7,27,781,speech,YOUNG SIWARD,YOUNG SIWARD,What is thy name?,0.0,-0.02313
+macbeth,Macbeth,main,5,7,27,782,speech,MACBETH,MACBETH,Thou ‘lt be afraid to hear it.,0.0,-0.54079
+macbeth,Macbeth,main,5,7,27,783,speech,YOUNG SIWARD,YOUNG SIWARD,"No, though thou call’st thyself a hotter name
+Than any is in hell.",-0.8832,-0.43475
+macbeth,Macbeth,main,5,7,27,784,speech,MACBETH,MACBETH,My name’s Macbeth.,0.0,0.10471
+macbeth,Macbeth,main,5,7,27,785,speech,YOUNG SIWARD,YOUNG SIWARD,"The devil himself could not pronounce a title
+More hateful to mine ear.",-0.8442,-0.48599
+macbeth,Macbeth,main,5,7,27,786,speech,MACBETH,MACBETH,"No, nor more fearful.",-0.5413,-0.37127
+macbeth,Macbeth,main,5,7,27,787,speech,YOUNG SIWARD,YOUNG SIWARD,"Thou liest, abhorrèd tyrant. With my sword
+I’ll prove the lie thou speak’st.",-0.7906,-0.66989
+macbeth,Macbeth,main,5,7,27,788,stage_direction,,,They fight and YOUNG SIWARD is killed.,-0.7964,-0.22207
+macbeth,Macbeth,main,5,7,27,789,speech,MACBETH,MACBETH,"Thou wast born of woman.
+But swords I smile at, weapons laugh to scorn,
+Brandished by man that’s of a woman born.",0.5994,0.03002
+macbeth,Macbeth,main,5,7,27,790,stage_direction,,,MACBETH exits.,0.0,0.01462
+macbeth,Macbeth,main,5,7,27,791,stage_direction,,,Trumpets. MACDUFF enters.,0.0,0.01245
+macbeth,Macbeth,main,5,7,27,792,speech,MACDUFF,MACDUFF,"That way the noise is. Tyrant, show thy face!
+If thou beest slain, and with no stroke of mine,
+My wife and children’s ghosts will haunt me still.
+I cannot strike at wretched kerns, whose arms
+Are hired to bear their staves. Either thou, Macbeth,
+Or else my sword with an unbattered edge
+I sheathe again undeeded. There thou shouldst be;
+By this great clatter, one of the greatest note
+Seems bruited. Let me find him, Fortune,
+And more I beg not.",-0.8231,-0.04193
+macbeth,Macbeth,main,5,7,27,793,stage_direction,,,MACDUFF exits. Trumpets.,0.0,0.00961
+macbeth,Macbeth,main,5,7,27,794,stage_direction,,,MALCOLM and Old SIWARD enter.,0.0,0.10628
+macbeth,Macbeth,main,5,7,27,795,speech,SIWARD,SIWARD,"This way, my lord. The castle’s gently rendered.
+The tyrant’s people on both sides do fight,
+The noble thanes do bravely in the war,
+The day almost itself professes yours,
+And little is to do.",0.0987,0.33134
+macbeth,Macbeth,main,5,7,27,796,speech,MALCOLM,MALCOLM,"We have met with foes
+That strike beside us.",-0.6486,-0.44701
+macbeth,Macbeth,main,5,7,27,797,stage_direction,,,"Enter, sir, the castle.",0.0,0.15683
+macbeth,Macbeth,main,5,7,27,798,stage_direction,,,They exit. Trumpets.,0.0,-0.0314
+macbeth,Macbeth,main,5,8,28,799,stage_direction,,,MACBETH enters.,0.0,0.01361
+macbeth,Macbeth,main,5,8,28,800,speech,MACBETH,MACBETH,"Why should I play the Roman fool and die
+On mine own sword? Whiles I see lives, the gashes
+Do better upon them.",-0.7845,-0.55914
+macbeth,Macbeth,main,5,8,28,801,stage_direction,,,MACDUFF enters.,0.0,0.00743
+macbeth,Macbeth,main,5,8,28,802,speech,MACDUFF,MACDUFF,"Turn, hellhound, turn!",-0.7088,0.77106
+macbeth,Macbeth,main,5,8,28,803,speech,MACBETH,MACBETH,"Of all men else I have avoided thee.
+But get thee back. My soul is too much charged
+With blood of thine already.",-0.7783,-0.82013
+macbeth,Macbeth,main,5,8,28,804,speech,MACDUFF,MACDUFF,"I have no words.
+My voice is in my sword. Thou bloodier villain
+Than terms can give thee out!",-0.4199,0.20601
+macbeth,Macbeth,main,5,8,28,805,stage_direction,,,They fight.,-0.3818,0.10422
+macbeth,Macbeth,main,5,8,28,806,speech,MACBETH,MACBETH,"Thou losest labor.
+As easy mayst thou the intrenchant air
+With thy keen sword impress as make me bleed.
+Let fall thy blade on vulnerable crests;
+I bear a charmèd life, which must not yield
+To one of woman born.",-0.8807,-0.6231
+macbeth,Macbeth,main,5,8,28,807,speech,MACDUFF,MACDUFF,"Despair thy charm,
+And let the angel whom thou still hast served
+Tell thee, Macduff was from his mother’s womb
+Untimely ripped.",-0.7964,-0.59266
+macbeth,Macbeth,main,5,8,28,808,speech,MACBETH,MACBETH,"Accursèd be that tongue that tells me so,
+For it hath cowed my better part of man!
+And be these juggling fiends no more believed,
+That palter with us in a double sense,
+That keep the word of promise to our ear,
+And break it to our hope. I’ll not fight with thee.",-0.807,-0.6684
+macbeth,Macbeth,main,5,8,28,809,speech,MACDUFF,MACDUFF,"Then yield thee, coward,
+And live to be the show and gaze o’ th’ time.
+We’ll have thee, as our rarer monsters are,
+Painted on a pole, and underwrit,
+“Here may you see the tyrant.”",-0.5562,0.70385
+macbeth,Macbeth,main,5,8,28,810,speech,MACBETH,MACBETH,"I will not yield,
+To kiss the ground before young Malcolm’s feet,
+And to be baited with the rabble’s curse.
+Though Birnam Wood be come to Dunsinane,
+And thou opposed, being of no woman born,
+Yet I will try the last. Before my body
+I throw my warlike shield. Lay on, Macduff,
+And damned be him that first cries, “Hold, enough!”",-0.8619,0.27459
+macbeth,Macbeth,main,5,8,28,811,stage_direction,,,"They exit fighting. Trumpets. They reenter, still fighting, and MACBETH is killed. A trumpet sounds a call to retreat. Another trumpet sounds a call of victory. MALCOLM, Old SIWARD, ROSS, the other THANES, and SOLDIERS enter, with a drummer and flag.",-0.8271,-0.01183
+macbeth,Macbeth,main,5,8,28,812,speech,MALCOLM,MALCOLM,I would the friends we miss were safe arrived.,0.8442,0.16525
+macbeth,Macbeth,main,5,8,28,813,speech,SIWARD,SIWARD,"Some must go off. And yet, by these I see,
+So great a day as this is cheaply bought.",-0.4588,-0.46734
+macbeth,Macbeth,main,5,8,28,814,speech,MALCOLM,MALCOLM,"Macduff is missing, and your noble son.",0.2023,-0.44624
+macbeth,Macbeth,main,5,8,28,815,speech,ROSS,ROSS,"Your son, my lord, has paid a soldier’s debt.
+He only lived but till he was a man,
+The which no sooner had his prowess confirmed
+In the unshrinking station where he fought,
+But like a man he died.",-0.6369,0.60187
+macbeth,Macbeth,main,5,8,28,816,speech,SIWARD,SIWARD,Then he is dead?,-0.6486,-0.33419
+macbeth,Macbeth,main,5,8,28,817,speech,ROSS,ROSS,"Ay, and brought off the field. Your cause of sorrow
+Must not be measured by his worth, for then
+It hath no end.",-0.296,-0.20315
+macbeth,Macbeth,main,5,8,28,818,speech,SIWARD,SIWARD,Had he his hurts before?,0.0,-0.15014
+macbeth,Macbeth,main,5,8,28,819,speech,ROSS,ROSS,"Ay, on the front.",0.4019,0.04717
+macbeth,Macbeth,main,5,8,28,820,speech,SIWARD,SIWARD,"Why then, God’s soldier be he!
+Had I as many sons as I have hairs,
+I would not wish them to a fairer death.
+And so, his knell is knolled.",-0.1528,0.71349
+macbeth,Macbeth,main,5,8,28,821,speech,MALCOLM,MALCOLM,"He’s worth more sorrow,
+And that I’ll spend for him.",-0.659,-0.31861
+macbeth,Macbeth,main,5,8,28,822,speech,SIWARD,SIWARD,"He’s worth no more.
+They say he parted well and paid his score.
+And so, God be with him! Here comes newer comfort.",0.3595,-0.14962
+macbeth,Macbeth,main,5,8,28,823,stage_direction,,,"MACDUFF enters, carrying MACBETH’s head.",0.0,0.01237
+macbeth,Macbeth,main,5,8,28,824,speech,MACDUFF,MACDUFF,"Hail, king! For so thou art. Behold where stands
+The usurper’s cursèd head. The time is free.
+I see thee compassed with thy kingdom’s pearl,
+That speak my salutation in their minds,
+Whose voices I desire aloud with mine.
+Hail, King of Scotland!",0.8309,0.49919
+macbeth,Macbeth,main,5,8,28,825,speech,ALL,ALL,"Hail, King of Scotland!",0.1511,0.75356
+macbeth,Macbeth,main,5,8,28,826,stage_direction,,,Trumpets sound.,0.0,0.03975
+macbeth,Macbeth,main,5,8,28,827,speech,MALCOLM,MALCOLM,"We shall not spend a large expense of time
+Before we reckon with your several loves
+And make us even with you. My thanes and kinsmen,
+Henceforth be earls, the first that ever Scotland
+In such an honor named. What’s more to do,
+Which would be planted newly with the time,
+As calling home our exiled friends abroad
+That fled the snares of watchful tyranny,
+Producing forth the cruel ministers
+Of this dead butcher and his fiendlike queen,
+Who, as ’tis thought, by self and violent hands
+Took off her life; this, and what needful else
+That calls upon us, by the grace of Grace,
+We will perform in measure, time, and place.
+So, thanks to all at once and to each one,
+Whom we invite to see us crowned at Scone.",0.0396,0.67345
+macbeth,Macbeth,main,5,8,28,828,stage_direction,,,Trumpets sound. All exit.,0.0,0.14401

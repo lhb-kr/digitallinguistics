@@ -1,0 +1,2775 @@
+play_id,play_title,section,act,scene,scene_index_in_play,unit_index_in_play,type,speaker_original,speaker_normalized,original_text,vader_score,dl_score
+julius-caesar,Julius Caesar,main,1,1,1,1,stage_direction,,,"FLAVIUS and MURELLUS enter on one side of the stage, as do a CARPENTER, a COBBLER, and some other commoners from the other end of the stage.",0.0,0.00462
+julius-caesar,Julius Caesar,main,1,1,1,2,speech,FLAVIUS,FLAVIUS,"Hence! Home, you idle creatures get you home!
+Is this a holiday? What, know you not,
+Being mechanical, you ought not walk
+Upon a laboring day without the sign
+Of your profession? —Speak, what trade art thou?",0.3235,0.02788
+julius-caesar,Julius Caesar,main,1,1,1,3,speech,CARPENTER,CARPENTER,"Why, sir, a carpenter.",0.0,0.03981
+julius-caesar,Julius Caesar,main,1,1,1,4,speech,MURELLUS,MURELLUS,"Where is thy leather apron and thy rule?
+What dost thou with thy best apparel on?
+—You, sir, what trade are you?",0.0,-0.01113
+julius-caesar,Julius Caesar,main,1,1,1,5,speech,COBBLER,COBBLER,"Truly, sir, in respect of a fine workman, I am but, as
+you would say, a cobbler.",0.2732,-0.21607
+julius-caesar,Julius Caesar,main,1,1,1,6,speech,MURELLUS,MURELLUS,But what trade art thou? Answer me directly.,0.0,0.1108
+julius-caesar,Julius Caesar,main,1,1,1,7,speech,COBBLER,COBBLER,"A trade, sir, that I hope I may use with a safe
+conscience, which is, indeed, sir, a mender of bad
+soles.",0.5106,-0.02067
+julius-caesar,Julius Caesar,main,1,1,1,8,speech,MURELLUS,MURELLUS,"What trade, thou knave? Thou naughty knave, what trade?",-0.7319,-0.56017
+julius-caesar,Julius Caesar,main,1,1,1,9,speech,COBBLER,COBBLER,"Nay, I beseech you, sir, be not out with me. Yet, if
+you be out, sir, I can mend you.",-0.6705,0.26184
+julius-caesar,Julius Caesar,main,1,1,1,10,speech,MURELLUS,MURELLUS,"What mean’st thou by that? “Mend” me, thou saucy
+fellow?",-0.5204,-0.36216
+julius-caesar,Julius Caesar,main,1,1,1,11,speech,COBBLER,COBBLER,"Why, sir, cobble you.",0.2732,0.46624
+julius-caesar,Julius Caesar,main,1,1,1,12,speech,FLAVIUS,FLAVIUS,"Thou art a cobbler, art thou?",0.0,-0.14981
+julius-caesar,Julius Caesar,main,1,1,1,13,speech,COBBLER,COBBLER,"Truly, sir, all that I live by is with the awl. I
+meddle with no tradesman’s matters nor women’s matters,
+but withal I am indeed, sir, a surgeon to old shoes.
+When they are in great danger, I recover them. As proper
+men as ever trod upon neat’s leather have gone upon my
+handiwork.",0.3597,-0.52549
+julius-caesar,Julius Caesar,main,1,1,1,14,speech,FLAVIUS,FLAVIUS,"But wherefore art not in thy shop today?
+Why dost thou lead these men about the streets?",0.0,-0.03178
+julius-caesar,Julius Caesar,main,1,1,1,15,speech,COBBLER,COBBLER,"Truly, sir, to wear out their shoes to get myself into
+more work. But indeed, sir, we make holiday to see
+Caesar and to rejoice in his triumph.",0.8945,-0.56264
+julius-caesar,Julius Caesar,main,1,1,1,16,speech,MURELLUS,MURELLUS,"Wherefore rejoice? What conquest brings he home?
+What tributaries follow him to Rome
+To grace in captive bonds his chariot wheels?
+You blocks, you stones, you worse than senseless
+things,
+O you hard hearts, you cruèl men of Rome,
+Knew you not Pompey? Many a time and oft
+Have you climbed up to walls and battlements,
+To towers and windows, yea, to chimney tops,
+Your infants in your arms, and there have sat
+The livelong day with patient expectation
+To see great Pompey pass the streets of Rome.
+And when you saw his chariot but appear,
+Have you not made an universal shout
+That Tiber trembled underneath her banks
+To hear the replication of your sounds
+Made in her concave shores?
+And do you now put on your best attire?
+And do you now cull out a holiday?
+And do you now strew flowers in his way
+That comes in triumph over Pompey’s blood?
+Be gone!
+Run to your houses, fall upon your knees,
+Pray to the gods to intermit the plague
+That needs must light on this ingratitude.",0.8817,-0.85597
+julius-caesar,Julius Caesar,main,1,1,1,17,speech,FLAVIUS,FLAVIUS,"Go, go, good countrymen, and for this fault,
+Assemble all the poor men of your sort,
+Draw them to Tiber banks, and weep your tears
+Into the channel till the lowest stream
+Do kiss the most exalted shores of all.",-0.6731,0.0268
+julius-caesar,Julius Caesar,main,1,1,1,18,stage_direction,,,"The CARPENTER, COBBLER, and all of the commoners exit.",0.0,0.0432
+julius-caesar,Julius Caesar,main,1,1,1,19,speech,FLAVIUS,FLAVIUS,"See whether their basest metal be not moved.
+They vanish tongue-tied in their guiltiness.
+Go you down that way towards the Capitol.
+This way will I. Disrobe the images
+If you do find them decked with ceremonies.",-0.1069,-0.66624
+julius-caesar,Julius Caesar,main,1,1,1,20,speech,MURELLUS,MURELLUS,"May we do so?
+You know it is the feast of Lupercal.",0.0,0.00253
+julius-caesar,Julius Caesar,main,1,1,1,21,speech,FLAVIUS,FLAVIUS,"It is no matter. Let no images
+Be hung with Caesar’s trophies. I’ll about
+And drive away the vulgar from the streets.
+So do you too, where you perceive them thick.
+These growing feathers plucked from Caesar’s wing
+Will make him fly an ordinary pitch,
+Who else would soar above the view of men
+And keep us all in servile fearfulness.",0.7003,-0.3095
+julius-caesar,Julius Caesar,main,1,1,1,22,stage_direction,,,They exit in different directions.,0.0,0.00199
+julius-caesar,Julius Caesar,main,1,2,2,23,stage_direction,,,"A trumpet sounds. CAESAR enters, along with ANTONY who is dressed for a traditional foot race, as well as CALPHURNIA, PORTIA, DECIUS, CICERO, BRUTUS, CASSIUS, and CASCA, followed by great crowd of commoners, including a SOOTHSAYER. MURELLUS and FLAVIUS follow after.",0.6249,0.03552
+julius-caesar,Julius Caesar,main,1,2,2,24,speech,CAESAR,CAESAR,Calphurnia!,0.0,0.69827
+julius-caesar,Julius Caesar,main,1,2,2,25,stage_direction,,,"Peace, ho! Caesar speaks.",0.0,0.12311
+julius-caesar,Julius Caesar,main,1,2,2,26,speech,CAESAR,CAESAR,Calphurnia!,0.0,0.69827
+julius-caesar,Julius Caesar,main,1,2,2,27,speech,CALPHURNIA,CALPHURNIA,"Here, my lord.",0.0,0.75147
+julius-caesar,Julius Caesar,main,1,2,2,28,speech,CAESAR,CAESAR,"Stand you directly in Antonius' way
+When he doth run his course. —Antonius!",0.0,0.30659
+julius-caesar,Julius Caesar,main,1,2,2,29,speech,ANTONY,ANTONY,"Caesar, my lord.",0.4019,-0.00838
+julius-caesar,Julius Caesar,main,1,2,2,30,speech,CAESAR,CAESAR,"Forget not in your speed, Antonius,
+To touch Calphurnia, for our elders say
+The barren, touchèd in this holy chase,
+Shake off their sterile curse.",-0.5719,-0.54699
+julius-caesar,Julius Caesar,main,1,2,2,31,speech,ANTONY,ANTONY,"I shall remember.
+When Caesar says, “do this,” it is performed.",0.0,0.07226
+julius-caesar,Julius Caesar,main,1,2,2,32,speech,CAESAR,CAESAR,"Set on, and leave no ceremony out.",-0.0516,-0.06592
+julius-caesar,Julius Caesar,main,1,2,2,33,stage_direction,,,Music plays.,0.25,0.16464
+julius-caesar,Julius Caesar,main,1,2,2,34,speech,SOOTHSAYER,SOOTHSAYER,Caesar!,0.0,0.73807
+julius-caesar,Julius Caesar,main,1,2,2,35,speech,CAESAR,CAESAR,Ha! Who calls?,0.0,0.02741
+julius-caesar,Julius Caesar,main,1,2,2,36,speech,CASCA,CASCA,Bid every noise be still. Peace yet again.,0.0,0.58782
+julius-caesar,Julius Caesar,main,1,2,2,37,stage_direction,,,The music stops.,-0.1531,-0.01368
+julius-caesar,Julius Caesar,main,1,2,2,38,speech,CAESAR,CAESAR,"Who is it in the press that calls on me?
+I hear a tongue, shriller than all the music,
+Cry “Caesar!” —Speak. Caesar is turned to hear.",0.0,0.39657
+julius-caesar,Julius Caesar,main,1,2,2,39,speech,SOOTHSAYER,SOOTHSAYER,Beware the ides of March.,0.0,0.00488
+julius-caesar,Julius Caesar,main,1,2,2,40,speech,CAESAR,CAESAR,What man is that?,0.0,-0.04317
+julius-caesar,Julius Caesar,main,1,2,2,41,speech,BRUTUS,BRUTUS,A soothsayer bids you beware the ides of March.,0.0,0.02364
+julius-caesar,Julius Caesar,main,1,2,2,42,speech,CAESAR,CAESAR,Set him before me. Let me see his face.,0.0,0.47125
+julius-caesar,Julius Caesar,main,1,2,2,43,speech,CASSIUS,CASSIUS,"Fellow, come from the throng. Look upon Caesar.",0.0,0.03265
+julius-caesar,Julius Caesar,main,1,2,2,44,speech,CAESAR,CAESAR,What sayst thou to me now? Speak once again.,0.0,-0.01442
+julius-caesar,Julius Caesar,main,1,2,2,45,speech,SOOTHSAYER,SOOTHSAYER,Beware the ides of March.,0.0,0.00488
+julius-caesar,Julius Caesar,main,1,2,2,46,speech,CAESAR,CAESAR,He is a dreamer. Let us leave him. Pass!,-0.4389,0.4711
+julius-caesar,Julius Caesar,main,1,2,2,47,stage_direction,,,"Trumpets play. Everyone exits, except BRUTUS and CASSIUS.",0.34,0.02622
+julius-caesar,Julius Caesar,main,1,2,2,48,speech,CASSIUS,CASSIUS,Will you go see the order of the course?,0.0,-0.00324
+julius-caesar,Julius Caesar,main,1,2,2,49,speech,BRUTUS,BRUTUS,Not I.,0.0,-0.50498
+julius-caesar,Julius Caesar,main,1,2,2,50,speech,CASSIUS,CASSIUS,"I pray you, do.",0.3182,0.23662
+julius-caesar,Julius Caesar,main,1,2,2,51,speech,BRUTUS,BRUTUS,"I am not gamesome. I do lack some part
+Of that quick spirit that is in Antony.
+Let me not hinder, Cassius, your desires.
+I’ll leave you.",-0.6218,-0.45584
+julius-caesar,Julius Caesar,main,1,2,2,52,speech,CASSIUS,CASSIUS,"Brutus, I do observe you now of late
+I have not from your eyes that gentleness
+And show of love as I was wont to have.
+You bear too stubborn and too strange a hand
+Over your friend that loves you.",0.8078,-0.51872
+julius-caesar,Julius Caesar,main,1,2,2,53,speech,BRUTUS,BRUTUS,"Cassius,
+Be not deceived. If I have veiled my look,
+I turn the trouble of my countenance
+Merely upon myself. Vexèd I am
+Of late with passions of some difference,
+Conceptions only proper to myself,
+Which give some soil perhaps to my behaviors.
+But let not therefore, my good friends, be grieved—
+Among which number, Cassius, be you one—
+Nor construe any further my neglect
+Than that poor Brutus, with himself at war,
+Forgets the shows of love to other men.",0.6486,-0.56812
+julius-caesar,Julius Caesar,main,1,2,2,54,speech,CASSIUS,CASSIUS,"Then, Brutus, I have much mistook your passion,
+By means whereof this breast of mine hath buried
+Thoughts of great value, worthy cogitations.
+Tell me, good Brutus, can you see your face?",0.3818,0.47085
+julius-caesar,Julius Caesar,main,1,2,2,55,speech,BRUTUS,BRUTUS,"No, Cassius, for the eye sees not itself
+But by reflection, by some other things.",0.0,-0.08883
+julius-caesar,Julius Caesar,main,1,2,2,56,speech,CASSIUS,CASSIUS,"'Tis just.
+And it is very much lamented, Brutus,
+That you have no such mirrors as will turn
+Your hidden worthiness into your eye
+That you might see your shadow . I have heard
+Where many of the best respect in Rome,
+Except immortal Caesar, speaking of Brutus
+And groaning underneath this age’s yoke,
+Have wished that noble Brutus had his eyes.",0.6474,-0.46033
+julius-caesar,Julius Caesar,main,1,2,2,57,speech,BRUTUS,BRUTUS,"Into what dangers would you lead me, Cassius,
+That you would have me seek into myself
+For that which is not in me?",-0.4404,-0.4834
+julius-caesar,Julius Caesar,main,1,2,2,58,speech,CASSIUS,CASSIUS,"Therefore, good Brutus, be prepared to hear.
+And since you know you cannot see yourself
+So well as by reflection, I, your glass,
+Will modestly discover to yourself
+That of yourself which you yet know not of.
+And be not jealous on me, gentle Brutus.
+Were I a common laugher, or did use
+To stale with ordinary oaths my love
+To every new protester, if you know
+That I do fawn on men and hug them hard
+And, after, scandal them, or if you know
+That I profess myself in banqueting
+To all the rout, then hold me dangerous.",0.9405,-0.19868
+julius-caesar,Julius Caesar,main,1,2,2,59,stage_direction,,,"Trumpets play, and then a shout sounds.",0.34,0.00791
+julius-caesar,Julius Caesar,main,1,2,2,60,speech,BRUTUS,BRUTUS,"What means this shouting? I do fear, the people
+Choose Caesar for their king.",-0.4939,-0.59257
+julius-caesar,Julius Caesar,main,1,2,2,61,speech,CASSIUS,CASSIUS,"Ay, do you fear it?
+Then must I think you would not have it so.",-0.4877,-0.48967
+julius-caesar,Julius Caesar,main,1,2,2,62,speech,BRUTUS,BRUTUS,"I would not, Cassius. Yet I love him well.
+But wherefore do you hold me here so long?
+What is it that you would impart to me?
+If it be aught toward the general good,
+Set honor in one eye and death i' th' other,
+And I will look on both indifferently,
+For let the gods so speed me as I love
+The name of honor more than I fear death.",0.9262,-0.48274
+julius-caesar,Julius Caesar,main,1,2,2,63,speech,CASSIUS,CASSIUS,"I know that virtue to be in you, Brutus,
+As well as I do know your outward favor.
+Well, honor is the subject of my story.
+I cannot tell what you and other men
+Think of this life, but, for my single self,
+I had as lief not be as live to be
+In awe of such a thing as I myself.
+I was born free as Caesar. So were you.
+We both have fed as well, and we can both
+Endure the winter’s cold as well as he.
+For once upon a raw and gusty day,
+The troubled Tiber chafing with her shores,
+Caesar said to me, “Darest thou, Cassius, now
+Leap in with me into this angry flood
+And swim to yonder point?” Upon the word,
+Accoutred as I was, I plungèd in
+And bade him follow. So indeed he did.
+The torrent roared, and we did buffet it
+With lusty sinews, throwing it aside
+And stemming it with hearts of controversy.
+But ere we could arrive the point proposed,
+Caesar cried, “Help me, Cassius, or I sink!”
+I, as Aeneas, our great ancestor,
+Did from the flames of Troy upon his shoulder
+The old Anchises bear, so from the waves of Tiber
+Did I the tired Caesar. And this man
+Is now become a god, and Cassius is
+A wretched creature and must bend his body
+If Caesar carelessly but nod on him.
+He had a fever when he was in Spain,
+And when the fit was on him, I did mark
+How he did shake. 'Tis true, this god did shake!
+His coward lips did from their color fly,
+And that same eye whose bend doth awe the world
+Did lose his luster. I did hear him groan,
+Ay, and that tongue of his that bade the Romans
+Mark him and write his speeches in their books—
+“Alas,” it cried, “give me some drink, Titinius,”
+As a sick girl. Ye gods, it doth amaze me
+A man of such a feeble temper should
+So get the start of the majestic world
+And bear the palm alone.",-0.2484,0.75807
+julius-caesar,Julius Caesar,main,1,2,2,64,stage_direction,,,A shout offstage. Trumpets play.,0.34,-0.02652
+julius-caesar,Julius Caesar,main,1,2,2,65,speech,BRUTUS,BRUTUS,"Another general shout!
+I do believe that these applauses are
+For some new honors that are heaped on Caesar.",0.7745,0.10493
+julius-caesar,Julius Caesar,main,1,2,2,66,speech,CASSIUS,CASSIUS,"Why, man, he doth bestride the narrow world
+Like a Colossus, and we petty men
+Walk under his huge legs and peep about
+To find ourselves dishonorable graves.
+Men at some time are masters of their fates.
+The fault, dear Brutus, is not in our stars
+But in ourselves, that we are underlings.
+Brutus and Caesar—what should be in that “Caesar?”
+Why should that name be sounded more than yours?
+Write them together, yours is as fair a name.
+Sound them, it doth become the mouth as well.
+Weigh them, it is as heavy. Conjure with 'em,
+“Brutus” will start a spirit as soon as “Caesar.”
+Now in the names of all the gods at once,
+Upon what meat doth this our Caesar feed
+That he is grown so great? Age, thou art shamed!
+Rome, thou hast lost the breed of noble bloods!
+When went there by an age, since the great flood,
+But it was famed with more than with one man?
+When could they say till now, that talked of Rome,
+That her wide walks encompassed but one man?
+Now is it Rome indeed, and room enough,
+When there is in it but one only man.
+Oh, you and I have heard our fathers say,
+There was a Brutus once that would have brooked
+Th' eternal devil to keep his state in Rome
+As easily as a king.",0.9813,0.28315
+julius-caesar,Julius Caesar,main,1,2,2,67,speech,BRUTUS,BRUTUS,"That you do love me, I am nothing jealous.
+What you would work me to, I have some aim.
+How I have thought of this and of these times
+I shall recount hereafter. For this present,
+I would not, so with love I might entreat you,
+Be any further moved. What you have said
+I will consider, what you have to say
+I will with patience hear, and find a time
+Both meet to hear and answer such high things.
+Till then, my noble friend, chew upon this:
+Brutus had rather be a villager
+Than to repute himself a son of Rome
+Under these hard conditions as this time
+Is like to lay upon us.",0.912,-0.01304
+julius-caesar,Julius Caesar,main,1,2,2,68,speech,CASSIUS,CASSIUS,"I am glad that my weak words
+Have struck but thus much show of fire from Brutus.",0.0258,-0.11028
+julius-caesar,Julius Caesar,main,1,2,2,69,stage_direction,,,"CAESAR enters with his followers, including CASCA.",0.0,0.18848
+julius-caesar,Julius Caesar,main,1,2,2,70,speech,BRUTUS,BRUTUS,The games are done and Caesar is returning.,0.0,0.38168
+julius-caesar,Julius Caesar,main,1,2,2,71,speech,CASSIUS,CASSIUS,"As they pass by, pluck Casca by the sleeve,
+And he will, after his sour fashion, tell you
+What hath proceeded worthy note today.",0.2023,0.14214
+julius-caesar,Julius Caesar,main,1,2,2,72,speech,BRUTUS,BRUTUS,"I will do so. But, look you, Cassius,
+The angry spot doth glow on Caesar’s brow,
+And all the rest look like a chidden train.
+Calphurnia’s cheek is pale, and Cicero
+Looks with such ferret and such fiery eyes
+As we have seen him in the Capitol
+Being crossed in conference by some senators.",-0.8847,-0.51934
+julius-caesar,Julius Caesar,main,1,2,2,73,speech,CASSIUS,CASSIUS,Casca will tell us what the matter is.,0.0,0.01745
+julius-caesar,Julius Caesar,main,1,2,2,74,speech,CAESAR,CAESAR,Antonio.,0.0,0.08728
+julius-caesar,Julius Caesar,main,1,2,2,75,speech,ANTONY,ANTONY,Caesar.,0.0,0.1504
+julius-caesar,Julius Caesar,main,1,2,2,76,speech,CAESAR,CAESAR,"[aside to ANTONY] Let me have men about me that are
+fat,
+Sleek-headed men and such as sleep a-nights.
+Yond Cassius has a lean and hungry look.
+He thinks too much. Such men are dangerous.",-0.0772,-0.67128
+julius-caesar,Julius Caesar,main,1,2,2,77,speech,ANTONY,ANTONY,"[aside to CAESAR] Fear him not, Caesar. He’s not
+dangerous.
+He is a noble Roman and well given.",0.8424,0.7045
+julius-caesar,Julius Caesar,main,1,2,2,78,speech,CAESAR,CAESAR,"[aside to ANTONY] Would he were fatter! But I fear him
+not.
+Yet if my name were liable to fear,
+I do not know the man I should avoid
+So soon as that spare Cassius. He reads much.
+He is a great observer, and he looks
+Quite through the deeds of men. He loves no plays,
+As thou dost, Antony . He hears no music.
+Seldom he smiles, and smiles in such a sort
+As if he mocked himself and scorned his spirit
+That could be moved to smile at anything.
+Such men as he be never at heart’s ease
+Whiles they behold a greater than themselves,
+And therefore are they very dangerous.
+I rather tell thee what is to be feared
+Than what I fear, for always I am Caesar.
+Come on my right hand, for this ear is deaf,
+And tell me truly what thou think’st of him.",0.919,-0.58328
+julius-caesar,Julius Caesar,main,1,2,2,79,stage_direction,,,Trumpets play. CAESAR exits with all his followers except CASCA.,0.34,0.00384
+julius-caesar,Julius Caesar,main,1,2,2,80,speech,CASCA,CASCA,"[to BRUTUS]
+You pulled me by the cloak. Would you speak with me?",0.0772,0.01738
+julius-caesar,Julius Caesar,main,1,2,2,81,speech,BRUTUS,BRUTUS,"Ay, Casca. Tell us what hath chanced today
+That Caesar looks so sad.",-0.2302,-0.54323
+julius-caesar,Julius Caesar,main,1,2,2,82,speech,CASCA,CASCA,"Why, you were with him, were you not?",0.2732,-0.14986
+julius-caesar,Julius Caesar,main,1,2,2,83,speech,BRUTUS,BRUTUS,I should not then ask Casca what had chanced.,0.0,-0.05226
+julius-caesar,Julius Caesar,main,1,2,2,84,speech,CASCA,CASCA,"Why, there was a crown offered him; and, being offered
+him, he put it by with the back of his hand, thus; and
+then the people fell a-shouting.",0.7783,-0.47058
+julius-caesar,Julius Caesar,main,1,2,2,85,speech,BRUTUS,BRUTUS,What was the second noise for?,0.0,-0.06553
+julius-caesar,Julius Caesar,main,1,2,2,86,speech,CASCA,CASCA,"Why, for that too.",0.0,-0.29946
+julius-caesar,Julius Caesar,main,1,2,2,87,speech,CASSIUS,CASSIUS,They shouted thrice. What was the last cry for?,-0.4767,-0.49365
+julius-caesar,Julius Caesar,main,1,2,2,88,speech,CASCA,CASCA,"Why, for that too.",0.0,-0.30031
+julius-caesar,Julius Caesar,main,1,2,2,89,speech,BRUTUS,BRUTUS,Was the crown offered him thrice?,0.0,-0.0396
+julius-caesar,Julius Caesar,main,1,2,2,90,speech,CASCA,CASCA,"Ay, marry, was ’t, and he put it by thrice, every time
+gentler than other, and at every putting-by mine honest
+neighbors shouted.",0.9407,-0.07643
+julius-caesar,Julius Caesar,main,1,2,2,91,speech,CASSIUS,CASSIUS,Who offered him the crown?,0.0,-0.05361
+julius-caesar,Julius Caesar,main,1,2,2,92,speech,CASCA,CASCA,"Why, Antony.",0.0,0.07413
+julius-caesar,Julius Caesar,main,1,2,2,93,speech,BRUTUS,BRUTUS,"Tell us the manner of it, gentle Casca.",0.6705,0.25192
+julius-caesar,Julius Caesar,main,1,2,2,94,speech,CASCA,CASCA,"I can as well be hanged as tell the manner of it. It
+was mere foolery. I did not mark it. I saw Mark Antony
+offer him a crown (yet ’twas not a crown neither, ’twas
+one of these coronets) and, as I told you, he put it by
+once—but, for all that, to my thinking, he would fain
+have had it . Then he offered it to him again, then he
+put it by again—but, to my thinking, he was very loath
+to lay his fingers off it. And then he offered it the
+third time. He put it the third time by. And still, as
+he refused it, the rabblement hooted and clapped their
+chopp'd hands and threw up their sweaty night-caps and
+uttered such a deal of stinking breath because Caesar
+refused the crown that it had almost choked Caesar—for
+he swooned and fell down at it. And for mine own part, I
+durst not laugh for fear of opening my lips and
+receiving the bad air.",-0.9395,-0.8758
+julius-caesar,Julius Caesar,main,1,2,2,95,speech,CASSIUS,CASSIUS,"But soft, I pray you. What, did Caesar swoon?",0.0258,-0.02655
+julius-caesar,Julius Caesar,main,1,2,2,96,speech,CASCA,CASCA,"He fell down in the marketplace, and foamed at mouth,
+and was speechless.",0.0,-0.52178
+julius-caesar,Julius Caesar,main,1,2,2,97,speech,BRUTUS,BRUTUS,'Tis very like. He hath the falling sickness.,-0.1531,-0.6982
+julius-caesar,Julius Caesar,main,1,2,2,98,speech,CASSIUS,CASSIUS,"No, Caesar hath it not. But you and I
+And honest Casca, we have the falling sickness.",0.5499,-0.76589
+julius-caesar,Julius Caesar,main,1,2,2,99,speech,CASCA,CASCA,"I know not what you mean by that, but I am sure Caesar
+fell down. If the tag-rag people did not clap him and
+hiss him according as he pleased and displeased them, as
+they use to do the players in the theatre, I am no true
+man.",-0.3612,-0.35674
+julius-caesar,Julius Caesar,main,1,2,2,100,speech,BRUTUS,BRUTUS,What said he when he came unto himself?,0.0,-0.02292
+julius-caesar,Julius Caesar,main,1,2,2,101,speech,CASCA,CASCA,"Marry, before he fell down, when he perceived the
+common herd was glad he refused the crown, he plucked me
+ope his doublet and offered them his throat to cut. An
+I had been a man of any occupation, if I would not have
+taken him at a word, I would I might go to hell among
+the rogues. And so he fell. When he came to himself
+again, he said, if he had done or said anything amiss,
+he desired their worships to think it was his infirmity.
+Three or four wenches where I stood cried, “Alas, good
+soul!” and forgave him with all their hearts. But
+there’s no heed to be taken of them. If Caesar had
+stabbed their mothers they would have done no less.",-0.6367,-0.49236
+julius-caesar,Julius Caesar,main,1,2,2,102,speech,BRUTUS,BRUTUS,And after that he came thus sad away?,-0.188,-0.48538
+julius-caesar,Julius Caesar,main,1,2,2,103,speech,CASCA,CASCA,Ay.,0.4019,0.28617
+julius-caesar,Julius Caesar,main,1,2,2,104,speech,CASSIUS,CASSIUS,Did Cicero say anything?,0.0,-0.0314
+julius-caesar,Julius Caesar,main,1,2,2,105,speech,CASCA,CASCA,"Ay, he spoke Greek.",0.4019,0.11075
+julius-caesar,Julius Caesar,main,1,2,2,106,speech,CASSIUS,CASSIUS,To what effect?,0.0,-0.01568
+julius-caesar,Julius Caesar,main,1,2,2,107,speech,CASCA,CASCA,"Nay, an I tell you that, I’ll ne'er look you i' th'
+face again. But those that understood him smiled at one
+another and shook their heads. But, for mine own part,
+it was Greek to me. I could tell you more news too.
+Murellus and Flavius, for pulling scarfs off Caesar’s
+images, are put to silence. Fare you well. There was
+more foolery yet, if I could remember it.",-0.611,-0.64622
+julius-caesar,Julius Caesar,main,1,2,2,108,speech,CASSIUS,CASSIUS,"Will you sup with me tonight, Casca?",0.0,0.02898
+julius-caesar,Julius Caesar,main,1,2,2,109,speech,CASCA,CASCA,"No, I am promised forth.",0.3818,-0.42721
+julius-caesar,Julius Caesar,main,1,2,2,110,speech,CASSIUS,CASSIUS,Will you dine with me tomorrow?,0.0,0.05604
+julius-caesar,Julius Caesar,main,1,2,2,111,speech,CASCA,CASCA,"Ay, if I be alive and your mind hold and your dinner
+worth the eating.",0.7351,0.53167
+julius-caesar,Julius Caesar,main,1,2,2,112,speech,CASSIUS,CASSIUS,Good. I will expect you.,0.4404,0.50337
+julius-caesar,Julius Caesar,main,1,2,2,113,speech,CASCA,CASCA,Do so. Farewell both.,0.0,0.40073
+julius-caesar,Julius Caesar,main,1,2,2,114,stage_direction,,,CASCA exits.,0.0,-0.00142
+julius-caesar,Julius Caesar,main,1,2,2,115,speech,BRUTUS,BRUTUS,"What a blunt fellow is this grown to be!
+He was quick mettle when he went to school.",-0.4574,-0.06507
+julius-caesar,Julius Caesar,main,1,2,2,116,speech,CASSIUS,CASSIUS,"So is he now in execution
+Of any bold or noble enterprise,
+However he puts on this tardy form.
+This rudeness is a sauce to his good wit,
+Which gives men stomach to digest his words
+With better appetite.",0.5106,-0.29425
+julius-caesar,Julius Caesar,main,1,2,2,117,speech,BRUTUS,BRUTUS,"And so it is. For this time I will leave you.
+Tomorrow, if you please to speak with me,
+I will come home to you. Or, if you will,
+Come home to me, and I will wait for you.",0.3818,0.09407
+julius-caesar,Julius Caesar,main,1,2,2,118,speech,CASSIUS,CASSIUS,"I will do so. Till then, think of the world.",0.6369,0.0452
+julius-caesar,Julius Caesar,main,1,2,2,119,stage_direction,,,BRUTUS exits.,0.0,0.00899
+julius-caesar,Julius Caesar,main,1,2,2,120,speech,CASSIUS,CASSIUS,"Well, Brutus, thou art noble. Yet I see
+Thy honorable mettle may be wrought
+From that it is disposed. Therefore it is meet
+That noble minds keep ever with their likes,
+For who so firm that cannot be seduced?
+Caesar doth bear me hard, but he loves Brutus.
+If I were Brutus now and he were Cassius,
+He should not humor me. I will this night,
+In several hands, in at his windows throw,
+As if they came from several citizens,
+Writings all tending to the great opinion
+That Rome holds of his name, wherein obscurely
+Caesar’s ambition shall be glancèd at.
+And after this let Caesar seat him sure,
+For we will shake him, or worse days endure.",0.9177,-0.046
+julius-caesar,Julius Caesar,main,1,2,2,121,stage_direction,,,CASSIUS exits.,0.0,0.00167
+julius-caesar,Julius Caesar,main,1,3,3,122,stage_direction,,,Thunder and lightning. CASCA and CICERO enter.,0.0,0.60074
+julius-caesar,Julius Caesar,main,1,3,3,123,speech,CICERO,CICERO,"Good even, Casca. Brought you Caesar home?
+Why are you breathless? And why stare you so?",0.7131,-0.00131
+julius-caesar,Julius Caesar,main,1,3,3,124,speech,CASCA,CASCA,"Are not you moved when all the sway of earth
+Shakes like a thing unfirm? O Cicero,
+I have seen tempests when the scolding winds
+Have rived the knotty oaks, and I have seen
+Th' ambitious ocean swell and rage and foam
+To be exalted with the threatening clouds,
+But never till tonight, never till now,
+Did I go through a tempest dropping fire.
+Either there is a civil strife in heaven,
+Or else the world, too saucy with the gods,
+Incenses them to send destruction.",-0.9209,-0.63941
+julius-caesar,Julius Caesar,main,1,3,3,125,speech,CICERO,CICERO,"Why, saw you anything more wonderful?",0.3612,-0.07191
+julius-caesar,Julius Caesar,main,1,3,3,126,speech,CASCA,CASCA,"A common slave—you know him well by sight—
+Held up his left hand, which did flame and burn
+Like twenty torches joined, and yet his hand,
+Not sensible of fire, remained unscorched.
+Besides—I ha' not since put up my sword—
+Against the Capitol I met a lion,
+Who glaz'd upon me and went surly by,
+Without annoying me. And there were drawn
+Upon a heap a hundred ghastly women,
+Transformèd with their fear, who swore they saw
+Men all in fire walk up and down the streets.
+And yesterday the bird of night did sit
+Even at noon-day upon the marketplace,
+Hooting and shrieking. When these prodigies
+Do so conjointly meet, let not men say,
+“These are their reasons; they are natural.”
+For I believe they are portentous things
+Unto the climate that they point upon.",0.8738,-0.25918
+julius-caesar,Julius Caesar,main,1,3,3,127,speech,CICERO,CICERO,"Indeed, it is a strange-disposèd time.
+But men may construe things after their fashion,
+Clean from the purpose of the things themselves. Comes
+Caesar to the Capitol tomorrow?",-0.4215,-0.3659
+julius-caesar,Julius Caesar,main,1,3,3,128,speech,CASCA,CASCA,"He doth, for he did bid Antonius
+Send word to you he would be there tomorrow.",0.0,0.0555
+julius-caesar,Julius Caesar,main,1,3,3,129,speech,CICERO,CICERO,"Good night then, Casca. This disturbèd sky
+Is not to walk in.",-0.2441,-0.49135
+julius-caesar,Julius Caesar,main,1,3,3,130,speech,CASCA,CASCA,"Farewell, Cicero.",0.0,0.57166
+julius-caesar,Julius Caesar,main,1,3,3,131,stage_direction,,,CICERO exits.,0.0,-0.01869
+julius-caesar,Julius Caesar,main,1,3,3,132,stage_direction,,,CASSIUS enters.,0.0,0.0103
+julius-caesar,Julius Caesar,main,1,3,3,133,speech,CASSIUS,CASSIUS,Who’s there?,0.0,-0.01965
+julius-caesar,Julius Caesar,main,1,3,3,134,speech,CASCA,CASCA,A Roman.,0.0,0.00181
+julius-caesar,Julius Caesar,main,1,3,3,135,speech,CASSIUS,CASSIUS,"Casca, by your voice.",0.0,0.50928
+julius-caesar,Julius Caesar,main,1,3,3,136,speech,CASCA,CASCA,"Your ear is good. Cassius, what night is this!",0.4926,0.51992
+julius-caesar,Julius Caesar,main,1,3,3,137,speech,CASSIUS,CASSIUS,A very pleasing night to honest men.,0.7902,0.46878
+julius-caesar,Julius Caesar,main,1,3,3,138,speech,CASCA,CASCA,Who ever knew the heavens menace so?,-0.2484,-0.60808
+julius-caesar,Julius Caesar,main,1,3,3,139,speech,CASSIUS,CASSIUS,"Those that have known the earth so full of faults.
+For my part, I have walked about the streets,
+Submitting me unto the perilous night,
+And, thus unbracèd, Casca, as you see,
+Have bared my bosom to the thunder-stone.
+And when the cross blue lightning seemed to open
+The breast of heaven, I did present myself
+Even in the aim and very flash of it.",-0.4767,0.00309
+julius-caesar,Julius Caesar,main,1,3,3,140,speech,CASCA,CASCA,"But wherefore did you so much tempt the heavens?
+It is the part of men to fear and tremble
+When the most mighty gods by tokens send
+Such dreadful heralds to astonish us.",-0.7876,-0.74187
+julius-caesar,Julius Caesar,main,1,3,3,141,speech,CASSIUS,CASSIUS,"You are dull, Casca, and those sparks of life
+That should be in a Roman you do want,
+Or else you use not. You look pale, and gaze,
+And put on fear, and cast yourself in wonder
+To see the strange impatience of the heavens.
+But if you would consider the true cause
+Why all these fires, why all these gliding ghosts,
+Why birds and beasts from quality and kind,
+Why old men fool and children calculate,
+Why all these things change from their ordinance
+Their natures and preformèd faculties
+To monstrous quality— why, you shall find
+That heaven hath infused them with these spirits
+To make them instruments of fear and warning
+Unto some monstrous state.
+Now could I, Casca, name to thee a man
+Most like this dreadful night,
+That thunders, lightens, opens graves, and roars
+As doth the lion in the Capitol—
+A man no mightier than thyself or me
+In personal action, yet prodigious grown,
+And fearful as these strange eruptions are.",-0.968,-0.207
+julius-caesar,Julius Caesar,main,1,3,3,142,speech,CASCA,CASCA,"'Tis Caesar that you mean. Is it not, Cassius?",0.0,0.02771
+julius-caesar,Julius Caesar,main,1,3,3,143,speech,CASSIUS,CASSIUS,"Let it be who it is. For Romans now
+Have thews and limbs like to their ancestors,
+But—woe the while!—our fathers' minds are dead,
+And we are governed with our mothers' spirits.
+Our yoke and sufferance show us womanish.",0.2942,-0.78229
+julius-caesar,Julius Caesar,main,1,3,3,144,speech,CASCA,CASCA,"Indeed, they say the senators tomorrow
+Mean to establish Caesar as a king,
+And he shall wear his crown by sea and land
+In every place save here in Italy.",0.0,-0.17655
+julius-caesar,Julius Caesar,main,1,3,3,145,speech,CASSIUS,CASSIUS,"I know where I will wear this dagger then.
+Cassius from bondage will deliver Cassius.
+Therein, ye gods, you make the weak most strong.
+Therein, ye gods, you tyrants do defeat.
+Nor stony tower, nor walls of beaten brass,
+Nor airless dungeon, nor strong links of iron
+Can be retentive to the strength of spirit.
+But life, being weary of these worldly bars,
+Never lacks power to dismiss itself.
+If I know this, know all the world besides,
+That part of tyranny that I do bear
+I can shake off at pleasure.",-0.9854,-0.02428
+julius-caesar,Julius Caesar,main,1,3,3,146,stage_direction,,,Thunder sounds again.,0.0,0.32415
+julius-caesar,Julius Caesar,main,1,3,3,147,speech,CASCA,CASCA,"So can I.
+So every bondman in his own hand bears
+The power to cancel his captivity.",0.4939,0.44838
+julius-caesar,Julius Caesar,main,1,3,3,148,speech,CASSIUS,CASSIUS,"And why should Caesar be a tyrant then?
+Poor man! I know he would not be a wolf
+But that he sees the Romans are but sheep.
+He were no lion were not Romans hinds.
+Those that with haste will make a mighty fire
+Begin it with weak straws. What trash is Rome,
+What rubbish and what offal, when it serves
+For the base matter to illuminate
+So vile a thing as Caesar! But, O grief,
+Where hast thou led me? I perhaps speak this
+Before a willing bondman. Then I know
+My answer must be made. But I am armed,
+And dangers are to me indifferent.",-0.9552,-0.84829
+julius-caesar,Julius Caesar,main,1,3,3,149,speech,CASCA,CASCA,"You speak to Casca, and to such a man
+That is no fleering telltale. Hold, my hand.
+Be factious for redress of all these griefs,
+And I will set this foot of mine as far
+As who goes farthest.",0.4939,-0.12481
+julius-caesar,Julius Caesar,main,1,3,3,150,speech,CASSIUS,CASSIUS,"There’s a bargain made.
+Now know you, Casca, I have moved already
+Some certain of the noblest-minded Romans
+To undergo with me an enterprise
+Of honorable-dangerous consequence.
+And I do know by this they stay for me
+In Pompey’s porch. For now, this fearful night,
+There is no stir or walking in the streets,
+And the complexion of the element
+In favor’s like the work we have in hand,
+Most bloody, fiery, and most terrible.",-0.7845,-0.71403
+julius-caesar,Julius Caesar,main,1,3,3,151,stage_direction,,,CINNA enters.,0.0,0.00771
+julius-caesar,Julius Caesar,main,1,3,3,152,speech,CASCA,CASCA,"Stand close awhile, for here comes one in haste.",-0.1779,-0.44312
+julius-caesar,Julius Caesar,main,1,3,3,153,speech,CASSIUS,CASSIUS,"'Tis Cinna. I do know him by his gait.
+He is a friend. —Cinna, where haste you so?",0.4939,0.57104
+julius-caesar,Julius Caesar,main,1,3,3,154,speech,CINNA,CINNA,To find out you. Who’s that? Metellus Cimber?,0.0,-0.01045
+julius-caesar,Julius Caesar,main,1,3,3,155,speech,CASSIUS,CASSIUS,"No, it is Casca, one incorporate
+To our attempts. Am I not stayed for, Cinna?",0.0,-0.34038
+julius-caesar,Julius Caesar,main,1,3,3,156,speech,CINNA,CINNA,"I am glad on ’t. What a fearful night is this!
+There’s two or three of us have seen strange sights.",-0.3164,0.12065
+julius-caesar,Julius Caesar,main,1,3,3,157,speech,CASSIUS,CASSIUS,Am I not stayed for? Tell me.,0.0,-0.0482
+julius-caesar,Julius Caesar,main,1,3,3,158,speech,CINNA,CINNA,"Yes, you are.
+O Cassius, if you could
+But win the noble Brutus to our party—",0.7845,0.10793
+julius-caesar,Julius Caesar,main,1,3,3,159,speech,CASSIUS,CASSIUS,"Be you content. Good Cinna, take this paper,
+And look you lay it in the praetor’s chair
+Where Brutus may but find it. And throw this
+In at his window. Set this up with wax
+Upon old Brutus' statue. All this done,
+Repair to Pompey’s porch, where you shall find us.
+Is Decius Brutus and Trebonius there?",0.0258,-0.38733
+julius-caesar,Julius Caesar,main,1,3,3,160,speech,CINNA,CINNA,"All but Metellus Cimber, and he’s gone
+To seek you at your house. Well, I will hie,
+And so bestow these papers as you bade me.",0.3919,-0.2719
+julius-caesar,Julius Caesar,main,1,3,3,161,speech,CASSIUS,CASSIUS,"That done, repair to Pompey’s theatre.",0.0,0.04381
+julius-caesar,Julius Caesar,main,1,3,3,162,stage_direction,,,CINNA exits.,0.0,0.00571
+julius-caesar,Julius Caesar,main,1,3,3,163,speech,CASSIUS,CASSIUS,"Come, Casca, you and I will yet ere day
+See Brutus at his house. Three parts of him
+Is ours already, and the man entire
+Upon the next encounter yields him ours.",0.0,0.45845
+julius-caesar,Julius Caesar,main,1,3,3,164,speech,CASCA,CASCA,"Oh, he sits high in all the people’s hearts,
+And that which would appear offense in us,
+His countenance, like richest alchemy,
+Will change to virtue and to worthiness.",0.9186,0.57119
+julius-caesar,Julius Caesar,main,1,3,3,165,speech,CASSIUS,CASSIUS,"Him and his worth and our great need of him
+You have right well conceited. Let us go,
+For it is after midnight, and ere day
+We will awake him and be sure of him.",0.3182,0.45627
+julius-caesar,Julius Caesar,main,1,3,3,166,stage_direction,,,They exit.,0.0,-0.13698
+julius-caesar,Julius Caesar,main,2,1,4,167,stage_direction,,,BRUTUS enters in his orchard.,0.0,0.03264
+julius-caesar,Julius Caesar,main,2,1,4,168,speech,BRUTUS,BRUTUS,"What, Lucius, ho!—
+I cannot by the progress of the stars
+Give guess how near to day . —Lucius, I say!—
+I would it were my fault to sleep so soundly.—
+When, Lucius, when? Awake, I say! What, Lucius!",-0.3261,0.66295
+julius-caesar,Julius Caesar,main,2,1,4,169,stage_direction,,,LUCIUS enters.,0.0,0.02164
+julius-caesar,Julius Caesar,main,2,1,4,170,speech,LUCIUS,LUCIUS,"Called you, my lord?",0.0,-0.16268
+julius-caesar,Julius Caesar,main,2,1,4,171,speech,BRUTUS,BRUTUS,"Get me a taper in my study, Lucius.
+When it is lighted, come and call me here.",0.0,0.05584
+julius-caesar,Julius Caesar,main,2,1,4,172,speech,LUCIUS,LUCIUS,"I will, my lord.",0.0,0.76891
+julius-caesar,Julius Caesar,main,2,1,4,173,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,2,1,4,174,speech,BRUTUS,BRUTUS,"It must be by his death, and for my part
+I know no personal cause to spurn at him
+But for the general. He would be crowned.
+How that might change his nature, there’s the question.
+It is the bright day that brings forth the adder
+And that craves wary walking. Crown him that,
+And then I grant we put a sting in him
+That at his will he may do danger with.
+Th' abuse of greatness is when it disjoins
+Remorse from power. And, to speak truth of Caesar,
+I have not known when his affections swayed
+More than his reason. But ’tis a common proof
+That lowliness is young ambition’s ladder,
+Whereto the climber upward turns his face.
+But when he once attains the upmost round,
+He then unto the ladder turns his back,
+Looks in the clouds, scorning the base degrees
+By which he did ascend. So Caesar may.
+Then, lest he may, prevent. And since the quarrel
+Will bear no color for the thing he is,
+Fashion it thus: that what he is, augmented,
+Would run to these and these extremities.
+And therefore think him as a serpent’s egg—
+Which, hatched, would as his kind grow mischievous—
+And kill him in the shell.",-0.9216,-0.70647
+julius-caesar,Julius Caesar,main,2,1,4,175,stage_direction,,,LUCIUS enters.,0.0,0.02164
+julius-caesar,Julius Caesar,main,2,1,4,176,speech,LUCIUS,LUCIUS,"The taper burneth in your closet, sir.
+Searching the window for a flint, I found
+This paper, thus sealed up, and I am sure
+It did not lie there when I went to bed.
+[gives him a letter]",0.1027,0.02299
+julius-caesar,Julius Caesar,main,2,1,4,177,speech,BRUTUS,BRUTUS,"Get you to bed again. It is not day.
+Is not tomorrow, boy, the ides of March?",0.0,0.1751
+julius-caesar,Julius Caesar,main,2,1,4,178,speech,LUCIUS,LUCIUS,"I know not, sir.",0.0,-0.48219
+julius-caesar,Julius Caesar,main,2,1,4,179,speech,BRUTUS,BRUTUS,Look in the calendar and bring me word.,0.0,0.01547
+julius-caesar,Julius Caesar,main,2,1,4,180,speech,LUCIUS,LUCIUS,"I will, sir.",0.0,0.49545
+julius-caesar,Julius Caesar,main,2,1,4,181,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,2,1,4,182,speech,BRUTUS,BRUTUS,"The exhalations whizzing in the air
+Give so much light that I may read by them.
+[opens the letter and reads]
+“Brutus, thou sleep’st. Awake, and see thyself.
+Shall Rome, etc. Speak, strike, redress!”
+“Brutus, thou sleep’st. Awake.”
+Such instigations have been often dropped
+Where I have took them up.
+—“Shall Rome, etc.” Thus must I piece it out:
+“Shall Rome stand under one man’s awe?” What, Rome?
+My ancestors did from the streets of Rome
+The Tarquin drive when he was called a king.
+—“Speak, strike, redress!” Am I entreated
+To speak and strike? O Rome, I make thee promise,
+If the redress will follow, thou receivest
+Thy full petition at the hand of Brutus!",0.7443,0.67085
+julius-caesar,Julius Caesar,main,2,1,4,183,stage_direction,,,LUCIUS enters.,0.0,0.02164
+julius-caesar,Julius Caesar,main,2,1,4,184,speech,LUCIUS,LUCIUS,"Sir, March is wasted fifteen days.",0.0,-0.001
+julius-caesar,Julius Caesar,main,2,1,4,185,speech,BRUTUS,BRUTUS,'Tis good. Go to the gate. Somebody knocks.,0.4404,0.47575
+julius-caesar,Julius Caesar,main,2,1,4,186,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,2,1,4,187,speech,BRUTUS,BRUTUS,"Since Cassius first did whet me against Caesar,
+I have not slept.
+Between the acting of a dreadful thing
+And the first motion, all the interim is
+Like a phantasma or a hideous dream.
+The genius and the mortal instruments
+Are then in council, and the state of man,
+Like to a little kingdom, suffers then
+The nature of an insurrection.",0.4215,-0.60347
+julius-caesar,Julius Caesar,main,2,1,4,188,stage_direction,,,LUCIUS enters.,0.0,0.02164
+julius-caesar,Julius Caesar,main,2,1,4,189,speech,LUCIUS,LUCIUS,"Sir, ’tis your brother Cassius at the door,
+Who doth desire to see you.",0.0,0.44737
+julius-caesar,Julius Caesar,main,2,1,4,190,speech,BRUTUS,BRUTUS,Is he alone?,-0.25,-0.09292
+julius-caesar,Julius Caesar,main,2,1,4,191,speech,LUCIUS,LUCIUS,"No, sir, there are more with him.",0.0,-0.37716
+julius-caesar,Julius Caesar,main,2,1,4,192,speech,BRUTUS,BRUTUS,Do you know them?,0.0,-0.01082
+julius-caesar,Julius Caesar,main,2,1,4,193,speech,LUCIUS,LUCIUS,"No, sir. Their hats are plucked about their ears,
+And half their faces buried in their cloaks,
+That by no means I may discover them
+By any mark of favor.",0.0,-0.66626
+julius-caesar,Julius Caesar,main,2,1,4,194,speech,BRUTUS,BRUTUS,Let 'em enter.,0.0,0.14526
+julius-caesar,Julius Caesar,main,2,1,4,195,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,2,1,4,196,speech,BRUTUS,BRUTUS,"They are the faction. O conspiracy,
+Shamest thou to show thy dangerous brow by night
+When evils are most free? O, then by day
+Where wilt thou find a cavern dark enough
+To mask thy monstrous visage? Seek none, conspiracy.
+Hide it in smiles and affability.
+For if thou path, thy native semblance on,
+Not Erebus itself were dim enough
+To hide thee from prevention.",-0.9484,-0.67187
+julius-caesar,Julius Caesar,main,2,1,4,197,stage_direction,,,"The conspirators enter: CASSIUS, CASCA, DECIUS, CINNA, METELLUS, and TREBONIUS.",0.0,0.02287
+julius-caesar,Julius Caesar,main,2,1,4,198,speech,CASSIUS,CASSIUS,"I think we are too bold upon your rest.
+Good morrow, Brutus. Do we trouble you?",-0.2263,-0.38148
+julius-caesar,Julius Caesar,main,2,1,4,199,speech,BRUTUS,BRUTUS,"I have been up this hour, awake all night.
+Know I these men that come along with you?",0.0,0.35674
+julius-caesar,Julius Caesar,main,2,1,4,200,speech,CASSIUS,CASSIUS,"Yes, every man of them, and no man here
+But honors you, and every one doth wish
+You had but that opinion of yourself
+Which every noble Roman bears of you.
+This is Trebonius.",0.8316,0.78619
+julius-caesar,Julius Caesar,main,2,1,4,201,speech,BRUTUS,BRUTUS,He is welcome hither.,0.4588,0.44804
+julius-caesar,Julius Caesar,main,2,1,4,202,speech,CASSIUS,CASSIUS,"This, Decius Brutus.",0.0,-0.26719
+julius-caesar,Julius Caesar,main,2,1,4,203,speech,BRUTUS,BRUTUS,He is welcome too.,0.4588,0.35114
+julius-caesar,Julius Caesar,main,2,1,4,204,speech,CASSIUS,CASSIUS,"This, Casca. This, Cinna. And this, Metellus Cimber.",0.0,0.10558
+julius-caesar,Julius Caesar,main,2,1,4,205,speech,BRUTUS,BRUTUS,"They are all welcome.
+What watchful cares do interpose themselves
+Betwixt your eyes and night?",-0.5267,0.46118
+julius-caesar,Julius Caesar,main,2,1,4,206,speech,CASSIUS,CASSIUS,Shall I entreat a word?,0.0,0.00545
+julius-caesar,Julius Caesar,main,2,1,4,207,speech,DECIUS,DECIUS,Here lies the east. Doth not the day break here?,0.0,-0.01533
+julius-caesar,Julius Caesar,main,2,1,4,208,speech,CASCA,CASCA,No.,0.0,-0.42519
+julius-caesar,Julius Caesar,main,2,1,4,209,speech,CINNA,CINNA,"O, pardon, sir, it doth, and yon gray lines
+That fret the clouds are messengers of day.",0.4939,0.49957
+julius-caesar,Julius Caesar,main,2,1,4,210,speech,CASCA,CASCA,"You shall confess that you are both deceived.
+[points his sword]
+Here, as I point my sword, the sun arises,
+Which is a great way growing on the south,
+Weighing the youthful season of the year.
+Some two months hence up higher toward the north
+He first presents his fire, and the high east
+Stands, as the Capitol, directly here.",0.296,0.19499
+julius-caesar,Julius Caesar,main,2,1,4,211,stage_direction,,,"[comes forward with CASSIUS]
+Give me your hands all over, one by one.
+[shakes their hands]",0.0,0.40855
+julius-caesar,Julius Caesar,main,2,1,4,212,speech,CASSIUS,CASSIUS,And let us swear our resolution.,0.34,-0.06258
+julius-caesar,Julius Caesar,main,2,1,4,213,speech,BRUTUS,BRUTUS,"No, not an oath. If not the face of men,
+The sufferance of our souls, the time’s abuse—
+If these be motives weak, break off betimes,
+And every man hence to his idle bed.
+So let high-sighted tyranny range on
+Till each man drop by lottery. But if these—
+As I am sure they do—bear fire enough
+To kindle cowards and to steel with valor
+The melting spirits of women, then, countrymen,
+W hat need we any spur but our own cause
+To prick us to redress? What other bond
+Than secret Romans that have spoke the word
+And will not palter? And what other oath
+Than honesty to honesty engaged,
+That this shall be, or we will fall for it?
+Swear priests and cowards and men cautelous,
+Old feeble carrions and such suffering souls
+That welcome wrongs. Unto bad causes swear
+Such creatures as men doubt. But do not stain
+The even virtue of our enterprise,
+Nor th' insuppressive mettle of our spirits,
+To think that or our cause or our performance
+Did need an oath, when every drop of blood
+That every Roman bears—and nobly bears—
+Is guilty of a several bastardy
+If he do break the smallest particle
+Of any promise that hath passed from him.",0.8485,-0.50899
+julius-caesar,Julius Caesar,main,2,1,4,214,speech,CASSIUS,CASSIUS,"But what of Cicero? Shall we sound him?
+I think he will stand very strong with us.",0.7622,0.08813
+julius-caesar,Julius Caesar,main,2,1,4,215,speech,CASCA,CASCA,Let us not leave him out.,0.0382,-0.28359
+julius-caesar,Julius Caesar,main,2,1,4,216,speech,CINNA,CINNA,"No, by no means.",-0.296,-0.54111
+julius-caesar,Julius Caesar,main,2,1,4,217,speech,METELLUS,METELLUS,"O, let us have him, for his silver hairs
+Will purchase us a good opinion
+And buy men’s voices to commend our deeds.
+It shall be said his judgment ruled our hands.
+Our youths and wildness shall no whit appear,
+But all be buried in his gravity.",0.926,0.5042
+julius-caesar,Julius Caesar,main,2,1,4,218,speech,BRUTUS,BRUTUS,"O, name him not. Let us not break with him,
+For he will never follow anything
+That other men begin.",0.0,-0.58432
+julius-caesar,Julius Caesar,main,2,1,4,219,speech,CASSIUS,CASSIUS,Then leave him out.,-0.0516,-0.1275
+julius-caesar,Julius Caesar,main,2,1,4,220,speech,CASCA,CASCA,Indeed he is not fit.,-0.5448,-0.50219
+julius-caesar,Julius Caesar,main,2,1,4,221,speech,DECIUS,DECIUS,Shall no man else be touched but only Caesar?,0.0,-0.02192
+julius-caesar,Julius Caesar,main,2,1,4,222,speech,CASSIUS,CASSIUS,"Decius, well urged. I think it is not meet
+Mark Antony, so well beloved of Caesar,
+Should outlive Caesar. We shall find of him
+A shrewd contriver. And, you know, his means,
+If he improve them, may well stretch so far
+As to annoy us all; which to prevent,
+Let Antony and Caesar fall together.",0.624,-0.74607
+julius-caesar,Julius Caesar,main,2,1,4,223,speech,BRUTUS,BRUTUS,"Our course will seem too bloody, Caius Cassius,
+To cut the head off and then hack the limbs,
+Like wrath in death and envy afterwards,
+For Antony is but a limb of Caesar.
+Let us be sacrificers but not butchers, Caius.
+We all stand up against the spirit of Caesar,
+And in the spirit of men there is no blood.
+Oh, that we then could come by Caesar’s spirit
+And not dismember Caesar! But, alas,
+Caesar must bleed for it. And, gentle friends,
+Let’s kill him boldly but not wrathfully.
+Let’s carve him as a dish fit for the gods,
+Not hew him as a carcass fit for hounds.
+And let our hearts, as subtle masters do,
+Stir up their servants to an act of rage
+And after seem to chide 'em. This shall make
+Our purpose necessary and not envious,
+Which so appearing to the common eyes,
+We shall be called purgers, not murderers.
+And for Mark Antony, think not of him,
+For he can do no more than Caesar’s arm
+When Caesar’s head is off.",0.0943,-0.53619
+julius-caesar,Julius Caesar,main,2,1,4,224,speech,CASSIUS,CASSIUS,"Yet I fear him.
+For in the engrafted love he bears to Caesar—",0.3612,0.29024
+julius-caesar,Julius Caesar,main,2,1,4,225,speech,BRUTUS,BRUTUS,"Alas, good Cassius, do not think of him.
+If he love Caesar, all that he can do
+Is to himself: take thought and die for Caesar.
+And that were much he should, for he is given
+To sports, to wildness and much company.",0.8126,-0.69878
+julius-caesar,Julius Caesar,main,2,1,4,226,speech,TREBONIUS,TREBONIUS,"There is no fear in him. Let him not die,
+For he will live and laugh at this hereafter.",0.8546,-0.61348
+julius-caesar,Julius Caesar,main,2,1,4,227,stage_direction,,,A clock strikes.,-0.3612,-0.00068
+julius-caesar,Julius Caesar,main,2,1,4,228,speech,BRUTUS,BRUTUS,Peace! Count the clock.,0.0,0.32628
+julius-caesar,Julius Caesar,main,2,1,4,229,speech,CASSIUS,CASSIUS,The clock hath stricken three.,-0.25,0.0019
+julius-caesar,Julius Caesar,main,2,1,4,230,speech,TREBONIUS,TREBONIUS,'Tis time to part.,0.0,-0.08238
+julius-caesar,Julius Caesar,main,2,1,4,231,speech,CASSIUS,CASSIUS,"But it is doubtful yet
+Whether Caesar will come forth today or no.
+For he is superstitious grown of late,
+Quite from the main opinion he held once
+Of fantasy, of dreams and ceremonies.
+It may be, these apparent prodigies,
+The unaccustomed terror of this night,
+And the persuasion of his augurers
+May hold him from the Capitol today.",-0.8632,-0.43158
+julius-caesar,Julius Caesar,main,2,1,4,232,speech,DECIUS,DECIUS,"Never fear that. If he be so resolved,
+I can o'ersway him. For he loves to hear
+That unicorns may be betrayed with trees,
+And bears with glasses, elephants with holes,
+Lions with toils, and men with flatterers.
+But when I tell him he hates flatterers,
+He says he does, being then most flatterèd.
+Let me work.
+For I can give his humor the true bent,
+And I will bring him to the Capitol.",-0.2263,-0.4928
+julius-caesar,Julius Caesar,main,2,1,4,233,speech,CASSIUS,CASSIUS,"Nay, we will all of us be there to fetch him.",0.0,-0.47046
+julius-caesar,Julius Caesar,main,2,1,4,234,speech,BRUTUS,BRUTUS,By the eighth hour. Is that the uttermost?,0.0,-0.00074
+julius-caesar,Julius Caesar,main,2,1,4,235,speech,CINNA,CINNA,"Be that the uttermost, and fail not then.",0.4497,-0.28911
+julius-caesar,Julius Caesar,main,2,1,4,236,speech,METELLUS,METELLUS,"Caius Ligarius doth bear Caesar hard ,
+Who rated him for speaking well of Pompey.
+I wonder none of you have thought of him.",0.7351,-0.49726
+julius-caesar,Julius Caesar,main,2,1,4,237,speech,BRUTUS,BRUTUS,"Now, good Metellus, go along by him.
+He loves me well, and I have given him reasons.
+Send him but hither and I’ll fashion him.",0.8225,0.5109
+julius-caesar,Julius Caesar,main,2,1,4,238,speech,CASSIUS,CASSIUS,"The morning comes upon ’s. We’ll leave you, Brutus.
+—And, friends, disperse yourselves. But all remember
+What you have said, and show yourselves true Romans.",0.6858,0.16256
+julius-caesar,Julius Caesar,main,2,1,4,239,speech,BRUTUS,BRUTUS,"Good gentlemen, look fresh and merrily.
+Let not our looks put on our purposes,
+But bear it as our Roman actors do,
+With untired spirits and formal constancy.
+And so good morrow to you every one.",0.8331,0.45526
+julius-caesar,Julius Caesar,main,2,1,4,240,stage_direction,,,Everyone exits except BRUTUS.,0.0,-0.10077
+julius-caesar,Julius Caesar,main,2,1,4,241,speech,BRUTUS,BRUTUS,"Boy! Lucius!—Fast asleep? It is no matter.
+Enjoy the honey-heavy dew of slumber.
+Thou hast no figures nor no fantasies,
+Which busy care draws in the brains of men.
+Therefore thou sleep’st so sound.",-0.1989,0.66127
+julius-caesar,Julius Caesar,main,2,1,4,242,stage_direction,,,PORTIA enters.,0.0,0.00768
+julius-caesar,Julius Caesar,main,2,1,4,243,speech,PORTIA,PORTIA,"Brutus, my lord.",0.0,0.72997
+julius-caesar,Julius Caesar,main,2,1,4,244,speech,BRUTUS,BRUTUS,"Portia, what mean you? Wherefore rise you now?
+It is not for your health thus to commit
+Your weak condition to the raw, cold morning.",-0.7404,-0.55928
+julius-caesar,Julius Caesar,main,2,1,4,245,speech,PORTIA,PORTIA,"Nor for yours neither. Y' have ungently, Brutus,
+Stole from my bed. And yesternight, at supper,
+You suddenly arose and walked about,
+Musing and sighing, with your arms across,
+And when I asked you what the matter was,
+You stared upon me with ungentle looks.
+I urged you further, then you scratched your head
+And too impatiently stamped with your foot.
+Yet I insisted; yet you answered not,
+But with an angry wafture of your hand
+Gave sign for me to leave you. So I did,
+Fearing to strengthen that impatience
+Which seemed too much enkindled, and withal
+Hoping it was but an effect of humor,
+Which sometime hath his hour with every man.
+It will not let you eat nor talk nor sleep,
+And could it work so much upon your shape
+As it hath much prevailed on your condition,
+I should not know you, Brutus. Dear my lord,
+Make me acquainted with your cause of grief.",-0.9747,-0.56464
+julius-caesar,Julius Caesar,main,2,1,4,246,speech,BRUTUS,BRUTUS,"I am not well in health, and that is all.",-0.2924,-0.48668
+julius-caesar,Julius Caesar,main,2,1,4,247,speech,PORTIA,PORTIA,"Brutus is wise, and were he not in health,
+He would embrace the means to come by it.",0.4939,-0.47744
+julius-caesar,Julius Caesar,main,2,1,4,248,speech,BRUTUS,BRUTUS,"Why, so I do. Good Portia, go to bed.",0.4404,0.51944
+julius-caesar,Julius Caesar,main,2,1,4,249,speech,PORTIA,PORTIA,"Is Brutus sick? And is it physical
+To walk unbracèd and suck up the humors
+Of the dank morning? What, is Brutus sick,
+And will he steal out of his wholesome bed,
+To dare the vile contagion of the night
+And tempt the rheumy and unpurgèd air
+To add unto his sickness? No, my Brutus.
+You have some sick offense within your mind,
+Which by the right and virtue of my place
+I ought to know of.
+[kneels] And upon my knees
+I charm you, by my once-commended beauty,
+By all your vows of love and that great vow
+Which did incorporate and make us one
+That you unfold to me, your self, your half,
+Why you are heavy, and what men tonight
+Have had to resort to you. For here have been
+Some six or seven who did hide their faces
+Even from darkness.",0.889,0.62486
+julius-caesar,Julius Caesar,main,2,1,4,250,speech,BRUTUS,BRUTUS,"Kneel not, gentle Portia.",0.4588,-0.51606
+julius-caesar,Julius Caesar,main,2,1,4,251,speech,PORTIA,PORTIA,"[rising] I should not need if you were gentle, Brutus.
+Within the bond of marriage, tell me, Brutus,
+Is it excepted I should know no secrets
+That appertain to you? Am I yourself
+But, as it were, in sort or limitation,
+To keep with you at meals, comfort your bed,
+And talk to you sometimes?
+Dwell I but in the suburbs
+Of your good pleasure? If it be no more,
+Portia is Brutus' harlot, not his wife.",-0.4836,-0.54739
+julius-caesar,Julius Caesar,main,2,1,4,252,speech,BRUTUS,BRUTUS,"You are my true and honorable wife,
+As dear to me as are the ruddy drops
+That visit my sad heart.",0.9022,0.83741
+julius-caesar,Julius Caesar,main,2,1,4,253,speech,PORTIA,PORTIA,"If this were true, then should I know this secret.
+I grant I am a woman, but withal
+A woman that Lord Brutus took to wife.
+I grant I am a woman, but withal
+A woman well-reputed, Cato’s daughter.
+Think you I am no stronger than my sex,
+Being so fathered and so husbanded?
+Tell me your counsels. I will not disclose 'em.
+I have made strong proof of my constancy,
+Giving myself a voluntary wound
+Here in the thigh. Can I bear that with patience,
+And not my husband’s secrets?",0.8143,0.01794
+julius-caesar,Julius Caesar,main,2,1,4,254,speech,BRUTUS,BRUTUS,"O ye gods,
+Render me worthy of this noble wife!",0.7345,0.29579
+julius-caesar,Julius Caesar,main,2,1,4,255,speech,BRUTUS,BRUTUS,"Hark, hark! One knocks. Portia, go in awhile.
+And by and by thy bosom shall partake
+The secrets of my heart.
+All my engagements I will construe to thee,
+All the charactery of my sad brows.
+Leave me with haste.",0.2942,0.36214
+julius-caesar,Julius Caesar,main,2,1,4,256,stage_direction,,,PORTIA exits.,0.0,-0.01957
+julius-caesar,Julius Caesar,main,2,1,4,257,speech,BRUTUS,BRUTUS,"Lucius, who’s that knocking?",0.0,-0.42617
+julius-caesar,Julius Caesar,main,2,1,4,258,stage_direction,,,LUCIUS and LIGARIUS enter. Ligarius wears a handkerchief wrapped around his head.,0.0,0.00494
+julius-caesar,Julius Caesar,main,2,1,4,259,speech,LUCIUS,LUCIUS,He is a sick man that would speak with you.,-0.2023,0.25093
+julius-caesar,Julius Caesar,main,2,1,4,260,speech,BRUTUS,BRUTUS,"Caius Ligarius, that Metellus spake of. —
+Boy, stand aside. —Caius Ligarius, how?",0.0,0.00579
+julius-caesar,Julius Caesar,main,2,1,4,261,speech,LIGARIUS,LIGARIUS,Vouchsafe good morrow from a feeble tongue.,0.4939,-0.1792
+julius-caesar,Julius Caesar,main,2,1,4,262,speech,BRUTUS,BRUTUS,"O, what a time have you chose out, brave Caius,
+To wear a kerchief! Would you were not sick!",0.764,0.67791
+julius-caesar,Julius Caesar,main,2,1,4,263,speech,LIGARIUS,LIGARIUS,"I am not sick if Brutus have in hand
+Any exploit worthy the name of honor.",0.8443,-0.33376
+julius-caesar,Julius Caesar,main,2,1,4,264,speech,BRUTUS,BRUTUS,"Such an exploit have I in hand, Ligarius,
+Had you a healthful ear to hear of it.",0.3818,-0.17791
+julius-caesar,Julius Caesar,main,2,1,4,265,speech,LIGARIUS,LIGARIUS,"[removes his kerchief]
+By all the gods that Romans bow before,
+I here discard my sickness! Soul of Rome,
+Brave son derived from honorable loins,
+Thou, like an exorcist, hast conjured up
+My mortifièd spirit. Now bid me run,
+And I will strive with things impossible,
+Yea, get the better of them. What’s to do?",0.9017,0.80024
+julius-caesar,Julius Caesar,main,2,1,4,266,speech,BRUTUS,BRUTUS,A piece of work that will make sick men whole.,-0.1531,-0.29107
+julius-caesar,Julius Caesar,main,2,1,4,267,speech,LIGARIUS,LIGARIUS,But are not some whole that we must make sick?,-0.2263,-0.26651
+julius-caesar,Julius Caesar,main,2,1,4,268,speech,BRUTUS,BRUTUS,"That must we also. What it is, my Caius,
+I shall unfold to thee as we are going
+To whom it must be done.",0.3818,0.2921
+julius-caesar,Julius Caesar,main,2,1,4,269,speech,LIGARIUS,LIGARIUS,"Set on your foot,
+And with a heart new-fired I follow you,
+To do I know not what. But it sufficeth
+That Brutus leads me on.",0.2263,0.47438
+julius-caesar,Julius Caesar,main,2,1,4,270,stage_direction,,,Thunder sounds.,0.0,0.24235
+julius-caesar,Julius Caesar,main,2,1,4,271,speech,BRUTUS,BRUTUS,"Follow me, then.",0.0,0.0266
+julius-caesar,Julius Caesar,main,2,1,4,272,stage_direction,,,They exit.,0.0,-0.27456
+julius-caesar,Julius Caesar,main,2,2,5,273,stage_direction,,,"Thunder and lightning. CAESAR enters, wearing a nightgown.",0.0,0.43229
+julius-caesar,Julius Caesar,main,2,2,5,274,speech,CAESAR,CAESAR,"Nor heaven nor earth have been at peace tonight.
+Thrice hath Calphurnia in her sleep cried out,
+“Help, ho! They murder Caesar!” —Who’s within?",-0.3147,-0.42511
+julius-caesar,Julius Caesar,main,2,2,5,275,stage_direction,,,A SERVANT enters.,0.0,0.01004
+julius-caesar,Julius Caesar,main,2,2,5,276,speech,SERVANT,SERVANT,My lord.,0.0,-0.2514
+julius-caesar,Julius Caesar,main,2,2,5,277,speech,CAESAR,CAESAR,"Go bid the priests do present sacrifice
+And bring me their opinions of success.",0.0,0.02755
+julius-caesar,Julius Caesar,main,2,2,5,278,speech,SERVANT,SERVANT,"I will, my lord.",0.0,0.76891
+julius-caesar,Julius Caesar,main,2,2,5,279,stage_direction,,,The SERVANT exits.,0.0,0.0105
+julius-caesar,Julius Caesar,main,2,2,5,280,stage_direction,,,CALPHURNIA enters.,0.0,0.02319
+julius-caesar,Julius Caesar,main,2,2,5,281,speech,CALPHURNIA,CALPHURNIA,"What mean you, Caesar? Think you to walk forth?
+You shall not stir out of your house today.",0.0,-0.75427
+julius-caesar,Julius Caesar,main,2,2,5,282,speech,CAESAR,CAESAR,"Caesar shall forth. The things that threatened me
+Ne'er looked but on my back. When they shall see
+The face of Caesar, they are vanishèd.",-0.4854,-0.85111
+julius-caesar,Julius Caesar,main,2,2,5,283,speech,CALPHURNIA,CALPHURNIA,"Caesar, I never stood on ceremonies,
+Yet now they fright me. There is one within,
+Besides the things that we have heard and seen,
+Recounts most horrid sights seen by the watch.
+A lioness hath whelpèd in the streets,
+And graves have yawned and yielded up their dead.
+Fierce fiery warriors fought upon the clouds
+In ranks and squadrons and right form of war,
+Which drizzled blood upon the Capitol.
+The noise of battle hurtled in the air.
+Horses did neigh, and dying men did groan,
+And ghosts did shriek and squeal about the streets.
+O Caesar! These things are beyond all use,
+And I do fear them.",-0.9857,-0.81973
+julius-caesar,Julius Caesar,main,2,2,5,284,speech,CAESAR,CAESAR,"What can be avoided
+Whose end is purposed by the mighty gods?
+Yet Caesar shall go forth, for these predictions
+Are to the world in general as to Caesar.",-0.2263,-0.22687
+julius-caesar,Julius Caesar,main,2,2,5,285,speech,CALPHURNIA,CALPHURNIA,"When beggars die there are no comets seen.
+The heavens themselves blaze forth the death of
+princes.",-0.5267,-0.09138
+julius-caesar,Julius Caesar,main,2,2,5,286,speech,CAESAR,CAESAR,"Cowards die many times before their deaths.
+The valiant never taste of death but once.
+Of all the wonders that I yet have heard,
+It seems to me most strange that men should fear,
+Seeing that death, a necessary end,
+Will come when it will come.",-0.8979,0.09499
+julius-caesar,Julius Caesar,main,2,2,5,287,stage_direction,,,The SERVANT enters.,0.0,0.01717
+julius-caesar,Julius Caesar,main,2,2,5,288,speech,CAESAR,CAESAR,What say the augurers?,0.0,-0.01046
+julius-caesar,Julius Caesar,main,2,2,5,289,speech,SERVANT,SERVANT,"They would not have you to stir forth today.
+Plucking the entrails of an offering forth,
+They could not find a heart within the beast.",-0.471,-0.53323
+julius-caesar,Julius Caesar,main,2,2,5,290,speech,CAESAR,CAESAR,"The gods do this in shame of cowardice.
+Caesar should be a beast without a heart
+If he should stay at home today for fear.
+No, Caesar shall not. Danger knows full well
+That Caesar is more dangerous than he.
+We are two lions littered in one day,
+And I the elder and more terrible.
+And Caesar shall go forth.",-0.955,-0.33701
+julius-caesar,Julius Caesar,main,2,2,5,291,speech,CALPHURNIA,CALPHURNIA,"Alas, my lord,
+Your wisdom is consumed in confidence.
+Do not go forth today. Call it my fear
+That keeps you in the house, and not your own.
+We’ll send Mark Antony to the senate house,
+And he shall say you are not well today.
+[kneels] Let me, upon my knee, prevail in this.",-0.6688,-0.76944
+julius-caesar,Julius Caesar,main,2,2,5,292,speech,CAESAR,CAESAR,"Mark Antony shall say I am not well,
+And for thy humor I will stay at home.",-0.2057,-0.22232
+julius-caesar,Julius Caesar,main,2,2,5,293,stage_direction,,,CALPHURNIA stands.,0.0,0.4255
+julius-caesar,Julius Caesar,main,2,2,5,294,stage_direction,,,DECIUS enters.,0.0,0.00761
+julius-caesar,Julius Caesar,main,2,2,5,295,speech,CAESAR,CAESAR,Here’s Decius Brutus. He shall tell them so.,0.0,0.33992
+julius-caesar,Julius Caesar,main,2,2,5,296,speech,DECIUS,DECIUS,"Caesar, all hail! Good morrow, worthy Caesar.
+I come to fetch you to the senate house.",0.7574,0.59341
+julius-caesar,Julius Caesar,main,2,2,5,297,speech,CAESAR,CAESAR,"And you are come in very happy time
+To bear my greeting to the senators
+And tell them that I will not come today.
+“Cannot” is false, and that I dare not, falser.
+I will not come today. Tell them so, Decius.",0.4215,-0.74944
+julius-caesar,Julius Caesar,main,2,2,5,298,speech,CALPHURNIA,CALPHURNIA,Say he is sick.,-0.5106,-0.40284
+julius-caesar,Julius Caesar,main,2,2,5,299,speech,CAESAR,CAESAR,"Shall Caesar send a lie?
+Have I in conquest stretched mine arm so far
+To be afraid to tell graybeards the truth? Decius, go
+tell them Caesar will not come.",0.3352,-0.64077
+julius-caesar,Julius Caesar,main,2,2,5,300,speech,DECIUS,DECIUS,"Most mighty Caesar, let me know some cause,
+Lest I be laughed at when I tell them so.",0.4588,-0.08803
+julius-caesar,Julius Caesar,main,2,2,5,301,speech,CAESAR,CAESAR,"The cause is in my will. I will not come.
+That is enough to satisfy the senate.
+But for your private satisfaction,
+Because I love you, I will let you know.
+Calphurnia here, my wife, stays me at home.
+She dreamt tonight she saw my statue,
+Which, like a fountain with an hundred spouts,
+Did run pure blood. And many lusty Romans
+Came smiling and did bathe their hands in it.
+And these does she apply for warnings and portents
+And evils imminent, and on her knee
+Hath begged that I will stay at home today.",0.9451,0.46259
+julius-caesar,Julius Caesar,main,2,2,5,302,speech,DECIUS,DECIUS,"This dream is all amiss interpreted.
+It was a vision fair and fortunate.
+Your statue spouting blood in many pipes,
+In which so many smiling Romans bathed,
+Signifies that from you great Rome shall suck
+Reviving blood, and that great men shall press
+For tinctures, stains, relics, and cognizance.
+This by Calphurnia’s dream is signified.",0.9766,0.38836
+julius-caesar,Julius Caesar,main,2,2,5,303,speech,CAESAR,CAESAR,And this way have you well expounded it.,0.4927,0.46853
+julius-caesar,Julius Caesar,main,2,2,5,304,speech,DECIUS,DECIUS,"I have, when you have heard what I can say.
+And know it now: the senate have concluded
+To give this day a crown to mighty Caesar.
+If you shall send them word you will not come,
+Their minds may change. Besides, it were a mock
+Apt to be rendered for someone to say,
+“Break up the senate till another time
+When Caesar’s wife shall meet with better dreams.”
+If Caesar hide himself, shall they not whisper,
+“Lo, Caesar is afraid?”
+Pardon me, Caesar. For my dear, dear love
+To your proceeding bids me tell you this,
+And reason to my love is liable.",0.9613,-0.43348
+julius-caesar,Julius Caesar,main,2,2,5,305,speech,CAESAR,CAESAR,"How foolish do your fears seem now, Calphurnia!
+I am ashamèd I did yield to them.
+Give me my robe, for I will go.",-0.807,0.54024
+julius-caesar,Julius Caesar,main,2,2,5,306,stage_direction,,,"BRUTUS, LIGARIUS, METELLUS, CASCA, TREBONIUS, CINNA, and PUBLIUS enter.",0.0,0.02575
+julius-caesar,Julius Caesar,main,2,2,5,307,speech,CAESAR,CAESAR,"And look, where Publius is come to fetch me.",0.0,0.1649
+julius-caesar,Julius Caesar,main,2,2,5,308,speech,PUBLIUS,PUBLIUS,"Good morrow, Caesar.",0.4404,0.13869
+julius-caesar,Julius Caesar,main,2,2,5,309,speech,CAESAR,CAESAR,"Welcome, Publius.
+—What, Brutus, are you stirred so early too?
+—Good morrow, Casca. —Caius Ligarius,
+Caesar was ne'er so much your enemy
+As that same ague which hath made you lean.
+—What is ’t o'clock?",0.8515,-0.76827
+julius-caesar,Julius Caesar,main,2,2,5,310,speech,BRUTUS,BRUTUS,"Caesar, ’tis strucken eight.",-0.25,0.0244
+julius-caesar,Julius Caesar,main,2,2,5,311,speech,CAESAR,CAESAR,I thank you for your pains and courtesy.,0.3182,0.21189
+julius-caesar,Julius Caesar,main,2,2,5,312,stage_direction,,,ANTONY enters.,0.0,0.01369
+julius-caesar,Julius Caesar,main,2,2,5,313,speech,CAESAR,CAESAR,"See, Antony, that revels long a-nights,
+Is notwithstanding up. —Good morrow, Antony.",0.6808,-0.3334
+julius-caesar,Julius Caesar,main,2,2,5,314,speech,ANTONY,ANTONY,So to most noble Caesar.,0.5095,-0.09042
+julius-caesar,Julius Caesar,main,2,2,5,315,speech,CAESAR,CAESAR,"Bid them prepare within.
+I am to blame to be thus waited for.
+—Now, Cinna. —Now, Metellus. —What, Trebonius,
+I have an hour’s talk in store for you.
+Remember that you call on me today.
+Be near me, that I may remember you.",-0.1531,0.30886
+julius-caesar,Julius Caesar,main,2,2,5,316,speech,TREBONIUS,TREBONIUS,"Caesar, I will. [aside] And so near will I be
+That your best friends shall wish I had been further.",0.875,0.8034
+julius-caesar,Julius Caesar,main,2,2,5,317,speech,CAESAR,CAESAR,"Good friends, go in and taste some wine with me.
+And we, like friends, will straightway go together.",0.886,0.45088
+julius-caesar,Julius Caesar,main,2,2,5,318,speech,BRUTUS,BRUTUS,"[aside] That every “like” is not the same, O Caesar,
+The heart of Brutus earns to think upon.",0.6908,-0.37944
+julius-caesar,Julius Caesar,main,2,2,5,319,stage_direction,,,All exit.,0.0,-0.27456
+julius-caesar,Julius Caesar,main,2,3,6,320,stage_direction,,,"ARTEMIDORUS enters, reading a letter.",0.0,0.0099
+julius-caesar,Julius Caesar,main,2,3,6,321,speech,ARTEMIDORUS,ARTEMIDORUS,"[reads aloud]
+“Caesar, beware of Brutus. Take heed of Cassius. Come
+not near Casca. Have an eye to Cinna. Trust not
+Trebonius. Mark well Metellus Cimber. Decius Brutus
+loves thee not. Thou hast wronged Caius Ligarius. There
+is but one mind in all these men, and it is bent against
+Caesar. If thou beest not immortal, look about you.
+Security gives way to conspiracy. The mighty gods defend
+thee!
+Thy lover,
+Artemidorus”
+Here will I stand till Caesar pass along,
+And as a suitor will I give him this.
+My heart laments that virtue cannot live
+Out of the teeth of emulation.
+If thou read this, O Caesar, thou mayst live.
+If not, the Fates with traitors do contrive.",0.9239,-0.80047
+julius-caesar,Julius Caesar,main,2,3,6,322,stage_direction,,,He exits.,0.0,0.01202
+julius-caesar,Julius Caesar,main,2,4,7,323,stage_direction,,,PORTIA and LUCIUS enter.,0.0,0.08931
+julius-caesar,Julius Caesar,main,2,4,7,324,speech,PORTIA,PORTIA,"I prithee, boy, run to the senate house.
+Stay not to answer me, but get thee gone.
+Why dost thou stay?",0.0,-0.53722
+julius-caesar,Julius Caesar,main,2,4,7,325,speech,LUCIUS,LUCIUS,"To know my errand, madam.",0.0,0.01062
+julius-caesar,Julius Caesar,main,2,4,7,326,speech,PORTIA,PORTIA,"I would have had thee there and here again
+Ere I can tell thee what thou shouldst do there.
+—O constancy, be strong upon my side,
+Set a huge mountain ’tween my heart and tongue!
+I have a man’s mind but a woman’s might.
+How hard it is for women to keep counsel!
+—Art thou here yet?",0.8353,0.77245
+julius-caesar,Julius Caesar,main,2,4,7,327,speech,LUCIUS,LUCIUS,"Madam, what should I do?
+Run to the Capitol, and nothing else?
+And so return to you, and nothing else?",0.0,-0.11482
+julius-caesar,Julius Caesar,main,2,4,7,328,speech,PORTIA,PORTIA,"Yes, bring me word, boy, if thy lord look well,
+For he went sickly forth. And take good note
+What Caesar doth, what suitors press to him.
+Hark, boy! What noise is that?",0.1007,0.33668
+julius-caesar,Julius Caesar,main,2,4,7,329,speech,LUCIUS,LUCIUS,"I hear none, madam.",0.0,-0.16431
+julius-caesar,Julius Caesar,main,2,4,7,330,speech,PORTIA,PORTIA,"Prithee, listen well.
+I heard a bustling rumor like a fray,
+And the wind brings it from the Capitol.",0.5574,0.02415
+julius-caesar,Julius Caesar,main,2,4,7,331,speech,LUCIUS,LUCIUS,"Sooth, madam, I hear nothing.",0.4404,-0.54046
+julius-caesar,Julius Caesar,main,2,4,7,332,stage_direction,,,The SOOTHSAYER enters.,0.0,0.02313
+julius-caesar,Julius Caesar,main,2,4,7,333,speech,PORTIA,PORTIA,"Come hither, fellow. Which way hast thou been?",0.0,0.20703
+julius-caesar,Julius Caesar,main,2,4,7,334,speech,SOOTHSAYER,SOOTHSAYER,"At mine own house, good lady.",0.4404,0.49939
+julius-caesar,Julius Caesar,main,2,4,7,335,speech,PORTIA,PORTIA,What is ’t o'clock?,0.0,-0.01066
+julius-caesar,Julius Caesar,main,2,4,7,336,speech,SOOTHSAYER,SOOTHSAYER,"About the ninth hour, lady.",0.0,0.05964
+julius-caesar,Julius Caesar,main,2,4,7,337,speech,PORTIA,PORTIA,Is Caesar yet gone to the Capitol?,0.0,-0.01048
+julius-caesar,Julius Caesar,main,2,4,7,338,speech,SOOTHSAYER,SOOTHSAYER,"Madam, not yet. I go to take my stand
+To see him pass on to the Capitol.",0.0,-0.21493
+julius-caesar,Julius Caesar,main,2,4,7,339,speech,PORTIA,PORTIA,"Thou hast some suit to Caesar, hast thou not?",0.0,0.13359
+julius-caesar,Julius Caesar,main,2,4,7,340,speech,SOOTHSAYER,SOOTHSAYER,"That I have, lady. If it will please Caesar
+To be so good to Caesar as to hear me,
+I shall beseech him to befriend himself.",0.8074,0.21989
+julius-caesar,Julius Caesar,main,2,4,7,341,speech,PORTIA,PORTIA,"Why, know’st thou any harm’s intended towards him?",-0.5423,-0.01781
+julius-caesar,Julius Caesar,main,2,4,7,342,speech,SOOTHSAYER,SOOTHSAYER,"None that I know will be; much that I fear may chance.
+Good morrow to you. Here the street is narrow.
+The throng that follows Caesar at the heels,
+Of senators, of praetors, common suitors,
+Will crowd a feeble man almost to death.
+I’ll get me to a place more void, and there
+Speak to great Caesar as he comes along.",-0.2222,-0.56988
+julius-caesar,Julius Caesar,main,2,4,7,343,stage_direction,,,He exits.,0.0,0.01202
+julius-caesar,Julius Caesar,main,2,4,7,344,speech,PORTIA,PORTIA,"I must go in. [aside] Ay me, how weak a thing
+The heart of woman is! O Brutus,
+The heavens speed thee in thine enterprise!
+Sure, the boy heard me. [to LUCIUS] Brutus hath a suit
+That Caesar will not grant.—Oh, I grow faint.—
+Run, Lucius, and commend me to my lord.
+Say I am merry. Come to me again,
+And bring me word what he doth say to thee.",0.9476,0.6156
+julius-caesar,Julius Caesar,main,2,4,7,345,stage_direction,,,They exit in opposite directions.,0.0,-0.00057
+julius-caesar,Julius Caesar,main,3,1,8,346,stage_direction,,,"A trumpet sounds. CAESAR, BRUTUS, CASSIUS, CASCA, DECIUS, METELLUS, TREBONIUS, CINNA, ANTONY, LEPIDUS, POPILLIUS, and PUBLIUS enter, along with a crowd that includes ARTEMIDORUS and the SOOTHSAYER .",0.0,0.0143
+julius-caesar,Julius Caesar,main,3,1,8,347,speech,CAESAR,CAESAR,[to the SOOTHSAYER] The ides of March are come.,0.0,0.08367
+julius-caesar,Julius Caesar,main,3,1,8,348,speech,SOOTHSAYER,SOOTHSAYER,"Ay, Caesar, but not gone.",0.2144,-0.24415
+julius-caesar,Julius Caesar,main,3,1,8,349,speech,ARTEMIDORUS,ARTEMIDORUS,"[offering his letter] Hail, Caesar! Read this schedule.",0.1511,0.45513
+julius-caesar,Julius Caesar,main,3,1,8,350,speech,DECIUS,DECIUS,"[offering CAESAR another paper]
+Trebonius doth desire you to o'er-read,
+At your best leisure, this his humble suit.",0.6369,0.37917
+julius-caesar,Julius Caesar,main,3,1,8,351,speech,ARTEMIDORUS,ARTEMIDORUS,"O Caesar, read mine first, for mine’s a suit
+That touches Caesar nearer. Read it, great Caesar.",0.6249,0.69182
+julius-caesar,Julius Caesar,main,3,1,8,352,speech,CAESAR,CAESAR,What touches us ourself shall be last served.,-0.0516,0.08021
+julius-caesar,Julius Caesar,main,3,1,8,353,speech,ARTEMIDORUS,ARTEMIDORUS,"Delay not, Caesar. Read it instantly.",-0.3182,-0.14975
+julius-caesar,Julius Caesar,main,3,1,8,354,speech,CAESAR,CAESAR,"What, is the fellow mad?",-0.34,-0.39514
+julius-caesar,Julius Caesar,main,3,1,8,355,speech,PUBLIUS,PUBLIUS,"[to ARTEMIDORUS] Sirrah, give place.",0.0,0.01267
+julius-caesar,Julius Caesar,main,3,1,8,356,speech,CASSIUS,CASSIUS,"[to ARTEMIDORUS]
+What, urge you your petitions in the street?
+Come to the Capitol.",0.0,-0.03732
+julius-caesar,Julius Caesar,main,3,1,8,357,stage_direction,,,CAESAR and the crowd with him go up to the senate house.,0.0,0.10866
+julius-caesar,Julius Caesar,main,3,1,8,358,speech,POPILLIUS,POPILLIUS,[to CASSIUS] I wish your enterprise today may thrive.,0.7269,0.29708
+julius-caesar,Julius Caesar,main,3,1,8,359,speech,CASSIUS,CASSIUS,"What enterprise, Popillius?",0.0,-0.02865
+julius-caesar,Julius Caesar,main,3,1,8,360,speech,POPILLIUS,POPILLIUS,Fare you well.,0.7096,-0.44417
+julius-caesar,Julius Caesar,main,3,1,8,361,speech,BRUTUS,BRUTUS,[to CASSIUS] What said Popillius Lena?,0.0,0.00681
+julius-caesar,Julius Caesar,main,3,1,8,362,speech,CASSIUS,CASSIUS,"[aside to BRUTUS]
+He wished today our enterprise might thrive.
+I fear our purpose is discoverèd.",0.4939,-0.3879
+julius-caesar,Julius Caesar,main,3,1,8,363,speech,BRUTUS,BRUTUS,Look how he makes to Caesar. Mark him.,0.0,0.38093
+julius-caesar,Julius Caesar,main,3,1,8,364,speech,CASSIUS,CASSIUS,"Casca, be sudden, for we fear prevention
+—Brutus, what shall be done? If this be known,
+Cassius or Caesar never shall turn back,
+For I will slay myself.",-0.7758,-0.06243
+julius-caesar,Julius Caesar,main,3,1,8,365,speech,BRUTUS,BRUTUS,"Cassius, be constant.
+Popillius Lena speaks not of our purposes.
+For, look, he smiles, and Caesar doth not change.",0.6486,-0.43893
+julius-caesar,Julius Caesar,main,3,1,8,366,speech,CASSIUS,CASSIUS,"Trebonius knows his time. For, look you, Brutus.
+He draws Mark Antony out of the way.",0.0,0.38578
+julius-caesar,Julius Caesar,main,3,1,8,367,stage_direction,,,TREBONIUS and ANTONY exit.,0.0,0.03454
+julius-caesar,Julius Caesar,main,3,1,8,368,speech,DECIUS,DECIUS,"Where is Metellus Cimber? Let him go
+And presently prefer his suit to Caesar.",0.0,-0.05818
+julius-caesar,Julius Caesar,main,3,1,8,369,speech,BRUTUS,BRUTUS,He is addressed. Press near and second him.,0.0,0.35114
+julius-caesar,Julius Caesar,main,3,1,8,370,speech,CINNA,CINNA,"Casca, you are the first that rears your hand.",0.4939,0.40039
+julius-caesar,Julius Caesar,main,3,1,8,371,speech,CAESAR,CAESAR,"Are we all ready? What is now amiss
+That Caesar and his senate must redress?",-0.1431,-0.10969
+julius-caesar,Julius Caesar,main,3,1,8,372,speech,METELLUS,METELLUS,"[kneeling]
+Most high, most mighty, and most puissant Caesar,
+Metellus Cimber throws before thy seat
+An humble heart—",0.4754,0.31813
+julius-caesar,Julius Caesar,main,3,1,8,373,speech,CAESAR,CAESAR,"I must prevent thee, Cimber.
+These couchings and these lowly courtesies
+Might fire the blood of ordinary men
+And turn preordinance and first decree
+Into the law of children. Be not fond,
+To think that Caesar bears such rebel blood
+That will be thawed from the true quality
+With that which melteth fools —I mean, sweet words,
+Low-crookèd curtsies, and base spaniel fawning.
+Thy brother by decree is banishèd.
+If thou dost bend and pray and fawn for him,
+I spurn thee like a cur out of my way.
+Know, Caesar doth not wrong, nor without cause
+Will he be satisfied.",-0.9035,-0.82907
+julius-caesar,Julius Caesar,main,3,1,8,374,speech,METELLUS,METELLUS,"Is there no voice more worthy than my own
+To sound more sweetly in great Caesar’s ear
+For the repealing of my banished brother?",0.7184,-0.45667
+julius-caesar,Julius Caesar,main,3,1,8,375,speech,BRUTUS,BRUTUS,"[kneeling] I kiss thy hand, but not in flattery,
+Caesar,
+Desiring thee that Publius Cimber may
+Have an immediate freedom of repeal.",0.4599,-0.3943
+julius-caesar,Julius Caesar,main,3,1,8,376,speech,CAESAR,CAESAR,"What, Brutus?",0.0,-0.06188
+julius-caesar,Julius Caesar,main,3,1,8,377,speech,CASSIUS,CASSIUS,"[kneeling] Pardon, Caesar. Caesar, pardon.
+As low as to thy foot doth Cassius fall
+To beg enfranchisement for Publius Cimber.",0.5574,-0.54836
+julius-caesar,Julius Caesar,main,3,1,8,378,speech,CAESAR,CAESAR,"I could be well moved if I were as you.
+If I could pray to move, prayers would move me.
+But I am constant as the northern star,
+Of whose true-fixed and resting quality
+There is no fellow in the firmament.
+The skies are painted with unnumbered sparks.
+They are all fire and every one doth shine,
+But there’s but one in all doth hold his place.
+So in the world. 'Tis furnished well with men,
+And men are flesh and blood, and apprehensive,
+Yet in the number I do know but one
+That unassailable holds on his rank,
+Unshaked of motion . And that I am he
+Let me a little show it even in this:
+That I was constant Cimber should be banished,
+And constant do remain to keep him so.",0.6187,0.8238
+julius-caesar,Julius Caesar,main,3,1,8,379,speech,CINNA,CINNA,[kneeling] O Caesar—,0.0,-0.18661
+julius-caesar,Julius Caesar,main,3,1,8,380,speech,CAESAR,CAESAR,Hence! Wilt thou lift up Olympus?,0.0,0.22043
+julius-caesar,Julius Caesar,main,3,1,8,381,speech,DECIUS,DECIUS,[kneeling] Great Caesar—,0.6249,-0.33293
+julius-caesar,Julius Caesar,main,3,1,8,382,speech,CAESAR,CAESAR,Doth not Brutus bootless kneel?,-0.4215,-0.15923
+julius-caesar,Julius Caesar,main,3,1,8,383,speech,CASCA,CASCA,"Speak, hands, for me!",-0.9286,0.51188
+julius-caesar,Julius Caesar,main,3,1,8,384,speech,CAESAR,CAESAR,"Et tu, Bruté? —Then fall, Caesar.
+[dies]",-0.5994,0.37476
+julius-caesar,Julius Caesar,main,3,1,8,385,speech,CINNA,CINNA,"Liberty! Freedom! Tyranny is dead!
+Run hence, proclaim, cry it about the streets.",0.6341,-0.66633
+julius-caesar,Julius Caesar,main,3,1,8,386,speech,CASSIUS,CASSIUS,"Some to the common pulpits, and cry out,
+“Liberty, freedom, and enfranchisement!”",0.3382,0.49177
+julius-caesar,Julius Caesar,main,3,1,8,387,stage_direction,,,Confusion. Some citizens and senators exit.,-0.296,-0.3387
+julius-caesar,Julius Caesar,main,3,1,8,388,speech,BRUTUS,BRUTUS,"People and senators, be not affrighted.
+Fly not. Stand still. Ambition’s debt is paid.",-0.7269,-0.67782
+julius-caesar,Julius Caesar,main,3,1,8,389,speech,CASCA,CASCA,"Go to the pulpit, Brutus.",0.0,0.32475
+julius-caesar,Julius Caesar,main,3,1,8,390,speech,DECIUS,DECIUS,And Cassius too.,0.0,-0.22848
+julius-caesar,Julius Caesar,main,3,1,8,391,speech,BRUTUS,BRUTUS,Where’s Publius?,0.0,-0.02136
+julius-caesar,Julius Caesar,main,3,1,8,392,speech,CINNA,CINNA,"Here, quite confounded with this mutiny.",-0.4215,-0.08549
+julius-caesar,Julius Caesar,main,3,1,8,393,speech,METELLUS,METELLUS,"Stand fast together, lest some friend of Caesar’s
+Should chance—",0.4939,0.21084
+julius-caesar,Julius Caesar,main,3,1,8,394,speech,BRUTUS,BRUTUS,"Talk not of standing. —Publius, good cheer.
+There is no harm intended to your person,
+Nor to no Roman else. So tell them, Publius.",-0.0516,-0.56608
+julius-caesar,Julius Caesar,main,3,1,8,395,speech,CASSIUS,CASSIUS,"And leave us, Publius, lest that the people,
+Rushing on us, should do your age some mischief.",-0.5719,-0.13352
+julius-caesar,Julius Caesar,main,3,1,8,396,speech,BRUTUS,BRUTUS,"Do so. And let no man abide this deed
+But we the doers.",0.1154,0.00373
+julius-caesar,Julius Caesar,main,3,1,8,397,stage_direction,,,PUBLIUS exits.,0.0,-0.00048
+julius-caesar,Julius Caesar,main,3,1,8,398,stage_direction,,,TREBONIUS enters.,0.0,0.01194
+julius-caesar,Julius Caesar,main,3,1,8,399,speech,CASSIUS,CASSIUS,Where is Antony?,0.0,-0.0348
+julius-caesar,Julius Caesar,main,3,1,8,400,speech,TREBONIUS,TREBONIUS,"Fled to his house amazed.
+Men, wives, and children stare, cry out, and run
+As it were doomsday.",-0.8074,-0.02025
+julius-caesar,Julius Caesar,main,3,1,8,401,speech,BRUTUS,BRUTUS,"Fates, we will know your pleasures.
+That we shall die, we know. 'Tis but the time,
+And drawing days out, that men stand upon.",-0.5423,-0.20202
+julius-caesar,Julius Caesar,main,3,1,8,402,speech,CASSIUS,CASSIUS,"Why, he that cuts off twenty years of life
+Cuts off so many years of fearing death.",-0.8176,-0.43253
+julius-caesar,Julius Caesar,main,3,1,8,403,speech,BRUTUS,BRUTUS,"Grant that, and then is death a benefit.
+So are we Caesar’s friends, that have abridged
+His time of fearing death. Stoop, Romans, stoop,
+And let us bathe our hands in Caesar’s blood
+Up to the elbows, and besmear our swords.
+Then walk we forth, even to the marketplace,
+And waving our red weapons o'er our heads
+Let’s all cry, “Peace, freedom, and liberty!”",-0.8777,0.45462
+julius-caesar,Julius Caesar,main,3,1,8,404,speech,CASSIUS,CASSIUS,"Stoop, then, and wash.",-0.6124,0.00789
+julius-caesar,Julius Caesar,main,3,1,8,405,speech,CASSIUS,CASSIUS,"How many ages hence
+Shall this our lofty scene be acted over
+In states unborn and accents yet unknown!",0.0,0.15581
+julius-caesar,Julius Caesar,main,3,1,8,406,speech,BRUTUS,BRUTUS,"How many times shall Caesar bleed in sport,
+That now on Pompey’s basis lies along
+No worthier than the dust!",-0.6114,-0.48686
+julius-caesar,Julius Caesar,main,3,1,8,407,speech,CASSIUS,CASSIUS,"So oft as that shall be,
+So often shall the knot of us be called
+“The men that gave their country liberty.”",0.7003,0.57232
+julius-caesar,Julius Caesar,main,3,1,8,408,speech,DECIUS,DECIUS,"What, shall we forth?",0.2732,-0.00989
+julius-caesar,Julius Caesar,main,3,1,8,409,speech,CASSIUS,CASSIUS,"Ay, every man away.
+Brutus shall lead, and we will grace his heels
+With the most boldest and best hearts of Rome.",0.93,0.62845
+julius-caesar,Julius Caesar,main,3,1,8,410,stage_direction,,,ANTONY'S SERVANT enters.,0.0,0.01791
+julius-caesar,Julius Caesar,main,3,1,8,411,speech,BRUTUS,BRUTUS,Soft! Who comes here? A friend of Antony’s.,0.5411,0.16585
+julius-caesar,Julius Caesar,main,3,1,8,412,speech,ANTONY'S SERVANT,ANTONY S SERVANT,"[kneeling] Thus, Brutus, did my master bid me kneel.
+[falls prostrate] Thus did Mark Antony bid me fall
+down,
+And, being prostrate, thus he bade me say:
+Brutus is noble, wise, valiant, and honest.
+Caesar was mighty, bold, royal, and loving.
+Say I love Brutus, and I honor him.
+Say I feared Caesar, honored him, and loved him.
+If Brutus will vouchsafe that Antony
+May safely come to him and be resolved
+How Caesar hath deserved to lie in death,
+Mark Antony shall not love Caesar dead
+So well as Brutus living , but will follow
+The fortunes and affairs of noble Brutus
+Thorough the hazards of this untrod state
+With all true faith. So says my master Antony.",0.9903,0.5924
+julius-caesar,Julius Caesar,main,3,1,8,413,speech,BRUTUS,BRUTUS,"Thy master is a wise and valiant Roman.
+I never thought him worse.
+Tell him, so please him come unto this place,
+He shall be satisfied and, by my honor,
+Depart untouched.",0.8519,0.45609
+julius-caesar,Julius Caesar,main,3,1,8,414,speech,ANTONY'S SERVANT,ANTONY S SERVANT,[rising] I’ll fetch him presently.,0.0,0.32091
+julius-caesar,Julius Caesar,main,3,1,8,415,stage_direction,,,ANTONY'S SERVANT exits.,0.0,0.01105
+julius-caesar,Julius Caesar,main,3,1,8,416,speech,BRUTUS,BRUTUS,I know that we shall have him well to friend.,0.7269,0.45431
+julius-caesar,Julius Caesar,main,3,1,8,417,speech,CASSIUS,CASSIUS,"I wish we may. But yet have I a mind
+That fears him much, and my misgiving still
+Falls shrewdly to the purpose.",-0.6428,-0.80524
+julius-caesar,Julius Caesar,main,3,1,8,418,stage_direction,,,ANTONY enters.,0.0,0.01369
+julius-caesar,Julius Caesar,main,3,1,8,419,speech,BRUTUS,BRUTUS,"But here comes Antony.—Welcome, Mark Antony.",0.6124,0.4913
+julius-caesar,Julius Caesar,main,3,1,8,420,speech,ANTONY,ANTONY,"O mighty Caesar! Dost thou lie so low?
+Are all thy conquests, glories, triumphs, spoils,
+Shrunk to this little measure? Fare thee well.
+—I know not, gentlemen, what you intend,
+Who else must be let blood, who else is rank.
+If I myself, there is no hour so fit
+As Caesar’s death’s hour, nor no instrument
+Of half that worth as those your swords, made rich
+With the most noble blood of all this world.
+I do beseech ye, if you bear me hard,
+Now, whilst your purpled hands do reek and smoke,
+Fulfill your pleasure. Live a thousand years,
+I shall not find myself so apt to die.
+No place will please me so, no mean of death,
+As here by Caesar, and by you cut off,
+The choice and master spirits of this age.",-0.8929,-0.56873
+julius-caesar,Julius Caesar,main,3,1,8,421,speech,BRUTUS,BRUTUS,"O Antony, beg not your death of us.
+Though now we must appear bloody and cruel—
+As by our hands and this our present act
+You see we do —yet see you but our hands
+And this the bleeding business they have done.
+Our hearts you see not. They are pitiful.
+And pity to the general wrong of Rome—
+As fire drives out fire, so pity pity—
+Hath done this deed on Caesar. For your part,
+To you our swords have leaden points, Mark Antony.
+Our arms in strength of malice and our hearts
+Of brothers' temper do receive you in
+With all kind love, good thoughts, and reverence.",0.9458,-0.32518
+julius-caesar,Julius Caesar,main,3,1,8,422,speech,CASSIUS,CASSIUS,"Your voice shall be as strong as any man’s
+In the disposing of new dignities.",0.5106,0.07568
+julius-caesar,Julius Caesar,main,3,1,8,423,speech,BRUTUS,BRUTUS,"Only be patient till we have appeased
+The multitude, beside themselves with fear,
+And then we will deliver you the cause,
+Why I, that did love Caesar when I struck him,
+Have thus proceeded.",0.1027,0.05887
+julius-caesar,Julius Caesar,main,3,1,8,424,speech,ANTONY,ANTONY,"I doubt not of your wisdom.
+Let each man render me his bloody hand.
+[shakes hands with the conspirators]
+First, Marcus Brutus, will I shake with you.
+—Next, Caius Cassius, do I take your hand.
+—Now, Decius Brutus, yours. —Now yours, Metellus.
+—Yours, Cinna. —And, my valiant Casca, yours.
+—Though last, not last in love, yours, good Trebonius.
+—Gentlemen all, alas, what shall I say?
+My credit now stands on such slippery ground
+That one of two bad ways you must conceit me,
+Either a coward or a flatterer
+—That I did love thee, Caesar, O, ’tis true.
+If then thy spirit look upon us now,
+Shall it not grieve thee dearer than thy death
+To see thy Antony making his peace,
+Shaking the bloody fingers of thy foes—
+Most noble!—in the presence of thy corse?
+Had I as many eyes as thou hast wounds,
+Weeping as fast as they stream forth thy blood,
+It would become me better than to close
+In terms of friendship with thine enemies.
+Pardon me, Julius! Here wast thou bayed, brave hart;
+Here didst thou fall; and here thy hunters stand,
+Signed in thy spoil, and crimsoned in thy lethe.
+O world, thou wast the forest to this hart,
+And this indeed, O world, the heart of thee.
+How like a deer, strucken by many princes,
+Dost thou here lie!",0.6747,0.73388
+julius-caesar,Julius Caesar,main,3,1,8,425,speech,CASSIUS,CASSIUS,Mark Antony—,0.0,0.09609
+julius-caesar,Julius Caesar,main,3,1,8,426,speech,ANTONY,ANTONY,"Pardon me, Caius Cassius.
+The enemies of Caesar shall say this;
+Then, in a friend, it is cold modesty.",0.5574,-0.6829
+julius-caesar,Julius Caesar,main,3,1,8,427,speech,CASSIUS,CASSIUS,"I blame you not for praising Caesar so.
+But what compact mean you to have with us?
+Will you be pricked in number of our friends?
+Or shall we on, and not depend on you?",0.885,-0.06238
+julius-caesar,Julius Caesar,main,3,1,8,428,speech,ANTONY,ANTONY,"Therefore I took your hands, but was indeed
+Swayed from the point by looking down on Caesar.
+Friends am I with you all and love you all
+Upon this hope: that you shall give me reasons
+Why and wherein Caesar was dangerous.",0.6808,-0.78558
+julius-caesar,Julius Caesar,main,3,1,8,429,speech,BRUTUS,BRUTUS,"Or else were this a savage spectacle!
+Our reasons are so full of good regard
+That were you, Antony, the son of Caesar,
+You should be satisfied.",0.7468,0.56103
+julius-caesar,Julius Caesar,main,3,1,8,430,speech,ANTONY,ANTONY,"That’s all I seek.
+And am moreover suitor that I may
+Produce his body to the marketplace,
+And in the pulpit, as becomes a friend,
+Speak in the order of his funeral.",0.5267,-0.00794
+julius-caesar,Julius Caesar,main,3,1,8,431,speech,BRUTUS,BRUTUS,"You shall, Mark Antony.",0.0,0.16095
+julius-caesar,Julius Caesar,main,3,1,8,432,speech,CASSIUS,CASSIUS,"Brutus, a word with you .
+[aside to BRUTUS] You know not what you do.
+Do not consent
+That Antony speak in his funeral.
+Know you how much the people may be moved
+By that which he will utter?",0.0,-0.74617
+julius-caesar,Julius Caesar,main,3,1,8,433,speech,BRUTUS,BRUTUS,"[aside to CASSIUS] By your pardon.
+I will myself into the pulpit first,
+And show the reason of our Caesar’s death.
+What Antony shall speak, I will protest,
+He speaks by leave and by permission,
+And that we are contented Caesar shall
+Have all true rites and lawful ceremonies.
+It shall advantage more than do us wrong.",0.1531,0.56369
+julius-caesar,Julius Caesar,main,3,1,8,434,speech,CASSIUS,CASSIUS,"[aside to BRUTUS] I know not what may fall. I like it
+not.",0.3612,-0.60212
+julius-caesar,Julius Caesar,main,3,1,8,435,speech,BRUTUS,BRUTUS,"Mark Antony, here, take you Caesar’s body.
+You shall not in your funeral speech blame us,
+But speak all good you can devise of Caesar,
+And say you do ’t by our permission.
+Else shall you not have any hand at all
+About his funeral. And you shall speak
+In the same pulpit whereto I am going,
+After my speech is ended.",0.0946,0.07457
+julius-caesar,Julius Caesar,main,3,1,8,436,speech,ANTONY,ANTONY,"Be it so.
+I do desire no more.",0.0772,-0.28247
+julius-caesar,Julius Caesar,main,3,1,8,437,speech,BRUTUS,BRUTUS,"Prepare the body then, and follow us.",0.0,0.00391
+julius-caesar,Julius Caesar,main,3,1,8,438,stage_direction,,,Everyone exits except ANTONY.,0.0,-0.11714
+julius-caesar,Julius Caesar,main,3,1,8,439,speech,ANTONY,ANTONY,"O, pardon me, thou bleeding piece of earth,
+That I am meek and gentle with these butchers!
+Thou art the ruins of the noblest man
+That ever livèd in the tide of times.
+Woe to the hand that shed this costly blood!
+Over thy wounds now do I prophesy—
+Which, like dumb mouths, do ope their ruby lips
+To beg the voice and utterance of my tongue—
+A curse shall light upon the limbs of men.
+Domestic fury and fierce civil strife
+Shall cumber all the parts of Italy.
+Blood and destruction shall be so in use,
+And dreadful objects so familiar,
+That mothers shall but smile when they behold
+Their infants quartered with the hands of war,
+All pity choked with custom of fell deeds,
+And Caesar’s spirit, ranging for revenge,
+With Ate by his side come hot from hell,
+Shall in these confines with a monarch’s voice
+Cry “Havoc!” and let slip the dogs of war,
+That this foul deed shall smell above the earth
+With carrion men, groaning for burial.",-0.9946,-0.39205
+julius-caesar,Julius Caesar,main,3,1,8,440,stage_direction,,,OCTAVIUS' SERVANT enters.,0.0,0.01776
+julius-caesar,Julius Caesar,main,3,1,8,441,speech,ANTONY,ANTONY,"You serve Octavius Caesar, do you not?",0.0,0.03551
+julius-caesar,Julius Caesar,main,3,1,8,442,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,"I do, Mark Antony.",0.0,0.2542
+julius-caesar,Julius Caesar,main,3,1,8,443,speech,ANTONY,ANTONY,Caesar did write for him to come to Rome.,0.0,-0.00855
+julius-caesar,Julius Caesar,main,3,1,8,444,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,"He did receive his letters and is coming.
+And bid me say to you by word of mouth—
+[sees CAESAR’s body] O Caesar!—",0.0,0.73267
+julius-caesar,Julius Caesar,main,3,1,8,445,speech,ANTONY,ANTONY,"Thy heart is big. Get thee apart and weep.
+Passion, I see, is catching, for mine eyes,
+Seeing those beads of sorrow stand in thine,
+Began to water. Is thy master coming?",-0.9062,-0.29913
+julius-caesar,Julius Caesar,main,3,1,8,446,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,He lies tonight within seven leagues of Rome.,0.0,-0.05988
+julius-caesar,Julius Caesar,main,3,1,8,447,speech,ANTONY,ANTONY,"Post back with speed, and tell him what hath chanced.
+Here is a mourning Rome, a dangerous Rome,
+No Rome of safety for Octavius yet.
+Hie hence, and tell him so.—Yet, stay awhile.
+Thou shalt not back till I have borne this corse
+Into the marketplace. There shall I try,
+In my oration, how the people take
+The cruèl issue of these bloody men.
+According to the which, thou shalt discourse
+To young Octavius of the state of things.
+Lend me your hand.",-0.9442,0.27092
+julius-caesar,Julius Caesar,main,3,1,8,448,stage_direction,,,They exit with CAESAR’s body.,0.0,0.02185
+julius-caesar,Julius Caesar,main,3,2,9,449,stage_direction,,,BRUTUS and CASSIUS enter with a crowd of PLEBEIANS.,0.0,0.05347
+julius-caesar,Julius Caesar,main,3,2,9,450,speech,PLEBEIANS,PLEBEIANS,We will be satisfied! Let us be satisfied!,-0.2695,0.61768
+julius-caesar,Julius Caesar,main,3,2,9,451,speech,BRUTUS,BRUTUS,"Then follow me and give me audience, friends.
+—Cassius, go you into the other street
+And part the numbers.
+—Those that will hear me speak, let 'em stay here.
+Those that will follow Cassius, go with him,
+And public reasons shall be renderèd
+Of Caesar’s death.",-0.0516,0.04465
+julius-caesar,Julius Caesar,main,3,2,9,452,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,I will hear Brutus speak.,0.0,0.04268
+julius-caesar,Julius Caesar,main,3,2,9,453,speech,ANOTHER PLEBEIAN,ANOTHER PLEBEIAN,"I will hear Cassius and compare their reasons
+When severally we hear them renderèd.",0.0,0.0107
+julius-caesar,Julius Caesar,main,3,2,9,454,stage_direction,,,CASSIUS exits with some of the PLEBEIANS. BRUTUS gets up on the platform.,0.0,0.27076
+julius-caesar,Julius Caesar,main,3,2,9,455,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,The noble Brutus is ascended. Silence!,0.5093,0.49557
+julius-caesar,Julius Caesar,main,3,2,9,456,speech,BRUTUS,BRUTUS,"Be patient till the last. Romans, countrymen, and
+lovers! Hear me for my cause, and be silent that you may
+hear. Believe me for mine honor, and have respect to
+mine honor that you may believe. Censure me in your
+wisdom, and awake your senses that you may the better
+judge. If there be any in this assembly, any dear friend
+of Caesar’s, to him I say that Brutus' love to Caesar
+was no less than his. If then that friend demand why
+Brutus rose against Caesar, this is my answer: not that
+I loved Caesar less, but that I loved Rome more. Had you
+rather Caesar were living and die all slaves, than that
+Caesar were dead, to live all free men? As Caesar loved
+me, I weep for him. As he was fortunate, I rejoice at
+it. As he was valiant, I honor him. But, as he was
+ambitious, I slew him. There is tears for his love, joy
+for his fortune, honor for his valor, and death for his
+ambition. Who is here so base that would be a bondman?
+If any, speak—for him have I offended. Who is here so
+rude that would not be a Roman? If any, speak—for him
+have I offended. Who is here so vile that will not love
+his country? If any, speak—for him have I offended. I
+pause for a reply.",0.9875,0.75161
+julius-caesar,Julius Caesar,main,3,2,9,457,speech,ALL,ALL,"None, Brutus, none.",-0.5267,-0.73909
+julius-caesar,Julius Caesar,main,3,2,9,458,speech,BRUTUS,BRUTUS,"Then none have I offended. I have done no more to
+Caesar than you shall do to Brutus. The question of his
+death is enrolled in the Capitol. His glory not
+extenuated wherein he was worthy, nor his offenses
+enforced for which he suffered death.",-0.8621,-0.68444
+julius-caesar,Julius Caesar,main,3,2,9,459,stage_direction,,,ANTONY enters with CAESAR’s body.,0.0,0.02403
+julius-caesar,Julius Caesar,main,3,2,9,460,speech,BRUTUS,BRUTUS,"Here comes his body, mourned by Mark Antony, who,
+though he had no hand in his death, shall receive the
+benefit of his dying—a place in the commonwealth—as
+which of you shall not? With this I depart: that, as I
+slew my best lover for the good of Rome, I have the same
+dagger for myself when it shall please my country to
+need my death.",-0.9038,0.24374
+julius-caesar,Julius Caesar,main,3,2,9,461,speech,ALL,ALL,"Live, Brutus! Live, live!",0.0,0.66309
+julius-caesar,Julius Caesar,main,3,2,9,462,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,Bring him with triumph home unto his house!,0.5255,0.60227
+julius-caesar,Julius Caesar,main,3,2,9,463,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Give him a statue with his ancestors!,0.0,0.53075
+julius-caesar,Julius Caesar,main,3,2,9,464,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,Let him be Caesar!,0.0,0.76591
+julius-caesar,Julius Caesar,main,3,2,9,465,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Caesar’s better parts
+Shall be crowned in Brutus!",0.4404,0.26574
+julius-caesar,Julius Caesar,main,3,2,9,466,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,We’ll bring him to his house with shouts and clamors.,0.0,0.45211
+julius-caesar,Julius Caesar,main,3,2,9,467,speech,BRUTUS,BRUTUS,My countrymen—,0.0,0.17945
+julius-caesar,Julius Caesar,main,3,2,9,468,stage_direction,,,"Peace, silence! Brutus speaks.",0.0,0.65966
+julius-caesar,Julius Caesar,main,3,2,9,469,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,"Peace, ho!",0.0,0.35944
+julius-caesar,Julius Caesar,main,3,2,9,470,speech,BRUTUS,BRUTUS,"Good countrymen, let me depart alone.
+And, for my sake, stay here with Antony.
+Do grace to Caesar’s corpse, and grace his speech
+Tending to Caesar’s glories, which Mark Antony
+By our permission is allowed to make.
+I do entreat you, not a man depart,
+Save I alone, till Antony have spoke.",0.5343,0.06984
+julius-caesar,Julius Caesar,main,3,2,9,471,stage_direction,,,BRUTUS exits.,0.0,0.00899
+julius-caesar,Julius Caesar,main,3,2,9,472,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,"Stay, ho! And let us hear Mark Antony.",0.0,0.61225
+julius-caesar,Julius Caesar,main,3,2,9,473,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Let him go up into the public chair.
+We’ll hear him. —Noble Antony, go up.",0.4588,0.48432
+julius-caesar,Julius Caesar,main,3,2,9,474,speech,ANTONY,ANTONY,"For Brutus' sake, I am beholding to you.
+[ascends the pulpit]",0.0,0.47272
+julius-caesar,Julius Caesar,main,3,2,9,475,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,What does he say of Brutus?,0.0,-0.00857
+julius-caesar,Julius Caesar,main,3,2,9,476,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"He says for Brutus' sake
+He finds himself beholding to us all.",0.0,0.1617
+julius-caesar,Julius Caesar,main,3,2,9,477,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,'Twere best he speak no harm of Brutus here.,0.6956,0.05451
+julius-caesar,Julius Caesar,main,3,2,9,478,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,This Caesar was a tyrant.,0.0,-0.24095
+julius-caesar,Julius Caesar,main,3,2,9,479,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Nay, that’s certain.
+We are blest that Rome is rid of him.",0.6249,-0.59105
+julius-caesar,Julius Caesar,main,3,2,9,480,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,Peace! Let us hear what Antony can say.,0.0,0.47569
+julius-caesar,Julius Caesar,main,3,2,9,481,speech,ANTONY,ANTONY,You gentle Romans—,0.4588,0.43428
+julius-caesar,Julius Caesar,main,3,2,9,482,speech,ALL,ALL,"Peace, ho! Let us hear him.",0.0,0.46054
+julius-caesar,Julius Caesar,main,3,2,9,483,speech,ANTONY,ANTONY,"Friends, Romans, countrymen, lend me your ears.
+I come to bury Caesar, not to praise him.
+The evil that men do lives after them;
+The good is oft interrèd with their bones.
+So let it be with Caesar. The noble Brutus
+Hath told you Caesar was ambitious.
+If it were so, it was a grievous fault,
+And grievously hath Caesar answered it.
+Here, under leave of Brutus and the rest—
+For Brutus is an honorable man;
+So are they all, all honorable men—
+Come I to speak in Caesar’s funeral.
+He was my friend, faithful and just to me.
+But Brutus says he was ambitious,
+And Brutus is an honorable man.
+He hath brought many captives home to Rome
+Whose ransoms did the general coffers fill.
+Did this in Caesar seem ambitious?
+When that the poor have cried, Caesar hath wept.
+Ambition should be made of sterner stuff.
+Yet Brutus says he was ambitious,
+And Brutus is an honorable man.
+You all did see that on the Lupercal
+I thrice presented him a kingly crown,
+Which he did thrice refuse. Was this ambition?
+Yet Brutus says he was ambitious,
+And, sure, he is an honorable man.
+I speak not to disprove what Brutus spoke,
+But here I am to speak what I do know.
+You all did love him once, not without cause.
+What cause withholds you then to mourn for him?
+O judgment! Thou art fled to brutish beasts,
+And men have lost their reason. Bear with me.
+My heart is in the coffin there with Caesar,
+And I must pause till it come back to me. [weeps]",0.993,-0.2124
+julius-caesar,Julius Caesar,main,3,2,9,484,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,Methinks there is much reason in his sayings.,0.0,0.32385
+julius-caesar,Julius Caesar,main,3,2,9,485,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,"If thou consider rightly of the matter,
+Caesar has had great wrong.",-0.7184,-0.61864
+julius-caesar,Julius Caesar,main,3,2,9,486,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Has he, masters?
+I fear there will a worse come in his place.",-0.4767,-0.622
+julius-caesar,Julius Caesar,main,3,2,9,487,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Marked ye his words? He would not take the crown.
+Therefore ’tis certain he was not ambitious.",0.6369,-0.43774
+julius-caesar,Julius Caesar,main,3,2,9,488,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,"If it be found so, some will dear abide it.",0.1496,-0.48429
+julius-caesar,Julius Caesar,main,3,2,9,489,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Poor soul! His eyes are red as fire with weeping.,-0.8268,0.0108
+julius-caesar,Julius Caesar,main,3,2,9,490,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,There’s not a nobler man in Rome than Antony.,0.0,-0.42773
+julius-caesar,Julius Caesar,main,3,2,9,491,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,Now mark him. He begins again to speak.,-0.1027,0.43
+julius-caesar,Julius Caesar,main,3,2,9,492,speech,ANTONY,ANTONY,"But yesterday the word of Caesar might
+Have stood against the world. Now lies he there,
+And none so poor to do him reverence.
+O masters, if I were disposed to stir
+Your hearts and minds to mutiny and rage,
+I should do Brutus wrong, and Cassius wrong—
+Who, you all know, are honorable men.
+I will not do them wrong. I rather choose
+To wrong the dead, to wrong myself and you,
+Than I will wrong such honorable men.
+But here’s a parchment with the seal of Caesar.
+I found it in his closet. 'Tis his will.
+Let but the commons hear this testament—
+Which, pardon me, I do not mean to read—
+And they would go and kiss dead Caesar’s wounds
+And dip their napkins in his sacred blood,
+Yea, beg a hair of him for memory,
+And, dying, mention it within their wills,
+Bequeathing it as a rich legacy
+Unto their issue.",-0.5608,-0.13017
+julius-caesar,Julius Caesar,main,3,2,9,493,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"We’ll hear the will. Read it, Mark Antony!",0.1511,0.57575
+julius-caesar,Julius Caesar,main,3,2,9,494,speech,ALL,ALL,"The will, the will! We will hear Caesar’s will.",0.1511,0.71718
+julius-caesar,Julius Caesar,main,3,2,9,495,speech,ANTONY,ANTONY,"Have patience, gentle friends. I must not read it.
+It is not meet you know how Caesar loved you.
+You are not wood, you are not stones, but men.
+And, being men, bearing the will of Caesar,
+It will inflame you, it will make you mad.
+'Tis good you know not that you are his heirs.
+For, if you should—Oh, what would come of it!",0.7959,-0.7158
+julius-caesar,Julius Caesar,main,3,2,9,496,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Read the will. We’ll hear it, Antony.
+You shall read us the will, Caesar’s will.",0.0772,0.39663
+julius-caesar,Julius Caesar,main,3,2,9,497,speech,ANTONY,ANTONY,"Will you be patient? Will you stay awhile?
+I have o'ershot myself to tell you of it.
+I fear I wrong the honorable men
+Whose daggers have stabbed Caesar. I do fear it.",-0.7471,-0.83517
+julius-caesar,Julius Caesar,main,3,2,9,498,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,They were traitors! “Honorable men”!,0.0,0.74933
+julius-caesar,Julius Caesar,main,3,2,9,499,speech,ALL,ALL,The will! The testament!,0.0,0.73359
+julius-caesar,Julius Caesar,main,3,2,9,500,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,"They were villains, murderers. The will! Read the will!",-0.8829,0.68246
+julius-caesar,Julius Caesar,main,3,2,9,501,speech,ANTONY,ANTONY,"You will compel me, then, to read the will?
+Then make a ring about the corpse of Caesar,
+And let me show you him that made the will.
+Shall I descend? And will you give me leave?",-0.5171,0.05396
+julius-caesar,Julius Caesar,main,3,2,9,502,speech,ALL,ALL,Come down.,0.0,-0.0165
+julius-caesar,Julius Caesar,main,3,2,9,503,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Descend.,0.0,-0.0165
+julius-caesar,Julius Caesar,main,3,2,9,504,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,You shall have leave.,0.2263,0.15627
+julius-caesar,Julius Caesar,main,3,2,9,505,stage_direction,,,ANTONY comes down from the platform.,0.0,-0.07815
+julius-caesar,Julius Caesar,main,3,2,9,506,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"A ring!
+Stand round.",0.0,0.27482
+julius-caesar,Julius Caesar,main,3,2,9,507,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,Stand from the hearse. Stand from the body.,0.0,0.00367
+julius-caesar,Julius Caesar,main,3,2,9,508,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,"Room for Antony, most noble Antony!",0.5551,0.60028
+julius-caesar,Julius Caesar,main,3,2,9,509,speech,ANTONY,ANTONY,"Nay, press not so upon me. Stand far off.",0.0,-0.47462
+julius-caesar,Julius Caesar,main,3,2,9,510,speech,ALL,ALL,Stand back. Room! Bear back.,0.0,0.29288
+julius-caesar,Julius Caesar,main,3,2,9,511,speech,ANTONY,ANTONY,"If you have tears, prepare to shed them now.
+You all do know this mantle. I remember
+The first time ever Caesar put it on.
+'Twas on a summer’s evening in his tent,
+That day he overcame the Nervii.
+Look, in this place ran Cassius' dagger through.
+See what a rent the envious Casca made.
+Through this the well-belovèd Brutus stabbed.
+And as he plucked his cursèd steel away,
+Mark how the blood of Caesar followed it,
+As rushing out of doors, to be resolved
+If Brutus so unkindly knocked, or no.
+For Brutus, as you know, was Caesar’s angel.
+Judge, O you gods, how dearly Caesar loved him!
+This was the most unkindest cut of all.
+For when the noble Caesar saw him stab,
+Ingratitude, more strong than traitors' arms,
+Quite vanquished him. Then burst his mighty heart,
+And, in his mantle muffling up his face,
+Even at the base of Pompey’s statue,
+Which all the while ran blood, great Caesar fell.
+O, what a fall was there, my countrymen!
+Then I, and you, and all of us fell down,
+Whilst bloody treason flourished over us.
+Oh, now you weep, and, I perceive, you feel
+The dint of pity. These are gracious drops.
+Kind souls, what, weep you when you but behold
+Our Caesar’s vesture wounded? Look you here,
+Here is himself, marred, as you see, with traitors.
+[lifts up CAESAR's mantle]",-0.9517,-0.11247
+julius-caesar,Julius Caesar,main,3,2,9,512,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,O piteous spectacle!,-0.5093,0.48159
+julius-caesar,Julius Caesar,main,3,2,9,513,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,O noble Caesar!,0.5093,0.7054
+julius-caesar,Julius Caesar,main,3,2,9,514,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,O woeful day!,-0.5255,-0.8295
+julius-caesar,Julius Caesar,main,3,2,9,515,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"O traitors, villains!",-0.69,0.6267
+julius-caesar,Julius Caesar,main,3,2,9,516,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,O most bloody sight!,-0.54,0.63786
+julius-caesar,Julius Caesar,main,3,2,9,517,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,We will be revenged.,-0.5267,-0.511
+julius-caesar,Julius Caesar,main,3,2,9,518,speech,ALL,ALL,"Revenge! About! Seek! Burn! Fire! Kill! Slay!
+Let not a traitor live!",-0.9456,0.70744
+julius-caesar,Julius Caesar,main,3,2,9,519,speech,ANTONY,ANTONY,"Stay, countrymen.",0.0,0.06044
+julius-caesar,Julius Caesar,main,3,2,9,520,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,Peace there! Hear the noble Antony.,0.5093,0.51545
+julius-caesar,Julius Caesar,main,3,2,9,521,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,We’ll hear him. We’ll follow him. We’ll die with him.,-0.5994,0.18489
+julius-caesar,Julius Caesar,main,3,2,9,522,speech,ANTONY,ANTONY,"Good friends, sweet friends! Let me not stir you up
+To such a sudden flood of mutiny.
+They that have done this deed are honorable.
+What private griefs they have, alas, I know not,
+That made them do it. They are wise and honorable,
+And will, no doubt, with reasons answer you.
+I come not, friends, to steal away your hearts.
+I am no orator, as Brutus is,
+But, as you know me all, a plain blunt man
+That love my friend. And that they know full well
+That gave me public leave to speak of him.
+For I have neither wit nor words nor worth,
+Action nor utterance nor the power of speech,
+To stir men’s blood. I only speak right on.
+I tell you that which you yourselves do know,
+Show you sweet Caesar’s wounds, poor poor dumb mouths,
+And bid them speak for me. But were I Brutus,
+And Brutus Antony, there were an Antony
+Would ruffle up your spirits and put a tongue
+In every wound of Caesar that should move
+The stones of Rome to rise and mutiny.",0.9535,0.68875
+julius-caesar,Julius Caesar,main,3,2,9,523,speech,ALL,ALL,We’ll mutiny.,0.0,-0.14063
+julius-caesar,Julius Caesar,main,3,2,9,524,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,We’ll burn the house of Brutus.,0.0,-0.16266
+julius-caesar,Julius Caesar,main,3,2,9,525,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Away, then! Come, seek the conspirators.",0.0,0.24484
+julius-caesar,Julius Caesar,main,3,2,9,526,speech,ANTONY,ANTONY,"Yet hear me, countrymen. Yet hear me speak.",0.0,0.12292
+julius-caesar,Julius Caesar,main,3,2,9,527,speech,ALL,ALL,"Peace, ho! Hear Antony. Most noble Antony!",0.6333,0.64401
+julius-caesar,Julius Caesar,main,3,2,9,528,speech,ANTONY,ANTONY,"Why, friends, you go to do you know not what.
+Wherein hath Caesar thus deserved your loves?
+Alas, you know not. I must tell you then.
+You have forgot the will I told you of.",0.6486,-0.59343
+julius-caesar,Julius Caesar,main,3,2,9,529,speech,ALL,ALL,Most true. The will! Let’s stay and hear the will.,0.5242,0.75922
+julius-caesar,Julius Caesar,main,3,2,9,530,speech,ANTONY,ANTONY,"Here is the will, and under Caesar’s seal
+To every Roman citizen he gives—
+To every several man—seventy-five drachmas.",0.0,0.05763
+julius-caesar,Julius Caesar,main,3,2,9,531,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Most noble Caesar! We’ll revenge his death.,-0.6484,0.27741
+julius-caesar,Julius Caesar,main,3,2,9,532,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,O royal Caesar!,0.0,0.77072
+julius-caesar,Julius Caesar,main,3,2,9,533,speech,ANTONY,ANTONY,Hear me with patience.,0.0,0.25455
+julius-caesar,Julius Caesar,main,3,2,9,534,speech,ALL,ALL,"Peace, ho!",0.0,0.5392
+julius-caesar,Julius Caesar,main,3,2,9,535,speech,ANTONY,ANTONY,"Moreover, he hath left you all his walks,
+His private arbors and new-planted orchards,
+On this side Tiber. He hath left them you
+And to your heirs forever—common pleasures,
+To walk abroad and recreate yourselves.
+Here was a Caesar! When comes such another?",0.69,0.78514
+julius-caesar,Julius Caesar,main,3,2,9,536,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,"Never, never.—Come, away, away!
+We’ll burn his body in the holy place,
+And with the brands fire the traitors' houses.
+Take up the body.",-0.4003,0.01682
+julius-caesar,Julius Caesar,main,3,2,9,537,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Go fetch fire.,-0.34,-0.20875
+julius-caesar,Julius Caesar,main,3,2,9,538,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,Pluck down benches.,0.0,-0.41237
+julius-caesar,Julius Caesar,main,3,2,9,539,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Pluck down forms, windows, anything.",0.0,-0.17533
+julius-caesar,Julius Caesar,main,3,2,9,540,stage_direction,,,PLEBEIANS exit with CAESAR’s body.,0.0,0.01444
+julius-caesar,Julius Caesar,main,3,2,9,541,speech,ANTONY,ANTONY,"Now let it work. Mischief, thou art afoot.
+Take thou what course thou wilt!",-0.5848,-0.52501
+julius-caesar,Julius Caesar,main,3,2,9,542,stage_direction,,,OCTAVIUS' SERVANT enters.,0.0,0.01776
+julius-caesar,Julius Caesar,main,3,2,9,543,speech,ANTONY,ANTONY,"How now, fellow?",0.0,-0.0288
+julius-caesar,Julius Caesar,main,3,2,9,544,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,"Sir, Octavius is already come to Rome.",0.0,0.15422
+julius-caesar,Julius Caesar,main,3,2,9,545,speech,ANTONY,ANTONY,Where is he?,0.0,-0.01871
+julius-caesar,Julius Caesar,main,3,2,9,546,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,He and Lepidus are at Caesar’s house.,0.0,0.03069
+julius-caesar,Julius Caesar,main,3,2,9,547,speech,ANTONY,ANTONY,"And thither will I straight to visit him.
+He comes upon a wish. Fortune is merry,
+And in this mood will give us anything.",0.802,0.18647
+julius-caesar,Julius Caesar,main,3,2,9,548,speech,OCTAVIUS' SERVANT,OCTAVIUS SERVANT,"I heard him say, Brutus and Cassius
+Are rid like madmen through the gates of Rome.",0.4939,0.0069
+julius-caesar,Julius Caesar,main,3,2,9,549,speech,ANTONY,ANTONY,"Belike they had some notice of the people
+How I had moved them. Bring me to Octavius.",-0.34,0.37898
+julius-caesar,Julius Caesar,main,3,2,9,550,stage_direction,,,They exit.,0.0,-0.13698
+julius-caesar,Julius Caesar,main,3,3,10,551,stage_direction,,,"CINNA THE POET enters, followed by PLEBEIANS.",0.0,0.01486
+julius-caesar,Julius Caesar,main,3,3,10,552,speech,CINNA THE POET,CINNA THE POET,"I dreamt tonight that I did feast with Caesar,
+And things unlucky charge my fantasy.
+I have no will to wander forth of doors,
+Yet something leads me forth.",-0.5659,-0.12302
+julius-caesar,Julius Caesar,main,3,3,10,553,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,What is your name?,0.0,-0.02313
+julius-caesar,Julius Caesar,main,3,3,10,554,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Whither are you going?,0.0,-0.00791
+julius-caesar,Julius Caesar,main,3,3,10,555,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,Where do you dwell?,0.0,-0.00508
+julius-caesar,Julius Caesar,main,3,3,10,556,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,Are you a married man or a bachelor?,0.0,-0.00244
+julius-caesar,Julius Caesar,main,3,3,10,557,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,Answer every man directly.,0.0,0.11719
+julius-caesar,Julius Caesar,main,3,3,10,558,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,"Ay, and briefly.",0.4019,0.44772
+julius-caesar,Julius Caesar,main,3,3,10,559,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Ay, and wisely.",0.6705,0.43469
+julius-caesar,Julius Caesar,main,3,3,10,560,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Ay, and truly, you were best.",0.6908,0.02029
+julius-caesar,Julius Caesar,main,3,3,10,561,speech,CINNA THE POET,CINNA THE POET,"What is my name? Whither am I going? Where do I dwell?
+Am I a married man or a bachelor? Then, to answer every
+man directly and briefly, wisely and truly—wisely I say,
+I am a bachelor.",0.5803,0.22308
+julius-caesar,Julius Caesar,main,3,3,10,562,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,"That’s as much as to say they are fools that marry.
+You’ll bear me a bang for that, I fear. Proceed,
+directly.",-0.5267,-0.59701
+julius-caesar,Julius Caesar,main,3,3,10,563,speech,CINNA THE POET,CINNA THE POET,"Directly, I am going to Caesar’s funeral.",-0.3612,-0.02981
+julius-caesar,Julius Caesar,main,3,3,10,564,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,As a friend or an enemy?,-0.0772,-0.00081
+julius-caesar,Julius Caesar,main,3,3,10,565,speech,CINNA THE POET,CINNA THE POET,As a friend.,0.4939,0.34857
+julius-caesar,Julius Caesar,main,3,3,10,566,speech,SECOND PLEBEIAN,SECOND PLEBEIAN,That matter is answered directly.,0.0,0.01702
+julius-caesar,Julius Caesar,main,3,3,10,567,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,For your dwelling—briefly.,0.0,0.24661
+julius-caesar,Julius Caesar,main,3,3,10,568,speech,CINNA THE POET,CINNA THE POET,"Briefly, I dwell by the Capitol.",0.0,0.36084
+julius-caesar,Julius Caesar,main,3,3,10,569,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Your name, sir, truly.",0.4404,0.58855
+julius-caesar,Julius Caesar,main,3,3,10,570,speech,CINNA THE POET,CINNA THE POET,"Truly, my name is Cinna.",0.4404,0.51724
+julius-caesar,Julius Caesar,main,3,3,10,571,speech,FIRST PLEBEIAN,FIRST PLEBEIAN,Tear him to pieces. He’s a conspirator.,0.0,-0.16444
+julius-caesar,Julius Caesar,main,3,3,10,572,speech,CINNA THE POET,CINNA THE POET,I am Cinna the poet. I am Cinna the poet.,0.0,0.13296
+julius-caesar,Julius Caesar,main,3,3,10,573,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"Tear him for his bad verses! Tear him for his bad
+verses!",-0.7906,-0.68873
+julius-caesar,Julius Caesar,main,3,3,10,574,speech,CINNA THE POET,CINNA THE POET,I am not Cinna the conspirator.,0.0,-0.44796
+julius-caesar,Julius Caesar,main,3,3,10,575,speech,FOURTH PLEBEIAN,FOURTH PLEBEIAN,"It is no matter. His name’s Cinna. Pluck but his name
+out of his heart and turn him going.",0.6486,-0.60798
+julius-caesar,Julius Caesar,main,3,3,10,576,speech,THIRD PLEBEIAN,THIRD PLEBEIAN,"Tear him, tear him! Come, brands, ho! Firebrands: to
+Brutus', to Cassius', burn all. Some to Decius' house
+and some to Casca’s. Some to Ligarius'. Away, go!",0.0,0.1395
+julius-caesar,Julius Caesar,main,3,3,10,577,stage_direction,,,"The PLEBEIANS exit, dragging CINNA THE POET.",0.0,-0.0007
+julius-caesar,Julius Caesar,main,4,1,11,578,stage_direction,,,"ANTONY, OCTAVIUS, and LEPIDUS enter.",0.0,0.07156
+julius-caesar,Julius Caesar,main,4,1,11,579,speech,ANTONY,ANTONY,"These many, then, shall die. Their names are pricked.",-0.6705,0.00557
+julius-caesar,Julius Caesar,main,4,1,11,580,speech,OCTAVIUS,OCTAVIUS,"[to LEPIDUS]
+Your brother too must die. Consent you, Lepidus?",-0.34,0.54568
+julius-caesar,Julius Caesar,main,4,1,11,581,speech,LEPIDUS,LEPIDUS,I do consent—,0.0,0.12265
+julius-caesar,Julius Caesar,main,4,1,11,582,speech,OCTAVIUS,OCTAVIUS,"Prick him down, Antony.",0.0,-0.19233
+julius-caesar,Julius Caesar,main,4,1,11,583,speech,LEPIDUS,LEPIDUS,"Upon condition Publius shall not live,
+Who is your sister’s son, Mark Antony.",0.0,-0.40692
+julius-caesar,Julius Caesar,main,4,1,11,584,speech,ANTONY,ANTONY,"He shall not live. Look, with a spot I damn him.
+But, Lepidus, go you to Caesar’s house.
+Fetch the will hither, and we shall determine
+How to cut off some charge in legacies.",-0.3612,-0.6669
+julius-caesar,Julius Caesar,main,4,1,11,585,speech,LEPIDUS,LEPIDUS,"What, shall I find you here?",0.0,-0.01804
+julius-caesar,Julius Caesar,main,4,1,11,586,speech,OCTAVIUS,OCTAVIUS,"Or here, or at the Capitol.",0.0,-0.00277
+julius-caesar,Julius Caesar,main,4,1,11,587,stage_direction,,,LEPIDUS exits.,0.0,0.00882
+julius-caesar,Julius Caesar,main,4,1,11,588,speech,ANTONY,ANTONY,"This is a slight, unmeritable man,
+Meet to be sent on errands. Is it fit,
+The threefold world divided, he should stand
+One of the three to share it?",-0.1779,-0.50397
+julius-caesar,Julius Caesar,main,4,1,11,589,speech,OCTAVIUS,OCTAVIUS,"So you thought him.
+And took his voice who should be pricked to die
+In our black sentence and proscription.",-0.5994,-0.04573
+julius-caesar,Julius Caesar,main,4,1,11,590,speech,ANTONY,ANTONY,"Octavius, I have seen more days than you.
+And though we lay these honors on this man
+To ease ourselves of divers slanderous loads,
+He shall but bear them as the ass bears gold,
+To groan and sweat under the business,
+Either led or driven, as we point the way.
+And having brought our treasure where we will,
+Then take we down his load and turn him off,
+Like to the empty ass, to shake his ears
+And graze in commons.",0.8519,-0.09606
+julius-caesar,Julius Caesar,main,4,1,11,591,speech,OCTAVIUS,OCTAVIUS,"You may do your will,
+But he’s a tried and valiant soldier.",0.6956,0.35076
+julius-caesar,Julius Caesar,main,4,1,11,592,speech,ANTONY,ANTONY,"So is my horse, Octavius, and for that
+I do appoint him store of provender.
+It is a creature that I teach to fight,
+To wind, to stop, to run directly on,
+His corporal motion governed by my spirit,
+And, in some taste, is Lepidus but so.
+He must be taught and trained and bid go forth,
+A barren-spirited fellow, one that feeds
+On objects, arts, and imitations,
+Which, out of use and staled by other men,
+Begin his fashion. Do not talk of him
+But as a property. And now, Octavius,
+Listen great things. Brutus and Cassius
+Are levying powers. We must straight make head.
+Therefore let our alliance be combined,
+Our best friends made, our means stretched.
+And let us presently go sit in council
+How covert matters may be best disclosed,
+And open perils surest answered.",-0.1045,0.35154
+julius-caesar,Julius Caesar,main,4,1,11,593,speech,OCTAVIUS,OCTAVIUS,"Let us do so. For we are at the stake
+And bayed about with many enemies.
+And some that smile have in their hearts, I fear,
+Millions of mischiefs.",-0.7096,-0.74658
+julius-caesar,Julius Caesar,main,4,1,11,594,stage_direction,,,They exit.,0.0,-0.13698
+julius-caesar,Julius Caesar,main,4,2,12,595,stage_direction,,,"A drum plays. BRUTUS, LUCIUS, LUCILLIUS, and soldiers enter. TITINIUS and PINDARUS meet them.",0.25,0.02622
+julius-caesar,Julius Caesar,main,4,2,12,596,speech,BRUTUS,BRUTUS,"Stand, ho!",0.0,0.2696
+julius-caesar,Julius Caesar,main,4,2,12,597,speech,LUCILLIUS,LUCILLIUS,"Give the word, ho, and stand.",0.0,0.00118
+julius-caesar,Julius Caesar,main,4,2,12,598,speech,BRUTUS,BRUTUS,"What now, Lucillius? Is Cassius near?",0.0,-0.05873
+julius-caesar,Julius Caesar,main,4,2,12,599,speech,LUCILLIUS,LUCILLIUS,"He is at hand, and Pindarus is come
+To do you salutation from his master.",0.3182,0.40778
+julius-caesar,Julius Caesar,main,4,2,12,600,speech,BRUTUS,BRUTUS,"He greets me well. —Your master, Pindarus,
+In his own change or by ill officers
+Hath given me some worthy cause to wish
+Things done, undone. But if he be at hand
+I shall be satisfied.",0.3071,0.03521
+julius-caesar,Julius Caesar,main,4,2,12,601,speech,PINDARUS,PINDARUS,"I do not doubt
+But that my noble master will appear
+Such as he is, full of regard and honor.",0.8912,0.64135
+julius-caesar,Julius Caesar,main,4,2,12,602,speech,BRUTUS,BRUTUS,"He is not doubted. —A word, Lucillius.
+[takes LUCILLIUS aside]
+How he received you, let me be resolved.",0.3527,0.02875
+julius-caesar,Julius Caesar,main,4,2,12,603,speech,LUCILLIUS,LUCILLIUS,"With courtesy and with respect enough.
+But not with such familiar instances
+Nor with such free and friendly conference
+As he hath used of old.",0.787,-0.35578
+julius-caesar,Julius Caesar,main,4,2,12,604,speech,BRUTUS,BRUTUS,"Thou hast described
+A hot friend cooling. Ever note, Lucillius,
+When love begins to sicken and decay,
+It useth an enforcèd ceremony.
+There are no tricks in plain and simple faith.
+But hollow men, like horses hot at hand,
+Make gallant show and promise of their mettle.",0.9213,-0.38754
+julius-caesar,Julius Caesar,main,4,2,12,605,speech,BRUTUS,BRUTUS,"But when they should endure the bloody spur,
+They fall their crests and, like deceitful jades,
+Sink in the trial. Comes his army on?",-0.7351,-0.7659
+julius-caesar,Julius Caesar,main,4,2,12,606,speech,LUCILLIUS,LUCILLIUS,"They mean this night in Sardis to be quartered.
+The greater part, the horse in general,
+Are come with Cassius.",0.0,-0.00449
+julius-caesar,Julius Caesar,main,4,2,12,607,speech,BRUTUS,BRUTUS,"Hark! He is arrived.
+March gently on to meet him.",0.484,0.49598
+julius-caesar,Julius Caesar,main,4,2,12,608,stage_direction,,,CASSIUS enters with his army.,0.0,0.05159
+julius-caesar,Julius Caesar,main,4,2,12,609,speech,CASSIUS,CASSIUS,"Stand, ho!",0.0,0.2696
+julius-caesar,Julius Caesar,main,4,2,12,610,speech,BRUTUS,BRUTUS,"Stand, ho! Speak the word along.",0.0,0.0298
+julius-caesar,Julius Caesar,main,4,2,12,611,speech,FIRST SOLDIER,FIRST SOLDIER,Stand!,0.0,0.2696
+julius-caesar,Julius Caesar,main,4,2,12,612,speech,SECOND SOLDIER,SECOND SOLDIER,Stand!,0.0,0.2696
+julius-caesar,Julius Caesar,main,4,2,12,613,speech,THIRD SOLDIER,THIRD SOLDIER,Stand!,0.0,0.2696
+julius-caesar,Julius Caesar,main,4,2,12,614,speech,CASSIUS,CASSIUS,"Most noble brother, you have done me wrong.",0.0498,-0.26891
+julius-caesar,Julius Caesar,main,4,2,12,615,speech,BRUTUS,BRUTUS,"Judge me, you gods! Wrong I mine enemies?
+And if not so, how should I wrong a brother?",-0.7877,-0.32518
+julius-caesar,Julius Caesar,main,4,2,12,616,speech,CASSIUS,CASSIUS,"Brutus, this sober form of yours hides wrongs.
+And when you do them—",-0.1027,-0.73612
+julius-caesar,Julius Caesar,main,4,2,12,617,speech,BRUTUS,BRUTUS,"Cassius, be content.
+Speak your griefs softly. I do know you well.
+Before the eyes of both our armies here,
+Which should perceive nothing but love from us,
+Let us not wrangle. Bid them move away.
+Then in my tent, Cassius, enlarge your griefs,
+And I will give you audience.",-0.8036,0.03274
+julius-caesar,Julius Caesar,main,4,2,12,618,speech,CASSIUS,CASSIUS,"Pindarus,
+Bid our commanders lead their charges off
+A little from this ground.",0.0,-0.15443
+julius-caesar,Julius Caesar,main,4,2,12,619,speech,BRUTUS,BRUTUS,"Lucillius, do you the like. And let no man
+Come to our tent till we have done our conference.
+Let Lucius and Titinius guard our door.",0.0,-0.20355
+julius-caesar,Julius Caesar,main,4,2,12,620,stage_direction,,,Everyone exits except BRUTUS and CASSIUS.,0.0,-0.06731
+julius-caesar,Julius Caesar,main,4,3,13,621,speech,,,"BRUTUS and CASSIUS remain onstage, now in Brutus' tent.",0.0,-0.00097
+julius-caesar,Julius Caesar,main,4,3,13,622,speech,CASSIUS,CASSIUS,"That you have wronged me doth appear in this:
+You have condemned and noted Lucius Pella
+For taking bribes here of the Sardians,
+Wherein my letters, praying on his side
+Because I knew the man, were slighted off.",-0.8402,-0.82245
+julius-caesar,Julius Caesar,main,4,3,13,623,speech,BRUTUS,BRUTUS,You wronged yourself to write in such a case.,-0.0516,-0.65732
+julius-caesar,Julius Caesar,main,4,3,13,624,speech,CASSIUS,CASSIUS,"In such a time as this it is not meet
+That every nice offense should bear his comment.",0.2006,-0.47347
+julius-caesar,Julius Caesar,main,4,3,13,625,speech,BRUTUS,BRUTUS,"Let me tell you, Cassius, you yourself
+Are much condemned to have an itching palm,
+To sell and mart your offices for gold
+To undeservers.",-0.6249,-0.17766
+julius-caesar,Julius Caesar,main,4,3,13,626,speech,CASSIUS,CASSIUS,"I “an itching palm!”
+You know that you are Brutus that speak this,
+Or, by the gods, this speech were else your last.",-0.126,-0.08541
+julius-caesar,Julius Caesar,main,4,3,13,627,speech,BRUTUS,BRUTUS,"The name of Cassius honors this corruption,
+And chastisement doth therefore hide his head.",0.7101,-0.41009
+julius-caesar,Julius Caesar,main,4,3,13,628,speech,CASSIUS,CASSIUS,Chastisement!,-0.4926,0.71334
+julius-caesar,Julius Caesar,main,4,3,13,629,speech,BRUTUS,BRUTUS,"Remember March, the ides of March remember.
+Did not great Julius bleed for justice' sake?
+What villain touched his body, that did stab,
+And not for justice? What, shall one of us
+That struck the foremost man of all this world
+But for supporting robbers, shall we now
+Contaminate our fingers with base bribes,
+And sell the mighty space of our large honors
+For so much trash as may be graspèd thus?
+I had rather be a dog and bay the moon
+Than such a Roman.",-0.5813,-0.76127
+julius-caesar,Julius Caesar,main,4,3,13,630,speech,CASSIUS,CASSIUS,"Brutus, bait not me.
+I’ll not endure it. You forget yourself
+To hedge me in. I am a soldier, I,
+Older in practice, abler than yourself
+To make conditions.",0.4939,-0.64239
+julius-caesar,Julius Caesar,main,4,3,13,631,speech,BRUTUS,BRUTUS,"Go to. You are not, Cassius.",0.1759,0.29992
+julius-caesar,Julius Caesar,main,4,3,13,632,speech,CASSIUS,CASSIUS,I am.,0.0,0.02412
+julius-caesar,Julius Caesar,main,4,3,13,633,speech,BRUTUS,BRUTUS,I say you are not.,0.0,-0.46101
+julius-caesar,Julius Caesar,main,4,3,13,634,speech,CASSIUS,CASSIUS,"Urge me no more, I shall forget myself.
+Have mind upon your health, tempt me no further.",-0.7906,0.02124
+julius-caesar,Julius Caesar,main,4,3,13,635,speech,BRUTUS,BRUTUS,"Away, slight man!",0.0,0.39843
+julius-caesar,Julius Caesar,main,4,3,13,636,speech,CASSIUS,CASSIUS,Is ’t possible?,0.0,-0.0507
+julius-caesar,Julius Caesar,main,4,3,13,637,speech,BRUTUS,BRUTUS,"Hear me, for I will speak.
+Must I give way and room to your rash choler?
+Shall I be frighted when a madman stares?",-0.7882,-0.18269
+julius-caesar,Julius Caesar,main,4,3,13,638,speech,CASSIUS,CASSIUS,"O ye gods, ye gods, must I endure all this?",0.0,0.55939
+julius-caesar,Julius Caesar,main,4,3,13,639,speech,BRUTUS,BRUTUS,"“All this?” Ay, more. Fret till your proud heart break.
+Go show your slaves how choleric you are
+And make your bondmen tremble. Must I budge?
+Must I observe you? Must I stand and crouch
+Under your testy humor? By the gods,
+You shall digest the venom of your spleen,
+Though it do split you. For from this day forth,
+I’ll use you for my mirth, yea, for my laughter,
+When you are waspish.",-0.9683,-0.80826
+julius-caesar,Julius Caesar,main,4,3,13,640,speech,CASSIUS,CASSIUS,Is it come to this?,0.0,-0.02653
+julius-caesar,Julius Caesar,main,4,3,13,641,speech,BRUTUS,BRUTUS,"You say you are a better soldier.
+Let it appear so. Make your vaunting true,
+And it shall please me well. For mine own part,
+I shall be glad to learn of noble men.",0.9403,0.52628
+julius-caesar,Julius Caesar,main,4,3,13,642,speech,CASSIUS,CASSIUS,"You wrong me every way. You wrong me, Brutus.
+I said an elder soldier, not a better.
+Did I say “better?”",-0.8227,-0.83121
+julius-caesar,Julius Caesar,main,4,3,13,643,speech,BRUTUS,BRUTUS,"If you did, I care not.",0.4939,-0.39106
+julius-caesar,Julius Caesar,main,4,3,13,644,speech,CASSIUS,CASSIUS,"When Caesar lived, he durst not thus have moved me.",0.6806,-0.52657
+julius-caesar,Julius Caesar,main,4,3,13,645,speech,BRUTUS,BRUTUS,"Peace, peace! You durst not so have tempted him.",0.4199,0.41226
+julius-caesar,Julius Caesar,main,4,3,13,646,speech,CASSIUS,CASSIUS,I durst not!,0.0,-0.24776
+julius-caesar,Julius Caesar,main,4,3,13,647,speech,BRUTUS,BRUTUS,No.,0.0,-0.42519
+julius-caesar,Julius Caesar,main,4,3,13,648,speech,CASSIUS,CASSIUS,"What, durst not tempt him?",0.0,-0.39933
+julius-caesar,Julius Caesar,main,4,3,13,649,speech,BRUTUS,BRUTUS,For your life you durst not!,0.0,-0.50177
+julius-caesar,Julius Caesar,main,4,3,13,650,speech,CASSIUS,CASSIUS,"Do not presume too much upon my love.
+I may do that I shall be sorry for.",0.34,-0.46492
+julius-caesar,Julius Caesar,main,4,3,13,651,speech,BRUTUS,BRUTUS,"You have done that you should be sorry for.
+There is no terror, Cassius, in your threats,
+For I am armed so strong in honesty
+That they pass by me as the idle wind,
+Which I respect not. I did send to you
+For certain sums of gold, which you denied me,
+For I can raise no money by vile means.
+By heaven, I had rather coin my heart
+And drop my blood for drachmas than to wring
+From the hard hands of peasants their vile trash
+By any indirection. I did send
+To you for gold to pay my legions,
+Which you denied me. Was that done like Cassius?
+Should I have answered Caius Cassius so?
+When Marcus Brutus grows so covetous
+To lock such rascal counters from his friends,
+Be ready, gods, with all your thunderbolts.
+Dash him to pieces!",-0.7616,-0.76063
+julius-caesar,Julius Caesar,main,4,3,13,652,speech,CASSIUS,CASSIUS,I denied you not.,0.2235,-0.11298
+julius-caesar,Julius Caesar,main,4,3,13,653,speech,BRUTUS,BRUTUS,You did.,0.0,0.41366
+julius-caesar,Julius Caesar,main,4,3,13,654,speech,CASSIUS,CASSIUS,"I did not. He was but a fool that brought
+My answer back. Brutus hath rived my heart.
+A friend should bear his friend’s infirmities,
+But Brutus makes mine greater than they are.",-0.0129,-0.77122
+julius-caesar,Julius Caesar,main,4,3,13,655,speech,BRUTUS,BRUTUS,"I do not, till you practice them on me.",0.0,-0.48273
+julius-caesar,Julius Caesar,main,4,3,13,656,speech,CASSIUS,CASSIUS,You love me not.,-0.5216,-0.4939
+julius-caesar,Julius Caesar,main,4,3,13,657,speech,BRUTUS,BRUTUS,I do not like your faults.,-0.1531,-0.42338
+julius-caesar,Julius Caesar,main,4,3,13,658,speech,CASSIUS,CASSIUS,A friendly eye could never see such faults.,0.696,-0.53162
+julius-caesar,Julius Caesar,main,4,3,13,659,speech,BRUTUS,BRUTUS,"A flatterer’s would not, though they do appear
+As huge as high Olympus.",0.25,0.0051
+julius-caesar,Julius Caesar,main,4,3,13,660,speech,CASSIUS,CASSIUS,"Come, Antony, and young Octavius, come,
+Revenge yourselves alone on Cassius,
+For Cassius is aweary of the world—
+Hated by one he loves; braved by his brother;
+Checked like a bondman, all his faults observed,
+Set in a notebook, learned, and conned by rote
+To cast into my teeth. Oh, I could weep
+My spirit from mine eyes.
+[offers BRUTUS his bared dagger] There is my dagger.
+And here my naked breast. Within, a heart
+Dearer than Plutus' mine, richer than gold.
+If that thou beest a Roman, take it forth.
+I, that denied thee gold, will give my heart.
+Strike, as thou didst at Caesar. For I know
+When thou didst hate him worst, thou lovedst him better
+Than ever thou lovedst Cassius.",0.9073,0.51935
+julius-caesar,Julius Caesar,main,4,3,13,661,speech,BRUTUS,BRUTUS,"Sheathe your dagger.
+Be angry when you will, it shall have scope.
+Do what you will, dishonor shall be humor.
+O Cassius, you are yokèd with a lamb
+That carries anger as the flint bears fire,
+Who, much enforcèd, shows a hasty spark
+And straight is cold again.",-0.9081,-0.78959
+julius-caesar,Julius Caesar,main,4,3,13,662,speech,CASSIUS,CASSIUS,"Hath Cassius lived
+To be but mirth and laughter to his Brutus,
+When grief and blood ill-tempered vexeth him?",-0.6124,-0.50431
+julius-caesar,Julius Caesar,main,4,3,13,663,speech,BRUTUS,BRUTUS,"When I spoke that, I was ill-tempered too.",-0.5106,-0.48234
+julius-caesar,Julius Caesar,main,4,3,13,664,speech,CASSIUS,CASSIUS,Do you confess so much? Give me your hand.,0.6124,-0.07594
+julius-caesar,Julius Caesar,main,4,3,13,665,speech,BRUTUS,BRUTUS,And my heart too.,0.4215,0.03141
+julius-caesar,Julius Caesar,main,4,3,13,666,speech,CASSIUS,CASSIUS,O Brutus!,0.0,0.7368
+julius-caesar,Julius Caesar,main,4,3,13,667,speech,BRUTUS,BRUTUS,What’s the matter?,0.0258,-0.016
+julius-caesar,Julius Caesar,main,4,3,13,668,speech,CASSIUS,CASSIUS,"Have not you love enough to bear with me,
+When that rash humor which my mother gave me
+Makes me forgetful?",-0.4588,-0.44359
+julius-caesar,Julius Caesar,main,4,3,13,669,speech,BRUTUS,BRUTUS,"Yes, Cassius. And from henceforth
+When you are over-earnest with your Brutus,
+He’ll think your mother chides and leave you so.",-0.2023,0.36088
+julius-caesar,Julius Caesar,main,4,3,13,670,speech,POET,POET,"[within] Let me go in to see the generals.
+There is some grudge between 'em. 'Tis not meet
+They be alone.",0.2263,-0.45281
+julius-caesar,Julius Caesar,main,4,3,13,671,speech,LUCILLIUS,LUCILLIUS,[within] You shall not come to them.,0.0,-0.24868
+julius-caesar,Julius Caesar,main,4,3,13,672,speech,POET,POET,[within] Nothing but death shall stay me.,-0.7269,-0.80863
+julius-caesar,Julius Caesar,main,4,3,13,673,stage_direction,,,"A POET enters, followed by LUCILLIUS and TITINIUS.",0.0,0.01106
+julius-caesar,Julius Caesar,main,4,3,13,674,speech,CASSIUS,CASSIUS,How now? What’s the matter?,0.1179,-0.02447
+julius-caesar,Julius Caesar,main,4,3,13,675,speech,POET,POET,"For shame, you generals! What do you mean?
+Love, and be friends as two such men should be.
+For I have seen more years, I’m sure, than ye.",0.7901,0.67944
+julius-caesar,Julius Caesar,main,4,3,13,676,speech,CASSIUS,CASSIUS,"Ha, ha, how vilely doth this cynic rhyme!",-0.6988,-0.83142
+julius-caesar,Julius Caesar,main,4,3,13,677,speech,BRUTUS,BRUTUS,"[to POET] Get you hence, sirrah. Saucy fellow, hence!",-0.555,0.77775
+julius-caesar,Julius Caesar,main,4,3,13,678,speech,CASSIUS,CASSIUS,"Bear with him, Brutus. 'Tis his fashion.",0.4404,0.59502
+julius-caesar,Julius Caesar,main,4,3,13,679,speech,BRUTUS,BRUTUS,"I’ll know his humor when he knows his time.
+What should the wars do with these jigging fools?
+—Companion, hence!",-0.2732,-0.02368
+julius-caesar,Julius Caesar,main,4,3,13,680,speech,CASSIUS,CASSIUS,"Away, away, be gone.",0.0,-0.47548
+julius-caesar,Julius Caesar,main,4,3,13,681,stage_direction,,,The POET exits.,0.0,0.00672
+julius-caesar,Julius Caesar,main,4,3,13,682,speech,BRUTUS,BRUTUS,"Lucillius and Titinius, bid the commanders
+Prepare to lodge their companies tonight.",0.0,0.02101
+julius-caesar,Julius Caesar,main,4,3,13,683,speech,CASSIUS,CASSIUS,"And come yourselves, and bring Messala with you,
+Immediately to us.",0.0,0.16992
+julius-caesar,Julius Caesar,main,4,3,13,684,stage_direction,,,LUCILLIUS and TITINIUS exit.,0.0,0.02225
+julius-caesar,Julius Caesar,main,4,3,13,685,speech,BRUTUS,BRUTUS,"[calls off] Lucius, a bowl of wine!",0.0,-0.06832
+julius-caesar,Julius Caesar,main,4,3,13,686,speech,CASSIUS,CASSIUS,I did not think you could have been so angry.,-0.6418,-0.39665
+julius-caesar,Julius Caesar,main,4,3,13,687,speech,BRUTUS,BRUTUS,"O Cassius, I am sick of many griefs.",-0.5859,-0.41524
+julius-caesar,Julius Caesar,main,4,3,13,688,speech,CASSIUS,CASSIUS,"Of your philosophy you make no use
+If you give place to accidental evils.",-0.4767,-0.44591
+julius-caesar,Julius Caesar,main,4,3,13,689,speech,BRUTUS,BRUTUS,No man bears sorrow better. Portia is dead.,-0.7906,-0.73368
+julius-caesar,Julius Caesar,main,4,3,13,690,speech,CASSIUS,CASSIUS,"Ha, Portia?",0.0,-0.03934
+julius-caesar,Julius Caesar,main,4,3,13,691,speech,BRUTUS,BRUTUS,She is dead.,-0.6486,-0.69429
+julius-caesar,Julius Caesar,main,4,3,13,692,speech,CASSIUS,CASSIUS,"How ’scaped I killing when I crossed you so?
+O insupportable and touching loss!
+Upon what sickness?",-0.9513,-0.89656
+julius-caesar,Julius Caesar,main,4,3,13,693,speech,BRUTUS,BRUTUS,"Impatient of my absence,
+And grief that young Octavius with Mark Antony
+Have made themselves so strong—for with her death
+That tidings came—with this she fell distract
+And, her attendants absent, swallowed fire.",-0.5423,-0.86574
+julius-caesar,Julius Caesar,main,4,3,13,694,speech,CASSIUS,CASSIUS,And died so?,-0.5574,-0.44258
+julius-caesar,Julius Caesar,main,4,3,13,695,speech,BRUTUS,BRUTUS,Even so.,0.3612,-0.08061
+julius-caesar,Julius Caesar,main,4,3,13,696,speech,CASSIUS,CASSIUS,O ye immortal gods!,0.3164,0.8673
+julius-caesar,Julius Caesar,main,4,3,13,697,stage_direction,,,LUCIUS enters with wine and candles.,0.0,0.03774
+julius-caesar,Julius Caesar,main,4,3,13,698,speech,BRUTUS,BRUTUS,"Speak no more of her.—Give me a bowl of wine.—
+In this I bury all unkindness, Cassius.
+[drinks]",-0.7096,-0.48153
+julius-caesar,Julius Caesar,main,4,3,13,699,speech,CASSIUS,CASSIUS,"My heart is thirsty for that noble pledge.
+Fill, Lucius, till the wine o'erswell the cup.
+I cannot drink too much of Brutus' love.
+[drinks]",0.9287,-0.38466
+julius-caesar,Julius Caesar,main,4,3,13,700,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,4,3,13,701,stage_direction,,,TITINIUS and MESSALA enter.,0.0,0.23385
+julius-caesar,Julius Caesar,main,4,3,13,702,speech,BRUTUS,BRUTUS,"Come in, Titinius.—Welcome, good Messala!
+Now sit we close about this taper here
+And call in question our necessities.",0.7345,0.56027
+julius-caesar,Julius Caesar,main,4,3,13,703,speech,CASSIUS,CASSIUS,"Portia, art thou gone?",0.0,-0.31297
+julius-caesar,Julius Caesar,main,4,3,13,704,speech,BRUTUS,BRUTUS,"No more, I pray you.
+—Messala, I have here receivèd letters
+That young Octavius and Mark Antony
+Come down upon us with a mighty power,
+Bending their expedition toward Philippi.",0.0935,-0.05021
+julius-caesar,Julius Caesar,main,4,3,13,705,speech,MESSALA,MESSALA,Myself have letters of the selfsame tenor.,0.0,-0.2987
+julius-caesar,Julius Caesar,main,4,3,13,706,speech,BRUTUS,BRUTUS,With what addition?,0.0,-0.01493
+julius-caesar,Julius Caesar,main,4,3,13,707,speech,MESSALA,MESSALA,"That by proscription and bills of outlawry,
+Octavius, Antony, and Lepidus
+Have put to death an hundred senators.",-0.7096,-0.03679
+julius-caesar,Julius Caesar,main,4,3,13,708,speech,BRUTUS,BRUTUS,"Therein our letters do not well agree.
+Mine speak of seventy senators that died
+By their proscriptions, Cicero being one.",-0.4588,-0.44841
+julius-caesar,Julius Caesar,main,4,3,13,709,speech,CASSIUS,CASSIUS,Cicero one?,0.0,-0.122
+julius-caesar,Julius Caesar,main,4,3,13,710,speech,MESSALA,MESSALA,"Cicero is dead,
+And by that order of proscription.
+[to BRUTUS] Had you your letters from your wife, my
+lord?",-0.6486,-0.7017
+julius-caesar,Julius Caesar,main,4,3,13,711,speech,BRUTUS,BRUTUS,"No, Messala.",0.0,-0.21342
+julius-caesar,Julius Caesar,main,4,3,13,712,speech,MESSALA,MESSALA,Nor nothing in your letters writ of her?,0.0,-0.06278
+julius-caesar,Julius Caesar,main,4,3,13,713,speech,BRUTUS,BRUTUS,"Nothing, Messala.",0.0,-0.50913
+julius-caesar,Julius Caesar,main,4,3,13,714,speech,MESSALA,MESSALA,That methinks is strange.,-0.2023,-0.19447
+julius-caesar,Julius Caesar,main,4,3,13,715,speech,BRUTUS,BRUTUS,Why ask you? Hear you aught of her in yours?,0.0,-0.00814
+julius-caesar,Julius Caesar,main,4,3,13,716,speech,MESSALA,MESSALA,"No, my lord.",0.0,-0.58973
+julius-caesar,Julius Caesar,main,4,3,13,717,speech,BRUTUS,BRUTUS,"Now, as you are a Roman, tell me true.",0.3182,0.1819
+julius-caesar,Julius Caesar,main,4,3,13,718,speech,MESSALA,MESSALA,"Then like a Roman bear the truth I tell.
+For certain she is dead, and by strange manner.",-0.5859,-0.69886
+julius-caesar,Julius Caesar,main,4,3,13,719,speech,BRUTUS,BRUTUS,"Why, farewell, Portia. We must die, Messala.
+With meditating that she must die once,
+I have the patience to endure it now.",-0.891,-0.18117
+julius-caesar,Julius Caesar,main,4,3,13,720,speech,MESSALA,MESSALA,Even so great men great losses should endure.,0.7579,-0.33046
+julius-caesar,Julius Caesar,main,4,3,13,721,speech,CASSIUS,CASSIUS,"I have as much of this in art as you,
+But yet my nature could not bear it so.",0.1406,-0.13205
+julius-caesar,Julius Caesar,main,4,3,13,722,speech,BRUTUS,BRUTUS,"Well, to our work alive. What do you think
+Of marching to Philippi presently?",0.2732,-0.45414
+julius-caesar,Julius Caesar,main,4,3,13,723,speech,CASSIUS,CASSIUS,I do not think it good.,0.4404,-0.485
+julius-caesar,Julius Caesar,main,4,3,13,724,speech,BRUTUS,BRUTUS,Your reason?,0.0,-0.15812
+julius-caesar,Julius Caesar,main,4,3,13,725,speech,CASSIUS,CASSIUS,"This it is:
+'Tis better that the enemy seek us.
+So shall he waste his means, weary his soldiers,
+Doing himself offense, whilst we, lying still,
+Are full of rest, defense, and nimbleness.",0.4767,-0.17668
+julius-caesar,Julius Caesar,main,4,3,13,726,speech,BRUTUS,BRUTUS,"Good reasons must of force give place to better.
+The people ’twixt Philippi and this ground
+Do stand but in a forced affection,
+For they have grudged us contribution.
+The enemy, marching along by them,
+By them shall make a fuller number up,
+Come on refreshed, new-added, and encouraged,
+From which advantage shall we cut him off
+If at Philippi we do face him there,
+These people at our back.",-0.3664,-0.40771
+julius-caesar,Julius Caesar,main,4,3,13,727,speech,CASSIUS,CASSIUS,"Hear me, good brother—",0.4404,0.47841
+julius-caesar,Julius Caesar,main,4,3,13,728,speech,BRUTUS,BRUTUS,"Under your pardon. You must note beside,
+That we have tried the utmost of our friends,
+Our legions are brim-full, our cause is ripe.
+The enemy increaseth every day.
+We, at the height, are ready to decline.
+There is a tide in the affairs of men,
+Which, taken at the flood, leads on to fortune;
+Omitted, all the voyage of their life
+Is bound in shallows and in miseries.
+On such a full sea are we now afloat,
+And we must take the current when it serves
+Or lose our ventures.",-0.81,0.39872
+julius-caesar,Julius Caesar,main,4,3,13,729,speech,CASSIUS,CASSIUS,"Then, with your will, go on.
+We’ll along ourselves, and meet them at Philippi.",0.5859,0.13321
+julius-caesar,Julius Caesar,main,4,3,13,730,speech,BRUTUS,BRUTUS,"The deep of night is crept upon our talk,
+And nature must obey necessity,
+Which we will niggard with a little rest.
+There is no more to say?",0.6124,-0.16029
+julius-caesar,Julius Caesar,main,4,3,13,731,speech,CASSIUS,CASSIUS,"No more. Good night.
+Early tomorrow will we rise and hence.",-0.3412,-0.40519
+julius-caesar,Julius Caesar,main,4,3,13,732,speech,BRUTUS,BRUTUS,Lucius!,0.0,0.70436
+julius-caesar,Julius Caesar,main,4,3,13,733,stage_direction,,,LUCIUS enters.,0.0,0.02164
+julius-caesar,Julius Caesar,main,4,3,13,734,speech,BRUTUS,BRUTUS,My gown.,0.0,-0.47164
+julius-caesar,Julius Caesar,main,4,3,13,735,stage_direction,,,LUCIUS exits.,0.0,0.01033
+julius-caesar,Julius Caesar,main,4,3,13,736,speech,BRUTUS,BRUTUS,"Farewell, good Messala.—
+Good night, Titinius.—Noble, noble Cassius,
+Good night and good repose.",0.9413,0.49282
+julius-caesar,Julius Caesar,main,4,3,13,737,speech,CASSIUS,CASSIUS,"O my dear brother,
+This was an ill beginning of the night.
+Never come such division ’tween our souls.
+Let it not, Brutus.",-0.5093,-0.84897
+julius-caesar,Julius Caesar,main,4,3,13,738,stage_direction,,,LUCIUS enters with the nightgown.,0.0,0.00729
+julius-caesar,Julius Caesar,main,4,3,13,739,speech,BRUTUS,BRUTUS,Everything is well.,0.2732,0.41123
+julius-caesar,Julius Caesar,main,4,3,13,740,speech,CASSIUS,CASSIUS,"Good night, my lord.",0.4404,0.4751
+julius-caesar,Julius Caesar,main,4,3,13,741,speech,BRUTUS,BRUTUS,"Good night, good brother.",0.7003,0.4457
+julius-caesar,Julius Caesar,main,4,3,13,742,speech,"TITINIUS, MESSALA",TITINIUS MESSALA,"Good night, Lord Brutus.",0.4404,0.35172
+julius-caesar,Julius Caesar,main,4,3,13,743,speech,BRUTUS,BRUTUS,"Farewell, everyone.",0.0,0.69819
+julius-caesar,Julius Caesar,main,4,3,13,744,stage_direction,,,"CASSIUS, TITINIUS, and MESSALA exit.",0.0,0.02704
+julius-caesar,Julius Caesar,main,4,3,13,745,speech,BRUTUS,BRUTUS,Give me the gown. Where is thy instrument?,0.0,-0.02238
+julius-caesar,Julius Caesar,main,4,3,13,746,speech,LUCIUS,LUCIUS,Here in the tent.,0.0,0.10375
+julius-caesar,Julius Caesar,main,4,3,13,747,speech,BRUTUS,BRUTUS,"What, thou speak’st drowsily?
+Poor knave, I blame thee not. Thou art o'erwatched.
+Call Claudio and some other of my men.
+I’ll have them sleep on cushions in my tent.",-0.8834,-0.72048
+julius-caesar,Julius Caesar,main,4,3,13,748,speech,LUCIUS,LUCIUS,Varrus and Claudio!,0.0,0.6081
+julius-caesar,Julius Caesar,main,4,3,13,749,stage_direction,,,VARRUS and CLAUDIO enter.,0.0,0.11464
+julius-caesar,Julius Caesar,main,4,3,13,750,speech,VARRUS,VARRUS,Calls my lord?,0.0,0.01838
+julius-caesar,Julius Caesar,main,4,3,13,751,speech,BRUTUS,BRUTUS,"I pray you, sirs, lie in my tent and sleep.
+It may be I shall raise you by and by
+On business to my brother Cassius.",0.0,0.32411
+julius-caesar,Julius Caesar,main,4,3,13,752,speech,VARRUS,VARRUS,"So please you, we will stand and watch your pleasure.",0.6124,0.00842
+julius-caesar,Julius Caesar,main,4,3,13,753,speech,BRUTUS,BRUTUS,"I will not have it so. Lie down, good sirs.
+It may be I shall otherwise bethink me.
+—Look, Lucius, here’s the book I sought for so.
+I put it in the pocket of my gown.",0.1779,-0.67999
+julius-caesar,Julius Caesar,main,4,3,13,754,speech,LUCIUS,LUCIUS,I was sure your lordship did not give it me.,0.3182,-0.63057
+julius-caesar,Julius Caesar,main,4,3,13,755,speech,BRUTUS,BRUTUS,"Bear with me, good boy, I am much forgetful.
+Canst thou hold up thy heavy eyes awhile,
+And touch thy instrument a strain or two?",0.4417,0.45038
+julius-caesar,Julius Caesar,main,4,3,13,756,speech,LUCIUS,LUCIUS,"Ay, my lord, an ’t please you.",0.7506,0.56898
+julius-caesar,Julius Caesar,main,4,3,13,757,speech,BRUTUS,BRUTUS,"It does, my boy.
+I trouble thee too much, but thou art willing.",0.0,0.42461
+julius-caesar,Julius Caesar,main,4,3,13,758,speech,LUCIUS,LUCIUS,"It is my duty, sir.",0.0,0.41423
+julius-caesar,Julius Caesar,main,4,3,13,759,speech,BRUTUS,BRUTUS,"I should not urge thy duty past thy might.
+I know young bloods look for a time of rest.",0.0,-0.2102
+julius-caesar,Julius Caesar,main,4,3,13,760,speech,LUCIUS,LUCIUS,"I have slept, my lord, already.",0.0,0.74549
+julius-caesar,Julius Caesar,main,4,3,13,761,speech,BRUTUS,BRUTUS,"It was well done, and thou shalt sleep again.
+I will not hold thee long. If I do live,
+I will be good to thee.",0.6808,0.48955
+julius-caesar,Julius Caesar,main,4,3,13,762,stage_direction,,,"LUCIUS plays music and sings a song, then falls asleep.",0.25,-0.00427
+julius-caesar,Julius Caesar,main,4,3,13,763,speech,BRUTUS,BRUTUS,"This is a sleepy tune. O murderous slumber,
+Layst thou thy leaden mace upon my boy
+That plays thee music? —Gentle knave, good night.
+I will not do thee so much wrong to wake thee.
+If thou dost nod, thou break’st thy instrument.
+I’ll take it from thee. And, good boy, good night.
+—Let me see, let me see. Is not the leaf turned down
+Where I left reading? Here it is, I think.",0.8426,-0.02532
+julius-caesar,Julius Caesar,main,4,3,13,764,stage_direction,,,The GHOST of Caesar enters.,-0.4648,0.02625
+julius-caesar,Julius Caesar,main,4,3,13,765,speech,BRUTUS,BRUTUS,"How ill this taper burns!—Ha, who comes here?
+I think it is the weakness of mine eyes
+That shapes this monstrous apparition.
+It comes upon me.—Art thou any thing?
+Art thou some god, some angel, or some devil
+That makest my blood cold and my hair to stare?
+Speak to me what thou art.",-0.9141,-0.81165
+julius-caesar,Julius Caesar,main,4,3,13,766,speech,GHOST,GHOST,"Thy evil spirit, Brutus.",-0.5719,0.59933
+julius-caesar,Julius Caesar,main,4,3,13,767,speech,BRUTUS,BRUTUS,Why comest thou?,0.0,-0.0178
+julius-caesar,Julius Caesar,main,4,3,13,768,speech,GHOST,GHOST,To tell thee thou shalt see me at Philippi.,0.0,0.06688
+julius-caesar,Julius Caesar,main,4,3,13,769,speech,BRUTUS,BRUTUS,"Well, then I shall see thee again?",0.0,0.01805
+julius-caesar,Julius Caesar,main,4,3,13,770,speech,GHOST,GHOST,"Ay, at Philippi.",0.4019,0.26867
+julius-caesar,Julius Caesar,main,4,3,13,771,speech,BRUTUS,BRUTUS,"Why, I will see thee at Philippi, then.",0.0,0.13547
+julius-caesar,Julius Caesar,main,4,3,13,772,stage_direction,,,The GHOST exits.,-0.4648,0.01023
+julius-caesar,Julius Caesar,main,4,3,13,773,speech,BRUTUS,BRUTUS,"Now I have taken heart thou vanishest.
+Ill spirit, I would hold more talk with thee.
+—Boy, Lucius!—Varrus!—Claudio!—Sirs, awake!
+—Claudio!",0.3111,0.37408
+julius-caesar,Julius Caesar,main,4,3,13,774,speech,LUCIUS,LUCIUS,"The strings, my lord, are false.",0.0,-0.45921
+julius-caesar,Julius Caesar,main,4,3,13,775,speech,BRUTUS,BRUTUS,"He thinks he still is at his instrument.
+Lucius, awake.",0.2714,-0.19114
+julius-caesar,Julius Caesar,main,4,3,13,776,speech,LUCIUS,LUCIUS,My lord?,0.0,-0.2514
+julius-caesar,Julius Caesar,main,4,3,13,777,speech,BRUTUS,BRUTUS,"Didst thou dream, Lucius, that thou so criedst out?",-0.4515,-0.18971
+julius-caesar,Julius Caesar,main,4,3,13,778,speech,LUCIUS,LUCIUS,"My lord, I do not know that I did cry.",-0.4767,-0.25904
+julius-caesar,Julius Caesar,main,4,3,13,779,speech,BRUTUS,BRUTUS,"Yes, that thou didst. Didst thou see any thing?",0.4019,0.33774
+julius-caesar,Julius Caesar,main,4,3,13,780,speech,LUCIUS,LUCIUS,"Nothing, my lord.",0.0,-0.72361
+julius-caesar,Julius Caesar,main,4,3,13,781,speech,BRUTUS,BRUTUS,"Sleep again, Lucius.—Sirrah Claudio!
+[to VARRUS]
+Fellow thou, awake!",0.0,0.79469
+julius-caesar,Julius Caesar,main,4,3,13,782,speech,VARRUS,VARRUS,My lord?,0.0,-0.2514
+julius-caesar,Julius Caesar,main,4,3,13,783,speech,CLAUDIO,CLAUDIO,My lord?,0.0,-0.2514
+julius-caesar,Julius Caesar,main,4,3,13,784,speech,BRUTUS,BRUTUS,"Why did you so cry out, sirs, in your sleep?",-0.4767,-0.0245
+julius-caesar,Julius Caesar,main,4,3,13,785,speech,"VARRUS, CLAUDIO",VARRUS CLAUDIO,"Did we, my lord?",0.0,-0.39306
+julius-caesar,Julius Caesar,main,4,3,13,786,speech,BRUTUS,BRUTUS,Ay. Saw you anything?,0.4019,-0.00292
+julius-caesar,Julius Caesar,main,4,3,13,787,speech,VARRUS,VARRUS,"No, my lord, I saw nothing.",0.0,-0.69061
+julius-caesar,Julius Caesar,main,4,3,13,788,speech,CLAUDIO,CLAUDIO,"Nor I, my lord.",0.0,-0.43885
+julius-caesar,Julius Caesar,main,4,3,13,789,speech,BRUTUS,BRUTUS,"Go and commend me to my brother Cassius.
+Bid him set on his powers betimes before,
+And we will follow.",0.4215,0.15258
+julius-caesar,Julius Caesar,main,4,3,13,790,speech,"VARRUS, CLAUDIO",VARRUS CLAUDIO,"It shall be done, my lord.",0.0,0.48546
+julius-caesar,Julius Caesar,main,4,3,13,791,stage_direction,,,Everyone exits in different directions.,0.0,0.00254
+julius-caesar,Julius Caesar,main,5,1,14,792,stage_direction,,,"OCTAVIUS and ANTONY enter, along with their army.",0.0,0.14419
+julius-caesar,Julius Caesar,main,5,1,14,793,speech,OCTAVIUS,OCTAVIUS,"Now, Antony, our hopes are answerèd.
+You said the enemy would not come down
+But keep the hills and upper regions.
+It proves not so. Their battles are at hand.
+They mean to warn us at Philippi here,
+Answering before we do demand of them.",-0.928,-0.37572
+julius-caesar,Julius Caesar,main,5,1,14,794,speech,ANTONY,ANTONY,"Tut, I am in their bosoms, and I know
+Wherefore they do it. They could be content
+To visit other places, and come down
+With fearful bravery, thinking by this face
+To fasten in our thoughts that they have courage.
+But ’tis not so.",0.7096,-0.72259
+julius-caesar,Julius Caesar,main,5,1,14,795,stage_direction,,,A MESSENGER enters.,0.0,0.02267
+julius-caesar,Julius Caesar,main,5,1,14,796,speech,MESSENGER,MESSENGER,"Prepare you, generals.
+The enemy comes on in gallant show.
+Their bloody sign of battle is hung out,
+And something to be done immediately.",-0.6249,0.47464
+julius-caesar,Julius Caesar,main,5,1,14,797,speech,ANTONY,ANTONY,"Octavius, lead your battle softly on,
+Upon the left hand of the even field.",0.0,0.04339
+julius-caesar,Julius Caesar,main,5,1,14,798,speech,OCTAVIUS,OCTAVIUS,Upon the right hand I. Keep thou the left.,0.0,-0.00426
+julius-caesar,Julius Caesar,main,5,1,14,799,speech,ANTONY,ANTONY,Why do you cross me in this exigent?,-0.3869,-0.01218
+julius-caesar,Julius Caesar,main,5,1,14,800,speech,OCTAVIUS,OCTAVIUS,I do not cross you. But I will do so.,0.0,-0.38687
+julius-caesar,Julius Caesar,main,5,1,14,801,stage_direction,,,"The sound of drums and soldiers. BRUTUS, CASSIUS, and their army enter, including LUCILLIUS, TITINIUS, and MESSALA.",0.0,0.11125
+julius-caesar,Julius Caesar,main,5,1,14,802,speech,BRUTUS,BRUTUS,They stand and would have parley.,-0.2411,-0.47124
+julius-caesar,Julius Caesar,main,5,1,14,803,speech,CASSIUS,CASSIUS,"Stand fast, Titinius. We must out and talk.",0.0,0.38928
+julius-caesar,Julius Caesar,main,5,1,14,804,speech,OCTAVIUS,OCTAVIUS,"Mark Antony, shall we give sign of battle?",-0.4767,0.01154
+julius-caesar,Julius Caesar,main,5,1,14,805,speech,ANTONY,ANTONY,"No, Caesar, we will answer on their charge.
+Make forth. The generals would have some words.",-0.4215,0.1253
+julius-caesar,Julius Caesar,main,5,1,14,806,speech,OCTAVIUS,OCTAVIUS,[to his army] Stir not until the signal.,0.0,-0.56323
+julius-caesar,Julius Caesar,main,5,1,14,807,speech,BRUTUS,BRUTUS,"Words before blows. Is it so, countrymen?",-0.3612,-0.00316
+julius-caesar,Julius Caesar,main,5,1,14,808,speech,OCTAVIUS,OCTAVIUS,"Not that we love words better, as you do.",-0.3612,-0.46129
+julius-caesar,Julius Caesar,main,5,1,14,809,speech,BRUTUS,BRUTUS,"Good words are better than bad strokes, Octavius.",0.1027,0.46015
+julius-caesar,Julius Caesar,main,5,1,14,810,speech,ANTONY,ANTONY,"In your bad strokes, Brutus, you give good words.
+Witness the hole you made in Caesar’s heart,
+Crying “Long live, hail, Caesar!”",0.5399,0.72096
+julius-caesar,Julius Caesar,main,5,1,14,811,speech,CASSIUS,CASSIUS,"Antony,
+The posture of your blows are yet unknown.
+But for your words, they rob the Hybla bees
+And leave them honeyless.",0.2499,-0.27313
+julius-caesar,Julius Caesar,main,5,1,14,812,speech,ANTONY,ANTONY,Not stingless too?,0.0,-0.05773
+julius-caesar,Julius Caesar,main,5,1,14,813,speech,BRUTUS,BRUTUS,"Oh, yes, and soundless too.
+For you have stol'n their buzzing, Antony,
+And very wisely threat before you sting.",0.0772,-0.3635
+julius-caesar,Julius Caesar,main,5,1,14,814,speech,ANTONY,ANTONY,"Villains, you did not so when your vile daggers
+Hacked one another in the sides of Caesar.
+You showed your teeth like apes, and fawned like
+hounds,
+And bowed like bondmen, kissing Caesar’s feet,
+Whilst damnèd Casca, like a cur, behind
+Struck Caesar on the neck. O you flatterers!",0.8787,-0.47869
+julius-caesar,Julius Caesar,main,5,1,14,815,speech,CASSIUS,CASSIUS,"Flatterers?—Now, Brutus, thank yourself.
+This tongue had not offended so today
+If Cassius might have ruled.",0.6707,-0.66311
+julius-caesar,Julius Caesar,main,5,1,14,816,speech,OCTAVIUS,OCTAVIUS,"Come, come, the cause. If arguing make us sweat,
+The proof of it will turn to redder drops.
+[draws his sword] Look, I draw a sword against
+conspirators.
+When think you that the sword goes up again?
+Never, till Caesar’s three and thirty wounds
+Be well avenged, or till another Caesar
+Have added slaughter to the sword of traitors.",-0.765,0.16335
+julius-caesar,Julius Caesar,main,5,1,14,817,speech,BRUTUS,BRUTUS,"Caesar, thou canst not die by traitors' hands
+Unless thou bring’st them with thee.",-0.5994,-0.24003
+julius-caesar,Julius Caesar,main,5,1,14,818,speech,OCTAVIUS,OCTAVIUS,"So I hope.
+I was not born to die on Brutus' sword.",-0.25,-0.37273
+julius-caesar,Julius Caesar,main,5,1,14,819,speech,BRUTUS,BRUTUS,"O, if thou wert the noblest of thy strain,
+Young man, thou couldst not die more honorable.",-0.0534,0.29292
+julius-caesar,Julius Caesar,main,5,1,14,820,speech,CASSIUS,CASSIUS,"A peevish schoolboy, worthless of such honor,
+Joined with a masker and a reveler!",0.4389,0.29314
+julius-caesar,Julius Caesar,main,5,1,14,821,speech,ANTONY,ANTONY,Old Cassius still.,0.0,-0.14778
+julius-caesar,Julius Caesar,main,5,1,14,822,speech,OCTAVIUS,OCTAVIUS,"Come, Antony, away.—
+Defiance, traitors, hurl we in your teeth.
+If you dare fight today, come to the field.
+If not, when you have stomachs.",0.1531,0.43933
+julius-caesar,Julius Caesar,main,5,1,14,823,stage_direction,,,"OCTAVIUS, ANTONY, and their army exit.",0.0,0.03561
+julius-caesar,Julius Caesar,main,5,1,14,824,speech,CASSIUS,CASSIUS,"Why, now, blow wind, swell billow, and swim bark!
+The storm is up and all is on the hazard.",0.0,0.66625
+julius-caesar,Julius Caesar,main,5,1,14,825,speech,BRUTUS,BRUTUS,"Ho, Lucillius, hark, a word with you.",0.4199,0.61723
+julius-caesar,Julius Caesar,main,5,1,14,826,speech,LUCILLIUS,LUCILLIUS,"[stands forth]
+My lord?",0.0,0.04581
+julius-caesar,Julius Caesar,main,5,1,14,827,speech,CASSIUS,CASSIUS,Messala!,0.0,0.56875
+julius-caesar,Julius Caesar,main,5,1,14,828,speech,MESSALA,MESSALA,"[stands forth]
+What says my general?",0.0,-0.01455
+julius-caesar,Julius Caesar,main,5,1,14,829,speech,CASSIUS,CASSIUS,"Messala,
+This is my birthday, as this very day
+Was Cassius born. Give me thy hand, Messala.
+Be thou my witness that against my will,
+As Pompey was, am I compelled to set
+Upon one battle all our liberties.
+You know that I held Epicurus strong
+And his opinion. Now I change my mind,
+And partly credit things that do presage.
+Coming from Sardis, on our former ensign
+Two mighty eagles fell, and there they perched,
+Gorging and feeding from our soldiers' hands,
+Who to Philippi here consorted us.
+This morning are they fled away and gone,
+And in their steads do ravens, crows, and kites
+Fly o'er our heads and downward look on us
+As we were sickly prey. Their shadows seem
+A canopy most fatal, under which
+Our army lies, ready to give up the ghost.",-0.0516,0.05655
+julius-caesar,Julius Caesar,main,5,1,14,830,speech,MESSALA,MESSALA,Believe not so.,0.0,-0.58857
+julius-caesar,Julius Caesar,main,5,1,14,831,speech,CASSIUS,CASSIUS,"I but believe it partly,
+For I am fresh of spirit and resolved
+To meet all perils very constantly.",0.3041,-0.62252
+julius-caesar,Julius Caesar,main,5,1,14,832,speech,BRUTUS,BRUTUS,"[returning with LUCILLIUS] Even so, Lucillius.",0.0,0.32099
+julius-caesar,Julius Caesar,main,5,1,14,833,speech,CASSIUS,CASSIUS,"Now, most noble Brutus,
+The gods today stand friendly that we may,
+Lovers in peace, lead on our days to age.
+But since the affairs of men rest still incertain,
+Let’s reason with the worst that may befall.
+If we do lose this battle, then is this
+The very last time we shall speak together.
+What are you then determinèd to do?",-0.9254,-0.48401
+julius-caesar,Julius Caesar,main,5,1,14,834,speech,BRUTUS,BRUTUS,"Even by the rule of that philosophy
+By which I did blame Cato for the death
+Which he did give himself — I know not how,
+But I do find it cowardly and vile,
+For fear of what might fall, so to prevent
+The time of life — arming myself with patience
+To stay the providence of some high powers
+That govern us below.",-0.9802,0.46199
+julius-caesar,Julius Caesar,main,5,1,14,835,speech,CASSIUS,CASSIUS,"Then if we lose this battle
+You are contented to be led in triumph
+Thorough the streets of Rome?",-0.8316,-0.04748
+julius-caesar,Julius Caesar,main,5,1,14,836,speech,BRUTUS,BRUTUS,"No, Cassius, no. Think not, thou noble Roman,
+That ever Brutus will go bound to Rome.
+He bears too great a mind. But this same day
+Must end that work the ides of March begun.
+And whether we shall meet again I know not.
+Therefore our everlasting farewell take.
+Forever and forever farewell, Cassius.
+If we do meet again, why, we shall smile.
+If not, why then this parting was well made.",0.9161,0.65522
+julius-caesar,Julius Caesar,main,5,1,14,837,speech,CASSIUS,CASSIUS,"Forever and forever farewell, Brutus.
+If we do meet again, we’ll smile indeed.
+If not, ’tis true this parting was well made.",0.3111,0.61551
+julius-caesar,Julius Caesar,main,5,1,14,838,speech,BRUTUS,BRUTUS,"Why then, lead on. Oh, that a man might know
+The end of this day’s business ere it come!
+But it sufficeth that the day will end,
+And then the end is known.—Come, ho! Away!",0.0,0.52483
+julius-caesar,Julius Caesar,main,5,1,14,839,stage_direction,,,They all exit.,0.0,-0.27456
+julius-caesar,Julius Caesar,main,5,2,15,840,stage_direction,,,Sounds of battle. BRUTUS and MESSALA enter.,-0.3818,0.39404
+julius-caesar,Julius Caesar,main,5,2,15,841,speech,BRUTUS,BRUTUS,"Ride, ride, Messala, ride, and give these bills
+Unto the legions on the other side.",0.0,0.10841
+julius-caesar,Julius Caesar,main,5,2,15,842,stage_direction,,,Sounds of battle.,-0.3818,0.32595
+julius-caesar,Julius Caesar,main,5,2,15,843,speech,BRUTUS,BRUTUS,"Let them set on at once, for I perceive
+But cold demeanor in Octavius' wing,
+And sudden push gives them the overthrow.
+Ride, ride, Messala. Let them all come down.",-0.8625,-0.29636
+julius-caesar,Julius Caesar,main,5,2,15,844,stage_direction,,,They exit in opposite directions.,0.0,-0.00057
+julius-caesar,Julius Caesar,main,5,3,16,845,stage_direction,,,Sounds of battle. CASSIUS and TITINIUS enter.,-0.3818,0.25391
+julius-caesar,Julius Caesar,main,5,3,16,846,speech,CASSIUS,CASSIUS,"O, look, Titinius, look, the villains fly!
+Myself have to mine own turned enemy.
+This ensign here of mine was turning back.
+I slew the coward and did take it from him.
+[indicates his standard]",-0.921,0.4876
+julius-caesar,Julius Caesar,main,5,3,16,847,speech,TITINIUS,TITINIUS,"O Cassius, Brutus gave the word too early,
+Who, having some advantage on Octavius,
+Took it too eagerly. His soldiers fell to spoil,
+Whilst we by Antony are all enclosed.",0.4588,-0.28035
+julius-caesar,Julius Caesar,main,5,3,16,848,stage_direction,,,PINDARUS enters.,0.0,0.01117
+julius-caesar,Julius Caesar,main,5,3,16,849,speech,PINDARUS,PINDARUS,"Fly further off, my lord, fly further off.
+Mark Antony is in your tents, my lord.
+Fly, therefore, noble Cassius, fly far off.",0.6808,-0.45814
+julius-caesar,Julius Caesar,main,5,3,16,850,speech,CASSIUS,CASSIUS,"This hill is far enough.—Look, look, Titinius.
+Are those my tents where I perceive the fire?",-0.34,-0.59261
+julius-caesar,Julius Caesar,main,5,3,16,851,speech,TITINIUS,TITINIUS,"They are, my lord.",0.0,0.75926
+julius-caesar,Julius Caesar,main,5,3,16,852,speech,CASSIUS,CASSIUS,"Titinius, if thou lovest me,
+Mount thou my horse, and hide thy spurs in him
+Till he have brought thee up to yonder troops
+And here again, that I may rest assured
+Whether yond troops are friend or enemy.",0.6249,0.3892
+julius-caesar,Julius Caesar,main,5,3,16,853,speech,TITINIUS,TITINIUS,"I will be here again, even with a thought.",0.0,0.26486
+julius-caesar,Julius Caesar,main,5,3,16,854,stage_direction,,,TITINIUS exits.,0.0,0.0022
+julius-caesar,Julius Caesar,main,5,3,16,855,speech,CASSIUS,CASSIUS,"Go, Pindarus, get higher on that hill.
+My sight was ever thick. Regard Titinius,
+And tell me what thou notest about the field.",-0.5423,-0.31675
+julius-caesar,Julius Caesar,main,5,3,16,856,speech,CASSIUS,CASSIUS,"This day I breathed first. Time is come round,
+And where I did begin, there shall I end.
+My life is run his compass.
+[to PINDARUS] Sirrah, what news?",0.0,0.83413
+julius-caesar,Julius Caesar,main,5,3,16,857,speech,PINDARUS,PINDARUS,[above] O my lord!,0.0,0.80111
+julius-caesar,Julius Caesar,main,5,3,16,858,speech,CASSIUS,CASSIUS,What news?,0.0,-0.03457
+julius-caesar,Julius Caesar,main,5,3,16,859,speech,PINDARUS,PINDARUS,"[above] Titinius is enclosèd round about
+With horsemen, that make to him on the spur.
+Yet he spurs on. Now they are almost on him.
+Now, Titinius. Now some light. Oh, he lights too.
+He’s ta'en.",0.0,0.28186
+julius-caesar,Julius Caesar,main,5,3,16,860,stage_direction,,,A shout offstage.,0.0,-0.14328
+julius-caesar,Julius Caesar,main,5,3,16,861,speech,PINDARUS,PINDARUS,"And, hark! They shout for joy.",0.6239,0.58626
+julius-caesar,Julius Caesar,main,5,3,16,862,speech,CASSIUS,CASSIUS,"Come down, behold no more.
+Oh, coward that I am, to live so long
+To see my best friend ta'en before my face!",0.69,-0.23316
+julius-caesar,Julius Caesar,main,5,3,16,863,stage_direction,,,PINDARUS returns.,0.0,-0.00044
+julius-caesar,Julius Caesar,main,5,3,16,864,speech,CASSIUS,CASSIUS,"Come hither, sirrah.
+In Parthia did I take thee prisoner.
+And then I swore thee, saving of thy life,
+That whatsoever I did bid thee do,
+Thou shouldst attempt it. Come now, keep thine oath.
+[gives his sword to PINDARUS]
+Now be a free man, and with this good sword
+That ran through Caesar’s bowels, search this bosom.
+Stand not to answer. Here take thou the hilts
+And, when my face is covered, as ’tis now,
+Guide thou the sword.",-0.4263,0.43167
+julius-caesar,Julius Caesar,main,5,3,16,865,speech,CASSIUS,CASSIUS,"Caesar, thou art revenged,
+Even with the sword that killed thee.
+[dies]",-0.7506,-0.64501
+julius-caesar,Julius Caesar,main,5,3,16,866,speech,PINDARUS,PINDARUS,"So I am free. Yet would not so have been,
+Durst I have done my will. O Cassius,
+Far from this country Pindarus shall run,
+Where never Roman shall take note of him.",-0.6204,-0.70649
+julius-caesar,Julius Caesar,main,5,3,16,867,stage_direction,,,PINDARUS exits.,0.0,-0.02446
+julius-caesar,Julius Caesar,main,5,3,16,868,stage_direction,,,TITINIUS and MESSALA enter.,0.0,0.23385
+julius-caesar,Julius Caesar,main,5,3,16,869,speech,MESSALA,MESSALA,"It is but change, Titinius, for Octavius
+Is overthrown by noble Brutus' power,
+As Cassius' legions are by Antony.",0.0258,-0.35241
+julius-caesar,Julius Caesar,main,5,3,16,870,speech,TITINIUS,TITINIUS,These tidings will well comfort Cassius.,0.3612,0.45461
+julius-caesar,Julius Caesar,main,5,3,16,871,speech,MESSALA,MESSALA,Where did you leave him?,-0.0516,-0.00883
+julius-caesar,Julius Caesar,main,5,3,16,872,speech,TITINIUS,TITINIUS,"All disconsolate,
+With Pindarus his bondman on this hill.",-0.3182,-0.79053
+julius-caesar,Julius Caesar,main,5,3,16,873,speech,MESSALA,MESSALA,Is not that he that lies upon the ground?,-0.5267,-0.03775
+julius-caesar,Julius Caesar,main,5,3,16,874,speech,TITINIUS,TITINIUS,He lies not like the living. O my heart!,0.6476,-0.26515
+julius-caesar,Julius Caesar,main,5,3,16,875,speech,MESSALA,MESSALA,Is not that he?,0.0,-0.12506
+julius-caesar,Julius Caesar,main,5,3,16,876,speech,TITINIUS,TITINIUS,"No, this was he, Messala,
+But Cassius is no more. O setting sun,
+As in thy red rays thou dost sink tonight,
+So in his red blood Cassius' day is set.
+The sun of Rome is set. Our day is gone.
+Clouds, dews, and dangers come! Our deeds are done.
+Mistrust of my success hath done this deed.",-0.9158,0.30858
+julius-caesar,Julius Caesar,main,5,3,16,877,speech,MESSALA,MESSALA,"Mistrust of good success hath done this deed.
+O hateful error, melancholy’s child,
+Why dost thou show to the apt thoughts of men
+The things that are not? O error, soon conceived,
+Thou never comest unto a happy birth
+But kill’st the mother that engendered thee!",-0.7199,-0.86674
+julius-caesar,Julius Caesar,main,5,3,16,878,speech,TITINIUS,TITINIUS,"What, Pindarus! Where art thou, Pindarus?",0.0,0.26404
+julius-caesar,Julius Caesar,main,5,3,16,879,speech,MESSALA,MESSALA,"Seek him, Titinius, whilst I go to meet
+The noble Brutus, thrusting this report
+Into his ears. I may say “thrusting” it,
+For piercing steel and darts envenomèd
+Shall be as welcome to the ears of Brutus
+As tidings of this sight.",-0.0516,-0.3956
+julius-caesar,Julius Caesar,main,5,3,16,880,speech,TITINIUS,TITINIUS,"Hie you, Messala,
+And I will seek for Pindarus the while.",0.0,0.06709
+julius-caesar,Julius Caesar,main,5,3,16,881,stage_direction,,,MESSALA exits.,0.0,0.03005
+julius-caesar,Julius Caesar,main,5,3,16,882,speech,TITINIUS,TITINIUS,"Why didst thou send me forth, brave Cassius?
+Did I not meet thy friends? And did not they
+Put on my brows this wreath of victory
+And bid me give it thee? Didst thou not hear their
+shouts?
+Alas, thou hast misconstrued everything!
+But, hold thee, take this garland on thy brow.
+Thy Brutus bid me give it thee, and I
+Will do his bidding.
+[lays wreath on CASSIUS’ head] Brutus, come apace,
+And see how I regarded Caius Cassius.
+—By your leave, gods, this is a Roman’s part.
+Come, Cassius' sword, and find Titinius' heart.
+[stabs himself with CASSIUS’s sword and dies]",0.8886,0.69422
+julius-caesar,Julius Caesar,main,5,3,16,883,stage_direction,,,"Sounds of battle. BRUTUS, MESSALA, Young CATO, STRATO, VOLUMNIUS, LUCILLIUS, LABIO, and FLAVIO enter.",-0.3818,0.28552
+julius-caesar,Julius Caesar,main,5,3,16,884,speech,BRUTUS,BRUTUS,"Where, where, Messala, doth his body lie?",-0.5267,-0.01725
+julius-caesar,Julius Caesar,main,5,3,16,885,speech,MESSALA,MESSALA,"Lo, yonder, and Titinius mourning it.",-0.5267,0.06015
+julius-caesar,Julius Caesar,main,5,3,16,886,speech,BRUTUS,BRUTUS,Titinius' face is upward.,-0.5267,0.08543
+julius-caesar,Julius Caesar,main,5,3,16,887,speech,CATO,CATO,He is slain.,-0.6486,-0.7474
+julius-caesar,Julius Caesar,main,5,3,16,888,speech,BRUTUS,BRUTUS,"O Julius Caesar, thou art mighty yet!
+Thy spirit walks abroad and turns our swords
+In our own proper entrails.",-0.7579,-0.66196
+julius-caesar,Julius Caesar,main,5,3,16,889,speech,CATO,CATO,"Brave Titinius!—
+Look whe 'er he have not crowned dead Cassius.",-0.3578,0.73725
+julius-caesar,Julius Caesar,main,5,3,16,890,speech,BRUTUS,BRUTUS,"Are yet two Romans living such as these?
+—The last of all the Romans, fare thee well!
+It is impossible that ever Rome
+Should breed thy fellow. —Friends, I owe more tears
+To this dead man than you shall see me pay.
+—I shall find time, Cassius, I shall find time.
+—Come, therefore, and to Thasos send his body.
+His funerals shall not be in our camp,
+Lest it discomfort us. —Lucillius, come. —
+And come, young Cato. Let us to the field.
+—Labio and Flavio, set our battles on.
+—'Tis three o'clock, and, Romans, yet ere night
+We shall try fortune in a second fight.",-0.8718,-0.39883
+julius-caesar,Julius Caesar,main,5,3,16,891,stage_direction,,,They all exit.,0.0,-0.27456
+julius-caesar,Julius Caesar,main,5,4,17,892,stage_direction,,,"Sounds of battle. BRUTUS, MESSALA, Young CATO, LUCILLIUS, and FLAVIO enter.",-0.3818,0.42975
+julius-caesar,Julius Caesar,main,5,4,17,893,speech,BRUTUS,BRUTUS,"Yet, countrymen, O, yet hold up your heads!",-0.4389,0.05138
+julius-caesar,Julius Caesar,main,5,4,17,894,stage_direction,,,"BRUTUS, MESSALA, and FLAVIO exit.",0.0,0.0702
+julius-caesar,Julius Caesar,main,5,4,17,895,speech,CATO,CATO,"What bastard doth not? Who will go with me?
+I will proclaim my name about the field.
+I am the son of Marcus Cato, ho!
+A foe to tyrants, and my country’s friend.
+I am the son of Marcus Cato, ho!",-0.8097,0.67782
+julius-caesar,Julius Caesar,main,5,4,17,896,stage_direction,,,ANTONY and OCTAVIUS' SOLDIERS enter and fight.,-0.3818,0.04677
+julius-caesar,Julius Caesar,main,5,4,17,897,speech,LUCILLIUS,LUCILLIUS,"And I am Brutus, Marcus Brutus, I!
+Brutus, my country’s friend. Know me for Brutus!",-0.8172,0.1191
+julius-caesar,Julius Caesar,main,5,4,17,898,speech,LUCILLIUS,LUCILLIUS,"O young and noble Cato, art thou down?
+Why, now thou diest as bravely as Titinius,
+And mayst be honored, being Cato’s son.",0.1779,0.29082
+julius-caesar,Julius Caesar,main,5,4,17,899,speech,FIRST SOLDIER,FIRST SOLDIER,"[to LUCILLIUS] Yield, or thou diest.",-0.5994,0.08811
+julius-caesar,Julius Caesar,main,5,4,17,900,speech,LUCILLIUS,LUCILLIUS,"Only I yield to die.
+There is so much that thou wilt kill me straight.
+Kill Brutus, and be honored in his death.",-0.9423,-0.61353
+julius-caesar,Julius Caesar,main,5,4,17,901,speech,FIRST SOLDIER,FIRST SOLDIER,We must not. A noble prisoner!,-0.7409,0.20248
+julius-caesar,Julius Caesar,main,5,4,17,902,stage_direction,,,ANTONY enters.,0.0,0.01369
+julius-caesar,Julius Caesar,main,5,4,17,903,speech,SECOND SOLDIER,SECOND SOLDIER,"Room, ho! Tell Antony Brutus is ta'en.",0.0,0.4988
+julius-caesar,Julius Caesar,main,5,4,17,904,speech,FIRST SOLDIER,FIRST SOLDIER,"I’ll tell the news. Here comes the general.
+—Brutus is ta'en, Brutus is ta'en, my lord.",0.0,0.30455
+julius-caesar,Julius Caesar,main,5,4,17,905,speech,ANTONY,ANTONY,Where is he?,0.0,-0.01871
+julius-caesar,Julius Caesar,main,5,4,17,906,speech,LUCILLIUS,LUCILLIUS,"Safe, Antony. Brutus is safe enough.
+I dare assure thee that no enemy
+Shall ever take alive the noble Brutus.
+The gods defend him from so great a shame!
+When you do find him, or alive or dead,
+He will be found like Brutus, like himself.",0.9566,0.61673
+julius-caesar,Julius Caesar,main,5,4,17,907,speech,ANTONY,ANTONY,"[to SOLDIERS] This is not Brutus, friend, but, I assure
+you,
+A prize no less in worth. Keep this man safe.
+Give him all kindness. I had rather have
+Such men my friends than enemies. Go on,
+And see whether Brutus be alive or dead.
+And bring us word unto Octavius' tent
+How everything is chanced.",0.9571,0.57474
+julius-caesar,Julius Caesar,main,5,4,17,908,stage_direction,,,They exit in opposite directions.,0.0,-0.00057
+julius-caesar,Julius Caesar,main,5,5,18,909,stage_direction,,,"BRUTUS, DARDANIUS, CLITUS, STRATO, and VOLUMNIUS enter.",0.0,0.03479
+julius-caesar,Julius Caesar,main,5,5,18,910,speech,BRUTUS,BRUTUS,"Come, poor remains of friends, rest on this rock.",0.4767,0.12773
+julius-caesar,Julius Caesar,main,5,5,18,911,speech,CLITUS,CLITUS,"Statilius showed the torchlight but, my lord,
+He came not back. He is or ta'en or slain.",-0.8047,-0.18881
+julius-caesar,Julius Caesar,main,5,5,18,912,speech,BRUTUS,BRUTUS,"Sit thee down, Clitus. Slaying is the word.
+It is a deed in fashion. Hark thee, Clitus.
+[whispers to CLITUS]",-0.6705,0.03997
+julius-caesar,Julius Caesar,main,5,5,18,913,speech,CLITUS,CLITUS,"What, I, my lord? No, not for all the world.",0.0,-0.699
+julius-caesar,Julius Caesar,main,5,5,18,914,speech,BRUTUS,BRUTUS,Peace then! No words.,0.0,-0.51395
+julius-caesar,Julius Caesar,main,5,5,18,915,speech,CLITUS,CLITUS,I’ll rather kill myself.,-0.6908,-0.53005
+julius-caesar,Julius Caesar,main,5,5,18,916,speech,BRUTUS,BRUTUS,"Hark thee, Dardanius.
+[whispers to DARDANIUS]",0.0,0.38401
+julius-caesar,Julius Caesar,main,5,5,18,917,speech,DARDANIUS,DARDANIUS,Shall I do such a deed?,0.3612,-0.07097
+julius-caesar,Julius Caesar,main,5,5,18,918,speech,CLITUS,CLITUS,O Dardanius!,0.0,0.47587
+julius-caesar,Julius Caesar,main,5,5,18,919,speech,DARDANIUS,DARDANIUS,O Clitus!,0.0,0.58219
+julius-caesar,Julius Caesar,main,5,5,18,920,speech,CLITUS,CLITUS,"[aside to DARDANIUS]
+What ill request did Brutus make to thee?",-0.4588,-0.80115
+julius-caesar,Julius Caesar,main,5,5,18,921,speech,DARDANIUS,DARDANIUS,"[aside to CLITUS]
+To kill him, Clitus. Look, he meditates.",-0.6908,-0.13626
+julius-caesar,Julius Caesar,main,5,5,18,922,speech,CLITUS,CLITUS,"[aside to DARDANIUS] Now is that noble vessel full of
+grief,
+That it runs over even at his eyes.",-0.1189,-0.32253
+julius-caesar,Julius Caesar,main,5,5,18,923,speech,BRUTUS,BRUTUS,"Come hither, good Volumnius. List a word.",0.4404,0.45887
+julius-caesar,Julius Caesar,main,5,5,18,924,speech,VOLUMNIUS,VOLUMNIUS,What says my lord?,0.0,-0.05036
+julius-caesar,Julius Caesar,main,5,5,18,925,speech,BRUTUS,BRUTUS,"Why this, Volumnius:
+The ghost of Caesar hath appeared to me
+Two several times by night. At Sardis once,
+And this last night here in Philippi fields.
+I know my hour is come.",-0.0516,0.10568
+julius-caesar,Julius Caesar,main,5,5,18,926,speech,VOLUMNIUS,VOLUMNIUS,"Not so, my lord.",-0.296,-0.53782
+julius-caesar,Julius Caesar,main,5,5,18,927,speech,BRUTUS,BRUTUS,"Nay, I am sure it is, Volumnius.
+Thou seest the world, Volumnius, how it goes.
+Our enemies have beat us to the pit.",-0.8271,0.18295
+julius-caesar,Julius Caesar,main,5,5,18,928,speech,BRUTUS,BRUTUS,"It is more worthy to leap in ourselves
+Than tarry till they push us. Good Volumnius,
+Thou know’st that we two went to school together.
+Even for that our love of old, I prithee,
+Hold thou my sword hilts, whilst I run on it.",0.7003,0.53991
+julius-caesar,Julius Caesar,main,5,5,18,929,speech,VOLUMNIUS,VOLUMNIUS,"That’s not an office for a friend, my lord.",0.4939,-0.56032
+julius-caesar,Julius Caesar,main,5,5,18,930,stage_direction,,,Sounds of battle.,-0.3818,0.32595
+julius-caesar,Julius Caesar,main,5,5,18,931,speech,CLITUS,CLITUS,"Fly, fly, my lord. There is no tarrying here.",0.0,0.02936
+julius-caesar,Julius Caesar,main,5,5,18,932,speech,BRUTUS,BRUTUS,"Farewell to you. —And you .—And you, Volumnius.
+—Strato, thou hast been all this while asleep.
+Farewell to thee too, Strato. —Countrymen,
+My heart doth joy that yet in all my life
+I found no man but he was true to me.
+I shall have glory by this losing day
+More than Octavius and Mark Antony
+By this vile conquest shall attain unto.
+So fare you well at once, for Brutus' tongue
+Hath almost ended his life’s history.
+Night hangs upon mine eyes. My bones would rest,
+That have but labored to attain this hour.",0.6467,0.87674
+julius-caesar,Julius Caesar,main,5,5,18,933,speech,CLITUS,CLITUS,"Fly, my lord, fly.",0.0,0.2418
+julius-caesar,Julius Caesar,main,5,5,18,934,speech,BRUTUS,BRUTUS,Hence. I will follow.,0.0,0.48551
+julius-caesar,Julius Caesar,main,5,5,18,935,stage_direction,,,"CLITUS, DARDANIUS, and VOLUMNIUS exit.",0.0,0.02646
+julius-caesar,Julius Caesar,main,5,5,18,936,speech,BRUTUS,BRUTUS,"I prithee, Strato, stay thou by thy lord.
+Thou art a fellow of a good respect.
+Thy life hath had some smatch of honor in it.
+Hold then my sword and turn away thy face
+While I do run upon it. Wilt thou, Strato?",0.7269,0.6429
+julius-caesar,Julius Caesar,main,5,5,18,937,speech,STRATO,STRATO,"Give me your hand first.
+[holds BRUTUS' sword] Fare you well, my lord.",0.3612,0.59564
+julius-caesar,Julius Caesar,main,5,5,18,938,speech,BRUTUS,BRUTUS,"Farewell, good Strato.
+[runs on his sword] Caesar, now be still.
+I killed not thee with half so good a will.
+[dies]",-0.8074,-0.43938
+julius-caesar,Julius Caesar,main,5,5,18,939,stage_direction,,,"Sounds of battle. Trumpets sound a retreat. OCTAVIUS, ANTONY, MESSALA, and LUCILLIUS enter with the army.",-0.2023,0.13871
+julius-caesar,Julius Caesar,main,5,5,18,940,speech,OCTAVIUS,OCTAVIUS,What man is that?,0.0,-0.05089
+julius-caesar,Julius Caesar,main,5,5,18,941,speech,MESSALA,MESSALA,"My master’s man.—Strato, where is thy master?",0.0,0.02268
+julius-caesar,Julius Caesar,main,5,5,18,942,speech,STRATO,STRATO,"Free from the bondage you are in, Messala.
+The conquerors can but make a fire of him.
+For Brutus only overcame himself,
+And no man else hath honor by his death.",-0.7814,-0.60949
+julius-caesar,Julius Caesar,main,5,5,18,943,speech,LUCILLIUS,LUCILLIUS,"So Brutus should be found.—I thank thee, Brutus,
+That thou hast proved Lucillius' saying true.",0.6486,0.47997
+julius-caesar,Julius Caesar,main,5,5,18,944,speech,OCTAVIUS,OCTAVIUS,"All that served Brutus, I will entertain them.
+—Fellow, wilt thou bestow thy time with me?",0.34,0.37366
+julius-caesar,Julius Caesar,main,5,5,18,945,speech,STRATO,STRATO,"Ay, if Messala will prefer me to you.",0.5574,0.0268
+julius-caesar,Julius Caesar,main,5,5,18,946,speech,OCTAVIUS,OCTAVIUS,"Do so, good Messala.",0.4404,0.47037
+julius-caesar,Julius Caesar,main,5,5,18,947,speech,MESSALA,MESSALA,"How died my master, Strato?",-0.5994,0.02297
+julius-caesar,Julius Caesar,main,5,5,18,948,speech,STRATO,STRATO,I held the sword and he did run on it.,0.0,0.15335
+julius-caesar,Julius Caesar,main,5,5,18,949,speech,MESSALA,MESSALA,"Octavius, then take him to follow thee,
+That did the latest service to my master.",0.0,0.29505
+julius-caesar,Julius Caesar,main,5,5,18,950,speech,ANTONY,ANTONY,"This was the noblest Roman of them all.
+All the conspirators save only he
+Did that they did in envy of great Caesar.
+He only in a general honest thought
+And common good to all, made one of them.
+His life was gentle, and the elements
+So mixed in him that Nature might stand up
+And say to all the world, “This was a man.”",0.9211,0.814
+julius-caesar,Julius Caesar,main,5,5,18,951,speech,OCTAVIUS,OCTAVIUS,"According to his virtue let us use him,
+With all respect and rites of burial.
+Within my tent his bones tonight shall lie
+Most like a soldier, ordered honorably.
+So call the field to rest, and let’s away
+To part the glories of this happy day.",0.9643,0.62962
+julius-caesar,Julius Caesar,main,5,5,18,952,stage_direction,,,All exit.,0.0,-0.27456
