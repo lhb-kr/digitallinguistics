@@ -1,0 +1,21 @@
+play_id,play_title,section,act,scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,1,1,1,67,124,1378,0,0.12196,0.0,-0.12656,-0.13652,0.44682,0.39018
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,1,2,2,74,135,1287,0,0.12152,0.0,-0.01124,-0.0153,0.39025,0.3849
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,1,3,3,24,66,777,0,0.22742,0.0649,0.04555,0.01777,0.39783,0.38839
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,1,4,93,165,1540,0,0.21523,0.0,0.02156,-0.01205,0.33464,0.40787
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,2,5,10,25,195,0,0.20316,0.0,-0.00849,-0.00108,0.39062,0.45828
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,3,6,15,66,591,0,-0.08652,0.0,0.008,-0.00306,0.30659,0.47856
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,4,7,97,188,1763,0,0.17905,0.0,-0.02079,-0.01487,0.39923,0.38476
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,5,8,33,52,418,0,0.05084,0.0,-0.05279,-0.03462,0.31915,0.456
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,6,9,1,28,405,0,0.22621,0.22555,0.02236,-0.04527,0.53502,0.46239
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,2,7,10,25,57,754,0,0.16686,0.0,0.01789,0.0086,0.44213,0.40446
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,3,1,11,136,303,3204,0,0.07541,0.0,-0.05589,-0.03027,0.3885,0.37559
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,3,2,12,31,60,827,0,0.11042,0.0,-0.09421,-0.19451,0.49587,0.43557
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,4,1,13,38,66,595,0,-0.06349,0.0,-0.05017,-0.00837,0.41709,0.41014
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,4,2,14,64,135,1286,0,0.21303,0.0772,0.00531,0.01529,0.43643,0.41219
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,4,3,15,12,33,381,0,0.22412,0.0772,0.0575,0.06504,0.42905,0.44096
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,4,4,16,50,158,1818,0,0.07005,0.0,-0.0179,-0.01508,0.45413,0.404
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,5,1,17,4,13,104,0,0.15259,0.0,0.01042,-0.06957,0.24062,0.34677
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,5,2,18,36,55,476,0,0.06604,0.0,-0.08375,-0.06097,0.32964,0.3658
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,5,3,19,7,14,116,0,0.05506,0.0,0.23352,0.28101,0.17534,0.32419
+the-two-gentlemen-of-verona,The Two Gentlemen of Verona,main,5,4,20,52,150,1544,0,0.12934,0.0,0.03804,0.04801,0.47334,0.45296

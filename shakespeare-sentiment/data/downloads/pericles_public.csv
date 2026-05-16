@@ -1,0 +1,2610 @@
+play_id,play_title,section,act,scene,scene_index_in_play,unit_index_in_play,type,speaker_original,speaker_normalized,original_text,vader_score,dl_score
+pericles,Pericles,main,1,,1,1,stage_direction,,,Enter GOWER,0.0,0.02165
+pericles,Pericles,main,1,,1,2,speech,GOWER,GOWER,"To sing a song that old was sung,
+From ashes ancient Gower is come;
+Assuming man's infirmities,
+To glad your ear, and please your eyes.
+It hath been sung at festivals,
+On ember-eves and holy-ales;
+And lords and ladies in their lives
+Have read it for restoratives:
+The purchase is to make men glorious;
+Et bonum quo antiquius, eo melius.
+If you, born in these latter times,
+When wit's more ripe, accept my rhymes.
+And that to hear an old man sing
+May to your wishes pleasure bring
+I life would wish, and that I might
+Waste it for you, like taper-light.
+This Antioch, then, Antiochus the Great
+Built up, this city, for his chiefest seat:
+The fairest in all Syria,
+I tell you what mine authors say:
+This king unto him took a fere,
+Who died and left a female heir,
+So buxom, blithe, and full of face,
+As heaven had lent her all his grace;
+With whom the father liking took,
+And her to incest did provoke:
+Bad child; worse father! to entice his own
+To evil should be done by none:
+But custom what they did begin
+Was with long use account no sin.
+The beauty of this sinful dame
+Made many princes thither frame,
+To seek her as a bed-fellow,
+In marriage-pleasures play-fellow:
+Which to prevent he made a law,
+To keep her still, and men in awe,
+That whoso ask'd her for his wife,
+His riddle told not, lost his life:
+So for her many a wight did die,
+As yon grim looks do testify.
+What now ensues, to the judgment of your eye
+I give, my cause who best can justify.",-0.9179,-0.31919
+pericles,Pericles,main,1,,1,3,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,1,1,2,4,stage_direction,,,"Enter ANTIOCHUS, Prince PERICLES, and followers",0.0,0.22778
+pericles,Pericles,main,1,1,2,5,speech,ANTIOCHUS,ANTIOCHUS,"Young prince of Tyre, you have at large received
+The danger of the task you undertake.",-0.4767,-0.32511
+pericles,Pericles,main,1,1,2,6,speech,PERICLES,PERICLES,"I have, Antiochus, and, with a soul
+Embolden'd with the glory of her praise,
+Think death no hazard in this enterprise.",0.8514,-0.07296
+pericles,Pericles,main,1,1,2,7,speech,ANTIOCHUS,ANTIOCHUS,"Bring in our daughter, clothed like a bride,
+For the embracements even of Jove himself;
+At whose conception, till Lucina reign'd,
+Nature this dowry gave, to glad her presence,
+The senate-house of planets all did sit,
+To knit in her their best perfections.",0.8885,0.47595
+pericles,Pericles,main,1,1,2,8,stage_direction,,,Music. Enter the Daughter of ANTIOCHUS,0.25,0.01655
+pericles,Pericles,main,1,1,2,9,speech,PERICLES,PERICLES,"See where she comes, apparell'd like the spring,
+Graces her subjects, and her thoughts the king
+Of every virtue gives renown to men!
+Her face the book of praises, where is read
+Nothing but curious pleasures, as from thence
+Sorrow were ever razed and testy wrath
+Could never be her mild companion.
+You gods that made me man, and sway in love,
+That have inflamed desire in my breast
+To taste the fruit of yon celestial tree,
+Or die in the adventure, be my helps,
+As I am son and servant to your will,
+To compass such a boundless happiness!",0.9551,0.76292
+pericles,Pericles,main,1,1,2,10,speech,ANTIOCHUS,ANTIOCHUS,"Prince Pericles,—",0.0,0.37218
+pericles,Pericles,main,1,1,2,11,speech,PERICLES,PERICLES,That would be son to great Antiochus.,0.0,0.24799
+pericles,Pericles,main,1,1,2,12,speech,ANTIOCHUS,ANTIOCHUS,"Before thee stands this fair Hesperides,
+With golden fruit, but dangerous to be touch'd;
+For death-like dragons here affright thee hard:
+Her face, like heaven, enticeth thee to view
+Her countless glory, which desert must gain;
+And which, without desert, because thine eye
+Presumes to reach, all thy whole heap must die.
+Yon sometimes famous princes, like thyself,
+Drawn by report, adventurous by desire,
+Tell thee, with speechless tongues and semblance pale,
+That without covering, save yon field of stars,
+Here they stand martyrs, slain in Cupid's wars;
+And with dead cheeks advise thee to desist
+For going on death's net, whom none resist.",0.9628,-0.59034
+pericles,Pericles,main,1,1,2,13,speech,PERICLES,PERICLES,"Antiochus, I thank thee, who hath taught
+My frail mortality to know itself,
+And by those fearful objects to prepare
+This body, like to them, to what I must;
+For death remember'd should be like a mirror,
+Who tells us life's but breath, to trust it error.
+I'll make my will then, and, as sick men do
+Who know the world, see heaven, but, feeling woe,
+Gripe not at earthly joys as erst they did;
+So I bequeath a happy peace to you
+And all good men, as every prince should do;
+My riches to the earth from whence they came;
+[To the Daughter of ANTIOCHUS]
+But my unspotted fire of love to you.
+Thus ready for the way of life or death,
+I wait the sharpest blow, Antiochus.",-0.4404,0.71315
+pericles,Pericles,main,1,1,2,14,speech,ANTIOCHUS,ANTIOCHUS,"Scorning advice, read the conclusion then:
+Which read and not expounded, 'tis decreed,
+As these before thee thou thyself shalt bleed.",-0.4588,-0.68896
+pericles,Pericles,main,1,1,2,15,speech,DAUGHTER,DAUGHTER,"Of all say'd yet, mayst thou prove prosperous!
+Of all say'd yet, I wish thee happiness!",0.893,0.85214
+pericles,Pericles,main,1,1,2,16,speech,PERICLES,PERICLES,"Like a bold champion, I assume the lists,
+Nor ask advice of any other thought
+But faithfulness and courage.
+I am no viper, yet I feed
+On mother's flesh which did me breed.
+I sought a husband, in which labour
+I found that kindness in a father:
+He's father, son, and husband mild;
+I mother, wife, and yet his child.
+How they may be, and yet in two,
+As you will live, resolve it you.
+Sharp physic is the last: but, O you powers
+That give heaven countless eyes to view men's acts,
+Why cloud they not their sights perpetually,
+If this be true, which makes me pale to read it?
+Fair glass of light, I loved you, and could still,
+Were not this glorious casket stored with ill:
+But I must tell you, now my thoughts revolt
+For he's no man on whom perfections wait
+That, knowing sin within, will touch the gate.
+You are a fair viol, and your sense the strings;
+Who, finger'd to make man his lawful music,
+Would draw heaven down, and all the gods, to hearken:
+But being play'd upon before your time,
+Hell only danceth at so harsh a chime.
+Good sooth, I care not for you.",0.9866,-0.55306
+pericles,Pericles,main,1,1,2,17,speech,ANTIOCHUS,ANTIOCHUS,"Prince Pericles, touch not, upon thy life.
+For that's an article within our law,
+As dangerous as the rest. Your time's expired:
+Either expound now, or receive your sentence.",-0.7088,-0.61627
+pericles,Pericles,main,1,1,2,18,speech,PERICLES,PERICLES,"Great king,
+Few love to hear the sins they love to act;
+'Twould braid yourself too near for me to tell it.
+Who has a book of all that monarchs do,
+He's more secure to keep it shut than shown:
+For vice repeated is like the wandering wind.
+Blows dust in other's eyes, to spread itself;
+And yet the end of all is bought thus dear,
+The breath is gone, and the sore eyes see clear:
+To stop the air would hurt them. The blind mole casts
+Copp'd hills towards heaven, to tell the earth is
+throng'd
+By man's oppression; and the poor worm doth die for't.
+Kings are earth's gods; in vice their law's their will;
+And if Jove stray, who dares say Jove doth ill?
+It is enough you know; and it is fit,
+What being more known grows worse, to smother it.
+All love the womb that their first being bred,
+Then give my tongue like leave to love my head.",-0.9299,-0.66573
+pericles,Pericles,main,1,1,2,19,speech,ANTIOCHUS,ANTIOCHUS,"[Aside] Heaven, that I had thy head! he has found
+the meaning:
+But I will gloze with him. — Young prince of Tyre,
+Though by the tenor of our strict edict,
+Your exposition misinterpreting,
+We might proceed to cancel of your days;
+Yet hope, succeeding from so fair a tree
+As your fair self, doth tune us otherwise:
+Forty days longer we do respite you;
+If by which time our secret be undone,
+This mercy shows we'll joy in such a son:
+And until then your entertain shall be
+As doth befit our honour and your worth.",0.6846,0.52285
+pericles,Pericles,main,1,1,2,20,stage_direction,,,Exeunt all but PERICLES,0.0,-0.24961
+pericles,Pericles,main,1,1,2,21,speech,PERICLES,PERICLES,"How courtesy would seem to cover sin,
+When what is done is like an hypocrite,
+The which is good in nothing but in sight!
+If it be true that I interpret false,
+Then were it certain you were not so bad
+As with foul incest to abuse your soul;
+Where now you're both a father and a son,
+By your untimely claspings with your child,
+Which pleasure fits an husband, not a father;
+And she an eater of her mother's flesh,
+By the defiling of her parent's bed;
+And both like serpents are, who though they feed
+On sweetest flowers, yet they poison breed.
+Antioch, farewell! for wisdom sees, those men
+Blush not in actions blacker than the night,
+Will shun no course to keep them from the light.
+One sin, I know, another doth provoke;
+Murder's as near to lust as flame to smoke:
+Poison and treason are the hands of sin,
+Ay, and the targets, to put off the shame:
+Then, lest my lie be cropp'd to keep you clear,
+By flight I'll shun the danger which I fear.",-0.9809,-0.84959
+pericles,Pericles,main,1,1,2,22,stage_direction,,,Exit,0.0,-0.00517
+pericles,Pericles,main,1,1,2,23,stage_direction,,,Re-enter ANTIOCHUS,0.0,0.04508
+pericles,Pericles,main,1,1,2,24,speech,ANTIOCHUS,ANTIOCHUS,"He hath found the meaning, for which we mean
+To have his head.
+He must not live to trumpet forth my infamy,
+Nor tell the world Antiochus doth sin
+In such a loathed manner;
+And therefore instantly this prince must die:
+For by his fall my honour must keep high.
+Who attends us there?",-0.959,-0.5471
+pericles,Pericles,main,1,1,2,25,stage_direction,,,Enter THALIARD,0.0,0.01449
+pericles,Pericles,main,1,1,2,26,speech,THALIARD,THALIARD,Doth your highness call?,0.0,-0.11182
+pericles,Pericles,main,1,1,2,27,speech,ANTIOCHUS,ANTIOCHUS,"Thaliard,
+You are of our chamber, and our mind partakes
+Her private actions to your secrecy;
+And for your faithfulness we will advance you.
+Thaliard, behold, here's poison, and here's gold;
+We hate the prince of Tyre, and thou must kill him:
+It fits thee not to ask the reason why,
+Because we bid it. Say, is it done?",-0.8689,0.68417
+pericles,Pericles,main,1,1,2,28,speech,THALIARD,THALIARD,"My lord,
+'Tis done.",0.0,0.40608
+pericles,Pericles,main,1,1,2,29,speech,ANTIOCHUS,ANTIOCHUS,Enough.,0.4404,0.47969
+pericles,Pericles,main,1,1,2,30,stage_direction,,,Enter a Messenger,0.0,0.02267
+pericles,Pericles,main,1,1,2,31,speech,ANTIOCHUS,ANTIOCHUS,"Let your breath cool yourself, telling your haste.",0.3182,0.45196
+pericles,Pericles,main,1,1,2,32,speech,MESSENGER,MESSENGER,"My lord, prince Pericles is fled.",0.0,-0.08641
+pericles,Pericles,main,1,1,2,33,stage_direction,,,Exit,0.0,0.03743
+pericles,Pericles,main,1,1,2,34,speech,ANTIOCHUS,ANTIOCHUS,"As thou
+Wilt live, fly after: and like an arrow shot
+From a well-experienced archer hits the mark
+His eye doth level at, so thou ne'er return
+Unless thou say 'Prince Pericles is dead.'",-0.4199,-0.67213
+pericles,Pericles,main,1,1,2,35,speech,THALIARD,THALIARD,"My lord,
+If I can get him within my pistol's length,
+I'll make him sure enough: so, farewell to your
+highness.",0.0,-0.26759
+pericles,Pericles,main,1,1,2,36,speech,ANTIOCHUS,ANTIOCHUS,"Thaliard, adieu!",0.0,0.77741
+pericles,Pericles,main,1,1,2,37,stage_direction,,,Exit THALIARD,0.0,0.00368
+pericles,Pericles,main,1,1,2,38,speech,ANTIOCHUS,ANTIOCHUS,"Till Pericles be dead,
+My heart can lend no succor to my head.",-0.6486,-0.58605
+pericles,Pericles,main,1,1,2,39,stage_direction,,,Exit,0.0,0.01965
+pericles,Pericles,main,1,2,3,40,stage_direction,,,Enter PERICLES,0.0,0.01125
+pericles,Pericles,main,1,2,3,41,speech,PERICLES,PERICLES,"[To Lords without] Let none disturb us.— Why should
+this change of thoughts,
+The sad companion, dull-eyed melancholy,
+Be my so used a guest as not an hour,
+In the day's glorious walk, or peaceful night,
+The tomb where grief should sleep, can breed me quiet?
+Here pleasures court mine eyes, and mine eyes shun
+them,
+And danger, which I fear'd, is at Antioch,
+Whose aim seems far too short to hit me here:
+Yet neither pleasure's art can joy my spirits,
+Nor yet the other's distance comfort me.
+Then it is thus: the passions of the mind,
+That have their first conception by mis-dread,
+Have after-nourishment and life by care;
+And what was first but fear what might be done,
+Grows elder now and cares it be not done.
+And so with me: the great Antiochus,
+'Gainst whom I am too little to contend,
+Since he's so great can make his will his act,
+Will think me speaking, though I swear to silence;
+Nor boots it me to say I honour him.
+If he suspect I may dishonour him:
+And what may make him blush in being known,
+He'll stop the course by which it might be known;
+With hostile forces he'll o'erspread the land,
+And with the ostent of war will look so huge,
+Amazement shall drive courage from the state;
+Our men be vanquish'd ere they do resist,
+And subjects punish'd that ne'er thought offence:
+Which care of them, not pity of myself,
+Who am no more but as the tops of trees,
+Which fence the roots they grow by and defend them,
+Makes both my body pine and soul to languish,
+And punish that before that he would punish.",-0.9948,-0.61787
+pericles,Pericles,main,1,2,3,42,stage_direction,,,"Enter HELICANUS, with other Lords",0.0,0.07596
+pericles,Pericles,main,1,2,3,43,speech,FIRST LORD,FIRST LORD,Joy and all comfort in your sacred breast!,0.636,0.79754
+pericles,Pericles,main,1,2,3,44,speech,SECOND LORD,SECOND LORD,"And keep your mind, till you return to us,
+Peaceful and comfortable!",0.7345,-0.51646
+pericles,Pericles,main,1,2,3,45,speech,HELICANUS,HELICANUS,"Peace, peace, and give experience tongue.
+They do abuse the king that flatter him:
+For flattery is the bellows blows up sin;
+The thing which is flatter'd, but a spark,
+To which that blast gives heat and stronger glowing;
+Whereas reproof, obedient and in order,
+Fits kings, as they are men, for they may err.
+When Signior Sooth here does proclaim a peace,
+He flatters you, makes war upon your life.
+Prince, pardon me, or strike me, if you please;
+I cannot be much lower than my knees.",0.9485,-0.00142
+pericles,Pericles,main,1,2,3,46,speech,PERICLES,PERICLES,"All leave us else; but let your cares o'erlook
+What shipping and what lading's in our haven,
+And then return to us.
+[Exeunt Lords]
+Helicanus, thou
+Hast moved us: what seest thou in our looks?",0.5994,0.33919
+pericles,Pericles,main,1,2,3,47,speech,HELICANUS,HELICANUS,"An angry brow, dread lord.",-0.5106,0.54666
+pericles,Pericles,main,1,2,3,48,speech,PERICLES,PERICLES,"If there be such a dart in princes' frowns,
+How durst thy tongue move anger to our face?",-0.6072,-0.23884
+pericles,Pericles,main,1,2,3,49,speech,HELICANUS,HELICANUS,"How dare the plants look up to heaven, from whence
+They have their nourishment?",0.0,0.00925
+pericles,Pericles,main,1,2,3,50,speech,PERICLES,PERICLES,"Thou know'st I have power
+To take thy life from thee.",-0.6908,0.33878
+pericles,Pericles,main,1,2,3,51,speech,HELICANUS,HELICANUS,"[Kneeling]
+I have ground the axe myself;
+Do you but strike the blow.",-0.4588,-0.14483
+pericles,Pericles,main,1,2,3,52,speech,PERICLES,PERICLES,"Rise, prithee, rise.
+Sit down: thou art no flatterer:
+I thank thee for it; and heaven forbid
+That kings should let their ears hear their
+faults hid!
+Fit counsellor and servant for a prince,
+Who by thy wisdom makest a prince thy servant,
+What wouldst thou have me do?",0.9219,0.51269
+pericles,Pericles,main,1,2,3,53,speech,HELICANUS,HELICANUS,"To bear with patience
+Such griefs as you yourself do lay upon yourself.",-0.2183,-0.41216
+pericles,Pericles,main,1,2,3,54,speech,PERICLES,PERICLES,"Thou speak'st like a physician, Helicanus,
+That minister'st a potion unto me
+That thou wouldst tremble to receive thyself.
+Attend me, then: I went to Antioch,
+Where as thou know'st, against the face of death,
+I sought the purchase of a glorious beauty.
+From whence an issue I might propagate,
+Are arms to princes, and bring joys to subjects.
+Her face was to mine eye beyond all wonder;
+The rest— hark in thine ear— as black as incest:
+Which by my knowledge found, the sinful father
+Seem'd not to strike, but smooth: but thou
+know'st this,
+'Tis time to fear when tyrants seem to kiss.
+Such fear so grew in me, I hither fled,
+Under the covering of a careful night,
+Who seem'd my good protector; and, being here,
+Bethought me what was past, what might succeed.
+I knew him tyrannous; and tyrants' fears
+Decrease not, but grow faster than the years:
+And should he doubt it, as no doubt he doth,
+That I should open to the listening air
+How many worthy princes' bloods were shed,
+To keep his bed of blackness unlaid ope,
+To lop that doubt, he'll fill this land with arms,
+And make pretence of wrong that I have done him:
+When all, for mine, if I may call offence,
+Must feel war's blow, who spares not innocence:
+Which love to all, of which thyself art one,
+Who now reprovest me for it,—",0.9211,0.14324
+pericles,Pericles,main,1,2,3,55,speech,HELICANUS,HELICANUS,"Alas, sir!",0.0,0.69772
+pericles,Pericles,main,1,2,3,56,speech,PERICLES,PERICLES,"Drew sleep out of mine eyes, blood from my cheeks,
+Musings into my mind, with thousand doubts
+How I might stop this tempest ere it came;
+And finding little comfort to relieve them,
+I thought it princely charity to grieve them.",-0.7774,-0.79731
+pericles,Pericles,main,1,2,3,57,speech,HELICANUS,HELICANUS,"Well, my lord, since you have given me leave to speak.
+Freely will I speak. Antiochus you fear,
+And justly too, I think, you fear the tyrant,
+Who either by public war or private treason
+Will take away your life.
+Therefore, my lord, go travel for a while,
+Till that his rage and anger be forgot,
+Or till the Destinies do cut his thread of life.
+Your rule direct to any; if to me.
+Day serves not light more faithful than I'll be.",-0.5423,0.499
+pericles,Pericles,main,1,2,3,58,speech,PERICLES,PERICLES,"I do not doubt thy faith;
+But should he wrong my liberties in my absence?",-0.4019,-0.04518
+pericles,Pericles,main,1,2,3,59,speech,HELICANUS,HELICANUS,"We'll mingle our bloods together in the earth,
+From whence we had our being and our birth.",0.0,0.07461
+pericles,Pericles,main,1,2,3,60,speech,PERICLES,PERICLES,"Tyre, I now look from thee then, and to Tarsus
+Intend my travel, where I'll hear from thee;
+And by whose letters I'll dispose myself.
+The care I had and have of subjects' good
+On thee I lay whose wisdom's strength can bear it.
+I'll take thy word for faith, not ask thine oath:
+Who shuns not to break one will sure crack both:
+But in our orbs we'll live so round and safe,
+That time of both this truth shall ne'er convince,
+Thou show'dst a subject's shine, I a true prince.",0.9747,0.44235
+pericles,Pericles,main,1,2,3,61,stage_direction,,,Exeunt,0.0,-0.18307
+pericles,Pericles,main,1,3,4,62,stage_direction,,,Enter THALIARD,0.0,0.01449
+pericles,Pericles,main,1,3,4,63,speech,THALIARD,THALIARD,"So, this is Tyre, and this the court. Here must I
+kill King Pericles; and if I do it not, I am sure to
+be hanged at home: 'tis dangerous. Well, I perceive
+he was a wise fellow, and had good discretion, that,
+being bid to ask what he would of the king, desired
+he might know none of his secrets: now do I see he
+had some reason for't; for if a king bid a man be a
+villain, he's bound by the indenture of his oath to
+be one! Hush! here come the lords of Tyre.",-0.7517,-0.21289
+pericles,Pericles,main,1,3,4,64,stage_direction,,,"Enter HELICANUS and ESCANES, with other Lords of Tyre",0.0,0.11526
+pericles,Pericles,main,1,3,4,65,speech,HELICANUS,HELICANUS,"You shall not need, my fellow peers of Tyre,
+Further to question me of your king's departure:
+His seal'd commission, left in trust with me,
+Doth speak sufficiently he's gone to travel.",0.2263,0.03414
+pericles,Pericles,main,1,3,4,66,speech,THALIARD,THALIARD,[Aside] How! the king gone!,0.0,-0.34278
+pericles,Pericles,main,1,3,4,67,speech,HELICANUS,HELICANUS,"If further yet you will be satisfied,
+Why, as it were unlicensed of your loves,
+He would depart, I'll give some light unto you.
+Being at Antioch—",0.0,-0.55929
+pericles,Pericles,main,1,3,4,68,speech,THALIARD,THALIARD,[Aside] What from Antioch?,0.0,-0.00702
+pericles,Pericles,main,1,3,4,69,speech,HELICANUS,HELICANUS,"Royal Antiochus—on what cause I know not—
+Took some displeasure at him; at least he judged so:
+And doubting lest that he had err'd or sinn'd,
+To show his sorrow, he'ld correct himself;
+So puts himself unto the shipman's toil,
+With whom each minute threatens life or death.",-0.7224,-0.56645
+pericles,Pericles,main,1,3,4,70,speech,THALIARD,THALIARD,"[Aside] Well, I perceive
+I shall not be hang'd now, although I would;
+But since he's gone, the king's seas must please:
+He 'scaped the land, to perish at the sea.
+I'll present myself. Peace to the lords of Tyre!",0.3489,0.50484
+pericles,Pericles,main,1,3,4,71,speech,HELICANUS,HELICANUS,Lord Thaliard from Antiochus is welcome.,0.4588,0.46546
+pericles,Pericles,main,1,3,4,72,speech,THALIARD,THALIARD,"From him I come
+With message unto princely Pericles;
+But since my landing I have understood
+Your lord has betook himself to unknown travels,
+My message must return from whence it came.",0.0,-0.21381
+pericles,Pericles,main,1,3,4,73,speech,HELICANUS,HELICANUS,"We have no reason to desire it,
+Commended to our master, not to us:
+Yet, ere you shall depart, this we desire,
+As friends to Antioch, we may feast in Tyre.",0.9224,-0.38291
+pericles,Pericles,main,1,3,4,74,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,1,4,5,75,stage_direction,,,"Enter CLEON, the governor of Tarsus, with DIONYZA, and others",0.0,0.10894
+pericles,Pericles,main,1,4,5,76,speech,CLEON,CLEON,"My Dionyza, shall we rest us here,
+And by relating tales of others' griefs,
+See if 'twill teach us to forget our own?",-0.7964,-0.57766
+pericles,Pericles,main,1,4,5,77,speech,DIONYZA,DIONYZA,"That were to blow at fire in hope to quench it;
+For who digs hills because they do aspire
+Throws down one mountain to cast up a higher.
+O my distressed lord, even such our griefs are;
+Here they're but felt, and seen with mischief's eyes,
+But like to groves, being topp'd, they higher rise.",-0.8129,-0.43827
+pericles,Pericles,main,1,4,5,78,speech,CLEON,CLEON,"O Dionyza,
+Who wanteth food, and will not say he wants it,
+Or can conceal his hunger till he famish?
+Our tongues and sorrows do sound deep
+Our woes into the air; our eyes do weep,
+Till tongues fetch breath that may proclaim them
+louder;
+That, if heaven slumber while their creatures want,
+They may awake their helps to comfort them.
+I'll then discourse our woes, felt several years,
+And wanting breath to speak help me with tears.",-0.9549,-0.56624
+pericles,Pericles,main,1,4,5,79,speech,DIONYZA,DIONYZA,"I'll do my best, sir.",0.6369,0.51617
+pericles,Pericles,main,1,4,5,80,speech,CLEON,CLEON,"This Tarsus, o'er which I have the government,
+A city on whom plenty held full hand,
+For riches strew'd herself even in the streets;
+Whose towers bore heads so high they kiss'd the clouds,
+And strangers ne'er beheld but wondered at;
+Whose men and dames so jetted and adorn'd,
+Like one another's glass to trim them by:
+Their tables were stored full, to glad the sight,
+And not so much to feed on as delight;
+All poverty was scorn'd, and pride so great,
+The name of help grew odious to repeat.",0.907,0.67911
+pericles,Pericles,main,1,4,5,81,speech,DIONYZA,DIONYZA,"O, 'tis too true.",0.4215,-0.25687
+pericles,Pericles,main,1,4,5,82,speech,CLEON,CLEON,"But see what heaven can do! By this our change,
+These mouths, who but of late, earth, sea, and air,
+Were all too little to content and please,
+Although they gave their creatures in abundance,
+As houses are defiled for want of use,
+They are now starved for want of exercise:
+Those palates who, not yet two summers younger,
+Must have inventions to delight the taste,
+Would now be glad of bread, and beg for it:
+Those mothers who, to nousle up their babes,
+Thought nought too curious, are ready now
+To eat those little darlings whom they loved.
+So sharp are hunger's teeth, that man and wife
+Draw lots who first shall die to lengthen life:
+Here stands a lord, and there a lady weeping;
+Here many sink, yet those which see them fall
+Have scarce strength left to give them burial.
+Is not this true?",-0.8496,-0.73989
+pericles,Pericles,main,1,4,5,83,speech,DIONYZA,DIONYZA,Our cheeks and hollow eyes do witness it.,0.0,-0.25069
+pericles,Pericles,main,1,4,5,84,speech,CLEON,CLEON,"O, let those cities that of plenty's cup
+And her prosperities so largely taste,
+With their superfluous riots, hear these tears!
+The misery of Tarsus may be theirs.",-0.6696,-0.14628
+pericles,Pericles,main,1,4,5,85,stage_direction,,,Enter a Lord,0.0,0.00551
+pericles,Pericles,main,1,4,5,86,speech,LORD,LORD,Where's the lord governor?,0.0,-0.01281
+pericles,Pericles,main,1,4,5,87,speech,CLEON,CLEON,"Here.
+Speak out thy sorrows which thou bring'st in haste,
+For comfort is too far for us to expect.",-0.7101,-0.39578
+pericles,Pericles,main,1,4,5,88,speech,LORD,LORD,"We have descried, upon our neighbouring shore,
+A portly sail of ships make hitherward.",0.0,0.04833
+pericles,Pericles,main,1,4,5,89,speech,CLEON,CLEON,"I thought as much.
+One sorrow never comes but brings an heir,
+That may succeed as his inheritor;
+And so in ours: some neighbouring nation,
+Taking advantage of our misery,
+Hath stuff'd these hollow vessels with their power,
+To beat us down, the which are down already;
+And make a conquest of unhappy me,
+Whereas no glory's got to overcome.",-0.9191,-0.39863
+pericles,Pericles,main,1,4,5,90,speech,LORD,LORD,"That's the least fear; for, by the semblance
+Of their white flags display'd, they bring us peace,
+And come to us as favourers, not as foes.",0.5574,-0.42929
+pericles,Pericles,main,1,4,5,91,speech,CLEON,CLEON,"Thou speak'st like him's untutor'd to repeat:
+Who makes the fairest show means most deceit.
+But bring they what they will and what they can,
+What need we fear?
+The ground's the lowest, and we are half way there.
+Go tell their general we attend him here,
+To know for what he comes, and whence he comes,
+And what he craves.",0.4869,-0.47722
+pericles,Pericles,main,1,4,5,92,speech,LORD,LORD,"I go, my lord.",0.0,0.51011
+pericles,Pericles,main,1,4,5,93,stage_direction,,,Exit,0.0,0.00179
+pericles,Pericles,main,1,4,5,94,speech,CLEON,CLEON,"Welcome is peace, if he on peace consist;
+If wars, we are unable to resist.",0.5719,-0.37096
+pericles,Pericles,main,1,4,5,95,stage_direction,,,Enter PERICLES with Attendants,0.0,0.00689
+pericles,Pericles,main,1,4,5,96,speech,PERICLES,PERICLES,"Lord governor, for so we hear you are,
+Let not our ships and number of our men
+Be like a beacon fired to amaze your eyes.
+We have heard your miseries as far as Tyre,
+And seen the desolation of your streets:
+Nor come we to add sorrow to your tears,
+But to relieve them of their heavy load;
+And these our ships, you happily may think
+Are like the Trojan horse was stuff'd within
+With bloody veins, expecting overthrow,
+Are stored with corn to make your needy bread,
+And give them life whom hunger starved half dead.",-0.7273,-0.33166
+pericles,Pericles,main,1,4,5,97,speech,ALL,ALL,"The gods of Greece protect you!
+And we'll pray for you.",0.636,0.66549
+pericles,Pericles,main,1,4,5,98,speech,PERICLES,PERICLES,"Arise, I pray you, rise:
+We do not look for reverence, but to love,
+And harbourage for ourself, our ships, and men.",0.7184,0.23586
+pericles,Pericles,main,1,4,5,99,speech,CLEON,CLEON,"The which when any shall not gratify,
+Or pay you with unthankfulness in thought,
+Be it our wives, our children, or ourselves,
+The curse of heaven and men succeed their evils!
+Till when,—the which I hope shall ne'er be seen,—
+Your grace is welcome to our town and us.",0.7707,0.63059
+pericles,Pericles,main,1,4,5,100,speech,PERICLES,PERICLES,"Which welcome we'll accept; feast here awhile,
+Until our stars that frown lend us a smile.",0.6124,-0.17918
+pericles,Pericles,main,1,4,5,101,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,,6,102,stage_direction,,,Enter GOWER,0.0,0.02879
+pericles,Pericles,main,2,,6,103,speech,GOWER,GOWER,"Here have you seen a mighty king
+His child, I wis, to incest bring;
+A better prince and benign lord,
+That will prove awful both in deed and word.
+Be quiet then as men should be,
+Till he hath pass'd necessity.
+I'll show you those in troubles reign,
+Losing a mite, a mountain gain.
+The good in conversation,
+To whom I give my benison,
+Is still at Tarsus, where each man
+Thinks all is writ he speken can;
+And, to remember what he does,
+Build his statue to make him glorious:
+But tidings to the contrary
+Are brought your eyes; what need speak I?",0.9538,-0.59634
+pericles,Pericles,main,2,,6,104,stage_direction,,,"DUMB SHOW Enter at one door PERICLES talking with CLEON; all the train with them. Enter at another door a Gentleman, with a letter to PERICLES; PERICLES shows the letter to CLEON; gives the Messenger a reward, and knights him. Exit PERICLES at one door, and CLEON at another",0.1027,0.00614
+pericles,Pericles,main,2,,6,105,speech,GOWER,GOWER,"Good Helicane, that stay'd at home,
+Not to eat honey like a drone
+From others' labours; for though he strive
+To killen bad, keep good alive;
+And to fulfil his prince' desire,
+Sends word of all that haps in Tyre:
+How Thaliard came full bent with sin
+And had intent to murder him;
+And that in Tarsus was not best
+Longer for him to make his rest.
+He, doing so, put forth to seas,
+Where when men been, there's seldom ease;
+For now the wind begins to blow;
+Thunder above and deeps below
+Make such unquiet, that the ship
+Should house him safe is wreck'd and split;
+And he, good prince, having all lost,
+By waves from coast to coast is tost:
+All perishen of man, of pelf,
+Ne aught escapen but himself;
+Till fortune, tired with doing bad,
+Threw him ashore, to give him glad:
+And here he comes. What shall be next,
+Pardon old Gower,—this longs the text.",-0.7687,-0.53835
+pericles,Pericles,main,2,,6,106,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,2,1,7,107,stage_direction,,,"Enter PERICLES, wet",0.0,0.0259
+pericles,Pericles,main,2,1,7,108,speech,PERICLES,PERICLES,"Yet cease your ire, you angry stars of heaven!
+Wind, rain, and thunder, remember, earthly man
+Is but a substance that must yield to you;
+And I, as fits my nature, do obey you:
+Alas, the sea hath cast me on the rocks,
+Wash'd me from shore to shore, and left me breath
+Nothing to think on but ensuing death:
+Let it suffice the greatness of your powers
+To have bereft a prince of all his fortunes;
+And having thrown him from your watery grave,
+Here to have death in peace is all he'll crave.",0.6996,0.86958
+pericles,Pericles,main,2,1,7,109,stage_direction,,,Enter three FISHERMEN,0.0,0.01568
+pericles,Pericles,main,2,1,7,110,speech,FIRST FISHERMAN,FIRST FISHERMAN,"What, ho, Pilch!",0.0,0.54887
+pericles,Pericles,main,2,1,7,111,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Ha, come and bring away the nets!",0.0,0.50389
+pericles,Pericles,main,2,1,7,112,speech,FIRST FISHERMAN,FIRST FISHERMAN,"What, Patch-breech, I say!",0.0,-0.06956
+pericles,Pericles,main,2,1,7,113,speech,THIRD FISHERMAN,THIRD FISHERMAN,"What say you, master?",0.0,-0.00367
+pericles,Pericles,main,2,1,7,114,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Look how thou stirrest now! come away, or I'll
+fetch thee with a wanion.",0.0,0.65965
+pericles,Pericles,main,2,1,7,115,speech,THIRD FISHERMAN,THIRD FISHERMAN,"Faith, master, I am thinking of the poor men that
+were cast away before us even now.",-0.4767,-0.64558
+pericles,Pericles,main,2,1,7,116,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Alas, poor souls, it grieved my heart to hear what
+pitiful cries they made to us to help them, when,
+well-a-day, we could scarce help ourselves.",0.0534,-0.74691
+pericles,Pericles,main,2,1,7,117,speech,THIRD FISHERMAN,THIRD FISHERMAN,"Nay, master, said not I as much when I saw the
+porpus how he bounced and tumbled? they say
+they're half fish, half flesh: a plague on them,
+they ne'er come but I look to be washed. Master, I
+marvel how the fishes live in the sea.",-0.5423,-0.06036
+pericles,Pericles,main,2,1,7,118,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Why, as men do a-land; the great ones eat up the
+little ones: I can compare our rich misers to
+nothing so fitly as to a whale; a' plays and
+tumbles, driving the poor fry before him, and at
+last devours them all at a mouthful: such whales
+have I heard on o' the land, who never leave gaping
+till they've swallowed the whole parish, church,
+steeple, bells, and all.",0.8976,-0.01224
+pericles,Pericles,main,2,1,7,119,speech,PERICLES,PERICLES,[Aside] A pretty moral.,0.4215,0.46988
+pericles,Pericles,main,2,1,7,120,speech,THIRD FISHERMAN,THIRD FISHERMAN,"But, master, if I had been the sexton, I would have
+been that day in the belfry.",0.1154,-0.43874
+pericles,Pericles,main,2,1,7,121,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Why, man?",0.0,-0.03293
+pericles,Pericles,main,2,1,7,122,speech,THIRD FISHERMAN,THIRD FISHERMAN,"Because he should have swallowed me too: and when I
+had been in his belly, I would have kept such a
+jangling of the bells, that he should never have
+left, till he cast bells, steeple, church, and
+parish up again. But if the good King Simonides
+were of my mind,—",0.2732,-0.66938
+pericles,Pericles,main,2,1,7,123,speech,PERICLES,PERICLES,[Aside] Simonides!,0.0,0.69076
+pericles,Pericles,main,2,1,7,124,speech,THIRD FISHERMAN,THIRD FISHERMAN,"We would purge the land of these drones, that rob
+the bee of her honey.",0.4939,-0.54619
+pericles,Pericles,main,2,1,7,125,speech,PERICLES,PERICLES,"[Aside] How from the finny subject of the sea
+These fishers tell the infirmities of men;
+And from their watery empire recollect
+All that may men approve or men detect!
+Peace be at your labour, honest fishermen.",0.6808,0.78967
+pericles,Pericles,main,2,1,7,126,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Honest! good fellow, what's that? If it be a day
+fits you, search out of the calendar, and nobody
+look after it.",0.5661,-0.13874
+pericles,Pericles,main,2,1,7,127,speech,PERICLES,PERICLES,May see the sea hath cast upon your coast.,0.0,-0.01801
+pericles,Pericles,main,2,1,7,128,speech,SECOND FISHERMAN,SECOND FISHERMAN,"What a drunken knave was the sea to cast thee in our
+way!",-0.34,-0.32403
+pericles,Pericles,main,2,1,7,129,speech,PERICLES,PERICLES,"A man whom both the waters and the wind,
+In that vast tennis-court, have made the ball
+For them to play upon, entreats you pity him:
+He asks of you, that never used to beg.",0.3818,-0.18614
+pericles,Pericles,main,2,1,7,130,speech,FIRST FISHERMAN,FIRST FISHERMAN,"No, friend, cannot you beg? Here's them in our
+country Greece gets more with begging than we can do
+with working.",0.0,-0.46043
+pericles,Pericles,main,2,1,7,131,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Canst thou catch any fishes, then?",0.0,0.00298
+pericles,Pericles,main,2,1,7,132,speech,PERICLES,PERICLES,I never practised it.,0.0,-0.73609
+pericles,Pericles,main,2,1,7,133,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Nay, then thou wilt starve, sure; for here's nothing
+to be got now-a-days, unless thou canst fish for't.",-0.2023,-0.42463
+pericles,Pericles,main,2,1,7,134,speech,PERICLES,PERICLES,"What I have been I have forgot to know;
+But what I am, want teaches me to think on:
+A man throng'd up with cold: my veins are chill,
+And have no more of life than may suffice
+To give my tongue that heat to ask your help;
+Which if you shall refuse, when I am dead,
+For that I am a man, pray see me buried.",0.6369,-0.87386
+pericles,Pericles,main,2,1,7,135,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Die quoth-a? Now gods forbid! I have a gown here;
+come, put it on; keep thee warm. Now, afore me, a
+handsome fellow! Come, thou shalt go home, and
+we'll have flesh for holidays, fish for
+fasting-days, and moreo'er puddings and flap-jacks,
+and thou shalt be welcome.",0.6229,0.74292
+pericles,Pericles,main,2,1,7,136,speech,PERICLES,PERICLES,"I thank you, sir.",0.3612,0.4884
+pericles,Pericles,main,2,1,7,137,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Hark you, my friend; you said you could not beg.",0.0,-0.029
+pericles,Pericles,main,2,1,7,138,speech,PERICLES,PERICLES,I did but crave.,0.0,-0.09638
+pericles,Pericles,main,2,1,7,139,speech,SECOND FISHERMAN,SECOND FISHERMAN,"But crave! Then I'll turn craver too, and so I
+shall 'scape whipping.",0.0,-0.43743
+pericles,Pericles,main,2,1,7,140,speech,PERICLES,PERICLES,"Why, are all your beggars whipped, then?",0.0,-0.08933
+pericles,Pericles,main,2,1,7,141,speech,SECOND FISHERMAN,SECOND FISHERMAN,"O, not all, my friend, not all; for if all your
+beggars were whipped, I would wish no better office
+than to be beadle. But, master, I'll go draw up the
+net.",0.1398,-0.65602
+pericles,Pericles,main,2,1,7,142,stage_direction,,,Exit with Third Fisherman,0.0,0.00752
+pericles,Pericles,main,2,1,7,143,speech,PERICLES,PERICLES,"[Aside] How well this honest mirth becomes their
+labour!",0.6696,0.49766
+pericles,Pericles,main,2,1,7,144,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Hark you, sir, do you know where ye are?",0.0,0.09728
+pericles,Pericles,main,2,1,7,145,speech,PERICLES,PERICLES,Not well.,0.0,-0.47374
+pericles,Pericles,main,2,1,7,146,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Why, I'll tell you: this is called Pentapolis, and
+our king the good Simonides.",0.6124,0.56503
+pericles,Pericles,main,2,1,7,147,speech,PERICLES,PERICLES,"The good King Simonides, do you call him.",0.4404,0.48351
+pericles,Pericles,main,2,1,7,148,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Ay, sir; and he deserves so to be called for his
+peaceable reign and good government.",0.8442,0.4671
+pericles,Pericles,main,2,1,7,149,speech,PERICLES,PERICLES,"He is a happy king, since he gains from his subjects
+the name of good by his government. How far is his
+court distant from this shore?",0.4404,0.2417
+pericles,Pericles,main,2,1,7,150,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Marry, sir, half a day's journey: and I'll tell
+you, he hath a fair daughter, and to-morrow is her
+birth-day; and there are princes and knights come
+from all parts of the world to just and tourney for her
+love.",0.8225,0.36594
+pericles,Pericles,main,2,1,7,151,speech,PERICLES,PERICLES,"Were my fortunes equal to my desires, I could wish
+to make one there.",0.7351,-0.24134
+pericles,Pericles,main,2,1,7,152,speech,FIRST FISHERMAN,FIRST FISHERMAN,"O, sir, things must be as they may; and what a man
+cannot get, he may lawfully deal for—his wife's soul.",0.3612,0.66573
+pericles,Pericles,main,2,1,7,153,stage_direction,,,"Re-enter Second and Third Fishermen, drawing up a net",0.0,0.02589
+pericles,Pericles,main,2,1,7,154,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Help, master, help! here's a fish hangs in the net,
+like a poor man's right in the law; 'twill hardly
+come out. Ha! bots on't, 'tis come at last, and
+'tis turned to a rusty armour.",-0.7326,-0.32775
+pericles,Pericles,main,2,1,7,155,speech,PERICLES,PERICLES,"An armour, friends! I pray you, let me see it.
+Thanks, fortune, yet, that, after all my crosses,
+Thou givest me somewhat to repair myself;
+And though it was mine own, part of my heritage,
+Which my dead father did bequeath to me.
+With this strict charge, even as he left his life,
+'Keep it, my Pericles; it hath been a shield
+Twixt me and death;'— and pointed to this brace;—
+'For that it saved me, keep it; in like necessity—
+The which the gods protect thee from!— may
+defend thee.'
+It kept where I kept, I so dearly loved it;
+Till the rough seas, that spare not any man,
+Took it in rage, though calm'd have given't again:
+I thank thee for't: my shipwreck now's no ill,
+Since I have here my father's gift in's will.",0.9195,0.77515
+pericles,Pericles,main,2,1,7,156,speech,FIRST FISHERMAN,FIRST FISHERMAN,"What mean you, sir?",0.0,-0.03742
+pericles,Pericles,main,2,1,7,157,speech,PERICLES,PERICLES,"To beg of you, kind friends, this coat of worth,
+For it was sometime target to a king;
+I know it by this mark. He loved me dearly,
+And for his sake I wish the having of it;
+And that you'ld guide me to your sovereign's court,
+Where with it I may appear a gentleman;
+And if that ever my low fortune's better,
+I'll pay your bounties; till then rest your debtor.",0.966,0.67394
+pericles,Pericles,main,2,1,7,158,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Why, wilt thou tourney for the lady?",0.0,-0.00794
+pericles,Pericles,main,2,1,7,159,speech,PERICLES,PERICLES,I'll show the virtue I have borne in arms.,-0.3818,0.38692
+pericles,Pericles,main,2,1,7,160,speech,FIRST FISHERMAN,FIRST FISHERMAN,"Why, do 'e take it, and the gods give thee good on't!",0.636,0.42637
+pericles,Pericles,main,2,1,7,161,speech,SECOND FISHERMAN,SECOND FISHERMAN,"Ay, but hark you, my friend; 'twas we that made up
+this garment through the rough seams of the waters:
+there are certain condolements, certain vails. I
+hope, sir, if you thrive, you'll remember from
+whence you had it.",0.9565,-0.40107
+pericles,Pericles,main,2,1,7,162,speech,PERICLES,PERICLES,"Believe 't, I will.
+By your furtherance I am clothed in steel;
+And, spite of all the rapture of the sea,
+This jewel holds his building on my arm:
+Unto thy value I will mount myself
+Upon a courser, whose delightful steps
+Shall make the gazer joy to see him tread.
+Only, my friend, I yet am unprovided
+Of a pair of bases.",0.9452,0.5072
+pericles,Pericles,main,2,1,7,163,speech,SECOND FISHERMAN,SECOND FISHERMAN,"We'll sure provide: thou shalt have my best gown to
+make thee a pair; and I'll bring thee to the court
+myself.",0.6124,0.45283
+pericles,Pericles,main,2,1,7,164,speech,PERICLES,PERICLES,"Then honour be but a goal to my will,
+This day I'll rise, or else add ill to ill.",0.7506,-0.33686
+pericles,Pericles,main,2,1,7,165,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,2,8,166,stage_direction,,,"Enter SIMONIDES, THAISA, Lords, and Attendants",0.0,0.08346
+pericles,Pericles,main,2,2,8,167,speech,SIMONIDES,SIMONIDES,Are the knights ready to begin the triumph?,0.3612,0.0052
+pericles,Pericles,main,2,2,8,168,speech,FIRST LORD,FIRST LORD,"They are, my liege;
+And stay your coming to present themselves.",0.0,0.04779
+pericles,Pericles,main,2,2,8,169,speech,SIMONIDES,SIMONIDES,"Return them, we are ready; and our daughter,
+In honour of whose birth these triumphs are,
+Sits here, like beauty's child, whom nature gat
+For men to see, and seeing wonder at.",0.9081,0.70425
+pericles,Pericles,main,2,2,8,170,stage_direction,,,Exit a Lord,0.0,0.00781
+pericles,Pericles,main,2,2,8,171,speech,THAISA,THAISA,"It pleaseth you, my royal father, to express
+My commendations great, whose merit's less.",0.3612,0.46235
+pericles,Pericles,main,2,2,8,172,speech,SIMONIDES,SIMONIDES,"It's fit it should be so; for princes are
+A model which heaven makes like to itself:
+As jewels lose their glory if neglected,
+So princes their renowns if not respected.
+'Tis now your honour, daughter, to explain
+The labour of each knight in his device.",-0.0762,-0.49745
+pericles,Pericles,main,2,2,8,173,speech,THAISA,THAISA,"Which, to preserve mine honour, I'll perform.",0.6369,0.27259
+pericles,Pericles,main,2,2,8,174,stage_direction,,,"Enter a Knight; he passes over, and his Squire presents his shield to the Princess",0.0,0.02401
+pericles,Pericles,main,2,2,8,175,speech,SIMONIDES,SIMONIDES,Who is the first that doth prefer himself?,0.0,-0.05365
+pericles,Pericles,main,2,2,8,176,speech,THAISA,THAISA,"A knight of Sparta, my renowned father;
+And the device he bears upon his shield
+Is a black Ethiope reaching at the sun
+The word, 'Lux tua vita mihi.'",0.2023,0.43389
+pericles,Pericles,main,2,2,8,177,speech,SIMONIDES,SIMONIDES,He loves you well that holds his life of you.,0.7351,0.44777
+pericles,Pericles,main,2,2,8,178,speech,SIMONIDES,SIMONIDES,Who is the second that presents himself?,0.0,-0.03715
+pericles,Pericles,main,2,2,8,179,speech,THAISA,THAISA,"A prince of Macedon, my royal father;
+And the device he bears upon his shield
+Is an arm'd knight that's conquer'd by a lady;
+The motto thus, in Spanish, 'Piu por dulzura que por
+fuerza.'",0.7269,0.18201
+pericles,Pericles,main,2,2,8,180,speech,SIMONIDES,SIMONIDES,And what's the third?,0.0,-0.26087
+pericles,Pericles,main,2,2,8,181,speech,THAISA,THAISA,"The third of Antioch;
+And his device, a wreath of chivalry;
+The word, 'Me pompae provexit apex.'",-0.2023,0.03454
+pericles,Pericles,main,2,2,8,182,speech,SIMONIDES,SIMONIDES,What is the fourth?,0.0,-0.23998
+pericles,Pericles,main,2,2,8,183,speech,THAISA,THAISA,"A burning torch that's turned upside down;
+The word, 'Quod me alit, me extinguit.'",0.0,-0.03944
+pericles,Pericles,main,2,2,8,184,speech,SIMONIDES,SIMONIDES,"Which shows that beauty hath his power and will,
+Which can as well inflame as it can kill.",0.8779,0.16919
+pericles,Pericles,main,2,2,8,185,speech,THAISA,THAISA,"The fifth, an hand environed with clouds,
+Holding out gold that's by the touchstone tried;
+The motto thus, 'Sic spectanda fides.'",0.836,0.11115
+pericles,Pericles,main,2,2,8,186,speech,SIMONIDES,SIMONIDES,"And what's
+The sixth and last, the which the knight himself
+With such a graceful courtesy deliver'd?",0.0,0.41667
+pericles,Pericles,main,2,2,8,187,speech,THAISA,THAISA,"He seems to be a stranger; but his present is
+A wither'd branch, that's only green at top;
+The motto, 'In hac spe vivo.'",0.3559,-0.6011
+pericles,Pericles,main,2,2,8,188,speech,SIMONIDES,SIMONIDES,"A pretty moral;
+From the dejected state wherein he is,
+He hopes by you his fortunes yet may flourish.",0.8573,0.34107
+pericles,Pericles,main,2,2,8,189,speech,FIRST LORD,FIRST LORD,"He had need mean better than his outward show
+Can any way speak in his just commend;
+For by his rusty outside he appears
+To have practised more the whipstock than the lance.",0.7845,-0.48121
+pericles,Pericles,main,2,2,8,190,speech,SECOND LORD,SECOND LORD,"He well may be a stranger, for he comes
+To an honour'd triumph strangely furnished.",-0.2023,-0.3364
+pericles,Pericles,main,2,2,8,191,speech,THIRD LORD,THIRD LORD,"And on set purpose let his armour rust
+Until this day, to scour it in the dust.",0.0,-0.40028
+pericles,Pericles,main,2,2,8,192,speech,SIMONIDES,SIMONIDES,"Opinion's but a fool, that makes us scan
+The outward habit by the inward man.
+But stay, the knights are coming: we will withdraw
+Into the gallery.",-0.2732,-0.46467
+pericles,Pericles,main,2,2,8,193,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,3,9,194,stage_direction,,,"Great shouts within and all cry, ""The mean knight!"" Enter SIMONIDES, THAISA, Lords, Attendants, and Knights, from tilting",0.4767,0.03683
+pericles,Pericles,main,2,3,9,195,speech,SIMONIDES,SIMONIDES,"Knights,
+To say you're welcome were superfluous.
+To place upon the volume of your deeds,
+As in a title-page, your worth in arms,
+Were more than you expect, or more than's fit,
+Since every worth in show commends itself.
+Prepare for mirth, for mirth becomes a feast:
+You are princes and my guests.",0.9806,0.535
+pericles,Pericles,main,2,3,9,196,speech,THAISA,THAISA,"But you, my knight and guest;
+To whom this wreath of victory I give,
+And crown you king of this day's happiness.",0.0,0.77323
+pericles,Pericles,main,2,3,9,197,speech,PERICLES,PERICLES,"'Tis more by fortune, lady, than by merit.",0.7537,-0.55356
+pericles,Pericles,main,2,3,9,198,speech,SIMONIDES,SIMONIDES,"Call it by what you will, the day is yours;
+And here, I hope, is none that envies it.
+In framing an artist, art hath thus decreed,
+To make some good, but others to exceed;
+And you are her labour'd scholar. Come, queen o'
+the feast,—
+For, daughter, so you are,— here take your place:
+Marshal the rest, as they deserve their grace.",0.9505,0.7041
+pericles,Pericles,main,2,3,9,199,speech,KNIGHTS,KNIGHTS,We are honour'd much by good Simonides.,0.5859,0.51468
+pericles,Pericles,main,2,3,9,200,speech,SIMONIDES,SIMONIDES,"Your presence glads our days: honour we love;
+For who hates honour hates the gods above.",0.8316,0.53021
+pericles,Pericles,main,2,3,9,201,speech,MARSHAL,MARSHAL,"Sir, yonder is your place.",0.0,0.36289
+pericles,Pericles,main,2,3,9,202,speech,PERICLES,PERICLES,Some other is more fit.,0.4404,-0.44888
+pericles,Pericles,main,2,3,9,203,speech,FIRST KNIGHT,FIRST KNIGHT,"Contend not, sir; for we are gentlemen
+That neither in our hearts nor outward eyes
+Envy the great nor do the low despise.",0.9136,-0.26284
+pericles,Pericles,main,2,3,9,204,speech,PERICLES,PERICLES,You are right courteous knights.,0.5709,0.46992
+pericles,Pericles,main,2,3,9,205,speech,SIMONIDES,SIMONIDES,"Sit, sir, sit.",0.0,0.06575
+pericles,Pericles,main,2,3,9,206,speech,PERICLES,PERICLES,"By Jove, I wonder, that is king of thoughts,
+These cates resist me, she but thought upon.",0.7925,0.67425
+pericles,Pericles,main,2,3,9,207,speech,THAISA,THAISA,"By Juno, that is queen of marriage,
+All viands that I eat do seem unsavoury.
+Wishing him my meat. Sure, he's a gallant gentleman.",0.765,0.37996
+pericles,Pericles,main,2,3,9,208,speech,SIMONIDES,SIMONIDES,"He's but a country gentleman;
+Has done no more than other knights have done;
+Has broken a staff or so; so let it pass.",-0.6486,-0.3586
+pericles,Pericles,main,2,3,9,209,speech,THAISA,THAISA,To me he seems like diamond to glass.,0.0,0.21576
+pericles,Pericles,main,2,3,9,210,speech,PERICLES,PERICLES,"Yon king's to me like to my father's picture,
+Which tells me in that glory once he was;
+Had princes sit, like stars, about his throne,
+And he the sun, for them to reverence;
+None that beheld him, but, like lesser lights,
+Did vail their crowns to his supremacy:
+Where now his son's like a glow-worm in the night,
+The which hath fire in darkness, none in light:
+Whereby I see that Time's the king of men,
+He's both their parent, and he is their grave,
+And gives them what he will, not what they crave.",0.4588,-0.45615
+pericles,Pericles,main,2,3,9,211,speech,SIMONIDES,SIMONIDES,"What, are you merry, knights?",0.4939,-0.06101
+pericles,Pericles,main,2,3,9,212,speech,KNIGHTS,KNIGHTS,Who can be other in this royal presence?,0.0,-0.00778
+pericles,Pericles,main,2,3,9,213,speech,SIMONIDES,SIMONIDES,"Here, with a cup that's stored unto the brim,—
+As you do love, fill to your mistress' lips,—
+We drink this health to you.",0.6369,0.12717
+pericles,Pericles,main,2,3,9,214,speech,KNIGHTS,KNIGHTS,We thank your grace.,0.3612,0.56549
+pericles,Pericles,main,2,3,9,215,speech,SIMONIDES,SIMONIDES,"Yet pause awhile:
+Yon knight doth sit too melancholy,
+As if the entertainment in our court
+Had not a show might countervail his worth.
+Note it not you, Thaisa?",-0.1177,-0.51568
+pericles,Pericles,main,2,3,9,216,speech,THAISA,THAISA,"What is it
+To me, my father?",0.0,-0.0422
+pericles,Pericles,main,2,3,9,217,speech,SIMONIDES,SIMONIDES,"O, attend, my daughter:
+Princes in this should live like gods above,
+Who freely give to every one that comes
+To honour them:
+And princes not doing so are like to gnats,
+Which make a sound, but kill'd are wonder'd at.
+Therefore to make his entrance more sweet,
+Here, say we drink this standing-bowl of wine to him.",0.908,-0.28502
+pericles,Pericles,main,2,3,9,218,speech,THAISA,THAISA,"Alas, my father, it befits not me
+Unto a stranger knight to be so bold:
+He may my proffer take for an offence,
+Since men take women's gifts for impudence.",-0.6808,-0.45046
+pericles,Pericles,main,2,3,9,219,speech,SIMONIDES,SIMONIDES,"How!
+Do as I bid you, or you'll move me else.",0.0,-0.02876
+pericles,Pericles,main,2,3,9,220,speech,THAISA,THAISA,"[Aside] Now, by the gods, he could not please me
+better.",0.5267,-0.01051
+pericles,Pericles,main,2,3,9,221,speech,SIMONIDES,SIMONIDES,"And furthermore tell him, we desire to know of him,
+Of whence he is, his name and parentage.",0.0772,0.201
+pericles,Pericles,main,2,3,9,222,speech,THAISA,THAISA,"The king my father, sir, has drunk to you.",0.0,-0.45886
+pericles,Pericles,main,2,3,9,223,speech,PERICLES,PERICLES,I thank him.,0.4404,0.23073
+pericles,Pericles,main,2,3,9,224,speech,THAISA,THAISA,Wishing it so much blood unto your life.,0.4404,0.40973
+pericles,Pericles,main,2,3,9,225,speech,PERICLES,PERICLES,"I thank both him and you, and pledge him freely.",0.7717,0.54088
+pericles,Pericles,main,2,3,9,226,speech,THAISA,THAISA,"And further he desires to know of you,
+Of whence you are, your name and parentage.",0.0,0.41858
+pericles,Pericles,main,2,3,9,227,speech,PERICLES,PERICLES,"A gentleman of Tyre; my name, Pericles;
+My education been in arts and arms;
+Who, looking for adventures in the world,
+Was by the rough seas reft of ships and men,
+And after shipwreck driven upon this shore.",0.0,0.41879
+pericles,Pericles,main,2,3,9,228,speech,THAISA,THAISA,"He thanks your grace; names himself Pericles,
+A gentleman of Tyre,
+Who only by misfortune of the seas
+Bereft of ships and men, cast on this shore.",0.5423,-0.31717
+pericles,Pericles,main,2,3,9,229,speech,SIMONIDES,SIMONIDES,"Now, by the gods, I pity his misfortune,
+And will awake him from his melancholy.
+Come, gentlemen, we sit too long on trifles,
+And waste the time, which looks for other revels.
+Even in your armours, as you are address'd,
+Will very well become a soldier's dance.
+I will not have excuse, with saying this
+Loud music is too harsh for ladies' heads,
+Since they love men in arms as well as beds.",0.9443,0.34796
+pericles,Pericles,main,2,3,9,230,stage_direction,,,The Knights dance,0.0,0.06134
+pericles,Pericles,main,2,3,9,231,speech,SIMONIDES,SIMONIDES,"So, this was well ask'd,'twas so well perform'd.
+Come, sir;
+Here is a lady that wants breathing too:
+And I have heard, you knights of Tyre
+Are excellent in making ladies trip;
+And that their measures are as excellent.",0.9371,0.52541
+pericles,Pericles,main,2,3,9,232,speech,PERICLES,PERICLES,"In those that practise them they are, my lord.",0.0,0.20406
+pericles,Pericles,main,2,3,9,233,speech,SIMONIDES,SIMONIDES,"O, that's as much as you would be denied
+Of your fair courtesy.",0.3612,-0.36788
+pericles,Pericles,main,2,3,9,234,stage_direction,,,The Knights and Ladies dance,0.0,0.11031
+pericles,Pericles,main,2,3,9,235,speech,SIMONIDES,SIMONIDES,"Unclasp, unclasp:
+Thanks, gentlemen, to all; all have done well.
+[ To PERICLES]
+But you the best. Pages and lights, to conduct
+These knights unto their several lodgings!
+Yours, sir,
+We have given order to be next our own.",0.9468,0.61069
+pericles,Pericles,main,2,3,9,236,speech,PERICLES,PERICLES,I am at your grace's pleasure.,0.3612,0.4884
+pericles,Pericles,main,2,3,9,237,speech,SIMONIDES,SIMONIDES,"Princes, it is too late to talk of love;
+And that's the mark I know you level at:
+Therefore each one betake him to his rest;
+To-morrow all for speeding do their best.",0.6369,-0.42023
+pericles,Pericles,main,2,3,9,238,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,4,10,239,stage_direction,,,Enter HELICANUS and ESCANES,0.0,0.20576
+pericles,Pericles,main,2,4,10,240,speech,HELICANUS,HELICANUS,"No, Escanes, know this of me,
+Antiochus from incest lived not free:
+For which, the most high gods not minding longer
+To withhold the vengeance that they had in store,
+Due to this heinous capital offence,
+Even in the height and pride of all his glory,
+When he was seated in a chariot
+Of an inestimable value, and his daughter with him,
+A fire from heaven came and shrivell'd up
+Their bodies, even to loathing; for they so stunk,
+That all those eyes adored them ere their fall
+Scorn now their hand should give them burial.",-0.9224,-0.81661
+pericles,Pericles,main,2,4,10,241,speech,ESCANES,ESCANES,'Twas very strange.,-0.2716,-0.46473
+pericles,Pericles,main,2,4,10,242,speech,HELICANUS,HELICANUS,"And yet but justice; for though
+This king were great, his greatness was no guard
+To bar heaven's shaft, but sin had his reward.",0.6369,-0.22697
+pericles,Pericles,main,2,4,10,243,speech,ESCANES,ESCANES,'Tis very true.,0.4754,0.62809
+pericles,Pericles,main,2,4,10,244,stage_direction,,,Enter two or three Lords,0.0,0.00235
+pericles,Pericles,main,2,4,10,245,speech,FIRST LORD,FIRST LORD,"See, not a man in private conference
+Or council has respect with him but he.",-0.296,-0.00362
+pericles,Pericles,main,2,4,10,246,speech,SECOND LORD,SECOND LORD,It shall no longer grieve without reproof.,-0.1139,-0.37009
+pericles,Pericles,main,2,4,10,247,speech,THIRD LORD,THIRD LORD,And cursed be he that will not second it.,0.0,-0.53485
+pericles,Pericles,main,2,4,10,248,speech,FIRST LORD,FIRST LORD,"Follow me, then. Lord Helicane, a word.",0.0,0.0407
+pericles,Pericles,main,2,4,10,249,speech,HELICANUS,HELICANUS,"With me? and welcome: happy day, my lords.",0.0,0.46438
+pericles,Pericles,main,2,4,10,250,speech,FIRST LORD,FIRST LORD,"Know that our griefs are risen to the top,
+And now at length they overflow their banks.",-0.3612,-0.16827
+pericles,Pericles,main,2,4,10,251,speech,HELICANUS,HELICANUS,Your griefs! for what? wrong not your prince you love.,0.4574,-0.3706
+pericles,Pericles,main,2,4,10,252,speech,FIRST LORD,FIRST LORD,"Wrong not yourself, then, noble Helicane;
+But if the prince do live, let us salute him,
+Or know what ground's made happy by his breath.
+If in the world he live, we'll seek him out;
+If in his grave he rest, we'll find him there;
+And be resolved he lives to govern us,
+Or dead, give's cause to mourn his funeral,
+And leave us to our free election.",-0.7906,-0.00158
+pericles,Pericles,main,2,4,10,253,speech,SECOND LORD,SECOND LORD,"Whose death indeed's the strongest in our censure:
+And knowing this kingdom is without a head,—
+Like goodly buildings left without a roof
+Soon fall to ruin,— your noble self,
+That best know how to rule and how to reign,
+We thus submit unto,— our sovereign.",-0.7089,-0.49256
+pericles,Pericles,main,2,4,10,254,speech,ALL,ALL,"Live, noble Helicane!",0.0,0.67881
+pericles,Pericles,main,2,4,10,255,speech,HELICANUS,HELICANUS,"For honour's cause, forbear your suffrages:
+If that you love Prince Pericles, forbear.
+Take I your wish, I leap into the seas,
+Where's hourly trouble for a minute's ease.
+A twelvemonth longer, let me entreat you to
+Forbear the absence of your king:
+If in which time expired, he not return,
+I shall with aged patience bear your yoke.
+But if I cannot win you to this love,
+Go search like nobles, like noble subjects,
+And in your search spend your adventurous worth;
+Whom if you find, and win unto return,
+You shall like diamonds sit about his crown.",0.9345,0.15394
+pericles,Pericles,main,2,4,10,256,speech,FIRST LORD,FIRST LORD,"To wisdom he's a fool that will not yield;
+And since Lord Helicane enjoineth us,
+We with our travels will endeavour us.",0.5859,-0.4648
+pericles,Pericles,main,2,4,10,257,speech,HELICANUS,HELICANUS,"Then you love us, we you, and we'll clasp hands:
+When peers thus knit, a kingdom ever stands.",0.8176,0.57027
+pericles,Pericles,main,2,4,10,258,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,5,11,259,stage_direction,,,"Enter SIMONIDES, reading a letter, at one door: the Knights meet him",0.0,0.02823
+pericles,Pericles,main,2,5,11,260,speech,FIRST KNIGHT,FIRST KNIGHT,Good morrow to the good Simonides.,0.4404,0.16102
+pericles,Pericles,main,2,5,11,261,speech,SIMONIDES,SIMONIDES,"Knights, from my daughter this I let you know,
+That for this twelvemonth she'll not undertake
+A married life.
+Her reason to herself is only known,
+Which yet from her by no means can I get.",0.0,-0.76026
+pericles,Pericles,main,2,5,11,262,speech,SECOND KNIGHT,SECOND KNIGHT,"May we not get access to her, my lord?",0.0,-0.15849
+pericles,Pericles,main,2,5,11,263,speech,SIMONIDES,SIMONIDES,"'Faith, by no means; she has so strictly tied
+Her to her chamber, that 'tis impossible.
+One twelve moons more she'll wear Diana's livery;
+This by the eye of Cynthia hath she vow'd
+And on her virgin honour will not break it.",0.6908,-0.84395
+pericles,Pericles,main,2,5,11,264,speech,THIRD KNIGHT,THIRD KNIGHT,"Loath to bid farewell, we take our leaves.",-0.2846,-0.32615
+pericles,Pericles,main,2,5,11,265,stage_direction,,,Exeunt Knights,0.0,0.01072
+pericles,Pericles,main,2,5,11,266,speech,SIMONIDES,SIMONIDES,"So,
+They are well dispatch'd; now to my daughter's letter:
+She tells me here, she'd wed the stranger knight,
+Or never more to view nor day nor light.
+'Tis well, mistress; your choice agrees with mine;
+I like that well: nay, how absolute she's in't,
+Not minding whether I dislike or no!
+Well, I do commend her choice;
+And will no longer have it be delay'd.
+Soft! here he comes: I must dissemble it.",0.7311,-0.53967
+pericles,Pericles,main,2,5,11,267,stage_direction,,,Enter PERICLES,0.0,0.01125
+pericles,Pericles,main,2,5,11,268,speech,PERICLES,PERICLES,All fortune to the good Simonides!,0.7712,0.59931
+pericles,Pericles,main,2,5,11,269,speech,SIMONIDES,SIMONIDES,"To you as much, sir! I am beholding to you
+For your sweet music this last night: I do
+Protest my ears were never better fed
+With such delightful pleasing harmony.",0.8398,0.68913
+pericles,Pericles,main,2,5,11,270,speech,PERICLES,PERICLES,"It is your grace's pleasure to commend;
+Not my desert.",0.4588,-0.4975
+pericles,Pericles,main,2,5,11,271,speech,SIMONIDES,SIMONIDES,"Sir, you are music's master.",0.0,0.50638
+pericles,Pericles,main,2,5,11,272,speech,PERICLES,PERICLES,"The worst of all her scholars, my good lord.",-0.6249,-0.86114
+pericles,Pericles,main,2,5,11,273,speech,SIMONIDES,SIMONIDES,"Let me ask you one thing:
+What do you think of my daughter, sir?",0.0,-0.0103
+pericles,Pericles,main,2,5,11,274,speech,PERICLES,PERICLES,A most virtuous princess.,0.5267,0.52279
+pericles,Pericles,main,2,5,11,275,speech,SIMONIDES,SIMONIDES,"And she is fair too, is she not?",0.4939,0.31358
+pericles,Pericles,main,2,5,11,276,speech,PERICLES,PERICLES,"As a fair day in summer, wondrous fair.",0.8439,0.73255
+pericles,Pericles,main,2,5,11,277,speech,SIMONIDES,SIMONIDES,"Sir, my daughter thinks very well of you;
+Ay, so well, that you must be her master,
+And she will be your scholar: therefore look to it.",0.6808,0.69043
+pericles,Pericles,main,2,5,11,278,speech,PERICLES,PERICLES,I am unworthy for her schoolmaster.,-0.3412,-0.45986
+pericles,Pericles,main,2,5,11,279,speech,SIMONIDES,SIMONIDES,She thinks not so; peruse this writing else.,0.0,-0.46676
+pericles,Pericles,main,2,5,11,280,speech,PERICLES,PERICLES,"[Aside] What's here?
+A letter, that she loves the knight of Tyre!
+'Tis the king's subtlety to have my life.
+O, seek not to entrap me, gracious lord,
+A stranger and distressed gentleman,
+That never aim'd so high to love your daughter,
+But bent all offices to honour her.",0.7854,-0.5547
+pericles,Pericles,main,2,5,11,281,speech,SIMONIDES,SIMONIDES,"Thou hast bewitch'd my daughter, and thou art
+A villain.",0.5106,0.39872
+pericles,Pericles,main,2,5,11,282,speech,PERICLES,PERICLES,"By the gods, I have not:
+Never did thought of mine levy offence;
+Nor never did my actions yet commence
+A deed might gain her love or your displeasure.",-0.6988,-0.83897
+pericles,Pericles,main,2,5,11,283,speech,SIMONIDES,SIMONIDES,"Traitor, thou liest.",0.0,0.57152
+pericles,Pericles,main,2,5,11,284,speech,PERICLES,PERICLES,Traitor!,0.0,-0.00869
+pericles,Pericles,main,2,5,11,285,speech,SIMONIDES,SIMONIDES,"Ay, traitor.",0.4019,0.06276
+pericles,Pericles,main,2,5,11,286,speech,PERICLES,PERICLES,"Even in his throat—unless it be the king—
+That calls me traitor, I return the lie.",-0.5106,-0.03524
+pericles,Pericles,main,2,5,11,287,speech,SIMONIDES,SIMONIDES,"[Aside] Now, by the gods, I do applaud his courage.",0.7351,0.81112
+pericles,Pericles,main,2,5,11,288,speech,PERICLES,PERICLES,"My actions are as noble as my thoughts,
+That never relish'd of a base descent.
+I came unto your court for honour's cause,
+And not to be a rebel to her state;
+And he that otherwise accounts of me,
+This sword shall prove he's honour's enemy.",-0.2458,-0.80139
+pericles,Pericles,main,2,5,11,289,speech,SIMONIDES,SIMONIDES,"No?
+Here comes my daughter, she can witness it.",0.0,0.11216
+pericles,Pericles,main,2,5,11,290,stage_direction,,,Enter THAISA,0.0,0.01738
+pericles,Pericles,main,2,5,11,291,speech,PERICLES,PERICLES,"Then, as you are as virtuous as fair,
+Resolve your angry father, if my tongue
+Did ere solicit, or my hand subscribe
+To any syllable that made love to you.",0.8176,0.69779
+pericles,Pericles,main,2,5,11,292,speech,THAISA,THAISA,"Why, sir, say if you had,
+Who takes offence at that would make me glad?",0.7041,-0.07591
+pericles,Pericles,main,2,5,11,293,speech,SIMONIDES,SIMONIDES,"Yea, mistress, are you so peremptory?
+[Aside]
+I am glad on't with all my heart.—
+I'll tame you; I'll bring you in subjection.
+Will you, not having my consent,
+Bestow your love and your affections
+Upon a stranger? who, for aught I know,
+May be, nor can I think the contrary,
+As great in blood as I myself.—
+Therefore hear you, mistress; either frame
+Your will to mine,— and you, sir, hear you,
+Either be ruled by me, or I will make you—
+Man and wife:
+Nay, come, your hands and lips must seal it too:
+And being join'd, I'll thus your hopes destroy;
+And for a further grief,—God give you joy!—
+What, are you both pleased?",0.9687,0.66123
+pericles,Pericles,main,2,5,11,294,speech,THAISA,THAISA,"Yes, if you love me, sir.",0.6696,0.46218
+pericles,Pericles,main,2,5,11,295,speech,PERICLES,PERICLES,"Even as my life, or blood that fosters it.",0.6476,0.80427
+pericles,Pericles,main,2,5,11,296,speech,SIMONIDES,SIMONIDES,"What, are you both agreed?",0.0,-0.07379
+pericles,Pericles,main,2,5,11,297,speech,BOTH,BOTH,"Yes, if it please your majesty.",0.4019,-0.04909
+pericles,Pericles,main,2,5,11,298,speech,SIMONIDES,SIMONIDES,"It pleaseth me so well, that I will see you wed;
+And then with what haste you can get you to bed.",0.4199,0.73457
+pericles,Pericles,main,2,5,11,299,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,2,5,11,300,stage_direction,,,Enter GOWER,0.0,0.02879
+pericles,Pericles,main,2,5,11,301,speech,GOWER,GOWER,"Now sleep y-slaked hath the rout;
+No din but snores the house about,
+Made louder by the o'er-fed breast
+Of this most pompous marriage-feast.
+The cat, with eyne of burning coal,
+Now crouches fore the mouse's hole;
+And crickets sing at the oven's mouth,
+E'er the blither for their drouth.
+Hymen hath brought the bride to bed.
+Where, by the loss of maidenhead,
+A babe is moulded. Be attent,
+And time that is so briefly spent
+With your fine fancies quaintly eche:
+What's dumb in show I'll plain with speech.",-0.4677,-0.09529
+pericles,Pericles,main,3,,12,302,speech,GOWER,GOWER,"By many a dern and painful perch
+Of Pericles the careful search,
+By the four opposing coigns
+Which the world together joins,
+Is made with all due diligence
+That horse and sail and high expense
+Can stead the quest. At last from Tyre,
+Fame answering the most strange inquire,
+To the court of King Simonides
+Are letters brought, the tenor these:
+Antiochus and his daughter dead;
+The men of Tyrus on the head
+Of Helicanus would set on
+The crown of Tyre, but he will none:
+The mutiny he there hastes t' oppress;
+Says to 'em, if King Pericles
+Come not home in twice six moons,
+He, obedient to their dooms,
+Will take the crown. The sum of this,
+Brought hither to Pentapolis,
+Y-ravished the regions round,
+And every one with claps can sound,
+'Our heir-apparent is a king!
+Who dream'd, who thought of such a thing?'
+Brief, he must hence depart to Tyre:
+His queen with child makes her desire—
+Which who shall cross?— along to go:
+Omit we all their dole and woe:
+Lychorida, her nurse, she takes,
+And so to sea. Their vessel shakes
+On Neptune's billow; half the flood
+Hath their keel cut: but fortune's mood
+Varies again; the grisly north
+Disgorges such a tempest forth,
+That, as a duck for life that dives,
+So up and down the poor ship drives:
+The lady shrieks, and well-a-near
+Does fall in travail with her fear:
+And what ensues in this fell storm
+Shall for itself itself perform.
+I nill relate, action may
+Conveniently the rest convey;
+Which might not what by me is told.
+In your imagination hold
+This stage the ship, upon whose deck
+The sea-tost Pericles appears to speak.",-0.6549,-0.05684
+pericles,Pericles,main,3,,12,303,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,3,1,13,304,stage_direction,,,"Enter PERICLES, on shipboard",0.0,0.0006
+pericles,Pericles,main,3,1,13,305,speech,PERICLES,PERICLES,"Thou god of this great vast, rebuke these surges,
+Which wash both heaven and hell; and thou, that hast
+Upon the winds command, bind them in brass,
+Having call'd them from the deep! O, still
+Thy deafening, dreadful thunders; gently quench
+Thy nimble, sulphurous flashes! O, how, Lychorida,
+How does my queen? Thou stormest venomously;
+Wilt thou spit all thyself? The seaman's whistle
+Is as a whisper in the ears of death,
+Unheard. Lychorida!— Lucina, O
+Divinest patroness, and midwife gentle
+To those that cry by night, convey thy deity
+Aboard our dancing boat; make swift the pangs
+Of my queen's travails!",-0.9448,0.86767
+pericles,Pericles,main,3,1,13,306,stage_direction,,,"Enter LYCHORIDA, with an Infant",0.0,0.0178
+pericles,Pericles,main,3,1,13,307,speech,PERICLES,PERICLES,"Now, Lychorida!",0.0,0.7575
+pericles,Pericles,main,3,1,13,308,speech,LYCHORIDA,LYCHORIDA,"Here is a thing too young for such a place,
+Who, if it had conceit, would die, as I
+Am like to do: take in your arms this piece
+Of your dead queen.",-0.6124,-0.65186
+pericles,Pericles,main,3,1,13,309,speech,PERICLES,PERICLES,"How, how, Lychorida!",0.0,0.34422
+pericles,Pericles,main,3,1,13,310,speech,LYCHORIDA,LYCHORIDA,"Patience, good sir; do not assist the storm.
+Here's all that is left living of your queen,
+A little daughter: for the sake of it,
+Be manly, and take comfort.",0.8153,0.38601
+pericles,Pericles,main,3,1,13,311,speech,PERICLES,PERICLES,"O you gods!
+Why do you make us love your goodly gifts,
+And snatch them straight away? We here below
+Recall not what we give, and therein may
+Use honour with you.",0.8122,0.26385
+pericles,Pericles,main,3,1,13,312,speech,LYCHORIDA,LYCHORIDA,"Patience, good sir,
+Even for this charge.",-0.296,-0.48851
+pericles,Pericles,main,3,1,13,313,speech,PERICLES,PERICLES,"Now, mild may be thy life!
+For a more blustrous birth had never babe:
+Quiet and gentle thy conditions! for
+Thou art the rudeliest welcome to this world
+That ever was prince's child. Happy what follows!
+Thou hast as chiding a nativity
+As fire, air, water, earth, and heaven can make,
+To herald thee from the womb: even at the first
+Thy loss is more than can thy portage quit,
+With all thou canst find here. Now, the good gods
+Throw their best eyes upon't!",0.6925,0.79603
+pericles,Pericles,main,3,1,13,314,stage_direction,,,Enter two Sailors,0.0,0.00576
+pericles,Pericles,main,3,1,13,315,speech,FIRST SAILOR,FIRST SAILOR,"What courage, sir? God save you!",0.8264,0.80622
+pericles,Pericles,main,3,1,13,316,speech,PERICLES,PERICLES,"Courage enough: I do not fear the flaw;
+It hath done to me the worst. Yet, for the love
+Of this poor infant, this fresh-new sea-farer,
+I would it would be quiet.",0.5789,0.70933
+pericles,Pericles,main,3,1,13,317,speech,FIRST SAILOR,FIRST SAILOR,"Slack the bolins there! Thou wilt not, wilt thou?
+Blow, and split thyself.",0.0,0.68864
+pericles,Pericles,main,3,1,13,318,speech,SECOND SAILOR,SECOND SAILOR,"But sea-room, an the brine and cloudy billow kiss
+the moon, I care not.",0.0,-0.17997
+pericles,Pericles,main,3,1,13,319,speech,FIRST SAILOR,FIRST SAILOR,"Sir, your queen must overboard: the sea works high,
+the wind is loud, and will not lie till the ship be
+cleared of the dead.",-0.461,-0.60376
+pericles,Pericles,main,3,1,13,320,speech,PERICLES,PERICLES,That's your superstition.,0.0,0.1788
+pericles,Pericles,main,3,1,13,321,speech,FIRST SAILOR,FIRST SAILOR,"Pardon us, sir; with us at sea it hath been still
+observed: and we are strong in custom. Therefore
+briefly yield her; for she must overboard straight.",0.3612,0.5238
+pericles,Pericles,main,3,1,13,322,speech,PERICLES,PERICLES,As you think meet. Most wretched queen!,0.3382,-0.23046
+pericles,Pericles,main,3,1,13,323,speech,LYCHORIDA,LYCHORIDA,"Here she lies, sir.",0.0,0.32844
+pericles,Pericles,main,3,1,13,324,speech,PERICLES,PERICLES,"A terrible childbed hast thou had, my dear;
+No light, no fire: the unfriendly elements
+Forgot thee utterly: nor have I time
+To give thee hallow'd to thy grave, but straight
+Must cast thee, scarcely coffin'd, in the ooze;
+Where, for a monument upon thy bones,
+And e'er-remaining lamps, the belching whale
+And humming water must o'erwhelm thy corpse,
+Lying with simple shells. O Lychorida,
+Bid Nestor bring me spices, ink and paper,
+My casket and my jewels; and bid Nicander
+Bring me the satin coffer: lay the babe
+Upon the pillow: hie thee, whiles I say
+A priestly farewell to her: suddenly, woman.",0.1862,-0.83861
+pericles,Pericles,main,3,1,13,325,stage_direction,,,Exit LYCHORIDA,0.0,0.02504
+pericles,Pericles,main,3,1,13,326,speech,SECOND SAILOR,SECOND SAILOR,"Sir, we have a chest beneath the hatches, caulked
+and bitumed ready.",0.3612,0.36958
+pericles,Pericles,main,3,1,13,327,speech,PERICLES,PERICLES,"I thank thee. Mariner, say what coast is this?",0.3612,0.50753
+pericles,Pericles,main,3,1,13,328,speech,SECOND SAILOR,SECOND SAILOR,We are near Tarsus.,0.0,0.02977
+pericles,Pericles,main,3,1,13,329,speech,PERICLES,PERICLES,"Thither, gentle mariner.
+Alter thy course for Tyre. When canst thou reach it?",0.0,0.00988
+pericles,Pericles,main,3,1,13,330,speech,SECOND SAILOR,SECOND SAILOR,"By break of day, if the wind cease.",-0.1531,-0.03434
+pericles,Pericles,main,3,1,13,331,speech,PERICLES,PERICLES,"O, make for Tarsus!
+There will I visit Cleon, for the babe
+Cannot hold out to Tyrus: there I'll leave it
+At careful nursing. Go thy ways, good mariner:
+I'll bring the body presently.",0.5093,0.6018
+pericles,Pericles,main,3,1,13,332,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,3,2,14,333,stage_direction,,,"Enter CERIMON, with a Servant, and some Persons who have been shipwrecked",0.0,-0.06789
+pericles,Pericles,main,3,2,14,334,speech,CERIMON,CERIMON,"Philemon, ho!",0.0,0.56386
+pericles,Pericles,main,3,2,14,335,stage_direction,,,Enter PHILEMON,0.0,0.0157
+pericles,Pericles,main,3,2,14,336,speech,PHILEMON,PHILEMON,Doth my lord call?,0.0,-0.12588
+pericles,Pericles,main,3,2,14,337,speech,CERIMON,CERIMON,"Get fire and meat for these poor men:
+'T has been a turbulent and stormy night.",-0.6705,-0.50817
+pericles,Pericles,main,3,2,14,338,speech,SERVANT,SERVANT,"I have been in many; but such a night as this,
+Till now, I ne'er endured.",-0.6956,-0.45881
+pericles,Pericles,main,3,2,14,339,speech,CERIMON,CERIMON,"Your master will be dead ere you return;
+There's nothing can be minister'd to nature
+That can recover him.
+[TO PHILEMON]
+Give this to the 'pothecary,
+And tell me how it works.",-0.5859,0.08454
+pericles,Pericles,main,3,2,14,340,stage_direction,,,Exeunt all but CERIMON,0.0,-0.16178
+pericles,Pericles,main,3,2,14,341,stage_direction,,,Enter two Gentlemen,0.0,0.00958
+pericles,Pericles,main,3,2,14,342,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,Good morrow.,0.4404,0.07004
+pericles,Pericles,main,3,2,14,343,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,Good morrow to your lordship.,0.4404,0.25794
+pericles,Pericles,main,3,2,14,344,speech,CERIMON,CERIMON,"Gentlemen,
+Why do you stir so early?",0.0,0.29104
+pericles,Pericles,main,3,2,14,345,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,"Sir,
+Our lodgings, standing bleak upon the sea,
+Shook as the earth did quake;
+The very principals did seem to rend,
+And all-to topple: pure surprise and fear
+Made me to quit the house.",-0.2714,-0.28161
+pericles,Pericles,main,3,2,14,346,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"That is the cause we trouble you so early;
+'Tis not our husbandry.",-0.088,-0.44276
+pericles,Pericles,main,3,2,14,347,speech,CERIMON,CERIMON,"O, you say well.",0.3182,0.43022
+pericles,Pericles,main,3,2,14,348,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,"But I much marvel that your lordship, having
+Rich tire about you, should at these early hours
+Shake off the golden slumber of repose.
+'Tis most strange,
+Nature should be so conversant with pain,
+Being thereto not compell'd.",0.6956,-0.59197
+pericles,Pericles,main,3,2,14,349,speech,CERIMON,CERIMON,"I hold it ever,
+Virtue and cunning were endowments greater
+Than nobleness and riches: careless heirs
+May the two latter darken and expend;
+But immortality attends the former.
+Making a man a god. 'Tis known, I ever
+Have studied physic, through which secret art,
+By turning o'er authorities, I have,
+Together with my practise, made familiar
+To me and to my aid the blest infusions
+That dwell in vegetives, in metals, stones;
+And I can speak of the disturbances
+That nature works, and of her cures; which doth give me
+A more content in course of true delight
+Than to be thirsty after tottering honour,
+Or tie my treasure up in silken bags,
+To please the fool and death.",0.97,0.72227
+pericles,Pericles,main,3,2,14,350,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"Your honour has through Ephesus pour'd forth
+Your charity, and hundreds call themselves
+Your creatures, who by you have been restored:
+And not your knowledge, your personal pain, but even
+Your purse, still open, hath built Lord Cerimon
+Such strong renown as time shall ne'er decay.",0.7845,0.54583
+pericles,Pericles,main,3,2,14,351,stage_direction,,,Enter two or three Servants with a chest,0.0,0.00124
+pericles,Pericles,main,3,2,14,352,speech,FIRST SERVANT,FIRST SERVANT,So; lift there.,0.0,0.04858
+pericles,Pericles,main,3,2,14,353,speech,CERIMON,CERIMON,What is that?,0.0,-0.04363
+pericles,Pericles,main,3,2,14,354,speech,FIRST SERVANT,FIRST SERVANT,"Sir, even now
+Did the sea toss upon our shore this chest:
+'Tis of some wreck.",0.0,-0.65859
+pericles,Pericles,main,3,2,14,355,speech,CERIMON,CERIMON,"Set 't down, let's look upon't.",0.0,-0.13184
+pericles,Pericles,main,3,2,14,356,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"'Tis like a coffin, sir.",0.3612,-0.01596
+pericles,Pericles,main,3,2,14,357,speech,CERIMON,CERIMON,"Whate'er it be,
+'Tis wondrous heavy. Wrench it open straight:
+If the sea's stomach be o'ercharged with gold,
+'Tis a good constraint of fortune it belches upon us.",0.7345,-0.49353
+pericles,Pericles,main,3,2,14,358,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"'Tis so, my lord.",0.0,0.40923
+pericles,Pericles,main,3,2,14,359,speech,CERIMON,CERIMON,"How close 'tis caulk'd and bitumed!
+Did the sea cast it up?",0.0,0.37348
+pericles,Pericles,main,3,2,14,360,speech,FIRST SERVANT,FIRST SERVANT,"I never saw so huge a billow, sir,
+As toss'd it upon shore.",0.0,0.28282
+pericles,Pericles,main,3,2,14,361,speech,CERIMON,CERIMON,"Wrench it open;
+Soft! it smells most sweetly in my sense.",0.7772,0.52202
+pericles,Pericles,main,3,2,14,362,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,A delicate odour.,0.0516,-0.41618
+pericles,Pericles,main,3,2,14,363,speech,CERIMON,CERIMON,"As ever hit my nostril. So, up with it.
+O you most potent gods! what's here? a corse!",0.6333,0.85333
+pericles,Pericles,main,3,2,14,364,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,Most strange!,-0.2714,0.5995
+pericles,Pericles,main,3,2,14,365,speech,CERIMON,CERIMON,"Shrouded in cloth of state; balm'd and entreasured
+With full bags of spices! A passport too!
+Apollo, perfect me in the characters!
+[Reading from a scroll]
+'Here I give to understand,
+If e'er this coffin drive a-land,
+I, King Pericles, have lost
+This queen, worth all our mundane cost.
+Who finds her, give her burying;
+She was the daughter of a king:
+Besides this treasure for a fee,
+The gods requite his charity!'
+If thou livest, Pericles, thou hast a heart
+That even cracks for woe! This chanced tonight.",0.8114,0.82258
+pericles,Pericles,main,3,2,14,366,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"Most likely, sir.",0.0,0.14279
+pericles,Pericles,main,3,2,14,367,speech,CERIMON,CERIMON,"Nay, certainly to-night;
+For look how fresh she looks! They were too rough
+That threw her in the sea. Make a fire within:
+Fetch hither all my boxes in my closet.",0.4389,0.5082
+pericles,Pericles,main,3,2,14,368,stage_direction,,,Exit a Servant,0.0,0.0105
+pericles,Pericles,main,3,2,14,369,speech,CERIMON,CERIMON,"Death may usurp on nature many hours,
+And yet the fire of life kindle again
+The o'erpress'd spirits. I heard of an Egyptian
+That had nine hours lien dead,
+Who was by good appliance recovered.",-0.296,-0.00203
+pericles,Pericles,main,3,2,14,370,stage_direction,,,"Re-enter a Servant, with boxes, napkins, and fire",-0.34,0.02457
+pericles,Pericles,main,3,2,14,371,speech,CERIMON,CERIMON,"Well said, well said; the fire and cloths.
+The rough and woeful music that we have,
+Cause it to sound, beseech you.
+The viol once more: how thou stirr'st, thou block!
+The music there!— I pray you, give her air.
+Gentlemen.
+This queen will live: nature awakes; a warmth
+Breathes out of her: she hath not been entranced
+Above five hours: see how she gins to blow
+Into life's flower again!",0.803,0.80087
+pericles,Pericles,main,3,2,14,372,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,"The heavens,
+Through you, increase our wonder and set up
+Your fame forever.",0.8442,0.75915
+pericles,Pericles,main,3,2,14,373,speech,CERIMON,CERIMON,"She is alive; behold,
+Her eyelids, cases to those heavenly jewels
+Which Pericles hath lost,
+Begin to part their fringes of bright gold;
+The diamonds of a most praised water
+Do appear, to make the world twice rich. Live,
+And make us weep to hear your fate, fair creature,
+Rare as you seem to be.",0.8883,0.7082
+pericles,Pericles,main,3,2,14,374,stage_direction,,,She moves,0.0,0.17229
+pericles,Pericles,main,3,2,14,375,speech,THAISA,THAISA,"O dear Diana,
+Where am I? Where's my lord? What world is this?",0.0,-0.41572
+pericles,Pericles,main,3,2,14,376,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,Is not this strange?,0.1511,-0.07506
+pericles,Pericles,main,3,2,14,377,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,Most rare.,-0.3804,-0.3393
+pericles,Pericles,main,3,2,14,378,speech,CERIMON,CERIMON,"Hush, my gentle neighbours!
+Lend me your hands; to the next chamber bear her.
+Get linen: now this matter must be look'd to,
+For her relapse is mortal. Come, come;
+And AEsculapius guide us!",-0.3147,0.53643
+pericles,Pericles,main,3,2,14,379,stage_direction,,,"Exeunt, carrying her away",0.0,0.06231
+pericles,Pericles,main,3,3,15,380,stage_direction,,,"Enter PERICLES, CLEON, DIONYZA, and LYCHORIDA with MARINA in her arms",0.0,0.06244
+pericles,Pericles,main,3,3,15,381,speech,PERICLES,PERICLES,"Most honour'd Cleon, I must needs be gone;
+My twelve months are expired, and Tyrus stands
+In a litigious peace. You, and your lady,
+Take from my heart all thankfulness! The gods
+Make up the rest upon you!",0.8957,0.08004
+pericles,Pericles,main,3,3,15,382,speech,CLEON,CLEON,"Your shafts of fortune, though they hurt you mortally,
+Yet glance full wanderingly on us.",-0.802,-0.77676
+pericles,Pericles,main,3,3,15,383,speech,DIONYZA,DIONYZA,"O your sweet queen!
+That the strict fates had pleased you had brought her
+hither,
+To have bless'd mine eyes with her!",-0.5255,-0.33068
+pericles,Pericles,main,3,3,15,384,speech,PERICLES,PERICLES,"We cannot but obey
+The powers above us. Could I rage and roar
+As doth the sea she lies in, yet the end
+Must be as 'tis. My gentle babe Marina, whom,
+For she was born at sea, I have named so, here
+I charge your charity withal, leaving her
+The infant of your care; beseeching you
+To give her princely training, that she may be
+Manner'd as she is born.",0.8126,-0.16493
+pericles,Pericles,main,3,3,15,385,speech,CLEON,CLEON,"Fear not, my lord, but think
+Your grace, that fed my country with your corn,
+For which the people's prayers still fall upon you,
+Must in your child be thought on. If neglection
+Should therein make me vile, the common body,
+By you relieved, would force me to my duty:
+But if to that my nature need a spur,
+The gods revenge it upon me and mine,
+To the end of generation!",-0.8376,0.47235
+pericles,Pericles,main,3,3,15,386,speech,PERICLES,PERICLES,"I believe you;
+Your honour and your goodness teach me to't,
+Without your vows. Till she be married, madam,
+By bright Diana, whom we honour, all
+Unscissor'd shall this hair of mine remain,
+Though I show ill in't. So I take my leave.
+Good madam, make me blessed in your care
+In bringing up my child.",0.8206,-0.42858
+pericles,Pericles,main,3,3,15,387,speech,DIONYZA,DIONYZA,"I have one myself,
+Who shall not be more dear to my respect
+Than yours, my lord.",0.7717,0.25969
+pericles,Pericles,main,3,3,15,388,speech,PERICLES,PERICLES,"Madam, my thanks and prayers.",0.4404,0.34358
+pericles,Pericles,main,3,3,15,389,speech,CLEON,CLEON,"We'll bring your grace e'en to the edge o' the shore,
+Then give you up to the mask'd Neptune and
+The gentlest winds of heaven.",0.6249,0.02057
+pericles,Pericles,main,3,3,15,390,speech,PERICLES,PERICLES,"I will embrace
+Your offer. Come, dearest madam. O, no tears,
+Lychorida, no tears:
+Look to your little mistress, on whose grace
+You may depend hereafter. Come, my lord.",0.9128,0.68386
+pericles,Pericles,main,3,3,15,391,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,3,4,16,392,stage_direction,,,Enter CERIMON and THAISA,0.0,0.14576
+pericles,Pericles,main,3,4,16,393,speech,CERIMON,CERIMON,"Madam, this letter, and some certain jewels,
+Lay with you in your coffer: which are now
+At your command. Know you the character?",0.0,0.35032
+pericles,Pericles,main,3,4,16,394,speech,THAISA,THAISA,"It is my lord's.
+That I was shipp'd at sea, I well remember,
+Even on my eaning time; but whether there
+Deliver'd, by the holy gods,
+I cannot rightly say. But since King Pericles,
+My wedded lord, I ne'er shall see again,
+A vestal livery will I take me to,
+And never more have joy.",-0.612,-0.18248
+pericles,Pericles,main,3,4,16,395,speech,CERIMON,CERIMON,"Madam, if this you purpose as ye speak,
+Diana's temple is not distant far,
+Where you may abide till your date expire.
+Moreover, if you please, a niece of mine
+Shall there attend you.",0.3612,-0.01776
+pericles,Pericles,main,3,4,16,396,speech,THAISA,THAISA,"My recompense is thanks, that's all;
+Yet my good will is great, though the gift small.",0.802,0.46359
+pericles,Pericles,main,3,4,16,397,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,4,,17,398,stage_direction,,,Enter GOWER,0.0,0.02879
+pericles,Pericles,main,4,,17,399,speech,GOWER,GOWER,"Imagine Pericles arrived at Tyre,
+Welcomed and settled to his own desire.
+His woeful queen we leave at Ephesus,
+Unto Diana there a votaress.
+Now to Marina bend your mind,
+Whom our fast-growing scene must find
+At Tarsus, and by Cleon train'd
+In music, letters; who hath gain'd
+Of education all the grace,
+Which makes her both the heart and place
+Of general wonder. But, alack,
+That monster envy, oft the wrack
+Of earned praise, Marina's life
+Seeks to take off by treason's knife.
+And in this kind hath our Cleon
+One daughter, and a wench full grown,
+Even ripe for marriage-rite; this maid
+Hight Philoten: and it is said
+For certain in our story, she
+Would ever with Marina be:
+Be't when she weaved the sleided silk
+With fingers long, small, white as milk;
+Or when she would with sharp needle wound
+The cambric, which she made more sound
+By hurting it; or when to the lute
+She sung, and made the night-bird mute,
+That still records with moan; or when
+She would with rich and constant pen
+Vail to her mistress Dian; still
+This Philoten contends in skill
+With absolute Marina: so
+With the dove of Paphos might the crow
+Vie feathers white. Marina gets
+All praises, which are paid as debts,
+And not as given. This so darks
+In Philoten all graceful marks,
+That Cleon's wife, with envy rare,
+A present murderer does prepare
+For good Marina, that her daughter
+Might stand peerless by this slaughter.
+The sooner her vile thoughts to stead,
+Lychorida, our nurse, is dead:
+And cursed Dionyza hath
+The pregnant instrument of wrath
+Prest for this blow. The unborn event
+I do commend to your content:
+Only I carry winged time
+Post on the lame feet of my rhyme;
+Which never could I so convey,
+Unless your thoughts went on my way.
+Dionyza does appear,
+With Leonine, a murderer.",-0.5682,-0.59213
+pericles,Pericles,main,4,,17,400,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,4,1,18,401,stage_direction,,,Enter DIONYZA and LEONINE,0.0,0.11089
+pericles,Pericles,main,4,1,18,402,speech,DIONYZA,DIONYZA,"Thy oath remember; thou hast sworn to do't:
+'Tis but a blow, which never shall be known.
+Thou canst not do a thing in the world so soon,
+To yield thee so much profit. Let not conscience,
+Which is but cold, inflaming love i' thy bosom,
+Inflame too nicely; nor let pity, which
+Even women have cast off, melt thee, but be
+A soldier to thy purpose.",0.9307,-0.06725
+pericles,Pericles,main,4,1,18,403,speech,LEONINE,LEONINE,I will do't; but yet she is a goodly creature.,0.4767,-0.64836
+pericles,Pericles,main,4,1,18,404,speech,DIONYZA,DIONYZA,"The fitter, then, the gods should have her. Here
+she comes weeping for her only mistress' death.
+Thou art resolved?",-0.3818,-0.02788
+pericles,Pericles,main,4,1,18,405,speech,LEONINE,LEONINE,I am resolved.,0.3612,0.44084
+pericles,Pericles,main,4,1,18,406,stage_direction,,,"Enter MARINA, with a basket of flowers",0.0,0.01166
+pericles,Pericles,main,4,1,18,407,speech,MARINA,MARINA,"No, I will rob Tellus of her weed,
+To strew thy green with flowers: the yellows, blues,
+The purple violets, and marigolds,
+Shall as a carpet hang upon thy grave,
+While summer-days do last. Ay me! poor maid,
+Born in a tempest, when my mother died,
+This world to me is like a lasting storm,
+Whirring me from my friends.",-0.7574,0.81465
+pericles,Pericles,main,4,1,18,408,speech,DIONYZA,DIONYZA,"How now, Marina! why do you keep alone?
+How chance my daughter is not with you? Do not
+Consume your blood with sorrowing: you have
+A nurse of me. Lord, how your favour's changed
+With this unprofitable woe!
+Come, give me your flowers, ere the sea mar it.
+Walk with Leonine; the air is quick there,
+And it pierces and sharpens the stomach. Come,
+Leonine, take her by the arm, walk with her.",-0.4953,0.85466
+pericles,Pericles,main,4,1,18,409,speech,MARINA,MARINA,"No, I pray you;
+I'll not bereave you of your servant.",0.3182,-0.64282
+pericles,Pericles,main,4,1,18,410,speech,DIONYZA,DIONYZA,"Come, come;
+I love the king your father, and yourself,
+With more than foreign heart. We every day
+Expect him here: when he shall come and find
+Our paragon to all reports thus blasted,
+He will repent the breadth of his great voyage;
+Blame both my lord and me, that we have taken
+No care to your best courses. Go, I pray you,
+Walk, and be cheerful once again; reserve
+That excellent complexion, which did steal
+The eyes of young and old. Care not for me
+I can go home alone.",0.9476,0.77517
+pericles,Pericles,main,4,1,18,411,speech,MARINA,MARINA,"Well, I will go;
+But yet I have no desire to it.",0.2211,-0.15359
+pericles,Pericles,main,4,1,18,412,speech,DIONYZA,DIONYZA,"Come, come, I know 'tis good for you.
+Walk half an hour, Leonine, at the least:
+Remember what I have said.",0.6696,0.6768
+pericles,Pericles,main,4,1,18,413,speech,LEONINE,LEONINE,"I warrant you, madam.",0.0,0.27072
+pericles,Pericles,main,4,1,18,414,speech,DIONYZA,DIONYZA,"I'll leave you, my sweet lady, for a while:
+Pray, walk softly, do not heat your blood:
+What! I must have a care of you.",0.7339,0.29419
+pericles,Pericles,main,4,1,18,415,speech,MARINA,MARINA,"My thanks, sweet madam.",0.4404,0.27643
+pericles,Pericles,main,4,1,18,416,stage_direction,,,Exit DIONYZA,0.0,0.02022
+pericles,Pericles,main,4,1,18,417,speech,MARINA,MARINA,Is this wind westerly that blows?,0.0,-0.00767
+pericles,Pericles,main,4,1,18,418,speech,LEONINE,LEONINE,South-west.,0.0,0.00094
+pericles,Pericles,main,4,1,18,419,speech,MARINA,MARINA,"When I was born, the wind was north.",0.0,0.00451
+pericles,Pericles,main,4,1,18,420,speech,LEONINE,LEONINE,Was't so?,0.0,-0.03081
+pericles,Pericles,main,4,1,18,421,speech,MARINA,MARINA,"My father, as nurse said, did never fear,
+But cried 'Good seaman!' to the sailors, galling
+His kingly hands, haling ropes;
+And, clasping to the mast, endured a sea
+That almost burst the deck.",0.1742,0.30073
+pericles,Pericles,main,4,1,18,422,speech,LEONINE,LEONINE,When was this?,0.0,-0.08464
+pericles,Pericles,main,4,1,18,423,speech,MARINA,MARINA,"When I was born:
+Never was waves nor wind more violent;
+And from the ladder-tackle washes off
+A canvas-climber. 'Ha!' says one, 'wilt out?'
+And with a dropping industry they skip
+From stem to stern: the boatswain whistles, and
+The master calls, and trebles their confusion.",-0.8066,-0.87943
+pericles,Pericles,main,4,1,18,424,speech,LEONINE,LEONINE,"Come, say your prayers.",0.0,0.06566
+pericles,Pericles,main,4,1,18,425,speech,MARINA,MARINA,What mean you?,0.0,-0.02543
+pericles,Pericles,main,4,1,18,426,speech,LEONINE,LEONINE,"If you require a little space for prayer,
+I grant it: pray; but be not tedious,
+For the gods are quick of ear, and I am sworn
+To do my work with haste.",0.2425,0.08188
+pericles,Pericles,main,4,1,18,427,speech,MARINA,MARINA,Why will you kill me?,-0.6597,-0.04618
+pericles,Pericles,main,4,1,18,428,speech,LEONINE,LEONINE,To satisfy my lady.,0.4588,0.30936
+pericles,Pericles,main,4,1,18,429,speech,MARINA,MARINA,"Why would she have me kill'd?
+Now, as I can remember, by my troth,
+I never did her hurt in all my life:
+I never spake bad word, nor did ill turn
+To any living creature: believe me, la,
+I never kill'd a mouse, nor hurt a fly:
+I trod upon a worm against my will,
+But I wept for it. How have I offended,
+Wherein my death might yield her any profit,
+Or my life imply her any danger?",-0.9813,-0.89027
+pericles,Pericles,main,4,1,18,430,speech,LEONINE,LEONINE,"My commission
+Is not to reason of the deed, but do it.",0.0,-0.47645
+pericles,Pericles,main,4,1,18,431,speech,MARINA,MARINA,"You will not do't for all the world, I hope.
+You are well favour'd, and your looks foreshow
+You have a gentle heart. I saw you lately,
+When you caught hurt in parting two that fought:
+Good sooth, it show'd well in you: do so now:
+Your lady seeks my life; come you between,
+And save poor me, the weaker.",-0.7202,0.38334
+pericles,Pericles,main,4,1,18,432,speech,LEONINE,LEONINE,"I am sworn,
+And will dispatch.
+[He seizes her]",0.0,0.20227
+pericles,Pericles,main,4,1,18,433,stage_direction,,,Enter Pirates,0.0,0.02184
+pericles,Pericles,main,4,1,18,434,speech,FIRST PIRATE,FIRST PIRATE,"Hold, villain!",-0.3595,0.43398
+pericles,Pericles,main,4,1,18,435,stage_direction,,,LEONINE runs away,0.0,0.10353
+pericles,Pericles,main,4,1,18,436,speech,SECOND PIRATE,SECOND PIRATE,A prize! a prize!,0.0,-0.17145
+pericles,Pericles,main,4,1,18,437,speech,THIRD PIRATE,THIRD PIRATE,"Half-part, mates, half-part.
+Come, let's have her aboard suddenly.",0.0,0.08707
+pericles,Pericles,main,4,1,18,438,stage_direction,,,Exeunt Pirates with MARINA,-0.0516,-0.00072
+pericles,Pericles,main,4,1,18,439,stage_direction,,,Re-enter LEONINE,0.0,0.09762
+pericles,Pericles,main,4,1,18,440,speech,LEONINE,LEONINE,"These roguing thieves serve the great pirate Valdes;
+And they have seized Marina. Let her go:
+There's no hope she will return. I'll swear
+she's dead,
+And thrown into the sea. But I'll see further:
+Perhaps they will but please themselves upon her,
+Not carry her aboard. If she remain,
+Whom they have ravish'd must by me be slain.",-0.952,-0.58567
+pericles,Pericles,main,4,1,18,441,stage_direction,,,Exit,0.0,-0.00166
+pericles,Pericles,main,4,2,19,442,stage_direction,,,"Enter Pandar, Bawd, and BOULT",0.0,0.07071
+pericles,Pericles,main,4,2,19,443,speech,PANDAR,PANDAR,Boult!,0.0,0.65154
+pericles,Pericles,main,4,2,19,444,speech,BOULT,BOULT,Sir?,0.0,-0.04386
+pericles,Pericles,main,4,2,19,445,speech,PANDAR,PANDAR,"Search the market narrowly; Mytilene is full of
+gallants. We lost too much money this mart by being
+too wenchless.",-0.2023,-0.17252
+pericles,Pericles,main,4,2,19,446,speech,BAWD,BAWD,"We were never so much out of creatures. We have but
+poor three, and they can do no more than they can
+do; and they with continual action are even as good as
+rotten.",-0.34,-0.70448
+pericles,Pericles,main,4,2,19,447,speech,PANDAR,PANDAR,"Therefore let's have fresh ones, whate'er we pay for
+them. If there be not a conscience to be used in
+every trade, we shall never prosper.",-0.6334,-0.45946
+pericles,Pericles,main,4,2,19,448,speech,BAWD,BAWD,"Thou sayest true: 'tis not our bringing up of poor
+bastards,—as, I think, I have brought up some eleven—",-0.6124,0.36885
+pericles,Pericles,main,4,2,19,449,speech,BOULT,BOULT,"Ay, to eleven; and brought them down again. But
+shall I search the market?",0.2244,0.07154
+pericles,Pericles,main,4,2,19,450,speech,BAWD,BAWD,"What else, man? The stuff we have, a strong wind
+will blow it to pieces, they are so pitifully sodden.",-0.1412,-0.05113
+pericles,Pericles,main,4,2,19,451,speech,PANDAR,PANDAR,"Thou sayest true; they're too unwholesome, o'
+conscience. The poor Transylvanian is dead, that
+lay with the little baggage.",-0.5106,-0.84769
+pericles,Pericles,main,4,2,19,452,speech,BOULT,BOULT,"Ay, she quickly pooped him; she made him roast-meat
+for worms. But I'll go search the market.",0.2244,0.12347
+pericles,Pericles,main,4,2,19,453,stage_direction,,,Exit,0.0,-0.01395
+pericles,Pericles,main,4,2,19,454,speech,PANDAR,PANDAR,"Three or four thousand chequins were as pretty a
+proportion to live quietly, and so give over.",0.0,-0.01082
+pericles,Pericles,main,4,2,19,455,speech,BAWD,BAWD,"Why to give over, I pray you? is it a shame to get
+when we are old?",-0.5362,-0.09928
+pericles,Pericles,main,4,2,19,456,speech,PANDAR,PANDAR,"O, our credit comes not in like the commodity, nor
+the commodity wages not with the danger: therefore,
+if in our youths we could pick up some pretty
+estate, 'twere not amiss to keep our door hatched.
+Besides, the sore terms we stand upon with the gods
+will be strong with us for giving over.",-0.5886,-0.42799
+pericles,Pericles,main,4,2,19,457,speech,BAWD,BAWD,"Come, other sorts offend as well as we.",-0.6597,-0.41479
+pericles,Pericles,main,4,2,19,458,speech,PANDAR,PANDAR,"As well as we! ay, and better too; we offend worse.
+Neither is our profession any trade; it's no
+calling. But here comes Boult.",-0.9052,-0.75969
+pericles,Pericles,main,4,2,19,459,stage_direction,,,"Re-enter BOULT, with the Pirates and MARINA",0.0,0.02238
+pericles,Pericles,main,4,2,19,460,speech,BOULT,BOULT,"[To MARINA] Come your ways. My masters, you say
+she's a virgin?",0.0,0.70886
+pericles,Pericles,main,4,2,19,461,speech,FIRST PIRATE,FIRST PIRATE,"O, sir, we doubt it not.",0.2755,0.19815
+pericles,Pericles,main,4,2,19,462,speech,BOULT,BOULT,"Master, I have gone through for this piece, you see:
+if you like her, so; if not, I have lost my earnest.",0.7478,0.5071
+pericles,Pericles,main,4,2,19,463,speech,BAWD,BAWD,"Boult, has she any qualities?",0.1779,-0.01435
+pericles,Pericles,main,4,2,19,464,speech,BOULT,BOULT,"She has a good face, speaks well, and has excellent
+good clothes: there's no further necessity of
+qualities can make her be refused.",0.6697,0.46939
+pericles,Pericles,main,4,2,19,465,speech,BAWD,BAWD,"What's her price, Boult?",0.0,-0.03418
+pericles,Pericles,main,4,2,19,466,speech,BOULT,BOULT,I cannot be bated one doit of a thousand pieces.,0.0,-0.34979
+pericles,Pericles,main,4,2,19,467,speech,PANDAR,PANDAR,"Well, follow me, my masters, you shall have your
+money presently. Wife, take her in; instruct her
+what she has to do, that she may not be raw in her
+entertainment.",0.2732,-0.04011
+pericles,Pericles,main,4,2,19,468,stage_direction,,,Exeunt Pandar and Pirates,0.0,0.00771
+pericles,Pericles,main,4,2,19,469,speech,BAWD,BAWD,"Boult, take you the marks of her, the colour of her
+hair, complexion, height, age, with warrant of her
+virginity; and cry 'He that will give most shall
+have her first.' Such a maidenhead were no cheap
+thing, if men were as they have been. Get this done
+as I command you.",0.1027,0.50871
+pericles,Pericles,main,4,2,19,470,speech,BOULT,BOULT,Performance shall follow.,0.4939,-0.11472
+pericles,Pericles,main,4,2,19,471,stage_direction,,,Exit,0.0,-0.01395
+pericles,Pericles,main,4,2,19,472,speech,MARINA,MARINA,"Alack that Leonine was so slack, so slow!
+He should have struck, not spoke; or that these
+pirates,
+Not enough barbarous, had not o'erboard thrown me
+For to seek my mother!",-0.7256,-0.64542
+pericles,Pericles,main,4,2,19,473,speech,BAWD,BAWD,"Why lament you, pretty one?",0.0258,-0.03709
+pericles,Pericles,main,4,2,19,474,speech,MARINA,MARINA,That I am pretty.,0.4939,0.40644
+pericles,Pericles,main,4,2,19,475,speech,BAWD,BAWD,"Come, the gods have done their part in you.",0.5994,0.64718
+pericles,Pericles,main,4,2,19,476,speech,MARINA,MARINA,I accuse them not.,0.1326,-0.44025
+pericles,Pericles,main,4,2,19,477,speech,BAWD,BAWD,"You are light into my hands, where you are like to
+live.",0.0,0.27261
+pericles,Pericles,main,4,2,19,478,speech,MARINA,MARINA,"The more my fault
+To scape his hands where I was like to die.",-0.7717,-0.69679
+pericles,Pericles,main,4,2,19,479,speech,BAWD,BAWD,"Ay, and you shall live in pleasure.",0.7227,0.25664
+pericles,Pericles,main,4,2,19,480,speech,MARINA,MARINA,No.,0.0,-0.42519
+pericles,Pericles,main,4,2,19,481,speech,BAWD,BAWD,"Yes, indeed shall you, and taste gentlemen of all
+fashions: you shall fare well; you shall have the
+difference of all complexions. What! do you stop your
+ears?",0.6654,0.52057
+pericles,Pericles,main,4,2,19,482,speech,MARINA,MARINA,Are you a woman?,0.0,-0.04933
+pericles,Pericles,main,4,2,19,483,speech,BAWD,BAWD,"What would you have me be, an I be not a woman?",0.0,-0.18917
+pericles,Pericles,main,4,2,19,484,speech,MARINA,MARINA,"An honest woman, or not a woman.",0.4404,0.03719
+pericles,Pericles,main,4,2,19,485,speech,BAWD,BAWD,"Marry, whip thee, gosling: I think I shall have
+something to do with you. Come, you're a young
+foolish sapling, and must be bowed as I would have
+you.",-0.6369,0.44204
+pericles,Pericles,main,4,2,19,486,speech,MARINA,MARINA,The gods defend me!,0.4389,0.75621
+pericles,Pericles,main,4,2,19,487,speech,BAWD,BAWD,"If it please the gods to defend you by men, then men
+must comfort you, men must feed you, men must stir
+you up. Boult's returned.",0.7783,0.05621
+pericles,Pericles,main,4,2,19,488,stage_direction,,,Re-enter BOULT,0.0,0.05085
+pericles,Pericles,main,4,2,19,489,speech,BAWD,BAWD,"Now, sir, hast thou cried her through the market?",0.0,0.00059
+pericles,Pericles,main,4,2,19,490,speech,BOULT,BOULT,"I have cried her almost to the number of her hairs;
+I have drawn her picture with my voice.",0.0,0.3654
+pericles,Pericles,main,4,2,19,491,speech,BAWD,BAWD,"And I prithee tell me, how dost thou find the
+inclination of the people, especially of the younger
+sort?",0.3182,-0.01893
+pericles,Pericles,main,4,2,19,492,speech,BOULT,BOULT,"'Faith, they listened to me as they would have
+hearkened to their father's testament. There was a
+Spaniard's mouth so watered, that he went to bed to
+her very description.",0.2732,-0.50613
+pericles,Pericles,main,4,2,19,493,speech,BAWD,BAWD,We shall have him here to-morrow with his best ruff on.,0.7579,0.2921
+pericles,Pericles,main,4,2,19,494,speech,BOULT,BOULT,"To-night, to-night. But, mistress, do you know the
+French knight that cowers i' the hams?",0.0,-0.24722
+pericles,Pericles,main,4,2,19,495,speech,BAWD,BAWD,"Who, Monsieur Veroles?",0.0,-0.06033
+pericles,Pericles,main,4,2,19,496,speech,BOULT,BOULT,"Ay, he: he offered to cut a caper at the
+proclamation; but he made a groan at it, and swore
+he would see her to-morrow.",0.1531,-0.68352
+pericles,Pericles,main,4,2,19,497,speech,BAWD,BAWD,"Well, well; as for him, he brought his disease
+hither: here he does but repair it. I know he will
+come in our shadow, to scatter his crowns in the
+sun.",0.4939,0.48835
+pericles,Pericles,main,4,2,19,498,speech,BOULT,BOULT,"Well, if we had of every nation a traveller, we
+should lodge them with this sign.",0.6249,-0.27747
+pericles,Pericles,main,4,2,19,499,speech,BAWD,BAWD,"[To MARINA] Pray you, come hither awhile. You
+have fortunes coming upon you. Mark me: you must
+seem to do that fearfully which you commit
+willingly, despise profit where you have most gain.
+To weep that you live as ye do makes pity in your
+lovers: seldom but that pity begets you a good
+opinion, and that opinion a mere profit.",0.9096,0.54834
+pericles,Pericles,main,4,2,19,500,speech,MARINA,MARINA,I understand you not.,0.0,-0.43116
+pericles,Pericles,main,4,2,19,501,speech,BOULT,BOULT,"O, take her home, mistress, take her home: these
+blushes of hers must be quenched with some present
+practise.",-0.3869,-0.64563
+pericles,Pericles,main,4,2,19,502,speech,BAWD,BAWD,"Thou sayest true, i' faith, so they must; for your
+bride goes to that with shame which is her way to go
+with warrant.",-0.296,0.5199
+pericles,Pericles,main,4,2,19,503,speech,BOULT,BOULT,"'Faith, some do, and some do not. But, mistress, if
+I have bargained for the joint,—",0.1406,-0.42034
+pericles,Pericles,main,4,2,19,504,speech,BAWD,BAWD,Thou mayst cut a morsel off the spit.,0.0,-0.41072
+pericles,Pericles,main,4,2,19,505,speech,BOULT,BOULT,I may so.,0.0,0.00944
+pericles,Pericles,main,4,2,19,506,speech,BAWD,BAWD,"Who should deny it? Come, young one, I like the
+manner of your garments well.",0.6369,-0.49125
+pericles,Pericles,main,4,2,19,507,speech,BOULT,BOULT,"Ay, by my faith, they shall not be changed yet.",0.0,-0.49726
+pericles,Pericles,main,4,2,19,508,speech,BAWD,BAWD,"Boult, spend thou that in the town: report what a
+sojourner we have; you'll lose nothing by custom.
+When nature flamed this piece, she meant thee a good
+turn; therefore say what a paragon she is, and thou
+hast the harvest out of thine own report.",0.7749,0.26739
+pericles,Pericles,main,4,2,19,509,speech,BOULT,BOULT,"I warrant you, mistress, thunder shall not so awake
+the beds of eels as my giving out her beauty stir up
+the lewdly-inclined. I'll bring home some to-night.",0.6597,0.53454
+pericles,Pericles,main,4,2,19,510,speech,BAWD,BAWD,Come your ways; follow me.,0.0,0.06502
+pericles,Pericles,main,4,2,19,511,speech,MARINA,MARINA,"If fires be hot, knives sharp, or waters deep,
+Untied I still my virgin knot will keep.
+Diana, aid my purpose!",0.4738,0.76905
+pericles,Pericles,main,4,2,19,512,speech,BAWD,BAWD,"What have we to do with Diana? Pray you, will you go
+with us?",0.0,-0.01406
+pericles,Pericles,main,4,2,19,513,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,4,3,20,514,stage_direction,,,Enter CLEON and DIONYZA,0.0,0.09855
+pericles,Pericles,main,4,3,20,515,speech,DIONYZA,DIONYZA,"Why, are you foolish? Can it be undone?",-0.5106,-0.03118
+pericles,Pericles,main,4,3,20,516,speech,CLEON,CLEON,"O Dionyza, such a piece of slaughter
+The sun and moon ne'er look'd upon!",-0.7964,-0.70228
+pericles,Pericles,main,4,3,20,517,speech,DIONYZA,DIONYZA,"I think
+You'll turn a child again.",0.0,-0.40342
+pericles,Pericles,main,4,3,20,518,speech,CLEON,CLEON,"Were I chief lord of all this spacious world,
+I'ld give it to undo the deed. O lady,
+Much less in blood than virtue, yet a princess
+To equal any single crown o' the earth
+I' the justice of compare! O villain Leonine!
+Whom thou hast poison'd too:
+If thou hadst drunk to him, 't had been a kindness
+Becoming well thy fact: what canst thou say
+When noble Pericles shall demand his child?",-0.9357,0.77729
+pericles,Pericles,main,4,3,20,519,speech,DIONYZA,DIONYZA,"That she is dead. Nurses are not the fates,
+To foster it, nor ever to preserve.
+She died at night; I'll say so. Who can cross it?
+Unless you play the pious innocent,
+And for an honest attribute cry out
+'She died by foul play.'",-0.8772,-0.87748
+pericles,Pericles,main,4,3,20,520,speech,CLEON,CLEON,"O, go to. Well, well,
+Of all the faults beneath the heavens, the gods
+Do like this worst.",-0.6367,-0.1751
+pericles,Pericles,main,4,3,20,521,speech,DIONYZA,DIONYZA,"Be one of those that think
+The petty wrens of Tarsus will fly hence,
+And open this to Pericles. I do shame
+To think of what a noble strain you are,
+And of how coward a spirit.",-0.75,0.42293
+pericles,Pericles,main,4,3,20,522,speech,CLEON,CLEON,"To such proceeding
+Who ever but his approbation added,
+Though not his prime consent, he did not flow
+From honourable sources.",-0.2023,-0.79755
+pericles,Pericles,main,4,3,20,523,speech,DIONYZA,DIONYZA,"Be it so, then:
+Yet none does know, but you, how she came dead,
+Nor none can know, Leonine being gone.
+She did disdain my child, and stood between
+Her and her fortunes: none would look on her,
+But cast their gazes on Marina's face;
+Whilst ours was blurted at and held a malkin
+Not worth the time of day. It pierced me through;
+And though you call my course unnatural,
+You not your child well loving, yet I find
+It greets me as an enterprise of kindness
+Perform'd to your sole daughter.",-0.9786,-0.60506
+pericles,Pericles,main,4,3,20,524,speech,CLEON,CLEON,Heavens forgive it!,0.3382,0.7331
+pericles,Pericles,main,4,3,20,525,speech,DIONYZA,DIONYZA,"And as for Pericles,
+What should he say? We wept after her hearse,
+And yet we mourn: her monument
+Is almost finish'd, and her epitaphs
+In glittering golden characters express
+A general praise to her, and care in us
+At whose expense 'tis done.",-0.6124,0.58805
+pericles,Pericles,main,4,3,20,526,speech,CLEON,CLEON,"Thou art like the harpy,
+Which, to betray, dost, with thine angel's face,
+Seize with thine eagle's talons.",-0.2003,0.42295
+pericles,Pericles,main,4,3,20,527,speech,DIONYZA,DIONYZA,"You are like one that superstitiously
+Doth swear to the gods that winter kills the flies:
+But yet I know you'll do as I advise.",0.2144,0.34957
+pericles,Pericles,main,4,3,20,528,stage_direction,,,Exeunt,0.0,-0.18307
+pericles,Pericles,main,4,4,21,529,stage_direction,,,"Enter GOWER, before the monument of MARINA at Tarsus",0.0,0.02357
+pericles,Pericles,main,4,4,21,530,speech,GOWER,GOWER,"Thus time we waste, and longest leagues make short;
+Sail seas in cockles, have an wish but for't;
+Making, to take your imagination,
+From bourn to bourn, region to region.
+By you being pardon'd, we commit no crime
+To use one language in each several clime
+Where our scenes seem to live. I do beseech you
+To learn of me, who stand i' the gaps to teach you,
+The stages of our story. Pericles
+Is now again thwarting the wayward seas,
+Attended on by many a lord and knight.
+To see his daughter, all his life's delight.
+Old Escanes, whom Helicanus late
+Advanced in time to great and high estate,
+Is left to govern. Bear you it in mind,
+Old Helicanus goes along behind.
+Well-sailing ships and bounteous winds have brought
+This king to Tarsus,— think his pilot thought;
+So with his steerage shall your thoughts grow on,—
+To fetch his daughter home, who first is gone.
+Like motes and shadows see them move awhile;
+Your ears unto your eyes I'll reconcile.",0.8658,0.42293
+pericles,Pericles,main,4,4,21,531,stage_direction,,,"DUMB SHOW: Enter PERICLES, at one door, with all his train; CLEON and DIONYZA, at the other. CLEON shows PERICLES the tomb; whereat PERICLES makes lamentation, puts on sackcloth, and in a mighty passion departs. Then exeunt CLEON and DIONYZA",-0.8934,-0.00816
+pericles,Pericles,main,4,4,21,532,speech,GOWER,GOWER,"See how belief may suffer by foul show!
+This borrow'd passion stands for true old woe;
+And Pericles, in sorrow all devour'd,
+With sighs shot through, and biggest tears
+o'ershower'd,
+Leaves Tarsus and again embarks.
+He swears
+Never to wash his face, nor cut his hairs:
+He puts on sackcloth, and to sea. He bears
+A tempest, which his mortal vessel tears,
+And yet he rides it out. Now please you wit.
+The epitaph is for Marina writ By wicked Dionyza.
+[Reads the inscription on MARINA's monument]
+'The fairest, sweet'st, and best lies here,
+Who wither'd in her spring of year.
+She was of Tyrus the king's daughter,
+On whom foul death hath made this slaughter;
+Marina was she call'd; and at her birth,
+Thetis, being proud, swallow'd some part o' the earth:
+Therefore the earth, fearing to be o'erflow'd,
+Hath Thetis' birth-child on the heavens bestow'd:
+Wherefore she does, and swears she'll never stint,
+Make raging battery upon shores of flint.'
+No visor does become black villany
+So well as soft and tender flattery.
+Let Pericles believe his daughter's dead,
+And bear his courses to be ordered
+By Lady Fortune; while our scene must play
+His daughter's woe and heavy well-a-dayIn her unholy
+service.
+Patience, then,
+And think you now are all in Mytilene.",-0.9917,-0.80652
+pericles,Pericles,main,4,4,21,533,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,4,5,22,534,stage_direction,,,"Enter, from the brothel, two Gentlemen",0.0,0.01073
+pericles,Pericles,main,4,5,22,535,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,Did you ever hear the like?,0.3612,-0.0145
+pericles,Pericles,main,4,5,22,536,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"No, nor never shall do in such a place as this, she
+being once gone.",0.3612,-0.66681
+pericles,Pericles,main,4,5,22,537,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,"But to have divinity preached there! did you ever
+dream of such a thing?",0.4501,-0.25146
+pericles,Pericles,main,4,5,22,538,speech,SECOND GENTLEMAN,SECOND GENTLEMAN,"No, no. Come, I am for no more bawdy-houses:
+shall's go hear the vestals sing?",-0.3089,-0.47101
+pericles,Pericles,main,4,5,22,539,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,"I'll do any thing now that is virtuous; but I
+am out of the road of rutting for ever.",0.5267,0.20061
+pericles,Pericles,main,4,5,22,540,stage_direction,,,Exeunt,0.0,-0.13698
+pericles,Pericles,main,4,6,23,541,stage_direction,,,"Enter Pandar, Bawd, and BOULT",0.0,0.02992
+pericles,Pericles,main,4,6,23,542,speech,PANDAR,PANDAR,"Well, I had rather than twice the worth of her she
+had ne'er come here.",0.2434,-0.67341
+pericles,Pericles,main,4,6,23,543,speech,BAWD,BAWD,"Fie, fie upon her! she's able to freeze the god
+Priapus, and undo a whole generation. We must
+either get her ravished, or be rid of her. When she
+should do for clients her fitment, and do me the
+kindness of our profession, she has me her quirks,
+her reasons, her master reasons, her prayers, her
+knees; that she would make a puritan of the devil,
+if he should cheapen a kiss of her.",0.1759,-0.74508
+pericles,Pericles,main,4,6,23,544,speech,BOULT,BOULT,"'Faith, I must ravish her, or she'll disfurnish us
+of all our cavaliers, and make our swearers priests.",-0.6705,-0.44662
+pericles,Pericles,main,4,6,23,545,speech,PANDAR,PANDAR,"Now, the pox upon her green-sickness for me!",-0.4574,0.77668
+pericles,Pericles,main,4,6,23,546,speech,BAWD,BAWD,"'Faith, there's no way to be rid on't but by the
+way to the pox. Here comes the Lord Lysimachus
+disguised.",-0.2732,-0.51208
+pericles,Pericles,main,4,6,23,547,speech,BOULT,BOULT,"We should have both lord and lown, if the peevish
+baggage would but give way to customers.",0.5859,-0.41923
+pericles,Pericles,main,4,6,23,548,stage_direction,,,Enter LYSIMACHUS,0.0,0.01824
+pericles,Pericles,main,4,6,23,549,speech,LYSIMACHUS,LYSIMACHUS,How now! How a dozen of virginities?,0.0,0.02015
+pericles,Pericles,main,4,6,23,550,speech,BAWD,BAWD,"Now, the gods to-bless your honour!",0.5994,0.73603
+pericles,Pericles,main,4,6,23,551,speech,BOULT,BOULT,I am glad to see your honour in good health.,0.6908,0.42696
+pericles,Pericles,main,4,6,23,552,speech,LYSIMACHUS,LYSIMACHUS,"You may so; 'tis the better for you that your
+resorters stand upon sound legs. How now!
+wholesome iniquity have you that a man may deal
+withal, and defy the surgeon?",0.3164,0.07128
+pericles,Pericles,main,4,6,23,553,speech,BAWD,BAWD,"We have here one, sir, if she would—but there never
+came her like in Mytilene.",-0.395,-0.67513
+pericles,Pericles,main,4,6,23,554,speech,LYSIMACHUS,LYSIMACHUS,"If she'ld do the deed of darkness, thou wouldst say.",-0.4404,-0.30213
+pericles,Pericles,main,4,6,23,555,speech,BAWD,BAWD,Your honour knows what 'tis to say well enough.,0.0,0.42146
+pericles,Pericles,main,4,6,23,556,speech,LYSIMACHUS,LYSIMACHUS,"Well, call forth, call forth.",0.3382,0.39853
+pericles,Pericles,main,4,6,23,557,speech,BOULT,BOULT,"For flesh and blood, sir, white and red, you shall
+see a rose; and she were a rose indeed, if she had but—",0.4404,-0.29147
+pericles,Pericles,main,4,6,23,558,speech,LYSIMACHUS,LYSIMACHUS,"What, prithee?",0.0,-0.00771
+pericles,Pericles,main,4,6,23,559,speech,BOULT,BOULT,"O, sir, I can be modest.",0.0,0.27136
+pericles,Pericles,main,4,6,23,560,speech,LYSIMACHUS,LYSIMACHUS,"That dignifies the renown of a bawd, no less than it
+gives a good report to a number to be chaste.",0.4404,0.06845
+pericles,Pericles,main,4,6,23,561,stage_direction,,,Exit BOULT,0.0,-0.20868
+pericles,Pericles,main,4,6,23,562,speech,BAWD,BAWD,"Here comes that which grows to the stalk; never
+plucked yet, I can assure you.",0.5719,0.47534
+pericles,Pericles,main,4,6,23,563,stage_direction,,,Re-enter BOULT with MARINA,0.0,0.0238
+pericles,Pericles,main,4,6,23,564,speech,BAWD,BAWD,Is she not a fair creature?,-0.3875,-0.12065
+pericles,Pericles,main,4,6,23,565,speech,LYSIMACHUS,LYSIMACHUS,"'Faith, she would serve after a long voyage at sea.
+Well, there's for you: leave us.",0.296,0.45898
+pericles,Pericles,main,4,6,23,566,speech,BAWD,BAWD,"I beseech your honour, give me leave: a word, and
+I'll have done presently.",0.2732,0.13989
+pericles,Pericles,main,4,6,23,567,speech,LYSIMACHUS,LYSIMACHUS,"I beseech you, do.",0.3182,0.10499
+pericles,Pericles,main,4,6,23,568,speech,BAWD,BAWD,"[To MARINA] First, I would have you note, this is
+an honourable man.",0.7003,0.58931
+pericles,Pericles,main,4,6,23,569,speech,MARINA,MARINA,"I desire to find him so, that I may worthily note him.",0.7184,0.25462
+pericles,Pericles,main,4,6,23,570,speech,BAWD,BAWD,"Next, he's the governor of this country, and a man
+whom I am bound to.",0.0,0.07533
+pericles,Pericles,main,4,6,23,571,speech,MARINA,MARINA,"If he govern the country, you are bound to him
+indeed; but how honourable he is in that, I know not.",0.6369,-0.22554
+pericles,Pericles,main,4,6,23,572,speech,BAWD,BAWD,"Pray you, without any more virginal fencing, will
+you use him kindly? He will line your apron with gold.",-0.2023,-0.10855
+pericles,Pericles,main,4,6,23,573,speech,MARINA,MARINA,"What he will do graciously, I will thankfully receive.",0.6908,-0.21944
+pericles,Pericles,main,4,6,23,574,speech,LYSIMACHUS,LYSIMACHUS,Ha' you done?,0.0,-0.00147
+pericles,Pericles,main,4,6,23,575,speech,BAWD,BAWD,"My lord, she's not paced yet: you must take some
+pains to work her to your manage. Come, we will
+leave his honour and her together. Go thy ways.",0.2392,0.21325
+pericles,Pericles,main,4,6,23,576,stage_direction,,,"Exeunt Bawd, Pandar, and BOULT",-0.0516,-0.00173
+pericles,Pericles,main,4,6,23,577,speech,LYSIMACHUS,LYSIMACHUS,"Now, pretty one, how long have you been at this trade?",0.4939,0.02996
+pericles,Pericles,main,4,6,23,578,speech,MARINA,MARINA,"What trade, sir?",0.0,-0.03462
+pericles,Pericles,main,4,6,23,579,speech,LYSIMACHUS,LYSIMACHUS,"Why, I cannot name't but I shall offend.",-0.296,-0.37208
+pericles,Pericles,main,4,6,23,580,speech,MARINA,MARINA,"I cannot be offended with my trade. Please you to name
+it.",0.466,-0.05798
+pericles,Pericles,main,4,6,23,581,speech,LYSIMACHUS,LYSIMACHUS,How long have you been of this profession?,0.0,-0.05032
+pericles,Pericles,main,4,6,23,582,speech,MARINA,MARINA,E'er since I can remember.,0.0,0.39474
+pericles,Pericles,main,4,6,23,583,speech,LYSIMACHUS,LYSIMACHUS,"Did you go to 't so young? Were you a gamester at
+five or at seven?",0.0,-0.02574
+pericles,Pericles,main,4,6,23,584,speech,MARINA,MARINA,"Earlier too, sir, if now I be one.",0.0,-0.39867
+pericles,Pericles,main,4,6,23,585,speech,LYSIMACHUS,LYSIMACHUS,"Why, the house you dwell in proclaims you to be a
+creature of sale.",0.0,-0.03325
+pericles,Pericles,main,4,6,23,586,speech,MARINA,MARINA,"Do you know this house to be a place of such resort,
+and will come into 't? I hear say you are of
+honourable parts, and are the governor of this place.",0.5423,0.31883
+pericles,Pericles,main,4,6,23,587,speech,LYSIMACHUS,LYSIMACHUS,"Why, hath your principal made known unto you who I am?",0.0,-0.08509
+pericles,Pericles,main,4,6,23,588,speech,MARINA,MARINA,Who is my principal?,0.0,-0.02367
+pericles,Pericles,main,4,6,23,589,speech,LYSIMACHUS,LYSIMACHUS,"Why, your herb-woman; she that sets seeds and roots
+of shame and iniquity. O, you have heard something
+of my power, and so stand aloof for more serious
+wooing. But I protest to thee, pretty one, my
+authority shall not see thee, or else look friendly
+upon thee. Come, bring me to some private place:
+come, come.",0.7011,0.61041
+pericles,Pericles,main,4,6,23,590,speech,MARINA,MARINA,"If you were born to honour, show it now;
+If put upon you, make the judgment good
+That thought you worthy of it.",0.872,0.00867
+pericles,Pericles,main,4,6,23,591,speech,LYSIMACHUS,LYSIMACHUS,How's this? how's this? Some more; be sage.,0.5004,-0.19212
+pericles,Pericles,main,4,6,23,592,speech,MARINA,MARINA,"For me,
+That am a maid, though most ungentle fortune
+Have placed me in this sty, where, since I came,
+Diseases have been sold dearer than physic,
+O, that the gods
+Would set me free from this unhallow'd place,
+Though they did change me to the meanest bird
+That flies i' the purer air!",-0.69,0.45889
+pericles,Pericles,main,4,6,23,593,speech,LYSIMACHUS,LYSIMACHUS,"I did not think
+Thou couldst have spoke so well; ne'er dream'd thou
+couldst.
+Had I brought hither a corrupted mind,
+Thy speech had alter'd it. Hold, here's gold for thee:
+Persever in that clear way thou goest,
+And the gods strengthen thee!",0.7866,0.85986
+pericles,Pericles,main,4,6,23,594,speech,MARINA,MARINA,The good gods preserve you!,0.4389,0.73903
+pericles,Pericles,main,4,6,23,595,speech,LYSIMACHUS,LYSIMACHUS,"For me, be you thoughten
+That I came with no ill intent; for to me
+The very doors and windows savour vilely.
+Fare thee well. Thou art a piece of virtue, and
+I doubt not but thy training hath been noble.
+Hold, here's more gold for thee.
+A curse upon him, die he like a thief,
+That robs thee of thy goodness! If thou dost
+Hear from me, it shall be for thy good.",0.1159,-0.4106
+pericles,Pericles,main,4,6,23,596,stage_direction,,,Re-enter BOULT,0.0,0.05085
+pericles,Pericles,main,4,6,23,597,speech,BOULT,BOULT,"I beseech your honour, one piece for me.",0.3182,0.03383
+pericles,Pericles,main,4,6,23,598,speech,LYSIMACHUS,LYSIMACHUS,"Avaunt, thou damned door-keeper!
+Your house, but for this virgin that doth prop it,
+Would sink and overwhelm you. Away!",-0.7701,-0.61246
+pericles,Pericles,main,4,6,23,599,stage_direction,,,Exit,0.0,-0.06946
+pericles,Pericles,main,4,6,23,600,speech,BOULT,BOULT,"How's this? We must take another course with you.
+If your peevish chastity, which is not worth a
+breakfast in the cheapest country under the cope,
+shall undo a whole household, let me be gelded like
+a spaniel. Come your ways.",0.2514,-0.6344
+pericles,Pericles,main,4,6,23,601,speech,MARINA,MARINA,Whither would you have me?,0.0,-0.00491
+pericles,Pericles,main,4,6,23,602,speech,BOULT,BOULT,"I must have your maidenhead taken off, or the common
+hangman shall execute it. Come your ways. We'll
+have no more gentlemen driven away. Come your ways, I
+say.",-0.6996,0.46502
+pericles,Pericles,main,4,6,23,603,stage_direction,,,Re-enter Bawd,0.0,0.03746
+pericles,Pericles,main,4,6,23,604,speech,BAWD,BAWD,How now! what's the matter?,0.0,-0.07884
+pericles,Pericles,main,4,6,23,605,speech,BOULT,BOULT,"Worse and worse, mistress; she has here spoken holy
+words to the Lord Lysimachus.",-0.7351,-0.67029
+pericles,Pericles,main,4,6,23,606,speech,BAWD,BAWD,O abominable!,0.0,0.6581
+pericles,Pericles,main,4,6,23,607,speech,BOULT,BOULT,"She makes our profession as it were to stink afore
+the face of the gods.",-0.25,-0.53754
+pericles,Pericles,main,4,6,23,608,speech,BAWD,BAWD,"Marry, hang her up for ever!",0.5093,0.60323
+pericles,Pericles,main,4,6,23,609,speech,BOULT,BOULT,"The nobleman would have dealt with her like a
+nobleman, and she sent him away as cold as a
+snowball; saying his prayers too.",0.0,-0.54355
+pericles,Pericles,main,4,6,23,610,speech,BAWD,BAWD,"Boult, take her away; use her at thy pleasure:
+crack the glass of her virginity, and make the rest
+malleable.",0.4215,0.41814
+pericles,Pericles,main,4,6,23,611,speech,BOULT,BOULT,"An if she were a thornier piece of ground than she
+is, she shall be ploughed.",-0.7506,-0.49965
+pericles,Pericles,main,4,6,23,612,speech,MARINA,MARINA,"Hark, hark, you gods!",0.4574,0.68855
+pericles,Pericles,main,4,6,23,613,speech,BAWD,BAWD,"She conjures: away with her! Would she had never
+come within my doors! Marry, hang you! She's born
+to undo us. Will you not go the way of women-kind?
+Marry, come up, my dish of chastity with rosemary and
+bays!",-0.5264,-0.19373
+pericles,Pericles,main,4,6,23,614,stage_direction,,,Exit,0.0,0.00534
+pericles,Pericles,main,4,6,23,615,speech,BOULT,BOULT,"Come, mistress; come your ways with me.",0.0,-0.02286
+pericles,Pericles,main,4,6,23,616,speech,MARINA,MARINA,Whither wilt thou have me?,0.0,-0.01269
+pericles,Pericles,main,4,6,23,617,speech,BOULT,BOULT,To take from you the jewel you hold so dear.,0.5709,0.55576
+pericles,Pericles,main,4,6,23,618,speech,MARINA,MARINA,"Prithee, tell me one thing first.",0.3182,0.0489
+pericles,Pericles,main,4,6,23,619,speech,BOULT,BOULT,"Come now, your one thing.",0.0,-0.048
+pericles,Pericles,main,4,6,23,620,speech,MARINA,MARINA,What canst thou wish thine enemy to be?,-0.6249,-0.53404
+pericles,Pericles,main,4,6,23,621,speech,BOULT,BOULT,"Why, I could wish him to be my master, or rather, my
+mistress.",0.0,-0.26332
+pericles,Pericles,main,4,6,23,622,speech,MARINA,MARINA,"Neither of these are so bad as thou art,
+Since they do better thee in their command.
+Thou hold'st a place, for which the pained'st fiend
+Of hell would not in reputation change:
+Thou art the damned doorkeeper to every
+Coistrel that comes inquiring for his Tib;
+To the choleric fisting of every rogue
+Thy ear is liable; thy food is such
+As hath been belch'd on by infected lungs.",-0.9738,-0.87732
+pericles,Pericles,main,4,6,23,623,speech,BOULT,BOULT,"What would you have me do? go to the wars, would
+you? where a man may serve seven years for the loss
+of a leg, and have not money enough in the end to
+buy him a wooden one?",-0.8418,-0.3094
+pericles,Pericles,main,4,6,23,624,speech,MARINA,MARINA,"Do any thing but this thou doest. Empty
+Old receptacles, or common shores, of filth;
+Serve by indenture to the common hangman:
+Any of these ways are yet better than this;
+For what thou professest, a baboon, could he speak,
+Would own a name too dear. O, that the gods
+Would safely deliver me from this place!
+Here, here's gold for thee.
+If that thy master would gain by thee,
+Proclaim that I can sing, weave, sew, and dance,
+With other virtues, which I'll keep from boast:
+And I will undertake all these to teach.
+I doubt not but this populous city will
+Yield many scholars.",0.9442,-0.65386
+pericles,Pericles,main,4,6,23,625,speech,BOULT,BOULT,But can you teach all this you speak of?,0.0,-0.00753
+pericles,Pericles,main,4,6,23,626,speech,MARINA,MARINA,"Prove that I cannot, take me home again,
+And prostitute me to the basest groom
+That doth frequent your house.",-0.3818,-0.07782
+pericles,Pericles,main,4,6,23,627,speech,BOULT,BOULT,"Well, I will see what I can do for thee: if I can
+place thee, I will.",0.5859,0.35356
+pericles,Pericles,main,4,6,23,628,speech,MARINA,MARINA,But amongst honest women.,0.5574,-0.32363
+pericles,Pericles,main,4,6,23,629,speech,BOULT,BOULT,"'Faith, my acquaintance lies little amongst them.
+But since my master and mistress have bought you,
+there's no going but by their consent: therefore I
+will make them acquainted with your purpose, and I
+doubt not but I shall find them tractable enough.
+Come, I'll do for thee what I can; come your ways.",0.3612,-0.56411
+pericles,Pericles,main,4,6,23,630,stage_direction,,,Exeunt,0.0,-0.18307
+pericles,Pericles,main,5,,24,631,stage_direction,,,Enter GOWER,0.0,0.02879
+pericles,Pericles,main,5,,24,632,speech,GOWER,GOWER,"Marina thus the brothel 'scapes, and chances
+Into an honest house, our story says.
+She sings like one immortal, and she dances
+As goddess-like to her admired lays;
+Deep clerks she dumbs; and with her needle composes
+Nature's own shape, of bud, bird, branch, or berry,
+That even her art sisters the natural roses;
+Her inkle, silk, twin with the rubied cherry:
+That pupils lacks she none of noble race,
+Who pour their bounty on her; and her gain
+She gives the cursed bawd. Here we her place;
+And to her father turn our thoughts again,
+Where we left him, on the sea. We there him lost;
+Whence, driven before the winds, he is arrived
+Here where his daughter dwells; and on this coast
+Suppose him now at anchor. The city strived
+God Neptune's annual feast to keep: from whence
+Lysimachus our Tyrian ship espies,
+His banners sable, trimm'd with rich expense;
+And to him in his barge with fervor hies.
+In your supposing once more put your sight
+Of heavy Pericles; think this his bark:
+Where what is done in action, more, if might,
+Shall be discover'd; please you, sit and hark.",0.9397,0.45768
+pericles,Pericles,main,5,,24,633,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,5,1,25,634,stage_direction,,,"Enter two Sailors, one belonging to the Tyrian vessel, the other to the barge; to them HELICANUS",0.0,0.05174
+pericles,Pericles,main,5,1,25,635,speech,TYRIAN SAILOR,TYRIAN SAILOR,"[To the Sailor of Mytilene] Where is lord Helicanus?
+he can resolve you.
+O, here he is.
+Sir, there's a barge put off from Mytilene,
+And in it is Lysimachus the governor,
+Who craves to come aboard. What is your will?",0.0,0.00839
+pericles,Pericles,main,5,1,25,636,speech,HELICANUS,HELICANUS,That he have his. Call up some gentlemen.,0.0258,0.40943
+pericles,Pericles,main,5,1,25,637,speech,TYRIAN SAILOR,TYRIAN SAILOR,"Ho, gentlemen! my lord calls.",0.0,0.49768
+pericles,Pericles,main,5,1,25,638,stage_direction,,,Enter two or three Gentlemen,0.0,0.00553
+pericles,Pericles,main,5,1,25,639,speech,FIRST GENTLEMAN,FIRST GENTLEMAN,Doth your lordship call?,0.0,-0.11182
+pericles,Pericles,main,5,1,25,640,speech,HELICANUS,HELICANUS,"Gentlemen, there's some of worth would come aboard;
+I pray ye, greet them fairly.",0.8591,0.42617
+pericles,Pericles,main,5,1,25,641,stage_direction,,,"The Gentlemen and the two Sailors descend, and go on board the barge",0.0,-0.02077
+pericles,Pericles,main,5,1,25,642,stage_direction,,,"Enter, from thence, LYSIMACHUS and Lords; with the Gentlemen and the two Sailors",0.0,0.15731
+pericles,Pericles,main,5,1,25,643,speech,TYRIAN SAILOR,TYRIAN SAILOR,"Sir,
+This is the man that can, in aught you would,
+Resolve you.",0.0,0.32946
+pericles,Pericles,main,5,1,25,644,speech,LYSIMACHUS,LYSIMACHUS,"Hail, reverend sir! the gods preserve you!",0.7339,0.74386
+pericles,Pericles,main,5,1,25,645,speech,HELICANUS,HELICANUS,"And you, sir, to outlive the age I am,
+And die as I would do.",-0.5994,0.37831
+pericles,Pericles,main,5,1,25,646,speech,LYSIMACHUS,LYSIMACHUS,"You wish me well.
+Being on shore, honouring of Neptune's triumphs,
+Seeing this goodly vessel ride before us,
+I made to it, to know of whence you are.",0.8316,0.49654
+pericles,Pericles,main,5,1,25,647,speech,HELICANUS,HELICANUS,"First, what is your place?",0.0,-0.0326
+pericles,Pericles,main,5,1,25,648,speech,LYSIMACHUS,LYSIMACHUS,I am the governor of this place you lie before.,0.0,0.08682
+pericles,Pericles,main,5,1,25,649,speech,HELICANUS,HELICANUS,"Sir,
+Our vessel is of Tyre, in it the king;
+A man who for this three months hath not spoken
+To any one, nor taken sustenance
+But to prorogue his grief.",-0.6705,-0.56296
+pericles,Pericles,main,5,1,25,650,speech,LYSIMACHUS,LYSIMACHUS,Upon what ground is his distemperature?,0.0,-0.06767
+pericles,Pericles,main,5,1,25,651,speech,HELICANUS,HELICANUS,"'Twould be too tedious to repeat;
+But the main grief springs from the loss
+Of a beloved daughter and a wife.",0.3612,-0.47835
+pericles,Pericles,main,5,1,25,652,speech,LYSIMACHUS,LYSIMACHUS,May we not see him?,0.0,-0.00288
+pericles,Pericles,main,5,1,25,653,speech,HELICANUS,HELICANUS,"You may;
+But bootless is your sight: he will not speak To any.",-0.438,-0.7002
+pericles,Pericles,main,5,1,25,654,speech,LYSIMACHUS,LYSIMACHUS,Yet let me obtain my wish.,0.0,0.04248
+pericles,Pericles,main,5,1,25,655,speech,HELICANUS,HELICANUS,Behold him.,0.0,0.03076
+pericles,Pericles,main,5,1,25,656,speech,HELICANUS,HELICANUS,"This was a goodly person,
+Till the disaster that, one mortal night,
+Drove him to this.",-0.6597,0.07875
+pericles,Pericles,main,5,1,25,657,speech,LYSIMACHUS,LYSIMACHUS,"Sir king, all hail! the gods preserve you!
+Hail, royal sir!",0.8309,0.7569
+pericles,Pericles,main,5,1,25,658,speech,HELICANUS,HELICANUS,It is in vain; he will not speak to you.,-0.296,-0.74353
+pericles,Pericles,main,5,1,25,659,speech,FIRST LORD,FIRST LORD,"Sir,
+We have a maid in Mytilene, I durst wager,
+Would win some words of him.",0.0,0.19755
+pericles,Pericles,main,5,1,25,660,speech,LYSIMACHUS,LYSIMACHUS,"'Tis well bethought.
+She questionless with her sweet harmony
+And other chosen attractions, would allure,
+And make a battery through his deafen'd parts,
+Which now are midway stopp'd:
+She is all happy as the fairest of all,
+And, with her fellow maids is now upon
+The leafy shelter that abuts against
+The island's side.",0.9225,0.34095
+pericles,Pericles,main,5,1,25,661,stage_direction,,,"Whispers a Lord, who goes off in the barge of LYSIMACHUS",0.0,0.0861
+pericles,Pericles,main,5,1,25,662,speech,HELICANUS,HELICANUS,"Sure, all's effectless; yet nothing we'll omit
+That bears recovery's name. But, since your kindness
+We have stretch'd thus far, let us beseech you
+That for our gold we may provision have,
+Wherein we are not destitute for want,
+But weary for the staleness.",0.8462,-0.64573
+pericles,Pericles,main,5,1,25,663,speech,LYSIMACHUS,LYSIMACHUS,"O, sir, a courtesy
+Which if we should deny, the most just gods
+For every graff would send a caterpillar,
+And so afflict our province. Yet once more
+Let me entreat to know at large the cause
+Of your king's sorrow.",-0.8013,-0.80762
+pericles,Pericles,main,5,1,25,664,speech,HELICANUS,HELICANUS,"Sit, sir, I will recount it to you:
+But, see, I am prevented.",-0.4215,-0.12477
+pericles,Pericles,main,5,1,25,665,stage_direction,,,"Re-enter, from the barge, Lord, with MARINA",0.0,0.36977
+pericles,Pericles,main,5,1,25,666,speech,LYSIMACHUS,LYSIMACHUS,"O, here is
+The lady that I sent for. Welcome, fair one!
+Is't not a goodly presence?",0.3744,0.81601
+pericles,Pericles,main,5,1,25,667,speech,HELICANUS,HELICANUS,She's a gallant lady.,0.4588,0.13058
+pericles,Pericles,main,5,1,25,668,speech,LYSIMACHUS,LYSIMACHUS,"She's such a one, that, were I well assured
+Came of a gentle kind and noble stock,
+I'ld wish no better choice, and think me rarely wed.
+Fair one, all goodness that consists in bounty
+Expect even here, where is a kingly patient:
+If that thy prosperous and artificial feat
+Can draw him but to answer thee in aught,
+Thy sacred physic shall receive such pay
+As thy desires can wish.",0.9712,0.78575
+pericles,Pericles,main,5,1,25,669,speech,MARINA,MARINA,"Sir, I will use
+My utmost skill in his recovery, provided
+That none but I and my companion maid
+Be suffer'd to come near him.",0.0644,0.48141
+pericles,Pericles,main,5,1,25,670,speech,LYSIMACHUS,LYSIMACHUS,"Come, let us leave her;
+And the gods make her prosperous!",0.4199,0.57111
+pericles,Pericles,main,5,1,25,671,stage_direction,,,MARINA sings,0.0,-0.37456
+pericles,Pericles,main,5,1,25,672,speech,LYSIMACHUS,LYSIMACHUS,Mark'd he your music?,0.0,-0.00909
+pericles,Pericles,main,5,1,25,673,speech,MARINA,MARINA,"No, nor look'd on us.",0.0,-0.49169
+pericles,Pericles,main,5,1,25,674,speech,LYSIMACHUS,LYSIMACHUS,"See, she will speak to him.",0.0,0.21982
+pericles,Pericles,main,5,1,25,675,speech,MARINA,MARINA,"Hail, sir! my lord, lend ear.",0.0,0.80165
+pericles,Pericles,main,5,1,25,676,speech,PERICLES,PERICLES,"Hum, ha!",0.0,0.74098
+pericles,Pericles,main,5,1,25,677,speech,MARINA,MARINA,"I am a maid,
+My lord, that ne'er before invited eyes,
+But have been gazed on like a comet: she speaks,
+My lord, that, may be, hath endured a grief
+Might equal yours, if both were justly weigh'd.
+Though wayward fortune did malign my state,
+My derivation was from ancestors
+Who stood equivalent with mighty kings:
+But time hath rooted out my parentage,
+And to the world and awkward casualties
+Bound me in servitude.
+[Aside]
+I will desist;
+But there is something glows upon my cheek,
+And whispers in mine ear, 'Go not till he speak.'",-0.3054,-0.22797
+pericles,Pericles,main,5,1,25,678,speech,PERICLES,PERICLES,"My fortunes—parentage—good parentage—
+To equal mine!—was it not thus? what say you?",0.8423,0.72692
+pericles,Pericles,main,5,1,25,679,speech,MARINA,MARINA,"I said, my lord, if you did know my parentage,
+You would not do me violence.",0.4168,-0.35823
+pericles,Pericles,main,5,1,25,680,speech,PERICLES,PERICLES,"I do think so. Pray you, turn your eyes upon me.
+You are like something that—What country-woman?
+Here of these shores?",0.3939,0.09024
+pericles,Pericles,main,5,1,25,681,speech,MARINA,MARINA,"No, nor of any shores:
+Yet I was mortally brought forth, and am
+No other than I appear.",0.0,-0.4881
+pericles,Pericles,main,5,1,25,682,speech,PERICLES,PERICLES,"I am great with woe, and shall deliver weeping.
+My dearest wife was like this maid, and such a one
+My daughter might have been: my queen's square brows;
+Her stature to an inch; as wand-like straight;
+As silver-voiced; her eyes as jewel-like
+And cased as richly; in pace another Juno;
+Who starves the ears she feeds, and makes them hungry,
+The more she gives them speech. Where do you live?",0.9424,0.81653
+pericles,Pericles,main,5,1,25,683,speech,MARINA,MARINA,"Where I am but a stranger: from the deck
+You may discern the place.",0.0,0.17328
+pericles,Pericles,main,5,1,25,684,speech,PERICLES,PERICLES,"Where were you bred?
+And how achieved you these endowments, which
+You make more rich to owe?",0.0,-0.00347
+pericles,Pericles,main,5,1,25,685,speech,MARINA,MARINA,"If I should tell my history, it would seem
+Like lies disdain'd in the reporting.",-0.5267,-0.22095
+pericles,Pericles,main,5,1,25,686,speech,PERICLES,PERICLES,"Prithee, speak:
+Falseness cannot come from thee; for thou look'st
+Modest as Justice, and thou seem'st a palace
+For the crown'd Truth to dwell in: I will
+believe thee,
+And make my senses credit thy relation
+To points that seem impossible; for thou look'st
+Like one I loved indeed. What were thy friends?
+Didst thou not say, when I did push thee back—
+Which was when I perceived thee— that thou camest
+From good descending?",0.9681,0.54691
+pericles,Pericles,main,5,1,25,687,speech,MARINA,MARINA,So indeed I did.,0.4019,0.39014
+pericles,Pericles,main,5,1,25,688,speech,PERICLES,PERICLES,"Report thy parentage. I think thou said'st
+Thou hadst been toss'd from wrong to injury,
+And that thou thought'st thy griefs might equal mine,
+If both were open'd.",-0.8591,-0.55028
+pericles,Pericles,main,5,1,25,689,speech,MARINA,MARINA,"Some such thing
+I said, and said no more but what my thoughts
+Did warrant me was likely.",0.6652,-0.56664
+pericles,Pericles,main,5,1,25,690,speech,PERICLES,PERICLES,"Tell thy story;
+If thine consider'd prove the thousandth part
+Of my endurance, thou art a man, and I
+Have suffer'd like a girl: yet thou dost look
+Like Patience gazing on kings' graves, and smiling
+Extremity out of act. What were thy friends?
+How lost thou them? Thy name, my most kind virgin?
+Recount, I do beseech thee: come, sit by me.",0.2575,-0.23385
+pericles,Pericles,main,5,1,25,691,speech,MARINA,MARINA,My name is Marina.,0.0,0.10229
+pericles,Pericles,main,5,1,25,692,speech,PERICLES,PERICLES,"O, I am mock'd,
+And thou by some incensed god sent hither
+To make the world to laugh at me.",0.5574,-0.71856
+pericles,Pericles,main,5,1,25,693,speech,MARINA,MARINA,"Patience, good sir,
+Or here I'll cease.",0.0258,0.10897
+pericles,Pericles,main,5,1,25,694,speech,PERICLES,PERICLES,"Nay, I'll be patient.
+Thou little know'st how thou dost startle me,
+To call thyself Marina.",-0.4404,0.11984
+pericles,Pericles,main,5,1,25,695,speech,MARINA,MARINA,"The name
+Was given me by one that had some power,
+My father, and a king.",0.4215,0.42686
+pericles,Pericles,main,5,1,25,696,speech,PERICLES,PERICLES,"How! a king's daughter?
+And call'd Marina?",0.0,-0.07634
+pericles,Pericles,main,5,1,25,697,speech,MARINA,MARINA,"You said you would believe me;
+But, not to be a troubler of your peace,
+I will end here.",-0.0423,-0.4042
+pericles,Pericles,main,5,1,25,698,speech,PERICLES,PERICLES,"But are you flesh and blood?
+Have you a working pulse? and are no fairy?
+Motion! Well; speak on. Where were you born?
+And wherefore call'd Marina?",0.8448,0.14636
+pericles,Pericles,main,5,1,25,699,speech,MARINA,MARINA,"Call'd Marina
+For I was born at sea.",0.0,0.21563
+pericles,Pericles,main,5,1,25,700,speech,PERICLES,PERICLES,At sea! what mother?,0.0,0.38217
+pericles,Pericles,main,5,1,25,701,speech,MARINA,MARINA,"My mother was the daughter of a king;
+Who died the minute I was born,
+As my good nurse Lychorida hath oft
+Deliver'd weeping.",-0.7717,0.35102
+pericles,Pericles,main,5,1,25,702,speech,PERICLES,PERICLES,"O, stop there a little!
+[Aside]
+This is the rarest dream that e'er dull sleep
+Did mock sad fools withal: this cannot be:
+My daughter's buried. Well: where were you bred?
+I'll hear you more, to the bottom of your story,
+And never interrupt you.",-0.8477,-0.78427
+pericles,Pericles,main,5,1,25,703,speech,MARINA,MARINA,"You scorn: believe me, 'twere best I did give o'er.",0.743,0.52691
+pericles,Pericles,main,5,1,25,704,speech,PERICLES,PERICLES,"I will believe you by the syllable
+Of what you shall deliver. Yet, give me leave:
+How came you in these parts? where were you bred?",0.0,-0.00099
+pericles,Pericles,main,5,1,25,705,speech,MARINA,MARINA,"The king my father did in Tarsus leave me;
+Till cruel Cleon, with his wicked wife,
+Did seek to murder me: and having woo'd
+A villain to attempt it, who having drawn to do't,
+A crew of pirates came and rescued me;
+Brought me to Mytilene. But, good sir,
+Whither will you have me? Why do you weep?
+It may be,
+You think me an impostor: no, good faith;
+I am the daughter to King Pericles,
+If good King Pericles be.",-0.9507,-0.67804
+pericles,Pericles,main,5,1,25,706,speech,PERICLES,PERICLES,"Ho, Helicanus!",0.0,0.66836
+pericles,Pericles,main,5,1,25,707,speech,HELICANUS,HELICANUS,Calls my lord?,0.0,-0.11182
+pericles,Pericles,main,5,1,25,708,speech,PERICLES,PERICLES,"Thou art a grave and noble counsellor,
+Most wise in general: tell me, if thou canst,
+What this maid is, or what is like to be,
+That thus hath made me weep?",0.4019,0.01785
+pericles,Pericles,main,5,1,25,709,speech,HELICANUS,HELICANUS,"I know not; but
+Here is the regent, sir, of Mytilene
+Speaks nobly of her.",0.0,0.45694
+pericles,Pericles,main,5,1,25,710,speech,LYSIMACHUS,LYSIMACHUS,"She would never tell
+Her parentage; being demanded that,
+She would sit still and weep.",-0.5719,-0.5973
+pericles,Pericles,main,5,1,25,711,speech,PERICLES,PERICLES,"O Helicanus, strike me, honour'd sir;
+Give me a gash, put me to present pain;
+Lest this great sea of joys rushing upon me
+O'erbear the shores of my mortality,
+And drown me with their sweetness . O, come hither,
+Thou that beget'st him that did thee beget;
+Thou that wast born at sea, buried at Tarsus,
+And found at sea again! O Helicanus,
+Down on thy knees, thank the holy gods as loud
+As thunder threatens us: this is Marina.
+What was thy mother's name? tell me but that,
+For truth can never be confirm'd enough,
+Though doubts did ever sleep.",0.8707,0.87253
+pericles,Pericles,main,5,1,25,712,speech,MARINA,MARINA,"First, sir, I pray,
+What is your title?",0.3182,0.17157
+pericles,Pericles,main,5,1,25,713,speech,PERICLES,PERICLES,"I am Pericles of Tyre: but tell me now
+My drown'd queen's name, as in the rest you said
+Thou hast been godlike perfect,
+The heir of kingdoms and another like
+To Pericles thy father.",0.036,0.63676
+pericles,Pericles,main,5,1,25,714,speech,MARINA,MARINA,"Is it no more to be your daughter than
+To say my mother's name was Thaisa?
+Thaisa was my mother, who did end
+The minute I began.",-0.5574,-0.55357
+pericles,Pericles,main,5,1,25,715,speech,PERICLES,PERICLES,"Now, blessing on thee! rise; thou art my child.
+Give me fresh garments. Mine own, Helicanus;
+She is not dead at Tarsus, as she should have been,
+By savage Cleon: she shall tell thee all;
+When thou shalt kneel, and justify in knowledge
+She is thy very princess. Who is this?",0.7084,0.73198
+pericles,Pericles,main,5,1,25,716,speech,HELICANUS,HELICANUS,"Sir, 'tis the governor of Mytilene,
+Who, hearing of your melancholy state,
+Did come to see you.",-0.4404,0.50337
+pericles,Pericles,main,5,1,25,717,speech,PERICLES,PERICLES,"I embrace you.
+Give me my robes. I am wild in my beholding.
+O heavens bless my girl! But, hark, what music?
+Tell Helicanus, my Marina, tell him
+O'er, point by point, for yet he seems to doubt,
+How sure you are my daughter. But, what music?",0.6759,0.60152
+pericles,Pericles,main,5,1,25,718,speech,HELICANUS,HELICANUS,"My lord, I hear none.",0.0,-0.10499
+pericles,Pericles,main,5,1,25,719,speech,PERICLES,PERICLES,"None!
+The music of the spheres! List, my Marina.",0.0,0.40583
+pericles,Pericles,main,5,1,25,720,speech,LYSIMACHUS,LYSIMACHUS,It is not good to cross him; give him way.,-0.1139,-0.46411
+pericles,Pericles,main,5,1,25,721,speech,PERICLES,PERICLES,Rarest sounds! Do ye not hear?,-0.2714,0.3281
+pericles,Pericles,main,5,1,25,722,speech,LYSIMACHUS,LYSIMACHUS,"My lord, I hear.",0.0,0.38643
+pericles,Pericles,main,5,1,25,723,stage_direction,,,Music,0.34,0.06184
+pericles,Pericles,main,5,1,25,724,speech,PERICLES,PERICLES,"Most heavenly music!
+It nips me unto listening, and thick slumber
+Hangs upon mine eyes: let me rest.",0.756,0.68419
+pericles,Pericles,main,5,1,25,725,stage_direction,,,Sleeps,0.0,-0.40563
+pericles,Pericles,main,5,1,25,726,speech,LYSIMACHUS,LYSIMACHUS,"A pillow for his head:
+So, leave him all. Well, my companion friends,
+If this but answer to my just belief,
+I'll well remember you.",0.8159,0.0167
+pericles,Pericles,main,5,1,25,727,stage_direction,,,Exeunt all but PERICLES,0.0,-0.13957
+pericles,Pericles,main,5,1,25,728,speech,LYSIMACHUS,LYSIMACHUS,DIANA appears to PERICLES as in a vision,0.25,0.04144
+pericles,Pericles,main,5,1,25,729,speech,DIANA,DIANA,"My temple stands in Ephesus: hie thee thither,
+And do upon mine altar sacrifice.
+There, when my maiden priests are met together,
+Before the people all,
+Reveal how thou at sea didst lose thy wife:
+To mourn thy crosses, with thy daughter's, call
+And give them repetition to the life.
+Or perform my bidding, or thou livest in woe;
+Do it, and happy; by my silver bow!
+Awake, and tell thy dream.",-0.7424,0.04744
+pericles,Pericles,main,5,1,25,730,speech,PERICLES,PERICLES,"Celestial Dian, goddess argentine,
+I will obey thee. Helicanus!",0.6476,0.84594
+pericles,Pericles,main,5,1,25,731,stage_direction,,,"Re-enter HELICANUS, LYSIMACHUS, and MARINA",0.0,0.03926
+pericles,Pericles,main,5,1,25,732,speech,HELICANUS,HELICANUS,Sir?,0.0,-0.04386
+pericles,Pericles,main,5,1,25,733,speech,PERICLES,PERICLES,"My purpose was for Tarsus, there to strike
+The inhospitable Cleon; but I am
+For other service first: toward Ephesus
+Turn our blown sails; eftsoons I'll tell thee why.
+[To LYSIMACHUS]
+Shall we refresh us, sir, upon your shore,
+And give you gold for such provision
+As our intents will need?",-0.4678,0.04649
+pericles,Pericles,main,5,1,25,734,speech,LYSIMACHUS,LYSIMACHUS,"Sir,
+With all my heart; and, when you come ashore,
+I have another suit.",0.6369,0.38363
+pericles,Pericles,main,5,1,25,735,speech,PERICLES,PERICLES,"You shall prevail,
+Were it to woo my daughter; for it seems
+You have been noble towards her.",0.7269,0.12952
+pericles,Pericles,main,5,1,25,736,speech,LYSIMACHUS,LYSIMACHUS,"Sir, lend me your arm.",0.0,0.51371
+pericles,Pericles,main,5,1,25,737,speech,PERICLES,PERICLES,"Come, my Marina.",0.0,0.53201
+pericles,Pericles,main,5,1,25,738,stage_direction,,,Exeunt,-0.0516,-0.57482
+pericles,Pericles,main,5,2,26,739,stage_direction,,,"Enter GOWER, before the temple of DIANA at Ephesus",0.0,0.03697
+pericles,Pericles,main,5,2,26,740,speech,GOWER,GOWER,"Now our sands are almost run;
+More a little, and then dumb.
+This, my last boon, give me,
+For such kindness must relieve me,
+That you aptly will suppose
+What pageantry, what feats, what shows,
+What minstrelsy, and pretty din,
+The regent made in Mytilene
+To greet the king. So he thrived,
+That he is promised to be wived
+To fair Marina; but in no wise
+Till he had done his sacrifice,
+As Dian bade: whereto being bound,
+The interim, pray you, all confound.
+In feather'd briefness sails are fill'd,
+And wishes fall out as they're will'd.
+At Ephesus, the temple see,
+Our king and all his company.
+That he can hither come so soon,
+Is by your fancy's thankful doom.",0.8705,0.46983
+pericles,Pericles,main,5,2,26,741,stage_direction,,,Exit,0.0,0.0106
+pericles,Pericles,main,5,3,27,742,stage_direction,,,"Enter PERICLES, with his train; LYSIMACHUS, HELICANUS, MARINA, and a Lady",0.0,0.10654
+pericles,Pericles,main,5,3,27,743,speech,PERICLES,PERICLES,"Hail, Dian! to perform thy just command,
+I here confess myself the king of Tyre;
+Who, frighted from my country, did wed
+At Pentapolis the fair Thaisa.
+At sea in childbed died she, but brought forth
+A maid-child call'd Marina; who, O goddess,
+Wears yet thy silver livery. She at Tarsus
+Was nursed with Cleon; who at fourteen years
+He sought to murder: but her better stars
+Brought her to Mytilene; 'gainst whose shore
+Riding, her fortunes brought the maid aboard us,
+Where, by her own most clear remembrance, she
+Made known herself my daughter.",0.8568,0.59686
+pericles,Pericles,main,5,3,27,744,speech,THAISA,THAISA,"Voice and favour!
+You are, you are—O royal Pericles!",0.0,0.78816
+pericles,Pericles,main,5,3,27,745,speech,PERICLES,PERICLES,"What means the nun? she dies! help, gentlemen!",-0.5027,0.03771
+pericles,Pericles,main,5,3,27,746,speech,CERIMON,CERIMON,"Noble sir,
+If you have told Diana's altar true,
+This is your wife.",0.3182,0.47421
+pericles,Pericles,main,5,3,27,747,speech,PERICLES,PERICLES,"Reverend appearer, no;
+I threw her overboard with these very arms.",0.0,-0.5033
+pericles,Pericles,main,5,3,27,748,speech,CERIMON,CERIMON,"Upon this coast, I warrant you.",0.0,-0.05696
+pericles,Pericles,main,5,3,27,749,speech,PERICLES,PERICLES,'Tis most certain.,0.0,0.41568
+pericles,Pericles,main,5,3,27,750,speech,CERIMON,CERIMON,"Look to the lady; O, she's but o'erjoy'd.
+Early in blustering morn this lady was
+Thrown upon this shore. I oped the coffin,
+Found there rich jewels; recover'd her, and placed her
+Here in Diana's temple.",0.7351,0.50304
+pericles,Pericles,main,5,3,27,751,speech,PERICLES,PERICLES,May we see them?,0.4588,0.00458
+pericles,Pericles,main,5,3,27,752,speech,CERIMON,CERIMON,"Great sir, they shall be brought you to my house,
+Whither I invite you. Look, Thaisa is recovered.",0.0,0.46681
+pericles,Pericles,main,5,3,27,753,speech,THAISA,THAISA,"O, let me look!
+If he be none of mine, my sanctity
+Will to my sense bend no licentious ear,
+But curb it, spite of seeing. O, my lord,
+Are you not Pericles? Like him you spake,
+Like him you are: did you not name a tempest,
+A birth, and death?",0.593,0.3782
+pericles,Pericles,main,5,3,27,754,speech,PERICLES,PERICLES,The voice of dead Thaisa!,-0.68,-0.2228
+pericles,Pericles,main,5,3,27,755,speech,THAISA,THAISA,"That Thaisa am I, supposed dead
+And drown'd.",-0.8481,-0.88345
+pericles,Pericles,main,5,3,27,756,speech,PERICLES,PERICLES,Immortal Dian!,0.3164,0.85261
+pericles,Pericles,main,5,3,27,757,speech,THAISA,THAISA,"Now I know you better.
+When we with tears parted Pentapolis,
+The king my father gave you such a ring.",0.0,0.55241
+pericles,Pericles,main,5,3,27,758,speech,PERICLES,PERICLES,"This, this: no more, you gods! your present kindness
+Makes my past miseries sports: you shall do well,
+That on the touching of her lips I may
+Melt and no more be seen. O, come, be buried
+A second time within these arms.",0.7629,0.83877
+pericles,Pericles,main,5,3,27,759,speech,MARINA,MARINA,"My heart
+Leaps to be gone into my mother's bosom.",0.8074,0.41626
+pericles,Pericles,main,5,3,27,760,stage_direction,,,Kneels to THAISA,0.0,0.00841
+pericles,Pericles,main,5,3,27,761,speech,PERICLES,PERICLES,"Look, who kneels here! Flesh of thy flesh, Thaisa;
+Thy burden at the sea, and call'd Marina
+For she was yielded there.",0.0,0.66779
+pericles,Pericles,main,5,3,27,762,speech,THAISA,THAISA,"Blest, and mine own!",0.4753,0.74481
+pericles,Pericles,main,5,3,27,763,speech,HELICANUS,HELICANUS,"Hail, madam, and my queen!",0.0,0.75836
+pericles,Pericles,main,5,3,27,764,speech,THAISA,THAISA,I know you not.,0.0,-0.46022
+pericles,Pericles,main,5,3,27,765,speech,PERICLES,PERICLES,"You have heard me say, when I did fly from Tyre,
+I left behind an ancient substitute:
+Can you remember what I call'd the man?
+I have named him oft.",0.5514,-0.06133
+pericles,Pericles,main,5,3,27,766,speech,THAISA,THAISA,'Twas Helicanus then.,0.0,-0.00691
+pericles,Pericles,main,5,3,27,767,speech,PERICLES,PERICLES,"Still confirmation:
+Embrace him, dear Thaisa; this is he.
+Now do I long to hear how you were found;
+How possibly preserved; and who to thank,
+Besides the gods, for this great miracle.",0.9324,0.7946
+pericles,Pericles,main,5,3,27,768,speech,THAISA,THAISA,"Lord Cerimon, my lord; this man,
+Through whom the gods have shown their power; that can
+From first to last resolve you.",0.6249,0.80374
+pericles,Pericles,main,5,3,27,769,speech,PERICLES,PERICLES,"Reverend sir,
+The gods can have no mortal officer
+More like a god than you. Will you deliver
+How this dead queen re-lives?",0.2732,0.04025
+pericles,Pericles,main,5,3,27,770,speech,CERIMON,CERIMON,"I will, my lord.
+Beseech you, first go with me to my house,
+Where shall be shown you all was found with her;
+How she came placed here in the temple;
+No needful thing omitted.",0.0572,0.5231
+pericles,Pericles,main,5,3,27,771,speech,PERICLES,PERICLES,"Pure Dian, bless thee for thy vision! I
+Will offer night-oblations to thee. Thaisa,
+This prince, the fair-betrothed of your daughter,
+Shall marry her at Pentapolis. And now,
+This ornament
+Makes me look dismal will I clip to form;
+And what this fourteen years no razor touch'd,
+To grace thy marriage-day, I'll beautify.",0.8588,0.80143
+pericles,Pericles,main,5,3,27,772,speech,THAISA,THAISA,"Lord Cerimon hath letters of good credit, sir,
+My father's dead.",-0.1779,0.57869
+pericles,Pericles,main,5,3,27,773,speech,PERICLES,PERICLES,"Heavens make a star of him! Yet there, my queen,
+We'll celebrate their nuptials, and ourselves
+Will in that kingdom spend our following days:
+Our son and daughter shall in Tyrus reign.
+Lord Cerimon, we do our longing stay
+To hear the rest untold: sir, lead's the way.",0.7777,0.6233
+pericles,Pericles,main,5,3,27,774,stage_direction,,,Exeunt,0.0,-0.27456
+pericles,Pericles,main,5,,24,775,stage_direction,,,Enter GOWER,0.0,0.02879
+pericles,Pericles,main,5,,24,776,speech,GOWER,GOWER,"In Antiochus and his daughter you have heard
+Of monstrous lust the due and just reward:
+In Pericles, his queen and daughter, seen,
+Although assail'd with fortune fierce and keen,
+Virtue preserved from fell destruction's blast,
+Led on by heaven, and crown'd with joy at last:
+In Helicanus may you well descry
+A figure of truth, of faith, of loyalty:
+In reverend Cerimon there well appears
+The worth that learned charity aye wears:
+For wicked Cleon and his wife, when fame
+Had spread their cursed deed, and honour'd name
+Of Pericles, to rage the city turn,
+That him and his they in his palace burn;
+The gods for murder seemed so content
+To punish them; although not done, but meant.
+So, on your patience evermore attending,
+New joy wait on you! Here our play has ending.",0.9781,0.28124
+pericles,Pericles,main,5,,24,777,stage_direction,,,Exit,0.0,0.0106

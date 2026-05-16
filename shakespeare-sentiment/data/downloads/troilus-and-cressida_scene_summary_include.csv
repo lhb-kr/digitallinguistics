@@ -1,0 +1,26 @@
+play_id,play_title,section,act,scene,scene_index_in_play,num_units,num_sentences,num_words_modern,num_stage_directions,vader_mean,vader_median,dl_mean,dl_median,vader_std,dl_std
+troilus-and-cressida,Troilus and Cressida,main,1,,1,1,11,225,0,0.15511,0.0772,0.0258,0.00686,0.38092,0.20106
+troilus-and-cressida,Troilus and Cressida,main,1,1,2,44,96,1101,6,0.02599,0.0,-0.138,-0.14698,0.42363,0.38313
+troilus-and-cressida,Troilus and Cressida,main,1,2,3,150,276,2338,7,0.1175,0.0,0.02238,-0.01776,0.3571,0.34477
+troilus-and-cressida,Troilus and Cressida,main,1,3,4,59,160,2488,6,0.16317,0.0763,-0.06798,-0.03408,0.44712,0.36752
+troilus-and-cressida,Troilus and Cressida,main,2,1,5,81,106,943,4,-0.09158,0.0,-0.01683,-0.02772,0.34452,0.38166
+troilus-and-cressida,Troilus and Cressida,main,2,2,6,29,91,1604,4,-0.05713,0.0,-0.15141,-0.17909,0.52761,0.41966
+troilus-and-cressida,Troilus and Cressida,main,2,3,7,110,198,2095,12,0.06189,0.0,-0.06545,-0.02894,0.4142,0.378
+troilus-and-cressida,Troilus and Cressida,main,3,1,8,89,146,1187,6,0.2754,0.2957,0.04659,0.00066,0.356,0.40334
+troilus-and-cressida,Troilus and Cressida,main,3,2,9,65,151,1723,10,0.19366,0.0,-0.01819,-0.03434,0.39174,0.39587
+troilus-and-cressida,Troilus and Cressida,main,3,3,10,84,178,2286,10,0.19749,0.0329,-0.00656,-0.0152,0.39168,0.38823
+troilus-and-cressida,Troilus and Cressida,main,4,1,11,25,51,698,3,0.05668,0.0,0.00017,0.00313,0.47758,0.45482
+troilus-and-cressida,Troilus and Cressida,main,4,2,12,61,132,902,10,-0.01699,0.0,-0.08395,-0.04516,0.32309,0.3876
+troilus-and-cressida,Troilus and Cressida,main,4,3,13,6,9,103,3,0.4034,0.4939,0.12995,0.02018,0.33951,0.2796
+troilus-and-cressida,Troilus and Cressida,main,4,4,14,57,123,1476,7,0.14504,0.0,0.04628,-0.00201,0.45388,0.41428
+troilus-and-cressida,Troilus and Cressida,main,4,5,15,126,231,2477,13,0.135,0.0,0.07887,0.04614,0.43636,0.39588
+troilus-and-cressida,Troilus and Cressida,main,5,1,16,50,84,835,10,0.08463,0.0,0.04777,0.05094,0.39787,0.42432
+troilus-and-cressida,Troilus and Cressida,main,5,2,17,126,204,1502,10,0.03795,0.0,-0.03431,-0.01181,0.33185,0.39981
+troilus-and-cressida,Troilus and Cressida,main,5,3,18,60,114,1036,11,-0.03975,0.0,-0.0318,-0.00439,0.42662,0.46741
+troilus-and-cressida,Troilus and Cressida,main,5,4,19,14,30,302,7,-0.23964,-0.09505,0.01436,0.01881,0.42066,0.45886
+troilus-and-cressida,Troilus and Cressida,main,5,5,20,18,38,432,9,-0.12115,0.0,0.05216,0.01137,0.42366,0.44303
+troilus-and-cressida,Troilus and Cressida,main,5,6,21,28,47,318,11,-0.0769,0.0,0.10673,0.00545,0.35854,0.41687
+troilus-and-cressida,Troilus and Cressida,main,5,7,22,14,27,213,7,-0.32314,-0.3612,0.06498,0.03119,0.3216,0.38021
+troilus-and-cressida,Troilus and Cressida,main,5,8,23,14,25,232,5,-0.06674,0.0,0.11696,0.01646,0.39463,0.36216
+troilus-and-cressida,Troilus and Cressida,main,5,9,24,9,17,95,4,0.02994,0.0,0.02378,0.01238,0.32961,0.39656
+troilus-and-cressida,Troilus and Cressida,main,5,10,25,15,44,534,7,-0.20925,-0.10135,0.0035,-0.00472,0.40018,0.53368
