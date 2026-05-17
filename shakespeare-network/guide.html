@@ -1,0 +1,310 @@
+<!doctype html>
+<html class="guide-root" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Guide | Shakespeare Character Networks</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./styles.css?v=20260517-guidepage2">
+  </head>
+  <body class="guide-page">
+    <main class="guide-page-shell">
+      <header class="guide-page-header">
+        <div>
+          <p class="guide-kicker">Shakespeare Character Networks Explorer</p>
+          <h1>Quick Guide</h1>
+        </div>
+      </header>
+
+      <section class="guide-intro">
+        <h2>What The Network Shows</h2>
+        <p>
+          Each graph is a character network. A node is a character, and an edge
+          means two characters are connected within the selected dramatic unit,
+          such as a scene, act, or full play. Thicker edges usually mean the
+          connection appears more often.
+        </p>
+        <p>
+          The graph does not prove friendship, influence, or direct address by
+          itself. It shows patterns of dramatic co-occurrence that can help you
+          ask literary questions about scene structure, dialogue, centrality,
+          isolation, and groups of characters.
+        </p>
+      </section>
+
+      <section class="guide-section">
+        <h2>Top Bar</h2>
+        <dl class="guide-term-list">
+          <div>
+            <dt>View Buttons</dt>
+            <dd>
+              <p>Switches between the two main ways to use the explorer.</p>
+              <ul class="guide-sublist">
+                <li><strong>Single</strong>: shows one play in detail, with timeline controls, character focus, full metrics, and exports for one network.</li>
+                <li><strong>Compare</strong>: shows four full-play networks at once for comparing overall network shape across plays.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Play Menus</dt>
+            <dd>
+              <p>Selects which play or plays are shown.</p>
+              <ul class="guide-sublist">
+                <li><strong>Single Play Menu</strong>: selects the play used in Single view.</li>
+                <li><strong>Compare Play Menus</strong>: select the four plays shown in Compare view. Compare view uses full-play networks only.</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="guide-section">
+        <h2>Single View: Left Panel</h2>
+
+        <h3>Network</h3>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Edge Type</dt>
+            <dd>
+              <p>Chooses what kind of co-occurrence creates an edge between two characters.</p>
+              <ul class="guide-sublist">
+                <li>
+                  <strong>Stage</strong>: connects characters who appear in the
+                  same scene, either because they speak or because stage
+                  directions mark them as present. Use this for shared dramatic
+                  space, including silent presences.
+                </li>
+                <li>
+                  <strong>Speech</strong>: connects characters when both have
+                  spoken lines in the same scene. Use this for dialogue
+                  participation. It does not necessarily mean one character
+                  speaks directly to the other.
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Mode</dt>
+            <dd>
+              <p>Changes the time scale of the graph.</p>
+              <ul class="guide-sublist">
+                <li><strong>Full play</strong>: shows the network for the entire play.</li>
+                <li><strong>Cumulative act</strong>: builds the network from the beginning of the play through the selected act.</li>
+                <li><strong>Act</strong>: shows only the selected act.</li>
+                <li><strong>Cumulative scene</strong>: builds the network from the beginning of the play through the selected scene.</li>
+                <li><strong>Scene</strong>: shows only the selected scene.</li>
+                <li><strong>3-scene window / 5-scene window</strong>: shows a rolling window of recent scenes.</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+
+        <h3>Timeline</h3>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Previous, Next, Play</dt>
+            <dd>
+              <p>Moves through the selected time mode.</p>
+              <ul class="guide-sublist">
+                <li><strong>Previous</strong>: moves to the previous act, scene, cumulative step, or scene window.</li>
+                <li><strong>Next</strong>: moves to the next act, scene, cumulative step, or scene window.</li>
+                <li><strong>Play</strong>: automatically advances through the available time positions.</li>
+              </ul>
+              <p>In Full play mode, the timeline does not move because the graph is one complete-play snapshot.</p>
+            </dd>
+          </div>
+          <div>
+            <dt>Slider</dt>
+            <dd>Jumps to a specific act, scene, or window position.</dd>
+          </div>
+        </dl>
+
+        <h3>Character</h3>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Focus</dt>
+            <dd>Selects one character. The selected character and connected characters are emphasized in the graph and described in the right panel.</dd>
+          </div>
+          <div>
+            <dt>Clear</dt>
+            <dd>Removes the selected character focus.</dd>
+          </div>
+        </dl>
+
+        <h3>Encoding And Filters</h3>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Node Size</dt>
+            <dd>
+              <p>Chooses what makes a character look larger.</p>
+              <ul class="guide-sublist">
+                <li><strong>Weighted degree</strong>: the default; larger nodes have stronger or more repeated ties.</li>
+                <li><strong>Degree</strong>: larger nodes are connected to more characters.</li>
+                <li><strong>PageRank</strong>: larger nodes are connected to characters who are themselves important in the network.</li>
+                <li><strong>Betweenness</strong>: larger nodes often sit between otherwise separate parts of the network.</li>
+                <li><strong>Closeness</strong>: larger nodes are, on average, closer to all other characters.</li>
+                <li><strong>Eigenvector</strong>: larger nodes are connected to well-connected characters.</li>
+                <li><strong>Uniform</strong>: all visible characters use the same node size.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Node Color</dt>
+            <dd>
+              <p>Chooses what node colors mean.</p>
+              <ul class="guide-sublist">
+                <li><strong>Community</strong>: colors characters by detected network groups.</li>
+                <li><strong>Gender</strong>: colors characters by available gender metadata.</li>
+                <li><strong>Node metric</strong>: colors characters by the selected centrality value.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Community Method</dt>
+            <dd>
+              <p>
+                Chooses the algorithm used to find communities: groups of
+                characters more strongly connected to each other than to the
+                rest of the network.
+              </p>
+              <ul class="guide-sublist">
+                <li><strong>Leiden</strong>: the default community detection method.</li>
+                <li><strong>Louvain</strong>: an alternative method that can be useful for checking whether group patterns are stable.</li>
+              </ul>
+              <p>Community results can change when edge type, time mode, or filters change.</p>
+            </dd>
+          </div>
+          <div>
+            <dt>Edge Width</dt>
+            <dd>
+              <p>Chooses what makes a tie look thicker.</p>
+              <ul class="guide-sublist">
+                <li><strong>Weight</strong>: the default; thicker ties mean more repeated co-occurrence.</li>
+                <li><strong>Uniform</strong>: all visible ties use the same thickness.</li>
+                <li><strong>Endpoint degree</strong>: thicker ties connect characters with more visible connections.</li>
+                <li><strong>Endpoint weighted degree</strong>: thicker ties connect characters with stronger or more repeated ties overall.</li>
+                <li><strong>Endpoint betweenness</strong>: thicker ties connect characters with higher betweenness values.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Top Nodes Percentile</dt>
+            <dd>
+              Keeps only the top percentage of characters according to the
+              current Node Size metric. For example, 25% keeps the highest
+              quarter of characters for each current graph.
+            </dd>
+          </div>
+          <div>
+            <dt>Minimum Degree</dt>
+            <dd>Hides characters with fewer visible connections. This is useful for simplifying a dense network.</dd>
+          </div>
+          <div>
+            <dt>Minimum Edge Weight</dt>
+            <dd>Hides weaker ties. Raising it keeps only connections that occur more often.</dd>
+          </div>
+          <div>
+            <dt>Labels</dt>
+            <dd>Turns character labels on or off.</dd>
+          </div>
+          <div>
+            <dt>Group Characters</dt>
+            <dd>
+              Shows or hides collective roles such as attendants, soldiers,
+              players, messengers, or citizens. Hiding them often makes the
+              graph easier to read when focusing on named characters.
+            </dd>
+          </div>
+          <div>
+            <dt>Reset Filters</dt>
+            <dd>Returns filtering controls to their default values.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="guide-section">
+        <h2>Single View: Right Panel</h2>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Metrics</dt>
+            <dd>
+              <p>Summarizes the currently visible network.</p>
+              <ul class="guide-sublist">
+                <li><strong>Nodes</strong>: the number of visible characters.</li>
+                <li><strong>Edges</strong>: the number of visible ties between characters.</li>
+                <li><strong>Density</strong>: how connected the graph is relative to all possible ties.</li>
+                <li><strong>Q Modularity</strong>: how strongly the detected communities are separated.</li>
+                <li><strong>Communities</strong>: the number of detected groups in the visible graph.</li>
+                <li><strong>Avg Weight</strong>: the average weight of visible ties.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Top Nodes</dt>
+            <dd>Lists the highest-ranked visible characters using the currently selected Node Size metric.</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>
+              <p>Describes the selected character.</p>
+              <ul class="guide-sublist">
+                <li><strong>Active status</strong>: shows whether the character appears in the current view.</li>
+                <li><strong>Centrality values</strong>: shows measures such as degree, weighted degree, PageRank, and ego size.</li>
+                <li><strong>Strongest ties</strong>: lists the character's strongest visible connections.</li>
+                <li><strong>New and lost ties</strong>: shows changes when timeline modes are used.</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Export</dt>
+            <dd>
+              <p>Saves the current single-play network.</p>
+              <ul class="guide-sublist">
+                <li><strong>JSON</strong>: saves network data and current settings.</li>
+                <li><strong>CSV</strong>: saves the visible edge list.</li>
+                <li><strong>PNG</strong>: saves an image of the current network canvas.</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="guide-section">
+        <h2>Compare View</h2>
+        <dl class="guide-term-list">
+          <div>
+            <dt>Four Network Canvases</dt>
+            <dd>Shows four selected full-play networks for broad comparison.</dd>
+          </div>
+          <div>
+            <dt>Shared Encoding</dt>
+            <dd>The left-panel encoding and filter controls apply to all four networks.</dd>
+          </div>
+          <div>
+            <dt>Compare Metrics</dt>
+            <dd>
+              <p>Shows numeric metrics for the four selected plays.</p>
+              <ul class="guide-sublist">
+                <li><strong>All Shakespeare Plays Avg</strong>: gives the dataset-wide baseline across all plays.</li>
+                <li><strong>Selected plays</strong>: lists one metric row for each selected play.</li>
+              </ul>
+              <p>The table includes nodes, edges, density, communities, Q modularity, and average weight.</p>
+            </dd>
+          </div>
+          <div>
+            <dt>Compare Export</dt>
+            <dd>
+              <p>Saves comparison outputs.</p>
+              <ul class="guide-sublist">
+                <li><strong>JSON</strong>: saves comparison data and current settings.</li>
+                <li><strong>CSV</strong>: saves the comparison metric table.</li>
+                <li><strong>PNG</strong>: saves the four-panel network image.</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+    </main>
+  </body>
+</html>

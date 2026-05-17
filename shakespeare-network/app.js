@@ -2,10 +2,10 @@ const DATA_ROOT = "../data/processed";
 
 const MODES = [
   "full",
+  "cumulative_act",
+  "act",
   "cumulative_scene",
   "scene",
-  "act",
-  "cumulative_act",
   "sliding_window_3",
   "sliding_window_5",
 ];
@@ -16,8 +16,8 @@ const MODE_LABELS = {
   act: "Act",
   cumulative_scene: "Cumulative scene",
   cumulative_act: "Cumulative act",
-  sliding_window_3: "Window 3",
-  sliding_window_5: "Window 5",
+  sliding_window_3: "3-scene window",
+  sliding_window_5: "5-scene window",
 };
 
 const METRIC_LABELS = {
@@ -29,6 +29,14 @@ const METRIC_LABELS = {
   eigenvector: "Eigenvector",
   uniform: "Uniform",
 };
+
+const COMPARE_METRICS = [
+  { key: "nodes", summaryKey: "nodes", label: "Nodes", kind: "count" },
+  { key: "edges", summaryKey: "edges", label: "Edges", kind: "count" },
+  { key: "density", summaryKey: "density", label: "Density", kind: "ratio" },
+  { key: "communities", summaryKey: "communities", label: "Communities", kind: "count" },
+  { key: "modularity", summaryKey: "modularity_q", label: "Q Modularity", kind: "ratio" },
+];
 
 const COMMUNITY_COLORS = [
   "#b33b36",
@@ -59,13 +67,17 @@ const FIT_TRIM_FRACTION = 0.05;
 
 const state = {
   index: null,
+  allPlaySummary: null,
+  viewMode: "single",
   playName: "",
   edgeType: "co_present",
   mode: "full",
   timeIndex: 1,
-  nodeSizeMetric: "degree",
+  nodeSizeMetric: "weighted_degree",
   colorBy: "community",
   edgeWidthMetric: "weight",
+  topNodePercent: 100,
+  minDegree: 0,
   minEdgeWeight: 1,
   showLabels: true,
   showGroups: false,
@@ -73,6 +85,10 @@ const state = {
   hoveredNode: "",
   isPlaying: false,
   playTimer: null,
+  method: "leiden",
+  compare: {
+    panels: [],
+  },
   data: {
     meta: null,
     layout: null,
@@ -101,9 +117,18 @@ const state = {
 };
 
 const el = {
+  workspace: document.querySelector(".workspace"),
+  singleViewButton: document.querySelector("#singleViewButton"),
+  compareViewButton: document.querySelector("#compareViewButton"),
   playTitle: document.querySelector("#playTitle"),
   playMeta: document.querySelector("#playMeta"),
   playSelect: document.querySelector("#playSelect"),
+  comparePlaySelects: [
+    document.querySelector("#comparePlaySelect1"),
+    document.querySelector("#comparePlaySelect2"),
+    document.querySelector("#comparePlaySelect3"),
+    document.querySelector("#comparePlaySelect4"),
+  ],
   modeSelect: document.querySelector("#modeSelect"),
   timeLabel: document.querySelector("#timeLabel"),
   prevButton: document.querySelector("#prevButton"),
@@ -113,12 +138,17 @@ const el = {
   nodeSizeSelect: document.querySelector("#nodeSizeSelect"),
   colorBySelect: document.querySelector("#colorBySelect"),
   edgeWidthSelect: document.querySelector("#edgeWidthSelect"),
+  topPercentRange: document.querySelector("#topPercentRange"),
+  topPercentValue: document.querySelector("#topPercentValue"),
+  minDegreeRange: document.querySelector("#minDegreeRange"),
+  minDegreeValue: document.querySelector("#minDegreeValue"),
   edgeWeightRange: document.querySelector("#edgeWeightRange"),
   edgeWeightValue: document.querySelector("#edgeWeightValue"),
   labelToggle: document.querySelector("#labelToggle"),
   groupToggle: document.querySelector("#groupToggle"),
   resetFiltersButton: document.querySelector("#resetFiltersButton"),
   characterSelect: document.querySelector("#characterSelect"),
+  clearFocusButton: document.querySelector("#clearFocusButton"),
   canvas: document.querySelector("#networkCanvas"),
   canvasStatus: document.querySelector("#canvasStatus"),
   resetViewButton: document.querySelector("#resetViewButton"),
@@ -131,13 +161,42 @@ const el = {
   metricAvgWeight: document.querySelector("#metricAvgWeight"),
   topMetricLabel: document.querySelector("#topMetricLabel"),
   topNodesList: document.querySelector("#topNodesList"),
+  methodToggle: document.querySelector("#methodToggle"),
   focusPanel: document.querySelector("#focusPanel"),
   exportJsonButton: document.querySelector("#exportJsonButton"),
   exportCsvButton: document.querySelector("#exportCsvButton"),
   exportPngButton: document.querySelector("#exportPngButton"),
+  compareMetricsGrid: document.querySelector("#compareMetricsGrid"),
+  exportCompareJsonButton: document.querySelector("#exportCompareJsonButton"),
+  exportCompareCsvButton: document.querySelector("#exportCompareCsvButton"),
+  exportComparePngButton: document.querySelector("#exportComparePngButton"),
+  compareCanvases: [
+    document.querySelector("#compareCanvas1"),
+    document.querySelector("#compareCanvas2"),
+    document.querySelector("#compareCanvas3"),
+    document.querySelector("#compareCanvas4"),
+  ],
+  compareTitles: [
+    document.querySelector("#compareTitle1"),
+    document.querySelector("#compareTitle2"),
+    document.querySelector("#compareTitle3"),
+    document.querySelector("#compareTitle4"),
+  ],
+  compareMetas: [
+    document.querySelector("#compareMeta1"),
+    document.querySelector("#compareMeta2"),
+    document.querySelector("#compareMeta3"),
+    document.querySelector("#compareMeta4"),
+  ],
+  compareResetButtons: [
+    document.querySelector("#compareReset1"),
+    document.querySelector("#compareReset2"),
+    document.querySelector("#compareReset3"),
+    document.querySelector("#compareReset4"),
+  ],
 };
 
-const ctx = el.canvas.getContext("2d");
+let ctx = el.canvas.getContext("2d");
 
 init().catch((error) => {
   console.error(error);
@@ -146,31 +205,72 @@ init().catch((error) => {
 });
 
 async function init() {
+  setupComparePanels();
   attachEvents();
   resizeCanvas();
   syncControlsWithState();
   state.index = await fetchJson(`${DATA_ROOT}/index.json`);
+  state.allPlaySummary = await loadAllPlaySummary();
   populatePlaySelect();
+  populateComparePlaySelects();
   const initial = state.index.plays.find((play) => play.name === "hamlet") || state.index.plays[0];
   state.playName = initial.name;
   el.playSelect.value = initial.name;
+  initializeCompareSelections();
   await loadPlay(initial.name);
 }
 
 function syncControlsWithState() {
+  syncViewModeControls();
   el.modeSelect.value = state.mode;
   el.nodeSizeSelect.value = state.nodeSizeMetric;
   el.colorBySelect.value = state.colorBy;
   el.edgeWidthSelect.value = state.edgeWidthMetric;
+  el.topPercentRange.value = String(state.topNodePercent);
+  el.topPercentValue.textContent = `${state.topNodePercent}%`;
   el.labelToggle.checked = state.showLabels;
   el.groupToggle.checked = state.showGroups;
+  syncMethodToggle();
+}
+
+function syncViewModeControls() {
+  const isCompare = state.viewMode === "compare";
+  el.workspace.classList.toggle("compare-mode", isCompare);
+  el.singleViewButton.classList.toggle("active", !isCompare);
+  el.compareViewButton.classList.toggle("active", isCompare);
+}
+
+function syncMethodToggle() {
+  if (!el.methodToggle) return;
+  el.methodToggle.querySelectorAll("[data-method]").forEach((button) => {
+    const m = button.dataset.method;
+    const available = hasMethod(m);
+    button.classList.toggle("active", m === state.method);
+    button.disabled = !available;
+    button.title = available ? `Use ${m} partitions` : `${m} data not available (re-run scripts/05_communities.py with leidenalg installed)`;
+  });
 }
 
 function attachEvents() {
+  el.singleViewButton.addEventListener("click", async () => {
+    await setViewMode("single");
+  });
+
+  el.compareViewButton.addEventListener("click", async () => {
+    await setViewMode("compare");
+  });
+
   el.playSelect.addEventListener("change", async () => {
     stopPlayback();
     state.playName = el.playSelect.value;
     await loadPlay(state.playName);
+  });
+
+  el.comparePlaySelects.forEach((select, index) => {
+    select.addEventListener("change", async () => {
+      await loadComparePanel(index, select.value);
+      if (state.viewMode === "compare") await renderCompare();
+    });
   });
 
   document.querySelectorAll("[data-edge-type]").forEach((button) => {
@@ -181,7 +281,22 @@ function attachEvents() {
       });
       setCameraToFit();
       await clampTimeToMode();
-      await chooseDefaultCharacter(false);
+      await syncCharacterFocus(false);
+      await render();
+    });
+  });
+
+  document.querySelectorAll("[data-method]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const next = button.dataset.method;
+      if (!hasMethod(next)) {
+        // Don't switch to a method we have no data for; keep the buttons
+        // in sync with the actual current method.
+        syncMethodToggle();
+        return;
+      }
+      state.method = next;
+      syncMethodToggle();
       await render();
     });
   });
@@ -219,6 +334,18 @@ function attachEvents() {
     await render();
   });
 
+  el.topPercentRange.addEventListener("input", async () => {
+    state.topNodePercent = Number(el.topPercentRange.value);
+    el.topPercentValue.textContent = `${state.topNodePercent}%`;
+    await render();
+  });
+
+  el.minDegreeRange.addEventListener("input", async () => {
+    state.minDegree = Number(el.minDegreeRange.value);
+    el.minDegreeValue.textContent = String(state.minDegree);
+    await render();
+  });
+
   el.edgeWeightRange.addEventListener("input", async () => {
     state.minEdgeWeight = Number(el.edgeWeightRange.value);
     el.edgeWeightValue.textContent = String(state.minEdgeWeight);
@@ -234,7 +361,7 @@ function attachEvents() {
   el.groupToggle.addEventListener("change", async () => {
     state.showGroups = el.groupToggle.checked;
     populateCharacterSelect();
-    await chooseDefaultCharacter(false);
+    await syncCharacterFocus(false);
     setCameraToFit();
     await render();
   });
@@ -245,11 +372,33 @@ function attachEvents() {
     await render();
   });
 
+  el.clearFocusButton.addEventListener("click", async () => {
+    state.selectedCharacter = "";
+    el.characterSelect.value = "";
+    await render();
+  });
+
   el.exportJsonButton.addEventListener("click", exportCurrentJson);
   el.exportCsvButton.addEventListener("click", exportCurrentCsv);
   el.exportPngButton.addEventListener("click", exportPng);
+  el.exportCompareJsonButton.addEventListener("click", exportCompareJson);
+  el.exportCompareCsvButton.addEventListener("click", exportCompareCsv);
+  el.exportComparePngButton.addEventListener("click", exportComparePng);
   el.resetFiltersButton.addEventListener("click", resetFilters);
   el.resetViewButton.addEventListener("click", resetView);
+
+  state.compare.panels.forEach((panel) => {
+    panel.resetButton.addEventListener("click", () => {
+      panel.view.zoom = 1;
+      panel.view.panX = 0;
+      panel.view.panY = 0;
+      drawComparePanel(panel);
+    });
+    panel.canvas.addEventListener("wheel", (event) => onCompareWheel(event, panel), { passive: false });
+    panel.canvas.addEventListener("mousedown", (event) => onCompareMouseDown(event, panel));
+    panel.canvas.addEventListener("dblclick", (event) => onCompareDoubleClick(event, panel));
+    panel.canvas.addEventListener("contextmenu", (event) => event.preventDefault());
+  });
 
   el.canvas.addEventListener("wheel", onWheel, { passive: false });
   el.canvas.addEventListener("mousedown", onMouseDown);
@@ -259,26 +408,297 @@ function attachEvents() {
   el.canvas.addEventListener("dblclick", onDoubleClick);
   el.canvas.addEventListener("contextmenu", (event) => event.preventDefault());
   window.addEventListener("resize", () => {
+    if (state.viewMode === "compare") {
+      renderCompare();
+      return;
+    }
     resizeCanvas();
     draw();
   });
 }
 
+function makeViewState() {
+  return {
+    width: 0,
+    height: 0,
+    dpr: 1,
+    zoom: 1,
+    panX: 0,
+    panY: 0,
+    dragging: false,
+    dragStartX: 0,
+    dragStartY: 0,
+    dragStartPanX: 0,
+    dragStartPanY: 0,
+    nodes: [],
+    screenNodes: new Map(),
+  };
+}
+
+function setupComparePanels() {
+  state.compare.panels = el.compareCanvases.map((canvas, index) => ({
+    index,
+    canvas,
+    ctx: canvas.getContext("2d"),
+    titleEl: el.compareTitles[index],
+    metaEl: el.compareMetas[index],
+    resetButton: el.compareResetButtons[index],
+    playName: "",
+    data: null,
+    hoveredNode: "",
+    view: makeViewState(),
+  }));
+}
+
+async function setViewMode(mode) {
+  if (state.viewMode === mode) return;
+  stopPlayback();
+  state.viewMode = mode;
+  syncViewModeControls();
+
+  if (mode === "compare") {
+    state.selectedCharacter = "";
+    el.characterSelect.value = "";
+    await renderCompare();
+    return;
+  }
+
+  updatePlayHeader();
+  await render();
+}
+
+async function ensureComparePanelsLoaded() {
+  await Promise.all(state.compare.panels.map((panel, index) => (
+    loadComparePanel(index, el.comparePlaySelects[index].value)
+  )));
+}
+
+async function loadComparePanel(index, playName) {
+  const panel = state.compare.panels[index];
+  if (!panel || !playName) return;
+  if (panel.data && panel.playName === playName) return;
+
+  panel.playName = playName;
+  panel.data = null;
+  panel.hoveredNode = "";
+  panel.view = makeViewState();
+  panel.titleEl.textContent = "Loading";
+  panel.metaEl.textContent = "-";
+  panel.data = await loadPlayData(playName);
+  panel.titleEl.textContent = panel.data.meta.title;
+}
+
+async function renderCompare() {
+  await ensureComparePanelsLoaded();
+  el.playMeta.textContent = "Full play";
+  updateCompareEdgeWeightRange();
+  updateCompareDegreeRange();
+  state.compare.panels.forEach((panel) => drawComparePanel(panel));
+  renderCompareMetrics();
+}
+
+function drawComparePanel(panel) {
+  if (!panel?.data) return;
+  withGraphContext(panel, () => {
+    const graph = getCurrentGraph();
+    panel.titleEl.textContent = panel.data.meta.title;
+    panel.metaEl.textContent = `${graph.nodes.length} nodes, ${graph.edges.length} edges`;
+    draw();
+  });
+}
+
+function renderCompareMetrics() {
+  const rows = compareMetricRows();
+  if (!rows.length) {
+    el.compareMetricsGrid.innerHTML = `<p class="muted">No comparison loaded.</p>`;
+    return;
+  }
+
+  const averages = compareAverageMetrics();
+  el.compareMetricsGrid.innerHTML = COMPARE_METRICS.map((metric) => `
+    <div class="compare-metric-card">
+      <h3>${escapeHtml(metric.label)}</h3>
+      ${renderCompareMetricRow("All Shakespeare Plays Avg", averages?.[metric.summaryKey], metric, true)}
+      ${rows.map((row) => renderCompareMetricRow(row.title, row[metric.key], metric, false)).join("")}
+    </div>
+  `).join("");
+}
+
+function compareMetricRows() {
+  return state.compare.panels
+    .filter((panel) => panel.data)
+    .map((panel) => withGraphContext(panel, () => {
+      const graph = getCurrentGraph();
+      const modularity = getCurrentModularity();
+      const communities = getCurrentCommunities();
+      const visibleCommunities = new Set(graph.nodes
+        .map((node) => communities[node.id])
+        .filter((value) => value !== undefined)).size;
+      const avgWeight = graph.edges.length
+        ? graph.edges.reduce((sum, edge) => sum + edge.weight, 0) / graph.edges.length
+        : 0;
+
+      return {
+        index: panel.index,
+        play: panel.playName,
+        title: panel.data.meta.title,
+        edgeType: state.edgeType,
+        nodes: graph.nodes.length,
+        edges: graph.edges.length,
+        density: density(graph.nodes.length, graph.edges.length),
+        communities: visibleCommunities || Number(modularity?.num_communities ?? 0),
+        modularity: modularity?.Q ?? null,
+        avgWeight,
+      };
+    }));
+}
+
+function renderCompareMetricRow(label, value, metric, average) {
+  return `
+    <div class="compare-metric-row${average ? " average" : ""}">
+      <span class="compare-metric-label" title="${escapeHtml(label)}">${escapeHtml(label)}</span>
+      <span class="compare-metric-value">${escapeHtml(formatCompareMetricValue(value, metric, average))}</span>
+    </div>
+  `;
+}
+
+function compareAverageMetrics() {
+  const scope = state.showGroups ? "all_characters" : "display_characters";
+  const byEdge = state.allPlaySummary?.edge_types?.[state.edgeType];
+  const byMethod = byEdge?.[state.method] || byEdge?.leiden || byEdge?.louvain;
+  return byMethod?.[scope]?.averages || null;
+}
+
+function formatCompareMetricValue(value, metric, average) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "-";
+  if (metric.kind === "count") {
+    return average ? number.toFixed(1) : String(Math.round(number));
+  }
+  return number.toFixed(3).replace(/\.?0+$/, "");
+}
+
+function withGraphContext(panel, callback) {
+  const previous = {
+    data: state.data,
+    view: state.view,
+    playName: state.playName,
+    mode: state.mode,
+    timeIndex: state.timeIndex,
+    selectedCharacter: state.selectedCharacter,
+    hoveredNode: state.hoveredNode,
+    canvas: el.canvas,
+    ctx,
+  };
+
+  state.data = panel.data;
+  state.view = panel.view;
+  state.playName = panel.playName;
+  state.mode = "full";
+  state.timeIndex = 0;
+  state.selectedCharacter = "";
+  state.hoveredNode = panel.hoveredNode || "";
+  el.canvas = panel.canvas;
+  ctx = panel.ctx;
+
+  try {
+    return callback();
+  } finally {
+    panel.hoveredNode = state.hoveredNode;
+    state.data = previous.data;
+    state.view = previous.view;
+    state.playName = previous.playName;
+    state.mode = previous.mode;
+    state.timeIndex = previous.timeIndex;
+    state.selectedCharacter = previous.selectedCharacter;
+    state.hoveredNode = previous.hoveredNode;
+    el.canvas = previous.canvas;
+    ctx = previous.ctx;
+  }
+}
+
+function updateCompareEdgeWeightRange() {
+  const maxWeight = Math.max(1, ...state.compare.panels.map((panel) => (
+    panel.data ? maxPanelVisibleEdgeWeight(panel) : 1
+  )));
+  el.edgeWeightRange.max = String(maxWeight);
+  if (state.minEdgeWeight > maxWeight) state.minEdgeWeight = maxWeight;
+  el.edgeWeightRange.value = String(state.minEdgeWeight);
+  el.edgeWeightValue.textContent = String(state.minEdgeWeight);
+}
+
+function updateCompareDegreeRange() {
+  const maxDegree = Math.max(0, ...state.compare.panels.map((panel) => (
+    panel.data ? maxPanelVisibleNodeDegree(panel) : 0
+  )));
+  updateDegreeRangeToMax(maxDegree);
+}
+
+function maxPanelVisibleEdgeWeight(panel) {
+  return withGraphContext(panel, () => maxVisibleEdgeWeight());
+}
+
+function maxPanelVisibleNodeDegree(panel) {
+  return withGraphContext(panel, () => maxVisibleNodeDegree());
+}
+
+function onCompareWheel(event, panel) {
+  event.preventDefault();
+  withGraphContext(panel, () => {
+    const rect = panel.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const factor = Math.exp(-event.deltaY * 0.002);
+    zoomAt(x, y, state.view.zoom * factor);
+    draw();
+  });
+}
+
+function onCompareDoubleClick(event, panel) {
+  event.preventDefault();
+  withGraphContext(panel, () => {
+    const rect = panel.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const factor = event.shiftKey ? 0.625 : 1.6;
+    zoomAt(x, y, state.view.zoom * factor);
+    draw();
+  });
+}
+
+function onCompareMouseDown(event, panel) {
+  if (event.button !== 0) return;
+  event.preventDefault();
+  panel.view.dragging = true;
+  panel.view.dragStartX = event.clientX;
+  panel.view.dragStartY = event.clientY;
+  panel.view.dragStartPanX = panel.view.panX;
+  panel.view.dragStartPanY = panel.view.panY;
+  panel.canvas.classList.add("dragging");
+}
+
 async function loadPlay(playName) {
   el.canvasStatus.textContent = "Loading play data";
-  state.data = {
-    meta: null,
-    layout: null,
-    staticNetwork: null,
-    centrality: null,
-    communities: null,
-    modularity: null,
-    snapshots: {},
-    ego: {},
-  };
   state.playName = playName;
   setCameraToFit();
+  state.data = await loadPlayData(playName);
 
+  // Fall back if the chosen method is missing for this play.
+  if (!hasMethod(state.method)) {
+    state.method = hasMethod("leiden") ? "leiden" : (hasMethod("louvain") ? "louvain" : "leiden");
+  }
+  syncMethodToggle();
+
+  populateCharacterSelect();
+  updatePlayHeader();
+  await loadSnapshot(state.mode);
+  await clampTimeToMode();
+  updateEdgeWeightRange();
+  await syncCharacterFocus(true);
+  await render();
+}
+
+async function loadPlayData(playName) {
   const base = `${DATA_ROOT}/plays/${playName}`;
   const [meta, layout, staticNetwork, centrality, communities, modularity] = await Promise.all([
     fetchJson(`${base}/meta.json`),
@@ -288,21 +708,24 @@ async function loadPlay(playName) {
     fetchJson(`${base}/communities.json`),
     fetchJson(`${base}/modularity.json`),
   ]);
+  return {
+    meta,
+    layout,
+    staticNetwork,
+    centrality,
+    communities,
+    modularity,
+    snapshots: {},
+    ego: {},
+  };
+}
 
-  state.data.meta = meta;
-  state.data.layout = layout;
-  state.data.staticNetwork = staticNetwork;
-  state.data.centrality = centrality;
-  state.data.communities = communities;
-  state.data.modularity = modularity;
-
-  populateCharacterSelect();
-  updatePlayHeader();
-  await loadSnapshot(state.mode);
-  await clampTimeToMode();
-  updateEdgeWeightRange();
-  await chooseDefaultCharacter(true);
-  await render();
+async function loadAllPlaySummary() {
+  try {
+    return await fetchJson(`${DATA_ROOT}/all_play_metrics_summary.json`);
+  } catch {
+    return null;
+  }
 }
 
 async function loadSnapshot(mode) {
@@ -328,23 +751,32 @@ async function fetchJson(url) {
 }
 
 function populatePlaySelect() {
-  const byGenre = new Map();
-  state.index.plays.forEach((play) => {
-    if (!byGenre.has(play.genre)) byGenre.set(play.genre, []);
-    byGenre.get(play.genre).push(play);
-  });
+  populatePlayOptions(el.playSelect);
+}
 
-  el.playSelect.innerHTML = "";
-  [...byGenre.entries()].forEach(([genre, plays]) => {
-    const group = document.createElement("optgroup");
-    group.label = titleCase(genre);
-    plays.forEach((play) => {
+function populateComparePlaySelects() {
+  el.comparePlaySelects.forEach((select) => populatePlayOptions(select));
+}
+
+function populatePlayOptions(select) {
+  select.innerHTML = "";
+  [...state.index.plays]
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .forEach((play) => {
       const option = document.createElement("option");
       option.value = play.name;
       option.textContent = `${play.title} (${play.year || "n.d."})`;
-      group.appendChild(option);
+      select.appendChild(option);
     });
-    el.playSelect.appendChild(group);
+}
+
+function initializeCompareSelections() {
+  const sorted = [...state.index.plays].sort((a, b) => a.title.localeCompare(b.title));
+  const defaults = ["hamlet", "macbeth", "king-lear", "othello"];
+  el.comparePlaySelects.forEach((select, index) => {
+    const play = state.index.plays.find((item) => item.name === defaults[index]) || sorted[index] || sorted[0];
+    select.value = play?.name || "";
+    state.compare.panels[index].playName = select.value;
   });
 }
 
@@ -361,25 +793,22 @@ function populateCharacterSelect() {
   });
 }
 
-async function chooseDefaultCharacter(reset) {
-  const existing = state.data.meta.characters.some((char) => char.id === state.selectedCharacter && includeCharacter(char.id));
+async function syncCharacterFocus(reset) {
+  const existing = state.selectedCharacter && state.data.meta.characters.some((char) => char.id === state.selectedCharacter && includeCharacter(char.id));
   if (!reset && existing) {
     el.characterSelect.value = state.selectedCharacter;
     await loadEgo(state.selectedCharacter);
     return;
   }
 
-  const rows = getCentralityRows("full", 0).filter((row) => includeCharacter(row.character_id));
-  const best = [...rows].sort((a, b) => Number(b.degree || 0) - Number(a.degree || 0))[0];
-  state.selectedCharacter = best?.character_id || state.data.meta.characters.find((character) => includeCharacter(character.id))?.id || "";
-  el.characterSelect.value = state.selectedCharacter;
-  await loadEgo(state.selectedCharacter);
+  state.selectedCharacter = "";
+  el.characterSelect.value = "";
 }
 
 function updatePlayHeader() {
   const meta = state.data.meta;
-  el.playTitle.textContent = meta.title;
-  el.playMeta.textContent = `${titleCase(meta.genre)} | ${meta.num_characters || meta.characters.length} chars`;
+  if (el.playTitle) el.playTitle.textContent = meta.title;
+  el.playMeta.textContent = `${meta.num_characters || meta.characters.length} chars`;
 }
 
 async function clampTimeToMode() {
@@ -432,11 +861,16 @@ function stopPlayback() {
   if (state.playTimer) window.clearInterval(state.playTimer);
   state.playTimer = null;
   state.isPlaying = false;
-  el.playButton.innerHTML = "&#9654;";
+  el.playButton.innerHTML = "&#9654;&#9654;";
   el.playButton.title = "Play";
 }
 
 async function render() {
+  if (state.viewMode === "compare") {
+    await renderCompare();
+    return;
+  }
+
   await loadSnapshot(state.mode);
   const times = getAvailableTimes();
   if (times.length && !times.includes(state.timeIndex)) {
@@ -445,6 +879,7 @@ async function render() {
 
   updateTimelineControls(times);
   updateEdgeWeightRange();
+  updateDegreeRange();
   updatePanels();
   draw();
 }
@@ -471,14 +906,29 @@ function updateEdgeWeightRange() {
   el.edgeWeightValue.textContent = String(state.minEdgeWeight);
 }
 
+function updateDegreeRange() {
+  updateDegreeRangeToMax(maxVisibleNodeDegree());
+}
+
+function updateDegreeRangeToMax(maxDegree) {
+  el.minDegreeRange.max = String(maxDegree);
+  if (state.minDegree > maxDegree) state.minDegree = maxDegree;
+  el.minDegreeRange.value = String(state.minDegree);
+  el.minDegreeValue.textContent = String(state.minDegree);
+}
+
 async function resetFilters() {
   state.showGroups = false;
   state.showLabels = true;
+  state.topNodePercent = 100;
+  state.minDegree = 0;
   state.minEdgeWeight = 1;
   el.groupToggle.checked = false;
   el.labelToggle.checked = true;
+  el.topPercentRange.value = String(state.topNodePercent);
+  el.topPercentValue.textContent = `${state.topNodePercent}%`;
   populateCharacterSelect();
-  await chooseDefaultCharacter(false);
+  await syncCharacterFocus(false);
   setCameraToFit();
   await render();
 }
@@ -486,6 +936,11 @@ async function resetFilters() {
 function maxVisibleEdgeWeight() {
   const edges = getVisibleRawEdges();
   return Math.max(1, ...edges.map((edge) => edge.weight));
+}
+
+function maxVisibleNodeDegree() {
+  const graph = getCurrentGraphBase();
+  return Math.max(0, ...graph.degreeById.values());
 }
 
 function updatePanels() {
@@ -502,8 +957,8 @@ function updatePanels() {
   el.metricNodes.textContent = String(graph.nodes.length);
   el.metricEdges.textContent = String(graph.edges.length);
   el.metricDensity.textContent = formatNumber(density(graph.nodes.length, graph.edges.length), 3);
-  el.metricModularity.textContent = !state.showGroups || modularity?.Q == null ? "-" : formatNumber(modularity.Q, 3);
-  el.metricCommunities.textContent = String(state.showGroups ? (modularity?.num_communities ?? (communityCount || "-")) : (communityCount || "-"));
+  el.metricModularity.textContent = modularity?.Q == null ? "-" : formatNumber(modularity.Q, 3);
+  el.metricCommunities.textContent = String(modularity?.num_communities ?? (communityCount || "-"));
   el.metricAvgWeight.textContent = formatNumber(avgWeight, 2);
   el.topMetricLabel.textContent = METRIC_LABELS[state.nodeSizeMetric] || state.nodeSizeMetric;
   renderTopNodes(graph);
@@ -531,8 +986,9 @@ function renderTopNodes(graph) {
 
 function renderFocusPanel(graph) {
   const id = state.selectedCharacter;
+  el.clearFocusButton.disabled = !id;
   if (!id) {
-    el.focusPanel.innerHTML = `<p class="muted">Select a character.</p>`;
+    el.focusPanel.innerHTML = `<p class="muted">No character focused.</p>`;
     return;
   }
 
@@ -580,6 +1036,45 @@ function renderTieBlock(title, ties) {
 }
 
 function getCurrentGraph() {
+  const graph = getCurrentGraphBase();
+  let nodeIds = applyTopNodePercentFilter(graph.nodeIds, graph);
+  if (state.minDegree > 0) {
+    nodeIds = new Set([...nodeIds].filter((id) => (graph.degreeById.get(id) || 0) >= state.minDegree));
+  }
+
+  const nodes = [...nodeIds].map((id) => ({
+    id,
+    label: labelFor(id),
+    character: characterFor(id),
+    metric: graph.metricRows.find((row) => row.character_id === id) || null,
+  }));
+
+  const edges = graph.rawEdges.filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target));
+  return { nodes, edges, nodeIds };
+}
+
+function applyTopNodePercentFilter(nodeIds, graph) {
+  const percent = Math.max(1, Math.min(100, Number(state.topNodePercent) || 100));
+  if (percent >= 100 || nodeIds.size <= 1) return nodeIds;
+  const limit = Math.max(1, Math.ceil(nodeIds.size * (percent / 100)));
+  if (nodeIds.size <= limit) return nodeIds;
+
+  const metricById = new Map(graph.metricRows.map((row) => [row.character_id, row]));
+  const ranked = [...nodeIds].sort((a, b) => {
+    const scoreDelta = topNodeScore(b, metricById, graph.degreeById) - topNodeScore(a, metricById, graph.degreeById);
+    if (scoreDelta !== 0) return scoreDelta;
+    return labelFor(a).localeCompare(labelFor(b));
+  });
+  return new Set(ranked.slice(0, limit));
+}
+
+function topNodeScore(id, metricById, degreeById) {
+  if (state.nodeSizeMetric === "uniform") return degreeById.get(id) || 0;
+  const metric = metricValue(metricById.get(id));
+  return Number.isFinite(metric) && metric > 0 ? metric : (degreeById.get(id) || 0);
+}
+
+function getCurrentGraphBase() {
   const rawEdges = getVisibleRawEdges().filter((edge) => edge.weight >= state.minEdgeWeight);
   const metricRows = currentMetricRows().filter((row) => includeCharacter(row.character_id));
   const ids = new Set(metricRows.map((row) => row.character_id));
@@ -593,15 +1088,13 @@ function getCurrentGraph() {
   }
 
   const nodeIds = new Set([...ids].filter(Boolean));
-  const nodes = [...nodeIds].map((id) => ({
-    id,
-    label: labelFor(id),
-    character: characterFor(id),
-    metric: metricRows.find((row) => row.character_id === id) || null,
-  }));
-
-  const edges = rawEdges.filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target));
-  return { nodes, edges, nodeIds };
+  const degreeById = new Map([...nodeIds].map((id) => [id, 0]));
+  rawEdges.forEach((edge) => {
+    if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) return;
+    degreeById.set(edge.source, (degreeById.get(edge.source) || 0) + 1);
+    degreeById.set(edge.target, (degreeById.get(edge.target) || 0) + 1);
+  });
+  return { rawEdges, metricRows, nodeIds, degreeById };
 }
 
 function getRawEdges() {
@@ -639,17 +1132,52 @@ function getCentralityRows(mode, timeIndex) {
   return rows.filter((row) => Number(row.time_index) === Number(timeIndex));
 }
 
+function communityRoot() {
+  const byEdge = state.data.communities?.[state.edgeType];
+  if (!byEdge) return null;
+  // New shape: byEdge[method][mode][time] = {...}
+  // Old shape: byEdge[mode][time] = {...}
+  const methodKeys = new Set(Object.keys(byEdge));
+  if (methodKeys.has("louvain") || methodKeys.has("leiden")) {
+    return byEdge[state.method] || byEdge.louvain || byEdge.leiden;
+  }
+  return byEdge;
+}
+
+function modularityRoot() {
+  const byEdge = state.data.modularity?.[state.edgeType];
+  if (!byEdge) return null;
+  const methodKeys = new Set(Object.keys(byEdge));
+  if (methodKeys.has("louvain") || methodKeys.has("leiden")) {
+    return byEdge[state.method] || byEdge.louvain || byEdge.leiden;
+  }
+  return byEdge;
+}
+
+function hasMethod(method) {
+  const c = state.data.communities?.[state.edgeType];
+  const m = state.data.modularity?.[state.edgeType];
+  const inC = c && typeof c === "object" && method in c;
+  const inM = m && typeof m === "object" && method in m;
+  return Boolean(inC || inM);
+}
+
 function getCurrentCommunities() {
-  const byMode = state.data.communities[state.edgeType]?.[state.mode];
+  const root = communityRoot();
+  if (!root) return {};
+  const byMode = root[state.mode];
   const current = byMode?.[String(state.timeIndex)] || byMode?.[String(0)];
-  return current || state.data.communities[state.edgeType]?.full?.["0"] || {};
+  return current || root.full?.["0"] || {};
 }
 
 function getCurrentModularity() {
-  const rows = state.data.modularity[state.edgeType]?.[state.mode] || [];
+  const root = modularityRoot();
+  if (!root) return null;
+  const rows = root[state.mode] || [];
   const target = state.mode === "full" ? 0 : state.timeIndex;
   return rows.find((row) => Number(row.time_index) === Number(target)) || null;
 }
+
 
 function draw() {
   resizeCanvas();
@@ -755,7 +1283,7 @@ function drawNodes(nodes, edges, screenNodes) {
     ctx.fillStyle = nodeColor(node, communities, value, min, max);
     ctx.fill();
     ctx.lineWidth = isSelected ? 4 : isHovered ? 3 : isNeighbor ? 2 : 1;
-    ctx.strokeStyle = isSelected ? "#202124" : isHovered ? "#b33b36" : isNeighbor ? "#167f78" : "rgba(255,255,255,0.88)";
+    ctx.strokeStyle = isSelected ? "#202124" : isHovered ? "#b33b36" : isNeighbor ? "rgba(32, 33, 36, 0.55)" : "rgba(255,255,255,0.88)";
     ctx.stroke();
 
     if (state.showLabels || isSelected || isHovered) {
@@ -921,6 +1449,15 @@ function onMouseDown(event) {
 }
 
 function onMouseMove(event) {
+  const compareDragPanel = state.compare.panels.find((panel) => panel.view.dragging);
+  if (compareDragPanel) {
+    event.preventDefault();
+    compareDragPanel.view.panX = compareDragPanel.view.dragStartPanX + event.clientX - compareDragPanel.view.dragStartX;
+    compareDragPanel.view.panY = compareDragPanel.view.dragStartPanY + event.clientY - compareDragPanel.view.dragStartY;
+    drawComparePanel(compareDragPanel);
+    return;
+  }
+
   if (state.view.dragging) {
     event.preventDefault();
     state.view.panX = state.view.dragStartPanX + event.clientX - state.view.dragStartX;
@@ -936,6 +1473,10 @@ function onMouseMove(event) {
 }
 
 function onMouseUp() {
+  state.compare.panels.forEach((panel) => {
+    panel.view.dragging = false;
+    panel.canvas.classList.remove("dragging");
+  });
   state.view.dragging = false;
   el.canvas.classList.remove("dragging");
 }
@@ -956,6 +1497,12 @@ async function onCanvasClick(event) {
   if (Math.abs(event.clientX - state.view.dragStartX) > 4 || Math.abs(event.clientY - state.view.dragStartY) > 4) return;
   const node = findNodeAt(event);
   if (!node) return;
+  if (node === state.selectedCharacter) {
+    state.selectedCharacter = "";
+    el.characterSelect.value = "";
+    await render();
+    return;
+  }
   state.selectedCharacter = node;
   el.characterSelect.value = node;
   await loadEgo(node);
@@ -1016,6 +1563,139 @@ function exportPng() {
   link.click();
 }
 
+function exportCompareJson() {
+  const payload = {
+    view: "compare",
+    mode: "full",
+    settings: compareSettings(),
+    all_play_average: compareAverageMetrics(),
+    plays: compareMetricRows(),
+  };
+  download(`compare-full-${state.edgeType}.json`, "application/json", JSON.stringify(payload, null, 2));
+}
+
+function exportCompareCsv() {
+  const settings = compareSettings();
+  const rows = compareMetricRows();
+  const average = compareAverageMetrics();
+  const header = [
+    "play",
+    "title",
+    "nodes",
+    "edges",
+    "density",
+    "communities",
+    "modularity",
+    "avg_weight",
+    "edge_type",
+    "community_method",
+    "min_edge_weight",
+    "min_degree",
+    "top_node_percent",
+    "show_groups",
+  ];
+  const averageRow = average ? [[
+    csvCell("all_plays_avg"),
+    csvCell("All Shakespeare Plays Avg"),
+    average.nodes ?? "",
+    average.edges ?? "",
+    average.density ?? "",
+    average.communities ?? "",
+    average.modularity_q ?? "",
+    average.avg_weight ?? "",
+    csvCell(settings.edge_type),
+    csvCell(settings.community_method),
+    settings.min_edge_weight,
+    settings.min_degree,
+    settings.top_node_percent,
+    settings.show_groups,
+  ].join(",")] : [];
+  const lines = [
+    header.join(","),
+    ...averageRow,
+    ...rows.map((row) => [
+      csvCell(row.play),
+      csvCell(row.title),
+      row.nodes,
+      row.edges,
+      row.density,
+      row.communities,
+      row.modularity ?? "",
+      row.avgWeight,
+      csvCell(settings.edge_type),
+      csvCell(settings.community_method),
+      settings.min_edge_weight,
+      settings.min_degree,
+      settings.top_node_percent,
+      settings.show_groups,
+    ].join(",")),
+  ];
+  download(`compare-full-${state.edgeType}-metrics.csv`, "text/csv", lines.join("\n"));
+}
+
+function exportComparePng() {
+  const panels = state.compare.panels.filter((panel) => panel.data && panel.canvas.width && panel.canvas.height);
+  if (!panels.length) return;
+
+  const dpr = window.devicePixelRatio || 1;
+  const gap = Math.max(1, Math.round(dpr));
+  const headerHeight = Math.round(40 * dpr);
+  const padding = Math.round(10 * dpr);
+  const columnWidth = Math.max(...panels.map((panel) => panel.canvas.width));
+  const graphHeight = Math.max(...panels.map((panel) => panel.canvas.height));
+  const output = document.createElement("canvas");
+  output.width = columnWidth * 2 + gap;
+  output.height = (graphHeight + headerHeight) * 2 + gap;
+
+  const out = output.getContext("2d");
+  const rows = compareMetricRows();
+  out.fillStyle = "#eef1ec";
+  out.fillRect(0, 0, output.width, output.height);
+
+  panels.forEach((panel) => {
+    const col = panel.index % 2;
+    const row = Math.floor(panel.index / 2);
+    const x = col * (columnWidth + gap);
+    const y = row * (graphHeight + headerHeight + gap);
+    const metrics = rows.find((item) => item.index === panel.index);
+
+    out.fillStyle = "#fbfcfd";
+    out.fillRect(x, y, columnWidth, headerHeight);
+    out.fillStyle = "#303841";
+    out.font = `700 ${Math.round(13 * dpr)}px Inter, system-ui, sans-serif`;
+    out.textBaseline = "middle";
+    out.fillText(truncateText(panel.data.meta.title, 32), x + padding, y + headerHeight * 0.38);
+
+    out.fillStyle = "#687079";
+    out.font = `500 ${Math.round(11 * dpr)}px Inter, system-ui, sans-serif`;
+    out.fillText(`${metrics?.nodes ?? "-"} nodes, ${metrics?.edges ?? "-"} edges`, x + padding, y + headerHeight * 0.72);
+
+    const dx = x + Math.floor((columnWidth - panel.canvas.width) / 2);
+    const dy = y + headerHeight + Math.floor((graphHeight - panel.canvas.height) / 2);
+    out.drawImage(panel.canvas, dx, dy);
+  });
+
+  const link = document.createElement("a");
+  link.download = `compare-full-${state.edgeType}.png`;
+  link.href = output.toDataURL("image/png");
+  link.click();
+}
+
+function compareSettings() {
+  return {
+    edge_type: state.edgeType,
+    node_size: state.nodeSizeMetric,
+    node_color: state.colorBy,
+    edge_width: state.edgeWidthMetric,
+    community_method: state.method,
+    min_edge_weight: state.minEdgeWeight,
+    min_degree: state.minDegree,
+    top_node_percent: state.topNodePercent,
+    show_groups: state.showGroups,
+    show_labels: state.showLabels,
+  };
+}
+
 function download(filename, type, text) {
   const blob = new Blob([text], { type });
   const link = document.createElement("a");
@@ -1038,7 +1718,7 @@ function snapshotLabel() {
 function labelFor(id) {
   const character = characterFor(id);
   const raw = character?.name || id;
-  return isGroupCharacter(id) ? groupLabel(raw) : raw;
+  return isGroupCharacter(id) ? groupLabel(raw) : stripPlayTag(raw);
 }
 
 function characterFor(id) {
@@ -1055,7 +1735,7 @@ function isGroupCharacter(id) {
 }
 
 function groupLabel(value) {
-  const clean = String(value)
+  const clean = stripPlayTag(value)
     .replace(/_/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -1090,13 +1770,18 @@ function formatNumber(value, digits) {
   return number.toFixed(digits).replace(/\.?0+$/, "");
 }
 
-function titleCase(value) {
-  return String(value || "").replace(/\b\w/g, (letter) => letter.toUpperCase());
+function formatOptionalNumber(value, digits) {
+  if (value == null || !Number.isFinite(Number(value))) return "-";
+  return formatNumber(value, digits);
 }
 
 function trimLabel(label) {
-  const clean = String(label).replace(/_/g, " ");
+  const clean = stripPlayTag(label).replace(/_/g, " ");
   return truncateText(clean, 28);
+}
+
+function stripPlayTag(value) {
+  return String(value || "").replace(/_[A-Za-z0-9]+$/, "");
 }
 
 function truncateText(value, maxLength) {

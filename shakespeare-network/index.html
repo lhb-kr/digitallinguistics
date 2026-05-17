@@ -4,18 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shakespeare Character Networks</title>
-    <link rel="stylesheet" href="./styles.css?v=20260514-1258">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./styles.css?v=20260517-guidepage2">
   </head>
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <div class="brand-block">
-          <p class="eyebrow">Shakespeare Character Networks</p>
-          <h1 id="playTitle">Loading corpus</h1>
+        <div class="brand-cluster">
+          <div class="brand-title">
+            <span>Shakespeare Character</span>
+            <span>Networks Explorer</span>
+          </div>
+          <a class="guide-button" href="./guide.html" target="_blank" rel="noopener">Quick Guide</a>
         </div>
-        <div class="top-actions">
-          <label class="control-label" for="playSelect">Play</label>
-          <select id="playSelect" class="select"></select>
+        <div class="top-view-control">
+          <button id="singleViewButton" class="view-button active" type="button">Single</button>
+          <select id="playSelect" class="select top-select" aria-label="Single play"></select>
+        </div>
+        <div class="top-view-control compare-top-control">
+          <button id="compareViewButton" class="view-button" type="button">Compare</button>
+          <select id="comparePlaySelect1" class="select top-select" aria-label="Compare play 1"></select>
+          <select id="comparePlaySelect2" class="select top-select" aria-label="Compare play 2"></select>
+          <select id="comparePlaySelect3" class="select top-select" aria-label="Compare play 3"></select>
+          <select id="comparePlaySelect4" class="select top-select" aria-label="Compare play 4"></select>
         </div>
       </header>
 
@@ -33,37 +44,46 @@
               <button class="segment-button" type="button" data-edge-type="co_speaking">Speech</button>
             </div>
 
-            <label class="control-label" for="modeSelect">Mode</label>
-            <select id="modeSelect" class="select">
+            <label class="control-label single-only" for="modeSelect">Mode</label>
+            <select id="modeSelect" class="select single-only">
               <option value="full" selected>Full play</option>
+              <option value="cumulative_act">Cumulative act</option>
+              <option value="act">Act</option>
               <option value="cumulative_scene">Cumulative scene</option>
               <option value="scene">Scene</option>
-              <option value="act">Act</option>
-              <option value="cumulative_act">Cumulative act</option>
-              <option value="sliding_window_3">Sliding window 3</option>
-              <option value="sliding_window_5">Sliding window 5</option>
+              <option value="sliding_window_3">3-scene window</option>
+              <option value="sliding_window_5">5-scene window</option>
             </select>
           </section>
 
-          <section class="panel-section">
+          <section class="panel-section single-only">
             <div class="section-heading">
               <h2>Timeline</h2>
               <span id="timeLabel" class="meta-pill">-</span>
             </div>
             <div class="transport-row">
               <button id="prevButton" class="icon-button" type="button" title="Previous" aria-label="Previous">&#9664;</button>
-              <button id="playButton" class="icon-button" type="button" title="Play" aria-label="Play">&#9654;</button>
-              <button id="nextButton" class="icon-button" type="button" title="Next" aria-label="Next">&#9654;&#9654;</button>
+              <button id="nextButton" class="icon-button" type="button" title="Next" aria-label="Next">&#9654;</button>
+              <button id="playButton" class="icon-button" type="button" title="Play" aria-label="Play">&#9654;&#9654;</button>
             </div>
             <input id="timeSlider" class="range" type="range" min="0" max="0" value="0">
+          </section>
+
+          <section class="panel-section single-only">
+            <h2>Character</h2>
+            <label class="control-label" for="characterSelect">Focus</label>
+            <div class="focus-control-row">
+              <select id="characterSelect" class="select" aria-label="Focus character"></select>
+              <button id="clearFocusButton" type="button" class="command-button">Clear</button>
+            </div>
           </section>
 
           <section class="panel-section">
             <h2>Encoding</h2>
             <label class="control-label" for="nodeSizeSelect">Node Size</label>
             <select id="nodeSizeSelect" class="select">
-              <option value="degree" selected>Degree</option>
-              <option value="weighted_degree">Weighted degree</option>
+              <option value="degree">Degree</option>
+              <option value="weighted_degree" selected>Weighted degree</option>
               <option value="pagerank">PageRank</option>
               <option value="betweenness">Betweenness</option>
               <option value="closeness">Closeness</option>
@@ -78,6 +98,12 @@
               <option value="metric">Node metric</option>
             </select>
 
+            <label class="control-label">Community Method</label>
+            <div id="methodToggle" class="segmented" role="group" aria-label="Community detection method">
+              <button class="segment-button" type="button" data-method="louvain">Louvain</button>
+              <button class="segment-button active" type="button" data-method="leiden">Leiden</button>
+            </div>
+
             <label class="control-label" for="edgeWidthSelect">Edge Width</label>
             <select id="edgeWidthSelect" class="select">
               <option value="weight" selected>Weight</option>
@@ -86,6 +112,18 @@
               <option value="weighted_degree">Endpoint weighted degree</option>
               <option value="betweenness">Endpoint betweenness</option>
             </select>
+
+            <label class="control-label" for="topPercentRange">Top Nodes Percentile</label>
+            <div class="inline-value">
+              <input id="topPercentRange" class="range" type="range" min="1" max="100" step="1" value="100">
+              <span id="topPercentValue">100%</span>
+            </div>
+
+            <label class="control-label" for="minDegreeRange">Minimum Degree</label>
+            <div class="inline-value">
+              <input id="minDegreeRange" class="range" type="range" min="0" max="0" value="0">
+              <span id="minDegreeValue">0</span>
+            </div>
 
             <label class="control-label" for="edgeWeightRange">Minimum Edge Weight</label>
             <div class="inline-value">
@@ -107,15 +145,9 @@
               <button id="resetFiltersButton" type="button" class="command-button">Reset filters</button>
             </div>
           </section>
-
-          <section class="panel-section">
-            <h2>Character</h2>
-            <label class="control-label" for="characterSelect">Focus</label>
-            <select id="characterSelect" class="select"></select>
-          </section>
         </aside>
 
-        <section class="canvas-panel">
+        <section class="canvas-panel single-canvas-panel">
           <div class="canvas-toolbar">
             <span id="canvasStatus">Preparing network</span>
             <div class="canvas-tools">
@@ -126,14 +158,69 @@
           <canvas id="networkCanvas" aria-label="Character network canvas"></canvas>
         </section>
 
-        <aside class="side-panel right-panel">
+        <section class="compare-panel" aria-label="Network comparison workspace">
+          <div class="compare-grid">
+            <article class="compare-card" data-compare-panel="0">
+              <div class="compare-card-header">
+                <strong id="compareTitle1">Play 1</strong>
+                <span id="compareMeta1">-</span>
+                <button id="compareReset1" class="mini-icon-button" type="button" title="Reset view" aria-label="Reset view">&#8634;</button>
+              </div>
+              <canvas id="compareCanvas1" class="compare-canvas" aria-label="Comparison network 1"></canvas>
+            </article>
+            <article class="compare-card" data-compare-panel="1">
+              <div class="compare-card-header">
+                <strong id="compareTitle2">Play 2</strong>
+                <span id="compareMeta2">-</span>
+                <button id="compareReset2" class="mini-icon-button" type="button" title="Reset view" aria-label="Reset view">&#8634;</button>
+              </div>
+              <canvas id="compareCanvas2" class="compare-canvas" aria-label="Comparison network 2"></canvas>
+            </article>
+            <article class="compare-card" data-compare-panel="2">
+              <div class="compare-card-header">
+                <strong id="compareTitle3">Play 3</strong>
+                <span id="compareMeta3">-</span>
+                <button id="compareReset3" class="mini-icon-button" type="button" title="Reset view" aria-label="Reset view">&#8634;</button>
+              </div>
+              <canvas id="compareCanvas3" class="compare-canvas" aria-label="Comparison network 3"></canvas>
+            </article>
+            <article class="compare-card" data-compare-panel="3">
+              <div class="compare-card-header">
+                <strong id="compareTitle4">Play 4</strong>
+                <span id="compareMeta4">-</span>
+                <button id="compareReset4" class="mini-icon-button" type="button" title="Reset view" aria-label="Reset view">&#8634;</button>
+              </div>
+              <canvas id="compareCanvas4" class="compare-canvas" aria-label="Comparison network 4"></canvas>
+            </article>
+          </div>
+        </section>
+
+        <aside class="side-panel right-panel compare-right-panel">
+          <section class="panel-section">
+            <h2>Compare Metrics</h2>
+            <div id="compareMetricsGrid" class="compare-metrics-grid">
+              <p class="muted">No comparison loaded.</p>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <h2>Export</h2>
+            <div class="export-grid">
+              <button id="exportCompareJsonButton" type="button" class="command-button">JSON</button>
+              <button id="exportCompareCsvButton" type="button" class="command-button">CSV</button>
+              <button id="exportComparePngButton" type="button" class="command-button">PNG</button>
+            </div>
+          </section>
+        </aside>
+
+        <aside class="side-panel right-panel single-only">
           <section class="panel-section">
             <h2>Metrics</h2>
             <dl class="metric-grid">
               <div><dt>Nodes</dt><dd id="metricNodes">-</dd></div>
               <div><dt>Edges</dt><dd id="metricEdges">-</dd></div>
               <div><dt>Density</dt><dd id="metricDensity">-</dd></div>
-              <div><dt>Q</dt><dd id="metricModularity">-</dd></div>
+              <div><dt>Q Modularity</dt><dd id="metricModularity">-</dd></div>
               <div><dt>Communities</dt><dd id="metricCommunities">-</dd></div>
               <div><dt>Avg Weight</dt><dd id="metricAvgWeight">-</dd></div>
             </dl>
@@ -142,7 +229,7 @@
           <section class="panel-section">
             <div class="section-heading">
               <h2>Top Nodes</h2>
-              <span id="topMetricLabel" class="meta-pill">Degree</span>
+              <span id="topMetricLabel" class="meta-pill">Weighted degree</span>
             </div>
             <ol id="topNodesList" class="rank-list"></ol>
           </section>
@@ -150,7 +237,7 @@
           <section class="panel-section">
             <h2>Focus</h2>
             <div id="focusPanel" class="focus-panel">
-              <p class="muted">Select a character.</p>
+              <p class="muted">No character focused.</p>
             </div>
           </section>
 
@@ -166,6 +253,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=20260514-1258"></script>
+    <script type="module" src="./app.js?v=20260517-guidepage2"></script>
   </body>
 </html>
