@@ -1,4 +1,4 @@
-const DATA_ROOT = "../data/processed";
+const DATA_ROOT = "./data";
 
 const MODES = [
   "full",
