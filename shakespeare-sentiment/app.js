@@ -1,6 +1,27 @@
 const DATA_ROOT = "./data";
+const DATA_VERSION = "20260518-vader-dl";
 const DASHBOARD_SIZE = 4;
 const OVERLAY_GRID_POINTS = 500;
+
+const MODEL_KEYS = ["vader", "dl"];
+const MODEL_LABELS = { vader: "VADER", dl: "DL (siebert)" };
+const MODEL_FULL_LABELS = {
+  vader: "VADER",
+  dl: "DL (siebert)",
+};
+const MODEL_COLORS = { vader: "#b84a3a", dl: "#0f766e" };
+const COMPARISON_COLORS = { vader: "#274c77", dl: "#a16207" };
+const MODEL_PATTERN_INDEX = { vader: 0, dl: 1 };
+
+function fieldsForSentiment(settings) {
+  if (settings.sentiment === "all") return ["vader", "dl"];
+  if (MODEL_KEYS.includes(settings.sentiment)) return [settings.sentiment];
+  return ["vader"];
+}
+
+function modelLabel(field) {
+  return MODEL_LABELS[field] || field;
+}
 
 const state = {
   view: "dashboard",
@@ -186,7 +207,7 @@ function initCharts() {
 }
 
 async function loadPlayIndex() {
-  const response = await fetch(`${DATA_ROOT}/play_index.json`);
+  const response = await fetch(dataUrl("play_index.json"), { cache: "no-store" });
   if (!response.ok) throw new Error(`Unable to load play index: ${response.status}`);
   state.playIndex = await response.json();
   const ids = new Set(state.playIndex.map((play) => play.playId));
@@ -355,7 +376,7 @@ async function getPlay(playId) {
   if (state.cache.has(playId)) return state.cache.get(playId);
   const meta = state.playIndex.find((play) => play.playId === playId);
   if (!meta) throw new Error(`Unknown play: ${playId}`);
-  const response = await fetch(`${DATA_ROOT}/${meta.dataPath}`);
+  const response = await fetch(dataUrl(meta.dataPath), { cache: "no-store" });
   if (!response.ok) throw new Error(`Unable to load ${playId}: ${response.status}`);
   const payload = await response.json();
   state.cache.set(playId, payload);
@@ -364,8 +385,8 @@ async function getPlay(playId) {
 
 async function renderAll() {
   const token = ++state.renderToken;
-  const settings = readSettings();
   updateViewState();
+  const settings = readSettings();
 
   if (state.view === "dashboard") {
     await renderDashboard(settings, token);
@@ -387,6 +408,18 @@ function updateViewState() {
   el.singlePicker.classList.toggle("is-hidden", state.view !== "single");
   el.overlayPicker.classList.toggle("is-hidden", state.view !== "overlay");
   el.singleFilters.classList.toggle("is-hidden", state.view !== "single");
+  syncSentimentOptionsForView();
+}
+
+function syncSentimentOptionsForView() {
+  const allOption = el.sentiment.querySelector('option[value="all"]');
+  if (!allOption) return;
+  const isOverlay = state.view === "overlay";
+  allOption.hidden = isOverlay;
+  allOption.disabled = isOverlay;
+  if (isOverlay && el.sentiment.value === "all") {
+    el.sentiment.value = "vader";
+  }
 }
 
 function readSettings() {
@@ -503,16 +536,25 @@ async function renderSingle(settings, token) {
     kind: "curve",
   });
 
+  const activeFields = fieldsForSentiment(settings);
+  const decorateRow = (row) => {
+    const values = activeFields.map((field) => scoreFor(row, { ...settings, sentiment: field }));
+    return {
+      ...row,
+      label: row.sceneLabel,
+      playTitle: play.metadata.playTitle,
+      value: values[0],
+      value2: values[1],
+      value3: values[2],
+      values,
+      valueFields: activeFields,
+    };
+  };
+
   charts.scenes.setData({
     title: `${play.metadata.playTitle} Scenes`,
     meta: scoreLabel(settings),
-    rows: scenes.map((scene) => ({
-      ...scene,
-      label: scene.sceneLabel,
-      playTitle: play.metadata.playTitle,
-      value: scoreFor(scene, settings.sentiment === "both" ? { ...settings, sentiment: "vader" } : settings),
-      value2: settings.sentiment === "both" ? scoreFor(scene, { ...settings, sentiment: "dl" }) : undefined,
-    })),
+    rows: scenes.map(decorateRow),
     settings,
     play,
     kind: "scene",
@@ -521,13 +563,7 @@ async function renderSingle(settings, token) {
   charts.heatmap.setData({
     title: `${play.metadata.playTitle} Heatmap`,
     meta: scoreLabel(settings),
-    rows: scenes.map((scene) => ({
-      ...scene,
-      label: scene.sceneLabel,
-      playTitle: play.metadata.playTitle,
-      value: scoreFor(scene, settings.sentiment === "both" ? { ...settings, sentiment: "vader" } : settings),
-      value2: settings.sentiment === "both" ? scoreFor(scene, { ...settings, sentiment: "dl" }) : undefined,
-    })),
+    rows: scenes.map(decorateRow),
     settings,
     play,
     kind: "scene",
@@ -611,24 +647,29 @@ function buildSpeakerRows(rows, settings) {
     }
     const group = groups.get(row.speaker);
     group.count += 1;
-    group.vader += row.vader;
-    group.dl += row.dl;
+    group.vader += Number(row.vader || 0);
+    group.dl += Number(row.dl || 0);
     if (!group.text) group.text = row.text;
   });
 
+  const activeFields = fieldsForSentiment(settings);
   const result = Array.from(groups.values())
-    .map((group) => ({
-      ...group,
-      vader: group.vader / group.count,
-      dl: group.dl / group.count,
-      value: scoreFor(
-        { vader: group.vader / group.count, dl: group.dl / group.count },
-        settings.sentiment === "both" ? { ...settings, sentiment: "vader" } : settings,
-      ),
-      value2: settings.sentiment === "both"
-        ? scoreFor({ vader: group.vader / group.count, dl: group.dl / group.count }, { ...settings, sentiment: "dl" })
-        : undefined,
-    }))
+    .map((group) => {
+      const averaged = {
+        vader: group.vader / group.count,
+        dl: group.dl / group.count,
+      };
+      const values = activeFields.map((field) => scoreFor(averaged, { ...settings, sentiment: field }));
+      return {
+        ...group,
+        ...averaged,
+        value: values[0],
+        value2: values[1],
+        value3: values[2],
+        values,
+        valueFields: activeFields,
+      };
+    })
     .filter((group) => group.count >= minCount);
 
   const sort = el.speakerSort.value;
@@ -644,7 +685,7 @@ function buildSpeakerRows(rows, settings) {
 }
 
 function buildOverlayData(datasets, settings, comparisonDataset = null) {
-  const fields = settings.sentiment === "both" ? ["vader", "dl"] : [settings.sentiment];
+  const fields = fieldsForSentiment(settings);
   const curves = {};
   const averages = {};
   const comparison = comparisonDataset
@@ -771,8 +812,8 @@ class OverlayChart {
       yMax,
     };
     this.scale = scale;
-    const colors = { dl: "#0f766e", vader: "#b84a3a" };
-    const comparisonColors = { dl: "#a16207", vader: "#274c77" };
+    const colors = MODEL_COLORS;
+    const comparisonColors = COMPARISON_COLORS;
 
     drawGrid(this.ctx, plot, scale);
     drawZeroBaseline(this.ctx, plot, scale);
@@ -928,10 +969,8 @@ class CurveChart {
       return;
     }
 
-    const fields = this.payload.settings.sentiment === "both"
-      ? ["vader", "dl"]
-      : [this.payload.settings.sentiment];
-    const colors = { dl: "#0f766e", vader: "#b84a3a" };
+    const fields = fieldsForSentiment(this.payload.settings);
+    const colors = MODEL_COLORS;
     const rows = this.payload.rows;
     const smoothedValues = {};
     fields.forEach((field) => {
@@ -1049,31 +1088,37 @@ class BarChart {
     drawGrid(this.ctx, plot, scale);
     drawZeroBaseline(this.ctx, plot, scale);
     const step = (plot.right - plot.left) / rows.length;
-    const paired = this.payload.settings.sentiment === "both";
+    const activeFields = fieldsForSentiment(this.payload.settings);
+    const fieldCount = activeFields.length;
+    const showLegend = fieldCount > 1;
     const colorDomain = colorDomainForRows(rows, this.payload.settings);
+    const groupRatio = fieldCount === 1 ? 0.72 : fieldCount === 2 ? 0.34 : 0.24;
     rows.forEach((row, index) => {
-      const value = Number(row.value);
+      const values = rowValues(row, activeFields);
       const x = plot.left + index * step + step * 0.14;
       const zero = scale.y(0);
-      const barWidth = Math.max(3, step * (paired ? 0.34 : 0.72));
-      const values = paired ? [value, Number(row.value2)] : [value];
+      const barWidth = Math.max(3, step * groupRatio);
+      const gap = Math.max(2, step * 0.04);
       values.forEach((barValue, barIndex) => {
         const y = scale.y(barValue);
-        const xx = x + barIndex * (barWidth + Math.max(2, step * 0.04));
+        const xx = x + barIndex * (barWidth + gap);
         const top = Math.min(y, zero);
         const height = Math.max(1, Math.abs(y - zero));
-        drawScoreFill(this.ctx, xx, top, barWidth, height, barValue, colorDomain, barIndex === 1);
+        drawScoreFill(this.ctx, xx, top, barWidth, height, barValue, colorDomain, MODEL_PATTERN_INDEX[activeFields[barIndex]] || barIndex);
       });
+      const maxVal = Math.max(...values);
+      const minVal = Math.min(...values);
       this.items.push({
         row,
         x,
-        y: Math.min(scale.y(Math.max(value, Number(row.value2 ?? value))), zero),
-        width: paired ? barWidth * 2 + Math.max(2, step * 0.04) : barWidth,
-        height: Math.max(1, Math.abs(scale.y(Math.min(value, Number(row.value2 ?? value))) - scale.y(Math.max(value, Number(row.value2 ?? value)))) + 3),
+        y: Math.min(scale.y(maxVal), zero),
+        width: barWidth * fieldCount + gap * (fieldCount - 1),
+        height: Math.max(1, Math.abs(scale.y(minVal) - scale.y(maxVal)) + 3),
       });
       if (step > 26) {
         this.ctx.save();
-        this.ctx.translate(x + (paired ? barWidth : barWidth / 2), plot.bottom + 6);
+        const centerOffset = (barWidth * fieldCount + gap * (fieldCount - 1)) / 2;
+        this.ctx.translate(x + centerOffset, plot.bottom + 6);
         this.ctx.rotate(-Math.PI / 4);
         this.ctx.fillStyle = "#62706c";
         this.ctx.font = "10px sans-serif";
@@ -1081,7 +1126,7 @@ class BarChart {
         this.ctx.restore();
       }
     });
-    if (paired) drawModelLegend(this.ctx, plot.right - 128, 20);
+    if (showLegend) drawModelLegend(this.ctx, plot.right - 128, 20, activeFields);
   }
 
   drawHorizontal(width, height) {
@@ -1091,38 +1136,40 @@ class BarChart {
     const scale = {
       x: (value) => map(value, xMin, xMax, plot.left, plot.right),
     };
-    const zero = scale.x(0);
-    const paired = this.payload.settings.sentiment === "both";
+    const activeFields = fieldsForSentiment(this.payload.settings);
+    const fieldCount = activeFields.length;
+    const showLegend = fieldCount > 1;
     const colorDomain = colorDomainForRows(rows, this.payload.settings);
     drawZeroBaseline(this.ctx, plot, scale, "vertical");
 
     const step = (plot.bottom - plot.top) / rows.length;
+    const groupRatio = fieldCount === 1 ? 0.64 : fieldCount === 2 ? 0.3 : 0.22;
     rows.forEach((row, index) => {
-      const value = Number(row.value);
+      const values = rowValues(row, activeFields);
       const y = plot.top + index * step + step * 0.18;
-      const barHeight = Math.max(3, step * (paired ? 0.3 : 0.64));
-      const values = paired ? [value, Number(row.value2)] : [value];
+      const barHeight = Math.max(3, step * groupRatio);
       values.forEach((barValue, barIndex) => {
         const x = map(Math.min(0, barValue), xMin, xMax, plot.left, plot.right);
         const x2 = map(Math.max(0, barValue), xMin, xMax, plot.left, plot.right);
         const yy = y + barIndex * (barHeight + 2);
-        drawScoreFill(this.ctx, x, yy, Math.max(1, x2 - x), barHeight, barValue, colorDomain, barIndex === 1);
+        drawScoreFill(this.ctx, x, yy, Math.max(1, x2 - x), barHeight, barValue, colorDomain, MODEL_PATTERN_INDEX[activeFields[barIndex]] || barIndex);
       });
       this.ctx.fillStyle = "#33403d";
       this.ctx.font = "11px sans-serif";
       this.ctx.textAlign = "right";
-      this.ctx.fillText(truncate(row.label, 16), plot.left - 8, y + (paired ? barHeight + 2 : barHeight * 0.72));
-      const low = Math.min(value, Number(row.value2 ?? value), 0);
-      const high = Math.max(value, Number(row.value2 ?? value), 0);
+      const labelY = y + (barHeight * fieldCount + 2 * (fieldCount - 1)) / 2;
+      this.ctx.fillText(truncate(row.label, 16), plot.left - 8, labelY + 3);
+      const low = Math.min(...values, 0);
+      const high = Math.max(...values, 0);
       this.items.push({
         row,
         x: map(low, xMin, xMax, plot.left, plot.right),
         y,
         width: Math.max(1, map(high, xMin, xMax, plot.left, plot.right) - map(low, xMin, xMax, plot.left, plot.right)),
-        height: paired ? barHeight * 2 + 2 : barHeight,
+        height: barHeight * fieldCount + 2 * (fieldCount - 1),
       });
     });
-    if (paired) drawModelLegend(this.ctx, plot.right - 128, 20);
+    if (showLegend) drawModelLegend(this.ctx, plot.right - 128, 20, activeFields);
     this.ctx.textAlign = "left";
   }
 
@@ -1203,7 +1250,9 @@ class HeatmapChart {
     const plot = { left: 48, top: 58, right: width - 18, bottom: height - 24 };
     const cellWidth = (plot.right - plot.left) / maxCols;
     const cellHeight = (plot.bottom - plot.top) / acts.length;
-    const paired = this.payload.settings.sentiment === "both";
+    const activeFields = fieldsForSentiment(this.payload.settings);
+    const fieldCount = activeFields.length;
+    const showLegend = fieldCount > 1;
     const colorDomain = colorDomainForRows(this.payload.rows, this.payload.settings);
 
     acts.forEach((actGroup, rowIndex) => {
@@ -1215,14 +1264,27 @@ class HeatmapChart {
       actGroup.rows.forEach((scene, colIndex) => {
         const x = plot.left + colIndex * cellWidth;
         const pad = 3;
-        if (paired) {
-          const half = (cellWidth - pad * 2) / 2;
-          drawScoreFill(this.ctx, x + pad, y + pad, half, cellHeight - pad * 2, scene.value, colorDomain, false);
-          drawScoreFill(this.ctx, x + pad + half, y + pad, half, cellHeight - pad * 2, scene.value2, colorDomain, true);
+        const innerWidth = cellWidth - pad * 2;
+        const innerHeight = cellHeight - pad * 2;
+        const values = rowValues(scene, activeFields);
+        if (fieldCount > 1) {
+          const stripWidth = innerWidth / fieldCount;
+          values.forEach((value, fieldIndex) => {
+            drawScoreFill(
+              this.ctx,
+              x + pad + stripWidth * fieldIndex,
+              y + pad,
+              stripWidth,
+              innerHeight,
+              value,
+              colorDomain,
+              MODEL_PATTERN_INDEX[activeFields[fieldIndex]] || fieldIndex,
+            );
+          });
         } else {
-          drawScoreFill(this.ctx, x + pad, y + pad, cellWidth - pad * 2, cellHeight - pad * 2, scene.value, colorDomain, false);
+          drawScoreFill(this.ctx, x + pad, y + pad, innerWidth, innerHeight, values[0], colorDomain, MODEL_PATTERN_INDEX[activeFields[0]] || 0);
         }
-        this.ctx.fillStyle = rgbaText(scene.value);
+        this.ctx.fillStyle = rgbaText(values[0]);
         this.ctx.textAlign = "center";
         this.ctx.font = "10px sans-serif";
         this.ctx.fillText(scene.sceneLabel, x + cellWidth / 2, y + cellHeight / 2 + 3);
@@ -1230,12 +1292,12 @@ class HeatmapChart {
           row: scene,
           x: x + pad,
           y: y + pad,
-          width: cellWidth - pad * 2,
-          height: cellHeight - pad * 2,
+          width: innerWidth,
+          height: innerHeight,
         });
       });
     });
-    if (paired) drawModelLegend(this.ctx, plot.right - 128, 20);
+    if (showLegend) drawModelLegend(this.ctx, plot.right - 128, 20, activeFields);
     this.ctx.textAlign = "left";
   }
 
@@ -1396,11 +1458,15 @@ function sampleSeries(series, maxPoints) {
 function scoreDomain(rows, settings, includeZero) {
   if (settings.yScale === "fixed") return [-1, 1];
   const values = [];
+  const activeFields = fieldsForSentiment(settings);
   rows.forEach((row) => {
     if (Number.isFinite(Number(row.value))) values.push(Number(row.value));
     if (Number.isFinite(Number(row.value2))) values.push(Number(row.value2));
-    if (settings.sentiment === "both") {
-      values.push(Number(row.dl || 0), Number(row.vader || 0));
+    if (Number.isFinite(Number(row.value3))) values.push(Number(row.value3));
+    if (settings.sentiment === "all") {
+      activeFields.forEach((field) => {
+        values.push(Number(row[field] || 0));
+      });
     } else {
       values.push(scoreFor(row, settings));
     }
@@ -1593,7 +1659,7 @@ function drawLegend(ctx, fields, colors, x, y) {
     ctx.stroke();
     ctx.fillStyle = "#33403d";
     ctx.font = "12px sans-serif";
-    ctx.fillText(field === "dl" ? "DL" : "VADER", x + 28, yy);
+    ctx.fillText(modelLabel(field), x + 28, yy);
   });
   ctx.restore();
 }
@@ -1620,32 +1686,29 @@ function drawOverlayLegend(ctx, payload, referenceColors, comparisonColors, x, y
   if (payload.playCount) {
     drawLegendLine("rgba(70, 77, 75, 0.34)", "Selected plays", 1.2);
     payload.fields.forEach((field) => {
-      drawLegendLine(referenceColors[field], `Selected avg ${field === "dl" ? "DL" : "VADER"}`);
+      drawLegendLine(referenceColors[field], `Selected avg ${modelLabel(field)}`);
     });
   }
 
   if (payload.comparison) {
     payload.fields.forEach((field) => {
-      drawLegendLine(comparisonColors[field], `Comparison ${field === "dl" ? "DL" : "VADER"}`, 3.2);
+      drawLegendLine(comparisonColors[field], `Comparison ${modelLabel(field)}`, 3.2);
     });
   }
   ctx.restore();
 }
 
-function drawModelLegend(ctx, x, y) {
+function drawModelLegend(ctx, x, y, fields) {
+  const activeFields = Array.isArray(fields) && fields.length ? fields : ["vader", "dl"];
   ctx.save();
   ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
-  const rows = [
-    { label: "VADER", hatched: false },
-    { label: "DL", hatched: true },
-  ];
-  rows.forEach((row, index) => {
+  activeFields.forEach((field, index) => {
     const yy = y + index * 18;
-    drawScoreFill(ctx, x, yy - 11, 22, 9, 0.55, undefined, row.hatched);
+    drawScoreFill(ctx, x, yy - 11, 22, 9, 0.55, undefined, MODEL_PATTERN_INDEX[field] ?? index);
     ctx.fillStyle = "#33403d";
     ctx.font = "12px sans-serif";
-    ctx.fillText(row.label, x + 30, yy - 3);
+    ctx.fillText(modelLabel(field), x + 30, yy - 3);
   });
   ctx.restore();
 }
@@ -1657,8 +1720,9 @@ function scoreFor(row, settings) {
 
 function scoreLabel(settings) {
   if (settings.sentiment === "vader") return "VADER";
-  if (settings.sentiment === "both") return "VADER + DL";
-  return "Deep Learning";
+  if (settings.sentiment === "dl") return "DL (siebert)";
+  if (settings.sentiment === "all") return "VADER + DL (siebert)";
+  return "Sentiment";
 }
 
 function settingsLabel(settings, count) {
@@ -1677,6 +1741,12 @@ function smoothingLabel(settings) {
   return settings.smoothing === "raw" ? "Raw" : `${smoothNames[settings.smoothing]} ${settings.windowSize}`;
 }
 
+function allScoresLabel(row) {
+  return MODEL_KEYS
+    .map((field) => `${modelLabel(field)} ${formatScore(row[field])}`)
+    .join(" · ");
+}
+
 function tooltipHtml(playTitle, row) {
   const label = row.sceneLabel || row.label || "";
   const speaker = row.speaker || row.label || "";
@@ -1686,23 +1756,23 @@ function tooltipHtml(playTitle, row) {
     <strong>${escapeHtml(playTitle)}</strong>
     <span>${escapeHtml(label)}${speaker ? ` · ${escapeHtml(speaker)}` : ""}${count}</span>
     ${text}
-    <span>VADER ${formatScore(row.vader)} · DL ${formatScore(row.dl)}</span>
+    <span>${allScoresLabel(row)}</span>
   `;
 }
 
 function overlayTooltipHtml(payload, item) {
   const referenceScores = payload.playCount
     ? payload.fields
-        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+        .map((field) => `${modelLabel(field)} ${formatScore(payload.averages[field][item.index])}`)
         .join(" · ")
     : "";
   const comparisonScores = payload.comparison
     ? payload.fields
-        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
+        .map((field) => `${modelLabel(field)} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
         .join(" · ")
     : "";
   const closest = item.closest
-    ? `<span>Closest curve: ${escapeHtml(item.closest.playTitle)} · ${item.closest.role} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}</span>`
+    ? `<span>Closest curve: ${escapeHtml(item.closest.playTitle)} · ${item.closest.role} · ${modelLabel(item.closest.field)} ${formatScore(item.closest.value)}</span>`
     : "";
   return `
     <strong>Overlay comparison</strong>
@@ -1716,16 +1786,16 @@ function overlayTooltipHtml(payload, item) {
 function setContextFromOverlay(payload, item) {
   const scores = payload.playCount
     ? payload.fields
-        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.averages[field][item.index])}`)
+        .map((field) => `${modelLabel(field)} ${formatScore(payload.averages[field][item.index])}`)
         .join(" · ")
     : "";
   const comparison = payload.comparison
     ? payload.fields
-        .map((field) => `${field === "dl" ? "DL" : "VADER"} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
+        .map((field) => `${modelLabel(field)} ${formatScore(payload.comparison.curves[field]?.values[item.index])}`)
         .join(" · ")
     : "";
   const closest = item.closest
-    ? `\nClosest curve: ${item.closest.playTitle} · ${item.closest.role} · ${item.closest.field === "dl" ? "DL" : "VADER"} ${formatScore(item.closest.value)}`
+    ? `\nClosest curve: ${item.closest.playTitle} · ${item.closest.role} · ${modelLabel(item.closest.field)} ${formatScore(item.closest.value)}`
     : "";
   el.contextTitle.textContent = `Overlay · ${formatPercent(item.progress)}`;
   el.contextMeta.textContent = `${payload.playCount} selected plays · ${payload.gridPoints} normalized points`;
@@ -1741,19 +1811,19 @@ function setContextFromItem(play, row, kind) {
   el.contextTitle.textContent = `${title} · ${label}`;
 
   if (kind === "speaker") {
-    el.contextMeta.textContent = `${row.label} · ${row.count} rows · VADER ${formatScore(row.vader)} · DL ${formatScore(row.dl)}`;
+    el.contextMeta.textContent = `${row.label} · ${row.count} rows · ${allScoresLabel(row)}`;
     el.contextText.textContent = row.text || "No original text sample is attached to this aggregate.";
     return;
   }
 
   if (kind === "scene" || !row.text) {
-    el.contextMeta.textContent = `${label} · ${row.numSentences || 0} sentences · VADER ${formatScore(row.vader)} · DL ${formatScore(row.dl)}`;
+    el.contextMeta.textContent = `${label} · ${row.numSentences || 0} sentences · ${allScoresLabel(row)}`;
     el.contextText.textContent = "Scene-level aggregate.";
     return;
   }
 
   const speaker = row.speaker ? `${row.speaker} · ` : "";
-  el.contextMeta.textContent = `${speaker}${label} · ${row.type.replace("_", " ")} · VADER ${formatScore(row.vader)} · DL ${formatScore(row.dl)}`;
+  el.contextMeta.textContent = `${speaker}${label} · ${row.type.replace("_", " ")} · ${allScoresLabel(row)}`;
   el.contextText.textContent = row.text;
 }
 
@@ -1785,7 +1855,7 @@ async function downloadFilteredCsv() {
 function downloadSelectedPublicCsv() {
   const meta = state.playIndex.find((play) => play.playId === state.singlePlay);
   if (!meta) return;
-  downloadUrl(`${DATA_ROOT}/${meta.publicCsvPath}`, `${meta.playId}-public.csv`);
+  downloadUrl(dataUrl(meta.publicCsvPath), `${meta.playId}-public.csv`);
 }
 
 async function downloadSelectedSceneCsv() {
@@ -1797,7 +1867,7 @@ async function downloadSelectedSceneCsv() {
 }
 
 function downloadAllSummaryCsv() {
-  downloadUrl(`${DATA_ROOT}/downloads/summary_statistics_all_plays.csv`, "summary_statistics_all_plays.csv");
+  downloadUrl(dataUrl("downloads/summary_statistics_all_plays.csv"), "summary_statistics_all_plays.csv");
 }
 
 function rowsToCsv(rows, playTitle) {
@@ -1853,6 +1923,11 @@ function downloadUrl(url, filename) {
   link.click();
 }
 
+function dataUrl(path) {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${DATA_ROOT}/${path}${separator}v=${encodeURIComponent(DATA_VERSION)}`;
+}
+
 function renderVisibleCharts() {
   if (state.view === "dashboard") {
     charts.dashboard.forEach((chart) => chart.draw());
@@ -1882,17 +1957,29 @@ function colorDomainForRows(rows, settings) {
   rows.forEach((row) => {
     values.push(Number(row.value || 0));
     if (Number.isFinite(Number(row.value2))) values.push(Number(row.value2));
+    if (Number.isFinite(Number(row.value3))) values.push(Number(row.value3));
   });
   const maxAbs = Math.max(0.08, ...values.map((value) => Math.abs(value)));
   return [-maxAbs, maxAbs];
 }
 
-function drawScoreFill(ctx, x, y, width, height, value, domain, hatched) {
+function rowValues(row, fields) {
+  if (Array.isArray(row.values) && row.values.length === fields.length) {
+    return row.values.map((value) => Number(value || 0));
+  }
+  return fields.map((field) => Number(row[field] || 0));
+}
+
+function drawScoreFill(ctx, x, y, width, height, value, domain, pattern) {
   ctx.save();
   ctx.fillStyle = scoreColor(value, domain);
   ctx.fillRect(x, y, width, height);
-  if (hatched) {
-    drawDiagonalHatch(ctx, x, y, width, height, Number(value) < 0 ? "rgba(96, 36, 30, 0.55)" : "rgba(7, 77, 72, 0.55)");
+  const patternIndex = pattern === true ? 1 : pattern === false ? 0 : Number(pattern) || 0;
+  const hatchColor = Number(value) < 0 ? "rgba(96, 36, 30, 0.55)" : "rgba(7, 77, 72, 0.55)";
+  if (patternIndex === 1) {
+    drawDiagonalHatch(ctx, x, y, width, height, hatchColor);
+  } else if (patternIndex === 2) {
+    drawVerticalHatch(ctx, x, y, width, height, hatchColor);
   }
   ctx.restore();
 }
@@ -1909,6 +1996,23 @@ function drawDiagonalHatch(ctx, x, y, width, height, color) {
     ctx.beginPath();
     ctx.moveTo(x + offset, y + height);
     ctx.lineTo(x + offset + height, y);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawVerticalHatch(ctx, x, y, width, height, color) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(x, y, width, height);
+  ctx.clip();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.4;
+  const spacing = 5;
+  for (let offset = 0; offset < width; offset += spacing) {
+    ctx.beginPath();
+    ctx.moveTo(x + offset, y);
+    ctx.lineTo(x + offset, y + height);
     ctx.stroke();
   }
   ctx.restore();

@@ -64,8 +64,8 @@
           <label class="field-label" for="sentiment">Sentiment</label>
           <select id="sentiment">
             <option value="vader">VADER</option>
-            <option value="dl">Deep Learning</option>
-            <option value="both">Both</option>
+            <option value="dl">DL (siebert)</option>
+            <option value="all">Both</option>
           </select>
 
           <label class="field-label" for="smoothing">Smoothing</label>
@@ -76,7 +76,7 @@
           </select>
 
           <label class="field-label" for="windowSize">Window <span id="windowValue">200</span></label>
-          <input id="windowSize" type="range" min="3" max="500" value="200" step="1">
+          <input id="windowSize" type="range" min="10" max="500" value="200" step="10">
 
           <label class="toggle-row" for="stageDirections">
             <input id="stageDirections" type="checkbox">
@@ -215,6 +215,6 @@
       </main>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260518-vader-dl"></script>
   </body>
 </html>
