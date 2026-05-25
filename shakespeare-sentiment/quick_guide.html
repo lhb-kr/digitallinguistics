@@ -193,12 +193,26 @@
       </section>
 
       <section class="guide-card">
+        <h2>7b. Reference Lines (Single Mode)</h2>
+        <p>These toggles overlay horizontal reference lines onto the main Sentiment Arc in Single view, and mark every point where the smoothed arc crosses each enabled line with a colored dot. Each line can be toggled independently, and the chart can be downloaded as PNG using the existing PNG button.</p>
+        <ul>
+          <li><strong style="color:#7c3aed;">Start–End average (purple)</strong>: the average of the first and last smoothed sentiment values on the arc.</li>
+          <li><strong style="color:#0f766e;">Overall mean (teal)</strong>: the mean of every point on the smoothed arc.</li>
+          <li><strong style="color:#d97706;">First/Last scene avg (orange)</strong>: the average of scene 1.1's sentiment and the final scene's sentiment, computed from scene-level aggregates.</li>
+          <li>Each line is dashed and labeled on both ends. Crossings appear as colored dots on the arc itself.</li>
+          <li>Reference values are computed from the primary sentiment model (VADER if "Both" is selected).</li>
+        </ul>
+      </section>
+
+      <section class="guide-card">
         <h2>8. Downloads</h2>
         <ul>
           <li><strong>Filtered CSV</strong>: exports the currently filtered single-play rows.</li>
           <li><strong>Play CSV</strong>: exports the public unit-level dataset for the selected play.</li>
           <li><strong>Scene CSV</strong>: exports scene summaries for the selected play.</li>
           <li><strong>All Summary CSV</strong>: exports play, act, and scene summary statistics for all 37 plays.</li>
+          <li><strong>Arc Stats (This Play)</strong>: exports a one-row summary of the sentiment arc for the currently selected play, using the active model, granularity, and smoothing settings. Columns include: start score, end score, midline score (start+end avg), highest/lowest/mean score, first scene label and score (1.1), last scene label and score (n.n), first/last scene average, and crossings count against each of the three reference lines (midline, mean, first/last scene avg).</li>
+          <li><strong>Arc Stats (All Plays)</strong>: same arc statistics as above, but for every play in the library in a single file. One click pulls every play's data using the current model/smoothing settings — useful for comparing emotional arc shapes across all plays at once.</li>
           <li><strong>PNG</strong>: downloads the visible chart image.</li>
         </ul>
       </section>
