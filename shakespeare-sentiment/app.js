@@ -13,6 +13,13 @@ const MODEL_COLORS = { vader: "#b84a3a", dl: "#0f766e" };
 const COMPARISON_COLORS = { vader: "#274c77", dl: "#a16207" };
 const MODEL_PATTERN_INDEX = { vader: 0, dl: 1 };
 
+// Colors for the three optional reference lines on the Single-view main chart.
+const REF_LINE_COLORS = {
+  midline:         "#7c3aed", // purple — start+end avg
+  mean:            "#0f766e", // teal — overall mean
+  firstLastScene:  "#d97706", // orange — first scene + last scene avg
+};
+
 function fieldsForSentiment(settings) {
   if (settings.sentiment === "all") return ["vader", "dl"];
   if (MODEL_KEYS.includes(settings.sentiment)) return [settings.sentiment];
@@ -33,6 +40,10 @@ const state = {
   overlayComparisonPlay: "",
   referencePlaysTouched: false,
   renderToken: 0,
+  // Single-view main chart: which reference lines are visible
+  refLineMidline: false,
+  refLineMean: false,
+  refLineFirstLastScene: false,
 };
 
 const charts = {
@@ -133,6 +144,9 @@ function bindElements() {
     "downloadAllSummary",
     "downloadArcStats",
     "downloadAllArcStats",
+    "refLineMidline",
+    "refLineMean",
+    "refLineFirstLastScene",
   ];
   ids.forEach((id) => {
     el[id] = document.getElementById(id);
@@ -200,6 +214,20 @@ function bindControls() {
   el.downloadAllSummary.addEventListener("click", downloadAllSummaryCsv);
   el.downloadArcStats.addEventListener("click", downloadArcStatsCsv);
   el.downloadAllArcStats.addEventListener("click", downloadAllArcStatsCsv);
+
+  // Reference line toggles for the Single-view main arc chart.
+  el.refLineMidline.addEventListener("change", () => {
+    state.refLineMidline = el.refLineMidline.checked;
+    renderAll();
+  });
+  el.refLineMean.addEventListener("change", () => {
+    state.refLineMean = el.refLineMean.checked;
+    renderAll();
+  });
+  el.refLineFirstLastScene.addEventListener("change", () => {
+    state.refLineFirstLastScene = el.refLineFirstLastScene.checked;
+    renderAll();
+  });
 }
 
 function initCharts() {
@@ -531,6 +559,42 @@ async function renderSingle(settings, token) {
 
   el.mainChartTitle.textContent = `${play.metadata.playTitle} Sentiment Arc`;
   el.mainChartMeta.textContent = meta;
+
+  // Build reference lines based on the user's toggle state.
+  // We use the PRIMARY model field (first in fieldsForSentiment) as the
+  // source of truth for the threshold values, so the reference lines
+  // describe the same curve the markers appear on.
+  const refFields = fieldsForSentiment(settings);
+  const primaryField = refFields[0];
+  const primaryRaw = rows.map((row) => scoreFor(row, { ...settings, sentiment: primaryField }));
+  const primarySmoothed = smoothValues(primaryRaw, settings.smoothing, settings.windowSize);
+  const primaryStats = computeArcStats(primarySmoothed);
+  const sceneInfo = getFirstLastSceneScores(play, primaryField);
+  const referenceLines = [];
+  if (primaryStats) {
+    if (state.refLineMidline) {
+      referenceLines.push({
+        value: primaryStats.midlineScore,
+        color: REF_LINE_COLORS.midline,
+        label: "Start–End avg",
+      });
+    }
+    if (state.refLineMean) {
+      referenceLines.push({
+        value: primaryStats.meanScore,
+        color: REF_LINE_COLORS.mean,
+        label: "Mean",
+      });
+    }
+    if (state.refLineFirstLastScene && sceneInfo) {
+      referenceLines.push({
+        value: sceneInfo.firstLastAvg,
+        color: REF_LINE_COLORS.firstLastScene,
+        label: `First/Last scene avg (${sceneInfo.firstLabel} & ${sceneInfo.lastLabel})`,
+      });
+    }
+  }
+
   charts.main.setData({
     title: play.metadata.playTitle,
     meta,
@@ -538,6 +602,7 @@ async function renderSingle(settings, token) {
     settings,
     play,
     kind: "curve",
+    referenceLines,
   });
 
   const activeFields = fieldsForSentiment(settings);
@@ -993,6 +1058,18 @@ class CurveChart {
       drawLine(this.ctx, series, colors[field], plot);
     });
 
+    // Draw reference lines + crossing markers (Single view main chart only).
+    if (this.payload.referenceLines && this.payload.referenceLines.length) {
+      drawReferenceLines(
+        this.ctx,
+        plot,
+        scale,
+        this.payload.referenceLines,
+        smoothedValues,
+        fields,
+      );
+    }
+
     drawLegend(this.ctx, fields, colors, plot.right - 120, 18);
   }
 
@@ -1364,6 +1441,32 @@ class HeatmapChart {
  * crossingsMidline    Number of times the arc crosses the midlineScore line
  * crossingsMean       Number of times the arc crosses the meanScore line
  */
+/**
+ * Pull the first scene (1.1) and last scene (n.n) sentiment averages
+ * from the scene-level aggregates for a given model field.
+ *
+ * Returns { firstScene, lastScene, firstLastAvg } or null if unavailable.
+ *
+ * Note: scenes.exclude already excludes stage directions in the underlying
+ * dataset, so this is the cleanest scene-level signal we have.
+ */
+function getFirstLastSceneScores(play, field) {
+  const scenes = play?.scenes?.exclude;
+  if (!Array.isArray(scenes) || scenes.length === 0) return null;
+  const first = scenes[0];
+  const last  = scenes[scenes.length - 1];
+  const firstScore = Number(first[field]);
+  const lastScore  = Number(last[field]);
+  if (!Number.isFinite(firstScore) || !Number.isFinite(lastScore)) return null;
+  return {
+    firstScene:    firstScore,
+    lastScene:     lastScore,
+    firstLastAvg:  (firstScore + lastScore) / 2,
+    firstLabel:    first.sceneLabel || `${first.act}.${first.sceneIndex || ""}`,
+    lastLabel:     last.sceneLabel  || `${last.act}.${last.sceneIndex  || ""}`,
+  };
+}
+
 function computeArcStats(values) {
   if (!values || values.length === 0) {
     return null;
@@ -1421,22 +1524,60 @@ function computeArcStats(values) {
 /**
  * Build one CSV row of arc stats for a single play + model field.
  * Returns a plain object whose keys match the CSV header.
+ *
+ * sceneInfo (optional) is the object returned by getFirstLastSceneScores().
+ * When provided, three additional columns are populated: first_scene_score,
+ * last_scene_score, first_last_scene_avg, and crossings_first_last_scene_avg
+ * (crossings of the smoothed arc against the first_last_scene_avg line).
  */
-function arcStatsRow(playTitle, field, values) {
+function arcStatsRow(playTitle, field, values, sceneInfo) {
   const stats = computeArcStats(values);
   if (!stats) return null;
+
+  // Count crossings of the smoothed arc against the first-last scene avg line.
+  let crossingsFirstLastScene = "";
+  if (sceneInfo && Number.isFinite(sceneInfo.firstLastAvg)) {
+    crossingsFirstLastScene = String(countCrossingsAt(values, sceneInfo.firstLastAvg));
+  }
+
   return {
-    play_title:         playTitle,
-    model:              modelLabel(field),
-    start_score:        formatScore(stats.startScore),
-    end_score:          formatScore(stats.endScore),
-    midline_score:      formatScore(stats.midlineScore),
-    high_score:         formatScore(stats.highScore),
-    low_score:          formatScore(stats.lowScore),
-    mean_score:         formatScore(stats.meanScore),
-    crossings_midline:  String(stats.crossingsMidline),
-    crossings_mean:     String(stats.crossingsMean),
+    play_title:                       playTitle,
+    model:                            modelLabel(field),
+    start_score:                      formatScore(stats.startScore),
+    end_score:                        formatScore(stats.endScore),
+    midline_score:                    formatScore(stats.midlineScore),
+    high_score:                       formatScore(stats.highScore),
+    low_score:                        formatScore(stats.lowScore),
+    mean_score:                       formatScore(stats.meanScore),
+    first_scene_label:                sceneInfo ? sceneInfo.firstLabel : "",
+    last_scene_label:                 sceneInfo ? sceneInfo.lastLabel  : "",
+    first_scene_score:                sceneInfo ? formatScore(sceneInfo.firstScene)   : "",
+    last_scene_score:                 sceneInfo ? formatScore(sceneInfo.lastScene)    : "",
+    first_last_scene_avg:             sceneInfo ? formatScore(sceneInfo.firstLastAvg) : "",
+    crossings_midline:                String(stats.crossingsMidline),
+    crossings_mean:                   String(stats.crossingsMean),
+    crossings_first_last_scene_avg:   crossingsFirstLastScene,
   };
+}
+
+/**
+ * Standalone crossings counter — same logic used inside computeArcStats
+ * but exposed for arbitrary threshold lines (e.g. the first-last scene avg).
+ */
+function countCrossingsAt(values, threshold) {
+  if (!values || values.length < 2) return 0;
+  let count = 0;
+  for (let i = 0; i < values.length - 1; i += 1) {
+    const a = values[i]     - threshold;
+    const b = values[i + 1] - threshold;
+    if (b === 0) {
+      count += 1;
+      i += 1;
+    } else if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 /**
@@ -1459,16 +1600,23 @@ async function downloadArcStatsCsv() {
     "high_score",
     "low_score",
     "mean_score",
+    "first_scene_label",
+    "last_scene_label",
+    "first_scene_score",
+    "last_scene_score",
+    "first_last_scene_avg",
     "crossings_midline",
     "crossings_mean",
+    "crossings_first_last_scene_avg",
   ];
 
   const lines = [header.join(",")];
 
   fields.forEach((field) => {
-    const raw      = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
-    const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
-    const statsRow = arcStatsRow(play.metadata.playTitle, field, smoothed);
+    const raw       = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+    const smoothed  = smoothValues(raw, settings.smoothing, settings.windowSize);
+    const sceneInfo = getFirstLastSceneScores(play, field);
+    const statsRow  = arcStatsRow(play.metadata.playTitle, field, smoothed, sceneInfo);
     if (statsRow) {
       lines.push(header.map((key) => csvEscape(statsRow[key])).join(","));
     }
@@ -1495,8 +1643,14 @@ async function downloadAllArcStatsCsv() {
     "high_score",
     "low_score",
     "mean_score",
+    "first_scene_label",
+    "last_scene_label",
+    "first_scene_score",
+    "last_scene_score",
+    "first_last_scene_avg",
     "crossings_midline",
     "crossings_mean",
+    "crossings_first_last_scene_avg",
   ];
 
   const lines = [header.join(",")];
@@ -1506,13 +1660,14 @@ async function downloadAllArcStatsCsv() {
     try {
       play = await getPlay(meta.playId);
     } catch {
-      continue; // skip plays that fail to load
+      continue;
     }
     const rows = getRows(play, settings, {});
     fields.forEach((field) => {
-      const raw      = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
-      const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
-      const statsRow = arcStatsRow(play.metadata.playTitle, field, smoothed);
+      const raw       = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+      const smoothed  = smoothValues(raw, settings.smoothing, settings.windowSize);
+      const sceneInfo = getFirstLastSceneScores(play, field);
+      const statsRow  = arcStatsRow(play.metadata.playTitle, field, smoothed, sceneInfo);
       if (statsRow) {
         lines.push(header.map((key) => csvEscape(statsRow[key])).join(","));
       }
@@ -1782,6 +1937,81 @@ function drawProgressAxis(ctx, plot, scale) {
     ctx.fillText(`${tick}%`, scale.x(tick), plot.bottom + 18);
   });
   ctx.restore();
+}
+
+/**
+ * Draw horizontal reference lines + crossing markers on the curve chart.
+ *
+ * Parameters
+ * ──────────
+ * lines           Array of { value, color, label } objects.
+ * smoothedValues  Map of field → smoothed value array (matches what was drawn).
+ * fields          Active model fields in draw order; first field is the
+ *                 primary curve we mark crossings on.
+ *
+ * Each line is drawn as a dashed horizontal line spanning the plot, with
+ * its label on the left and value on the right. Crossings are marked as
+ * filled circles where the primary (first-field) smoothed arc actually
+ * crosses the threshold.
+ */
+function drawReferenceLines(ctx, plot, scale, lines, smoothedValues, fields) {
+  if (!Array.isArray(lines) || lines.length === 0) return;
+  const primaryField = fields[0];
+  const primaryValues = smoothedValues[primaryField] || [];
+
+  lines.forEach((line) => {
+    if (!Number.isFinite(line.value)) return;
+    const y = scale.y(line.value);
+    if (!Number.isFinite(y) || y < plot.top || y > plot.bottom) return;
+
+    // Horizontal dashed line
+    ctx.save();
+    ctx.strokeStyle = line.color;
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([6, 4]);
+    ctx.beginPath();
+    ctx.moveTo(plot.left, y);
+    ctx.lineTo(plot.right, y);
+    ctx.stroke();
+    ctx.restore();
+
+    // Label on the left + value on the right
+    ctx.save();
+    ctx.fillStyle = line.color;
+    ctx.font = "600 10px sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+    ctx.fillText(line.label, plot.left + 4, y - 3);
+    ctx.textAlign = "right";
+    ctx.fillText(formatScore(line.value), plot.right - 4, y - 3);
+    ctx.restore();
+
+    // Crossing markers (filled circles) on the primary curve
+    if (primaryValues.length >= 2) {
+      ctx.save();
+      ctx.fillStyle = line.color;
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1.2;
+      const length = primaryValues.length;
+      for (let i = 0; i < length - 1; i += 1) {
+        const a = primaryValues[i]     - line.value;
+        const b = primaryValues[i + 1] - line.value;
+        const crosses = (b === 0) || ((a < 0 && b > 0) || (a > 0 && b < 0));
+        if (!crosses) continue;
+        // Linear-interpolate the x-progress where the crossing occurs.
+        const t = (a === b) ? 0.5 : a / (a - b);
+        const progressA = length <= 1 ? 0 : (i / (length - 1)) * 100;
+        const progressB = length <= 1 ? 0 : ((i + 1) / (length - 1)) * 100;
+        const progress = progressA + (progressB - progressA) * t;
+        const px = scale.x(progress);
+        ctx.beginPath();
+        ctx.arc(px, y, 4.2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+  });
 }
 
 function makeTicks(min, max) {
