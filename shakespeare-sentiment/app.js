@@ -131,6 +131,8 @@ function bindElements() {
     "downloadPublic",
     "downloadSceneSummary",
     "downloadAllSummary",
+    "downloadArcStats",
+    "downloadAllArcStats",
   ];
   ids.forEach((id) => {
     el[id] = document.getElementById(id);
@@ -196,6 +198,8 @@ function bindControls() {
   el.downloadPublic.addEventListener("click", downloadSelectedPublicCsv);
   el.downloadSceneSummary.addEventListener("click", downloadSelectedSceneCsv);
   el.downloadAllSummary.addEventListener("click", downloadAllSummaryCsv);
+  el.downloadArcStats.addEventListener("click", downloadArcStatsCsv);
+  el.downloadAllArcStats.addEventListener("click", downloadAllArcStatsCsv);
 }
 
 function initCharts() {
@@ -1335,6 +1339,191 @@ class HeatmapChart {
     downloadCanvas(this.canvas, filename);
   }
 }
+
+// ---------------------------------------------------------------------------
+// Arc statistics: all metrics derived from a smoothed sentiment value array
+// ---------------------------------------------------------------------------
+
+/**
+ * Compute summary statistics for a smoothed sentiment arc.
+ *
+ * Definitions
+ * ───────────
+ * startScore          First value in the smoothed array (index 0)
+ * endScore            Last value in the smoothed array (index n-1)
+ * midlineScore        (startScore + endScore) / 2  — the "start-end average"
+ * highScore           Maximum value in the array
+ * lowScore            Minimum value in the array
+ * meanScore           Arithmetic mean of all values
+ *
+ * Crossings are counted by looking at consecutive pairs of values and
+ * detecting a sign change relative to the threshold line, i.e. when
+ * (values[i] - threshold) and (values[i+1] - threshold) have opposite signs.
+ * Touching exactly on the line (delta === 0) is counted as a crossing once.
+ *
+ * crossingsMidline    Number of times the arc crosses the midlineScore line
+ * crossingsMean       Number of times the arc crosses the meanScore line
+ */
+function computeArcStats(values) {
+  if (!values || values.length === 0) {
+    return null;
+  }
+
+  const startScore = values[0];
+  const endScore   = values[values.length - 1];
+  const midlineScore = (startScore + endScore) / 2;
+
+  let high = -Infinity;
+  let low  =  Infinity;
+  let sum  = 0;
+  for (const v of values) {
+    if (v > high) high = v;
+    if (v < low)  low  = v;
+    sum += v;
+  }
+  const highScore = high;
+  const lowScore  = low;
+  const meanScore = sum / values.length;
+
+  function countCrossings(threshold) {
+    let count = 0;
+    for (let i = 0; i < values.length - 1; i += 1) {
+      const a = values[i]     - threshold;
+      const b = values[i + 1] - threshold;
+      // Exact touch on the line at i+1: count once, then skip next pair
+      // to avoid double-counting a bounce off the line.
+      if (b === 0) {
+        count += 1;
+        i += 1; // skip the pair starting at i+1
+      } else if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
+        count += 1;
+      }
+      // If a === 0, this point was already counted in the previous iteration
+    }
+    return count;
+  }
+
+  const crossingsMidline = countCrossings(midlineScore);
+  const crossingsMean    = countCrossings(meanScore);
+
+  return {
+    startScore,
+    endScore,
+    midlineScore,
+    highScore,
+    lowScore,
+    meanScore,
+    crossingsMidline,
+    crossingsMean,
+  };
+}
+
+/**
+ * Build one CSV row of arc stats for a single play + model field.
+ * Returns a plain object whose keys match the CSV header.
+ */
+function arcStatsRow(playTitle, field, values) {
+  const stats = computeArcStats(values);
+  if (!stats) return null;
+  return {
+    play_title:         playTitle,
+    model:              modelLabel(field),
+    start_score:        formatScore(stats.startScore),
+    end_score:          formatScore(stats.endScore),
+    midline_score:      formatScore(stats.midlineScore),
+    high_score:         formatScore(stats.highScore),
+    low_score:          formatScore(stats.lowScore),
+    mean_score:         formatScore(stats.meanScore),
+    crossings_midline:  String(stats.crossingsMidline),
+    crossings_mean:     String(stats.crossingsMean),
+  };
+}
+
+/**
+ * Download arc-statistics CSV for the currently selected single play,
+ * respecting the active sentiment model, granularity, smoothing and
+ * stage-direction settings — identical to what the main curve chart displays.
+ */
+async function downloadArcStatsCsv() {
+  const settings = readSettings();
+  const play     = await getPlay(state.singlePlay);
+  const rows     = getRows(play, settings, readFilters());
+  const fields   = fieldsForSentiment(settings);
+
+  const header = [
+    "play_title",
+    "model",
+    "start_score",
+    "end_score",
+    "midline_score",
+    "high_score",
+    "low_score",
+    "mean_score",
+    "crossings_midline",
+    "crossings_mean",
+  ];
+
+  const lines = [header.join(",")];
+
+  fields.forEach((field) => {
+    const raw      = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+    const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
+    const statsRow = arcStatsRow(play.metadata.playTitle, field, smoothed);
+    if (statsRow) {
+      lines.push(header.map((key) => csvEscape(statsRow[key])).join(","));
+    }
+  });
+
+  const csv = `${lines.join("\n")}\n`;
+  downloadText(csv, `${slugify(play.metadata.playTitle)}-arc-stats.csv`, "text/csv");
+}
+
+/**
+ * Download arc-statistics CSV for ALL plays currently loaded in the index,
+ * using the active settings. Each play + model combination gets one row.
+ */
+async function downloadAllArcStatsCsv() {
+  const settings = readSettings();
+  const fields   = fieldsForSentiment(settings);
+
+  const header = [
+    "play_title",
+    "model",
+    "start_score",
+    "end_score",
+    "midline_score",
+    "high_score",
+    "low_score",
+    "mean_score",
+    "crossings_midline",
+    "crossings_mean",
+  ];
+
+  const lines = [header.join(",")];
+
+  for (const meta of state.playIndex) {
+    let play;
+    try {
+      play = await getPlay(meta.playId);
+    } catch {
+      continue; // skip plays that fail to load
+    }
+    const rows = getRows(play, settings, {});
+    fields.forEach((field) => {
+      const raw      = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+      const smoothed = smoothValues(raw, settings.smoothing, settings.windowSize);
+      const statsRow = arcStatsRow(play.metadata.playTitle, field, smoothed);
+      if (statsRow) {
+        lines.push(header.map((key) => csvEscape(statsRow[key])).join(","));
+      }
+    });
+  }
+
+  const csv = `${lines.join("\n")}\n`;
+  downloadText(csv, "arc-stats-all-plays.csv", "text/csv");
+}
+
+// ---------------------------------------------------------------------------
 
 function buildSeries(rows, field, settings, scale) {
   const raw = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
