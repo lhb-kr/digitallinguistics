@@ -144,6 +144,7 @@ function bindElements() {
     "downloadAllSummary",
     "downloadArcStats",
     "downloadAllArcStats",
+    "downloadAllRawArcs",
     "refLineMidline",
     "refLineMean",
     "refLineFirstLastScene",
@@ -214,6 +215,7 @@ function bindControls() {
   el.downloadAllSummary.addEventListener("click", downloadAllSummaryCsv);
   el.downloadArcStats.addEventListener("click", downloadArcStatsCsv);
   el.downloadAllArcStats.addEventListener("click", downloadAllArcStatsCsv);
+  el.downloadAllRawArcs.addEventListener("click", downloadAllRawArcsJson);
 
   // Reference line toggles for the Single-view main arc chart.
   el.refLineMidline.addEventListener("change", () => {
@@ -1676,6 +1678,120 @@ async function downloadAllArcStatsCsv() {
 
   const csv = `${lines.join("\n")}\n`;
   downloadText(csv, "arc-stats-all-plays.csv", "text/csv");
+}
+
+// ---------------------------------------------------------------------------
+// Raw arcs export — JSON with the actual smoothed sentiment arrays per play
+// ---------------------------------------------------------------------------
+// Produces a single JSON file containing every play's smoothed sentiment arc
+// (the exact value array the main curve chart draws), plus the arc statistics
+// already in the CSV export. This is the canonical artifact for feeding into
+// downstream visualisations like the cluster dashboard.
+//
+// Structure:
+// {
+//   "metadata": {
+//     "exported_at": ISO timestamp,
+//     "model": "DL (siebert)" | "VADER" | both,
+//     "smoothing": "lowess" | "moving" | "raw",
+//     "window_size": number,
+//     "granularity": "units" | "sentences" | "scenes",
+//     "include_stage_directions": bool,
+//     "play_count": number
+//   },
+//   "plays": [
+//     {
+//       "title": "...",
+//       "play_id": "...",
+//       "model": "DL (siebert)",
+//       "arc": [number, number, ...],           // the smoothed values
+//       "start_score": number,
+//       "end_score": number,
+//       "midline_score": number,
+//       "high_score": number,
+//       "low_score": number,
+//       "mean_score": number,
+//       "first_scene_label": "1.1",
+//       "last_scene_label": "5.3",
+//       "first_scene_score": number,
+//       "last_scene_score": number,
+//       "first_last_scene_avg": number,
+//       "crossings_midline": number,
+//       "crossings_mean": number,
+//       "crossings_first_last_scene_avg": number
+//     },
+//     ...
+//   ]
+// }
+//
+// Arc length matches the number of rows the chart actually plots; it varies
+// per play and per granularity setting. Values are rounded to 4 decimals to
+// keep file size manageable without losing visible precision.
+async function downloadAllRawArcsJson() {
+  const settings = readSettings();
+  const fields   = fieldsForSentiment(settings);
+
+  const playsOut = [];
+
+  for (const meta of state.playIndex) {
+    let play;
+    try {
+      play = await getPlay(meta.playId);
+    } catch {
+      continue;
+    }
+    // No filters — we want the complete arc as the chart would draw it
+    // for the whole play at the current shared settings.
+    const rows = getRows(play, settings, {});
+
+    fields.forEach((field) => {
+      const raw       = rows.map((row) => scoreFor(row, { ...settings, sentiment: field }));
+      const smoothed  = smoothValues(raw, settings.smoothing, settings.windowSize);
+      const stats     = computeArcStats(smoothed);
+      const sceneInfo = getFirstLastSceneScores(play, field);
+      if (!stats) return;
+
+      playsOut.push({
+        title:                          play.metadata.playTitle,
+        play_id:                        meta.playId,
+        model:                          modelLabel(field),
+        arc:                            smoothed.map((v) => Math.round(v * 10000) / 10000),
+        start_score:                    Math.round(stats.startScore   * 1000) / 1000,
+        end_score:                      Math.round(stats.endScore     * 1000) / 1000,
+        midline_score:                  Math.round(stats.midlineScore * 1000) / 1000,
+        high_score:                     Math.round(stats.highScore    * 1000) / 1000,
+        low_score:                      Math.round(stats.lowScore     * 1000) / 1000,
+        mean_score:                     Math.round(stats.meanScore    * 1000) / 1000,
+        first_scene_label:              sceneInfo ? sceneInfo.firstLabel : null,
+        last_scene_label:               sceneInfo ? sceneInfo.lastLabel  : null,
+        first_scene_score:              sceneInfo ? Math.round(sceneInfo.firstScene    * 1000) / 1000 : null,
+        last_scene_score:               sceneInfo ? Math.round(sceneInfo.lastScene     * 1000) / 1000 : null,
+        first_last_scene_avg:           sceneInfo ? Math.round(sceneInfo.firstLastAvg  * 1000) / 1000 : null,
+        crossings_midline:              stats.crossingsMidline,
+        crossings_mean:                 stats.crossingsMean,
+        crossings_first_last_scene_avg: sceneInfo && Number.isFinite(sceneInfo.firstLastAvg)
+                                          ? countCrossingsAt(smoothed, sceneInfo.firstLastAvg)
+                                          : null,
+      });
+    });
+  }
+
+  const payload = {
+    metadata: {
+      exported_at:               new Date().toISOString(),
+      sentiment_setting:         settings.sentiment,
+      smoothing:                 settings.smoothing,
+      window_size:               settings.windowSize,
+      granularity:               settings.granularity,
+      include_stage_directions:  !!settings.includeStage,
+      play_count:                state.playIndex.length,
+      arc_count:                 playsOut.length,
+    },
+    plays: playsOut,
+  };
+
+  const json = JSON.stringify(payload);
+  downloadText(json, "raw-arcs-all-plays.json", "application/json");
 }
 
 // ---------------------------------------------------------------------------
