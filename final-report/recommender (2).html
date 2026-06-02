@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Your Shakespeare</title>
+<style>
+  :root {
+    --bg: #f6f7f3;
+    --panel: #ffffff;
+    --panel-soft: #eef4f0;
+    --ink: #18211f;
+    --muted: #62706c;
+    --line: #d8dfd7;
+    --line-strong: #b8c3bd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  .container { max-width: 980px; margin: 0 auto; padding: 32px 24px 80px; }
+  header.title-block { text-align: center; margin-bottom: 36px; }
+  header.title-block .eyebrow { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  header.title-block h1 { font-size: 2.2rem; margin: 0 0 8px; font-weight: 600; letter-spacing: -0.02em; }
+  header.title-block p { font-size: 1rem; color: var(--muted); margin: 0; max-width: 56ch; margin-left: auto; margin-right: auto; }
+
+  /* Stepper */
+  .stepper-track { display: flex; align-items: center; gap: 0; justify-content: center; margin-bottom: 32px; }
+  .step-dot {
+    width: 30px; height: 30px; border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--bg);
+    color: var(--muted);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.82rem; font-weight: 600;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+  .step-dot.is-active { border-color: var(--ink); background: var(--ink); color: #fff; }
+  .step-dot.is-done { border-color: #0f766e; background: #0f766e; color: #fff; }
+  .step-line { width: 50px; height: 2px; background: var(--line); transition: background 0.3s; }
+  .step-line.is-done { background: #0f766e; }
+
+  /* Card */
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 12px 40px rgba(24,33,31,0.06);
+  }
+  .question h2 { margin: 0 0 6px; font-size: 1.4rem; font-weight: 600; letter-spacing: -0.01em; }
+  .question .sub { color: var(--muted); margin: 0 0 22px; font-size: 0.94rem; }
+
+  .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .options.solo { grid-template-columns: repeat(2, 1fr); }
+  .option {
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-align: left;
+    transition: all 0.18s;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font: inherit;
+    color: inherit;
+  }
+  .option:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+  .option.is-selected { border-color: var(--ink); background: var(--panel-soft); }
+  .option .opt-label { font-weight: 600; font-size: 0.98rem; }
+  .option .opt-sub { color: var(--muted); font-size: 0.84rem; line-height: 1.4; }
+
+  /* Nav buttons */
+  .nav-row {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.94rem;
+    transition: all 0.16s;
+    border: 2px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+  }
+  .btn:hover:not(:disabled) { border-color: var(--ink); }
+  .btn.primary {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .btn.primary:hover { background: #2a3835; border-color: #2a3835; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* Result panel */
+  .result-shell { animation: fade-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes fade-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+
+  .result-eyebrow { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .result-title { font-size: 2.4rem; margin: 0 0 6px; font-weight: 600; letter-spacing: -0.02em; }
+  .result-type {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .result-desc { font-size: 1rem; color: var(--ink); margin: 0 0 18px; max-width: 62ch; }
+  .result-fit { font-size: 0.92rem; color: var(--muted); margin: 0 0 24px; max-width: 62ch; }
+  .result-fit strong { color: var(--ink); }
+
+  .result-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+  @media (max-width: 760px) { .result-layout { grid-template-columns: 1fr; } }
+
+  .arc-host { background: var(--panel-soft); border-radius: 12px; padding: 14px; }
+  .arc-host svg { display: block; width: 100%; height: auto; }
+
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-box {
+    background: var(--panel-soft);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .stat-box .k {
+    font-size: 0.7rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    font-weight: 600; margin-bottom: 4px;
+  }
+  .stat-box .v { font-size: 1.05rem; font-weight: 600; }
+
+  .alt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .alt-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.16s;
+  }
+  .alt-card:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+  .alt-card .alt-rank { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .alt-card .alt-title { font-weight: 600; margin: 2px 0; font-size: 1rem; }
+  .alt-card .alt-type { font-size: 0.82rem; color: var(--muted); }
+
+  .characters-line { font-size: 0.86rem; color: var(--muted); margin-top: 10px; }
+  .characters-line strong { color: var(--ink); }
+
+  /* SVG arc styles */
+  .arc-path { fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .axis-line { stroke: #b8c3bd; stroke-width: 1; }
+  .axis-tick { stroke: #d8dfd7; stroke-width: 0.5; }
+  .axis-text { font-size: 10px; fill: #62706c; }
+  .zero-line { stroke: #b8c3bd; stroke-width: 1; stroke-dasharray: 2 3; }
+  .arc-marker {
+    fill: #b8c3bd; stroke: #fff; stroke-width: 1.5;
+    opacity: 0;
+    animation: pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  @keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .reset-link {
+    display: inline-block;
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+  }
+  .reset-link:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="title-block">
+    <div class="eyebrow">Curated by emotional flow + character network</div>
+    <h1>Find Your Shakespeare</h1>
+    <p>Answer four questions about how you feel and how you want to watch. We'll match you with a Shakespeare play whose emotional arc and dramatic structure fit your mood.</p>
+  </header>
+
+  <div id="step-track" class="stepper-track"></div>
+  <div id="app"></div>
+</div>
+
+<script>
+const DATA = {"clusters":{"1":{"name":"The Festive Circle","tagline":"Tight ensemble \u00b7 playful + bittersweet","color":"#7c3aed","summary":"Small, tightly-knit ensembles (density 0.71 \u2014 everyone knows everyone) playing out comedic-but-bittersweet arcs. The emotional curve falls more often than it rises, but the world feels enclosed and intimate. Few principal characters dominate.","viewer_persona":"Viewers who want a self-contained world they can hold in their head \u2014 character-driven, atmospheric, often dreamlike. Best for evening solo or paired viewing with strong attention.","viewing_situation":"Cozy evening, focused attention, perhaps with wine","good_if_you":["want something dreamlike or magical","enjoy ensemble comedies","like intimate, contained stories","want bittersweet rather than catastrophic"],"skip_if_you":["want explosive action","prefer single-protagonist stories","want a clear happy ending"]},"2":{"name":"The Anomaly","tagline":"Singular \u00b7 darkly farcical","color":"#274c77","summary":"A statistically unique play \u2014 persistently negative throughout but with almost no oscillation. The shortest play in the canon by line count, with a tight ensemble cast and a single farcical premise sustained from beginning to end.","viewer_persona":"Adventurous viewers exploring the full range of the library, or those who enjoy compact farces and don't need emotional payoff to feel satisfied.","viewing_situation":"Short evening, casual mood, you want something brief","good_if_you":["want a short, contained experience","enjoy farce and mistaken identity","are completing the canon"],"skip_if_you":["want emotional depth","want catharsis or resolution"]},"3":{"name":"The Vertical Fall","tagline":"High to low \u00b7 catastrophic descent","color":"#b84a3a","summary":"Plays that begin at the emotional peak and descend to the trough. The largest emotional range in the entire canon (1.37 spread). Few oscillations \u2014 the fall is direct rather than wandering. Mid-sized casts with moderate network density.","viewer_persona":"Mature viewers committed to tragedy as an experience. Not for casual or interrupted watching. Requires emotional preparation.","viewing_situation":"Quiet evening, solo, when you can sit with weight","good_if_you":["want unflinching tragedy","are prepared for emotional weight","appreciate plays about loss, power, isolation"],"skip_if_you":["are looking for comfort viewing","want any kind of resolution","are emotionally tired"]},"4":{"name":"The Sprawling Epic","tagline":"Vast cast \u00b7 emotionally turbulent","color":"#0f766e","summary":"Sprawling worlds with enormous casts (average 59 speakers) and low network density \u2014 many subplots, factions, and characters who never meet. Emotionally turbulent: the highest volatility scores in the canon (10+ mean crossings). The plays of grand historical and political scale.","viewer_persona":"Patient, immersive viewers who enjoy losing themselves in a large world. Think of it like a novel rather than a film \u2014 requires sustained attention across many threads.","viewing_situation":"Long weekend afternoon, group viewing welcome","good_if_you":["love epic scope and many characters","enjoy political/historical drama","want emotional complexity over single resolution","have time to invest"],"skip_if_you":["prefer character studies","find large casts hard to follow","want a single tight focus"]},"5":{"name":"The Tight Drama","tagline":"Focused cast \u00b7 catharsis-built","color":"#d97706","summary":"Moderately-sized casts (~37 speakers) with notably denser networks (density 0.38) \u2014 characters interact more, forming a tighter dramatic fabric. Emotional arcs trend upward overall despite dark passages. Includes both intense tragedies and dramatic comedies built around close interpersonal stakes.","viewer_persona":"Viewers who want emotional commitment without epic length. These are plays where every character matters and relationships drive the engine. Strong for shared viewing where everyone can track the same threads.","viewing_situation":"Weekend evening, with someone to discuss after","good_if_you":["want intense interpersonal drama","love villain or anti-hero stories","appreciate tight plotting","want emotional payoff"],"skip_if_you":["want light viewing","find tragic intensity exhausting"]},"6":{"name":"The Resolved Journey","tagline":"Mid cast \u00b7 rising arc","color":"#3b82f6","summary":"The most populous type \u2014 moderate cast sizes, looser networks, and notably rising emotional direction (the curve ends higher than it began). Includes most of Shakespeare's histories and the reconciliatory romances. These are stories about working through difficulty toward arrival.","viewer_persona":"Broadest appeal \u2014 viewers who want cathartic resolution without extreme darkness or extreme lightness. Best for group viewing where the audience wants to feel they've arrived somewhere by the end.","viewing_situation":"Weekend group viewing, family/friends, want a satisfying journey","good_if_you":["want resolution and arrival","love history or romance plots","watching with mixed audience","want satisfying without devastating"],"skip_if_you":["prefer ambiguous endings","find optimism saccharine"]}},"plays":[{"title":"A Midsummer Night's Dream","cluster":1,"year":1595,"mean":-0.044,"start":0.476,"end":0.058,"high":0.476,"low":-0.326,"range":0.802,"direction":-0.418,"midline":0.267,"first_last_scene_avg":0.028,"crossings_midline":1,"crossings_mean":6,"crossings_first_last":4,"num_speakers":25,"num_edges":205,"density":0.6833333333333333,"avg_degree":16.4,"avg_clustering":0.8698697895634225,"max_degree":24,"num_acts":5,"num_scenes":9,"word_count":17127,"wiki_links":66,"main_characters":["RobinGoodfellow MND","Titania MND"],"arc":[0.4765,0.4074,0.3614,0.3306,0.3068,0.2856,0.266,0.2496,0.2375,0.2274,0.2162,0.2017,0.1839,0.1637,0.1414,0.1174,0.0924,0.0676,0.0437,0.0219,0.0037,-0.0098,-0.0204,-0.0314,-0.0449,-0.0601,-0.0771,-0.0957,-0.1159,-0.1367,-0.1566,-0.1742,-0.1896,-0.2041,-0.2198,-0.2358,-0.2494,-0.2572,-0.2572,-0.2493,-0.2337,-0.2111,-0.1842,-0.1562,-0.1301,-0.1064,-0.0848,-0.0653,-0.0479,-0.0312,-0.0158,-0.0027,0.0056,0.006,-0.0036,-0.0251,-0.058,-0.0995,-0.1463,-0.1947,-0.2392,-0.2755,-0.3016,-0.3176,-0.325,-0.3251,-0.3188,-0.3072,-0.2908,-0.2695,-0.2417,-0.2068,-0.1659,-0.1212,-0.075,-0.0286,0.0158,0.0564,0.0928,0.1238,0.149,0.1682,0.1819,0.1909,0.1947,0.1924,0.1829,0.165,0.1381,0.1042,0.0664,0.0274,-0.0091,-0.0414,-0.0683,-0.0887,-0.1035,-0.1149,-0.1246,-0.1321,-0.1365,-0.1396,-0.1432,-0.1485,-0.1549,-0.1591,-0.1592,-0.1549,-0.1469,-0.1373,-0.1293,-0.125,-0.1244,-0.1249,-0.1238,-0.1174,-0.1012,-0.0695,-0.0174,0.0576]},{"title":"The Tempest","cluster":1,"year":1611,"mean":-0.036,"start":0.397,"end":-0.233,"high":0.397,"low":-0.319,"range":0.716,"direction":-0.63,"midline":0.082,"first_last_scene_avg":-0.289,"crossings_midline":5,"crossings_mean":9,"crossings_first_last":2,"num_speakers":19,"num_edges":114,"density":0.6666666666666666,"avg_degree":12.0,"avg_clustering":0.8580778870252557,"max_degree":16,"num_acts":5,"num_scenes":9,"word_count":17507,"wiki_links":58,"main_characters":["Prospero Tmp","Ariel Tmp"],"arc":[0.3967,0.2069,0.0881,0.0189,-0.0201,-0.0397,-0.046,-0.0454,-0.0444,-0.044,-0.0429,-0.0393,-0.0322,-0.0245,-0.0193,-0.0179,-0.0194,-0.0201,-0.0188,-0.0154,-0.0103,-0.0042,0.002,0.008,0.0145,0.0257,0.0439,0.0673,0.0912,0.1109,0.124,0.1277,0.1209,0.1048,0.0807,0.0505,0.0175,-0.0143,-0.0431,-0.0711,-0.1012,-0.1349,-0.1722,-0.2107,-0.2485,-0.281,-0.3034,-0.315,-0.3187,-0.3171,-0.3141,-0.3124,-0.3105,-0.3046,-0.2905,-0.2699,-0.2447,-0.2156,-0.1835,-0.1494,-0.1149,-0.0812,-0.0521,-0.0322,-0.022,-0.0206,-0.0262,-0.0385,-0.0595,-0.0893,-0.1245,-0.1622,-0.1985,-0.2287,-0.2477,-0.2531,-0.2461,-0.2304,-0.2089,-0.1811,-0.1438,-0.0938,-0.0307,0.0424,0.1201,0.1966,0.2668,0.3243,0.3621,0.3751,0.3643,0.3349,0.2934,0.2469,0.2017,0.1609,0.1259,0.0956,0.0652,0.0293,-0.0097,-0.0451,-0.0703,-0.0809,-0.0752,-0.0567,-0.0325,-0.0097,0.0087,0.0202,0.0219,0.0141,-0.0011,-0.0208,-0.0424,-0.0645,-0.0878,-0.1181,-0.1658,-0.2326]},{"title":"Twelfth Night","cluster":1,"year":1601,"mean":-0.154,"start":0.354,"end":-0.371,"high":0.354,"low":-0.48,"range":0.834,"direction":-0.725,"midline":-0.008500000000000008,"first_last_scene_avg":-0.053,"crossings_midline":3,"crossings_mean":7,"crossings_first_last":5,"num_speakers":18,"num_edges":101,"density":0.6601307189542484,"avg_degree":11.22222222222222,"avg_clustering":0.842122583299054,"max_degree":17,"num_acts":5,"num_scenes":18,"word_count":21182,"wiki_links":52,"main_characters":["Viola TN"],"arc":[0.3542,0.2888,0.2264,0.1508,0.0821,0.0394,0.0216,0.0137,0.0058,-0.0091,-0.0298,-0.0486,-0.0651,-0.0846,-0.1129,-0.1552,-0.2102,-0.2682,-0.3135,-0.3363,-0.3324,-0.3098,-0.2785,-0.2477,-0.2257,-0.2157,-0.2123,-0.2047,-0.1877,-0.1624,-0.1319,-0.1058,-0.0997,-0.1133,-0.1257,-0.1218,-0.1041,-0.0823,-0.0695,-0.0778,-0.1064,-0.1386,-0.1602,-0.1704,-0.1749,-0.1847,-0.2152,-0.2683,-0.3311,-0.3882,-0.4319,-0.4595,-0.4733,-0.4799,-0.4759,-0.4465,-0.3816,-0.2904,-0.1917,-0.1016,-0.0327,0.0139,0.0433,0.0617,0.0726,0.068,0.0422,-0.0024,-0.0565,-0.1039,-0.132,-0.1396,-0.1377,-0.1319,-0.1191,-0.1031,-0.0869,-0.0692,-0.0542,-0.0472,-0.0501,-0.0576,-0.0675,-0.0817,-0.0997,-0.125,-0.1657,-0.2186,-0.2728,-0.3201,-0.3568,-0.3783,-0.387,-0.3919,-0.3904,-0.3708,-0.3309,-0.2774,-0.2213,-0.172,-0.1395,-0.1252,-0.1192,-0.1121,-0.1062,-0.1075,-0.118,-0.1327,-0.1447,-0.1478,-0.1375,-0.1248,-0.121,-0.1249,-0.1335,-0.1472,-0.1647,-0.1919,-0.2527,-0.3712]},{"title":"The Merry Wives of Windsor","cluster":1,"year":1602,"mean":-0.111,"start":0.316,"end":-0.007,"high":0.316,"low":-0.47,"range":0.786,"direction":-0.323,"midline":0.1545,"first_last_scene_avg":-0.078,"crossings_midline":3,"crossings_mean":10,"crossings_first_last":8,"num_speakers":23,"num_edges":182,"density":0.7193675889328063,"avg_degree":15.826086956521738,"avg_clustering":0.866728493310133,"max_degree":21,"num_acts":5,"num_scenes":23,"word_count":23497,"wiki_links":37,"main_characters":["HughEvans Wiv","MasterPage Wiv"],"arc":[0.316,0.2248,0.1049,-0.0147,-0.1011,-0.138,-0.1229,-0.0729,-0.007,0.0643,0.1418,0.2048,0.2411,0.2459,0.2145,0.1464,0.0572,-0.0316,-0.1017,-0.1469,-0.1626,-0.1446,-0.1097,-0.0872,-0.089,-0.1045,-0.1215,-0.1319,-0.1374,-0.1378,-0.1374,-0.1414,-0.1388,-0.1174,-0.0808,-0.046,-0.0222,-0.0113,-0.017,-0.0321,-0.049,-0.0585,-0.0536,-0.0482,-0.0455,-0.0372,-0.0178,0.0159,0.0529,0.075,0.0782,0.0728,0.0702,0.0728,0.0721,0.0641,0.0491,0.0334,0.022,0.0077,-0.0224,-0.0762,-0.1425,-0.2048,-0.2488,-0.2706,-0.2747,-0.2575,-0.207,-0.1367,-0.0604,0.0168,0.0765,0.1076,0.116,0.0999,0.0564,0.0038,-0.0523,-0.1069,-0.1504,-0.1852,-0.2176,-0.241,-0.2534,-0.2621,-0.2731,-0.2919,-0.3291,-0.3795,-0.423,-0.4543,-0.469,-0.4671,-0.4516,-0.4296,-0.4061,-0.3727,-0.3236,-0.2797,-0.259,-0.257,-0.2575,-0.2469,-0.2217,-0.1899,-0.1616,-0.1459,-0.1454,-0.1544,-0.1705,-0.196,-0.2404,-0.2886,-0.3269,-0.3484,-0.3445,-0.298,-0.1892,-0.0074]},{"title":"Love's Labor's Lost","cluster":1,"year":1595,"mean":-0.11,"start":-0.264,"end":0.14,"high":0.15,"low":-0.281,"range":0.431,"direction":0.404,"midline":-0.062,"first_last_scene_avg":-0.119,"crossings_midline":9,"crossings_mean":7,"crossings_first_last":7,"num_speakers":21,"num_edges":169,"density":0.8047619047619048,"avg_degree":16.095238095238095,"avg_clustering":0.913820498959818,"max_degree":19,"num_acts":5,"num_scenes":9,"word_count":22590,"wiki_links":32,"main_characters":["several characters"],"arc":[-0.2637,-0.2125,-0.1541,-0.1364,-0.1452,-0.1664,-0.1842,-0.184,-0.1725,-0.161,-0.1494,-0.1371,-0.1113,-0.0639,-0.0094,0.0384,0.0756,0.1042,0.116,0.1112,0.0999,0.0871,0.0644,0.0329,-0.0035,-0.0407,-0.0707,-0.0951,-0.116,-0.1319,-0.1385,-0.1424,-0.147,-0.1537,-0.1572,-0.1538,-0.1481,-0.1361,-0.1153,-0.0868,-0.0552,-0.0229,-0.0,0.0042,-0.0064,-0.0272,-0.0447,-0.0528,-0.0539,-0.056,-0.0661,-0.0785,-0.0829,-0.0652,-0.0332,-0.0137,-0.0258,-0.0627,-0.0987,-0.1186,-0.1119,-0.0846,-0.0536,-0.0291,-0.0181,-0.0066,0.0165,0.0451,0.0558,0.0414,0.009,-0.0319,-0.074,-0.1154,-0.1523,-0.1845,-0.2068,-0.2164,-0.2187,-0.218,-0.2224,-0.2364,-0.2572,-0.2711,-0.2699,-0.2594,-0.2512,-0.2509,-0.2586,-0.2663,-0.2666,-0.2596,-0.2542,-0.2568,-0.2656,-0.2772,-0.2806,-0.2607,-0.224,-0.1958,-0.1851,-0.1902,-0.2061,-0.2262,-0.2385,-0.2397,-0.2382,-0.2417,-0.2444,-0.2303,-0.1886,-0.1287,-0.0712,-0.0255,0.0071,0.028,0.0522,0.0955,0.1418,0.1402]},{"title":"The Comedy of Errors","cluster":2,"year":1594,"mean":-0.622,"start":-0.307,"end":-0.039,"high":-0.016,"low":-0.821,"range":0.8049999999999999,"direction":0.268,"midline":-0.173,"first_last_scene_avg":-0.122,"crossings_midline":1,"crossings_mean":2,"crossings_first_last":1,"num_speakers":19,"num_edges":111,"density":0.6491228070175439,"avg_degree":11.68421052631579,"avg_clustering":0.8861229242034196,"max_degree":17,"num_acts":5,"num_scenes":11,"word_count":16144,"wiki_links":42,"main_characters":["DromioOfSyracuse Err","DromioOfEphesus Err"],"arc":[-0.3069,-0.3802,-0.4416,-0.4937,-0.5408,-0.5847,-0.6263,-0.6655,-0.7021,-0.7355,-0.7648,-0.7888,-0.8065,-0.8174,-0.8211,-0.8189,-0.8133,-0.8053,-0.7954,-0.7833,-0.7686,-0.7505,-0.7299,-0.7081,-0.6862,-0.6662,-0.6499,-0.6385,-0.6323,-0.6311,-0.6341,-0.6397,-0.6458,-0.6504,-0.6532,-0.6552,-0.6582,-0.6635,-0.6719,-0.6835,-0.6975,-0.7116,-0.7242,-0.7346,-0.7419,-0.746,-0.7481,-0.7499,-0.7521,-0.7558,-0.7609,-0.7667,-0.7708,-0.7703,-0.7629,-0.7491,-0.7323,-0.7164,-0.7023,-0.6902,-0.6798,-0.6716,-0.666,-0.6629,-0.6612,-0.6596,-0.6582,-0.6577,-0.6593,-0.6644,-0.6738,-0.6877,-0.7041,-0.7203,-0.7349,-0.7473,-0.7576,-0.7656,-0.7721,-0.7781,-0.7831,-0.7849,-0.7822,-0.7759,-0.7673,-0.7575,-0.747,-0.7357,-0.7235,-0.7102,-0.6939,-0.6728,-0.646,-0.6157,-0.5853,-0.5569,-0.5311,-0.5092,-0.4928,-0.482,-0.4751,-0.4694,-0.4604,-0.4451,-0.4225,-0.3934,-0.3618,-0.3314,-0.3045,-0.2812,-0.2601,-0.2385,-0.2128,-0.1802,-0.1399,-0.0963,-0.0564,-0.0269,-0.0158,-0.039]},{"title":"King Lear","cluster":3,"year":1606,"mean":-0.304,"start":0.733,"end":-0.519,"high":0.733,"low":-0.63,"range":1.363,"direction":-1.252,"midline":0.10699999999999998,"first_last_scene_avg":-0.071,"crossings_midline":1,"crossings_mean":7,"crossings_first_last":3,"num_speakers":33,"num_edges":200,"density":0.3787878787878788,"avg_degree":12.12121212121212,"avg_clustering":0.7827658634819761,"max_degree":25,"num_acts":6,"num_scenes":25,"word_count":27331,"wiki_links":72,"main_characters":["Kent Lr","Goneril Lr"],"arc":[0.7328,0.4519,0.2032,0.0221,-0.1063,-0.2075,-0.2946,-0.3594,-0.3808,-0.3617,-0.3241,-0.2796,-0.2354,-0.2021,-0.1835,-0.1753,-0.1791,-0.2042,-0.2536,-0.3155,-0.3737,-0.4259,-0.4664,-0.4903,-0.5039,-0.5162,-0.5199,-0.5108,-0.497,-0.4974,-0.5115,-0.5133,-0.4937,-0.4755,-0.4708,-0.4871,-0.5237,-0.5614,-0.5858,-0.5999,-0.6109,-0.6267,-0.6237,-0.5858,-0.5283,-0.4763,-0.4381,-0.4178,-0.4139,-0.4184,-0.4282,-0.4438,-0.4642,-0.4847,-0.4921,-0.487,-0.4695,-0.4291,-0.3717,-0.3136,-0.2737,-0.2542,-0.2453,-0.2411,-0.2475,-0.2807,-0.3409,-0.4122,-0.4677,-0.4899,-0.4908,-0.486,-0.471,-0.4385,-0.3908,-0.3378,-0.2919,-0.2619,-0.241,-0.2223,-0.2071,-0.2019,-0.2111,-0.2231,-0.2279,-0.2272,-0.227,-0.2266,-0.2137,-0.1827,-0.1495,-0.1249,-0.1039,-0.0888,-0.0806,-0.0797,-0.0921,-0.1085,-0.1186,-0.1152,-0.0928,-0.0534,-0.0167,0.0077,0.0297,0.0415,0.0251,-0.0139,-0.0779,-0.1527,-0.2203,-0.2695,-0.2983,-0.3184,-0.3382,-0.3559,-0.3626,-0.3704,-0.4024,-0.5189]},{"title":"Timon of Athens","cluster":3,"year":1606,"mean":-0.122,"start":1.033,"end":-0.145,"high":1.033,"low":-0.574,"range":1.6069999999999998,"direction":-1.178,"midline":0.44399999999999995,"first_last_scene_avg":-0.047,"crossings_midline":1,"crossings_mean":7,"crossings_first_last":5,"num_speakers":68,"num_edges":402,"density":0.1764705882352941,"avg_degree":11.823529411764708,"avg_clustering":0.8753677185390372,"max_degree":50,"num_acts":5,"num_scenes":17,"word_count":19486,"wiki_links":38,"main_characters":["Timon Tim"],"arc":[1.0329,0.8481,0.702,0.5973,0.5125,0.4263,0.3295,0.2267,0.1297,0.046,-0.0199,-0.0646,-0.0915,-0.1129,-0.1338,-0.1515,-0.1559,-0.1381,-0.0987,-0.0454,0.0121,0.0676,0.1186,0.1633,0.1981,0.2228,0.2368,0.2379,0.2246,0.1944,0.147,0.0885,0.0206,-0.0549,-0.1375,-0.2242,-0.3103,-0.3909,-0.4593,-0.511,-0.5476,-0.5689,-0.5731,-0.5619,-0.5355,-0.4905,-0.4342,-0.378,-0.3246,-0.2757,-0.233,-0.1959,-0.1598,-0.1291,-0.1107,-0.1077,-0.1225,-0.1524,-0.1874,-0.2188,-0.2381,-0.2404,-0.2325,-0.2277,-0.233,-0.2474,-0.2646,-0.2737,-0.2657,-0.2386,-0.2004,-0.1629,-0.139,-0.1327,-0.1423,-0.1602,-0.1788,-0.196,-0.2129,-0.2371,-0.2754,-0.3246,-0.3751,-0.4194,-0.4543,-0.4775,-0.4874,-0.4849,-0.4759,-0.4633,-0.4456,-0.4266,-0.4086,-0.3962,-0.3881,-0.3813,-0.3748,-0.3643,-0.3463,-0.3205,-0.2842,-0.235,-0.1771,-0.1165,-0.0536,0.0118,0.0798,0.1442,0.1972,0.2325,0.2485,0.2472,0.2286,0.1966,0.157,0.112,0.0605,-0.0057,-0.086,-0.1446]},{"title":"Measure for Measure","cluster":3,"year":1604,"mean":-0.167,"start":0.671,"end":-0.062,"high":0.671,"low":-0.464,"range":1.135,"direction":-0.7330000000000001,"midline":0.3045,"first_last_scene_avg":0.137,"crossings_midline":1,"crossings_mean":8,"crossings_first_last":1,"num_speakers":24,"num_edges":103,"density":0.3731884057971014,"avg_degree":8.583333333333334,"avg_clustering":0.7762846816639386,"max_degree":20,"num_acts":5,"num_scenes":17,"word_count":23197,"wiki_links":36,"main_characters":["Provost MM"],"arc":[0.6706,0.3722,0.1797,0.0513,-0.0456,-0.1241,-0.1844,-0.2248,-0.2408,-0.2296,-0.2017,-0.1707,-0.1467,-0.1311,-0.127,-0.1321,-0.1418,-0.1596,-0.184,-0.2092,-0.2326,-0.2566,-0.2821,-0.3045,-0.3168,-0.3128,-0.2936,-0.2662,-0.2367,-0.2106,-0.1923,-0.1798,-0.1684,-0.1528,-0.1244,-0.0852,-0.0398,0.0047,0.04,0.0701,0.0923,0.1039,0.1057,0.1007,0.0828,0.0513,0.0146,-0.0275,-0.0788,-0.1355,-0.1912,-0.2352,-0.2594,-0.2612,-0.2488,-0.243,-0.2529,-0.2743,-0.2958,-0.3079,-0.3061,-0.298,-0.3058,-0.3298,-0.3558,-0.3734,-0.3745,-0.3564,-0.3206,-0.2783,-0.2414,-0.2069,-0.1707,-0.1371,-0.1118,-0.0958,-0.089,-0.0916,-0.0989,-0.1048,-0.1111,-0.1152,-0.1127,-0.1034,-0.0898,-0.0738,-0.057,-0.0438,-0.0436,-0.0564,-0.0729,-0.0834,-0.0859,-0.0831,-0.0762,-0.0696,-0.0707,-0.0828,-0.105,-0.1339,-0.1709,-0.2158,-0.2648,-0.3158,-0.3645,-0.4063,-0.4406,-0.4607,-0.4626,-0.4469,-0.4184,-0.3802,-0.3407,-0.3079,-0.2817,-0.2545,-0.2179,-0.1718,-0.1195,-0.0617]},{"title":"Hamlet","cluster":4,"year":1603,"mean":-0.097,"start":0.222,"end":0.089,"high":0.231,"low":-0.459,"range":0.6900000000000001,"direction":-0.133,"midline":0.1555,"first_last_scene_avg":-0.034,"crossings_midline":5,"crossings_mean":10,"crossings_first_last":8,"num_speakers":38,"num_edges":220,"density":0.3129445234708393,"avg_degree":11.578947368421051,"avg_clustering":0.8572610250990879,"max_degree":32,"num_acts":5,"num_scenes":20,"word_count":31665,"wiki_links":98,"main_characters":["Horatio Ham"],"arc":[0.2222,0.0754,0.0278,0.0334,0.051,0.0745,0.1031,0.1318,0.1487,0.1395,0.1062,0.0583,0.0122,-0.0304,-0.075,-0.1164,-0.1438,-0.146,-0.1358,-0.13,-0.1373,-0.1491,-0.1546,-0.1407,-0.1224,-0.0981,-0.0605,-0.0103,0.0458,0.0918,0.1076,0.1023,0.0803,0.0405,-0.0161,-0.0782,-0.1095,-0.0891,-0.0433,0.004,0.0505,0.1009,0.1613,0.2154,0.2304,0.1995,0.15,0.1146,0.097,0.0751,0.0374,-0.012,-0.0617,-0.089,-0.0899,-0.0863,-0.0983,-0.1232,-0.1445,-0.1522,-0.1533,-0.1525,-0.1647,-0.198,-0.2467,-0.2989,-0.3525,-0.3988,-0.4302,-0.4438,-0.452,-0.4593,-0.451,-0.4172,-0.3595,-0.2988,-0.2599,-0.2373,-0.2124,-0.1851,-0.1613,-0.147,-0.1421,-0.1361,-0.1213,-0.0945,-0.0656,-0.0452,-0.042,-0.0557,-0.0825,-0.1209,-0.1629,-0.2058,-0.2564,-0.3114,-0.3565,-0.388,-0.4103,-0.4316,-0.4404,-0.4157,-0.3527,-0.2654,-0.1678,-0.0677,0.028,0.11,0.171,0.2,0.1829,0.1268,0.0455,-0.0345,-0.0995,-0.1594,-0.2132,-0.2376,-0.1718,0.0893]},{"title":"Antony and Cleopatra","cluster":4,"year":1606,"mean":-0.02,"start":0.388,"end":-0.32,"high":0.388,"low":-0.415,"range":0.8029999999999999,"direction":-0.708,"midline":0.034,"first_last_scene_avg":-0.048,"crossings_midline":11,"crossings_mean":9,"crossings_first_last":9,"num_speakers":74,"num_edges":398,"density":0.1473528322843391,"avg_degree":10.756756756756756,"avg_clustering":0.8154578727081226,"max_degree":47,"num_acts":5,"num_scenes":42,"word_count":25878,"wiki_links":45,"main_characters":["Antony JC"],"arc":[0.3878,0.1563,-0.053,-0.1985,-0.2891,-0.3552,-0.3987,-0.4149,-0.4044,-0.3615,-0.2993,-0.2297,-0.1604,-0.0864,-0.0092,0.0636,0.1252,0.1599,0.1445,0.1024,0.0592,0.0415,0.0568,0.0973,0.156,0.2095,0.2645,0.3167,0.3505,0.3366,0.261,0.1472,0.0479,0.0115,0.0295,0.0642,0.096,0.1311,0.174,0.2068,0.1956,0.1319,0.05,0.0051,0.0038,0.0276,0.0683,0.1174,0.1674,0.2112,0.2277,0.1999,0.1397,0.069,0.0028,-0.0651,-0.1217,-0.1629,-0.1915,-0.2028,-0.1877,-0.1548,-0.1279,-0.1158,-0.1155,-0.1182,-0.1081,-0.0879,-0.0659,-0.0459,-0.0187,0.0156,0.0216,0.0002,-0.0277,-0.0523,-0.0644,-0.0587,-0.0387,0.0007,0.0545,0.099,0.1123,0.093,0.0678,0.0462,0.0147,-0.0226,-0.0655,-0.1008,-0.1168,-0.1439,-0.1943,-0.263,-0.328,-0.356,-0.3572,-0.357,-0.3551,-0.3353,-0.2711,-0.1756,-0.0921,-0.0416,-0.0054,0.0531,0.1332,0.1931,0.2122,0.1998,0.1829,0.1683,0.1335,0.0637,-0.018,-0.0932,-0.1527,-0.2035,-0.2593,-0.3203]},{"title":"The Taming of the Shrew","cluster":4,"year":1591,"mean":-0.084,"start":-0.37,"end":-0.172,"high":0.172,"low":-0.37,"range":0.542,"direction":0.198,"midline":-0.271,"first_last_scene_avg":0.065,"crossings_midline":3,"crossings_mean":12,"crossings_first_last":4,"num_speakers":38,"num_edges":222,"density":0.3157894736842105,"avg_degree":11.68421052631579,"avg_clustering":0.8661745681667611,"max_degree":24,"num_acts":5,"num_scenes":14,"word_count":22291,"wiki_links":42,"main_characters":["Katherine Shr"],"arc":[-0.3696,-0.1292,0.0105,0.0926,0.1383,0.1645,0.1717,0.1554,0.1128,0.0537,-0.0025,-0.0431,-0.0625,-0.0718,-0.0857,-0.1028,-0.1154,-0.1144,-0.0959,-0.0573,-0.0151,0.0115,0.0199,0.0193,0.0177,0.0135,0.0104,0.0156,0.025,0.0277,0.027,0.0274,0.0233,0.012,-0.0013,-0.0171,-0.0336,-0.0472,-0.0584,-0.0708,-0.0843,-0.0947,-0.1018,-0.1082,-0.1109,-0.1076,-0.1034,-0.105,-0.1167,-0.1409,-0.1787,-0.2186,-0.2494,-0.2591,-0.2455,-0.2171,-0.1843,-0.1556,-0.131,-0.1103,-0.0932,-0.0692,-0.0406,-0.0217,-0.0269,-0.0601,-0.1086,-0.1602,-0.2003,-0.2216,-0.2246,-0.2163,-0.2045,-0.1906,-0.1698,-0.1361,-0.0911,-0.0509,-0.0283,-0.0325,-0.0633,-0.1103,-0.1579,-0.1898,-0.2004,-0.1963,-0.1867,-0.1722,-0.1477,-0.1048,-0.0459,0.013,0.0517,0.0597,0.0322,-0.0227,-0.092,-0.1583,-0.2151,-0.2684,-0.314,-0.3418,-0.3477,-0.3274,-0.2802,-0.2089,-0.1238,-0.0418,0.0235,0.0639,0.0813,0.0802,0.0684,0.0444,0.0043,-0.0529,-0.1286,-0.2001,-0.2247,-0.1715]},{"title":"Coriolanus","cluster":4,"year":1608,"mean":-0.142,"start":-0.12,"end":-0.215,"high":0.248,"low":-0.573,"range":0.821,"direction":-0.095,"midline":-0.16749999999999998,"first_last_scene_avg":-0.2,"crossings_midline":9,"crossings_mean":11,"crossings_first_last":7,"num_speakers":67,"num_edges":361,"density":0.1632745364088647,"avg_degree":10.776119402985074,"avg_clustering":0.7967102632609581,"max_degree":54,"num_acts":5,"num_scenes":29,"word_count":28851,"wiki_links":38,"main_characters":["Coriolanus Cor"],"arc":[-0.1198,-0.2409,-0.3176,-0.3435,-0.3449,-0.3392,-0.3279,-0.3025,-0.2766,-0.2605,-0.2522,-0.2441,-0.2397,-0.2333,-0.2159,-0.1996,-0.1875,-0.1743,-0.1633,-0.1626,-0.1707,-0.1827,-0.1869,-0.1832,-0.1816,-0.1647,-0.1158,-0.0498,0.0231,0.0979,0.1577,0.1995,0.2328,0.2467,0.2475,0.2342,0.2039,0.1609,0.107,0.0495,-0.001,-0.031,-0.0385,-0.0348,-0.0391,-0.0628,-0.0887,-0.1139,-0.1477,-0.1998,-0.2722,-0.3602,-0.4538,-0.528,-0.5649,-0.5725,-0.5655,-0.5481,-0.5206,-0.4909,-0.4526,-0.3971,-0.3332,-0.2736,-0.2205,-0.1651,-0.0913,-0.0016,0.0847,0.1421,0.16,0.138,0.1001,0.0583,0.0049,-0.0579,-0.1133,-0.1458,-0.1409,-0.1028,-0.0614,-0.0479,-0.0574,-0.0836,-0.1097,-0.1244,-0.1392,-0.1557,-0.1591,-0.1399,-0.0937,-0.0442,-0.0231,-0.0395,-0.0799,-0.1302,-0.1749,-0.2227,-0.2833,-0.3381,-0.3702,-0.3792,-0.374,-0.3682,-0.3589,-0.3442,-0.3128,-0.2544,-0.1647,-0.0573,0.0436,0.1191,0.1591,0.163,0.1442,0.0952,0.0023,-0.1235,-0.2257,-0.2149]},{"title":"Henry VI, Part 1","cluster":4,"year":1591,"mean":-0.158,"start":-0.165,"end":0.176,"high":0.176,"low":-0.384,"range":0.56,"direction":0.3409999999999999,"midline":0.005499999999999991,"first_last_scene_avg":0.053,"crossings_midline":1,"crossings_mean":11,"crossings_first_last":1,"num_speakers":63,"num_edges":373,"density":0.1909882232462877,"avg_degree":11.841269841269842,"avg_clustering":0.8179372793578222,"max_degree":37,"num_acts":5,"num_scenes":27,"word_count":21962,"wiki_links":23,"main_characters":["Talbot 1H6"],"arc":[-0.1654,-0.2106,-0.1858,-0.1315,-0.0775,-0.0392,-0.0227,-0.0289,-0.0501,-0.0759,-0.0997,-0.1237,-0.1553,-0.1959,-0.245,-0.2962,-0.3414,-0.373,-0.384,-0.3753,-0.3545,-0.3293,-0.3023,-0.2734,-0.2436,-0.2174,-0.196,-0.1776,-0.1608,-0.1463,-0.1361,-0.1295,-0.1247,-0.1232,-0.1261,-0.1322,-0.1392,-0.1438,-0.1461,-0.1487,-0.1551,-0.1664,-0.1836,-0.2046,-0.2243,-0.2344,-0.2265,-0.1991,-0.1609,-0.1256,-0.104,-0.1021,-0.1185,-0.144,-0.1658,-0.1795,-0.1879,-0.1949,-0.2049,-0.2162,-0.2256,-0.2294,-0.2224,-0.2022,-0.1673,-0.1222,-0.0782,-0.0417,-0.017,-0.0077,-0.0128,-0.0274,-0.0455,-0.0635,-0.0846,-0.1079,-0.13,-0.15,-0.1667,-0.18,-0.1884,-0.1942,-0.2,-0.2068,-0.2146,-0.2183,-0.214,-0.2037,-0.1894,-0.1703,-0.1526,-0.1401,-0.1337,-0.1343,-0.1401,-0.1461,-0.1492,-0.1506,-0.153,-0.1578,-0.1642,-0.1692,-0.1713,-0.1714,-0.1684,-0.1647,-0.1608,-0.1552,-0.1465,-0.1373,-0.1294,-0.1271,-0.1317,-0.1383,-0.1386,-0.1244,-0.0838,-0.0112,0.0829,0.1758]},{"title":"Henry VI, Part 2","cluster":4,"year":1591,"mean":-0.207,"start":0.455,"end":0.221,"high":0.455,"low":-0.454,"range":0.909,"direction":-0.234,"midline":0.338,"first_last_scene_avg":0.243,"crossings_midline":1,"crossings_mean":8,"crossings_first_last":1,"num_speakers":72,"num_edges":487,"density":0.1905320813771518,"avg_degree":13.52777777777778,"avg_clustering":0.8376425765792725,"max_degree":42,"num_acts":5,"num_scenes":24,"word_count":26300,"wiki_links":21,"main_characters":["Buckingham 2H6"],"arc":[0.455,0.2577,0.154,0.0788,0.0015,-0.0749,-0.1467,-0.2119,-0.268,-0.3149,-0.3569,-0.3961,-0.4279,-0.4479,-0.4537,-0.4411,-0.4103,-0.3671,-0.3209,-0.2687,-0.2019,-0.1279,-0.0616,-0.0113,0.017,0.0227,0.0103,-0.0068,-0.0218,-0.0354,-0.0448,-0.051,-0.0613,-0.0719,-0.0748,-0.0638,-0.0397,-0.0162,-0.0033,-0.0063,-0.0292,-0.0667,-0.108,-0.1471,-0.1869,-0.2333,-0.2799,-0.3227,-0.3537,-0.3621,-0.3463,-0.3179,-0.2877,-0.2628,-0.2478,-0.2461,-0.2549,-0.2675,-0.2821,-0.3028,-0.3291,-0.3533,-0.369,-0.3763,-0.3757,-0.3702,-0.3621,-0.3537,-0.3422,-0.3221,-0.2932,-0.2562,-0.218,-0.1892,-0.1734,-0.1619,-0.1429,-0.1161,-0.0895,-0.0666,-0.0536,-0.0596,-0.0886,-0.1341,-0.1849,-0.2356,-0.2826,-0.3223,-0.3607,-0.3994,-0.4292,-0.4434,-0.4441,-0.438,-0.4285,-0.4101,-0.3881,-0.3668,-0.3432,-0.3115,-0.2739,-0.2397,-0.2139,-0.2012,-0.2046,-0.2162,-0.2245,-0.2271,-0.2267,-0.2269,-0.2312,-0.2347,-0.2356,-0.2252,-0.1941,-0.1391,-0.0666,0.0153,0.1035,0.2215]},{"title":"Romeo and Juliet","cluster":5,"year":1597,"mean":-0.169,"start":-0.265,"end":-0.254,"high":0.129,"low":-0.454,"range":0.583,"direction":0.011,"midline":-0.2595,"first_last_scene_avg":-0.066,"crossings_midline":7,"crossings_mean":4,"crossings_first_last":6,"num_speakers":38,"num_edges":248,"density":0.352773826458037,"avg_degree":13.052631578947368,"avg_clustering":0.7948706809058224,"max_degree":31,"num_acts":5,"num_scenes":24,"word_count":25700,"wiki_links":106,"main_characters":["Romeo Rom"],"arc":[-0.2654,-0.2625,-0.2908,-0.3321,-0.3734,-0.4038,-0.4182,-0.4139,-0.3917,-0.3588,-0.3225,-0.2825,-0.2345,-0.1746,-0.1108,-0.0581,-0.0217,-0.0025,0.0044,-0.0003,-0.0163,-0.0419,-0.0693,-0.0935,-0.1177,-0.1431,-0.1564,-0.1512,-0.1336,-0.1181,-0.1079,-0.0954,-0.0757,-0.0459,-0.0085,0.0286,0.0618,0.091,0.114,0.1268,0.1289,0.1262,0.1185,0.1071,0.0925,0.0761,0.0586,0.0404,0.0246,0.0104,-0.0002,-0.0006,0.0115,0.0293,0.0427,0.0448,0.0346,0.0144,-0.008,-0.031,-0.0591,-0.0913,-0.1245,-0.165,-0.2145,-0.2703,-0.323,-0.3686,-0.4082,-0.4386,-0.4531,-0.4517,-0.4421,-0.4302,-0.4194,-0.4089,-0.3906,-0.3647,-0.3428,-0.3288,-0.3193,-0.3078,-0.2907,-0.2688,-0.2427,-0.2119,-0.1756,-0.1368,-0.0978,-0.0595,-0.0257,0.0021,0.0133,-0.0018,-0.039,-0.0863,-0.1386,-0.1899,-0.2381,-0.2817,-0.3208,-0.3536,-0.3777,-0.3922,-0.3948,-0.379,-0.3485,-0.3165,-0.2933,-0.2776,-0.2693,-0.2675,-0.2644,-0.2555,-0.2489,-0.2487,-0.2517,-0.2563,-0.2605,-0.2536]},{"title":"Othello","cluster":5,"year":1604,"mean":-0.238,"start":-0.743,"end":-0.6,"high":0.146,"low":-0.743,"range":0.889,"direction":0.143,"midline":-0.6715,"first_last_scene_avg":-0.344,"crossings_midline":3,"crossings_mean":8,"crossings_first_last":12,"num_speakers":28,"num_edges":163,"density":0.4312169312169312,"avg_degree":11.642857142857142,"avg_clustering":0.8397703863140473,"max_degree":26,"num_acts":5,"num_scenes":15,"word_count":27854,"wiki_links":77,"main_characters":["Iago Oth"],"arc":[-0.7429,-0.5821,-0.4205,-0.3131,-0.2524,-0.1958,-0.1454,-0.1041,-0.0724,-0.0452,-0.0191,0.0068,0.0191,0.0269,0.0342,0.0514,0.0659,0.0472,0.0044,-0.0171,-0.0179,-0.0108,-0.0026,0.0052,0.0325,0.0892,0.1367,0.1411,0.0881,-0.0046,-0.1131,-0.2175,-0.3145,-0.3921,-0.4331,-0.4119,-0.3187,-0.2031,-0.1093,-0.0467,-0.0069,0.0271,0.0551,0.072,0.0593,0.0237,-0.0088,-0.0386,-0.0896,-0.1732,-0.2726,-0.3648,-0.4383,-0.4838,-0.4945,-0.4791,-0.4501,-0.4082,-0.3586,-0.3042,-0.2597,-0.2442,-0.2572,-0.2896,-0.3286,-0.3465,-0.3502,-0.3491,-0.3394,-0.3319,-0.3226,-0.2861,-0.2264,-0.1682,-0.1333,-0.1342,-0.1542,-0.1685,-0.1838,-0.2088,-0.2499,-0.3091,-0.3599,-0.3789,-0.3801,-0.3657,-0.3309,-0.2838,-0.2371,-0.2058,-0.1896,-0.1748,-0.1674,-0.1923,-0.2386,-0.2939,-0.3413,-0.362,-0.3488,-0.3283,-0.3175,-0.3162,-0.3198,-0.3277,-0.3505,-0.3814,-0.4029,-0.4148,-0.4224,-0.4255,-0.4333,-0.452,-0.4776,-0.5106,-0.5543,-0.6117,-0.6615,-0.6754,-0.6485,-0.6002]},{"title":"Julius Caesar","cluster":5,"year":1599,"mean":-0.038,"start":-0.226,"end":0.446,"high":0.446,"low":-0.462,"range":0.908,"direction":0.672,"midline":0.11,"first_last_scene_avg":-0.103,"crossings_midline":3,"crossings_mean":5,"crossings_first_last":7,"num_speakers":51,"num_edges":302,"density":0.2368627450980392,"avg_degree":11.84313725490196,"avg_clustering":0.8561205153044666,"max_degree":43,"num_acts":5,"num_scenes":18,"word_count":20420,"wiki_links":54,"main_characters":["Brutus JC"],"arc":[-0.2262,-0.1876,-0.1578,-0.1249,-0.1033,-0.1027,-0.1204,-0.1438,-0.1651,-0.1799,-0.1906,-0.1978,-0.1989,-0.1936,-0.1874,-0.1788,-0.1647,-0.1446,-0.1171,-0.0876,-0.0622,-0.0395,-0.0169,0.0045,0.0213,0.0313,0.0399,0.0511,0.0681,0.0868,0.0991,0.1017,0.096,0.0854,0.0745,0.0657,0.0576,0.0497,0.0444,0.0409,0.0363,0.0311,0.0271,0.0291,0.0373,0.0522,0.0723,0.0969,0.1274,0.1604,0.1947,0.231,0.2651,0.2926,0.3079,0.3094,0.2964,0.2682,0.2286,0.1866,0.147,0.1106,0.0809,0.061,0.0488,0.0414,0.0374,0.0361,0.0348,0.0291,0.0168,-0.0058,-0.0417,-0.0956,-0.1646,-0.2386,-0.3063,-0.3622,-0.4027,-0.428,-0.4417,-0.4528,-0.4617,-0.4563,-0.4269,-0.3706,-0.2953,-0.2148,-0.1434,-0.0893,-0.0534,-0.0255,0.0018,0.0282,0.0459,0.0479,0.0357,0.0133,-0.0153,-0.0401,-0.0535,-0.0599,-0.07,-0.0905,-0.1168,-0.1403,-0.156,-0.1663,-0.1733,-0.178,-0.1806,-0.1768,-0.158,-0.1135,-0.0435,0.0439,0.1364,0.2252,0.3162,0.4456]},{"title":"Much Ado About Nothing","cluster":5,"year":1600,"mean":-0.038,"start":0.269,"end":0.261,"high":0.269,"low":-0.275,"range":0.544,"direction":-0.008,"midline":0.265,"first_last_scene_avg":0.098,"crossings_midline":1,"crossings_mean":6,"crossings_first_last":6,"num_speakers":26,"num_edges":152,"density":0.4676923076923077,"avg_degree":11.692307692307692,"avg_clustering":0.8336570556801564,"max_degree":20,"num_acts":5,"num_scenes":17,"word_count":22344,"wiki_links":43,"main_characters":["DonPedro Ado","Claudio Ado"],"arc":[0.2695,0.224,0.1775,0.1245,0.07,0.0139,-0.0385,-0.0754,-0.0936,-0.0951,-0.0777,-0.0435,-0.0118,0.0113,0.0348,0.0645,0.0992,0.1299,0.1423,0.1312,0.1148,0.1065,0.1016,0.0927,0.0788,0.0623,0.038,0.0119,-0.0006,-0.0017,0.002,0.0077,0.0117,0.0206,0.0456,0.0801,0.1022,0.1027,0.0905,0.0799,0.0717,0.0636,0.0531,0.0358,0.0177,0.0076,0.0012,-0.0108,-0.0232,-0.0289,-0.0377,-0.0533,-0.0685,-0.0815,-0.0949,-0.1034,-0.1015,-0.099,-0.1026,-0.1128,-0.1298,-0.1441,-0.1439,-0.1301,-0.1151,-0.1065,-0.1002,-0.0888,-0.0658,-0.0326,-0.0005,0.0105,-0.0061,-0.0398,-0.0743,-0.1057,-0.1352,-0.1644,-0.1896,-0.2095,-0.2274,-0.2388,-0.2361,-0.2208,-0.2044,-0.1927,-0.1929,-0.2021,-0.2171,-0.2347,-0.2503,-0.2579,-0.2599,-0.2649,-0.2711,-0.2744,-0.2736,-0.2694,-0.2637,-0.2556,-0.2418,-0.222,-0.1949,-0.1678,-0.137,-0.0998,-0.0591,-0.0161,0.0315,0.0791,0.1153,0.1426,0.167,0.1895,0.2093,0.2254,0.236,0.2423,0.2514,0.2611]},{"title":"Titus Andronicus","cluster":5,"year":1592,"mean":-0.165,"start":0.38,"end":-0.179,"high":0.39,"low":-0.582,"range":0.972,"direction":-0.5589999999999999,"midline":0.1005,"first_last_scene_avg":0.095,"crossings_midline":1,"crossings_mean":3,"crossings_first_last":1,"num_speakers":27,"num_edges":184,"density":0.5242165242165242,"avg_degree":13.62962962962963,"avg_clustering":0.8479031392942344,"max_degree":23,"num_acts":5,"num_scenes":14,"word_count":21038,"wiki_links":39,"main_characters":["Lucius Tit"],"arc":[0.3801,0.3757,0.3844,0.3903,0.3817,0.3564,0.3176,0.2709,0.2237,0.1829,0.1526,0.1341,0.126,0.1245,0.1225,0.1147,0.0994,0.0792,0.0599,0.0462,0.0416,0.0484,0.0632,0.0797,0.0908,0.0904,0.0747,0.0429,-0.0031,-0.0602,-0.1232,-0.1871,-0.2479,-0.304,-0.3535,-0.3959,-0.4345,-0.4726,-0.5108,-0.5442,-0.5684,-0.5803,-0.581,-0.5727,-0.5581,-0.5396,-0.5184,-0.4948,-0.4707,-0.4484,-0.4296,-0.4155,-0.4074,-0.4066,-0.4123,-0.4216,-0.431,-0.4371,-0.4383,-0.4361,-0.4327,-0.4272,-0.4174,-0.4023,-0.3847,-0.3685,-0.3556,-0.3458,-0.3388,-0.3332,-0.3286,-0.326,-0.3256,-0.3262,-0.3274,-0.3307,-0.3358,-0.3399,-0.3391,-0.3323,-0.3194,-0.3008,-0.2769,-0.2478,-0.2145,-0.1786,-0.1439,-0.1153,-0.0953,-0.0818,-0.0731,-0.0672,-0.0627,-0.0591,-0.0569,-0.0574,-0.0625,-0.0731,-0.0885,-0.1071,-0.1251,-0.1382,-0.1433,-0.1402,-0.1301,-0.1137,-0.0919,-0.0692,-0.0509,-0.038,-0.0298,-0.0249,-0.0204,-0.015,-0.0098,-0.0085,-0.017,-0.0424,-0.0931,-0.1787]},{"title":"Richard III","cluster":5,"year":1593,"mean":-0.05,"start":-0.28,"end":0.278,"high":0.278,"low":-0.394,"range":0.672,"direction":0.558,"midline":-0.0010000000000000009,"first_last_scene_avg":-0.064,"crossings_midline":5,"crossings_mean":5,"crossings_first_last":5,"num_speakers":59,"num_edges":443,"density":0.2589129164231443,"avg_degree":15.016949152542374,"avg_clustering":0.8186528098440645,"max_degree":44,"num_acts":5,"num_scenes":25,"word_count":30537,"wiki_links":36,"main_characters":["RichardIII R3"],"arc":[-0.2797,-0.3253,-0.3806,-0.3925,-0.3664,-0.336,-0.3073,-0.2783,-0.2383,-0.1772,-0.1253,-0.117,-0.1496,-0.1998,-0.2434,-0.2828,-0.3273,-0.3659,-0.383,-0.3847,-0.373,-0.3535,-0.338,-0.3225,-0.3068,-0.3003,-0.3071,-0.326,-0.3323,-0.2905,-0.2186,-0.157,-0.124,-0.1199,-0.128,-0.1144,-0.0807,-0.0503,-0.034,-0.029,-0.0116,0.0332,0.0866,0.1298,0.1613,0.1835,0.199,0.2051,0.1874,0.154,0.1248,0.1057,0.083,0.0513,0.0285,0.0298,0.0516,0.0953,0.1435,0.1714,0.1629,0.1265,0.0784,0.0261,-0.0362,-0.0947,-0.1301,-0.1419,-0.1292,-0.0697,0.0221,0.1055,0.1512,0.1755,0.1852,0.1709,0.136,0.1004,0.0725,0.0521,0.0498,0.0652,0.0786,0.076,0.0584,0.0377,-0.0005,-0.0649,-0.1259,-0.152,-0.1457,-0.1195,-0.0984,-0.1011,-0.112,-0.1083,-0.0931,-0.0841,-0.0946,-0.1116,-0.1037,-0.0638,-0.0084,0.0493,0.097,0.1382,0.1726,0.182,0.1559,0.1113,0.0748,0.0538,0.0404,0.0283,0.0277,0.0595,0.135,0.226,0.2744,0.2784]},{"title":"King John","cluster":5,"year":1596,"mean":-0.103,"start":-0.2,"end":0.375,"high":0.375,"low":-0.384,"range":0.759,"direction":0.575,"midline":0.0875,"first_last_scene_avg":-0.097,"crossings_midline":3,"crossings_mean":5,"crossings_first_last":5,"num_speakers":28,"num_edges":154,"density":0.4074074074074074,"avg_degree":11.0,"avg_clustering":0.8231571939930112,"max_degree":24,"num_acts":5,"num_scenes":16,"word_count":21766,"wiki_links":29,"main_characters":["Bastard Jn"],"arc":[-0.1999,-0.2033,-0.1857,-0.155,-0.1145,-0.0683,-0.024,0.0127,0.0407,0.0612,0.0747,0.0838,0.0919,0.1005,0.1087,0.1153,0.1194,0.1179,0.1094,0.0947,0.0776,0.0608,0.048,0.0409,0.0392,0.0427,0.0514,0.0631,0.0729,0.0752,0.0668,0.0486,0.0238,-0.0064,-0.0416,-0.0801,-0.1182,-0.1554,-0.1934,-0.2322,-0.2704,-0.3061,-0.3379,-0.363,-0.3785,-0.3838,-0.3806,-0.3702,-0.3532,-0.3321,-0.3083,-0.2837,-0.2595,-0.2348,-0.2083,-0.1793,-0.1502,-0.1242,-0.1052,-0.0951,-0.0931,-0.0976,-0.106,-0.1149,-0.123,-0.1311,-0.1392,-0.1484,-0.1596,-0.1725,-0.1862,-0.2009,-0.2152,-0.2284,-0.2414,-0.2548,-0.2686,-0.2809,-0.2901,-0.2968,-0.303,-0.3101,-0.3167,-0.3198,-0.3167,-0.3066,-0.2902,-0.269,-0.2449,-0.2201,-0.1949,-0.1683,-0.1408,-0.1134,-0.0861,-0.058,-0.0295,-0.0021,0.022,0.0406,0.0525,0.057,0.054,0.0437,0.0258,0.0018,-0.0228,-0.0424,-0.056,-0.0642,-0.0675,-0.0649,-0.0562,-0.0425,-0.0232,0.0052,0.0499,0.12,0.2269,0.375]},{"title":"Macbeth","cluster":6,"year":1606,"mean":-0.104,"start":0.38,"end":-0.187,"high":0.38,"low":-0.416,"range":0.796,"direction":-0.567,"midline":0.0965,"first_last_scene_avg":0.108,"crossings_midline":3,"crossings_mean":5,"crossings_first_last":3,"num_speakers":45,"num_edges":178,"density":0.1797979797979798,"avg_degree":7.911111111111111,"avg_clustering":0.8006458896760853,"max_degree":31,"num_acts":5,"num_scenes":28,"word_count":17900,"wiki_links":82,"main_characters":["Macbeth Mac"],"arc":[0.3797,0.2581,0.1936,0.1596,0.1372,0.1232,0.12,0.1273,0.1426,0.1644,0.193,0.2253,0.2535,0.2723,0.2815,0.2828,0.2774,0.2674,0.2534,0.2323,0.1987,0.1501,0.0886,0.0208,-0.0447,-0.1003,-0.1425,-0.1728,-0.1941,-0.2119,-0.2328,-0.2586,-0.2832,-0.3014,-0.3104,-0.3107,-0.3045,-0.2918,-0.2734,-0.2538,-0.2357,-0.2172,-0.1936,-0.1622,-0.1211,-0.074,-0.0274,0.0165,0.0574,0.0909,0.1167,0.1342,0.1391,0.1269,0.0995,0.0628,0.0234,-0.0167,-0.061,-0.1082,-0.1529,-0.1919,-0.2251,-0.2508,-0.2669,-0.2729,-0.268,-0.2532,-0.2344,-0.2149,-0.1972,-0.1865,-0.1859,-0.1938,-0.2067,-0.2246,-0.2505,-0.2835,-0.3193,-0.3536,-0.3836,-0.4054,-0.4155,-0.4109,-0.3905,-0.3552,-0.3083,-0.2585,-0.2139,-0.1784,-0.1545,-0.1401,-0.1281,-0.1157,-0.1043,-0.0988,-0.1018,-0.1144,-0.1348,-0.1565,-0.1743,-0.1854,-0.1892,-0.1849,-0.1763,-0.1689,-0.1655,-0.1685,-0.1754,-0.1839,-0.1908,-0.1934,-0.1944,-0.1968,-0.201,-0.2036,-0.2001,-0.1907,-0.1836,-0.1867]},{"title":"The Merchant of Venice","cluster":6,"year":1600,"mean":-0.018,"start":-0.255,"end":0.104,"high":0.232,"low":-0.255,"range":0.487,"direction":0.359,"midline":-0.07550000000000001,"first_last_scene_avg":-0.078,"crossings_midline":7,"crossings_mean":9,"crossings_first_last":7,"num_speakers":24,"num_edges":105,"density":0.3804347826086957,"avg_degree":8.75,"avg_clustering":0.7825383358471593,"max_degree":17,"num_acts":5,"num_scenes":20,"word_count":22146,"wiki_links":53,"main_characters":["Portia MV"],"arc":[-0.2549,-0.2306,-0.2083,-0.1829,-0.1495,-0.1118,-0.0767,-0.0499,-0.0316,-0.0184,-0.007,0.0031,0.0103,0.0113,0.0039,-0.013,-0.0354,-0.0589,-0.0806,-0.0977,-0.1078,-0.11,-0.1067,-0.1028,-0.1014,-0.1028,-0.1058,-0.1083,-0.108,-0.1041,-0.0955,-0.0829,-0.0679,-0.052,-0.0371,-0.0244,-0.0133,-0.002,0.01,0.0219,0.0318,0.0395,0.0448,0.0454,0.0415,0.0326,0.0191,0.0006,-0.0245,-0.0577,-0.097,-0.1363,-0.1667,-0.1801,-0.1761,-0.1564,-0.1277,-0.094,-0.0579,-0.0229,0.0106,0.0434,0.074,0.1015,0.1237,0.1398,0.1504,0.1564,0.1584,0.154,0.1389,0.1115,0.0746,0.0332,-0.0067,-0.0402,-0.066,-0.0843,-0.0967,-0.104,-0.1096,-0.1153,-0.1189,-0.1217,-0.1262,-0.1318,-0.1358,-0.1356,-0.1291,-0.1146,-0.0949,-0.0737,-0.0528,-0.0313,-0.0075,0.0186,0.0448,0.0689,0.0898,0.1102,0.1336,0.1612,0.1902,0.2162,0.2311,0.2282,0.2086,0.1756,0.1378,0.1031,0.0746,0.0517,0.0315,0.0121,-0.0073,-0.0271,-0.0438,-0.0444,-0.0053,0.1044]},{"title":"As You Like It","cluster":6,"year":1599,"mean":-0.061,"start":-0.749,"end":0.191,"high":0.197,"low":-0.749,"range":0.946,"direction":0.94,"midline":-0.279,"first_last_scene_avg":0.036,"crossings_midline":3,"crossings_mean":7,"crossings_first_last":3,"num_speakers":28,"num_edges":110,"density":0.291005291005291,"avg_degree":7.857142857142857,"avg_clustering":0.7792977330792458,"max_degree":18,"num_acts":5,"num_scenes":22,"word_count":23113,"wiki_links":49,"main_characters":["Orlando AYL","Touchstone AYL"],"arc":[-0.7494,-0.5546,-0.3934,-0.2826,-0.2115,-0.1652,-0.1318,-0.0998,-0.0646,-0.0296,-0.003,0.0102,0.016,0.021,0.0299,0.0419,0.058,0.0752,0.0877,0.0906,0.0794,0.0556,0.0222,-0.0153,-0.053,-0.0892,-0.122,-0.1477,-0.1653,-0.175,-0.1762,-0.171,-0.1609,-0.1466,-0.1276,-0.1099,-0.0961,-0.0861,-0.0743,-0.0592,-0.0462,-0.0456,-0.0615,-0.0891,-0.1247,-0.1643,-0.2042,-0.2393,-0.2653,-0.2828,-0.2946,-0.3014,-0.3027,-0.2991,-0.2892,-0.269,-0.2363,-0.1953,-0.1517,-0.1105,-0.0753,-0.0497,-0.0355,-0.0317,-0.0368,-0.0445,-0.0536,-0.0658,-0.085,-0.1105,-0.1372,-0.1619,-0.1803,-0.191,-0.1959,-0.1958,-0.1923,-0.1841,-0.1675,-0.1409,-0.112,-0.0863,-0.0651,-0.0473,-0.0353,-0.0338,-0.0392,-0.0429,-0.0456,-0.0484,-0.0497,-0.0472,-0.0349,-0.0128,0.0154,0.0483,0.0793,0.1035,0.123,0.1453,0.1694,0.1873,0.1959,0.1959,0.1878,0.1692,0.1452,0.1213,0.1026,0.0961,0.1026,0.1134,0.1225,0.1288,0.1338,0.1426,0.1548,0.1671,0.1842,0.1914]},{"title":"Two Gentlemen of Verona","cluster":6,"year":1591,"mean":-0.069,"start":0.367,"end":0.654,"high":0.654,"low":-0.363,"range":1.017,"direction":0.287,"midline":0.5105,"first_last_scene_avg":-0.109,"crossings_midline":1,"crossings_mean":10,"crossings_first_last":6,"num_speakers":17,"num_edges":67,"density":0.4926470588235294,"avg_degree":7.882352941176471,"avg_clustering":0.7248277865924924,"max_degree":14,"num_acts":5,"num_scenes":20,"word_count":18361,"wiki_links":40,"main_characters":["Proteus TGV"],"arc":[0.367,0.1167,-0.0672,-0.185,-0.2553,-0.2975,-0.3226,-0.3335,-0.3329,-0.326,-0.3159,-0.3028,-0.2796,-0.245,-0.2029,-0.1607,-0.126,-0.1023,-0.0904,-0.0885,-0.089,-0.0806,-0.0598,-0.0345,-0.019,-0.0239,-0.0454,-0.0658,-0.0699,-0.0573,-0.038,-0.0216,-0.0154,-0.0215,-0.039,-0.0621,-0.0782,-0.0838,-0.0851,-0.0863,-0.0855,-0.076,-0.0519,-0.009,0.0447,0.0926,0.1226,0.1343,0.1301,0.1163,0.0967,0.0708,0.0401,0.004,-0.0372,-0.0776,-0.1085,-0.1241,-0.1254,-0.1204,-0.1196,-0.1301,-0.1471,-0.1671,-0.187,-0.2054,-0.2248,-0.2523,-0.2876,-0.3219,-0.347,-0.3604,-0.3626,-0.3535,-0.3338,-0.3103,-0.2886,-0.2674,-0.239,-0.2022,-0.1573,-0.1031,-0.0439,0.0086,0.0453,0.0697,0.0893,0.1024,0.1068,0.1078,0.114,0.1222,0.1204,0.1071,0.0879,0.0662,0.0484,0.0438,0.0537,0.0656,0.0661,0.0525,0.0235,-0.02,-0.0663,-0.0988,-0.1129,-0.1188,-0.1295,-0.144,-0.1504,-0.1401,-0.1081,-0.0472,0.04,0.14,0.2422,0.3491,0.4773,0.6536]},{"title":"Troilus and Cressida","cluster":6,"year":1602,"mean":-0.107,"start":-0.118,"end":-0.479,"high":0.29,"low":-0.479,"range":0.7689999999999999,"direction":-0.361,"midline":-0.2985,"first_last_scene_avg":-0.063,"crossings_midline":3,"crossings_mean":6,"crossings_first_last":6,"num_speakers":34,"num_edges":175,"density":0.3119429590017825,"avg_degree":10.294117647058824,"avg_clustering":0.7971273646016112,"max_degree":24,"num_acts":5,"num_scenes":25,"word_count":27592,"wiki_links":37,"main_characters":["Troilus Tro"],"arc":[-0.1182,-0.1691,-0.1636,-0.1694,-0.1906,-0.2068,-0.2112,-0.2049,-0.1885,-0.1627,-0.1247,-0.0826,-0.0466,-0.0157,0.0021,0.0117,0.019,0.016,-0.0089,-0.0554,-0.1104,-0.1668,-0.223,-0.2813,-0.3344,-0.3793,-0.4124,-0.4086,-0.3603,-0.2977,-0.2499,-0.2225,-0.2076,-0.1964,-0.1908,-0.2077,-0.2453,-0.2752,-0.2722,-0.2363,-0.1926,-0.1528,-0.1192,-0.0818,-0.0363,0.002,0.0127,-0.0017,-0.0169,-0.0209,-0.0245,-0.0262,-0.0292,-0.0329,-0.0342,-0.0303,-0.0326,-0.0358,-0.0423,-0.0455,-0.0424,-0.0499,-0.0772,-0.1207,-0.1741,-0.2197,-0.254,-0.2744,-0.2844,-0.2813,-0.259,-0.2016,-0.1228,-0.0399,0.0349,0.0958,0.1492,0.1969,0.2408,0.2754,0.2892,0.2842,0.2621,0.2241,0.1638,0.0844,0.0106,-0.0379,-0.0576,-0.0596,-0.0568,-0.0445,-0.0184,0.0181,0.0564,0.072,0.0486,0.006,-0.0388,-0.0834,-0.1202,-0.1538,-0.1868,-0.2235,-0.25,-0.2518,-0.2236,-0.1831,-0.1522,-0.1429,-0.1442,-0.1469,-0.1489,-0.1599,-0.1964,-0.2519,-0.3007,-0.338,-0.387,-0.4786]},{"title":"Henry V","cluster":6,"year":1599,"mean":0.057,"start":0.025,"end":0.361,"high":0.361,"low":-0.183,"range":0.544,"direction":0.3359999999999999,"midline":0.193,"first_last_scene_avg":-0.011,"crossings_midline":5,"crossings_mean":7,"crossings_first_last":6,"num_speakers":48,"num_edges":206,"density":0.1826241134751773,"avg_degree":8.583333333333334,"avg_clustering":0.802893359572559,"max_degree":29,"num_acts":5,"num_scenes":23,"word_count":27202,"wiki_links":36,"main_characters":["HenryV H5"],"arc":[0.0248,0.107,0.1595,0.1936,0.2148,0.2223,0.2175,0.2062,0.1929,0.1811,0.1719,0.1645,0.1583,0.152,0.1421,0.1292,0.1162,0.1034,0.0914,0.0817,0.0733,0.0633,0.0511,0.0354,0.0196,0.0086,0.0032,0.0017,0.0034,0.0044,-0.0022,-0.0196,-0.0477,-0.0833,-0.1197,-0.1503,-0.1715,-0.1816,-0.1823,-0.1754,-0.1585,-0.1285,-0.0847,-0.0262,0.039,0.1018,0.1579,0.2028,0.2299,0.2374,0.2294,0.215,0.2009,0.1899,0.1803,0.1709,0.1595,0.1461,0.135,0.1306,0.1303,0.13,0.1252,0.1145,0.1033,0.0929,0.0796,0.0638,0.0505,0.0428,0.041,0.0434,0.0464,0.0451,0.0388,0.0268,0.0085,-0.0144,-0.0409,-0.0681,-0.0887,-0.0995,-0.0985,-0.0911,-0.0819,-0.0689,-0.047,-0.016,0.0196,0.0551,0.0837,0.1004,0.1061,0.1034,0.0923,0.0724,0.0476,0.0179,-0.0112,-0.034,-0.0498,-0.06,-0.0673,-0.0708,-0.0676,-0.0591,-0.0487,-0.0398,-0.0266,-0.0042,0.0279,0.0651,0.1016,0.1332,0.1612,0.1908,0.2292,0.2778,0.3242,0.3614]},{"title":"The Winter's Tale","cluster":6,"year":1611,"mean":-0.051,"start":0.378,"end":0.198,"high":0.378,"low":-0.25,"range":0.628,"direction":-0.18,"midline":0.28800000000000003,"first_last_scene_avg":0.33,"crossings_midline":1,"crossings_mean":4,"crossings_first_last":1,"num_speakers":35,"num_edges":166,"density":0.2789915966386554,"avg_degree":9.485714285714286,"avg_clustering":0.7515114417745998,"max_degree":20,"num_acts":5,"num_scenes":15,"word_count":26394,"wiki_links":36,"main_characters":["Leontes WT"],"arc":[0.3782,0.2221,0.1331,0.0869,0.0576,0.0279,-0.0057,-0.041,-0.0756,-0.1059,-0.1274,-0.1393,-0.1452,-0.1513,-0.1611,-0.1759,-0.1933,-0.2112,-0.2267,-0.2381,-0.2463,-0.2497,-0.2472,-0.2408,-0.2323,-0.2232,-0.217,-0.2183,-0.2268,-0.2365,-0.2398,-0.2315,-0.2122,-0.1902,-0.1719,-0.1571,-0.1453,-0.14,-0.1426,-0.1497,-0.156,-0.1583,-0.1561,-0.1491,-0.1366,-0.1183,-0.0995,-0.0873,-0.0827,-0.0856,-0.0957,-0.1104,-0.1228,-0.1261,-0.1176,-0.0994,-0.0793,-0.0608,-0.0423,-0.0225,-0.0024,0.0209,0.0526,0.0926,0.1343,0.1696,0.1911,0.1991,0.2009,0.1993,0.1948,0.1858,0.1681,0.1412,0.1105,0.0852,0.0726,0.0762,0.0911,0.1081,0.1233,0.135,0.1401,0.1358,0.1194,0.0959,0.0697,0.0441,0.0195,-0.0074,-0.0388,-0.075,-0.1133,-0.1486,-0.1764,-0.1924,-0.196,-0.1921,-0.1847,-0.1738,-0.16,-0.146,-0.1315,-0.117,-0.1031,-0.0879,-0.0726,-0.0598,-0.0512,-0.0458,-0.0402,-0.0302,-0.0116,0.0166,0.0518,0.0858,0.1115,0.1314,0.1534,0.1983]},{"title":"All's Well That Ends Well","cluster":6,"year":1605,"mean":-0.081,"start":-0.152,"end":-0.222,"high":0.273,"low":-0.384,"range":0.657,"direction":-0.07,"midline":-0.187,"first_last_scene_avg":-0.064,"crossings_midline":5,"crossings_mean":6,"crossings_first_last":6,"num_speakers":29,"num_edges":127,"density":0.312807881773399,"avg_degree":8.758620689655173,"avg_clustering":0.7927751391106788,"max_degree":22,"num_acts":5,"num_scenes":23,"word_count":24421,"wiki_links":34,"main_characters":["Parolles AWW"],"arc":[-0.152,-0.1625,-0.1539,-0.1148,-0.0471,0.0209,0.0696,0.0998,0.1201,0.1396,0.1684,0.2064,0.2406,0.2577,0.2603,0.2532,0.2441,0.2467,0.2611,0.2721,0.2692,0.2439,0.1957,0.14,0.0977,0.0871,0.1078,0.1456,0.1803,0.2002,0.2057,0.2069,0.2079,0.2053,0.1876,0.14,0.0639,-0.0211,-0.0938,-0.1439,-0.1642,-0.164,-0.16,-0.1529,-0.1341,-0.0987,-0.0556,-0.0227,-0.0098,-0.0191,-0.0401,-0.056,-0.0615,-0.0638,-0.0711,-0.0794,-0.0911,-0.1004,-0.1012,-0.0982,-0.0992,-0.113,-0.1367,-0.1642,-0.1889,-0.2077,-0.2282,-0.2609,-0.305,-0.3431,-0.3673,-0.3814,-0.383,-0.3757,-0.367,-0.3607,-0.3513,-0.332,-0.3033,-0.2671,-0.2368,-0.2241,-0.2286,-0.2417,-0.2613,-0.2872,-0.311,-0.3274,-0.3327,-0.3326,-0.3332,-0.3355,-0.3303,-0.3065,-0.2613,-0.2039,-0.15,-0.1095,-0.0809,-0.0545,-0.0187,0.0233,0.0569,0.0649,0.0336,-0.0249,-0.0827,-0.1176,-0.132,-0.145,-0.1722,-0.2111,-0.2415,-0.2492,-0.2305,-0.1986,-0.1764,-0.1836,-0.2157,-0.2223]},{"title":"Henry IV, Part 1","cluster":6,"year":1598,"mean":-0.221,"start":-0.222,"end":0.314,"high":0.314,"low":-0.487,"range":0.8009999999999999,"direction":0.536,"midline":0.046,"first_last_scene_avg":0.068,"crossings_midline":1,"crossings_mean":7,"crossings_first_last":1,"num_speakers":36,"num_edges":147,"density":0.2333333333333333,"avg_degree":8.166666666666666,"avg_clustering":0.7951713400500809,"max_degree":20,"num_acts":5,"num_scenes":19,"word_count":25466,"wiki_links":31,"main_characters":["Falstaff 1H4","HenryV H5"],"arc":[-0.2217,-0.2856,-0.319,-0.331,-0.329,-0.3236,-0.3161,-0.3032,-0.2821,-0.2494,-0.2086,-0.1707,-0.1441,-0.132,-0.1318,-0.1386,-0.1534,-0.1768,-0.2041,-0.2306,-0.257,-0.2857,-0.316,-0.3425,-0.3633,-0.3767,-0.3789,-0.3693,-0.3487,-0.3167,-0.281,-0.2504,-0.2263,-0.2078,-0.1961,-0.1923,-0.1957,-0.2086,-0.2319,-0.2656,-0.3083,-0.3556,-0.4011,-0.4397,-0.4669,-0.4823,-0.4872,-0.4791,-0.4563,-0.4203,-0.38,-0.3461,-0.3223,-0.3067,-0.298,-0.2937,-0.291,-0.2891,-0.285,-0.2813,-0.2808,-0.2759,-0.2589,-0.2286,-0.1886,-0.1456,-0.1057,-0.0735,-0.0544,-0.0525,-0.0679,-0.0967,-0.1364,-0.1862,-0.2466,-0.317,-0.3888,-0.4467,-0.477,-0.4804,-0.4638,-0.4284,-0.3761,-0.3134,-0.2503,-0.1963,-0.1569,-0.1304,-0.1134,-0.1065,-0.1105,-0.1235,-0.1427,-0.1635,-0.1823,-0.1999,-0.213,-0.2148,-0.1976,-0.1674,-0.136,-0.116,-0.1151,-0.1275,-0.1407,-0.1456,-0.1384,-0.1189,-0.0912,-0.0632,-0.0391,-0.0154,0.0118,0.0499,0.1026,0.1644,0.2213,0.2602,0.2834,0.3141]},{"title":"Richard II","cluster":6,"year":1595,"mean":-0.141,"start":0.083,"end":-0.214,"high":0.083,"low":-0.335,"range":0.418,"direction":-0.297,"midline":-0.0655,"first_last_scene_avg":-0.017,"crossings_midline":3,"crossings_mean":5,"crossings_first_last":5,"num_speakers":36,"num_edges":167,"density":0.2650793650793651,"avg_degree":9.27777777777778,"avg_clustering":0.7416325217497987,"max_degree":26,"num_acts":5,"num_scenes":19,"word_count":23195,"wiki_links":30,"main_characters":["RichardII R2"],"arc":[0.0826,-0.0106,-0.0487,-0.0447,-0.019,0.0115,0.0358,0.0481,0.0475,0.0363,0.0174,-0.0046,-0.0249,-0.0407,-0.0526,-0.064,-0.0776,-0.0947,-0.1165,-0.1417,-0.1685,-0.1944,-0.2151,-0.2255,-0.2242,-0.2143,-0.1995,-0.1841,-0.1721,-0.1674,-0.172,-0.1836,-0.1979,-0.213,-0.2256,-0.2312,-0.2278,-0.2172,-0.2033,-0.1894,-0.1755,-0.1626,-0.1511,-0.1386,-0.1218,-0.0996,-0.072,-0.0427,-0.0169,0.002,0.0136,0.0174,0.0154,0.0114,0.0106,0.0164,0.0293,0.0462,0.0633,0.0767,0.0823,0.0782,0.0644,0.0436,0.0198,-0.0045,-0.0263,-0.0449,-0.064,-0.0869,-0.116,-0.1524,-0.1936,-0.2346,-0.2713,-0.3018,-0.3231,-0.3339,-0.3343,-0.3271,-0.3169,-0.3062,-0.2968,-0.2896,-0.2846,-0.2809,-0.2779,-0.2751,-0.272,-0.2687,-0.2668,-0.2678,-0.2718,-0.2782,-0.287,-0.2966,-0.3042,-0.3069,-0.3038,-0.2958,-0.2837,-0.2685,-0.2514,-0.2336,-0.2174,-0.2026,-0.1879,-0.1732,-0.158,-0.1417,-0.1248,-0.1097,-0.0982,-0.0926,-0.0956,-0.1094,-0.1351,-0.1677,-0.196,-0.2137]},{"title":"Cymbeline","cluster":6,"year":1610,"mean":-0.112,"start":0.502,"end":0.615,"high":0.615,"low":-0.447,"range":1.062,"direction":0.1129999999999999,"midline":0.5585,"first_last_scene_avg":-0.07,"crossings_midline":1,"crossings_mean":6,"crossings_first_last":10,"num_speakers":41,"num_edges":195,"density":0.2378048780487804,"avg_degree":9.51219512195122,"avg_clustering":0.8896406213479384,"max_degree":27,"num_acts":5,"num_scenes":27,"word_count":29093,"wiki_links":29,"main_characters":["Posthumus Cym"],"arc":[0.5023,0.2495,0.066,-0.063,-0.1653,-0.2449,-0.2969,-0.3216,-0.3233,-0.3022,-0.2642,-0.2223,-0.1841,-0.1489,-0.1151,-0.0835,-0.0548,-0.0321,-0.0234,-0.0232,-0.0287,-0.0359,-0.0368,-0.0311,-0.0288,-0.0368,-0.0551,-0.0765,-0.0929,-0.0952,-0.0842,-0.0638,-0.0367,-0.0128,-0.0002,0.0001,-0.0061,-0.0017,0.0089,0.0122,0.0019,-0.021,-0.0496,-0.0752,-0.0888,-0.0846,-0.0648,-0.0336,-0.0025,0.0105,0.0007,-0.0255,-0.0504,-0.0619,-0.0629,-0.0648,-0.0831,-0.1214,-0.1674,-0.2053,-0.2248,-0.2217,-0.2019,-0.1776,-0.1585,-0.1423,-0.1221,-0.0942,-0.0561,-0.0118,0.0196,0.0207,-0.0066,-0.052,-0.1074,-0.1713,-0.2418,-0.3111,-0.3748,-0.422,-0.4446,-0.4433,-0.4198,-0.3731,-0.3118,-0.2557,-0.2169,-0.1871,-0.1608,-0.1393,-0.1283,-0.1346,-0.1576,-0.1884,-0.2164,-0.2348,-0.2445,-0.2513,-0.2574,-0.2596,-0.2562,-0.2451,-0.2257,-0.2055,-0.1908,-0.1812,-0.1759,-0.1717,-0.1656,-0.1533,-0.1358,-0.1142,-0.088,-0.0534,0.0005,0.076,0.1711,0.288,0.4355,0.6153]},{"title":"Henry VIII","cluster":6,"year":1613,"mean":-0.026,"start":0.279,"end":0.611,"high":0.611,"low":-0.334,"range":0.945,"direction":0.3319999999999999,"midline":0.445,"first_last_scene_avg":-0.248,"crossings_midline":1,"crossings_mean":8,"crossings_first_last":4,"num_speakers":48,"num_edges":203,"density":0.1799645390070922,"avg_degree":8.458333333333334,"avg_clustering":0.8149494003970267,"max_degree":27,"num_acts":5,"num_scenes":16,"word_count":25039,"wiki_links":28,"main_characters":["HenryVIII H8"],"arc":[0.2794,0.1386,0.0291,-0.0625,-0.1406,-0.2007,-0.2425,-0.2704,-0.2863,-0.2889,-0.2737,-0.2395,-0.1926,-0.1364,-0.0719,-0.0046,0.0588,0.1162,0.1694,0.2226,0.2748,0.3189,0.349,0.3645,0.3655,0.3495,0.3176,0.2764,0.2319,0.189,0.1486,0.1075,0.0682,0.0349,0.0076,-0.0141,-0.0295,-0.04,-0.0437,-0.0414,-0.0369,-0.0282,-0.0125,0.0072,0.0255,0.0385,0.0457,0.0487,0.0487,0.0454,0.0357,0.0211,0.0043,-0.0153,-0.034,-0.0492,-0.0592,-0.0638,-0.0674,-0.0743,-0.0811,-0.0828,-0.0805,-0.0763,-0.0725,-0.0736,-0.0808,-0.0921,-0.1079,-0.1268,-0.1427,-0.1516,-0.1514,-0.1414,-0.1228,-0.0995,-0.0742,-0.0484,-0.0221,0.0084,0.0404,0.0645,0.0744,0.0714,0.0594,0.0417,0.0213,-0.0016,-0.025,-0.045,-0.0591,-0.0655,-0.0632,-0.0572,-0.0534,-0.0557,-0.0634,-0.0729,-0.0832,-0.0987,-0.1216,-0.1487,-0.1769,-0.2064,-0.2378,-0.2696,-0.2996,-0.3229,-0.3338,-0.3269,-0.3024,-0.2657,-0.2202,-0.1642,-0.0925,-0.0027,0.1032,0.2255,0.3838,0.6107]},{"title":"Pericles","cluster":6,"year":1609,"mean":0.044,"start":0.211,"end":0.563,"high":0.563,"low":-0.223,"range":0.7859999999999999,"direction":0.352,"midline":0.38699999999999996,"first_last_scene_avg":0.281,"crossings_midline":1,"crossings_mean":4,"crossings_first_last":3,"num_speakers":54,"num_edges":173,"density":0.1208944793850454,"avg_degree":6.407407407407407,"avg_clustering":0.8283388619739557,"max_degree":32,"num_acts":5,"num_scenes":22,"word_count":19229,"wiki_links":28,"main_characters":["Pericles Per"],"arc":[0.2109,0.0798,-0.004,-0.0538,-0.083,-0.1001,-0.1098,-0.1142,-0.1142,-0.1115,-0.1088,-0.1073,-0.1071,-0.1084,-0.1101,-0.1092,-0.1056,-0.0992,-0.0872,-0.0722,-0.0557,-0.0368,-0.0135,0.0155,0.0499,0.0905,0.1375,0.1861,0.2308,0.2676,0.2926,0.3059,0.3123,0.3138,0.3102,0.3029,0.2941,0.2825,0.2671,0.2457,0.2172,0.1858,0.1555,0.1261,0.0967,0.0708,0.0535,0.0454,0.0441,0.0501,0.0644,0.0847,0.1078,0.1312,0.1523,0.1735,0.1981,0.2236,0.2453,0.2576,0.2569,0.2421,0.2135,0.1724,0.1227,0.0718,0.0245,-0.0172,-0.0517,-0.0799,-0.1034,-0.1226,-0.1386,-0.1511,-0.1587,-0.1594,-0.1521,-0.1374,-0.1162,-0.0924,-0.0718,-0.0561,-0.0452,-0.0419,-0.0488,-0.0665,-0.0944,-0.1282,-0.1603,-0.1839,-0.1995,-0.209,-0.214,-0.2177,-0.2212,-0.2229,-0.2198,-0.2094,-0.1876,-0.1551,-0.1141,-0.0691,-0.0248,0.015,0.0458,0.0668,0.0813,0.0954,0.1151,0.1419,0.1731,0.2053,0.238,0.2727,0.3106,0.3518,0.397,0.4482,0.5053,0.5633]},{"title":"Henry IV, Part 2","cluster":6,"year":1598,"mean":-0.125,"start":-0.061,"end":0.022,"high":0.32,"low":-0.402,"range":0.722,"direction":0.0829999999999999,"midline":-0.0195,"first_last_scene_avg":-0.335,"crossings_midline":3,"crossings_mean":4,"crossings_first_last":4,"num_speakers":50,"num_edges":232,"density":0.1893877551020408,"avg_degree":9.28,"avg_clustering":0.808002437189746,"max_degree":30,"num_acts":5,"num_scenes":17,"word_count":27650,"wiki_links":24,"main_characters":["Falstaff 1H4"],"arc":[-0.0614,-0.1101,-0.1661,-0.2249,-0.2857,-0.3381,-0.3746,-0.3921,-0.3936,-0.3842,-0.3674,-0.3531,-0.342,-0.3319,-0.3227,-0.3144,-0.3079,-0.3022,-0.2997,-0.3003,-0.3004,-0.2924,-0.2698,-0.2398,-0.2165,-0.2056,-0.2115,-0.2313,-0.2605,-0.289,-0.312,-0.3311,-0.3457,-0.3594,-0.3738,-0.3848,-0.3917,-0.3957,-0.3999,-0.4011,-0.3911,-0.3738,-0.3585,-0.3504,-0.3444,-0.3411,-0.3389,-0.3278,-0.3044,-0.2756,-0.2507,-0.2341,-0.2168,-0.1907,-0.156,-0.1133,-0.0735,-0.0434,-0.0262,-0.0249,-0.0418,-0.0664,-0.0845,-0.0911,-0.094,-0.0956,-0.0968,-0.0981,-0.0987,-0.094,-0.078,-0.0511,-0.0166,0.0167,0.0388,0.0487,0.0536,0.061,0.0751,0.0901,0.0987,0.0973,0.0847,0.065,0.0417,0.0165,-0.0086,-0.0363,-0.0647,-0.0892,-0.1095,-0.1242,-0.1278,-0.121,-0.1094,-0.0913,-0.0609,-0.0181,0.0366,0.1031,0.1724,0.2343,0.2817,0.3116,0.3198,0.3012,0.2634,0.2212,0.1824,0.1465,0.1068,0.0639,0.0251,0.0024,0.0082,0.0462,0.1043,0.1477,0.1303,0.0222]},{"title":"Henry VI, Part 3","cluster":6,"year":1591,"mean":-0.086,"start":0.101,"end":0.12,"high":0.365,"low":-0.571,"range":0.936,"direction":0.0189999999999999,"midline":0.1105,"first_last_scene_avg":0.236,"crossings_midline":5,"crossings_mean":8,"crossings_first_last":2,"num_speakers":49,"num_edges":271,"density":0.2304421768707483,"avg_degree":11.06122448979592,"avg_clustering":0.8334123440596694,"max_degree":38,"num_acts":5,"num_scenes":28,"word_count":25276,"wiki_links":20,"main_characters":["EdwardIV 3H6"],"arc":[0.1011,0.0391,-0.0271,-0.0772,-0.1117,-0.1334,-0.1404,-0.1372,-0.1298,-0.1181,-0.1012,-0.0829,-0.067,-0.0545,-0.0534,-0.0721,-0.1049,-0.1465,-0.1944,-0.2428,-0.2863,-0.3182,-0.3371,-0.3448,-0.3392,-0.3152,-0.2762,-0.2326,-0.1932,-0.1651,-0.1583,-0.1711,-0.1904,-0.2103,-0.2376,-0.276,-0.3266,-0.3862,-0.4505,-0.5101,-0.5521,-0.57,-0.5675,-0.5519,-0.5284,-0.498,-0.4627,-0.4194,-0.3666,-0.3061,-0.2485,-0.2023,-0.1683,-0.1485,-0.1409,-0.14,-0.1347,-0.1232,-0.1114,-0.099,-0.0829,-0.0632,-0.0371,-0.0021,0.0413,0.0829,0.1138,0.1296,0.1298,0.1132,0.0843,0.0548,0.0283,0.0011,-0.0287,-0.0539,-0.0726,-0.0884,-0.0941,-0.0812,-0.0471,0.0048,0.0654,0.1245,0.1737,0.2101,0.238,0.2644,0.2919,0.3181,0.342,0.3601,0.365,0.3538,0.3315,0.3081,0.2924,0.2849,0.2776,0.2651,0.2505,0.2364,0.2199,0.1989,0.1722,0.1339,0.0817,0.0204,-0.0447,-0.1136,-0.1839,-0.2457,-0.2968,-0.3411,-0.3748,-0.3789,-0.3324,-0.2272,-0.0703,0.1204]}],"feature_means":{"num_speakers":38.729729729729726,"density":0.3513230381465344,"mean_score":-0.11567567567567566,"range":0.8012162162162161}};
+
+// ------- Question definitions -------
+// Each option assigns "weight" deltas to feature dimensions used in matching
+const QUESTIONS = [
+  {
+    id: 'mood',
+    title: 'What kind of emotional experience do you want?',
+    sub: 'There is no wrong answer — pick what fits your current mood.',
+    options: [
+      { id: 'cathartic',  label: 'Catharsis — let me feel something deeply', sub: 'Even if it ends in tears', target: { mean: -0.25, range: 1.0, direction: -0.5 } },
+      { id: 'resolved',   label: 'Hope — I want a journey that resolves',     sub: 'Difficulty followed by arrival',  target: { mean: 0.0,  range: 0.7, direction: 0.4 } },
+      { id: 'playful',    label: 'Lightness — something playful or romantic', sub: 'Magic, mischief, love',           target: { mean: -0.05, range: 0.7, direction: -0.2 } },
+      { id: 'turbulent',  label: 'Turbulence — keep me off-balance',          sub: 'Many swings, unpredictability',   target: { mean: -0.1, range: 0.8, direction: 0.0, crossings_mean: 10 } },
+    ],
+  },
+  {
+    id: 'scale',
+    title: 'How much world do you want to enter?',
+    sub: 'Big casts mean richer politics; small casts mean closer focus.',
+    options: [
+      { id: 'small',  label: 'Tight ensemble',  sub: '15–25 characters, everyone knows everyone',     target: { num_speakers: 20, density: 0.65 } },
+      { id: 'medium', label: 'Mid-sized cast',  sub: '25–45 characters, room to breathe',             target: { num_speakers: 35, density: 0.35 } },
+      { id: 'epic',   label: 'Vast world',      sub: '50+ characters, sprawling factions',            target: { num_speakers: 60, density: 0.18 } },
+    ],
+  },
+  {
+    id: 'situation',
+    title: 'How will you be watching?',
+    sub: 'This affects how much attention you have to give.',
+    options: [
+      { id: 'solo_focused',  label: 'Solo, focused', sub: 'Evening, quiet, full attention', },
+      { id: 'shared',        label: 'With others',   sub: 'Family or friends, want shared payoff', },
+      { id: 'background',    label: 'Background',    sub: 'Doing other things, easy in/out', },
+      { id: 'short',         label: 'Quick',         sub: 'Have an hour or two, want compact', },
+    ],
+  },
+  {
+    id: 'priority',
+    title: 'What matters most in a story?',
+    sub: 'Pick the one that most pulls you in.',
+    options: [
+      { id: 'characters',  label: 'Complex characters', sub: 'I want to know people deeply' },
+      { id: 'plot',        label: 'Twists and surprise', sub: 'Keep me guessing' },
+      { id: 'language',    label: 'Beautiful language', sub: 'Poetry, monologues, wit' },
+      { id: 'meaning',     label: 'Big ideas',          sub: 'Power, love, identity, mortality' },
+    ],
+  },
+];
+
+// ------- State -------
+const state = {
+  step: 0,
+  answers: {},
+};
+
+// ------- Scoring -------
+function clusterFitScore(play, answers) {
+  // Compose target features from the user's choices
+  let target = {};
+  let weights = { mean: 1.5, range: 1.0, direction: 1.0, num_speakers: 0.8, density: 0.8, crossings_mean: 1.0 };
+  for (const q of QUESTIONS) {
+    const ans = answers[q.id];
+    if (!ans) continue;
+    const opt = q.options.find(o => o.id === ans);
+    if (opt && opt.target) {
+      for (const [k, v] of Object.entries(opt.target)) target[k] = v;
+    }
+  }
+  // Distance: weighted Euclidean over normalized feature deltas
+  // Normalize each feature against the canon's spread to make distances comparable
+  const norms = {
+    mean: 0.6, range: 1.0, direction: 1.5,
+    num_speakers: 60, density: 0.7, crossings_mean: 12,
+  };
+  let dist = 0;
+  for (const [k, t] of Object.entries(target)) {
+    const w = weights[k] || 1.0;
+    const n = norms[k] || 1.0;
+    const d = (play[k] - t) / n;
+    dist += w * d * d;
+  }
+  // Situation adjustments
+  if (answers.situation === 'short' && play.word_count) {
+    // Prefer shorter plays (≤ 22k words is "short" in this canon)
+    dist += play.word_count > 24000 ? 1.5 : 0;
+  }
+  if (answers.situation === 'background') {
+    // Background watching: prefer lower volatility (less to track)
+    if (play.crossings_mean > 8) dist += 0.8;
+  }
+  if (answers.situation === 'shared' && play.crossings_first_last > 8) {
+    // Many crossings = hard for group viewing
+    dist += 0.5;
+  }
+  if (answers.priority === 'language' && play.word_count) {
+    // Prefer plays with high wikipedia link count (more famous = more language-celebrated)
+    if (play.wiki_links < 40) dist += 0.4;
+  }
+  if (answers.priority === 'characters' && play.num_speakers > 50) {
+    // Too many characters = harder to know any deeply
+    dist += 0.5;
+  }
+  return dist;
+}
+
+function recommend(answers) {
+  const scored = DATA.plays.map(p => ({ play: p, dist: clusterFitScore(p, answers) }));
+  scored.sort((a, b) => a.dist - b.dist);
+  return scored;
+}
+
+// ------- Render -------
+const stepTrack = document.getElementById('step-track');
+const appEl = document.getElementById('app');
+
+function renderStepper() {
+  stepTrack.innerHTML = '';
+  const total = QUESTIONS.length;
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'step-dot';
+    dot.textContent = i + 1;
+    if (i < state.step) dot.classList.add('is-done');
+    else if (i === state.step) dot.classList.add('is-active');
+    stepTrack.appendChild(dot);
+    if (i < total - 1) {
+      const line = document.createElement('div');
+      line.className = 'step-line';
+      if (i < state.step) line.classList.add('is-done');
+      stepTrack.appendChild(line);
+    }
+  }
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[state.step];
+  appEl.innerHTML = `
+    <div class="card question">
+      <h2>${q.title}</h2>
+      <p class="sub">${q.sub}</p>
+      <div class="options ${q.options.length === 2 ? 'solo' : ''}">
+        ${q.options.map(o => `
+          <button class="option ${state.answers[q.id] === o.id ? 'is-selected' : ''}" data-opt="${o.id}">
+            <span class="opt-label">${o.label}</span>
+            <span class="opt-sub">${o.sub}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="nav-row">
+        <button class="btn" id="back-btn" ${state.step === 0 ? 'disabled' : ''}>Back</button>
+        <button class="btn primary" id="next-btn" ${!state.answers[q.id] ? 'disabled' : ''}>
+          ${state.step === QUESTIONS.length - 1 ? 'Find my play →' : 'Next →'}
+        </button>
+      </div>
+    </div>
+  `;
+  appEl.querySelectorAll('.option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.answers[q.id] = btn.dataset.opt;
+      renderQuestion();
+    });
+  });
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (state.step > 0) { state.step--; render(); }
+  });
+  document.getElementById('next-btn').addEventListener('click', () => {
+    if (!state.answers[q.id]) return;
+    if (state.step < QUESTIONS.length - 1) {
+      state.step++;
+      render();
+    } else {
+      state.step++;
+      render();
+    }
+  });
+}
+
+function renderResult() {
+  const ranked = recommend(state.answers);
+  const top = ranked[0].play;
+  const alts = ranked.slice(1, 5);
+  const cluster = DATA.clusters[top.cluster];
+
+  appEl.innerHTML = `
+    <div class="card result-shell">
+      <div class="result-eyebrow">Your match</div>
+      <h2 class="result-title">${top.title}</h2>
+      <div class="result-type" style="background:${hexAlpha(cluster.color, 0.14)}; color:${cluster.color};">${cluster.name} · ${cluster.tagline}</div>
+      <p class="result-desc">${cluster.summary}</p>
+      <p class="result-fit"><strong>Why this fits you:</strong> ${matchExplanation(top, state.answers)}</p>
+
+      <div class="result-layout">
+        <div>
+          <div class="arc-host">
+            <svg viewBox="0 0 680 320" id="arc-svg" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+          <p class="characters-line"><strong>Major characters:</strong> ${(top.main_characters || []).join(', ') || 'see play'}</p>
+        </div>
+        <div>
+          <div class="stat-grid">
+            <div class="stat-box"><div class="k">Cast size</div><div class="v">${top.num_speakers} speakers</div></div>
+            <div class="stat-box"><div class="k">Network density</div><div class="v">${top.density.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Year</div><div class="v">${top.year || '—'}</div></div>
+            <div class="stat-box"><div class="k">Mean sentiment</div><div class="v">${top.mean.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Emotional range</div><div class="v">${top.range.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Oscillations</div><div class="v">${top.crossings_mean}</div></div>
+          </div>
+
+          <div style="margin-top:18px; font-size:0.85rem; color:var(--muted);">
+            <strong style="color:var(--ink); display:block; margin-bottom:6px;">Best viewing situation</strong>
+            ${cluster.viewing_situation}
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;">
+        <div class="result-eyebrow" style="margin-bottom:10px;">Other plays you'd also enjoy</div>
+        <div class="alt-grid">
+          ${alts.map((a, i) => {
+            const altCluster = DATA.clusters[a.play.cluster];
+            return `
+              <button class="alt-card" data-alt-title="${a.play.title}">
+                <div class="alt-rank">Rank ${i + 2}</div>
+                <div class="alt-title">${a.play.title}</div>
+                <div class="alt-type" style="color:${altCluster.color}">${altCluster.name}</div>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <button class="reset-link" id="reset-btn">← Start over with new answers</button>
+    </div>
+  `;
+  // Draw arc
+  drawArc(top, cluster.color);
+  // Alt clicks: regenerate result with that play forced to top
+  appEl.querySelectorAll('.alt-card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.dataset.altTitle;
+      const altIdx = DATA.plays.findIndex(p => p.title === t);
+      if (altIdx < 0) return;
+      const forced = DATA.plays[altIdx];
+      // Render that alt as top
+      renderForced(forced, ranked);
+    });
+  });
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    state.step = 0; state.answers = {}; render();
+  });
+}
+
+function renderForced(forced, ranked) {
+  // Replace top with chosen alt; keep others
+  const newRanked = [{ play: forced, dist: 0 }, ...ranked.filter(r => r.play.title !== forced.title)];
+  const top = newRanked[0].play;
+  const alts = newRanked.slice(1, 5);
+  const cluster = DATA.clusters[top.cluster];
+  // Just re-render result body with this top
+  appEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  renderResultFromOrdered(top, cluster, alts);
+}
+function renderResultFromOrdered(top, cluster, alts) {
+  appEl.innerHTML = `
+    <div class="card result-shell">
+      <div class="result-eyebrow">Your match</div>
+      <h2 class="result-title">${top.title}</h2>
+      <div class="result-type" style="background:${hexAlpha(cluster.color, 0.14)}; color:${cluster.color};">${cluster.name} · ${cluster.tagline}</div>
+      <p class="result-desc">${cluster.summary}</p>
+      <p class="result-fit"><strong>Why this fits you:</strong> ${matchExplanation(top, state.answers)}</p>
+      <div class="result-layout">
+        <div>
+          <div class="arc-host">
+            <svg viewBox="0 0 680 320" id="arc-svg" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+          <p class="characters-line"><strong>Major characters:</strong> ${(top.main_characters || []).join(', ') || 'see play'}</p>
+        </div>
+        <div>
+          <div class="stat-grid">
+            <div class="stat-box"><div class="k">Cast size</div><div class="v">${top.num_speakers} speakers</div></div>
+            <div class="stat-box"><div class="k">Network density</div><div class="v">${top.density.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Year</div><div class="v">${top.year || '—'}</div></div>
+            <div class="stat-box"><div class="k">Mean sentiment</div><div class="v">${top.mean.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Emotional range</div><div class="v">${top.range.toFixed(2)}</div></div>
+            <div class="stat-box"><div class="k">Oscillations</div><div class="v">${top.crossings_mean}</div></div>
+          </div>
+          <div style="margin-top:18px; font-size:0.85rem; color:var(--muted);">
+            <strong style="color:var(--ink); display:block; margin-bottom:6px;">Best viewing situation</strong>
+            ${cluster.viewing_situation}
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:28px;">
+        <div class="result-eyebrow" style="margin-bottom:10px;">Other plays you'd also enjoy</div>
+        <div class="alt-grid">
+          ${alts.map((a, i) => {
+            const altCluster = DATA.clusters[a.play.cluster];
+            return `
+              <button class="alt-card" data-alt-title="${a.play.title}">
+                <div class="alt-rank">Rank ${i + 2}</div>
+                <div class="alt-title">${a.play.title}</div>
+                <div class="alt-type" style="color:${altCluster.color}">${altCluster.name}</div>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+      <button class="reset-link" id="reset-btn">← Start over with new answers</button>
+    </div>
+  `;
+  drawArc(top, cluster.color);
+  appEl.querySelectorAll('.alt-card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.dataset.altTitle;
+      const found = DATA.plays.find(p => p.title === t);
+      if (found) renderForced(found, [{play: top, dist: 0}, ...alts]);
+    });
+  });
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    state.step = 0; state.answers = {}; render();
+  });
+}
+
+function matchExplanation(play, answers) {
+  const parts = [];
+  const mood = answers.mood;
+  if (mood === 'cathartic' && play.range > 0.9) parts.push(`its emotional range of ${play.range.toFixed(2)} is wide enough to deliver real catharsis`);
+  else if (mood === 'cathartic') parts.push(`its arc carries genuine emotional weight`);
+  if (mood === 'resolved' && play.direction > 0.1) parts.push(`it ends ${play.direction.toFixed(2)} points higher than it began — a true rising arc`);
+  if (mood === 'playful' && play.density > 0.5) parts.push(`its tight character network keeps the action lively`);
+  if (mood === 'turbulent' && play.crossings_mean >= 8) parts.push(`it crosses its emotional mean ${play.crossings_mean} times — high turbulence`);
+
+  const scale = answers.scale;
+  if (scale === 'small' && play.num_speakers <= 25) parts.push(`compact cast of ${play.num_speakers}`);
+  else if (scale === 'epic' && play.num_speakers >= 45) parts.push(`expansive cast of ${play.num_speakers} speakers`);
+  else if (scale === 'medium' && play.num_speakers >= 25 && play.num_speakers <= 50) parts.push(`balanced cast of ${play.num_speakers}`);
+
+  if (answers.situation === 'short' && play.word_count < 22000) parts.push(`it's relatively short`);
+
+  if (!parts.length) parts.push(`its overall shape matched your answers most closely`);
+  return parts.join('; ') + '.';
+}
+
+function drawArc(play, color) {
+  const svg = document.getElementById('arc-svg');
+  if (!svg || !play.arc.length) return;
+  const W = 680, H = 320;
+  const PAD = { l: 44, r: 24, t: 26, b: 34 };
+  const plotW = W - PAD.l - PAD.r;
+  const plotH = H - PAD.t - PAD.b;
+  const yMin = -0.85, yMax = 0.85;
+  const yScale = v => PAD.t + (1 - (v - yMin) / (yMax - yMin)) * plotH;
+  const xScale = (i, n) => PAD.l + (i / (n - 1)) * plotW;
+
+  let axes = '';
+  [-0.5, 0, 0.5].forEach(t => {
+    const y = yScale(t);
+    axes += `<line class="axis-tick" x1="${PAD.l}" x2="${W - PAD.r}" y1="${y}" y2="${y}"/>`;
+    axes += `<text class="axis-text" x="${PAD.l - 6}" y="${y + 3}" text-anchor="end">${t.toFixed(1)}</text>`;
+  });
+  axes += `<line class="zero-line" x1="${PAD.l}" x2="${W - PAD.r}" y1="${yScale(0)}" y2="${yScale(0)}"/>`;
+  axes += `<line class="axis-line" x1="${PAD.l}" x2="${W - PAD.r}" y1="${H - PAD.b}" y2="${H - PAD.b}"/>`;
+  [0, 25, 50, 75, 100].forEach(p => {
+    const x = PAD.l + (p / 100) * plotW;
+    axes += `<text class="axis-text" x="${x}" y="${H - PAD.b + 16}" text-anchor="middle">${p}%</text>`;
+  });
+  axes += `<text class="axis-text" x="${PAD.l + plotW/2}" y="${H - 4}" text-anchor="middle" style="font-weight:600">Play progress</text>`;
+  axes += `<text class="axis-text" x="14" y="${PAD.t + plotH/2}" text-anchor="middle" style="font-weight:600" transform="rotate(-90 14 ${PAD.t + plotH/2})">Sentiment</text>`;
+
+  const n = play.arc.length;
+  const pts = play.arc.map((v, i) => `${xScale(i, n).toFixed(2)},${yScale(v).toFixed(2)}`);
+  const d = `M${pts.join(' L')}`;
+
+  // Endpoint markers
+  const startX = xScale(0, n), startY = yScale(play.arc[0]);
+  const endX = xScale(n - 1, n), endY = yScale(play.arc[n - 1]);
+
+  svg.innerHTML = `
+    ${axes}
+    <path id="recommend-arc" class="arc-path" d="${d}" stroke="${color}"/>
+    <circle class="arc-marker" cx="${startX}" cy="${startY}" r="5.5" style="fill:${color}; animation-delay:1.4s"/>
+    <circle class="arc-marker" cx="${endX}" cy="${endY}" r="5.5" style="fill:${color}; animation-delay:1.7s"/>
+    <text class="axis-text" x="${startX + 8}" y="${startY - 8}" style="font-weight:600; opacity:0; animation: pop-in 0.4s 1.5s forwards;">start ${play.arc[0].toFixed(2)}</text>
+    <text class="axis-text" x="${endX - 8}" y="${endY - 8}" text-anchor="end" style="font-weight:600; opacity:0; animation: pop-in 0.4s 1.8s forwards;">end ${play.arc[n-1].toFixed(2)}</text>
+  `;
+
+  // Animate path drawing
+  const path = svg.querySelector('#recommend-arc');
+  const length = path.getTotalLength();
+  path.style.strokeDasharray = length;
+  path.style.strokeDashoffset = length;
+  path.style.transition = 'none';
+  void path.getBoundingClientRect();
+  path.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1)';
+  path.style.strokeDashoffset = '0';
+}
+
+function hexAlpha(hex, a) {
+  const m = hex.replace('#','');
+  const r = parseInt(m.slice(0,2),16), g = parseInt(m.slice(2,4),16), b = parseInt(m.slice(4,6),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+function render() {
+  renderStepper();
+  if (state.step < QUESTIONS.length) renderQuestion();
+  else renderResult();
+}
+render();
+</script>
+</body>
+</html>
