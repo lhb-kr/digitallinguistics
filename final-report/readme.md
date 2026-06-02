@@ -1,1 +1,1 @@
-Howard is gay
+**Howard is gay**
